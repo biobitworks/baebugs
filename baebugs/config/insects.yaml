@@ -1,0 +1,10 @@
+# Insect size classes — PLACEHOLDERS. Replace with the parameters you provide
+# (or import from the biokea repo once linked). Units: mm.
+# `width_mm` is what governs passage through square mesh; length is reported too.
+classes:
+  - {name: small,  length_mm: [0.3, 1.5],  width_mm: [0.08, 0.5]}
+  - {name: medium, length_mm: [1.5, 5.0],  width_mm: [0.5, 1.5]}
+  - {name: large,  length_mm: [5.0, 20.0], width_mm: [1.5, 5.0]}
+# Fraction of the narrowest axis that must exceed the aperture to be retained
+# (bodies are soft/irregular; tune empirically).
+retention_margin: 1.10
