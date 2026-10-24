@@ -43,6 +43,7 @@ Built at the Physical AI for Science Hack (Oct 24–25, 2026). The challenge is 
 | `twin.py` | Preflight in the style of Google's VERID (a digital twin of the lab) | Rejects plans that are physically invalid, such as a sieve already in use or too little water, before hardware moves |
 | `method.py` | Predicted vs observed counts per fraction, then a retention-margin update | The sorter gets better each run instead of repeating the same error |
 | `bugpicker_bridge.py` | Reads and writes [BugPicker](https://github.com/biokea/BugPicker)'s `manifest.jsonl` / `objects.jsonl` | Fills `tray_size_class` and `sorting_tray_slot`, so step 1 plugs into step 3 with no new protocol. It can also use BugPicker's detector as a measurement source |
+| `calbug.py` | Pulls family composition for a locality from the Essig Museum / Calbug collection on GBIF (~550k records) and turns it into an expected size-class mix | Flags a bag that doesn't look like where it came from (wrong bag, broken specimens, debris) before sieving. Links provenance to `EMEC` catalog numbers |
 | `provenance.py` | One hash-chained record per step | Covers what was done, to which sample, with which parameters, images and version, so the record is FAIR without a write-up afterwards |
 | `mcp_server.py` | MCP tools: `measure_sample`, `plan_sieves`, `calibrate_sieve`, `sieve_inventory`, `trace_sample` | Gives the instrument an API, so an agent can run the protocol while people supervise |
 
@@ -79,6 +80,7 @@ python -m baebugs.mcp_server                             # instrument as MCP ser
 
 ## Still needed from the team
 
+- Family body-width ranges → `baebugs/config/family_sizes.yaml` (placeholders; drives the Essig prior)
 - Real insect / analog size parameters → `baebugs/config/insects.yaml` (current values are placeholders)
 - Measured apertures → `baebugs/config/sieves.yaml`
 - YOLO weights trained on the nine bug analogs (BugPicker crops in `objects/` make a ready labelled set)
@@ -87,3 +89,9 @@ python -m baebugs.mcp_server                             # instrument as MCP ser
 ## Licence
 
 MIT
+
+## Data sources
+
+- [Essig Museum of Entomology](https://essigdb.berkeley.edu/query_specimens.html) / [Calbug](https://calbug.berkeley.edu/), via GBIF dataset `5d283bb6-64dd-4626-8b3b-a4e8db5415c3`
+- [BioKEA BugPicker](https://github.com/biokea/BugPicker) file protocol
+- Google Research, [VERID](https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/) (digital-twin preflight pattern)
