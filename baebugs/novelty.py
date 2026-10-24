@@ -6,7 +6,8 @@
    reference's own k-NN distances, so 'novel' adapts to how spread the reference is.
 2. Mesh gaps - novel bodies whose width falls between inventory apertures, so the
    current stack would lump them with something else.
-3. Filter suggestions - for each gap, rank in-kit and procurable materials by
+3. Filter suggestions - for each gap, rank in-kit materials (procurable ones only
+   with include_procurable=True; the Track A kit is limited) by
    how well they split the gap AND by preservation risk for the specimen profile.
 """
 from __future__ import annotations
@@ -60,7 +61,7 @@ def mesh_gaps(widths, apertures, margin=1.1, min_rel_gap=0.35):
 
 
 def suggest_filters(gap: dict, profile: str, preservation="ethanol_70",
-                    margin=1.1, top=3, include_procurable=True, cfg=None):
+                    margin=1.1, top=3, include_procurable=False, cfg=None):
     cfg = cfg or load_yaml("materials.yaml")
     ws = np.asarray(gap["widths"])
     # isolate the novel cluster: retain all of it, pass everything smaller

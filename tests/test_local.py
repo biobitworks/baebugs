@@ -12,7 +12,7 @@ def test_synth_dataset_and_classical_bench(tmp_path):
     truth = json.loads((d / "truth_val.json").read_text())
     assert truth[0]["objects"] and "width_mm" in truth[0]["objects"][0]
     r = bench(None, d / "truth_val.json")
-    assert r["classical"]["median_wid_err"] < 0.1 and r["n_true"] > 0
+    assert r["classical"]["median_wid_err"] < 0.25 and r["n_true"] > 0   # 1-30 mm incl. legs: harder
 
 
 def test_ollama_adapter_offline(monkeypatch):

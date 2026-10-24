@@ -32,7 +32,9 @@ def test_gap_and_filter_suggestion_prefers_gentle_for_wings():
     widths = [3.0, 3.1, 3.3, 2.9, 3.4]                # between HEX-2 (2.42) and GRID-4 (4.4)
     gaps = mesh_gaps(widths, [5.0, 4.0, 2.2, 1.2])
     assert gaps and gaps[0]["between_mm"][0] == 2.42
-    sug = suggest_filters(gaps[0], "scaled_wings")
+    kit_only = suggest_filters(gaps[0], "scaled_wings")
+    assert all(s.get("in_kit", False) or s["material"] == "FABRICATE" for s in kit_only)
+    sug = suggest_filters(gaps[0], "scaled_wings", include_procurable=True)
     assert sug[0]["aperture_mm"] < 4.0 and sug[0]["material"] in ("PRINT-SMOOTH-3", "PERF-3")
     assert sug[0]["damage_risk"] <= max(s["damage_risk"] for s in sug)
 

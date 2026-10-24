@@ -100,19 +100,30 @@ def _draw(rng, mask, img, kind, cx, cy, L, W, ang, ppm):
     return m, L, W
 
 
-def make_image(rng, ppm=35.0, size=(640, 640), n_range=(6, 22)):
+def make_image(rng, ppm=None, size=(640, 640), n_range=(6, 22)):
+    """ppm=None: random scale per image (6-40 px/mm) so 1-30 mm bodies all occur
+    and still fit the frame; small-scale images carry the big bodies."""
     h, w = size
+    if ppm is None:
+        ppm = float(np.exp(rng.uniform(np.log(6), np.log(40))))
     img, bg = _background(rng, h, w)
     occupied = np.zeros((h, w), np.uint8)
     objs = []
+    max_len = 0.45 * min(h, w) / ppm                      # keep bodies inside the frame
     spec = {"rice": ((5, 8), (1.4, 2.3)), "chia": ((1.6, 2.3), (1.0, 1.4)),
-            "pasta": ((4, 9), (3, 6)), "insect": ((2.5, 9), (0.6, 2.8))}
+            "pasta": ((4, 9), (3, 6)), "insect": ((1.0, 30.0), (0.25, 10.0))}
     kinds = list(spec)
     for _ in range(int(rng.integers(*n_range)) * 4):
         if len(objs) >= n_range[1]:
             break
         k = kinds[rng.integers(len(kinds))]
-        L = rng.uniform(*spec[k][0]); W = min(L, rng.uniform(*spec[k][1]))
+        lo, hi = spec[k][0][0], min(spec[k][0][1], max_len)
+        if hi <= lo:
+            continue
+        L = float(np.exp(rng.uniform(np.log(lo), np.log(hi))))   # log-uniform: 1 mm as common as 10 mm
+        W = min(L, rng.uniform(*spec[k][1])) if k != "insect" else L * rng.uniform(0.2, 0.5)
+        if W * ppm < 3:                                         # below what the camera resolves
+            continue
         r = int(L * ppm / 2) + 6
         cx, cy = int(rng.integers(r, w - r)), int(rng.integers(r, h - r))
         if occupied[max(0, cy - r):cy + r, max(0, cx - r):cx + r].any():
@@ -125,14 +136,14 @@ def make_image(rng, ppm=35.0, size=(640, 640), n_range=(6, 22)):
             continue
         cnt = max(cnts, key=cv2.contourArea)
         (_, _), (rw, rh), _ = cv2.minAreaRect(cnt)
-        objs.append({"kind": k, "cx": cx, "cy": cy,
+        objs.append({"kind": k, "cx": cx, "cy": cy, "ppm": ppm,
                      "length_mm": max(rw, rh) / ppm, "width_mm": min(rw, rh) / ppm,
                      "poly": (cnt.reshape(-1, 2) / [w, h]).round(5).tolist()})
     img = cv2.GaussianBlur(img, (3, 3), 0)
     return img, objs, bg
 
 
-def build_dataset(out_dir, n_train=300, n_val=60, ppm=35.0, size=640, seed=0):
+def build_dataset(out_dir, n_train=300, n_val=60, ppm=None, size=640, seed=0):
     out = Path(out_dir)
     rng = np.random.default_rng(seed)
     for split, n in (("train", n_train), ("val", n_val)):
@@ -141,14 +152,15 @@ def build_dataset(out_dir, n_train=300, n_val=60, ppm=35.0, size=640, seed=0):
         truth = []
         for i in range(n):
             img, objs, bg = make_image(rng, ppm, (size, size))
+            im_ppm = objs[0]["ppm"] if objs else (ppm or 0)
             name = f"{split}_{i:05d}"
             cv2.imwrite(str(out / "images" / split / f"{name}.jpg"), img,
                         [cv2.IMWRITE_JPEG_QUALITY, 92])
             lines = ["0 " + " ".join(f"{x:.5f} {y:.5f}" for x, y in o["poly"]) for o in objs]
             (out / "labels" / split / f"{name}.txt").write_text("\n".join(lines) + "\n")
             truth.append({"image": f"images/{split}/{name}.jpg", "background": bg,
-                          "px_per_mm": ppm,
-                          "objects": [{k: v for k, v in o.items() if k != "poly"} for o in objs]})
+                          "px_per_mm": im_ppm,
+                          "objects": [{k: v for k, v in o.items() if k not in ("poly", "ppm")} for o in objs]})
         (out / f"truth_{split}.json").write_text(json.dumps(truth))
     (out / "data.yaml").write_text(
         f"path: {out.resolve()}\ntrain: images/train\nval: images/val\nnames:\n  0: specimen\n")

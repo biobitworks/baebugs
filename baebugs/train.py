@@ -32,14 +32,24 @@ def device():
 
 
 def fit(data, model="yolo11n-seg.pt", epochs=40, imgsz=640, batch=16, project=None,
-        name="baebugs-seg", **kw):
+        name="baebugs-seg", ledger=None, **kw):
+    """Train; with a GitLedger, every epoch is a Merkle break point that is
+    committed and pushed (metrics + sha256 of last/best weights)."""
     from ultralytics import YOLO
     project = project or str(Path(DEFAULT_ROOT) / "runs")
     m = YOLO(model)
+    if ledger is not None:
+        from .git_ledger import sha256_file, yolo_epoch_callback
+        m.add_callback("on_fit_epoch_end", yolo_epoch_callback(ledger))
+        ledger.append("fit_start", {"data": str(data), "model": str(model), "epochs": epochs,
+                                    "imgsz": imgsz, "batch": batch, "device": str(device())},
+                      files={"init_weights": model} if Path(str(model)).exists() else None)
     m.train(data=str(data), epochs=epochs, imgsz=imgsz, batch=batch, device=device(),
             project=project, name=name, exist_ok=True, plots=True, verbose=False,
             mosaic=0.5, degrees=180, flipud=0.5, fliplr=0.5, **kw)
     best = Path(project) / name / "weights" / "best.pt"
+    if ledger is not None:
+        ledger.append("fit_end", {"best": str(best)}, files={"best.pt": best})
     return best
 
 
@@ -126,6 +136,59 @@ def pseudo_label(images_dir, weights, out_dir, conf=0.5, val_every=6, max_images
     return {"images": len(paths), "masks": total, "kept": kept, "data": str(out / "data.yaml")}
 
 
+def pseudo_label_specimens(image_dirs, out_dir, min_ruler_conf=0.4, max_objects=6,
+                           length_range=(1.0, 30.0), val_every=6, max_images=None,
+                           preview_n=12):
+    """Teacher for museum specimen photos (grey stage + ruler): real px/mm from
+    the ruler, specimens segmented on the stage only (labels/barcodes/ruler
+    excluded). Writes YOLO-seg labels AND truth_real.json with sizes in mm
+    (teacher-derived 'silver' truth for benchmarking on real photos)."""
+    import shutil
+    from .specimen_photo import preview, ruler_px_per_mm, segment
+    out = Path(out_dir)
+    paths = [p for d in image_dirs for p in sorted(Path(d).glob("*.jpg"))][:max_images]
+    stats = {"images": len(paths), "no_ruler": 0, "rejected": 0, "kept_images": 0, "objects": 0}
+    truth, previews = {"train": [], "val": []}, []
+    for i, p in enumerate(paths):
+        img = cv2.imread(str(p))
+        if img is None:
+            continue
+        ppm, conf = ruler_px_per_mm(img)
+        if not ppm or conf < min_ruler_conf:
+            stats["no_ruler"] += 1; continue
+        polys, ms = segment(img, ppm)
+        keep = [(pp, m) for pp, m in zip(polys, ms) if length_range[0] <= m.length_mm <= length_range[1]]
+        if not keep or len(keep) > max_objects:
+            stats["rejected"] += 1; continue
+        h, w = img.shape[:2]
+        split = "val" if i % val_every == val_every - 1 else "train"
+        (out / "images" / split).mkdir(parents=True, exist_ok=True)
+        (out / "labels" / split).mkdir(parents=True, exist_ok=True)
+        shutil.copy(p, out / "images" / split / p.name)
+        (out / "labels" / split / f"{p.stem}.txt").write_text("\n".join(
+            "0 " + " ".join(f"{x / w:.5f} {y / h:.5f}" for x, y in pp) for pp, _ in keep) + "\n")
+        truth[split].append({"image": f"images/{split}/{p.name}", "px_per_mm": ppm, "ruler_conf": conf,
+                             "objects": [{"cx": m.cx, "cy": m.cy, "length_mm": m.length_mm,
+                                          "width_mm": m.width_mm} for _, m in keep]})
+        stats["kept_images"] += 1; stats["objects"] += len(keep)
+        if len(previews) < preview_n:
+            previews.append(preview(img, [pp for pp, _ in keep], [m for _, m in keep], ppm, conf))
+    for split in truth:
+        (out / f"truth_real_{split}.json").write_text(json.dumps(truth[split]))
+    (out / "data.yaml").write_text(f"path: {out.resolve()}\ntrain: images/train\nval: images/val\n"
+                                   "names:\n  0: specimen\n")
+    if previews:
+        tiles = [cv2.resize(v, (480, int(480 * v.shape[0] / v.shape[1]))) for v in previews]
+        hmax = max(t.shape[0] for t in tiles)
+        tiles = [cv2.copyMakeBorder(t, 0, hmax - t.shape[0], 0, 0, cv2.BORDER_CONSTANT, value=(255,) * 3) for t in tiles]
+        while len(tiles) % 3: tiles.append(np.full_like(tiles[0], 255))
+        cv2.imwrite(str(out / "preview.jpg"), np.vstack([np.hstack(tiles[i:i + 3]) for i in range(0, len(tiles), 3)]))
+    widths = [o["width_mm"] for t in truth["train"] + truth["val"] for o in t["objects"]]
+    if widths:
+        stats["width_mm_p10_p50_p90"] = [round(float(np.percentile(widths, q)), 2) for q in (10, 50, 90)]
+    return stats
+
+
 def mix(data_yamls, out_yaml):
     """Combine several YOLO datasets (e.g. synthetic + pseudo-labelled real) into
     one data.yaml so fine-tuning keeps what earlier data taught (no forgetting)."""
@@ -156,10 +219,14 @@ def main(argv=None):
     mx.add_argument("--out", required=True)
     f.add_argument("--project"); f.add_argument("--name", default="baebugs-seg")
     f.add_argument("--imgsz", type=int, default=640)
+    ps = sub.add_parser("pseudo-specimens"); ps.add_argument("--images", nargs="+", required=True)
+    ps.add_argument("--out", required=True); ps.add_argument("--max-images", type=int)
     pl = sub.add_parser("pseudo-label"); pl.add_argument("--images", required=True)
     pl.add_argument("--weights", required=True); pl.add_argument("--out", required=True)
     pl.add_argument("--conf", type=float, default=0.5); pl.add_argument("--max-images", type=int)
     a = ap.parse_args(argv)
+    if a.cmd == "pseudo-specimens":
+        print(json.dumps(pseudo_label_specimens(a.images, a.out, max_images=a.max_images), indent=2)); return
     if a.cmd == "mix":
         print(mix(a.data, a.out)); return
     if a.cmd == "pseudo-label":
