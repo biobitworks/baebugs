@@ -110,8 +110,8 @@ def pull_essig_facets(root: Path, log, workers=3, family_limit=300):
 
 # ---------- stream 2: specimen images ----------
 
-def _occurrence_pages(n_images, state, extra):
-    got, offset = 0, 0
+def _occurrence_pages(n_images, state, extra, start=0):
+    got, offset = 0, start
     while got < n_images:
         res = _get_json("occurrence/search", classKey=216, mediaType="StillImage",
                         basisOfRecord="PRESERVED_SPECIMEN", stateProvince=state,
@@ -132,16 +132,17 @@ def _occurrence_pages(n_images, state, extra):
             return
 
 
-def pull_images(root: Path, n_images, workers, log, state="California", extra=None):
+def pull_images(root: Path, n_images, workers, log, state="California", extra=None, start=0,
+                subdir="gbif_specimen_images"):
     """Downloads start as soon as each search page arrives (search and
     downloads overlap instead of running back to back)."""
-    out = root / "datasets" / "gbif_specimen_images"
+    out = root / "datasets" / subdir
     (out / "images").mkdir(parents=True, exist_ok=True)
     ok = queued = 0
     with cf.ThreadPoolExecutor(max_workers=workers) as ex, \
             (out / "manifest.jsonl").open("a") as man:
         futs = {}
-        for r, m in _occurrence_pages(n_images, state, extra or {}):
+        for r, m in _occurrence_pages(n_images, state, extra or {}, start):
             ext = ".png" if m["identifier"].lower().endswith(".png") else ".jpg"
             dest = out / "images" / f"{r['key']}{ext}"
             meta = {"gbifID": r["key"], "url": m["identifier"], "license": r.get("license"),
@@ -180,6 +181,8 @@ def main(argv=None):
     ap.add_argument("--workers", type=int, default=12)
     ap.add_argument("--state", default="California")
     ap.add_argument("--only", nargs="*", default=["essig", "images", "bugpicker"])
+    ap.add_argument("--start", type=int, default=0, help="GBIF search offset (resume past earlier pulls)")
+    ap.add_argument("--subdir", default="gbif_specimen_images")
     a = ap.parse_args(argv)
     root = Path(a.root)
     logf = root / "datasets" / "pull_log.jsonl"
@@ -192,7 +195,7 @@ def main(argv=None):
         print(json.dumps(rec), flush=True)
 
     tasks = {"essig": lambda: pull_essig(root, log),
-             "images": lambda: pull_images(root, a.images, a.workers, log, a.state),
+             "images": lambda: pull_images(root, a.images, a.workers, log, a.state, start=a.start, subdir=a.subdir),
              "bugpicker": lambda: pull_bugpicker(root, log)}
     with cf.ThreadPoolExecutor(max_workers=len(a.only)) as ex:   # all streams at once
         futs = {ex.submit(tasks[k]): k for k in a.only}

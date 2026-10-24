@@ -126,6 +126,20 @@ def pseudo_label(images_dir, weights, out_dir, conf=0.5, val_every=6, max_images
     return {"images": len(paths), "masks": total, "kept": kept, "data": str(out / "data.yaml")}
 
 
+def mix(data_yamls, out_yaml):
+    """Combine several YOLO datasets (e.g. synthetic + pseudo-labelled real) into
+    one data.yaml so fine-tuning keeps what earlier data taught (no forgetting)."""
+    import yaml
+    tr, va = [], []
+    for y in data_yamls:
+        d = yaml.safe_load(Path(y).read_text())
+        base = Path(d.get("path", Path(y).parent))
+        tr.append(str(base / d["train"])); va.append(str(base / d["val"]))
+    Path(out_yaml).parent.mkdir(parents=True, exist_ok=True)
+    Path(out_yaml).write_text(yaml.safe_dump({"train": tr, "val": va, "names": {0: "specimen"}}))
+    return out_yaml
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser("baebugs-train")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -138,10 +152,16 @@ def main(argv=None):
     b.add_argument("--max-images", type=int)
     e = sub.add_parser("export-bugpicker"); e.add_argument("--scan", required=True)
     e.add_argument("--out", required=True)
+    mx = sub.add_parser("mix"); mx.add_argument("--data", nargs="+", required=True)
+    mx.add_argument("--out", required=True)
+    f.add_argument("--project"); f.add_argument("--name", default="baebugs-seg")
+    f.add_argument("--imgsz", type=int, default=640)
     pl = sub.add_parser("pseudo-label"); pl.add_argument("--images", required=True)
     pl.add_argument("--weights", required=True); pl.add_argument("--out", required=True)
     pl.add_argument("--conf", type=float, default=0.5); pl.add_argument("--max-images", type=int)
     a = ap.parse_args(argv)
+    if a.cmd == "mix":
+        print(mix(a.data, a.out)); return
     if a.cmd == "pseudo-label":
         print(json.dumps(pseudo_label(a.images, a.weights, a.out, a.conf, max_images=a.max_images), indent=2))
         return
@@ -149,7 +169,7 @@ def main(argv=None):
         from .synth_seg import build_dataset
         print(build_dataset(Path(a.root) / "datasets" / "synth_seg", a.n_train, a.n_val))
     elif a.cmd == "fit":
-        print(fit(a.data, a.model, a.epochs, batch=a.batch))
+        print(fit(a.data, a.model, a.epochs, imgsz=a.imgsz, batch=a.batch, project=a.project, name=a.name))
     elif a.cmd == "bench":
         print(json.dumps(bench(a.weights, a.truth, a.max_images), indent=2))
     else:
