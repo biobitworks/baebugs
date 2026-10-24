@@ -31,11 +31,20 @@ UA = {"User-Agent": "baebugs/0.1 (+https://github.com/biobitworks/baebugs)"}
 OPEN_LICENSES = ("CC0_1_0", "CC_BY_4_0")
 
 
-def _get_json(path, **params):
+def _get_json(path, retries=6, **params):
+    """GBIF API call with backoff on 429/5xx (honours Retry-After)."""
+    import urllib.error
     url = f"{GBIF}/{path}?{urllib.parse.urlencode(params, doseq=True)}"
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.loads(r.read())
+    for k in range(retries):
+        try:
+            req = urllib.request.Request(url, headers=UA)
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return json.loads(r.read())
+        except urllib.error.HTTPError as e:
+            if e.code not in (429, 500, 502, 503, 504) or k == retries - 1:
+                raise
+            wait = float(e.headers.get("Retry-After") or 2 ** k)
+            time.sleep(min(wait, 60))
 
 
 def _download(url, dest: Path, retries=3, timeout=60):
@@ -70,7 +79,7 @@ def pull_essig(root: Path, log):
     return pull_essig_facets(root, log)   # IPT down -> rebuild the prior table from the GBIF API
 
 
-def pull_essig_facets(root: Path, log, workers=8, family_limit=300):
+def pull_essig_facets(root: Path, log, workers=3, family_limit=300):
     """Family x county (GADM level 2) x order counts for the Essig collection,
     counties queried in parallel. This is the table the Calbug prior needs."""
     out = root / "datasets" / "essig"
