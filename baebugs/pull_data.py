@@ -63,12 +63,40 @@ def pull_essig(root: Path, log):
     meta = _get_json(f"dataset/{ESSIG}")
     (out).mkdir(parents=True, exist_ok=True)
     (out / "dataset.json").write_text(json.dumps(meta, indent=1))
-    if not dwca:
-        log("essig", {"status": "no DwC-A endpoint", "endpoints": eps})
-        return None
-    sha = _download(dwca[0], out / "essig_dwca.zip", timeout=600)
-    log("essig", {"url": dwca[0], "sha256": sha, "license": meta.get("license")})
-    return out / "essig_dwca.zip"
+    sha = _download(dwca[0], out / "essig_dwca.zip", timeout=600) if dwca else None
+    log("essig", {"url": dwca[0] if dwca else None, "sha256": sha, "license": meta.get("license")})
+    if sha:
+        return out / "essig_dwca.zip"
+    return pull_essig_facets(root, log)   # IPT down -> rebuild the prior table from the GBIF API
+
+
+def pull_essig_facets(root: Path, log, workers=8, family_limit=300):
+    """Family x county (GADM level 2) x order counts for the Essig collection,
+    counties queried in parallel. This is the table the Calbug prior needs."""
+    out = root / "datasets" / "essig"
+    counties = _get_json("occurrence/search", datasetKey=ESSIG, limit=0,
+                         facet="gadmLevel2Gid", facetLimit=500)["facets"][0]["counts"]
+
+    def one(c):
+        res = _get_json("occurrence/search", datasetKey=ESSIG, gadmGid=c["name"], limit=0,
+                        facet=["familyKey", "orderKey", "preparations", "lifeStage"],
+                        facetLimit=family_limit)
+        return c, {f["field"]: f["counts"] for f in res.get("facets", [])}
+
+    rows, keys = [], set()
+    with cf.ThreadPoolExecutor(max_workers=workers) as ex:
+        for c, facets in ex.map(one, counties):
+            rows.append({"gadm2": c["name"], "n": c["count"], **facets})
+            keys |= {x["name"] for x in facets.get("FAMILY_KEY", [])}
+    with cf.ThreadPoolExecutor(max_workers=workers) as ex:   # resolve names in parallel
+        names = dict(zip(keys, ex.map(lambda k: _get_json(f"species/{k}").get("canonicalName", k), keys)))
+    gadm_names = {}
+    for r in rows:
+        r["families"] = {names.get(x["name"], x["name"]): x["count"] for x in r.pop("FAMILY_KEY", [])}
+    (out / "essig_family_by_county.json").write_text(json.dumps(rows))
+    log("essig_facets", {"counties": len(rows), "families": len(keys),
+                         "records": sum(r["n"] for r in rows), "source": "GBIF API facets"})
+    return out / "essig_family_by_county.json"
 
 
 # ---------- stream 2: specimen images ----------
@@ -96,29 +124,31 @@ def _occurrence_pages(n_images, state, extra):
 
 
 def pull_images(root: Path, n_images, workers, log, state="California", extra=None):
+    """Downloads start as soon as each search page arrives (search and
+    downloads overlap instead of running back to back)."""
     out = root / "datasets" / "gbif_specimen_images"
     (out / "images").mkdir(parents=True, exist_ok=True)
-    jobs = []
-    for r, m in _occurrence_pages(n_images, state, extra or {}):
-        ext = ".jpg" if "png" not in m["identifier"].lower() else ".png"
-        dest = out / "images" / f"{r['key']}{ext}"
-        meta = {"gbifID": r["key"], "url": m["identifier"], "license": r.get("license"),
-                "rightsHolder": m.get("rightsHolder") or r.get("rightsHolder"),
-                "creator": m.get("creator"), "institutionCode": r.get("institutionCode"),
-                "catalogNumber": r.get("catalogNumber"), "scientificName": r.get("scientificName"),
-                "order": r.get("order"), "family": r.get("family"), "file": dest.name}
-        jobs.append((m["identifier"], dest, meta))
-    ok = 0
+    ok = queued = 0
     with cf.ThreadPoolExecutor(max_workers=workers) as ex, \
             (out / "manifest.jsonl").open("a") as man:
-        futs = {ex.submit(_download, u, d): meta for u, d, meta in jobs}
+        futs = {}
+        for r, m in _occurrence_pages(n_images, state, extra or {}):
+            ext = ".png" if m["identifier"].lower().endswith(".png") else ".jpg"
+            dest = out / "images" / f"{r['key']}{ext}"
+            meta = {"gbifID": r["key"], "url": m["identifier"], "license": r.get("license"),
+                    "rightsHolder": m.get("rightsHolder") or r.get("rightsHolder"),
+                    "creator": m.get("creator"), "institutionCode": r.get("institutionCode"),
+                    "catalogNumber": r.get("catalogNumber"), "scientificName": r.get("scientificName"),
+                    "order": r.get("order"), "family": r.get("family"), "file": dest.name}
+            futs[ex.submit(_download, m["identifier"], dest)] = meta
+            queued += 1
         for f in cf.as_completed(futs):
             meta = futs[f]
             meta["sha256"] = f.result()
             if meta["sha256"]:
                 ok += 1
-                man.write(json.dumps(meta) + "\n")
-    log("images", {"requested": n_images, "queued": len(jobs), "downloaded": ok})
+                man.write(json.dumps(meta) + "\n"); man.flush()
+    log("images", {"requested": n_images, "queued": queued, "downloaded": ok})
     return ok
 
 
