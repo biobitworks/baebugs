@@ -3,7 +3,7 @@ name = "baebugs"
 version = "0.1.0"
 description = "USB-camera insect sizing (YOLO + classical consensus) -> sieve stack and water-flow plan for robot arms"
 requires-python = ">=3.10"
-dependencies = ["opencv-contrib-python-headless>=4.8", "numpy", "pyyaml"]
+dependencies = ["opencv-contrib-python-headless>=4.8", "numpy", "pyyaml", "pandas"]
 
 [project.optional-dependencies]
 yolo = ["ultralytics>=8.3"]
