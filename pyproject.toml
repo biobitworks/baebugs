@@ -6,7 +6,7 @@ requires-python = ">=3.10"
 dependencies = ["opencv-contrib-python-headless>=4.8", "numpy", "pyyaml", "pandas"]
 
 [project.optional-dependencies]
-yolo = ["ultralytics>=8.3"]
+yolo = ["ultralytics>=8.3", "clip @ git+https://github.com/ultralytics/CLIP.git"]
 claude = ["anthropic"]
 notebook = ["jupyter", "matplotlib"]
 dev = ["pytest", "nbclient", "nbformat", "ipykernel"]
