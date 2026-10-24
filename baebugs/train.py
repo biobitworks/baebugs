@@ -82,6 +82,50 @@ def bench(weights, truth_json, max_images=None, match_mm=1.0):
     return out
 
 
+def pseudo_label(images_dir, weights, out_dir, conf=0.5, val_every=6, max_images=None,
+                 px_per_mm=40.0, imgsz=640):
+    """Semi-supervised step for real photos without outlines (e.g. pulled GBIF
+    specimen images): keep only YOLO masks that the classical sizer independently
+    agrees with (consensus, no flag) and write them as YOLO-seg labels. Two
+    methods that fail differently must agree before a label is trusted.
+    px_per_mm only matters for the agreement tolerance; real scale isn't needed."""
+    import shutil
+    from ultralytics import YOLO
+    from .measure import classical_measure, consensus, _from_contour
+    out = Path(out_dir)
+    model = YOLO(str(weights))
+    paths = sorted(Path(images_dir).glob("*.jpg"))[:max_images]
+    kept = total = 0
+    for i, p in enumerate(paths):
+        img = cv2.imread(str(p))
+        if img is None:
+            continue
+        h, w = img.shape[:2]
+        res = model.predict(img, conf=conf, imgsz=imgsz, verbose=False, device=device())[0]
+        if res.masks is None:
+            continue
+        polys = [np.asarray(xy, np.float32) for xy in res.masks.xy if len(xy) >= 3]
+        ys = [_from_contour(pp.reshape(-1, 1, 2), px_per_mm, "yolo") for pp in polys]
+        agreed = consensus(list(ys), classical_measure(img, px_per_mm), px_per_mm)
+        ok = {(round(m.cx), round(m.cy)) for m in agreed if m.flag is None and m.source == "consensus"}
+        lines = []
+        for pp, m in zip(polys, ys):
+            total += 1
+            if any(abs(m.cx - x) < 0.5 * px_per_mm and abs(m.cy - y) < 0.5 * px_per_mm for x, y in ok):
+                kept += 1
+                lines.append("0 " + " ".join(f"{x / w:.5f} {y / h:.5f}" for x, y in pp))
+        if not lines:
+            continue
+        split = "val" if i % val_every == val_every - 1 else "train"
+        (out / "images" / split).mkdir(parents=True, exist_ok=True)
+        (out / "labels" / split).mkdir(parents=True, exist_ok=True)
+        shutil.copy(p, out / "images" / split / p.name)
+        (out / "labels" / split / f"{p.stem}.txt").write_text("\n".join(lines) + "\n")
+    (out / "data.yaml").write_text(f"path: {out.resolve()}\ntrain: images/train\nval: images/val\n"
+                                   "names:\n  0: specimen\n")
+    return {"images": len(paths), "masks": total, "kept": kept, "data": str(out / "data.yaml")}
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser("baebugs-train")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -94,7 +138,13 @@ def main(argv=None):
     b.add_argument("--max-images", type=int)
     e = sub.add_parser("export-bugpicker"); e.add_argument("--scan", required=True)
     e.add_argument("--out", required=True)
+    pl = sub.add_parser("pseudo-label"); pl.add_argument("--images", required=True)
+    pl.add_argument("--weights", required=True); pl.add_argument("--out", required=True)
+    pl.add_argument("--conf", type=float, default=0.5); pl.add_argument("--max-images", type=int)
     a = ap.parse_args(argv)
+    if a.cmd == "pseudo-label":
+        print(json.dumps(pseudo_label(a.images, a.weights, a.out, a.conf, max_images=a.max_images), indent=2))
+        return
     if a.cmd == "synth":
         from .synth_seg import build_dataset
         print(build_dataset(Path(a.root) / "datasets" / "synth_seg", a.n_train, a.n_val))
