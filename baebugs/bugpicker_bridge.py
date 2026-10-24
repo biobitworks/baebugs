@@ -52,6 +52,8 @@ def object_records(ms: list[Measurement], frame: dict, start_index=0):
             "centroid_x_px": m.cx, "centroid_y_px": m.cy,
             "rect_long_side_px": long_px, "rect_short_side_px": short_px,
             "aspect_ratio": short_px / max(long_px, 1e-9),
+            "image_width_px": frame.get("image_width_px"),
+            "image_height_px": frame.get("image_height_px"),
             "units_per_pixel_x_mm": upp,
             "units_per_pixel_y_mm": frame["units_per_pixel_y_mm"],
             "tray_size_class": frame["tray_size_class"],
@@ -71,6 +73,47 @@ def write_scan(scan_dir, frames: list[dict], objects: list[dict]):
     _write_jsonl(scan_dir / "manifest.jsonl", frames)
     _write_jsonl(scan_dir / "objects.jsonl", objects)
     return scan_dir
+
+
+def export_yolo(scan_dir, out_dir, class_of=lambda r: 0, class_names=("insect",),
+                val_every=5):
+    """Fast training path: turn a BugPicker scan (frames + objects.jsonl) into a
+    YOLO detection dataset, so YOLO can be fine-tuned on real tray images in
+    minutes (e.g. `yolo train data=out_dir/data.yaml model=yolo11n.pt epochs=30`).
+    `class_of` maps an object record to a class id (e.g. by tray_size_class or
+    an Essig family from the specimen-context FCO)."""
+    import shutil
+    scan_dir, out_dir = Path(scan_dir), Path(out_dir)
+    rows = [json.loads(l) for l in (scan_dir / "objects.jsonl").read_text().splitlines() if l.strip()]
+    by_frame: dict[str, list] = {}
+    for r in rows:
+        if not r.get("is_duplicate"):
+            by_frame.setdefault(r["source_file"], []).append(r)
+    for i, (frame, objs) in enumerate(sorted(by_frame.items())):
+        split = "val" if i % val_every == val_every - 1 else "train"
+        (out_dir / "images" / split).mkdir(parents=True, exist_ok=True)
+        (out_dir / "labels" / split).mkdir(parents=True, exist_ok=True)
+        src = scan_dir / frame
+        stem = Path(frame).stem
+        if src.exists():
+            shutil.copy(src, out_dir / "images" / split / src.name)
+        lines = []
+        for r in objs:
+            W, H = r.get("image_width_px"), r.get("image_height_px")
+            if not W or not H:
+                continue
+            if "bbox_x_px" in r:
+                x, y, w, h = r["bbox_x_px"], r["bbox_y_px"], r["bbox_width_px"], r["bbox_height_px"]
+                cx, cy = x + w / 2, y + h / 2
+            else:  # baebugs records: axis-aligned box from rect sides (orientation unknown)
+                s = max(r["rect_long_side_px"], r["rect_short_side_px"])
+                cx, cy, w, h = r["centroid_x_px"], r["centroid_y_px"], s, s
+            lines.append(f"{class_of(r)} {cx / W:.6f} {cy / H:.6f} {w / W:.6f} {h / H:.6f}")
+        (out_dir / "labels" / split / f"{stem}.txt").write_text("\n".join(lines) + "\n")
+    (out_dir / "data.yaml").write_text(
+        f"path: {out_dir.resolve()}\ntrain: images/train\nval: images/val\n"
+        f"names: {json.dumps(dict(enumerate(class_names)))}\n")
+    return out_dir
 
 
 def read_bugpicker_objects(path) -> list[Measurement]:
