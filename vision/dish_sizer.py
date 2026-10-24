@@ -69,6 +69,7 @@ def measure(objects, px_per_mm, min_area_mm2):
             "length_mm": round(max(a, b) / px_per_mm, 1),
             "width_mm": round(min(a, b) / px_per_mm, 1),
             "area_mm2": round(area_mm2, 1),
+            "box_px": cv2.boxPoints(((cx, cy), (a, b), angle)).round().astype(int).tolist(),
             "contour": c,
             "rect": ((cx, cy), (a, b), angle),
         })

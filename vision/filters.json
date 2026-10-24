@@ -1,0 +1,10 @@
+{
+  "_note": "PLACEHOLDER hole sizes in mm. Replace with the real filters' hole sizes.",
+  "filters": {
+    "F1": 1.5,
+    "F2": 3,
+    "F3": 5,
+    "F4": 8,
+    "F5": 12
+  }
+}

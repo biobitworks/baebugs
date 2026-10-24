@@ -45,4 +45,16 @@ Commands below use that environment's `python.exe` directly; no activation neede
 
 Outputs each object's length and width in mm (width decides whether it passes a filter) plus an annotated image. `--px-per-mm` must be measured for each camera setup.
 
+Then turn the measurements into a filter plan for the rig (filters stacked coarse on top to fine at the bottom):
+
+```powershell
+& $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\filter_plan.py vision\output\objects.json --json vision\output\plan.json --image vision\samples\dish_phone_01.webp --out vision\output\plan.png
+& $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\filter_plan.py vision\output\objects.json --target 3 6   # catch 3-6 mm objects on one shelf
+```
+
+- **split** (default): picks the 3 filters that sort the objects into the most separate groups, with hole sizes as far from any object as possible.
+- **target**: picks filters so one shelf catches objects whose width is in the given range (later selectable with a microcontroller button).
+- Hole sizes live in `vision/filters.json` and are **placeholders** until the real filters are measured.
+- Tests: `cd vision; python -m unittest test_filter_plan`.
+
 Photo tips that matter more than code: light from underneath (backlight) or a plain matte coloured background, camera straight overhead at a fixed height, full-resolution images, objects not touching.
