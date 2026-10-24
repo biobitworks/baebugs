@@ -176,6 +176,11 @@ def specimen_context(*fcos: FCO, gaps: FCO | None = None) -> FCO:
         ctx.fields["collection_gap_hits"] = hits
         ctx.fields["gap_novelty_boost"] = bool(hits)
         ctx.parents.append(gaps.id)
+    f = ctx.fields   # map sampling-event vocab onto specimen vocab
+    if "date" not in f and f.get("sampled_at"):
+        f["date"] = f["sampled_at"]
+    if "method" not in f and f.get("sample_type"):
+        f["method"] = f["sample_type"]
     wanted = ["family", "scientificName", "lat_long", "date", "method", "preparations", "lifeStage"]
     ctx.fields["missing"] = [k for k in wanted if k not in ctx.fields]
     return ctx
@@ -185,6 +190,7 @@ def vision_prompt_context(ctx: FCO) -> str:
     """Compact grounding text for the Claude QA step / any VLM."""
     f = ctx.fields
     keys = ["scientificName", "family", "order", "lifeStage", "preparations", "method",
-            "locality", "county", "date", "collection_gap_hits", "missing"]
+            "sample_type", "habitat_type", "soil_moisture", "ecoregion", "locality", "county",
+            "date", "prep_hint", "collection_gap_hits", "missing"]
     lines = [f"{k}: {f[k]}" for k in keys if f.get(k) not in (None, [], "")]
     return f"Specimen context (FCO {ctx.id[:16]}):\n" + "\n".join(lines)
