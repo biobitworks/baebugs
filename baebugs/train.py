@@ -138,13 +138,13 @@ def pseudo_label(images_dir, weights, out_dir, conf=0.5, val_every=6, max_images
 
 def pseudo_label_specimens(image_dirs, out_dir, min_ruler_conf=0.4, max_objects=6,
                            length_range=(1.0, 30.0), val_every=6, max_images=None,
-                           preview_n=12):
+                           preview_n=12, teacher="yoloe"):
     """Teacher for museum specimen photos (grey stage + ruler): real px/mm from
     the ruler, specimens segmented on the stage only (labels/barcodes/ruler
     excluded). Writes YOLO-seg labels AND truth_real.json with sizes in mm
     (teacher-derived 'silver' truth for benchmarking on real photos)."""
     import shutil
-    from .specimen_photo import preview, ruler_px_per_mm, segment
+    from .specimen_photo import preview, ruler_px_per_mm, segment, segment_yoloe
     out = Path(out_dir)
     paths = [p for d in image_dirs for p in sorted(Path(d).glob("*.jpg"))][:max_images]
     stats = {"images": len(paths), "no_ruler": 0, "rejected": 0, "kept_images": 0, "objects": 0}
@@ -156,7 +156,8 @@ def pseudo_label_specimens(image_dirs, out_dir, min_ruler_conf=0.4, max_objects=
         ppm, conf = ruler_px_per_mm(img)
         if not ppm or conf < min_ruler_conf:
             stats["no_ruler"] += 1; continue
-        polys, ms = segment(img, ppm)
+        polys, ms = (segment_yoloe(img, ppm, length_range=length_range) if teacher == "yoloe"
+                     else segment(img, ppm))
         keep = [(pp, m) for pp, m in zip(polys, ms) if length_range[0] <= m.length_mm <= length_range[1]]
         if not keep or len(keep) > max_objects:
             stats["rejected"] += 1; continue
@@ -221,12 +222,13 @@ def main(argv=None):
     f.add_argument("--imgsz", type=int, default=640)
     ps = sub.add_parser("pseudo-specimens"); ps.add_argument("--images", nargs="+", required=True)
     ps.add_argument("--out", required=True); ps.add_argument("--max-images", type=int)
+    ps.add_argument("--teacher", default="yoloe", choices=["yoloe", "classical"])
     pl = sub.add_parser("pseudo-label"); pl.add_argument("--images", required=True)
     pl.add_argument("--weights", required=True); pl.add_argument("--out", required=True)
     pl.add_argument("--conf", type=float, default=0.5); pl.add_argument("--max-images", type=int)
     a = ap.parse_args(argv)
     if a.cmd == "pseudo-specimens":
-        print(json.dumps(pseudo_label_specimens(a.images, a.out, max_images=a.max_images), indent=2)); return
+        print(json.dumps(pseudo_label_specimens(a.images, a.out, max_images=a.max_images, teacher=a.teacher), indent=2)); return
     if a.cmd == "mix":
         print(mix(a.data, a.out)); return
     if a.cmd == "pseudo-label":

@@ -54,8 +54,13 @@ def ruler_px_per_mm(img, search_frac=0.35, min_ppm=2.0, max_ppm=80.0):
         i = peaks[0]
         a_, b_, c_ = seg[i - 1], seg[i], seg[i + 1]
         lag = lo + i + 0.5 * (a_ - c_) / (a_ - 2 * b_ + c_ + 1e-9)
-        if b_ > best[1]:
-            best = (float(lag), float(b_))
+        # a tick ruler repeats: autocorrelation must stay high at 2x..5x the period
+        reps = [ac[max(0, int(round(m * lag)) - 2): int(round(m * lag)) + 3].max()
+                for m in range(2, 6) if int(round(m * lag)) + 3 < n]
+        regular = len(reps) >= 3 and min(reps) > 0.35
+        score = float(b_) if regular else 0.0
+        if score > best[1]:
+            best = (float(lag), score)
     return best
 
 
@@ -133,3 +138,44 @@ def preview(img, polys, ms, ppm, conf):
     cv2.putText(vis, f"{ppm:.1f}px/mm conf {conf:.0f}", (10, 40), cv2.FONT_HERSHEY_SIMPLEX,
                 t * 0.6, (255, 0, 0), t)
     return vis
+
+
+_YOLOE = {}
+
+
+def segment_yoloe(img, px_per_mm, prompts=("insect",), weights="yoloe-11s-seg.pt", conf=0.25,
+                  min_area_mm2=0.3, length_range=(1.0, 30.0)):
+    """Zero-shot teacher: open-vocabulary YOLOE segmentation prompted with text
+    ('insect'), then the same exclusions as `segment` (paper labels, image
+    border) and the 1-30 mm size window. Runs locally (ultralytics)."""
+    from ultralytics import YOLOE
+    key = (weights, tuple(prompts))
+    if key not in _YOLOE:
+        m = YOLOE(weights)
+        m.set_classes(list(prompts), m.get_text_pe(list(prompts)))
+        _YOLOE[key] = m
+    res = _YOLOE[key].predict(img, conf=conf, verbose=False, retina_masks=True)[0]
+    if res.masks is None:
+        return [], []
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    paper = ((hsv[..., 2] > 228) & (hsv[..., 1] < 35)).astype(np.uint8)
+    h, w = img.shape[:2]
+    polys, ms = [], []
+    for xy, cf in zip(res.masks.xy, res.boxes.conf.cpu().numpy()):
+        if len(xy) < 3:
+            continue
+        c = np.asarray(xy, np.float32).reshape(-1, 1, 2)
+        x, y, bw, bh = cv2.boundingRect(c.astype(np.int32))
+        if x <= 2 or y <= 2 or x + bw >= w - 2 or y + bh >= h - 2:
+            continue                                   # clipped by the frame
+        mask = np.zeros((h, w), np.uint8)
+        cv2.fillPoly(mask, [c.astype(np.int32)], 1)
+        if (paper[mask > 0].mean() if mask.any() else 1) > 0.5:
+            continue                                   # mostly on a label
+        if cv2.contourArea(c) < min_area_mm2 * px_per_mm ** 2:
+            continue
+        m = _from_contour(c, px_per_mm, "yoloe", float(cf))
+        if not (length_range[0] <= m.length_mm <= length_range[1]):
+            continue
+        polys.append(c.reshape(-1, 2)); ms.append(m)
+    return polys, ms
