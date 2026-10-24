@@ -58,8 +58,9 @@ def merkle_root(leaves: list[str]) -> str:
     return level[0]
 
 
-def score(results: dict, w_damage=1.5, w_size=2.0) -> float:
-    return results["recovery"] - w_damage * results["damage"] - w_size * results["size_error"]
+def score(results: dict, w_damage=1.5, w_size=2.0, w_contam=0.6) -> float:
+    return (results["recovery"] - w_damage * results["damage"]
+            - w_size * results["size_error"] - w_contam * results.get("contamination", 0.0))
 
 
 @dataclass
@@ -107,7 +108,7 @@ def lomo(ledger: Ledger, factor: str) -> list[dict]:
     return sorted(out, key=lambda d: -d["drop_if_removed"])
 
 
-def compare_lomo_breakpoints(ledger: Ledger) -> dict:
+def compare_lomo_breakpoints(ledger: Ledger, min_drop: float = 0.02) -> dict:
     gp = ledger.golden_path()
     final = gp[-1]["best"]["config"]
     rep = {}
@@ -116,7 +117,10 @@ def compare_lomo_breakpoints(ledger: Ledger) -> dict:
         entered = [b["best"]["config"][f] for b in gp]
         rep[f] = {"lomo_top": top["level"], "lomo_drop": top["drop_if_removed"],
                   "golden_path_final": final[f], "golden_path_history": entered,
-                  "agree": top["level"] == final[f]}
+                  "agree": top["level"] == final[f],
+                  "verdict": ("robust" if top["level"] == final[f] and top["drop_if_removed"] >= min_drop
+                              else "weak - run more combinations" if top["level"] == final[f]
+                              else "disagree - run more combinations")}
     return rep
 
 
@@ -126,6 +130,7 @@ def simulate_run(config: dict, bodies: list[dict], target: tuple[float, float],
                  materials=None, seed=0, margin=1.1) -> dict:
     """bodies: [{width_mm, profile}], target: width band we want retained.
     recovery = fraction of target-band bodies retained intact and detected;
+    contamination = share of the retained fraction that is smaller bycatch;
     damage = mean worst-part damage probability; size_error = capture noise
     (+ jitter-induced misplacement)."""
     rng = np.random.default_rng(seed)
@@ -136,7 +141,7 @@ def simulate_run(config: dict, bodies: list[dict], target: tuple[float, float],
     flow = max(0.05, flow)
     a = m["aperture_mm"]
     lo, hi = target
-    got = tgt = 0
+    got = tgt = off = off_kept = 0
     dmg = []
     for b in bodies:
         w = b["width_mm"]
@@ -150,7 +155,11 @@ def simulate_run(config: dict, bodies: list[dict], target: tuple[float, float],
             intact = rng.random() > worst
             seen = rng.random() > cap["miss"]
             got += int(rng.random() < p_ret and intact and seen)
-        elif rng.random() < p_ret and a > 0:
-            got -= 0  # off-target retention handled by downstream sieves
-    return {"recovery": round(got / max(tgt, 1), 4), "damage": round(float(np.mean(dmg)), 4),
+        elif w < lo:  # smaller than the band: should pass; kept = bycatch in the fraction
+            off += 1
+            off_kept += int(rng.random() < p_ret)
+    kept_total = got + off_kept
+    return {"recovery": round(got / max(tgt, 1), 4),
+            "contamination": round(off_kept / max(kept_total, 1), 4),
+            "damage": round(float(np.mean(dmg)), 4),
             "size_error": round(cap["noise"] * (1 + hw["jitter"]), 4), "flow": round(flow, 3)}

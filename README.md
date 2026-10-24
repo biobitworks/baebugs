@@ -44,6 +44,10 @@ Built at the Physical AI for Science Hack (Oct 24–25, 2026). The challenge is 
 | `method.py` | Predicted vs observed counts per fraction, then a retention-margin update | The sorter gets better each run instead of repeating the same error |
 | `bugpicker_bridge.py` | Reads and writes [BugPicker](https://github.com/biokea/BugPicker)'s `manifest.jsonl` / `objects.jsonl` | Fills `tray_size_class` and `sorting_tray_slot`, so step 1 plugs into step 3 with no new protocol. It can also use BugPicker's detector as a measurement source |
 | `calbug.py` | Pulls family composition for a locality from the Essig Museum / Calbug collection on GBIF (~550k records) and turns it into an expected size-class mix | Flags a bag that doesn't look like where it came from (wrong bag, broken specimens, debris) before sieving. Links provenance to `EMEC` catalog numbers |
+| `fco.py` + `essig_adapter.py` | Each Essig source (home page, gaps page, label tool, GBIF record, label read from a photo by Claude) becomes a content-addressed FCO. They hybridize into a specimen-context FCO that logs which source supplied each field and every conflict | Grounds the vision model (prompt context, size prior), flags collection-gap taxa as novel, lists what is still missing. Home and gaps pages are read from browser-saved copies because robots.txt disallows fetching them |
+| `novelty.py` + `preservation.py` + `materials.yaml` | Novel-size detection (k-NN density vs reference), mesh gaps in the stack, filter suggestions from nets to 63 µm nylon, ranked by how well they isolate the cluster and by part-level damage risk (wings, scales, legs, soft bodies) under each preservative | Selects for novelty without destroying the specimens that make it novel |
+| `explore.py` | Filters × hardware × capture runs as Merkle leaves; root at every step = break point; LOMO per factor level; side-by-side verdict (robust / weak / disagree) | The mechanical scientific method: shows what actually improves, and when the evidence isn't there yet |
+| `bugpicker_bridge.export_yolo` | BugPicker scans → YOLO dataset labelled by size class or family | Fast training: fine-tune YOLO on real trays in minutes |
 | `provenance.py` | One hash-chained record per step | Covers what was done, to which sample, with which parameters, images and version, so the record is FAIR without a write-up afterwards |
 | `mcp_server.py` | MCP tools: `measure_sample`, `plan_sieves`, `calibrate_sieve`, `sieve_inventory`, `trace_sample` | Gives the instrument an API, so an agent can run the protocol while people supervise |
 
@@ -64,7 +68,8 @@ These apertures are **estimates** read from the photos. Run calibration on a bac
 ```bash
 pip install -e ".[notebook,dev]"          # add [yolo] and [claude] as needed
 pytest -q
-jupyter lab notebooks/baebugs_pipeline.ipynb   # swap data in the first cell
+jupyter lab notebooks/baebugs_pipeline.ipynb          # main pipeline; swap data in the first cell
+jupyter lab notebooks/essig_context_novelty.ipynb     # Essig FCO context + novelty/filter test case
 baebugs analyze --image tray.jpg --px-per-mm 40          # or --camera 0 --aruco-mm 10
 python -m baebugs.mcp_server                             # instrument as MCP server
 ```
@@ -80,6 +85,8 @@ python -m baebugs.mcp_server                             # instrument as MCP ser
 
 ## Still needed from the team
 
+- Browser-saved copies of essigdb.berkeley.edu and /gaps.html → `essig_adapter.page_fco(..., saved_html_path=...)`
+- Damage counts from real runs to fit `materials.yaml` fragility/abrasion placeholders (test-case outcomes are simulated)
 - Family body-width ranges → `baebugs/config/family_sizes.yaml` (placeholders; drives the Essig prior)
 - Real insect / analog size parameters → `baebugs/config/insects.yaml` (current values are placeholders)
 - Measured apertures → `baebugs/config/sieves.yaml`

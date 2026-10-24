@@ -63,7 +63,8 @@ def suggest_filters(gap: dict, profile: str, preservation="ethanol_70",
                     margin=1.1, top=3, include_procurable=True, cfg=None):
     cfg = cfg or load_yaml("materials.yaml")
     ws = np.asarray(gap["widths"])
-    target = float(np.median(ws)) / margin       # aperture that splits the cluster
+    # isolate the novel cluster: retain all of it, pass everything smaller
+    target = float(np.min(ws)) / margin
     lo, hi = gap["between_mm"]
     ranked = []
     for m in cfg["materials"]:
@@ -72,7 +73,7 @@ def suggest_filters(gap: dict, profile: str, preservation="ethanol_70",
             continue
         if not include_procurable and not m["in_kit"]:
             continue
-        split = 1 - abs(np.log(a / target))       # 1 = perfect split
+        split = 1 - abs(np.log(a / target))       # 1 = aperture right under the cluster
         retained = int((ws >= a * margin).sum())
         settings = gentlest_settings(profile, m, preservation, cfg=cfg)
         part, risk = worst(profile, m, preservation=preservation, cfg=cfg,
