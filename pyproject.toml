@@ -13,6 +13,7 @@ dev = ["pytest", "nbclient", "nbformat", "ipykernel"]
 
 [project.scripts]
 baebugs = "baebugs.cli:main"
+baebugs-train = "baebugs.train:main"
 
 [tool.setuptools.packages.find]
 include = ["baebugs*"]
