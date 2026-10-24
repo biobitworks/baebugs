@@ -83,15 +83,22 @@ def plan_stack(widths_mm, inventory=None, insects=None,
     if catch_all:
         cuts.append(float(widths.min()))  # catch everything above the drain
     chosen = []
-    for cut in cuts:
-        target = cut / margin
-        cands = [s for s in avail if s["aperture_mm"] <= target and s not in chosen]
+    for i, cut in enumerate(cuts):
+        last_ap = chosen[-1]["aperture_mm"] if chosen else float("inf")
+        cands = [s for s in avail if s["aperture_mm"] < last_ap]
         if not cands:
-            plan.notes.append(f"no sieve fine enough to retain width >= {cut:.3f} mm")
+            plan.notes.append(f"no sieve left to split at width {cut:.3f} mm")
             continue
-        s = cands[0]  # largest aperture that still retains
-        if chosen and s["aperture_mm"] >= chosen[-1]["aperture_mm"]:
+        if catch_all and i == len(cuts) - 1:
+            # final catch: largest sieve that still retains the smallest body
+            fine = [s for s in cands if s["aperture_mm"] * margin <= cut]
+            if not fine:
+                plan.notes.append(f"nothing fine enough to catch width {cut:.3f} mm")
+                continue
+            chosen.append(fine[0])
             continue
+        # split: effective cut (aperture*margin) closest to the class boundary
+        s = min(cands, key=lambda s: abs(s["aperture_mm"] * margin - cut))
         chosen.append(s)
 
     remaining = widths.copy()

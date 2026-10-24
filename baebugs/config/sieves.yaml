@@ -1,19 +1,19 @@
-# Sieve inventory — REPLACE with your bench's actual stack.
-# Defaults are ASTM E11 square-mesh apertures (mm). `slot` = where the arm finds it.
+# BioKEA Track A kit (from bench photos, Oct 24 2026).
+# Apertures are ESTIMATES from photos. Run `baebugs calibrate-sieve` on a top-down
+# USB image of each mesh to replace them with measured values.
+# Each printed frame has 6 cells (2x3) -> cells can hold replicates or separate samples.
 water:
-  reservoir_l: 5.0          # current volume available for rinsing
-  min_reserve_l: 0.5        # never draw below this
+  reservoir_l: 5.0
+  min_reserve_l: 0.5
   flow_l_per_min_default: 1.0
 sieves:
-  - {id: S-04,  astm_no: 4,   aperture_mm: 4.75,  slot: A1, in_use: false}
-  - {id: S-08,  astm_no: 8,   aperture_mm: 2.36,  slot: A2, in_use: false}
-  - {id: S-10,  astm_no: 10,  aperture_mm: 2.00,  slot: A3, in_use: false}
-  - {id: S-16,  astm_no: 16,  aperture_mm: 1.18,  slot: A4, in_use: false}
-  - {id: S-18,  astm_no: 18,  aperture_mm: 1.00,  slot: B1, in_use: false}
-  - {id: S-20,  astm_no: 20,  aperture_mm: 0.850, slot: B2, in_use: false}
-  - {id: S-30,  astm_no: 30,  aperture_mm: 0.600, slot: B3, in_use: false}
-  - {id: S-35,  astm_no: 35,  aperture_mm: 0.500, slot: B4, in_use: false}
-  - {id: S-40,  astm_no: 40,  aperture_mm: 0.425, slot: C1, in_use: false}
-  - {id: S-60,  astm_no: 60,  aperture_mm: 0.250, slot: C2, in_use: false}
-  - {id: S-100, astm_no: 100, aperture_mm: 0.150, slot: C3, in_use: false}
-  - {id: S-200, astm_no: 200, aperture_mm: 0.075, slot: C4, in_use: false}
+  - {id: PERF-5,   kind: perforated_round, aperture_mm: 5.0, slot: A1, in_use: false, cells: 1,
+     note: "metal plate, round holes; retained pasta, passed rice"}
+  - {id: GRID-4,   kind: printed_square,   aperture_mm: 4.0, slot: A2, in_use: false, cells: 6,
+     note: "coarse printed plastic grid; retained pasta/lasagna pieces"}
+  - {id: HEX-2,    kind: hex_wire,         aperture_mm: 2.2, slot: A3, in_use: false, cells: 6,
+     note: "hex wire mesh; most rice passed"}
+  - {id: SCREEN-1, kind: woven_screen,     aperture_mm: 1.2, slot: A4, in_use: false, cells: 6,
+     note: "fine window screen; retained rice, chia mostly passed"}
+  - {id: TRAY,     kind: catch_tray,       aperture_mm: 0.0, slot: B1, in_use: false, cells: 6,
+     note: "clear solid bottom; catches everything (BugDisperser hand-off)"}

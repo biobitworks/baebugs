@@ -1,10 +1,9 @@
-# Insect size classes — PLACEHOLDERS. Replace with the parameters you provide
-# (or import from the biokea repo once linked). Units: mm.
-# `width_mm` is what governs passage through square mesh; length is reported too.
+# Size classes for the BioKEA bug analogs. PLACEHOLDERS from typical grain/pasta
+# dimensions — replace with the insect parameters you provide. Units: mm.
+# width_mm is the narrow axis and decides what passes square/round mesh.
 classes:
-  - {name: small,  length_mm: [0.3, 1.5],  width_mm: [0.08, 0.5]}
-  - {name: medium, length_mm: [1.5, 5.0],  width_mm: [0.5, 1.5]}
-  - {name: large,  length_mm: [5.0, 20.0], width_mm: [1.5, 5.0]}
-# Fraction of the narrowest axis that must exceed the aperture to be retained
-# (bodies are soft/irregular; tune empirically).
+  - {name: tiny,   width_mm: [0.3, 1.2], examples: [chia, quinoa, couscous]}
+  - {name: small,  width_mm: [1.2, 2.2], examples: [white rice, brown rice, red rice, wild rice]}
+  - {name: medium, width_mm: [2.2, 4.0], examples: [broken fideo, rice clumps]}
+  - {name: large,  width_mm: [4.0, 30],  examples: [ditalini, lasagna shards]}
 retention_margin: 1.10
