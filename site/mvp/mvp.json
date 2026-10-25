@@ -4952,11 +4952,41 @@ null
 {
 "claim": "OWN",
 "kind": "doc",
+"leaf": "68ab9a523cd665ba41bd0f8c38258ff59df41e7438706c94ee532e114b63d211",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/demo/README.md",
+"sha256": "d7d346635fa738582b8c09832b220b3274fa1fe993eb345965bd8677ef077099",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
 "leaf": "9a3bffb2b4b482709e6ec3f281f77b32dd871e10db49cafa108492b5207a55db",
 "licence": "MIT",
 "module": "docs",
 "path": "docs/demo/baebugs_mvp_demo.mp4",
 "sha256": "9056bb0dc30485450b492b8b568bd05dff695c478dca231634e1bbbb46702059",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "950f2cc2ff248bb015767948771e119c812d13878eb1ea1a749f969cbd68d153",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/demo/baebugs_reel.mp4",
+"sha256": "3a05d304d20e180c855c985d7a6ceaf62f54427fc309a51fe5d94aad2351ce72",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "9ba9fe7b6a88aea3dabb0568faba921299a5df62c3ad68c7f4818f6bbc00954d",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/demo/make_reel.py",
+"sha256": "c6c98f7aae8fbab044f18687a80ca05bf3470431f1a5f85d90725c96454e1665",
 "status": "built"
 },
 {
@@ -13145,14 +13175,14 @@ null
 "terms": []
 },
 "docs": {
-"atoms": 93,
+"atoms": 96,
 "claims": {
-"OWN": 93
+"OWN": 96
 },
 "id": "module:docs",
-"root": "9c18c244f860264deb7c35104a5202620ab8e38fb4285baf0932398ed32dcc1b",
+"root": "93229d43220b5eaba8064d848923197db94df3b38afd1136305e1c4d85d9cdd9",
 "status": {
-"built": 93
+"built": 96
 },
 "terms": []
 },
@@ -14051,9 +14081,9 @@ null
 ]
 }
 ],
-"root": "6a37862ed8e567b9c22d1d209ba7c7738fb0352f91cfb0827721926424966ee8",
+"root": "0f3b4d392b23b5eea6ec602f372884a20c281601ed5104464adb11d74c8980de",
 "roots": {
-"aok": "aaa18e957a33fde3d355ccc4d92d675267a69526f0c14e0c0637f51d79b01e06",
+"aok": "55f75e8cabae2b99d37c23224884cf44a00c1b3d9bcbd080537c8bbdcc468c37",
 "assets": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
 "assets_mmr": "97d20c6b90e0385d7cbac87551f93381eba7eeb2e05cecb7ed9f352f349281b2",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -18269,7 +18299,7 @@ null
 }
 ],
 "totals": {
-"OWN": 1033,
+"OWN": 1036,
 "OWN+TERMS": 52,
 "THIRD": 20
 },
