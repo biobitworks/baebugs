@@ -14,7 +14,10 @@ import numpy as np
 
 
 def find_dish(img):
-    """Return (cx, cy, r) of the dish's outer rim, or None."""
+    """Return (cx, cy, r) of the dish's strongest circular edge, or None.
+
+    The dish has several concentric rings (rim, wall), so only the centre is reliable.
+    """
     gray = cv2.medianBlur(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY), 5)
     w = gray.shape[1]
     circles = cv2.HoughCircles(
@@ -27,28 +30,45 @@ def find_dish(img):
     return int(cx), int(cy), int(r)
 
 
-def local_background(lab, mask, size):
-    """Estimate the background colour around each pixel with a large median filter.
+def colour_distance(diff, shadow_weight):
+    """CIELAB distance with darkening down-weighted: shadows make the background darker but keep its colour.
 
-    Pixels outside the dish are filled with the dish's median colour first so the rim doesn't bleed in.
+    Getting lighter is not down-weighted, so pale objects (pasta, rice) still stand out.
     """
-    filled = lab.copy()
-    filled[mask == 0] = np.median(lab[mask > 0], axis=0)
-    small = cv2.resize(filled, None, fx=0.25, fy=0.25, interpolation=cv2.INTER_AREA).astype(np.uint8)
-    k = max(3, (size // 4) | 1)
-    bg = np.dstack([cv2.medianBlur(small[:, :, i], k) for i in range(3)])
-    return cv2.resize(bg, (lab.shape[1], lab.shape[0]), interpolation=cv2.INTER_LINEAR).astype(np.float32)
+    diff = diff.copy()
+    darker = diff[..., 0] < 0
+    diff[..., 0][darker] *= shadow_weight
+    return np.linalg.norm(diff, axis=-1)
 
 
-def segment(img, mask, threshold, bg_size, lightness_weight):
-    """Mark pixels whose colour differs from the local background by more than `threshold` (CIELAB units).
+def fit_background(lab, mask, threshold, shadow_weight, iterations=4):
+    """Background colour over the dish as a smooth quadratic surface per CIELAB channel.
 
-    Lightness differences are down-weighted because shadows mostly change lightness, not colour.
+    Models gradual lighting changes across the dish. Each pass refits without the pixels that stood
+    out from the previous fit (objects, shadows), so even big objects don't drag the background.
     """
+    h, w = mask.shape
+    ys, xs = np.nonzero(mask)
+    step = max(1, len(xs) // 40000)
+    ys, xs = ys[::step], xs[::step]
+
+    def terms(x, y):
+        x, y = (x - w / 2) / w, (y - h / 2) / h
+        return np.stack([np.ones_like(x), x, y, x * x, x * y, y * y], axis=-1)
+
+    a, samples = terms(xs.astype(float), ys.astype(float)), lab[ys, xs]
+    keep = np.ones(len(xs), bool)
+    for _ in range(iterations):
+        coef, *_ = np.linalg.lstsq(a[keep], samples[keep], rcond=None)
+        keep = colour_distance(samples - a @ coef, shadow_weight) < threshold
+    yy, xx = np.mgrid[0:h, 0:w].astype(float)
+    return (terms(xx, yy) @ coef).astype(np.float32)
+
+
+def segment(img, mask, threshold, shadow_weight):
+    """Mark pixels whose colour differs from the background by more than `threshold` (CIELAB units)."""
     lab = cv2.cvtColor(cv2.GaussianBlur(img, (5, 5), 0), cv2.COLOR_BGR2LAB).astype(np.float32)
-    diff = lab - local_background(lab, mask, bg_size)
-    diff[:, :, 0] *= lightness_weight
-    distance = np.linalg.norm(diff, axis=2)
+    distance = colour_distance(lab - fit_background(lab, mask, threshold, shadow_weight), shadow_weight)
     objects = ((distance > threshold) & (mask > 0)).astype(np.uint8) * 255
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
     objects = cv2.morphologyEx(objects, cv2.MORPH_OPEN, kernel)
@@ -99,9 +119,8 @@ def main():
     ap.add_argument("image")
     ap.add_argument("--px-per-mm", type=float, required=True)
     ap.add_argument("--threshold", type=float, default=20, help="colour difference from background (CIELAB)")
-    ap.add_argument("--inner", type=float, default=0.72, help="fraction of the rim radius to analyse (skips the rim)")
-    ap.add_argument("--bg-size", type=int, default=241, help="background estimation window, px (bigger than the largest object)")
-    ap.add_argument("--lightness-weight", type=float, default=0.5, help="weight of lightness vs colour (shadows are lightness)")
+    ap.add_argument("--floor-mm", type=float, default=48, help="diameter of the dish floor to analyse, mm (63 mm dish: wall starts at ~48 mm)")
+    ap.add_argument("--shadow-weight", type=float, default=0.5, help="weight of darkening vs colour change (shadows only darken)")
     ap.add_argument("--min-area", type=float, default=0.5, help="ignore blobs smaller than this, mm^2")
     ap.add_argument("--out", default="annotated.png")
     ap.add_argument("--json")
@@ -113,15 +132,15 @@ def main():
     dish = find_dish(img)
     mask = np.zeros(img.shape[:2], np.uint8)
     if dish:
-        inner_r = int(dish[2] * args.inner)
+        inner_r = int(args.floor_mm / 2 * args.px_per_mm)
         cv2.circle(mask, dish[:2], inner_r, 255, -1)
-        print(f"dish: center {dish[:2]}, rim radius {dish[2]} px ({2 * dish[2] / args.px_per_mm:.0f} mm across)")
+        print(f"dish: center {dish[:2]}, analysing {args.floor_mm:g} mm across")
     else:
         inner_r = 0
         mask[:] = 255
         print("dish not found; analysing the whole image")
 
-    objects, _ = segment(img, mask, args.threshold, args.bg_size, args.lightness_weight)
+    objects, _ = segment(img, mask, args.threshold, args.shadow_weight)
     results = measure(objects, args.px_per_mm, args.min_area)
     cv2.imwrite(args.out, annotate(img, dish, inner_r, results))
 

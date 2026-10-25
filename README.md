@@ -40,10 +40,20 @@ Commands below use that environment's `python.exe` directly; no activation neede
 ## Vision
 
 ```powershell
-& $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\dish_sizer.py vision\samples\dish_phone_01.webp --px-per-mm 9.18 --out vision\output\annotated.png --json vision\output\objects.json
+& $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\dish_sizer.py vision\samples\dish_phone_01.webp --px-per-mm 9.12 --out vision\output\annotated.png --json vision\output\objects.json
 ```
 
-Outputs each object's length and width in mm (width decides whether it passes a filter) plus an annotated image. `--px-per-mm` must be measured for each camera setup.
+Outputs each object's length and width in mm (width decides whether it passes a filter) plus an annotated image. `--px-per-mm` must be measured for each camera setup (it changes whenever the camera height changes). Measure it from a ruler in the photo with a strip across its mm ticks that avoids glare and the dish rim:
+
+```powershell
+& $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\ruler_scale.py vision\samples\dish_phone_02.webp --along vertical --strip 333 348 60 440 --strip 333 348 1040 1330
+```
+
+| Sample | px/mm |
+|---|---|
+| dish_phone_01 | 9.12 |
+| dish_phone_02 | 12.89 |
+| dish_phone_03 | 11.84 |
 
 Then turn the measurements into a filter plan for the rig (filters stacked coarse on top to fine at the bottom):
 
