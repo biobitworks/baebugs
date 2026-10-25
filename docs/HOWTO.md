@@ -88,3 +88,23 @@ OBSERVED_EXPLORATORY, nothing is promoted automatically. Raw DataONE CSV (person
 - Commit + push at every Merkle break point (`ledger/*.jsonl` via `GitLedger`); never rewrite ledger lines.
 - Every build ships a Jupyter notebook in `notebooks/` that replays it with swappable data.
 - Nominal / placeholder / toy values are labelled as such in data, not just in docs.
+
+## 8. Doctor (stress test, BP5)
+```bash
+scripts/doctor.sh                         # or: python -m baebugs.doctor [--quick] [--json out.json]
+```
+Runs pytest, ruff (counts only, no auto-fix), pip check, import of every module, notebook JSON/nbformat-4
+parse (not executed), STL watertightness (trimesh), labware JSON, html-validate + axe accessibility on
+`dashboard/twin/bench_twin.html` (and `site/` if present), npm/brew doctor, gum, and the `resolve.references` import.
+Each check prints PASS / FAIL / SKIP with a reason; SKIP (tool missing) is never counted as a pass. Exit code 1 if any
+FAIL. `--quick` skips the heavy checks.
+
+Bring your own check: drop `checks.d/<name>.py` (or point `BAEBUGS_DOCTOR_CHECKS=/some/dir:/other` at a directory)
+defining `run()` that returns a detail string. Raise `baebugs.doctor.Skip("reason")` to skip; any other exception is a FAIL.
+```python
+# checks.d/drive_mounted.py
+import os
+def run():
+    assert os.path.isdir("/Volumes/magicBLACKbox"), "drive not mounted"
+    return "drive mounted"
+```
