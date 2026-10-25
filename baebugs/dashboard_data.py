@@ -90,10 +90,13 @@ def write_csvs(repo):
     for run, v in r.items():
         for stage, key in (("before", "baseline_bench"), ("after", "bench")):
             b = v.get(key) or {}
-            for model in ("yolo", "classical", "consensus"):
-                if model in b:
-                    m = b[model]; rows.append([run, stage, model, m["recall"], m["median_len_err"], m["median_wid_err"], m["p90_wid_err"], b.get("n_true")])
-    w("bench", ["run", "stage", "model", "recall", "median_len_err", "median_wid_err", "p90_wid_err", "n_true"], rows)
+            sets = {"synthetic": b} if "yolo" in b else {k: x for k, x in b.items() if isinstance(x, dict)}
+            for set_, bb in sets.items():
+                for model in ("yolo", "classical", "consensus"):
+                    if model in bb:
+                        m = bb[model]; rows.append([run, stage, set_, model, m["recall"], m["median_len_err"],
+                                                    m["median_wid_err"], m["p90_wid_err"], bb.get("n_true")])
+    w("bench", ["run", "stage", "set", "model", "recall", "median_len_err", "median_wid_err", "p90_wid_err", "n_true"], rows)
     w("epochs", ["run", "epoch", "mAP50_mask", "mAP50_box", "seg_loss"],
       [[run, e["epoch"], e.get("mAP50_mask"), e.get("mAP50_box"), e.get("seg_loss")] for run, v in r.items() for e in v["epochs"]])
     w("ledger", ["run", "leaves", "root", "last_step"], [[run, v["leaves"], v["root"], (v["steps"] or ["?"])[-1]] for run, v in r.items()])
