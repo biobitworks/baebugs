@@ -142,11 +142,11 @@ const STEPS = [
     <p><span class="tag t-teal">G_measured</span>the camera-measured opening must match the commanded width.</p>
     <p><span class="tag t-ok">G_capture</span>every specimen retained at this width is accounted for in its tray.</p>
     <p class="note">A failed gate is a BREAK in the run's MMR, not a silent retry. Proof of concept, uncalibrated.</p></div>
-   <div class="card"><h3>Arm that swaps filters <span class="tag t-warn">open PR #24, not merged</span></h3>
-    <p class="note">A contributed SO-101 arm workflow: a camera sizes objects in a dish, a planner picks filters, and the arm moves them in a 3-slot vertical rig, reading a printed marker on each filter before every pick. It lives in an outside fork and is not in this build or its hashes until Byron reviews it.</p>
-    <p class="note">PR #23 adds an OpenSCAD-rendered animation of the BioKEA line with these additions; it is labelled illustrative, not hardware footage.</p></div>
+   <div class="card"><h3>Arm that swaps filters <span class="tag t-teal">contributed, PR #24</span></h3>
+    <p class="note">A contributed SO-101 arm workflow: a camera sizes objects in a dish, a planner picks filters, and the arm moves them in a 3-slot vertical rig, reading a printed marker on each filter before every pick. Contributed under the repo's MIT licence and now in <code>filtration-robot/</code>; no run on real specimens is recorded yet.</p>
+    <p class="note"><code>docs/workflow_video/</code> (PR #23) holds an OpenSCAD-rendered animation of the BioKEA line with these additions; it is labelled illustrative, not hardware footage.</p></div>
   </div>
-  ${sources('robot','<li>PR #24 and PR #23 material: not in the repo yet, so not hashed here.</li>')}`},
+  ${sources('robot')}`},
 
  {k:'Vision', hue:'#ef7f73', html:`
   <div class="kicker">03 · Computer vision at each step</div>

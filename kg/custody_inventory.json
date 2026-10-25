@@ -13,13 +13,15 @@
   "values hashed per epoch": 176,
   "final weights stored and resolving": 3,
   "MMR custody records": 130,
-  "custody breaks recorded": 8,
+  "custody breaks recorded": 25,
   "hypergraph nodes / edges": "791 / 227",
-  "repo files as atoms (AoK leaves)": 914,
+  "repo files as atoms (AoK leaves)": 1195,
   "bench assets": 35,
   "bench photos/videos": 31,
   "upstream repos pinned by hash": 12,
-  "printable parts (STL) hashed": 207
+  "printable parts (STL) hashed": 211,
+  "custody breaks: result / withheld bench photo": "8 / 16",
+  "MMR custody logs": 7
  },
  "mmr_logs": {
   "assets_mmr": 4,
@@ -40,5 +42,9 @@
   "impact_mmr": "bbbf8f3daaac1f80cc418c20d1f096307195798f378383ab4807a69fd1dba359",
   "labbox_mmr": "ee4a72209e017678efc3caa998c89d95d5b559e71aa9b6c7a321f5151c09284d",
   "upstream_mmr": "38a4a379f5c6d0d5eb9b742eceb698f8cb4e72309bf1f2095cca9e7d87c85513"
+ },
+ "refreshed_from": {
+  "site/mvp/mvp.json": "5016a253b934526ac6183687cef63aafe2ff0f5471e9ee28ccea98b5e1067f4e",
+  "kg/aok.json": "76a091e983c0446ba834e1428a8decbf0be33b8668f233bf085592bf6dda2720"
  }
 }
