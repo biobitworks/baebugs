@@ -74,6 +74,18 @@ REGISTRY = {
     "dataone_cib_raw":         {"path": f"{B}/dataone_cib", "kind": "tabular", "role": "source",
                                 "note": "raw DataONE soil survey; contains observer PII -> never staged"},
     "essig":                   {"path": f"{R}/essig", "kind": "json", "role": "context"},
+    "holdout_az":              {"path": f"{B}/holdout_az", "kind": "yolo_seg", "role": "domain_holdout",
+                                "derived_from": ["gbif_az"],
+                                "transform": "YOLOE ruler-scaled teacher (train.pseudo_label_specimens, val_every=3) on gbif_az photos "
+                                             "not used in r3/teacher_check/rejected_v1 (domain_holdout.py)"},
+    "holdout_nv":              {"path": f"{B}/holdout_nv", "kind": "yolo_seg", "role": "domain_holdout",
+                                "derived_from": ["gbif_nv"],
+                                "transform": "YOLOE ruler-scaled teacher (train.pseudo_label_specimens, val_every=3) on gbif_nv photos "
+                                             "not used in r3/teacher_check/rejected_v1 (domain_holdout.py)"},
+    "holdout_or":              {"path": f"{B}/holdout_or", "kind": "yolo_seg", "role": "domain_holdout",
+                                "derived_from": ["gbif_or"],
+                                "transform": "YOLOE ruler-scaled teacher (train.pseudo_label_specimens, val_every=3) on gbif_or photos "
+                                             "not used in r3/teacher_check/rejected_v1 (domain_holdout.py)"},
 }
 PII_COLS = re.compile(r"observer|email|phone|recorded_?by|creator|editor|owner|author|surveyor|contact|user_?name", re.I)
 EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
@@ -392,10 +404,11 @@ BUNDLES = {
     "baebugs-daisy-eval": ["teacher_check", "teacher_check2", "toy_renders"],
     "baebugs-daisy-context": ["dataone_cib_public", "essig", "gbif_manifests"],
     "baebugs-daisy-toykg": ["toy_kg"],
+    "baebugs-daisy-holdout": ["holdout_az", "holdout_nv", "holdout_or"],
 }
 
 
-def stage(out_dir, user, summary=None):
+def stage(out_dir, user, summary=None, only=None):
     """Hardlink (same volume) or copy VERIFIED datasets into Kaggle bundles; each
     bundle carries datasets.json + every member's pointer manifest."""
     out = Path(out_dir)
@@ -403,6 +416,8 @@ def stage(out_dir, user, summary=None):
     ds = summary["datasets"]
     staged = {}
     for bundle, members in BUNDLES.items():
+        if only and bundle not in only:
+            continue
         bdir = out / "kaggle" / bundle
         if bdir.exists():
             shutil.rmtree(bdir)
@@ -463,6 +478,7 @@ def main(argv=None):
     ap.add_argument("cmd", choices=["verify", "transform-dataone", "toys", "gbif-manifests", "stage", "toy-kg"])
     ap.add_argument("--out", default="/Volumes/magicBLACKbox/baebugs/daisy")
     ap.add_argument("--only")
+    ap.add_argument("--bundles", help="comma list: stage only these bundles")
     ap.add_argument("--kaggle-user", default="biobitworks")
     ap.add_argument("--ledger", action="store_true")
     ap.add_argument("--repo", default=".")
@@ -502,7 +518,7 @@ def main(argv=None):
         print("global leakage:", s["global_leakage"])
         print("datasets root:", s["root"])
     elif a.cmd == "stage":
-        print(stage(out, a.kaggle_user))
+        print(stage(out, a.kaggle_user, only=a.bundles.split(",") if a.bundles else None))
 
 
 if __name__ == "__main__":

@@ -232,7 +232,7 @@ for name, res in RESULTS.items():
     res["eval"] = {m: val_metrics(w, m, "val") for m in ALL_VAL}
     res["toy"] = toy_size_error(w)
     res["toy_val"] = {f"ppm{p}": val_metrics(w, "toy_renders", f"ppm{p}") for p in (10, 20)}
-    res["ruler_truth"] = {m: ruler_truth_error(w, m) for m in ("teacher_check", "teacher_check2")}
+    res["ruler_truth"] = {m: ruler_truth_error(w, m) for m in MEMBERS if (MEMBERS[m] / "truth_real_val.json").exists()}
     res["status"] = "OBSERVED_EXPLORATORY"
     event("eval_done", {"run": name, "eval": res["eval"], "toy": res["toy"], "ruler_truth": res["ruler_truth"]})
     print(name, json.dumps(res["toy"]), json.dumps(res["ruler_truth"]))
@@ -258,10 +258,11 @@ def build(proto_path, out_dir, user):
     proto_txt = Path(proto_path).read_text()
     proto = json.loads(proto_txt)
     psha = hashlib.sha256(proto_txt.encode()).hexdigest()
+    fam = proto["id"].split("-")[-1].rstrip("abcdefgh").lower()          # 001b -> 001 (same Kaggle kernel)
     nb = nbf.v4.new_notebook()
     md, code = nbf.v4.new_markdown_cell, nbf.v4.new_code_cell
     nb.cells = [
-        md(f"# {proto['id']} — DAISY verified-data training (baebugs)\n\nFrozen protocol: `daisy/DAISY-BB-001.md` + JSON "
+        md(f"# {proto['id']} — DAISY verified-data training (baebugs)\n\nFrozen protocol: `daisy/{proto['id']}.json` "
            f"(sha256 `{psha}`). Gate 0 recomputes every staged file hash and member Merkle root and **stops on any mismatch**. "
            "Results are OBSERVED_EXPLORATORY; nothing is promoted automatically. Toy renders are parametric TOYS, not replicas."),
         code(f"!pip -q install ultralytics=={proto['settings']['ultralytics']} shapely trimesh manifold3d pyyaml\n"
@@ -277,9 +278,9 @@ def build(proto_path, out_dir, user):
     nb.metadata["kernelspec"] = {"name": "python3", "display_name": "Python 3", "language": "python"}
     nb.metadata["language_info"] = {"name": "python"}
     out = Path(out_dir); out.mkdir(parents=True, exist_ok=True)
-    nbf.write(nb, out / "daisy_bb_001.ipynb")
+    nbf.write(nb, out / f"daisy_bb_{fam}.ipynb")
     (out / "kernel-metadata.json").write_text(json.dumps({
-        "id": f"{user}/baebugs-daisy-bb-001", "title": "baebugs DAISY-BB-001", "code_file": "daisy_bb_001.ipynb",
+        "id": f"{user}/baebugs-daisy-bb-{fam}", "title": f"baebugs DAISY-BB-{fam}", "code_file": f"daisy_bb_{fam}.ipynb",
         "language": "python", "kernel_type": "notebook", "is_private": True, "enable_gpu": True,
         "enable_internet": True, "dataset_sources": [f"{user}/{b}" for b in proto["bundles"]],
         "competition_sources": [], "kernel_sources": []}, indent=1))
