@@ -135,7 +135,13 @@ def main(argv=None):
     for i, x in enumerate(sel):
         state = "CA" if x["group"] == "california" else "OUT"
         r20 = render(x["length_mm"], x["plan"], a.ppm)
-        on, off = tray(r20), tray(np.full_like(r20, BG))
+        on = tray(r20)
+        bb_on, cont_on = mask_bbox(on)
+        off = on.copy()                                   # the arm takes the toy: only its pixels change
+        m = np.zeros(on.shape[:2], np.uint8)
+        cv2.drawContours(m, [cont_on.reshape(-1, 1, 2).astype(np.int32)], -1, 1, thickness=-1)
+        m = cv2.dilate(m, np.ones((5, 5), np.uint8))
+        off[m.astype(bool)] = BG
         frames = {}
         for step, img, proto in (("sort", on, "P-sieve-v1"), ("image", r20, "P-image-v1"), ("pick", off, "P-pick-v1")):
             bb, _cont = mask_bbox(img)
@@ -149,9 +155,12 @@ def main(argv=None):
             ctx = {"order": x["order"], "family": x["family"], "state": state, "novelty": nov[i], "filter": x["kit_tray"],
                    "protocol": fr["meta"]["protocol"], "module": "bench", "step": step, "image": img}
             if step == "pick":
-                ok = len(d_pick["break_boxes"]) == 1 and not fr["objects"]
+                bx = d_pick["break_boxes"]
+                ok = (len(bx) == 1 and not fr["objects"] and bx[0][0] <= bb_on[0] and bx[0][1] <= bb_on[1]
+                      and bx[0][2] >= bb_on[2] and bx[0][3] >= bb_on[3]
+                      and (bx[0][2] - bx[0][0]) * (bx[0][3] - bx[0][1]) <= 4 * max(1, (bb_on[2] - bb_on[0] + 32) * (bb_on[3] - bb_on[1] + 32)))
                 ladder_pick = [L.Rung("check:frame-diff", "baebugs.tiers.diff", lambda c, ok=ok: {"outcome": "APPROVE" if ok else "REWORK",
-                                                                                                    "confidence": 1.0, "label": "pick verified by Merkle diff" if ok else "object still there"}),
+                                                                                                    "confidence": 1.0, "label": "pick verified: one break box around where the toy was" if ok else "diff does not match the pick"}),
                                human_rung()]
                 row, dec = L.record_step(log, x["name"], step, T.summary(fr), obj, ctx, ladder_pick)
             else:
