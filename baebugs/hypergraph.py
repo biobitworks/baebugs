@@ -73,8 +73,10 @@ def build(repo="."):
             edges.append(_edge("consensus", [tnode, f"values:{x['values']}", *[f"actor:{a}" for a in x["actors"]],
                                              f"mmr:{r['leaf']}"], {"status_counts": x["status_counts"]}))
         elif x["type"] == "execution":
-            edges.append(_edge("execution", [f"protocol:{x['protocol']}", f"mmr:{r['leaf']}"],
-                               {"status": x["status"], "reason": x["reason"]}))
+            why = x.get("reason") or x.get("root_cause") or x.get("note") or x.get("error")
+            nodes = [f"protocol:{x['protocol']}", f"mmr:{r['leaf']}"] + ([f"run:{x['protocol']}/{x['run']}"] if x.get("run") else []) \
+                + ([f"weights:{x['weights_sha256']}"] if x.get("weights_sha256") else [])
+            edges.append(_edge("execution", nodes, {"status": x["status"], "reason": why}))
     hl = R / "daisy/hybrids_mmr.jsonl"
     if hl.exists():
         for r in MMRLog(hl).records:
