@@ -237,5 +237,109 @@
   "published": true,
   "file": "assets/photos/greiner_cryos_bag.jpg",
   "published_sha256": "42edba7c1ed8181044941d6247eb2ca181ae2c4e2b4ef341d968b3fdfe8840a6"
+ },
+ {
+  "photo_id": "sift_floor_1",
+  "original_sha256": "212652e90f5c0d11ed942f111ec81012f058a0c9e7d8281eef722bfadd0919ea",
+  "size_px": [
+   2212,
+   1659
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/sift_floor_1.jpg",
+  "published_sha256": "a7d8d0a617d2ddde252fbb9986342c2b67195503f22f549639cd0f76006334a3"
+ },
+ {
+  "photo_id": "sift_floor_2",
+  "original_sha256": "ca15843d84b71e1500426680bac02f2c91d15970e572412774e524bb38ba041d",
+  "size_px": [
+   2212,
+   1659
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/sift_floor_2.jpg",
+  "published_sha256": "3666064ec54126a7682ff3651c2b0c28a368d5a08f0d92563cf2b0e7f937b23d"
+ },
+ {
+  "photo_id": "sift_gloves_overview",
+  "original_sha256": "fa979e611b07c8cafac6b9ed13acac598a90613386a55780bf099723bee4fb07",
+  "size_px": [
+   2212,
+   1659
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/sift_gloves_overview.jpg",
+  "published_sha256": "b7b457ca2338f8744ff775cc69a43e1c42e1743916a209fc9434eea98c468bbe"
+ },
+ {
+  "photo_id": "sift_floor_3",
+  "original_sha256": "c4f845a92af92175eed9b8df04e78ca7426facc1a779ea41b43aa1620458bddd",
+  "size_px": [
+   2212,
+   1659
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/sift_floor_3.jpg",
+  "published_sha256": "d2ee802a03c346e88f70276a12a7cae78b6bf443fa5b16fd8be22275ea7bc7c4"
+ },
+ {
+  "photo_id": "fdm_trommel_attempt1",
+  "original_sha256": "93a29cddfa4caf7ab57a1a11f03a36a847afdc557b909eed4a99570e11ab2225",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/fdm_trommel_attempt1.jpg",
+  "published_sha256": "f7d071eaf4d7e7709d6e29a0cae00b8c818cb5338d897e63d2c6ccfbe9636ebf"
+ },
+ {
+  "photo_id": "fuse_side_fan",
+  "original_sha256": "f3c146e9b464d363ee1692b3a368a7bbe6d6e632dc8bcc7634d005b27c01dbef",
+  "size_px": [
+   2212,
+   1659
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/fuse_side_fan.jpg",
+  "published_sha256": "86064b8dfc4d823e7db3f1bed0ec810c8bf2b657b0ce5e7ff97d74d426018dd9"
+ },
+ {
+  "photo_id": "sift_drum_load",
+  "original_sha256": "14ae23ecfac6ad13257fcbf57c12cc26fa185fe1d8cba22b8160257c48090a0a",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/sift_drum_load.jpg",
+  "published_sha256": "b2efedf8c2d218fc9336a13786ce1df961ec9a49bf4fc5d9e6947146debae984"
+ },
+ {
+  "photo_id": "sift_tumble_1",
+  "kind": "video",
+  "original_sha256": "9c2b4182cc21c9a166f501e652c4d0d5764466e66c9a7b597930e49f4ffe3d0b",
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/videos/sift_tumble_1.mp4",
+  "published_sha256": "703d9b1ba954cccc6e7799959214549e2458af30c51e160334e224e772f66a2a",
+  "note": "audio removed, metadata stripped, 960 px"
+ },
+ {
+  "photo_id": "sift_tumble_2",
+  "kind": "video",
+  "original_sha256": "3b97c17e9fc9aaa1c0ec93e220429879ec6c48a572dbe4ba2729f40f9f682f31",
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/videos/sift_tumble_2.mp4",
+  "published_sha256": "078f5b8b31447683926f2f724b29810caaae21d897b6c7481a32140f771a0a06",
+  "note": "audio removed, metadata stripped, 960 px"
  }
 ]

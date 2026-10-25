@@ -378,6 +378,83 @@
    "role": "PA12 powder prints (toy insects, parts)"
   },
   {
+   "category": "instrument",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "fuse_sift_drum",
+   "interfaces": [
+    "glove_box",
+    "perforated_floor"
+   ],
+   "leaf": "3fffe152a989378d75383ca31cb68a2de0ac7c01ce6cc2413e8db0c73f71704f",
+   "maker": "Formlabs",
+   "name": "Fuse Sift tumbler: rotating perforated steel drum with mat liner, glove box, air nozzle",
+   "notes": "videos show the PA12 toy insects tumbling; fines fall through the drum and the perforated floor",
+   "photo_sha256": [
+    "14ae23ecfac6ad13257fcbf57c12cc26fa185fe1d8cba22b8160257c48090a0a",
+    "212652e90f5c0d11ed942f111ec81012f058a0c9e7d8281eef722bfadd0919ea",
+    "3b97c17e9fc9aaa1c0ec93e220429879ec6c48a572dbe4ba2729f40f9f682f31",
+    "9c2b4182cc21c9a166f501e652c4d0d5764466e66c9a7b597930e49f4ffe3d0b",
+    "c4f845a92af92175eed9b8df04e78ca7426facc1a779ea41b43aa1620458bddd",
+    "ca15843d84b71e1500426680bac02f2c91d15970e572412774e524bb38ba041d",
+    "fa979e611b07c8cafac6b9ed13acac598a90613386a55780bf099723bee4fb07"
+   ],
+   "photos": [
+    "sift_floor_1",
+    "sift_floor_2",
+    "sift_gloves_overview",
+    "sift_floor_3",
+    "sift_drum_load",
+    "sift_tumble_1",
+    "sift_tumble_2"
+   ],
+   "role": "depowders PA12 prints; also a working example of a rotating perforated drum (prebuilt trommel analogue)"
+  },
+  {
+   "category": "printed_part",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "design",
+   "id": "pa12_toy_insect_batch",
+   "interfaces": [],
+   "leaf": "54ec5ed3879cdbd813fe7a436fa5bd1bc1137bcc9267118acd7297907861c0bc",
+   "name": "Printed PA12 toy insects (print/fuse1 set), depowdering",
+   "notes": "geometry in print/fuse1 (91 STLs, Merkle-addressed); several small toys visible on the Sift floor grate",
+   "photo_sha256": [
+    "14ae23ecfac6ad13257fcbf57c12cc26fa185fe1d8cba22b8160257c48090a0a",
+    "212652e90f5c0d11ed942f111ec81012f058a0c9e7d8281eef722bfadd0919ea",
+    "3b97c17e9fc9aaa1c0ec93e220429879ec6c48a572dbe4ba2729f40f9f682f31",
+    "c4f845a92af92175eed9b8df04e78ca7426facc1a779ea41b43aa1620458bddd"
+   ],
+   "photos": [
+    "sift_drum_load",
+    "sift_tumble_2",
+    "sift_floor_1",
+    "sift_floor_3"
+   ],
+   "role": "physical size standards for the sieve and vision lanes"
+  },
+  {
+   "category": "printed_part",
+   "count": 1,
+   "dims_mm": null,
+   "dims_source": "not measured",
+   "id": "fdm_trommel_attempt_1",
+   "interfaces": [],
+   "leaf": "4152302aa2cf1230cd14473745ae815bd6b29bfd7aa07a212a8308a7022b8389",
+   "name": "FDM print attempt 1 of the trommel (blue translucent filament)",
+   "notes": "caps, crank and stand feet printed; the perforated drum zones failed (spaghetti / loose loops) and rings show heavy stringing",
+   "photo_sha256": [
+    "93a29cddfa4caf7ab57a1a11f03a36a847afdc557b909eed4a99570e11ab2225"
+   ],
+   "photos": [
+    "fdm_trommel_attempt1"
+   ],
+   "role": "trommel parts: caps with spokes, drum rings, crank, stand feet",
+   "status": "FAILED (observed)"
+  },
+  {
    "category": "plate",
    "count": 1,
    "dims_mm": [
@@ -825,14 +902,14 @@
   }
  ],
  "dims_by_source": {
-  "design": 2,
-  "not measured": 24,
+  "design": 3,
+  "not measured": 26,
   "ruler-photo": 2,
   "spec": 4
  },
- "n_assets": 32,
- "n_photos": 20,
- "photos_root": "d0040690084c7bdeb77b8f30005216d47bdfd92f0c56883022a5bb35dc374751",
- "root": "0d86b0ba2afe21d6fa2fed382856976dcb120311e816a817898d09b352a5a715",
+ "n_assets": 35,
+ "n_photos": 29,
+ "photos_root": "0d07fa8e36e0e81f057d1de94e9682736424e5e94e7571aa148e158585dff046",
+ "root": "ff5e0e6d49862fae9893b69acf56e9237ec1e56d8fb25cf32f03eca609ee7011",
  "type": "asset_db"
 }

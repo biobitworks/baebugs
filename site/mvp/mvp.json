@@ -1,8 +1,8 @@
 {
 "assets": {
 "dims_by_source": {
-"design": 2,
-"not measured": 24,
+"design": 3,
+"not measured": 26,
 "ruler-photo": 2,
 "spec": 4
 },
@@ -348,6 +348,69 @@
 ],
 "ref": null,
 "role": "PA12 powder prints (toy insects, parts)"
+},
+{
+"category": "instrument",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "fuse_sift_drum",
+"interfaces": [
+"glove_box",
+"perforated_floor"
+],
+"leaf": "3fffe152a989378d75383ca31cb68a2de0ac7c01ce6cc2413e8db0c73f71704f",
+"maker": "Formlabs",
+"name": "Fuse Sift tumbler: rotating perforated steel drum with mat liner, glove box, air nozzle",
+"notes": "videos show the PA12 toy insects tumbling; fines fall through the drum and the perforated floor",
+"photos": [
+"assets/photos/sift_floor_1.jpg",
+"assets/photos/sift_floor_2.jpg",
+"assets/photos/sift_gloves_overview.jpg",
+"assets/photos/sift_floor_3.jpg",
+"assets/photos/sift_drum_load.jpg",
+"assets/videos/sift_tumble_1.mp4",
+"assets/videos/sift_tumble_2.mp4"
+],
+"ref": null,
+"role": "depowders PA12 prints; also a working example of a rotating perforated drum (prebuilt trommel analogue)"
+},
+{
+"category": "printed_part",
+"count": 1,
+"dims_mm": null,
+"dims_source": "design",
+"id": "pa12_toy_insect_batch",
+"interfaces": [],
+"leaf": "54ec5ed3879cdbd813fe7a436fa5bd1bc1137bcc9267118acd7297907861c0bc",
+"maker": null,
+"name": "Printed PA12 toy insects (print/fuse1 set), depowdering",
+"notes": "geometry in print/fuse1 (91 STLs, Merkle-addressed); several small toys visible on the Sift floor grate",
+"photos": [
+"assets/photos/sift_drum_load.jpg",
+"assets/videos/sift_tumble_2.mp4",
+"assets/photos/sift_floor_1.jpg",
+"assets/photos/sift_floor_3.jpg"
+],
+"ref": null,
+"role": "physical size standards for the sieve and vision lanes"
+},
+{
+"category": "printed_part",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "fdm_trommel_attempt_1",
+"interfaces": [],
+"leaf": "4152302aa2cf1230cd14473745ae815bd6b29bfd7aa07a212a8308a7022b8389",
+"maker": null,
+"name": "FDM print attempt 1 of the trommel (blue translucent filament)",
+"notes": "caps, crank and stand feet printed; the perforated drum zones failed (spaghetti / loose loops) and rings show heavy stringing",
+"photos": [
+"assets/photos/fdm_trommel_attempt1.jpg"
+],
+"ref": null,
+"role": "trommel parts: caps with spokes, drum rings, crank, stand feet"
 },
 {
 "category": "plate",
@@ -696,8 +759,8 @@ null
 "role": "photo scale"
 }
 ],
-"photos_root": "d0040690084c7bdeb77b8f30005216d47bdfd92f0c56883022a5bb35dc374751",
-"root": "0d86b0ba2afe21d6fa2fed382856976dcb120311e816a817898d09b352a5a715"
+"photos_root": "0d07fa8e36e0e81f057d1de94e9682736424e5e94e7571aa148e158585dff046",
+"root": "ff5e0e6d49862fae9893b69acf56e9237ec1e56d8fb25cf32f03eca609ee7011"
 },
 "bugs": [
 {
@@ -2177,11 +2240,11 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
-"leaf": "a8c6cb3bc139a077f6898ce4640b2ccb4fed0f1db6615444689ad0981571ed36",
+"leaf": "d05a59dc4b8006084fd6497615768e8fa5bd25506880f9e2c27eafc982822b1c",
 "licence": "MIT",
 "module": "repo-meta",
 "path": "assets/README.md",
-"sha256": "81360471e1708be5836e9f06d7bca9927db7ee9de809e9cf58b17469cfe3d4ac",
+"sha256": "f8e3d16fe734b9f84457ba45dd01584155003eb78df45889a32448d7b1d62a41",
 "status": "built"
 },
 {
@@ -2237,11 +2300,11 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
-"leaf": "2a3736fab9f2af56068a906ad52cabaacb5779a5dfaaf7606d25184c513317b5",
+"leaf": "1900df5c5678244ac47204e1f238fe3e7352f13df1ba16f0dbb775c715d08bb0",
 "licence": "MIT",
 "module": "repo-meta",
 "path": "assets/photos.json",
-"sha256": "58927ad9a13051688eea21c854e447678bdf8b053b55c62939a0d88d4dd6f59e",
+"sha256": "a32624a0095ae5131533d9f4cd9c1e0d4ac6a71d7023690b59cded82af781c19",
 "status": "built"
 },
 {
@@ -2267,11 +2330,31 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
+"leaf": "59dbc98b58fce93f1606665346004677702f11a2419aacc5c79f159a9445783b",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/fdm_trommel_attempt1.jpg",
+"sha256": "f7d071eaf4d7e7709d6e29a0cae00b8c818cb5338d897e63d2c6ccfbe9636ebf",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
 "leaf": "ef1da8893a5caff40d2c757892953f4caad18fa2d1ebdda41daafa155552a9f3",
 "licence": "MIT",
 "module": "repo-meta",
 "path": "assets/photos/formlabs_fuse.jpg",
 "sha256": "d0cf3972f9bf9c842fe39f8ed2c2b936b86eb8f009a5c0dc29cca3e574357ffd",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "06acf006109199608bb8d793ec4ece26431e262a5eec22d1423d724600dd2822",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/fuse_side_fan.jpg",
+"sha256": "86064b8dfc4d823e7db3f1bed0ec810c8bf2b657b0ce5e7ff97d74d426018dd9",
 "status": "built"
 },
 {
@@ -2387,6 +2470,56 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
+"leaf": "ca54767536efb2b028ef5bafdefe1e922e945b8612b48c797a8de8e033af8a4b",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/sift_drum_load.jpg",
+"sha256": "b2efedf8c2d218fc9336a13786ce1df961ec9a49bf4fc5d9e6947146debae984",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "c6ff3f0d14447ca1f5a85e97e9c7c3568a3a90a223c737b6eaa70855c649acf4",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/sift_floor_1.jpg",
+"sha256": "a7d8d0a617d2ddde252fbb9986342c2b67195503f22f549639cd0f76006334a3",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "a0aa532016f8a6e52d3dbd578c411e50fbb70d4bf378ffbaefba287fc6c93233",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/sift_floor_2.jpg",
+"sha256": "3666064ec54126a7682ff3651c2b0c28a368d5a08f0d92563cf2b0e7f937b23d",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "a464f49444b1c3ac3287775c07383b55cb2999a1f02f60b77f8934af0b25d6ee",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/sift_floor_3.jpg",
+"sha256": "d2ee802a03c346e88f70276a12a7cae78b6bf443fa5b16fd8be22275ea7bc7c4",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "48ddd8edcd74d199dd5f43c905f541998a2bbc6e3cf3503d7a87ad07428c657d",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/sift_gloves_overview.jpg",
+"sha256": "b7b457ca2338f8744ff775cc69a43e1c42e1743916a209fc9434eea98c468bbe",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
 "leaf": "e3bde517dc6f5d03f85233b9d23bbdee143e30b1bf9a92c9bfa641d41e6de077",
 "licence": "MIT",
 "module": "repo-meta",
@@ -2432,6 +2565,26 @@ null
 "module": "repo-meta",
 "path": "assets/photos/xtip4_box.jpg",
 "sha256": "86e990548b4520cf3f0fa94822432808fa56e768b3461773524fb34159e5151e",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "c1e0197a132d56539dd3c3ec3b0cd10b7123cf5daa9ad2561f39e53b1372109b",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/videos/sift_tumble_1.mp4",
+"sha256": "703d9b1ba954cccc6e7799959214549e2458af30c51e160334e224e772f66a2a",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "843cb3b88ee7e1f507ddcc57b2ee25e9e0920b2172ae88a04f3424f24428a928",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/videos/sift_tumble_2.mp4",
+"sha256": "078f5b8b31447683926f2f724b29810caaae21d897b6c7481a32140f771a0a06",
 "status": "built"
 },
 {
@@ -2487,11 +2640,11 @@ null
 {
 "claim": "OWN",
 "kind": "code",
-"leaf": "0a10aa918745330ee19feb080fea94e3d55a293f5195403b0212dfcfd82a783b",
+"leaf": "2669ac26d5d3eff9d02d0a89a7404aa67e0b584f118fa5fde9929a5917993251",
 "licence": "MIT",
 "module": "python-package",
 "path": "baebugs/assets.py",
-"sha256": "bc4436e273c57e60d78c61ce63a6062fa72d2ea52f2c2ef4288280fb08fe30ac",
+"sha256": "3fa9d9761fd4b81522a2a5f483694a551ef1f9f20d5e31e24a9cac952846d88f",
 "status": "tested"
 },
 {
@@ -3237,11 +3390,11 @@ null
 {
 "claim": "OWN",
 "kind": "code",
-"leaf": "bbe22f39d7b22c8fb40f1bac58e44b01222f62de323b33337ebf90efe0c3db53",
+"leaf": "4303d988c7a37be35cdcaae1d3b92ec0251775908914ec233e5dbe48a8eedf88",
 "licence": "MIT",
 "module": "python-package",
 "path": "baebugs/trommel_plate.py",
-"sha256": "a5667ed4b2b58bf6ec628842601e6f3ac4069496cc8e77ce393b9252edb72e40",
+"sha256": "f72d9f41edac8091f44e1935f0c176c524eea869332ef8b03510d7f618eee156",
 "status": "tested"
 },
 {
@@ -3477,11 +3630,11 @@ null
 {
 "claim": "OWN",
 "kind": "ledger",
-"leaf": "87bb1cbffba662c84af875fea596b7732eaf787772d69218d7792e1cef4a2ec3",
+"leaf": "7fe0101c356d0fcb285eaa2936dba423c8458049cc0264ebe3089a586c02a608",
 "licence": "MIT",
 "module": "custody-ledgers",
 "path": "daisy/assets_mmr.jsonl",
-"sha256": "09a525345f50a361f722f6216e3e1385d8b948327108048915889dd1e01a4ed8",
+"sha256": "589ebb4eae8b4c5608662aa9b0f9f7ac7d101c2af01b63adb4419b26bf8e237f",
 "status": "built"
 },
 {
@@ -4567,11 +4720,11 @@ null
 {
 "claim": "OWN+TERMS",
 "kind": "data",
-"leaf": "428e3a10f33f3cc6444c9e957da9ca86148add11a002fafe1f224b2e668a0f2b",
+"leaf": "810cd4737a008baf9363c09fc937a38f7ce4fc8a1470858f8276d542f8851fe4",
 "licence": "MIT + gbif-media terms",
 "module": "knowledge-graph",
 "path": "kg/assets.json",
-"sha256": "b56431010a4efe01a40b16da5df6fdaa69d97302523d7e3a79b00b4031ee7d9a",
+"sha256": "11d2d16549da7cdbfe6fea6c430e29760e2b00cf941fc865539defca35601a83",
 "status": "built"
 },
 {
@@ -9117,6 +9270,136 @@ null
 {
 "claim": "OWN",
 "kind": "print",
+"leaf": "a2f776688e33b1949ad40a966835b70e3014256b3bbedae4a78b395957a80e83",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/packages/trommel_biokea_split.zip",
+"sha256": "aef17e9475b8cdc8f7cc208422780dd363c4d40065fba4e1e79bafbab10dc8ad",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "e0934d28becce47a5bb74493c1c9ee300221b997ee15113e12513c1a2c5ba009",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/packages/trommel_biokea_split/README.md",
+"sha256": "4480dc9903eda7609468fad1ad13196c33bcb5c21e787b2f3e159255000f03ae",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "381e10d6cc7c9ede795aa9286d7df2d283bc56617f8853ac78d6b0b6f714beb6",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/packages/trommel_biokea_split/fuse1_zones/fuse1_zones_build.stl",
+"sha256": "f2bb32d90ea5e6081a1b18275a590798c0dc0a5791bdebbcdc511bf9d5fe8bca",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "b8a7756c0401ab5a89cbfb9f8e398d512acee737053a90aafaaca5944d457c68",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/packages/trommel_biokea_split/fuse1_zones/trommel_zone_2mm.stl",
+"sha256": "37f2e8ff9c8c6cb96a76fb1b226cf5ca09a5b92d67ebb446f13d2ce6192128a8",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "e79490a2d6d641612902e5697143424a76643fcb400349ee5dcde4a3ad0f0433",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/packages/trommel_biokea_split/fuse1_zones/trommel_zone_4mm.stl",
+"sha256": "6717bc04768870ae9d6b10b54e20f94987d22c661086b1e12c3d131c1de92761",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "6b48e51e34bc78de94935fdba7ed20432824ca1c92b6a53e2fd0c429cc803691",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/packages/trommel_biokea_split/fuse1_zones/trommel_zone_7mm.stl",
+"sha256": "6f8e72ee2085d18d38ce3928b603e6d178b66adfd47e6fb70317baf95666a738",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "09b646f5276a3e23904cb0ab3d73be713cccde466b988fa460fb230ac8841ef0",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/packages/trommel_biokea_split/manifest.json",
+"sha256": "12b04ac0477c7e9614e4e29a99c94e474aa15644f4a2aeb88548b857fab170dd",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "b3a3ca84c151e3eb4f23002ba11a4767daa934f3382a56d2d06b84f4cccf7979",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/packages/trommel_biokea_split/x1c_rest/trommel_cap_inlet.stl",
+"sha256": "5aabdafd3583e97377f78f6a56b83634e51b50222c810ad40250b8f34b0d3f9f",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "73b3b5bc874b4f2f0e71ea590f967e44cc61bbebdb86792bc4152354d56a92c2",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/packages/trommel_biokea_split/x1c_rest/trommel_cap_outlet.stl",
+"sha256": "a009d946c8f13c66b2cd3b2e86547e97d2af0f81a3aac00749771162e06a67bd",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "b7da21d53222438ed676fb600b5b131cd3b174a81a1393000cb6995fe17d4110",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/packages/trommel_biokea_split/x1c_rest/trommel_crank_hand.stl",
+"sha256": "ea5f0e9963d6a2a61651ccbf2301340979cab69026ba0ee14044d327a384c144",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "6ce6800e21b6124fd4fb0ecd8fe3c688e7599575133f895f0b7f08a87c2a73be",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/packages/trommel_biokea_split/x1c_rest/trommel_stand_inlet.stl",
+"sha256": "4b1c46ae316f2791f6f0a5be3149e51457699fb475f8150b2329f2fad11b38f8",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "3e71b036782582e26c957537ad72ace6690d646b04e676eee90a26759d230d20",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/packages/trommel_biokea_split/x1c_rest/trommel_stand_outlet.stl",
+"sha256": "4ac2533a8db3bcb1159c2eee14dbf3fd7c8902099a0c913c01eb8785f02378b0",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "29ebdc41984eefa2065d55b6afabcccf1d463f2bc93efc84023f08f858605b54",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/packages/trommel_biokea_split/x1c_rest/x1c_rest_plate.stl",
+"sha256": "b80e6bf409b07b153b1437cd534b5a88fe753cb86af54d8775f0e2cfb99bb824",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
 "leaf": "ff53d3af790c0bc338151acd47c24313f5699188d36ec74df0bdb0782608a487",
 "licence": "MIT",
 "module": "lab-parts",
@@ -10362,8 +10645,8 @@ null
 },
 "mmr": {
 "assets_mmr": {
-"n": 2,
-"root": "1731ac05e82a7bf99f0125d3815ace7c043366b8e1d72a033a7649be51da5c2e",
+"n": 3,
+"root": "beeca968742be45cc813ecd11b3e7758bfd4b203c7e3fe52b07b00229cf24796",
 "verified": true
 },
 "hybrids_mmr": {
@@ -10399,7 +10682,7 @@ null
 "OWN": 34
 },
 "id": "module:custody-ledgers",
-"root": "50e514dce783130b5f59cb88246db48f92a04e4421db8e60367723fca2195f1b",
+"root": "03cf29e89fcc63b0fb63fa00ea85cd4ba69a2a2604e84715617dfbb53a9cfea0",
 "status": {
 "built": 34
 },
@@ -10477,7 +10760,7 @@ null
 "OWN+TERMS": 6
 },
 "id": "module:knowledge-graph",
-"root": "2249e3089709fc1a75e1b55796154a567bfda5c5da60d9a2a36238f14875b210",
+"root": "b5e306268c8eb22412e48c628975acd2c1820cd019033b2600b4c55da8e5e5df",
 "status": {
 "built": 6
 },
@@ -10486,14 +10769,14 @@ null
 ]
 },
 "lab-parts": {
-"atoms": 131,
+"atoms": 144,
 "claims": {
-"OWN": 131
+"OWN": 144
 },
 "id": "module:lab-parts",
-"root": "a21967d41d0ae4bab8f768113c024752ce4055e983ffee80cbb9fc9eb4d34bdf",
+"root": "b664b76fa6158b20e26730087ade697f3de6c822312b042dae1164ac1de5a64b",
 "status": {
-"built": 131
+"built": 144
 },
 "terms": []
 },
@@ -10542,7 +10825,7 @@ null
 "OWN+TERMS": 8
 },
 "id": "module:python-package",
-"root": "ee81cf344492c89d943d1c8d10016e5eeb37dd01b4ba037e5de5e3271088061a",
+"root": "bbe25ab4d31406cc8305d73c91b6da9ea0c574b4875c98363f42b65686862bb3",
 "status": {
 "built": 55,
 "tested": 31
@@ -10552,14 +10835,14 @@ null
 ]
 },
 "repo-meta": {
-"atoms": 38,
+"atoms": 47,
 "claims": {
-"OWN": 38
+"OWN": 47
 },
 "id": "module:repo-meta",
-"root": "940a7936878a2d7a3e7ca6914de867d057336087f692fbdcc88478858be1f220",
+"root": "dacef764e560b4f17147f827f23d45d62f58ca8a7ee138740b67cd0e3b9ca4ab",
 "status": {
-"built": 38
+"built": 47
 },
 "terms": []
 },
@@ -11221,11 +11504,11 @@ null
 ]
 }
 ],
-"root": "22f2baa41ac02c0528f951d67cd82f951b9910d2f66c5b4e4179ef0d75a5bb2a",
+"root": "2c2eaaa8d481e46a310034c112d6c0c9fe450a2f2e3c372d4f6e46916068a198",
 "roots": {
-"aok": "89525f0b7a3f5e5eb8f0d8a2f1c59555561a1ad6a39368d297afbe0994da1b45",
-"assets": "0d86b0ba2afe21d6fa2fed382856976dcb120311e816a817898d09b352a5a715",
-"assets_mmr": "1731ac05e82a7bf99f0125d3815ace7c043366b8e1d72a033a7649be51da5c2e",
+"aok": "337336dd883b41da867c8274052519c5dca29a6168b669b550f065fbb966c1ba",
+"assets": "ff5e0e6d49862fae9893b69acf56e9237ec1e56d8fb25cf32f03eca609ee7011",
+"assets_mmr": "beeca968742be45cc813ecd11b3e7758bfd4b203c7e3fe52b07b00229cf24796",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
 "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7",
 "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5",
@@ -15438,7 +15721,7 @@ null
 }
 ],
 "totals": {
-"OWN": 774,
+"OWN": 796,
 "OWN+TERMS": 49,
 "THIRD": 20
 },
