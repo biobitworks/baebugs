@@ -86,6 +86,133 @@ def local_ruler_scale(img, win=260, step=130):
     return (lambda pos: c["a"] + c["b"] * pos), c["axis"], c
 
 
+def find_dishes(img, min_r_frac=0.05, max_r_frac=0.35):
+    """Petri dishes as circles (Hough on a downscaled grey image)."""
+    h, w = img.shape[:2]
+    s = 800 / max(h, w)
+    g = cv2.medianBlur(cv2.cvtColor(cv2.resize(img, None, fx=s, fy=s), cv2.COLOR_BGR2GRAY), 5)
+    c = cv2.HoughCircles(g, cv2.HOUGH_GRADIENT, dp=1.2, minDist=int(min_r_frac * 800 * 2.2),
+                         param1=120, param2=45, minRadius=int(min_r_frac * 800), maxRadius=int(max_r_frac * 800))
+    if c is None:
+        return []
+    out = []
+    for x, y, r in c[0]:
+        out.append((x / s, y / s, r / s))
+    # real dishes share one size: keep circles near the most common radius
+    rs = np.array([t[2] for t in out])
+    best_n, best_r = 0, None
+    for r0 in rs:
+        n = int((np.abs(rs - r0) < 0.15 * r0).sum())
+        if n > best_n or (n == best_n and best_r is not None and r0 < best_r):
+            best_n, best_r = n, r0
+    out = [t for t in out if abs(t[2] - best_r) < 0.25 * best_r]
+    # drop circles mostly inside a bigger one (inner rim of the same dish)
+    out.sort(key=lambda t: -t[2])
+    keep = []
+    for x, y, r in out:
+        if all(np.hypot(x - X, y - Y) > 0.6 * R for X, Y, R in keep):
+            keep.append((x, y, r))
+    return keep
+
+
+def dish_objects(img, ppm_at=None, axis="y", dev=32, sat_dev=40, min_area_px=12, ref_ppm=10.0):
+    """Model-free reference list: inside each dish (inner 88% of its radius, away
+    from the rim), pixels that differ from the dish's own background colour
+    (darker, lighter or more/less saturated) are objects."""
+    from .measure import _from_contour
+    dishes = find_dishes(img)
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV).astype(np.int32)
+    lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB).astype(np.int32)
+    h, w = img.shape[:2]
+    polys, objs, dish_of = [], [], []
+    for di, (x, y, r) in enumerate(dishes):
+        m = np.zeros((h, w), np.uint8)
+        cv2.circle(m, (int(x), int(y)), int(r * 0.88), 1, -1)
+        inner = m.astype(bool)
+        if inner.sum() < 100:
+            continue
+        bgL = np.median(lab[..., 0][inner]); bga = np.median(lab[..., 1][inner]); bgb = np.median(lab[..., 2][inner])
+        d = np.sqrt((lab[..., 0] - bgL) ** 2 + 2 * (lab[..., 1] - bga) ** 2 + 2 * (lab[..., 2] - bgb) ** 2)
+        fg = ((d > dev) & inner).astype(np.uint8) * 255
+        fg = cv2.morphologyEx(fg, cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
+        cnts, _ = cv2.findContours(fg, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+        for c in cnts:
+            if cv2.contourArea(c) < min_area_px:
+                continue
+            M = cv2.moments(c); cy = M["m01"] / (M["m00"] + 1e-9); cx = M["m10"] / (M["m00"] + 1e-9)
+            ppm = ppm_at(cy if axis == "y" else cx) if ppm_at else ref_ppm
+            polys.append(c.reshape(-1, 2)); objs.append(_from_contour(c, ppm, "dish_classical")); dish_of.append(di)
+    return dishes, polys, objs, dish_of
+
+
+def fastsam_objects(img, dishes, ppm_at=None, axis="y", ref_ppm=10.0, weights="FastSAM-s.pt",
+                    imgsz=1536, min_area_mm2=0.3, max_area_mm2=400):
+    """Reference list from FastSAM (segment-anything, no notion of 'insect' or
+    'food'): every mask whose centre lies inside a dish's inner 88% and whose
+    area is object-sized; measured with the local ruler scale."""
+    from ultralytics import FastSAM
+    from .measure import _from_contour
+    res = FastSAM(weights).predict(img, imgsz=imgsz, retina_masks=True, conf=0.25, iou=0.7, verbose=False)[0]
+    if res.masks is None:
+        return [], [], []
+    polys, objs, dish_of = [], [], []
+    for xy in res.masks.xy:
+        if len(xy) < 3:
+            continue
+        c = np.asarray(xy, np.float32).reshape(-1, 1, 2)
+        M = cv2.moments(c); cx = M["m10"] / (M["m00"] + 1e-9); cy = M["m01"] / (M["m00"] + 1e-9)
+        di = next((i for i, (x, y, r) in enumerate(dishes) if np.hypot(cx - x, cy - y) < 0.88 * r), None)
+        if di is None:
+            continue
+        ppm = ppm_at(cy if axis == "y" else cx) if ppm_at else ref_ppm
+        o = _from_contour(c, ppm, "fastsam")
+        if not (min_area_mm2 <= o.area_mm2 <= max_area_mm2):
+            continue
+        x, y, r = dishes[di]
+        if np.hypot(cx - x, cy - y) + 0.5 * o.length_mm * ppm > 0.92 * r:
+            continue                                  # touches the rim
+        polys.append(c.reshape(-1, 2)); objs.append(o); dish_of.append(di)
+    return polys, objs, dish_of
+
+
+def robust_dish_stats(objs, dish_of, n_dishes):
+    """Per dish: median length/width over 'typical singletons' (area within the
+    25-75th percentile band, which drops clumps of touching grains and rim fragments)."""
+    out = []
+    for di in range(n_dishes):
+        o = [x for x, k in zip(objs, dish_of) if k == di]
+        if not o:
+            out.append({"dish": di, "n": 0}); continue
+        a = np.array([x.area_mm2 for x in o])
+        lo, hi = np.percentile(a, 25), np.percentile(a, 75)
+        core = [x for x in o if lo <= x.area_mm2 <= hi] or o
+        out.append({"dish": di, "n": len(o), "n_core": len(core),
+                    "length_mm": round(float(np.median([x.length_mm for x in core])), 2),
+                    "width_mm": round(float(np.median([x.width_mm for x in core])), 2),
+                    "width_p25_p75": [round(float(np.percentile([x.width_mm for x in core], q)), 2) for q in (25, 75)]})
+    return out
+
+
+def tiled(fn, img, tile=640, overlap=0.25):
+    """Run a detector on overlapping native-resolution tiles (small objects stay
+    big enough to see); de-duplicate across tiles by centroid distance."""
+    h, w = img.shape[:2]
+    step = int(tile * (1 - overlap))
+    found = []
+    for y0 in list(range(0, max(1, h - tile), step)) + [max(0, h - tile)]:
+        for x0 in list(range(0, max(1, w - tile), step)) + [max(0, w - tile)]:
+            for m in fn(img[y0:y0 + tile, x0:x0 + tile]):
+                m.cx += x0; m.cy += y0
+                found.append(m)
+    found.sort(key=lambda m: -m.conf)
+    keep = []
+    for m in found:
+        r = 0.5 * min(max(m.width_mm, 0.3), 3.0)
+        if all(np.hypot(m.cx - k.cx, m.cy - k.cy) > max(6, r * 10) for k in keep):
+            keep.append(m)
+    return keep
+
+
 def run(image_paths, student_weights, ref_truths, out_dir, analog_prompts=("rice grain", "seed", "pasta"),
         insect_prompts=("insect",)):
     from .measure import YoloMeasurer, consensus, _from_contour
@@ -101,20 +228,26 @@ def run(image_paths, student_weights, ref_truths, out_dir, analog_prompts=("rice
         ppm_at, axis, diag = local_ruler_scale(img)
         has_scale = ppm_at is not None and diag.get("fit_rel_err", 1) < 0.03 and diag.get("n", 0) >= 6  # serrated dish rims fit ~6%, rulers <2%
         ref_ppm = float(np.median([ppm_at(v) for v in np.linspace(0, img.shape[0 if axis == "y" else 1], 9)])) if has_scale else 10.0
-        # reference list of analog objects (prompted for food, not insects)
-        polys, objs = segment_yoloe(img, ref_ppm, prompts=analog_prompts, conf=0.15,
-                                    min_area_mm2=0.2, length_range=(0.3, 60))
-        # production path at the image's median scale
-        a = student(img, ref_ppm)
-        _, b = segment_yoloe(img, ref_ppm, prompts=insect_prompts, length_range=(0.3, 60))
+        # reference list: model-free dish segmentation (independent of both models)
+        dishes = find_dishes(img)
+        try:
+            polys, objs, dish_of = fastsam_objects(img, dishes, ppm_at if has_scale else None, axis or "y", ref_ppm)
+        except Exception as e:                       # FastSAM unavailable: colour threshold
+            print("FastSAM failed, using colour threshold:", e)
+            dishes, polys, objs, dish_of = dish_objects(img, ppm_at if has_scale else None, axis or "y", ref_ppm=ref_ppm)
+        if not objs:   # no dishes found: fall back to YOLOE prompted for food
+            polys, objs = segment_yoloe(img, ref_ppm, prompts=analog_prompts, conf=0.15,
+                                        min_area_mm2=0.2, length_range=(0.3, 60))
+            dish_of = [-1] * len(objs)
+        # production path, tiled at native resolution
+        a = tiled(lambda t: student(t, ref_ppm), img)
+        b = tiled(lambda t: segment_yoloe(t, ref_ppm, prompts=insect_prompts, length_range=(0.3, 60))[1], img)
         ms = consensus(a, b, ref_ppm, match_mm=2.0) if (a or b) else []
         verdicts = triage(ms, ref_L, ref_W, image=name)
         rows, vis = [], img.copy()
         for poly, o in zip(polys, objs):
-            # rescale this object's size with the LOCAL ruler scale at its position
-            loc = ppm_at(o.cy if axis == "y" else o.cx) if has_scale else None
-            k = (ref_ppm / loc) if loc else 1.0
-            L, W = o.length_mm * k, o.width_mm * k
+            # dish objects are already measured at the local scale
+            L, W = o.length_mm, o.width_mm
             near = [v for v in verdicts if np.hypot(v.cx - o.cx, v.cy - o.cy) < max(2.0 * ref_ppm, 0.5 * o.length_mm * ref_ppm)]
             v = min(near, key=lambda v: np.hypot(v.cx - o.cx, v.cy - o.cy)) if near else None
             status = v.status if v else "missed"
@@ -131,8 +264,13 @@ def run(image_paths, student_weights, ref_truths, out_dir, analog_prompts=("rice
                 cv2.putText(vis, f"{status} {L:.1f}x{W:.1f}", (int(o.cx) + 4, int(o.cy) - 4),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.45, col, 1, cv2.LINE_AA)
         cv2.imwrite(str(out / f"annotated_{name}"), vis, [cv2.IMWRITE_JPEG_QUALITY, 85])
+        for (x, y, r) in dishes:
+            cv2.circle(vis, (int(x), int(y)), int(r), (255, 0, 0), 2)
         report.append({"image": name, "scale": diag if has_scale else None, "objects": rows,
+                       "dishes": [{"x": round(x), "y": round(y), "r": round(r)} for x, y, r in dishes],
+                       "dish_stats": robust_dish_stats(objs, dish_of, len(dishes)) if has_scale else None,
                        "system_detections": len(ms),
+                       "system_by_status": {st: sum(v.status == st for v in verdicts) for st in ("known", "unknown", "novel")},
                        "summary": {s: sum(r["system_status"] == s for r in rows) for s in ("known", "unknown", "novel", "missed")}})
     (out / "report.json").write_text(json.dumps(report, indent=1))
     return report
