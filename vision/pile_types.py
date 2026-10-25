@@ -33,10 +33,10 @@ def setup():
     return cal["px_per_mm"], cal.get("floor_mm", 48)
 
 
-def floor_patches(img, px_per_mm, floor_mm):
+def floor_patches(img, px_per_mm, floor_mm, rim=None):
     """Yield (x, y, size) for every square fully inside the dish floor, on a half-square grid."""
     size = int(PATCH_MM * px_per_mm)
-    cx, cy, _ = fit_rim(img, px_per_mm)
+    cx, cy, _ = rim or fit_rim(img, px_per_mm)
     r = floor_mm / 2 * px_per_mm - size
     for y in range(int(cy - r), int(cy + r), size // 2):
         for x in range(int(cx - r), int(cx + r), size // 2):
@@ -62,23 +62,23 @@ def prepare(img):
 
 
 def labelled_patches(entry, px_per_mm, floor_mm):
-    """(features, label, x, centre_x) for the squares of one training photo whose label is clear."""
+    """(features, label) for the squares of one training photo whose label is clear."""
     img = cv2.imread(str(HERE / entry["file"]))
     lab, hsv, grad = prepare(img)
-    cx = fit_rim(img, px_per_mm)[0]
+    rim = fit_rim(img, px_per_mm)
     if not entry["packed"]:
         mask = np.zeros(img.shape[:2], np.uint8)
-        cv2.circle(mask, fit_rim(img, px_per_mm)[:2], int(floor_mm / 2 * px_per_mm), 255, -1)
+        cv2.circle(mask, rim[:2], int(floor_mm / 2 * px_per_mm), 255, -1)
         objects, _ = segment(img, mask, entry.get("label_threshold", LABEL_THRESHOLD), 0.5)
     rows = []
-    for x, y, size in floor_patches(img, px_per_mm, floor_mm):
+    for x, y, size in floor_patches(img, px_per_mm, floor_mm, rim):
         if entry["packed"]:
             label = entry["type"]
         else:
             fill = (objects[y:y + size, x:x + size] > 0).mean()
             label = entry["type"] if fill > 0.6 else BACKGROUND if fill < 0.02 else None
         if label:
-            rows.append((features(lab, hsv, grad, x, y, size), label, x + size / 2, cx))
+            rows.append((features(lab, hsv, grad, x, y, size), label))
     return rows
 
 
@@ -97,21 +97,7 @@ def fit(X, y):
     return model
 
 
-def train():
-    px_per_mm, floor_mm = setup()
-    photos = json.loads(TRAINING.read_text())["photos"]
-    classes = [BACKGROUND] + [p["type"] for p in photos]
-    rows = [row for entry in photos for row in labelled_patches(entry, px_per_mm, floor_mm)]
-    X = np.array([r[0] for r in rows])
-    y = np.array([classes.index(r[1]) for r in rows])
-    left = np.array([r[2] < r[3] for r in rows])
-    rng = np.random.default_rng(0)
-
-    # honest check: train on the left half of each dish, test on the right half
-    model = fit(*balance(X[left], y[left], rng))
-    pred = model.predict(X[~left].astype(np.float32))[1].ravel().astype(int)
-    truth = y[~left]
-    print("check (trained on left halves, tested on right halves):")
+def report(classes, truth, pred):
     for i, name in enumerate(classes):
         n = (truth == i).sum()
         if n:
@@ -119,11 +105,42 @@ def train():
             mistakes = ", ".join(f"{k} {v}" for k, v in sorted(wrong.items(), key=lambda kv: -kv[1]) if v)[:80]
             print(f"  {name:20s} {((pred == i) & (truth == i)).sum() / n:5.0%} of {n:4d} squares right  {mistakes}")
 
+
+def train():
+    px_per_mm, floor_mm = setup()
+    photos = json.loads(TRAINING.read_text())["photos"]
+    classes = [BACKGROUND] + list(dict.fromkeys(p["type"] for p in photos))
+    per_photo = []
+    for entry in photos:
+        rows = labelled_patches(entry, px_per_mm, floor_mm)
+        per_photo.append((np.array([r[0] for r in rows]), np.array([classes.index(r[1]) for r in rows])))
+    rng = np.random.default_rng(0)
+
+    # honest check: each photo is tested by a model that never saw it, trained on all the other photos
+    # (only for types with another photo to learn from)
+    photos_per_type = {t: sum(p["type"] == t for p in photos) for t in classes[1:]}
+    truth, pred = [], []
+    for i, entry in enumerate(photos):
+        if photos_per_type[entry["type"]] < 2:
+            continue
+        X = np.concatenate([x for j, (x, _) in enumerate(per_photo) if j != i])
+        y = np.concatenate([y for j, (_, y) in enumerate(per_photo) if j != i])
+        model = fit(*balance(X, y, rng))
+        truth.append(per_photo[i][1])
+        pred.append(model.predict(per_photo[i][0].astype(np.float32))[1].ravel().astype(int))
+    print("check (each photo judged by a model trained without it):")
+    report(classes, np.concatenate(truth), np.concatenate(pred))
+    unchecked = [t for t, n in photos_per_type.items() if n < 2]
+    if unchecked:
+        print("  not checked, only one photo:", ", ".join(unchecked))
+
+    X = np.concatenate([x for x, _ in per_photo])
+    y = np.concatenate([y for _, y in per_photo])
     model = fit(*balance(X, y, rng))
     MODEL.parent.mkdir(exist_ok=True)
     model.save(str(MODEL))
     MODEL.with_suffix(".json").write_text(json.dumps({"classes": classes, "patch_mm": PATCH_MM}, indent=2))
-    print(f"trained on {len(rows)} squares, saved {MODEL.relative_to(HERE)}")
+    print(f"trained on {len(y)} squares from {len(photos)} photos, saved {MODEL.relative_to(HERE)}")
 
 
 def predict(image, out):

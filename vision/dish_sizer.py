@@ -18,6 +18,7 @@ CALIBRATION = Path(__file__).with_name("calibration.json")
 
 
 RIM_RADIUS_MM = (28, 34)  # outer rim of the 63 mm dish (with or without lid), where its edge is strongest
+RIM_MIN_VISIBLE = 0.8  # the dish may run off the photo's edge, but most of its rim must be in view
 
 
 def _edges(gray):
@@ -29,20 +30,28 @@ def _ring_scores(edges, cxs, cys, r, n=180):
     """How strongly a circle of radius r around each centre (cxs, cys: 1-D arrays) follows an edge.
 
     Only the gradient across the circle counts (pointing at the centre or away from it), so edges
-    the circle merely cuts through, like reflections or objects inside the dish, add little.
+    the circle merely cuts through, like reflections or objects inside the dish, add little. The score
+    is the median along the circle, not the mean, so a circle must follow an edge all the way round:
+    borrowing a stretch of a very strong straight edge (a ruler) doesn't help. Points off the photo
+    are skipped; a circle with too little of its rim in view scores 0.
     """
     gx, gy = edges
+    h, w = gx.shape
     t = np.linspace(0, 2 * np.pi, n, endpoint=False)
     cos, sin = np.cos(t), np.sin(t)
-    xs = np.clip(np.rint(cxs[:, None] + r * cos).astype(int), 0, gx.shape[1] - 1)
-    ys = np.clip(np.rint(cys[:, None] + r * sin).astype(int), 0, gx.shape[0] - 1)
-    return np.abs(gx[ys, xs] * cos + gy[ys, xs] * sin).mean(axis=1)
+    xs = np.rint(cxs[:, None] + r * cos).astype(int)
+    ys = np.rint(cys[:, None] + r * sin).astype(int)
+    inside = (xs >= 0) & (xs < w) & (ys >= 0) & (ys < h)
+    xs, ys = np.clip(xs, 0, w - 1), np.clip(ys, 0, h - 1)
+    across = np.where(inside, np.abs(gx[ys, xs] * cos + gy[ys, xs] * sin), np.nan)
+    visible = inside.mean(axis=1)
+    return np.where(visible >= RIM_MIN_VISIBLE, np.nan_to_num(np.nanmedian(across, axis=1)), 0)
 
 
 def fit_rim(img, px_per_mm, scale=4):
     """Return (cx, cy, r) of the dish rim: the dish-sized circle with the strongest edge all the way round.
 
-    Tries every centre where the whole dish fits in the photo on a 1/4-size edge map, then refines
+    Tries every centre where most of the rim is in the photo on a 1/4-size edge map, then refines
     at full size. A straight edge such as a ruler lines up with only a small part of any circle, so
     it can't win, and a faint rim on white paper still beats the background.
     """
@@ -52,7 +61,8 @@ def fit_rim(img, px_per_mm, scale=4):
     best = None
     for r_mm in np.arange(RIM_RADIUS_MM[0], RIM_RADIUS_MM[1] + 0.01, 0.5):
         r = r_mm * px_per_mm / scale
-        ys, xs = np.mgrid[int(r):int(h - r):2, int(r):int(w - r):2]
+        m = int(0.6 * r)  # centres this close to the border can still have 80% of the rim in view
+        ys, xs = np.mgrid[m:int(h - m):2, m:int(w - m):2]
         if not xs.size:
             continue
         xs, ys = xs.ravel().astype(float), ys.ravel().astype(float)
