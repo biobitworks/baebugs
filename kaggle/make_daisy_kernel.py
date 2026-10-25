@@ -163,11 +163,28 @@ def epoch_gate(run_name):
             trainer.stop = True
     return cb
 
+def weights_track(run_name):
+    """every saved checkpoint is hashed when it is written: a realization is tracked epoch by epoch"""
+    def cb(trainer):
+        rec = {"run": run_name, "epoch": int(trainer.epoch) + 1}
+        for k in ("last", "best"):
+            f = getattr(trainer, k, None)
+            rec[f"{k}_sha256"] = sha(f) if f and os.path.exists(f) else None
+        event("weights_epoch", rec)
+    return cb
+
+def keep(path, name):
+    """copy a weights file to the output and prove the copy is byte-identical"""
+    import shutil
+    dst = WORK / name
+    shutil.copy2(path, dst)
+    return sha(dst)
+
 RESULTS = {}
 for run in PROTO["runs"]:
     name = run["name"]; t0 = time.time()
     dy = data_yaml(name, run["train"], run["val"])
-    m = YOLO(S["model"]); m.add_callback("on_fit_epoch_end", epoch_gate(name))
+    m = YOLO(S["model"]); m.add_callback("on_fit_epoch_end", epoch_gate(name)); m.add_callback("on_model_save", weights_track(name))
     status, err = "EXECUTED", None
     try:
         m.train(data=str(dy), epochs=S["epochs"], imgsz=S["imgsz"], batch=S["batch"], seed=S["seed"],
@@ -180,9 +197,14 @@ for run in PROTO["runs"]:
     if bad is not None:
         status = "FAILED"
     best = WORK / "runs" / name / "weights" / "best.pt"
+    wsha = sha(best) if best.exists() else None
+    kept = keep(best, f"{name}_best.pt") if best.exists() else None          # saved NOW, before eval/cleanup
+    event("weights_saved", {"run": name, "weights_sha256": wsha, "exported_sha256": kept, "file": f"{name}_best.pt",
+                            "pass": wsha is not None and kept == wsha})
     RESULTS[name] = {"train": run["train"], "val": run["val"], "status": status, "error": err, "break_epoch": bad,
                      "epoch_root": merkle_root([e["leaf"] for e in eps]) if eps else None, "amp": USE_AMP,
-                     "weights_sha256": sha(best) if best.exists() and status == "EXECUTED" else None,
+                     "weights_sha256": wsha, "weights_file": f"{name}_best.pt" if kept else None,
+                     "weights_epochs": [e["payload"] for e in EVENTS if e["kind"] == "weights_epoch" and e["payload"]["run"] == name],
                      "minutes": round((time.time() - t0) / 60, 1)}
     event("train_done", {"run": name, **RESULTS[name]})
     print(name, RESULTS[name])
@@ -257,18 +279,31 @@ for name, res in RESULTS.items():
 '''
 
 FINISH = r'''
+# custody check (fail closed): every weights hash must resolve to an exported file with the same bytes
+breaks = []
+for name, r in RESULTS.items():
+    if r.get("weights_sha256"):
+        f = WORK / (r.get("weights_file") or f"{name}_best.pt")
+        got = sha(f) if f.exists() else None
+        if got != r["weights_sha256"]:
+            breaks.append({"run": name, "expected": r["weights_sha256"], "found": got, "file": str(f.name)})
+            r["custody"] = "BROKEN"
+        else:
+            r["custody"] = "INTACT"
+event("custody_check", {"weights_breaks": breaks, "pass": not breaks})
+import shutil
+shutil.rmtree(WORK / "runs", ignore_errors=True); shutil.rmtree(WORK / "val", ignore_errors=True)
+artifacts = {str(p.relative_to(WORK)): sha(p) for p in sorted(WORK.rglob("*")) if p.is_file() and p.name != "results.json"}
 root = merkle_root([e["leaf"] for e in EVENTS])
 summary = {"protocol": PROTO["id"], "protocol_sha256": PROTO_SHA, "custody": CUSTODY_REPORT, "results": RESULTS,
-           "events_root": root, "n_events": len(EVENTS),
+           "events_root": root, "n_events": len(EVENTS), "artifacts": artifacts,
+           "artifacts_root": merkle_root(sorted(artifacts.values())) if artifacts else None,
+           "custody_status": "BROKEN" if breaks else "INTACT", "custody_breaks": breaks,
            "admission": "no automatic promotion; best variant at most VALIDATION_CANDIDATE"}
 (WORK / "results.json").write_text(json.dumps(summary, indent=1, default=str))
-import shutil
-for name in RESULTS:
-    src = WORK / "runs" / name / "weights" / "best.pt"
-    if src.exists() and RESULTS[name]["status"] in ("EXECUTED", "OBSERVED_EXPLORATORY"):   # EVAL relabels executed runs
-        shutil.copy2(src, WORK / f"{name}_best.pt")
-shutil.rmtree(WORK / "runs", ignore_errors=True); shutil.rmtree(WORK / "val", ignore_errors=True)
-print("events root", root)
+print("events root", root, "custody", summary["custody_status"])
+if breaks:
+    raise SystemExit(f"CUSTODY BREAK: weights referenced by hash but not exported: {breaks}")
 '''
 
 

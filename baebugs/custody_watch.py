@@ -147,6 +147,19 @@ class Watcher:
                         ("OK", f"{len(leaves)} files present, sizes match, {min(self.sample, len(leaves))} re-hashed"))
         return out
 
+    def check_resolvable(self):
+        """graph invariant: every hash the graph references resolves to stored bytes (weights etc.)"""
+        from .resolve import Store, dangling
+        roots = [str(self.repo)]
+        if self.datasets_json:
+            roots += [str(self.datasets_json.parent)] + [str(r) for r in [self.datasets_json.parent.parent / "runs"] if r.exists()]
+        store = Store(roots, cache=self.state_dir / "store_index.json").build()
+        d = dangling(self.repo, store)
+        if not d:
+            return {"resolve:graph": ("OK", f"every referenced hash resolves ({len(store.index)} objects indexed)")}
+        return {f"resolve:{x['sha'][:12]}": ("BREAK", f"{x['kind']} referenced by {', '.join(x['contexts'])} "
+                                                         f"does not resolve to stored bytes") for x in d}
+
     def check_git(self):
         try:
             dirty = subprocess.run(["git", "status", "--porcelain", "--untracked-files=no"], cwd=self.repo,
@@ -166,7 +179,8 @@ class Watcher:
     def cycle(self, remote=False):
         self.cycle_n += 1
         new = {}
-        for fn in (self.check_mmr, self.check_frozen, lambda: self.check_upstream(remote), self.check_datasets, self.check_git):
+        for fn in (self.check_mmr, self.check_frozen, lambda: self.check_upstream(remote), self.check_datasets,
+                   self.check_resolvable, self.check_git):
             try:
                 new.update(fn())
             except Exception as e:
