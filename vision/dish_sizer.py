@@ -21,17 +21,20 @@ def find_dish(img, px_per_mm):
 
     The dish has several concentric rings (rim, wall), so only the centre is reliable.
     The search is limited to dish-sized circles in mm, so it works at any zoom or aspect ratio.
+    On a pale background the clear rim has little contrast, so the edge thresholds are relaxed
+    step by step until a circle turns up.
     """
     gray = cv2.medianBlur(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY), 5)
     lo, hi = (int(r * px_per_mm) for r in DISH_RADIUS_MM)
-    circles = cv2.HoughCircles(
-        gray, cv2.HOUGH_GRADIENT, dp=1.5, minDist=max(gray.shape),
-        param1=100, param2=40, minRadius=lo, maxRadius=hi,
-    )
-    if circles is None:
-        return None
-    cx, cy, r = circles[0][0]
-    return int(cx), int(cy), int(r)
+    for edge, votes in ((100, 40), (60, 30), (40, 25)):
+        circles = cv2.HoughCircles(
+            gray, cv2.HOUGH_GRADIENT, dp=1.5, minDist=max(gray.shape),
+            param1=edge, param2=votes, minRadius=lo, maxRadius=hi,
+        )
+        if circles is not None:
+            cx, cy, r = circles[0][0]
+            return int(cx), int(cy), int(r)
+    return None
 
 
 def colour_distance(diff, shadow_weight):
