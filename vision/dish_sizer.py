@@ -136,24 +136,38 @@ def annotate(img, dish, inner_r, results):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("image")
-    ap.add_argument("--px-per-mm", type=float, help="scale of this photo; defaults to calibration.json (the mounted webcam)")
-    ap.add_argument("--threshold", type=float, default=20, help="colour difference from background (CIELAB)")
-    ap.add_argument("--floor-mm", type=float, default=48, help="diameter of the dish floor to analyse, mm (63 mm dish: wall starts at ~48 mm)")
+    ap.add_argument("--px-per-mm", type=float,
+                    help="scale of this photo. Omit it for the mounted webcam: the scale and that setup's "
+                         "threshold, floor size and dish centre then come from calibration.json")
+    ap.add_argument("--threshold", type=float, help="colour difference from background (CIELAB), default 20")
+    ap.add_argument("--floor-mm", type=float, help="diameter of the dish floor to analyse, mm, default 48 (wall starts at ~48 mm)")
+    ap.add_argument("--dish-center", type=int, nargs=2, metavar=("X", "Y"), help="dish centre in px, skipping detection")
     ap.add_argument("--shadow-weight", type=float, default=0.5, help="weight of darkening vs colour change (shadows only darken)")
     ap.add_argument("--min-area", type=float, default=0.5, help="ignore blobs smaller than this, mm^2")
     ap.add_argument("--out", default="annotated.png")
     ap.add_argument("--json")
     args = ap.parse_args()
+
+    # Without --px-per-mm the photo is from the calibrated webcam, so use its whole setup;
+    # anything given on the command line still wins.
+    setup = {}
     if args.px_per_mm is None:
         if not CALIBRATION.exists():
             raise SystemExit("no --px-per-mm given and no calibration.json; measure the scale with ruler_scale.py")
-        args.px_per_mm = json.loads(CALIBRATION.read_text())["px_per_mm"]
+        setup = json.loads(CALIBRATION.read_text())
+        args.px_per_mm = setup["px_per_mm"]
         print(f"scale: {args.px_per_mm} px/mm from {CALIBRATION.name}")
+    if args.threshold is None:
+        args.threshold = setup.get("threshold", 20)
+    if args.floor_mm is None:
+        args.floor_mm = setup.get("floor_mm", 48)
+    if args.dish_center is None:
+        args.dish_center = setup.get("dish_center_px")
 
     img = cv2.imread(args.image)
     if img is None:
         raise SystemExit(f"cannot read {args.image}")
-    dish = find_dish(img, args.px_per_mm)
+    dish = (*args.dish_center, 0) if args.dish_center else find_dish(img, args.px_per_mm)
     mask = np.zeros(img.shape[:2], np.uint8)
     if dish:
         inner_r = int(args.floor_mm / 2 * args.px_per_mm)
