@@ -1885,6 +1885,16 @@
 "status": "tested"
 },
 {
+"claim": "OWN+TERMS",
+"kind": "code",
+"leaf": "97f5a157f75a17e86cb71b608a4cce79e2fa1071af5fb8b6e24965cad82a0392",
+"licence": "MIT + ultralytics terms",
+"module": "python-package",
+"path": "baebugs/ladder_demo.py",
+"sha256": "cef6b48c11a2af091498441a7ee1dae6a5452decc1d08fa98185610ae6d70cbd",
+"status": "built"
+},
+{
 "claim": "OWN",
 "kind": "code",
 "leaf": "bd7290769fdb8c76349ed3e6421db5dcb4fa50834d823599e45b8be4c49c1c31",
@@ -3196,6 +3206,226 @@
 },
 {
 "claim": "OWN",
+"kind": "doc",
+"leaf": "e1b68bb077992758871985dc857bb3c1db6043fe10f5cdd4f405a415e5e5db0a",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/README.md",
+"sha256": "0ef5be4592d66c350398fa954397c34b78b8d24405d4e6601da929203add8c44",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "b1b1081db0ce8a5806effda0abde1003f74d22feccf41182d127e3628b297169",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/ladder_mmr.jsonl",
+"sha256": "07304c0154cf5951a0e117b076774f9aef2a938f8f6f38f4095ab32523fbd523",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "3169f989b655a9a70ae0c10353e594ffa06484b6817e0f15a6302c7d6677bf18",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/markov.json",
+"sha256": "0c5251c63fb5e00a09952d903ca8e37b60c306ca845c5f73be24e86a6f481a2f",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "2c40673f717283c37cdcaab24860aae9d4b655456bba55561c7578b776cea8d2",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/rows.json",
+"sha256": "9bf8563f56c2aebb9c6df3b49f866c75e45619916fed36ba5209813c60def656",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "390e9af815fc8522d0d9d41660a4d0353e38b08cada524a06958b26d634b6d4a",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/00_sort.png",
+"sha256": "13c6340ddc16ca1e72b1805c1521adc429d0716b7303cb1acd59165dade3c212",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "fa4dd503b05d2a748d5913deffb0f4eab082db98f95cec81a1c0bca7a3a5c1de",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/01_image.png",
+"sha256": "420fda1d9510b0b4ebbf4029608f2319d9524352baee5f492faa363c4ad937bc",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "282336f23c73fed1bf20a20a15871af1e553271f19047a3dea43982aac9f54a9",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/01_sort.png",
+"sha256": "d7426aac4edaef6c5f89a94ab091b1ff19f619a98b8db49b3a1a1eeb1feadef8",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "d824cdeb95a2de7b4b130c66e71ea22688d686fd78b4ce16859775a6e2a105a4",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/02_image.png",
+"sha256": "6917b2d406113bf98304564e34a9d173be33d8f72e48a067667ca0ed1260aad6",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "fcfbe757a5c915a8836d3235fe7b622bc5b23eefd6256008cbbc0f73e01e920f",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/02_pick.png",
+"sha256": "90b00bd5ed586caa55f1c0a8c00b454f775ff5d0ba86e14a31b082f22b0a794e",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "a7878888f44a7cfcdcaed68dfd5f77b490521d08fe43f272b4787bec1de7d9a9",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/02_sort.png",
+"sha256": "4e4d98566617e9a87cd50ded2bed572411e15a335e1e8833dfe2888577a23c4b",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "4fbcd51aa5aa6701999dc9a655607c251dc30a30f915764c1103ef4a8ecc45f2",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/03_sort.png",
+"sha256": "ced373142446f4618331544b61dce68a8545ad0eadfaefb2ad10f9df68b21a8d",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "076a68e9536417798c8f56ca8e781995691762881008aaca92e83b6d7140d126",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/04_image.png",
+"sha256": "0d6f61a2fb54e42629614097e9a76c17b38bb89e5125f5798ecce88fd30d5162",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "a91a8a2fdca3951059978cb1b16ed4b4802eb5f1435d08de2db7e060cf2de9a8",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/04_pick.png",
+"sha256": "812dc1fbfe383a946dada3a33b01ddd7fd5bfe80640ad54fa09dbda73962899c",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "3d3a60b15b5fa6757accbe5fb8cc7b58b879153b921e6522fd1cbfef40169f97",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/04_sort.png",
+"sha256": "c99223b8b9d4acc21391d2b33984c5f690bd7ee8d1c3c925591af99254eea949",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "02d2d62f14ef585141a3e02b647d51972584b267b2f915d45bc4f60fa1aec289",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/05_sort.png",
+"sha256": "59d829910759ad086427363d86e14e0e1c4f5ea3d3a9368f6e55ea77f0286407",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "0fc9f034af559d39ea8e26c15260febca18e3dfe94b034cc739dae8b0dd46d0a",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/06_image.png",
+"sha256": "f7ee7563625f639d4f4c5c12b14738464cb9772bad4f35018c70c228ea77e2e2",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "d7bc504316d81e70290da5e587b8d1596035f95fa54479fd923c2e021709fa05",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/06_sort.png",
+"sha256": "e9e152abd1df58c0f5355e0c7daedba24e1a1c81b5112e3d6802a6e40089389e",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "4ed7a0183a953aa739eb0ee4dc997ca5810daef23046d5250a92e4951c3a1f1f",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/07_sort.png",
+"sha256": "9a6f3030373b6c23585bab1c14a45f7750f8adddd3f9eec24e1a16d9eb19af12",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "0a113adc3005f468e6a1c025d9cd397f86a9bf220ec2441245cab2390ac9d892",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/08_sort.png",
+"sha256": "56a338533b8344237d5e315bc942e597fc81f5d2dba0f4e56c5cc40b31b77565",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "c202d4b6ead6fc4def98593087209a3a7c8c778d36b3e37da65f3c4c5dad8d26",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/09_sort.png",
+"sha256": "eb107509f1e6d0b529d0d5bb5372e734dbd3f2eb80e825de483560037003abc1",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "a0c8d681ab357515e3b0e773ec6c7bb76bc8f462395a9446d984d1ee08837b63",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/10_sort.png",
+"sha256": "6c8a7494b8636ce8322edc8ccf1250d761b37d9963047cb30052b823decb67b9",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "5019415b1701eb3c548546c1e575af71923a71ece244b93986d3e42440c428c9",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ladder_demo/snapshots/11_sort.png",
+"sha256": "250a8340e7b5bea6373160cc0ea00d92fccc3a4fe1e7dd313ef7d7708aabcd8b",
+"status": "built"
+},
+{
+"claim": "OWN",
 "kind": "meta",
 "leaf": "f42c9af3613d7caa02ac0626baeab2f692006ac819c7e055de7b415220040063",
 "licence": "MIT",
@@ -3602,6 +3832,16 @@
 "module": "notebooks",
 "path": "notebooks/sorting_hierarchy.ipynb",
 "sha256": "bedcc2159fe37e4aad103343978a059ac4962c6a73f740a00df74732d8079a8d",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "notebook",
+"leaf": "6b51cb320b838ca214a1beaae6dd7e116ecdebbeb6140025b331fced45b7ef7b",
+"licence": "MIT",
+"module": "notebooks",
+"path": "notebooks/tiers_ladder_markov.ipynb",
+"sha256": "d6140e223c9abe36e270d3a5a078ddb34e83df368d7b0998fe1753c998aaadf3",
 "status": "built"
 },
 {
@@ -8870,14 +9110,14 @@
 "terms": []
 },
 "docs": {
-"atoms": 24,
+"atoms": 46,
 "claims": {
-"OWN": 24
+"OWN": 46
 },
 "id": "module:docs",
-"root": "6b4f845f2ad104263b26639a8f147ae5bbbad5340f9566bade6f55221040a502",
+"root": "85059be83b6aec4f5a9590bb230c1e7979bc974321b52ff9c9580259098669d8",
 "status": {
-"built": 24
+"built": 46
 },
 "terms": []
 },
@@ -8935,14 +9175,14 @@
 "terms": []
 },
 "notebooks": {
-"atoms": 16,
+"atoms": 17,
 "claims": {
-"OWN": 16
+"OWN": 17
 },
 "id": "module:notebooks",
-"root": "a20c483ea79c65619f309898b225355d1615c80547d3174840bdcf8c9d2e4818",
+"root": "f575207403b2c66d86e9d8176e5ba00650170d9c9e903bb6c89962d1fdef4609",
 "status": {
-"built": 16
+"built": 17
 },
 "terms": []
 },
@@ -8961,15 +9201,15 @@
 ]
 },
 "python-package": {
-"atoms": 81,
+"atoms": 82,
 "claims": {
 "OWN": 75,
-"OWN+TERMS": 6
+"OWN+TERMS": 7
 },
 "id": "module:python-package",
-"root": "513583401e3164a0573b705fa4afb95ca874538a2c5f8ecb453a1edeff5bc776",
+"root": "d49fa7117c31358fb2d56b3ea346b04d5caa8908eb9067b04db0cdc8f0c8644e",
 "status": {
-"built": 53,
+"built": 54,
 "tested": 28
 },
 "terms": [
@@ -9646,9 +9886,9 @@
 ]
 }
 ],
-"root": "fc500efe67781a713c2ae2edec61c5318b1b15192b931017b053eaa5619d3b81",
+"root": "79cfcc6838a6c99faf5139f5d0cc1b132d96df5d856d9fb795120fea13be936b",
 "roots": {
-"aok": "681c5d61bed2548a155267d072302934c400b811840da4eda5e7629def355550",
+"aok": "9a054303fc9782595b71cda289ac602956ea8d6ee616b595b0b4e4080e775ea7",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
 "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7",
 "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5",
@@ -13861,8 +14101,8 @@
 }
 ],
 "totals": {
-"OWN": 691,
-"OWN+TERMS": 45,
+"OWN": 714,
+"OWN+TERMS": 46,
 "THIRD": 20
 },
 "type": "baebugs-mvp"
