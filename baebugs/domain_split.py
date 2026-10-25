@@ -1,4 +1,4 @@
-"""DAISY-BB-002 (amendment 1): split pseudo_specimens_r3_real by source collection.
+"""DAISY-BB-002 (amendment 1; identity rule widened by amendment 2 / 002a): split pseudo_specimens_r3_real by source collection.
 
 Each r3 photo is traced to the GBIF collection it was copied from: its filename must exist in
 <source>/images and the sha256 must match (byte identity), otherwise it is dropped as
@@ -36,16 +36,31 @@ def _link(a, b):
         shutil.copy2(a, b)
 
 
-def source_of(img, srcs):
-    h = None
-    for st, dirs in srcs.items():
-        for d in dirs:
-            cand = _img_dir(d) / img.name
-            if cand.exists():
-                h = h or sha(img)
-                if sha(cand) == h:
-                    return st
-    return None
+def _pixel_diff(a, b):
+    import cv2
+    import numpy as np
+    x, y = cv2.imread(str(a)), cv2.imread(str(b))
+    if x is None or y is None or x.shape != y.shape:
+        return None
+    return float(np.abs(x.astype(np.int16) - y.astype(np.int16)).mean())
+
+
+def source_of(img, srcs, max_diff=4.0):
+    """(state, rule, diff): rule 'bytes' (sha identical) or 'media_id_pixels' (amendment 2: same media id,
+    same dimensions, mean abs pixel diff <= max_diff); (None, reason, None) if unresolved/ambiguous."""
+    h = sha(img)
+    cands = [(st, _img_dir(d) / img.name) for st, dirs in srcs.items() for d in dirs if (_img_dir(d) / img.name).exists()]
+    for st, c in cands:
+        if sha(c) == h:
+            return st, "bytes", 0.0
+    states = {st for st, _ in cands}
+    if len(states) != 1:
+        return None, ("ambiguous_states" if states else "no_media_id_match"), None
+    st, c = cands[0]
+    d = _pixel_diff(img, c)
+    if d is not None and d <= max_diff:
+        return st, "media_id_pixels", round(d, 3)
+    return None, "pixels_differ" if d is not None else "shape_differs", d
 
 
 def build(datasets=DATASETS):
@@ -61,9 +76,12 @@ def build(datasets=DATASETS):
     rep = {k: {"train": 0, "val": 0} for k in outs}; rep["unresolved"] = []
     for sp in ("train", "val"):
         for img in sorted((r3 / "images" / sp).glob("*.jpg")):
-            st = source_of(img, srcs)
+            st, rule, diff = source_of(img, srcs)
+            rep.setdefault("rules", {}).setdefault(rule, 0); rep["rules"][rule] += 1
             if st is None:
-                rep["unresolved"].append(f"{sp}/{img.name}"); continue
+                rep["unresolved"].append(f"{sp}/{img.name}:{rule}"); continue
+            if rule != "bytes":
+                rep.setdefault("pixel_matches", []).append({"photo": img.name, "state": st, "mean_abs_diff": diff})
             dsp = sp if st == "ca" else "val"
             o = outs[st]
             _link(img, o / "images" / dsp / img.name)
@@ -83,6 +101,10 @@ def build(datasets=DATASETS):
         (o / "SPLIT_REPORT.json").write_text(json.dumps({"set": o.name, "source_state": st, **rep[st],
                                                           "from": "pseudo_specimens_r3_real"}, indent=1))
     rep["n_unresolved"] = len(rep["unresolved"]); rep["unresolved"] = rep["unresolved"][:20]
+    pm = rep.get("pixel_matches", [])
+    rep["pixel_match_summary"] = {"n": len(pm), "max_mean_abs_diff": max((x["mean_abs_diff"] for x in pm), default=None)}
+    (D / "domain_split_pixel_matches.json").write_text(json.dumps(pm, indent=1))
+    rep.pop("pixel_matches", None)
     (D / "domain_split_report.json").write_text(json.dumps(rep, indent=1))
     print(json.dumps({k: v for k, v in rep.items() if k != "unresolved"}))
     return rep
