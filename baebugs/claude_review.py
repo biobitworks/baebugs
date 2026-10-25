@@ -18,7 +18,7 @@ Measurements JSON follows. Reply with JSON only:
 
 def review(annotated_bgr, measurements, model=None) -> dict:
     import anthropic  # optional dependency
-    ok, buf = cv2.imencode(".jpg", annotated_bgr)
+    _ok, buf = cv2.imencode(".jpg", annotated_bgr)
     b64 = base64.b64encode(buf.tobytes()).decode()
     data = [m.to_dict() for m in measurements]
     msg = anthropic.Anthropic().messages.create(

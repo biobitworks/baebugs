@@ -76,7 +76,7 @@ def tree(contour, ppm, model):
     for i in range(len(LEVELS) - 1, -1, -1):              # fine -> coarse so parents cover children
         lv = LEVELS[i]
         P = polys[lv]
-        (cx, cy), (rw, rh), _ = cv2.minAreaRect(g[lv].reshape(-1, 1, 2).astype(np.float32))
+        (_cx, _cy), (rw, rh), _ = cv2.minAreaRect(g[lv].reshape(-1, 1, 2).astype(np.float32))
         geom = [[round(float(x) / ppm, 2), round(float(y) / ppm, 2)] for x, y in g[lv]]
         checks = {"valid_polygon": P is not None and P.area > 0}
         if P is not None and C is not None:
@@ -171,12 +171,12 @@ def mask_macos_vision(img):
     data = NSData.dataWithBytes_length_(buf.tobytes(), len(buf))
     handler = Vision.VNImageRequestHandler.alloc().initWithData_options_(data, None)
     req = Vision.VNGenerateForegroundInstanceMaskRequest.alloc().init()
-    ok, err = handler.performRequests_error_([req], None)
+    ok, _err = handler.performRequests_error_([req], None)
     res = req.results()
     if not ok or not res:
         return None
     obs = res[0]
-    pb, err = obs.generateScaledMaskForImageForInstances_fromRequestHandler_error_(obs.allInstances(), handler, None)
+    pb, _err = obs.generateScaledMaskForImageForInstances_fromRequestHandler_error_(obs.allInstances(), handler, None)
     import Quartz
     Quartz.CVPixelBufferLockBaseAddress(pb, 0)
     w, h = Quartz.CVPixelBufferGetWidth(pb), Quartz.CVPixelBufferGetHeight(pb)
@@ -217,7 +217,7 @@ def spotcheck(items, weights, out_dir, models=tuple(MODELS)):
         for m in models:
             try:
                 c = MODELS[m](img, it["ppm"], weights)
-            except Exception as e:                       # model unavailable on this machine
+            except Exception as e:  # noqa: BLE001 - model unavailable on this machine
                 errs[m] = str(e)[:120]; continue
             if c is None or cv2.contourArea(c.reshape(-1, 1, 2).astype(np.float32)) < 4:
                 errs[m] = "no object"; continue
@@ -232,7 +232,7 @@ def spotcheck(items, weights, out_dir, models=tuple(MODELS)):
                 g = level_geoms(np.array([[[x * it["ppm"], y * it["ppm"]]] for x, y in nodes_by[m][-1]["geometry_mm"]], np.float32))
                 for lv in LEVELS:
                     cv2.polylines(p, [g[lv].reshape(-1, 1, 2).astype(np.int32)], True, COLORS[lv],
-                                  max(1, int(round(min(img.shape[:2]) / 400))))
+                                  max(1, round(min(img.shape[:2]) / 400)))
                 n2 = nodes_by[m][1]
                 txt = f"{m}: L {n2['length_mm']:.2f} W {n2['width_mm']:.2f} mm"
             else:

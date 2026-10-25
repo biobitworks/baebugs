@@ -184,7 +184,7 @@ def run(items, measurers, out_dir=None, truth_path="daisy/TRUTH-001.json", calib
         for name, fn in measurers.items():
             try:
                 ms[name] = measure_contour(fn(img, it["ppm"]), it["ppm"])
-            except Exception:
+            except Exception:  # noqa: BLE001 - fallback; the failure is recorded or degrades
                 ms[name] = None
         raw.append((it, ms))
     fixers = {}
@@ -202,7 +202,7 @@ def run(items, measurers, out_dir=None, truth_path="daisy/TRUTH-001.json", calib
             per[name] = d
         con = consensus(per, subs)
         exp = it["expected"]
-        ok = lambda d: d["status"] == exp["status"] and (exp["status"] != "KNOWN" or d["toy"] == exp["toy"]) \
+        ok = lambda d, exp=exp: d["status"] == exp["status"] and (exp["status"] != "KNOWN" or d["toy"] == exp["toy"]) \
             if exp["status"] != "NOT_KNOWN" else d["status"] != "KNOWN"
         rows.append({"item": it.get("name") or Path(str(it.get("image"))).stem, "control": it.get("control", "toy"),
                      "expected": exp, "per": per, "consensus": con,

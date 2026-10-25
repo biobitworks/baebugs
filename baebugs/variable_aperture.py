@@ -80,14 +80,17 @@ class SlotPair:
         return round((width_mm * self.length_mm) / (self.pitch_mm * (self.length_mm + 2.0)), 4)
 
 
+DEFAULT_PAIR = SlotPair()
+
+
 def passes(dims, width_mm, length_mm, fit=0.95, mode="slot"):
-    a, b, c = sorted(dims, reverse=True)
+    _a, b, c = sorted(dims, reverse=True)
     if mode == "square":
         return b <= width_mm * fit and c <= width_mm * fit
     return c <= width_mm * fit and b <= length_mm
 
 
-def run(objects, widths, pair=SlotPair(), measure=None, tol_mm=0.10, actuate_with_load=False):
+def run(objects, widths, pair=DEFAULT_PAIR, measure=None, tol_mm=0.10, actuate_with_load=False):
     """objects: list of {"id", "name", "dims"}. widths: descending list (mm).
     measure(width) -> camera-measured width (default: exact). Returns trays, steps, mmr root, status."""
     widths = sorted(widths, reverse=True)
@@ -131,7 +134,7 @@ def analog_objects(per=3):
     return [{"id": f"{n.replace(' ', '_')}#{i}", "name": n, "dims": v["dims"]} for n, v in ANALOGS.items() for i in range(per)]
 
 
-def scad(pair=SlotPair(), n_slots=5, rows=3):
+def scad(pair=DEFAULT_PAIR, n_slots=5, rows=3):
     """OpenSCAD for the fixed plate, sliding plate and guide frame (mm). Slots run along y; the
     sliding plate moves along x by offset = w0 - width."""
     W = n_slots * pair.pitch_mm + 10; Lp = rows * (pair.length_mm + 4) + 8

@@ -32,5 +32,5 @@ SIM = shutil.which("opentrons_simulate")
 
 @pytest.mark.skipif(not SIM, reason="opentrons not installed in this environment")
 def test_protocol_simulates():
-    r = subprocess.run([SIM, "-L", "opentrons/labware", "opentrons/protocols/baebugs_flex_line.py"], capture_output=True, text=True)
+    r = subprocess.run([SIM, "-L", "opentrons/labware", "opentrons/protocols/baebugs_flex_line.py"], capture_output=True, text=True, check=False)
     assert r.returncode == 0, r.stderr[-500:]

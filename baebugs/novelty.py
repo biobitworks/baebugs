@@ -12,6 +12,8 @@
 """
 from __future__ import annotations
 
+import itertools
+
 import numpy as np
 
 from .preservation import gentlest_settings, worst
@@ -48,7 +50,7 @@ def mesh_gaps(widths, apertures, margin=1.1, min_rel_gap=0.35):
     cuts = sorted([a * margin for a in apertures if a > 0], reverse=True)
     bounds = [np.inf] + cuts + [0.0]
     out = []
-    for hi, lo in zip(bounds[:-1], bounds[1:]):
+    for hi, lo in itertools.pairwise(bounds):
         inside = [w for w in widths if lo <= w < hi]
         if not inside:
             continue

@@ -111,7 +111,7 @@ def solve_topview(meas, ctx, k=8):
 
 
 def ask_vlm(model, img, ppm, ctx, host="http://localhost:11434", timeout=240):
-    ok, buf = cv2.imencode(".png", img)
+    _ok, buf = cv2.imencode(".png", img)
     fams = IL.family_stats(ctx)
     table = "\n".join(f"{f['family']} | {','.join(f['plans'])} | " +
                       (f"{f['mean']}±{f['sd']}" if f.get("mean") is not None else f"seen {f['lengths']}")
@@ -127,7 +127,7 @@ def ask_vlm(model, img, ppm, ctx, host="http://localhost:11434", timeout=240):
             f"{host}/api/chat", data=json.dumps(body).encode(), headers={"Content-Type": "application/json"}),
             timeout=timeout).read())
         txt = r["message"]["content"]
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001 - fallback; the failure is recorded or degrades
         return None, f"error {e}", time.time() - t
     return IL._parse_json(txt), txt[:300], time.time() - t
 

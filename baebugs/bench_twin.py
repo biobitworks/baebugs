@@ -324,7 +324,7 @@ class BenchTwin:
             m.apply_translation((b[0] + b[1]) / 2); m.visual.face_colors = color; meshes.append(m)
         add(self.bench, [222, 200, 160, 255]); add(self.rail, [40, 40, 40, 255]); add(self.post, [150, 100, 60, 255])
         add(self.camera, [60, 60, 200, 255]); add(self.carriage, [230, 120, 20, 255])
-        sx, sy = RAIL_STRIP
+        _sx, sy = RAIL_STRIP
         for s in self.slots.values():
             b = self.box(s)
             for y in (b[0][1] - sy, b[1][1]):

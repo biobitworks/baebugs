@@ -21,6 +21,7 @@ from __future__ import annotations
 import concurrent.futures as cf
 import hashlib
 import json
+import math
 import re
 import urllib.parse
 import urllib.request
@@ -100,7 +101,7 @@ _CANOPY_FIX = {"25-Jan": "1-25", "Jan-25": "1-25", "50-Jan": "1-50"}
 
 
 def _norm(v):
-    if v is None or (isinstance(v, float) and v != v):
+    if v is None or (isinstance(v, float) and math.isnan(v)):
         return None
     s = str(v).strip()
     return s or None

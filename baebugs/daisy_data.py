@@ -125,7 +125,7 @@ def _img_ok(p):
             im.verify()
         with Image.open(p) as im:
             return im.size
-    except Exception:
+    except Exception:  # noqa: BLE001 - fallback; the failure is recorded or degrades
         return None
 
 
@@ -187,7 +187,7 @@ def check_yolo(path, sha_by_path):
                 try:
                     c = int(parts[0]); xy = [float(v) for v in parts[1:]]
                     ok = c >= 0 and len(xy) >= 6 and len(xy) % 2 == 0 and all(0.0 <= v <= 1.0 for v in xy) and _poly_area(xy) > 0
-                except Exception:
+                except Exception:  # noqa: BLE001 - fallback; the failure is recorded or degrades
                     ok = False
                 if ok:
                     n_obj += 1
@@ -234,7 +234,7 @@ def check_json(path, sha_by_path):
                 for line in (Path(path) / rel).read_text().splitlines():
                     if line.strip():
                         json.loads(line); rows += 1
-        except Exception:
+        except Exception:  # noqa: BLE001 - fallback; the failure is recorded or degrades
             bad.append(rel)
     return {"json_files": sum(r.endswith((".json", ".jsonl")) for r in sha_by_path), "jsonl_rows": rows,
             "unparseable": len(bad)}, \

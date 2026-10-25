@@ -14,7 +14,7 @@ def capture(index: int = 0, width: int | None = None, height: int | None = None,
     try:
         frame = None
         for _ in range(warmup):  # let auto-exposure settle
-            ok, frame = cap.read()
+            _ok, frame = cap.read()
         if frame is None:
             raise RuntimeError(f"no frame from USB camera {index}")
         return frame

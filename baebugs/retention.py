@@ -97,7 +97,7 @@ def prove_multires(data_root, n=25):
         files = sorted(mdir.glob("*/*.jpg"))[:n]
         for f in files:
             img = cv2.imread(str(src / f.parent.name / f.name))
-            ok, buf = cv2.imencode(".jpg", at_megapixels(img, d)[0], [cv2.IMWRITE_JPEG_QUALITY, 92])
+            _ok, buf = cv2.imencode(".jpg", at_megapixels(img, d)[0], [cv2.IMWRITE_JPEG_QUALITY, 92])
             out["compared"] += 1
             if hashlib.sha256(buf.tobytes()).hexdigest() != sha(f):
                 out["n_mismatch"] += 1; out["mismatch"].append(str(f.relative_to(data_root)))
@@ -122,7 +122,7 @@ def prove_toy_renders(render_root, n=20):
         if not x:
             continue
         ppm = float(f.parent.name.replace("ppm", ""))
-        ok, buf = cv2.imencode(".png", render(x["length_mm"], x["plan"], ppm))
+        _ok, buf = cv2.imencode(".png", render(x["length_mm"], x["plan"], ppm))
         out["compared"] += 1
         if hashlib.sha256(buf.tobytes()).hexdigest() != sha(f):
             out["n_mismatch"] += 1; out["mismatch"].append(f.name)
@@ -262,7 +262,7 @@ def verify_droppable(base="/Volumes/magicBLACKbox/baebugs", lab="/Volumes/magicL
     import subprocess
     ready = {}
     for b in ("baebugs-daisy-train", "baebugs-daisy-eval", "baebugs-daisy-context"):
-        r = subprocess.run(["/Users/byron/.local/bin/kaggle", "datasets", "status", f"biobitworks/{b}"], capture_output=True, text=True)
+        r = subprocess.run(["/Users/byron/.local/bin/kaggle", "datasets", "status", f"biobitworks/{b}"], capture_output=True, text=True, check=False)
         ready[b] = "ready" in (r.stdout + r.stderr).lower()
     out["daisy/kaggle (staging)"] = {"files": n, "hardlinks": links, "verified_copies": copies_ok, "unverified": bad[:5],
                                      "n_unverified": len(bad), "kaggle_ready": ready,
@@ -290,7 +290,7 @@ def verify_droppable(base="/Volumes/magicBLACKbox/baebugs", lab="/Volumes/magicL
             tens = [t for t in sd.values() if hasattr(t, "isnan") and t.is_floating_point()]
             nan_info[str(p.relative_to(k3))] = {"sha256": sha(p), "tensors": len(tens),
                                                "nan_tensors": sum(bool(t.isnan().any()) for t in tens)}
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001 - fallback; the failure is recorded or degrades
         nan_info["error"] = str(e)[:200]
     base_ok = nan_info.get("yolo11n-seg.pt", {}).get("sha256") == "55ed65c56c91713d23e8402371c6c49a6fd84f257f7dce452e8d70e41dcbe152"
     run_w = {k: v for k, v in nan_info.items() if k.startswith("daisy/runs")}
@@ -306,6 +306,4 @@ def verify_droppable(base="/Volumes/magicBLACKbox/baebugs", lab="/Volumes/magicL
         out[str(p.relative_to(B))] = {"sha256": sha(p), "identical_to_best": same,
                                       "verdict": "VERIFIED_DROPPABLE" if same else "DROPPABLE_AFTER_RECORDING",
                                       "note": "identical duplicate" if same else "different realization (final epoch); record hash before dropping"}
-    for k, v in out.items():
-        pass
     return out

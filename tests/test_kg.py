@@ -38,5 +38,5 @@ def test_ledger_break_point_per_insect(tmp_path):
     roots = [led.append(x)["root"] for x in xs]
     assert len(set(roots)) == 30 and len(led.path.read_text().splitlines()) == 30
     led.flush("test")
-    log = subprocess.run(["git", "-C", str(tmp_path), "log", "--oneline"], capture_output=True, text=True).stdout
+    log = subprocess.run(["git", "-C", str(tmp_path), "log", "--oneline"], capture_output=True, text=True, check=False).stdout
     assert "KG BP test" in log
