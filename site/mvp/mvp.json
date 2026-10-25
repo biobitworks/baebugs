@@ -2207,11 +2207,11 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
-"leaf": "413631623635795e1eaf2a583cdbf741a70aff3e4a27661ff8eb975a5db094e9",
+"leaf": "767807db9afc57f7e6d147d13544e943e72a18be02f6cccf06c17befec825323",
 "licence": "MIT",
 "module": "repo-meta",
 "path": "assets/label_studio/tasks.json",
-"sha256": "ba7fecb74854349bd9dba84e46a76b404402f2947034ca79a13a6f1fea15bbd3",
+"sha256": "42cd630dc20f6a500b35d400dde964f0c2b4f0b5f5578ceb31c46a094beeed26",
 "status": "built"
 },
 {
@@ -2457,11 +2457,11 @@ null
 {
 "claim": "OWN+TERMS",
 "kind": "code",
-"leaf": "6d5f3a1934bab3d033ebcc628f3a5e001137b200ffe338cb729cdf10a580922d",
+"leaf": "410273a0258e5facf2555c86758db354514f1da678de90e44627f3462cd71d31",
 "licence": "MIT + ultralytics terms",
 "module": "python-package",
 "path": "baebugs/asset_boxes.py",
-"sha256": "8a347a4ba4b5ce067a04d03499e690e6c1cf5b7a51e111a17b3953ae76cfad8b",
+"sha256": "73ac4a4f5ca83c191b3289da11bd6d36dd2a50f92830049e9147a20266232f86",
 "status": "built"
 },
 {
@@ -3982,6 +3982,16 @@ null
 "module": "docs",
 "path": "docs/PLAN-MVP-KG.md",
 "sha256": "6c6c8f84a8ab476091422d21924e4714ccb682feaca6768ab837d23b401708e8",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "7063136bb56339d7a0f352ce90498d5b30bdb7635ae64f9557c78495126cea47",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/RESEARCH_TOOLS.md",
+"sha256": "6e30d63e43cfb52e68afeec52bb5d95e41811b3066c1a81f845550974a413958",
 "status": "built"
 },
 {
@@ -10415,14 +10425,14 @@ null
 "terms": []
 },
 "docs": {
-"atoms": 46,
+"atoms": 47,
 "claims": {
-"OWN": 46
+"OWN": 47
 },
 "id": "module:docs",
-"root": "756e249d48f91330854556b411fe64b40bd7a62e72aa430890455cf255172afd",
+"root": "97cf54ef220a3d5d1a94f76b0f2844e7b383c88f02d871c5e534211e963bddbb",
 "status": {
-"built": 46
+"built": 47
 },
 "terms": []
 },
@@ -10512,7 +10522,7 @@ null
 "OWN+TERMS": 8
 },
 "id": "module:python-package",
-"root": "62fb1f6fd2f2acc7e0b3195120076c4e37f3888e1074afd487afb77282cb07f3",
+"root": "ee81cf344492c89d943d1c8d10016e5eeb37dd01b4ba037e5de5e3271088061a",
 "status": {
 "built": 55,
 "tested": 31
@@ -10527,7 +10537,7 @@ null
 "OWN": 36
 },
 "id": "module:repo-meta",
-"root": "70084551a4f2727a9dd31cfbbb060468cbc7010b222dcac55a4c752d6c4c21da",
+"root": "e22047591a7fb4089267c2f6bceac1ae30f9061608a0e7eae126f20cbc4e883c",
 "status": {
 "built": 36
 },
@@ -11191,9 +11201,9 @@ null
 ]
 }
 ],
-"root": "8eb76fa1d96b47f97101a14d8ec1124f293648a38deef330b0c1ea41d2f76a6a",
+"root": "8a0bbcef04ef44b06c05e20732c8269f6ce53c0d833e81c83186c3fe4127b077",
 "roots": {
-"aok": "a8352ed9306883ef2f0a5a28ce76d88c8a26cd2c6319cca44139a2ab25dcc377",
+"aok": "0476394e6c13d0ed0d75c5e5b53ae3cf112a580d623d866814b8c895ab9c2fcc",
 "assets": "0d86b0ba2afe21d6fa2fed382856976dcb120311e816a817898d09b352a5a715",
 "assets_mmr": "1731ac05e82a7bf99f0125d3815ace7c043366b8e1d72a033a7649be51da5c2e",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -15408,7 +15418,7 @@ null
 }
 ],
 "totals": {
-"OWN": 771,
+"OWN": 772,
 "OWN+TERMS": 49,
 "THIRD": 20
 },
