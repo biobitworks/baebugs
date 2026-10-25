@@ -14,8 +14,8 @@ State changes are written to a hash-chained event log (each event hashes the pre
 watcher's own record is tamper-evident. A new BREAK is surfaced immediately: dashboard banner via
 server-sent events, a macOS notification, and a line in the event log.
 
-  python -m baebugs.custody_watch --repo /Users/byron/Projects/baebugs --port 8765
-Dashboard: http://<host>:8765/   (status JSON at /status.json, live stream at /events)
+  python -m baebugs.custody_watch --repo /Users/byron/Projects/baebugs --port 8790
+Dashboard: http://<host>:8790/   (status JSON at /status.json, live stream at /events)
 """
 from __future__ import annotations
 
@@ -270,7 +270,7 @@ if(window.Notification&&Notification.permission==="default")Notification.request
 </script></body></html>"""
 
 
-def serve(w, host, port):
+def make_server(w, host, port):
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *a):
             pass
@@ -300,7 +300,7 @@ def serve(w, host, port):
                     w.listeners.remove(q)
             else:
                 self.send_response(404); self.end_headers()
-    ThreadingHTTPServer((host, port), Handler).serve_forever()
+    return ThreadingHTTPServer((host, port), Handler)          # binds now: a taken port fails loudly
 
 
 def main(argv=None):
@@ -310,7 +310,7 @@ def main(argv=None):
     ap.add_argument("--datasets-json", default="/Volumes/magicBLACKbox/baebugs/daisy/datasets.json")
     ap.add_argument("--interval", type=float, default=15.0, help="seconds between local checks")
     ap.add_argument("--remote-every", type=int, default=20, help="check upstream HEADs every N cycles")
-    ap.add_argument("--host", default="0.0.0.0"); ap.add_argument("--port", type=int, default=8765)
+    ap.add_argument("--host", default="0.0.0.0"); ap.add_argument("--port", type=int, default=8790)
     ap.add_argument("--once", action="store_true")
     a = ap.parse_args(argv)
     w = Watcher(a.repo, datasets_json=a.datasets_json)
@@ -319,7 +319,8 @@ def main(argv=None):
         for k, c in sorted(s["checks"].items()):
             print(f"{c['level']:6s} {k}: {c['reason']}")
         return
-    threading.Thread(target=serve, args=(w, a.host, a.port), daemon=True).start()
+    srv = make_server(w, a.host, a.port)
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
     print(f"custody watch on http://{a.host}:{a.port}/", flush=True)
     while True:
         w.cycle(remote=(w.cycle_n % a.remote_every == 0)); time.sleep(a.interval)
