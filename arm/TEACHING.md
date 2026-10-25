@@ -51,6 +51,15 @@ Type these in the same session. Mirroring pauses while they run; type `follow` t
 
 If a pick stops with "missed grab", the gripper closed on nothing: re-teach that slot's `in` pose so the fingers sit around the handle.
 
+## 3b. Wrist camera and filter markers
+
+With the wrist camera plugged in (`wrist_camera` in `layout.json`, set to `CAM1`), the arm reads each filter's ArUco marker from the slot's `front` pose before going in. Close the live view first: only one program can use the camera.
+
+- **While teaching each `front` pose:** with a filter in the slot, type `look rig/top` (the follower keeps copying the leader). It should name the filter, e.g. `rig/top: A (F1) (marker 1, +12 px across / -30 px down from the middle)`. If it says `no marker in view`, adjust the pose (or the camera angle) until it reads, then `save` again. Close to the middle (small px numbers) is best.
+- `scan`: visits every slot's `front` and notes which filter is where (no marker = empty). `inventory` shows the result.
+- `pick rig/top A` (or `F1`): only takes the filter if the camera sees A there; otherwise it stops in front of the slot with the gripper open. Without a filter name, `pick` takes whatever is there and notes what it was. `move FROM TO A` works the same way.
+- Picks and places keep `arm/inventory.json` up to date; `?` means a filter whose marker couldn't be read. If the camera is unplugged or busy, routines say so and carry on without the check.
+
 Outside the session, the same routines run on the follower alone (the leader can stay plugged in):
 
 ```powershell
@@ -65,6 +74,6 @@ Everything is in `arm/layout.json`:
 - `sides`: slot names per side. Add or rename slots, then teach their `front` and `in`.
 - `dump`: the dish routine's steps. Add `["move", "NAME"]` waypoints, or change the shake (`["shake", "wrist_roll", 8, 4]` = 8 degrees, 4 times).
 - `missed_grab_at`: how closed the gripper may get (0–1) before it counts as empty.
-- `wrist_camera`: once it's installed, put part of its name here (see `vision\cameras.py`) and every pick saves a photo to `arm/captures/`.
+- `wrist_camera`: part of the camera's name (see `vision\cameras.py`), or `null` for none. Every marker check and every pulled filter saves a photo to `arm/captures/`.
 
 Poses are saved in `arm/poses.json` as you go. They only work while the shelf, the arm's base and the arm calibration stay where they are; if anything moves, re-teach the affected poses.

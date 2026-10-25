@@ -4,30 +4,36 @@
   python arm/teach.py todo                        # which poses still need teaching
   python arm/teach.py run check rig/top           # dry run into a slot and back out, gripper open
   python arm/teach.py run pick rig/top            # take the filter out of a slot
+  python arm/teach.py run pick rig/top A          # ...only if the wrist camera sees filter A (or F1) there
   python arm/teach.py run place storage/top       # put the held filter into a slot
-  python arm/teach.py run move rig/top storage/top
+  python arm/teach.py run move rig/top storage/top [FILTER]
+  python arm/teach.py run scan                    # read every slot's marker: which filter is where
   python arm/teach.py run dump                    # grab the dish and pour it onto the top filter
   python arm/teach.py run goto NAME               # straight to one pose, no routing: check the path is clear
+  python arm/teach.py inventory                   # which filter is in which slot, as last seen
 
-Add --practice to try any command without the arm (it uses practice_poses.json, not your real poses).
-Ctrl+C stops a routine; the arm holds where it is.
+Add --practice to try any command without the arm (it uses practice_poses.json, not your real poses;
+the wrist camera is still used if it's plugged in). Ctrl+C stops a routine; the arm holds where it is.
 """
 import argparse
 import threading
 import time
 
 import motion
-from motion import Arm, MissedGrab, MissingPose
+from motion import Arm, MissedGrab, MissingPose, WrongFilter
 
 MIRROR_STEP = 2.0          # most a joint may move per mirror tick (degrees; gripper %), so jumps become glides
-TEACH_HELP = """Commands:
+ROUTINES = "goto NAME | look SLOT | check SLOT | pick SLOT [FILTER] | place SLOT | move FROM TO [FILTER] | scan | dump"
+TEACH_HELP = f"""Commands:
   save NAME         store the follower's current position as NAME (e.g. save rig/top/in)
   todo              poses the routines still need
   list              poses saved so far
   where             current joint positions
   delete NAME       remove a saved pose
-  goto NAME | check SLOT | pick SLOT | place SLOT | move FROM TO | dump
-                    run on the follower (mirroring pauses; the leader is ignored)
+  inventory         which filter is in which slot, as last seen
+  {ROUTINES}
+                    run on the follower (mirroring pauses; the leader is ignored).
+                    look SLOT reads the marker from where the arm is now, e.g. at SLOT/front.
   follow            mirror the leader again (the follower glides over to it)
   quit"""
 
@@ -60,20 +66,40 @@ def pretend_grip(follower, args):
 def routine(layout, words):
     """Steps for a command like ['move', 'rig/top', 'storage/top']."""
     cmd, args = words[0], words[1:]
-    need = {"goto": 1, "check": 1, "pick": 1, "place": 1, "move": 2, "dump": 0}
-    if cmd not in need or len(args) != need[cmd]:
-        raise ValueError("usage: goto NAME | check SLOT | pick SLOT | place SLOT | move FROM TO | dump")
+    need = {"goto": (1, 1), "look": (1, 1), "check": (1, 1), "pick": (1, 2), "place": (1, 1), "move": (2, 3),
+            "scan": (0, 0), "dump": (0, 0)}
+    if cmd not in need or not need[cmd][0] <= len(args) <= need[cmd][1]:
+        raise ValueError(f"usage: {ROUTINES}")
+    if cmd in ("pick", "move") and len(args) == need[cmd][1]:
+        args[-1] = motion.letter_for(args[-1], motion.load_filters())
     if cmd == "goto":
         return [["move", args[0]]]
+    if cmd == "look":
+        return [["look", args[0]]]
     if cmd == "check":
         return motion.check_steps(layout, args[0])
     if cmd == "pick":
-        return motion.pick_steps(layout, args[0])
+        return motion.pick_steps(layout, *args)
     if cmd == "place":
         return motion.place_steps(layout, args[0])
     if cmd == "move":
         return motion.transfer_steps(layout, *args)
+    if cmd == "scan":
+        return motion.scan_steps(layout)
     return motion.dump_steps(layout)
+
+
+def make_arm(follower, layout, poses, args):
+    return Arm(follower, layout, poses, realtime=not args.practice, camera=motion.wrist_camera(layout),
+               inventory_path=motion.PRACTICE_INVENTORY if args.practice else motion.INVENTORY)
+
+
+def show_inventory(layout, inventory):
+    filters = motion.load_filters()
+    for slot in motion.all_slots(layout):
+        seen = inventory["slots"]
+        print(f"  {slot:16} {motion.filter_label(seen[slot], filters) if slot in seen else 'not checked'}")
+    print(f"  {'holding':16} {motion.filter_label(inventory['holding'], filters) if inventory['holding'] else 'nothing'}")
 
 
 def poses_needed(layout, steps, side=None):
@@ -100,7 +126,7 @@ def run_routine(arm, steps):
         arm.run(steps)
         print("Done.")
         return True
-    except MissedGrab as e:
+    except (MissedGrab, WrongFilter) as e:
         print(f"Stopped: {e}.")
     except MissingPose as e:
         print(f"Stopped: {e.args[0]}.")
@@ -122,7 +148,7 @@ def cmd_run(args):
 
     follower, _ = motion.connect(args.follower_port, args.follower_id, practice=args.practice)
     pretend_grip(follower, args)
-    arm = Arm(follower, layout, poses, realtime=not args.practice)
+    arm = make_arm(follower, layout, poses, args)
     finished = run_routine(arm, steps)
     try:
         if finished:
@@ -143,13 +169,18 @@ def cmd_todo(args):
     print(f"{len(poses)} poses saved; still to teach ({len(missing)}): {', '.join(missing) or 'none'}")
 
 
+def cmd_inventory(args):
+    show_inventory(motion.load_layout(), motion.load_inventory(motion.PRACTICE_INVENTORY if args.practice
+                                                                 else motion.INVENTORY))
+
+
 def cmd_teach(args):
     layout = motion.load_layout()
     path, poses = open_poses(args.practice, layout)
     follower, leader = motion.connect(args.follower_port, args.follower_id, args.leader_port, args.leader_id,
                                       practice=args.practice)
     pretend_grip(follower, args)
-    arm = Arm(follower, layout, poses, realtime=not args.practice)
+    arm = make_arm(follower, layout, poses, args)
     lock = threading.Lock()
     state = {"mirror": True, "running": True, "errors": 0}
 
@@ -197,7 +228,9 @@ def cmd_teach(args):
         elif cmd == "where":
             with lock:
                 print("  ".join(f"{j} {v:.1f}" for j, v in arm.goal.items()))
-        elif cmd in ("goto", "check", "pick", "place", "move", "dump"):
+        elif cmd == "inventory":
+            show_inventory(layout, arm.inventory)
+        elif cmd in ("goto", "look", "check", "pick", "place", "move", "scan", "dump"):
             try:
                 steps = routine(layout, words)
             except ValueError as e:
@@ -206,6 +239,9 @@ def cmd_teach(args):
             missing = [n for n in poses_needed(layout, steps, arm.side) if n not in poses]
             if missing:
                 print(f"Teach these poses first: {', '.join(missing)}")
+                continue
+            if cmd == "look":  # only takes a photo, so the follower can keep copying the leader
+                run_routine(arm, steps)
                 continue
             with lock:
                 state["mirror"] = False
@@ -248,10 +284,11 @@ def main():
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("teach")
     sub.add_parser("todo")
+    sub.add_parser("inventory")
     r = sub.add_parser("run")
-    r.add_argument("words", nargs="+", help="goto NAME | check SLOT | pick SLOT | place SLOT | move FROM TO | dump")
+    r.add_argument("words", nargs="+", help=ROUTINES)
     args = ap.parse_args()
-    {"teach": cmd_teach, "todo": cmd_todo, "run": cmd_run}[args.cmd](args)
+    {"teach": cmd_teach, "todo": cmd_todo, "inventory": cmd_inventory, "run": cmd_run}[args.cmd](args)
 
 
 if __name__ == "__main__":

@@ -30,7 +30,7 @@ Commands below use that environment's `python.exe` directly; no activation neede
 - **Power:** leader arm on the **5 V** supply, follower on **12 V**. 12 V on the leader triggers over-voltage errors on its motors.
 - **Ports:** leader = COM5, follower = COM6 (check with `arm/probe_arms.py COM5 COM6`; the leader's motors read ~5 V).
 - **Mirror the leader:** `arm\mirror.cmd` (or `mirror` if it's copied into a folder on your PATH). Hold the follower before pressing Ctrl+C: it goes limp when mirroring stops.
-- **Teach and repeat:** `arm\teach.py` saves named positions while the follower copies the leader, then replays routines (pick, place, move a filter between the rig and storage, dump the dish) on the follower alone. Step-by-step guide: [arm/TEACHING.md](arm/TEACHING.md). Add `--practice` to try anything without the arm. Tests: `cd arm; python -m unittest test_motion`.
+- **Teach and repeat:** `arm\teach.py` saves named positions while the follower copies the leader, then replays routines (pick, place, move a filter between the rig and storage, dump the dish) on the follower alone. Step-by-step guide: [arm/TEACHING.md](arm/TEACHING.md). With the wrist camera, it reads each filter's marker before a pick (`pick rig/top A` only takes filter A), `scan` notes which filter is in every slot, and `teach.py inventory` shows it. Add `--practice` to try anything without the arm. Tests: `cd arm; python -m unittest test_motion`.
 - **Calibration backups:** `arm/calibration/` mirrors `%USERPROFILE%\.cache\huggingface\lerobot\calibration\` (`robots\so_follower\`, `teleoperators\so_leader\`). Copy them back if that cache is lost.
 
 ```powershell
@@ -79,7 +79,17 @@ Then turn the measurements into a filter plan for the rig (filters stacked coars
 & $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\filter_plan.py --estimate vision\output\estimate.json --json vision\output\plan.json
 ```
 
-- Hole sizes live in `vision/filters.json` and are **placeholders** until the real filters are measured.
+- Hole sizes live in `vision/filters.json` (F1–F3 measured; F4 and F5 are targets until they're printed and measured).
 - Tests: `cd vision; python -m unittest test_filter_plan`.
+
+### Filter markers (wrist camera)
+
+Each filter carries a printed ArUco marker (4×4 set) so the wrist camera knows which filter it's holding. `vision/filter_markers.pdf` has markers A–E (ids 1–5, mapped in `filters.json`) at 15, 20 and 25 mm: print at 100% / actual size (check the 50 mm bar), cut along the dotted line (the white margin is needed), and stick the size that fits on each filter.
+
+```powershell
+& $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\markers.py sheet --sizes 15 20 25           # regenerate the sheet
+& $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\markers.py read photo.png --out marked.png    # which filters are in a photo
+& $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\live_view.py --camera CAM1 --save-dir vision\captures\wrist   # wrist camera live
+```
 
 Photo tips that matter more than code: light from underneath (backlight) or a plain matte coloured background, camera straight overhead at a fixed height, full-resolution images, objects not touching.
