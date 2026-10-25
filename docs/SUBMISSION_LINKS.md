@@ -26,11 +26,11 @@ One page to click through everything we submit. Status as of 21:35 UTC. **Works*
 | 20 | Preprint draft | https://github.com/biobitworks/baebugs/blob/main/docs/preprint/baebugs_preprint.md | Works |
 | 21 | Licensing | https://github.com/biobitworks/baebugs/blob/main/NOTICE.md | Works |
 | 22 | New slide deck + live demo (team Drive folder) | https://drive.google.com/drive/folders/11-WYJ-ADuBkXb53xUPbTeefuBf64radz | Outside the repo: not reviewed here, not hashed |
-
-Regenerate the story page after any data change: `python site/story/build_story.py`.
 | 23 | Full lab stack deck (.pptx for Google Slides, 13 slides) | https://github.com/biobitworks/baebugs/blob/main/docs/slides/baebugs_full_lab_stack.pptx | Works |
 | 24 | Google Slides link submitted on the form | [add after upload] | |
 | 25 | YouTube (unlisted) demo link | [add after upload] | |
+
+Regenerate the story page after any data change: `python site/story/build_story.py`.
 
 ## Live sites (Vercel, production aliases)
 
