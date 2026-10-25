@@ -5912,6 +5912,16 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
+"leaf": "ec1cb3736582652eeefdf7a08c4e5407f3e4b393f8e3e8860b2ad3f813da8e53",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "experiments/biokea_sealed_inserts_20261025/NOTE_RENAME.md",
+"sha256": "04561379bd6e9ba2ec85c3c41b719c4d86b44776c12c1fd7957403c87ac66194",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
 "leaf": "4fd1caa0e1b0fe33c9d494a3dec0c74f0e1a8136189a15f66652935003ebcb32",
 "licence": "MIT",
 "module": "repo-meta",
@@ -6242,10 +6252,10 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
-"leaf": "06a28cccd8a3f6556f01038eaaf74a8e74b3ce8b3dea7346d74baf905cb1f16d",
+"leaf": "8ed68dfa20c2fcbf60f768b4fa75978527c8421ef24bd9394f6909de592ffc67",
 "licence": "MIT",
 "module": "repo-meta",
-"path": "experiments/biokea_sealed_inserts_20261025/test_variable_aperture.py",
+"path": "experiments/biokea_sealed_inserts_20261025/test_sealed_variable_aperture.py",
 "sha256": "97c1a0421d8060ab6129dd83b25e3ec24ccc8d60081e175da568c61f66d7a1ad",
 "status": "built"
 },
@@ -13242,14 +13252,14 @@ null
 ]
 },
 "repo-meta": {
-"atoms": 174,
+"atoms": 175,
 "claims": {
-"OWN": 174
+"OWN": 175
 },
 "id": "module:repo-meta",
-"root": "f1d632181d692349692af44766baa3f567906ad9e7a46fe38bb2eb46e9fa741c",
+"root": "177445b03be40b56e93a96c8055962a6c28975627556ff816409c91a8ab7f516",
 "status": {
-"built": 174
+"built": 175
 },
 "terms": []
 },
@@ -14041,9 +14051,9 @@ null
 ]
 }
 ],
-"root": "f5b4c73431853449b7c8147eca4fe3a5fc8cb92b19b8e03a1f0d075437defc14",
+"root": "ab6d2cb95b764de8839ad250d9d341a161082db84580df4d54509977a57c9dc0",
 "roots": {
-"aok": "f0800808e9351c821e604e76e2eedf4e544cd5667165175b308195dbbbd4612b",
+"aok": "a82c71765a8ec612be71d6c66692e23e94c8b45ddeb2609b78b7a961aa79ce8b",
 "assets": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
 "assets_mmr": "97d20c6b90e0385d7cbac87551f93381eba7eeb2e05cecb7ed9f352f349281b2",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -18259,7 +18269,7 @@ null
 }
 ],
 "totals": {
-"OWN": 1032,
+"OWN": 1033,
 "OWN+TERMS": 52,
 "THIRD": 20
 },

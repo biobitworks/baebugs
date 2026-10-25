@@ -1,5 +1,5 @@
 {
- "atoms": 1104,
+ "atoms": 1105,
  "external": [
   {
    "claim": "THIRD",
@@ -5521,6 +5521,20 @@
   },
   {
    "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:experiments/biokea_sealed_inserts_20261025/NOTE_RENAME.md",
+   "kind": "meta",
+   "leaf": "ec1cb3736582652eeefdf7a08c4e5407f3e4b393f8e3e8860b2ad3f813da8e53",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "experiments/biokea_sealed_inserts_20261025/NOTE_RENAME.md",
+   "sha256": "04561379bd6e9ba2ec85c3c41b719c4d86b44776c12c1fd7957403c87ac66194",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
    "claude_coauthored_commits": 0,
    "commits": 1,
    "id": "leaf:experiments/biokea_sealed_inserts_20261025/capture_receipt.py",
@@ -5983,14 +5997,14 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
+   "claude_coauthored_commits": 1,
    "commits": 1,
-   "id": "leaf:experiments/biokea_sealed_inserts_20261025/test_variable_aperture.py",
+   "id": "leaf:experiments/biokea_sealed_inserts_20261025/test_sealed_variable_aperture.py",
    "kind": "meta",
-   "leaf": "06a28cccd8a3f6556f01038eaaf74a8e74b3ce8b3dea7346d74baf905cb1f16d",
+   "leaf": "8ed68dfa20c2fcbf60f768b4fa75978527c8421ef24bd9394f6909de592ffc67",
    "licence": "MIT",
    "module": "repo-meta",
-   "path": "experiments/biokea_sealed_inserts_20261025/test_variable_aperture.py",
+   "path": "experiments/biokea_sealed_inserts_20261025/test_sealed_variable_aperture.py",
    "sha256": "97c1a0421d8060ab6129dd83b25e3ec24ccc8d60081e175da568c61f66d7a1ad",
    "status": "built",
    "terms": []
@@ -14363,8 +14377,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 3,
-   "commits": 3,
+   "claude_coauthored_commits": 4,
+   "commits": 4,
    "id": "leaf:site/board/index.html",
    "kind": "page",
    "leaf": "89d6e2f221568330fe0b735cf69b24a96816f0422c2d69263760cb415702f6fd",
@@ -15731,14 +15745,14 @@
    ]
   },
   "repo-meta": {
-   "atoms": 174,
+   "atoms": 175,
    "claims": {
-    "OWN": 174
+    "OWN": 175
    },
    "id": "module:repo-meta",
-   "root": "f1d632181d692349692af44766baa3f567906ad9e7a46fe38bb2eb46e9fa741c",
+   "root": "177445b03be40b56e93a96c8055962a6c28975627556ff816409c91a8ab7f516",
    "status": {
-    "built": 174
+    "built": 175
    },
    "terms": []
   },
@@ -15768,9 +15782,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "f0800808e9351c821e604e76e2eedf4e544cd5667165175b308195dbbbd4612b",
+ "root": "a82c71765a8ec612be71d6c66692e23e94c8b45ddeb2609b78b7a961aa79ce8b",
  "totals": {
-  "OWN": 1032,
+  "OWN": 1033,
   "OWN+TERMS": 52,
   "THIRD": 20
  },
