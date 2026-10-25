@@ -67,7 +67,8 @@ event("gate_G2_init_weights", {"observed": isha, "expected": S.get("init_sha256"
 if not g2: raise SystemExit("G2 FAIL init weights")
 env = {"python": platform.python_version(), "torch": torch.__version__, "cuda": torch.version.cuda,
        "gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None, "ultralytics": ultralytics.__version__,
-       "platform": platform.platform(), "machine": platform.machine(), "torch_threads": torch.get_num_threads()}
+       "platform": platform.platform(), "machine": platform.machine(), "torch_threads": torch.get_num_threads(),
+       "device": os.environ.get("DAISY_DEVICE") or "auto"}
 event("gate_G3a_environment", {"observed": env, "pins": S.get("pins", {}), "pass": all(str(env.get(k)) == str(v) for k, v in S.get("pins", {}).items())})
 
 def track(run):
@@ -117,7 +118,7 @@ for run in PROTO["runs"]:
     status, err = "EXECUTED", None
     try:
         m.train(data=str(vdir), epochs=S["epochs"], imgsz=S["imgsz"], batch=S["batch"], seed=S["seed"],
-                deterministic=S.get("deterministic", False), workers=S["workers"], plots=False, verbose=False,
+                deterministic=S.get("deterministic", False), workers=S["workers"], device=os.environ.get("DAISY_DEVICE") or None, plots=False, verbose=False,
                 project=str(WORK / "runs"), name=name, exist_ok=True, val=True, split="val")
     except Exception as e:
         status, err = "FAILED", f"{type(e).__name__}: {e}"[:300]
@@ -181,11 +182,13 @@ def build(proto_path, out_dir, user="biobitworks"):
     return psha
 
 
-def run_local(proto_path, input_dir, work_dir):
+def run_local(proto_path, input_dir, work_dir, device=None):
     """Run the identical kernel code on this machine (CPU): same gates, same custody, bytes land in work_dir."""
     import os
     txt = Path(proto_path).read_text()
     os.environ["DAISY_INPUT"] = str(Path(input_dir).resolve()); os.environ["DAISY_WORK"] = str(Path(work_dir).resolve())
+    if device:
+        os.environ["DAISY_DEVICE"] = device
     g = {"PROTO_TXT": txt, "PROTO": json.loads(txt), "PROTO_SHA": hashlib.sha256(txt.encode()).hexdigest(), "__name__": "__daisy__"}
     exec(compile(CODE, "daisy_bb_004_kernel", "exec"), g)  # noqa: S102 - the frozen kernel code itself, unmodified
     return g["summary"]
@@ -217,13 +220,13 @@ def freeze(report_path, out="daisy/DAISY-BB-004.json", init_sha=None):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", choices=["freeze", "build", "local"])
-    ap.add_argument("--input"); ap.add_argument("--work")
+    ap.add_argument("--input"); ap.add_argument("--work"); ap.add_argument("--device")
     ap.add_argument("--report"); ap.add_argument("--init-sha")
     ap.add_argument("--proto", default="daisy/DAISY-BB-004.json"); ap.add_argument("--out", default="kaggle/daisy_bb_004")
     a = ap.parse_args()
     if a.cmd == "freeze":
         print(freeze(a.report, a.proto, a.init_sha)["data_root"])
     elif a.cmd == "local":
-        print(json.dumps(run_local(a.proto, a.input, a.work)["custody_status"]))
+        print(json.dumps(run_local(a.proto, a.input, a.work, a.device)["custody_status"]))
     else:
         print(build(a.proto, a.out))
