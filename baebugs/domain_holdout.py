@@ -70,6 +70,7 @@ def build(datasets="/Volumes/magicBLACKbox/baebugs/datasets", states=STATES, max
         out = Path(datasets, f"holdout_{st}")
         stats = pseudo_label_specimens([work / st], out, val_every=3, max_images=max_images)
         report["states"][st]["teacher"] = stats
+        report["states"][st]["status"] = "BUILT" if stats.get("kept_images") else "NOT_BUILT_TEACHER_KEPT_NONE"
         (out / "HOLDOUT_REPORT.json").write_text(json.dumps({"state": st, **report["states"][st],
                                                               "excluded_sets": report["excluded_sets"]}, indent=1))
         print(st, json.dumps(report["states"][st]), flush=True)

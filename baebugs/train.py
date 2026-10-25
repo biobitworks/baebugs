@@ -145,7 +145,7 @@ def pseudo_label_specimens(image_dirs, out_dir, min_ruler_conf=0.4, max_objects=
     (teacher-derived 'silver' truth for benchmarking on real photos)."""
     import shutil
     from .specimen_photo import preview, ruler_px_per_mm, segment, segment_yoloe
-    out = Path(out_dir)
+    out = Path(out_dir); out.mkdir(parents=True, exist_ok=True)
     paths = [p for d in image_dirs for p in sorted(Path(d).glob("*.jpg"))][:max_images]
     stats = {"images": len(paths), "no_ruler": 0, "rejected": 0, "kept_images": 0, "objects": 0}
     truth, previews = {"train": [], "val": []}, []
