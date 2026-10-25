@@ -93,7 +93,10 @@ def yolo_epoch_callback(ledger: GitLedger):
     """Ultralytics on_fit_epoch_end hook: one break point per epoch."""
     def cb(trainer):
         m = {k: round(float(v), 5) for k, v in (trainer.metrics or {}).items()}
-        ledger.append(f"epoch_{trainer.epoch + 1:03d}",
+        e = trainer.epoch + 1
+        # ultralytics re-fires this hook for the final validation of best.pt
+        step = f"epoch_{e:03d}" if e <= trainer.epochs else "final_val"
+        ledger.append(step,
                       {"epoch": trainer.epoch + 1, "epochs": trainer.epochs, "metrics": m,
                        "fitness": float(getattr(trainer, "fitness", 0) or 0)},
                       files={"last.pt": Path(trainer.wdir) / "last.pt",
