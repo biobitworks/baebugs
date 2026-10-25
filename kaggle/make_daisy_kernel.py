@@ -197,6 +197,8 @@ def build(proto_path, out_dir, user):
         md("## Evaluation: every member val, toy renders (exact truth), ruler truth"), code(EVAL),
         md("## Outputs + event Merkle root"), code(FINISH),
     ]
+    nb.metadata["kernelspec"] = {"name": "python3", "display_name": "Python 3", "language": "python"}
+    nb.metadata["language_info"] = {"name": "python"}
     out = Path(out_dir); out.mkdir(parents=True, exist_ok=True)
     nbf.write(nb, out / "daisy_bb_001.ipynb")
     (out / "kernel-metadata.json").write_text(json.dumps({
