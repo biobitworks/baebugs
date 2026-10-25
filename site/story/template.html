@@ -220,7 +220,7 @@ const STEPS = [
 
 const main=document.getElementById('main'), rail=document.getElementById('rail'), glow=document.getElementById('glow');
 STEPS.forEach((s,i)=>{
-  const el=document.createElement('section');el.className='step';el.innerHTML=`<div class="wrap">${s.html}</div>`;el.setAttribute('aria-label',s.k);main.appendChild(el);
+  const el=document.createElement('section');el.className='step';el.innerHTML=`<div class="wrap">${s.html}</div>`;el.setAttribute('aria-label',s.k);el.inert=true;main.appendChild(el);
   const b=document.createElement('button');b.title=s.k;b.setAttribute('aria-label',s.k);b.onclick=()=>go(i);rail.appendChild(b);
 });
 main.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)go(+g.dataset.go)});
@@ -229,7 +229,7 @@ function go(i){
   i=Math.max(0,Math.min(STEPS.length-1,i)); if(i===cur)return;
   const secs=main.children;
   if(cur>=0){const o=secs[cur];o.classList.remove('on');o.classList.add('out');setTimeout(()=>o.classList.remove('out'),700)}
-  secs[i].classList.add('on');secs[i].scrollTop=0;cur=i;
+  [...secs].forEach((x,j)=>{x.inert=j!==i});secs[i].classList.add('on');secs[i].scrollTop=0;cur=i;
   [...rail.children].forEach((b,j)=>{b.className=j===i?'on':j<i?'done':''});
   glow.style.background=`radial-gradient(40% 35% at ${20+i*9}% 15%, ${STEPS[i].hue}33, transparent 70%)`;
   document.getElementById('count').textContent=`${String(i).padStart(2,'0')} / ${String(STEPS.length-1).padStart(2,'0')} · ${STEPS[i].k}`;
