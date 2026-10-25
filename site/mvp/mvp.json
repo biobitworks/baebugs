@@ -2652,6 +2652,16 @@ null
 "status": "tested"
 },
 {
+"claim": "OWN",
+"kind": "code",
+"leaf": "c80eef7f195f6ff310f5b76199aa43e338e793872099f90cd47efdbc72a6b291",
+"licence": "MIT",
+"module": "python-package",
+"path": "baebugs/asbuilt.py",
+"sha256": "f70dbe4756378dc1b9777df5cf9b89c7eda61c20d1d4c2f31290616442eb4016",
+"status": "built"
+},
+{
 "claim": "OWN+TERMS",
 "kind": "code",
 "leaf": "410273a0258e5facf2555c86758db354514f1da678de90e44627f3462cd71d31",
@@ -3774,11 +3784,11 @@ null
 {
 "claim": "OWN",
 "kind": "ledger",
-"leaf": "25cc8160b61d8af49c820324b704b9d7cd4df2de976f61f60f548ac978c58f70",
+"leaf": "c6e5575db78ec0f7c5d03f5c27d0c33ad4f4f28399187b7b74cb8a2195254b59",
 "licence": "MIT",
 "module": "custody-ledgers",
 "path": "daisy/labbox_mmr.jsonl",
-"sha256": "d5a1b225725f2122a797ab269a101edcd22a535c2fb82767a2418ba44a4a5c0f",
+"sha256": "3e6b93e02d1cac9986172915a5bd2430f3944d9070719982a1ba36b96adfc203",
 "status": "built"
 },
 {
@@ -4189,6 +4199,16 @@ null
 "module": "dashboards",
 "path": "dashboard/twin/sim.js",
 "sha256": "576c4df41a27dbea3d748d9238b3f54d04823916325cda5a435ebc086d177053",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "9e35baf7f2221ea2ba75ac2f5c19f3fd2ccb13e3e1f3d3d3052f88c04119001c",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/ASBUILT_LOMO.md",
+"sha256": "fa9f7f6f356f456fba440be6b14e057ca5bc64563910fd1321b969221964ecb2",
 "status": "built"
 },
 {
@@ -4929,6 +4949,16 @@ null
 "module": "kaggle-kernels",
 "path": "kaggle/make_taxon_kernel.py",
 "sha256": "35c3aa14a95ba00247d0826f805bf9795e45ae366d16377481a81575541b3c30",
+"status": "built"
+},
+{
+"claim": "OWN+TERMS",
+"kind": "data",
+"leaf": "c0683083cd9e2369ebb11f4bc640b7cb2fba90f3d89826e8ec244d002722338a",
+"licence": "MIT + gbif-media terms",
+"module": "knowledge-graph",
+"path": "kg/asbuilt.json",
+"sha256": "f0244ddb0b52b02a232b28c8d8297d5a7536ac61890d046febd70f70bbcde784",
 "status": "built"
 },
 {
@@ -11239,8 +11269,8 @@ null
 "verified": true
 },
 "labbox_mmr": {
-"n": 1,
-"root": "234a9637a12b23e7c4f1b22e4a1f4e0d5734da43f9e12decb034622aa2746ff8",
+"n": 2,
+"root": "ee4a72209e017678efc3caa998c89d95d5b559e71aa9b6c7a321f5151c09284d",
 "verified": true
 },
 "upstream_mmr": {
@@ -11256,7 +11286,7 @@ null
 "OWN": 34
 },
 "id": "module:custody-ledgers",
-"root": "75ac1d75740373ddee811cfd1b95ef52c6e65827dfc74f4c70f558954d3423ab",
+"root": "688897be9af0538121a77c21d373e8e0099969342e24e4cd82d855fe18787537",
 "status": {
 "built": 34
 },
@@ -11302,14 +11332,14 @@ null
 "terms": []
 },
 "docs": {
-"atoms": 63,
+"atoms": 64,
 "claims": {
-"OWN": 63
+"OWN": 64
 },
 "id": "module:docs",
-"root": "c13ef8c4b4069c16811b346542d320278c0d58b0144a73a5db069cdbb5cf4c89",
+"root": "fedbd89a1d0535b97cc5105cdf0e20f82566f9e87e9c8f91b9d78a5e065777ef",
 "status": {
-"built": 63
+"built": 64
 },
 "terms": []
 },
@@ -11329,14 +11359,14 @@ null
 ]
 },
 "knowledge-graph": {
-"atoms": 6,
+"atoms": 7,
 "claims": {
-"OWN+TERMS": 6
+"OWN+TERMS": 7
 },
 "id": "module:knowledge-graph",
-"root": "499b5c828f5eeed2dd21f0a2f1ff7a90642fe9a85750e2c8924feca30795d341",
+"root": "15681e52a3a179e57cdadc5bdbebb8afadace458861145c47322e5f32387033d",
 "status": {
-"built": 6
+"built": 7
 },
 "terms": [
 "ext:gbif-media"
@@ -11393,15 +11423,15 @@ null
 ]
 },
 "python-package": {
-"atoms": 89,
+"atoms": 90,
 "claims": {
-"OWN": 81,
+"OWN": 82,
 "OWN+TERMS": 8
 },
 "id": "module:python-package",
-"root": "8247b80c133562ae7f531a162ecc53480b73a32941318869711779ab3a48da43",
+"root": "38f67c801332f715addaa1cab2c63d1b1a8a94f79f151ae56b4daa4c9255ab2f",
 "status": {
-"built": 57,
+"built": 58,
 "tested": 32
 },
 "terms": [
@@ -12208,16 +12238,16 @@ null
 ]
 }
 ],
-"root": "f6587b9351fca393ca38d11ec6de2191c1236a64cd09347358f1a4c8a3ffa254",
+"root": "778d4b97d95cbbd5e384bda74ca8bfbf75e624e16165bf4600a8d056fc9427a7",
 "roots": {
-"aok": "4480a0436464ada036954f05d655bbcd530f66c667bb5bd9ec85eecf8247cbfd",
+"aok": "bea2078f1f597c3b20abf7e71fc02b8248b69f384d1ed727eaa18b26f8123719",
 "assets": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
 "assets_mmr": "97d20c6b90e0385d7cbac87551f93381eba7eeb2e05cecb7ed9f352f349281b2",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
 "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7",
 "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5",
 "impact_mmr": "bbbf8f3daaac1f80cc418c20d1f096307195798f378383ab4807a69fd1dba359",
-"labbox_mmr": "234a9637a12b23e7c4f1b22e4a1f4e0d5734da43f9e12decb034622aa2746ff8",
+"labbox_mmr": "ee4a72209e017678efc3caa998c89d95d5b559e71aa9b6c7a321f5151c09284d",
 "upstream_mmr": "38a4a379f5c6d0d5eb9b742eceb698f8cb4e72309bf1f2095cca9e7d87c85513"
 },
 "species": [
@@ -16425,8 +16455,8 @@ null
 }
 ],
 "totals": {
-"OWN": 853,
-"OWN+TERMS": 49,
+"OWN": 855,
+"OWN+TERMS": 50,
 "THIRD": 20
 },
 "type": "baebugs-mvp"
