@@ -59,7 +59,7 @@ print("custody: all members verified")
 '''
 
 TRAIN = r'''
-import yaml, time, torch
+import yaml, time, math, platform, torch, ultralytics, pandas as pd
 from ultralytics import YOLO
 WORK = Path("/kaggle/working/daisy"); WORK.mkdir(parents=True, exist_ok=True)
 EVENTS = []
@@ -69,8 +69,10 @@ def event(kind, payload):
     EVENTS.append(rec)
     with open(WORK / "events.jsonl", "a") as f:
         f.write(json.dumps(rec, default=str) + "\n")
+    return rec
 event("custody", CUSTODY_REPORT)
 event("protocol", {"sha256": PROTO_SHA, "id": PROTO["id"]})
+S = PROTO["settings"]; G = PROTO.get("gates", {}); VAR = PROTO.get("variance", {})
 
 def split_dirs(name, split):
     d = MEMBERS[name] / "images" / split
@@ -82,21 +84,88 @@ def data_yaml(run, train_members, val_members):
          "val": [p for m in val_members for p in split_dirs(m, "val")]}
     fp = WORK / f"{run}.yaml"; fp.write_text(yaml.safe_dump(y)); return fp
 
-S = PROTO["settings"]
+# G2 initial weights: hash must equal the pinned value (fail closed)
 init = YOLO(S["model"]); init_sha = sha(S["model"]) if os.path.exists(S["model"]) else None
-event("init_weights", {"model": S["model"], "sha256": init_sha, "torch": torch.__version__,
-                       "cuda": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None})
+g2 = init_sha is not None and (not S.get("init_sha256") or init_sha == S["init_sha256"])
+event("gate_G2_init_weights", {"claim": "init weights sha256 == pinned", "observed": init_sha,
+                               "expected": S.get("init_sha256"), "pass": g2})
+if not g2:
+    raise SystemExit(f"G2 FAIL: init weights {init_sha} != pinned {S.get('init_sha256')}")
+
+# G3a environment: recorded; unpinned / mismatched versions flagged (variance accepted, evidence kept)
+env = {"python": platform.python_version(), "torch": torch.__version__, "cuda": torch.version.cuda,
+       "gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None, "ultralytics": ultralytics.__version__}
+flags = [k for k, v in S.get("pins", {}).items() if str(env.get(k)) != str(v)]
+event("gate_G3a_environment", {"claim": "environment matches pins", "observed": env, "pins": S.get("pins", {}),
+                               "flags": flags, "pass": not flags, "accepted_variance": True})
+
+def finite_last(csvp):
+    df = pd.read_csv(csvp); df.columns = [c.strip() for c in df.columns]
+    cols = [c for c in df.columns if c.startswith("train/") and c.endswith("_loss")]
+    row = df.iloc[-1]
+    vals = {c: float(row[c]) for c in cols}
+    return all(math.isfinite(v) for v in vals.values()), vals
+
+# G3b smoke: AMP is a conditional step decided by evidence, not a fixed setting
+smoke_run = PROTO["runs"][2]                                   # the all-data run
+dy = data_yaml("smoke", smoke_run["train"], smoke_run["val"])
+smoke = {}
+for amp in (False, True):
+    nm = f"smoke_amp_{amp}"
+    try:
+        YOLO(S["model"]).train(data=str(dy), epochs=1, fraction=G.get("smoke_fraction", 0.05), imgsz=S["imgsz"],
+                               batch=S["batch"], seed=S["seed"], deterministic=S.get("deterministic", False), amp=amp,
+                               project=str(WORK / "smoke"), name=nm, exist_ok=True, workers=S["workers"], plots=False,
+                               verbose=False, val=False)
+        fin, vals = finite_last(WORK / "smoke" / nm / "results.csv")
+    except Exception as e:
+        fin, vals = False, {"error": str(e)[:200]}
+    smoke[amp] = {"finite": fin, "losses": vals}
+agree = None
+if smoke[False]["finite"] and smoke[True]["finite"]:
+    rel = [abs(smoke[True]["losses"][c] - smoke[False]["losses"][c]) / max(abs(smoke[False]["losses"][c]), 1e-9)
+           for c in smoke[False]["losses"]]
+    agree = max(rel) <= VAR.get("smoke_loss_rel", 0.25)
+USE_AMP = bool(smoke[True]["finite"] and agree)
+event("gate_G3b_amp_smoke", {"claim": "AMP losses finite and within variance of fp32", "fp32": smoke[False], "amp": smoke[True],
+                             "policy": {"smoke_loss_rel": VAR.get("smoke_loss_rel", 0.25)}, "agree": agree,
+                             "decision_amp": USE_AMP, "pass": smoke[False]["finite"]})
+if not smoke[False]["finite"]:
+    raise SystemExit("G3b FAIL: fp32 smoke training is not finite -> data or environment problem, not AMP")
+
+# G3c per-epoch evidence; first non-finite epoch is the break point and stops that run
+def epoch_gate(run_name):
+    def cb(trainer):
+        losses = [float(x) for x in (trainer.tloss.tolist() if hasattr(trainer.tloss, "tolist") else [trainer.tloss])]
+        fin = all(math.isfinite(v) for v in losses)
+        mp = {k: float(v) for k, v in (trainer.metrics or {}).items() if "mAP" in k}
+        event("gate_G3c_epoch", {"run": run_name, "epoch": int(trainer.epoch) + 1, "losses": losses, "finite": fin,
+                                 "map": mp, "pass": fin})
+        if not fin:
+            trainer.stop = True
+    return cb
+
 RESULTS = {}
 for run in PROTO["runs"]:
     name = run["name"]; t0 = time.time()
     dy = data_yaml(name, run["train"], run["val"])
-    m = YOLO(S["model"])
-    m.train(data=str(dy), epochs=S["epochs"], imgsz=S["imgsz"], batch=S["batch"], seed=S["seed"],
-            deterministic=True, patience=10_000, project=str(WORK / "runs"), name=name, exist_ok=True,
-            workers=S["workers"], plots=False, verbose=False, amp=S.get("amp", True))
+    m = YOLO(S["model"]); m.add_callback("on_fit_epoch_end", epoch_gate(name))
+    status, err = "EXECUTED", None
+    try:
+        m.train(data=str(dy), epochs=S["epochs"], imgsz=S["imgsz"], batch=S["batch"], seed=S["seed"],
+                deterministic=S.get("deterministic", False), patience=10_000, project=str(WORK / "runs"), name=name,
+                exist_ok=True, workers=S["workers"], plots=False, verbose=False, amp=USE_AMP)
+    except Exception as e:
+        status, err = "FAILED", str(e)[:300]
+    eps = [e for e in EVENTS if e["kind"] == "gate_G3c_epoch" and e["payload"]["run"] == name]
+    bad = next((e["payload"]["epoch"] for e in eps if not e["payload"]["pass"]), None)
+    if bad is not None:
+        status = "FAILED"
     best = WORK / "runs" / name / "weights" / "best.pt"
-    RESULTS[name] = {"train": run["train"], "val": run["val"], "weights_sha256": sha(best),
-                     "minutes": round((time.time() - t0) / 60, 1), "status": "EXECUTED"}
+    RESULTS[name] = {"train": run["train"], "val": run["val"], "status": status, "error": err, "break_epoch": bad,
+                     "epoch_root": merkle_root([e["leaf"] for e in eps]) if eps else None, "amp": USE_AMP,
+                     "weights_sha256": sha(best) if best.exists() and status == "EXECUTED" else None,
+                     "minutes": round((time.time() - t0) / 60, 1)}
     event("train_done", {"run": name, **RESULTS[name]})
     print(name, RESULTS[name])
 '''
@@ -157,6 +226,8 @@ def ruler_truth_error(weights, member):
 
 ALL_VAL = [n for b in PROTO["bundles"].values() for n in b if n not in ("toy_renders",)]
 for name, res in RESULTS.items():
+    if res["status"] != "EXECUTED":
+        continue
     w = str(WORK / "runs" / name / "weights" / "best.pt")
     res["eval"] = {m: val_metrics(w, m, "val") for m in ALL_VAL}
     res["toy"] = toy_size_error(w)
@@ -176,7 +247,8 @@ summary = {"protocol": PROTO["id"], "protocol_sha256": PROTO_SHA, "custody": CUS
 import shutil
 for name in RESULTS:
     src = WORK / "runs" / name / "weights" / "best.pt"
-    shutil.copy2(src, WORK / f"{name}_best.pt")
+    if src.exists() and RESULTS[name]["status"] == "EXECUTED":
+        shutil.copy2(src, WORK / f"{name}_best.pt")
 shutil.rmtree(WORK / "runs", ignore_errors=True); shutil.rmtree(WORK / "val", ignore_errors=True)
 print("events root", root)
 '''
