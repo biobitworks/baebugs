@@ -39,7 +39,7 @@ def tensor_or_file_sha(p):
 
 def toys(kg="print/fuse1/kg", n_ca=6, n_out=4, n_tiny=2):
     idx = sorted(json.loads(Path(kg, "index.json").read_text()), key=lambda x: x["name"])
-    pick = lambda g, n: [x for x in idx if x["group"] == g][:: max(1, len([x for x in idx if x["group"] == g]) // n)][:n]  # noqa: E731
+    pick = lambda g, n: [x for x in idx if x["group"] == g][:: max(1, len([x for x in idx if x["group"] == g]) // n)][:n]
     return pick("california", n_ca) + pick("novel_outside_ca", n_out) + pick("fill_in_1-3mm", n_tiny), idx
 
 
@@ -138,7 +138,7 @@ def main(argv=None):
         on, off = tray(r20), tray(np.full_like(r20, BG))
         frames = {}
         for step, img, proto in (("sort", on, "P-sieve-v1"), ("image", r20, "P-image-v1"), ("pick", off, "P-pick-v1")):
-            bb, cont = mask_bbox(img)
+            bb, _cont = mask_bbox(img)
             objs = [{"id": x["name"], "bbox": bb, "label": x["order"]}] if bb else []
             fr = T.frame(img, objs, meta={"step": step, "specimen": x["name"], "protocol": proto})
             frames[step] = (img, fr)
