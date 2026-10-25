@@ -1,5 +1,5 @@
 {
- "atoms": 934,
+ "atoms": 935,
  "external": [
   {
    "claim": "THIRD",
@@ -329,8 +329,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 6,
-   "commits": 6,
+   "claude_coauthored_commits": 7,
+   "commits": 7,
    "id": "leaf:README.md",
    "kind": "meta",
    "leaf": "2a214efc46866539ec134bb53e1c6c2c7b69ff90331fe04b8542e21ee986deb2",
@@ -385,8 +385,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/brand/baebugs_logo.svg",
    "kind": "meta",
    "leaf": "a4f685e1f10b599cd578b8707bcfba7488dfc931a278a967ad654f793a2023d4",
@@ -399,8 +399,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/brand/baebugs_logo_dark.png",
    "kind": "meta",
    "leaf": "1ad315c9900aab5c3a7a3aee79fca7640e29aea9bfa7f0704ceebc9a6d14352e",
@@ -413,8 +413,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/brand/baebugs_logo_dark.svg",
    "kind": "meta",
    "leaf": "497a2bd93801d2283b5761586ff2744d5aba2c603d3488d8ec1d86e051c842f6",
@@ -427,8 +427,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/brand/baebugs_logo_light.png",
    "kind": "meta",
    "leaf": "f7ec0f954371803106a2d89756fd86894563af10120d192d0a80d8a2600d953b",
@@ -441,8 +441,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/brand/baebugs_mark.svg",
    "kind": "meta",
    "leaf": "84412fb6c170f9f7cebdebcf201a150350b51bda6c5546de62d38b758b119bf0",
@@ -455,8 +455,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/brand/baebugs_mark_512.png",
    "kind": "meta",
    "leaf": "e1374f407a350443b11a48e3aab1c39a3722b813399b3c8755bb967bf7aecfaf",
@@ -469,8 +469,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/brand/baebugs_mark_dark.svg",
    "kind": "meta",
    "leaf": "a1ed25831534a47b80d08cfb1d3ae84c9c1c8918a3184d547185ba106fa1f3b4",
@@ -483,8 +483,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/brand/favicon_64.png",
    "kind": "meta",
    "leaf": "0f6f88af806ee4ce1ca72920d648b7cf76afe4b376cecb2e9efdfcce4c5eeee1",
@@ -1103,8 +1103,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 1,
-   "commits": 1,
+   "claude_coauthored_commits": 2,
+   "commits": 2,
    "id": "leaf:baebugs/board.py",
    "kind": "code",
    "leaf": "226eb63b49ce589bcb24891f6053377550ae31017c0cd46cf9c4fa70a503913d",
@@ -1117,8 +1117,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 1,
-   "commits": 1,
+   "claude_coauthored_commits": 2,
+   "commits": 2,
    "id": "leaf:baebugs/board_template.html",
    "kind": "code",
    "leaf": "162b9576e60bef51c5e331a064b6156847fa3fac46371381c5cc43d7c5640013",
@@ -1131,8 +1131,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:baebugs/brand.py",
    "kind": "code",
    "leaf": "012ce4fe996075997baf83f99c9bb5d75c2e3362848080b2a45c1da1d47947a1",
@@ -2132,6 +2132,22 @@
    "sha256": "4e1dcb29b4085ba10439662b2d89dbd4891ad47d898905349b63f04e16598486",
    "status": "built",
    "terms": []
+  },
+  {
+   "claim": "OWN+TERMS",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:baebugs/toy_photo_models.py",
+   "kind": "code",
+   "leaf": "430160b01772cfe835b2524a68102a25d5f44b5473791bc7e314747da6db1d06",
+   "licence": "MIT + ultralytics terms",
+   "module": "python-package",
+   "path": "baebugs/toy_photo_models.py",
+   "sha256": "0cfb3259634966ef36204bc29b42823a1efb7846287df13cc02ad015c30cc3f5",
+   "status": "built",
+   "terms": [
+    "ext:ultralytics"
+   ]
   },
   {
    "claim": "OWN",
@@ -12175,15 +12191,15 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 1,
-   "commits": 1,
+   "claude_coauthored_commits": 2,
+   "commits": 2,
    "id": "leaf:site/board/index.html",
    "kind": "page",
-   "leaf": "e48c3eb06f14e8e0e1d07b0af7b9bc98209d3f25dc91d1f833f5150751122000",
+   "leaf": "aab046d67003a1ec0ba0eb95ab51632d87e41145afd84f9a589607435eb669f4",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/board/index.html",
-   "sha256": "6ec88b4a3ed918af14750de52e9645acdc997d219e62ab99218c3a7dd11fe2d4",
+   "sha256": "44104fd82a2b64859c8360cb8b56c7e4d98163c7b7552c3a4cb4a2a1e8576b68",
    "status": "built",
    "terms": []
   },
@@ -13298,7 +13314,7 @@
     "OWN": 31
    },
    "id": "module:mvp-site",
-   "root": "048cc7cf790509ec448f6921951fcdf237851b5207cacc435e282fca192c85b9",
+   "root": "216bdaec115446f95ca00820fc2164eb3aec8d7c3d63fdbcd28d890c3cc28335",
    "status": {
     "built": 31
    },
@@ -13331,15 +13347,15 @@
    ]
   },
   "python-package": {
-   "atoms": 91,
+   "atoms": 92,
    "claims": {
     "OWN": 83,
-    "OWN+TERMS": 8
+    "OWN+TERMS": 9
    },
    "id": "module:python-package",
-   "root": "4efe491f5be83704476c9739bdb87321d6d5c856b388934d983f8c554a718791",
+   "root": "23a2f8fb19dfddb1e478b43ac4ddf341e10ddc1fef2468fd2c157a88c210b3af",
    "status": {
-    "built": 59,
+    "built": 60,
     "tested": 32
    },
    "terms": [
@@ -13384,10 +13400,10 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "811dd5e50f9285fbc18cd09a02cdef1d70979dea4fa868dc4db8058d6a002c15",
+ "root": "a74a43d429eecca25d7006db6746d2d55f27beb53d469ce9c9eb6edeb7eae074",
  "totals": {
   "OWN": 864,
-  "OWN+TERMS": 50,
+  "OWN+TERMS": 51,
   "THIRD": 20
  },
  "type": "aok"
