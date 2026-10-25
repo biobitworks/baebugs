@@ -131,7 +131,7 @@ _obs_cache = {}
 def rebuild_observation(length_mm, plan):
     key = (round(float(length_mm), 2), plan)
     if key not in _obs_cache:
-        nodes, root = insect_tree(*key)
+        _nodes, root = insect_tree(*key)
         _obs_cache[key] = (observe(root), root["hash"], root["topo"], root["kit_tray"])
     return _obs_cache[key]
 
@@ -149,7 +149,7 @@ def check(answer, held, ctx):
     try:
         plan = answer["plan"]; L = round(float(answer["length_mm"]), 1)
         assert plan in PLANS and 0.5 <= L <= 40
-    except Exception:
+    except Exception:  # noqa: BLE001 - fallback; the failure is recorded or degrades
         out["break_point"] = "invalid answer"
         out["triage_ok"] = False
         return out
@@ -275,7 +275,7 @@ def _parse_json(text):
         if i >= 0 and j > i:
             try:
                 return json.loads(text[i:j + 1])
-            except Exception:
+            except Exception:  # noqa: BLE001,S110 - best-effort, nothing to record
                 pass
     return None
 
@@ -293,7 +293,7 @@ def ask_ollama(model, ctx_txt, obs, host="http://localhost:11434", timeout=180):
     try:
         r = json.loads(urllib.request.urlopen(req, timeout=timeout).read())
         txt = r["message"]["content"]
-    except Exception as e:                     # timeouts, HTTP errors
+    except Exception as e:  # noqa: BLE001 - timeouts, HTTP errors
         return None, f"error {e}", time.time() - t
     return _parse_json(txt), txt[:400], time.time() - t
 
@@ -309,9 +309,9 @@ def ask_claude_batch(ctx_txt, items, model=None, timeout=900):
     t = time.time()
     with tempfile.TemporaryDirectory() as d:
         try:
-            p = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=timeout, cwd=d)
+            p = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=timeout, cwd=d, check=False)
             res = json.loads(p.stdout).get("result", "")
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001 - fallback; the failure is recorded or degrades
             return {}, f"error {e}", time.time() - t
     arr = _parse_json(res)
     out = {}

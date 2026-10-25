@@ -128,7 +128,7 @@ def make_image(rng, ppm=None, size=(640, 640), n_range=(6, 22)):
         cx, cy = int(rng.integers(r, w - r)), int(rng.integers(r, h - r))
         if occupied[max(0, cy - r):cy + r, max(0, cx - r):cx + r].any():
             continue
-        m, L2, W2 = _draw(rng, np.zeros((h, w), np.uint8), img, k, cx, cy, L, W,
+        m, _L2, _W2 = _draw(rng, np.zeros((h, w), np.uint8), img, k, cx, cy, L, W,
                           float(rng.uniform(0, 180)), ppm)
         cv2.circle(occupied, (cx, cy), r, 255, -1)
         cnts, _ = cv2.findContours(m, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)

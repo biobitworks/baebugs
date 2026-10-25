@@ -49,7 +49,7 @@ def sieve_adapter():
 
 
 def mini_trommel_base():
-    x, y = SBS; t = O["plate_t"]; wd = O["well_depth"]; h = wd + 2
+    x, y = SBS; wd = O["well_depth"]; h = wd + 2
     base = box(x, y, h)
     L, z0 = O["drum_len"], 18.0
     wells = []
@@ -125,7 +125,7 @@ def labware_defs():
     sieve = _labware("baebugs_sieve_adapter_50mm", "baebugs mini sieve stack adapter (50 mm)", sa_z + PP["mini_h"] * 3,
                      {"A1": {"depth": ring_depth, "totalLiquidVolume": 25000, "shape": "circular", "diameter": PP["mini_od"] - 4,
                              "x": x / 2, "y": y / 2, "z": sa_z + PP["mini_h"] * 3 - ring_depth}}, grip_h=O["grip_h"])
-    L, z0, h = O["drum_len"], 18.0, O["well_depth"] + 2
+    L, z0, _h = O["drum_len"], 18.0, O["well_depth"] + 2
     edges = [z0, z0 + L / 3, z0 + 2 * L / 3, z0 + L, x - 4]
     tw = {}
     for i, name in enumerate(["A1", "A2", "A3", "A4"]):

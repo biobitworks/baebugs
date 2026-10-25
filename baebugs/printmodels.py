@@ -110,7 +110,7 @@ def toy_fields(family, size_source, length_mm):
         flag = "fill-in size, not measured"
     else:
         flag = "suspect: " + SIZE_SUSPECT[family] if family in SIZE_SUSPECT else "database-derived, unverified"
-    role = ("edge_negative:family_stats_suspect" if flag.startswith("suspect") and family in dict((f, 1) for _, f, *_ in CA_FAMILIES) else
+    role = ("edge_negative:family_stats_suspect" if flag.startswith("suspect") and family in {f: 1 for _, f, *_ in CA_FAMILIES} else
             "edge_negative:size_suspect" if flag.startswith("suspect") else
             "edge_negative:below_database" if length_mm < DB_MIN_MM else "positive")
     return {"representation": REPRESENTATION, "shape_fidelity": TOY_SHAPE, "size_flag": flag, "training_role": role}

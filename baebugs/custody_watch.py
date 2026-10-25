@@ -65,7 +65,7 @@ class Watcher:
             key = f"mmr:{f.name}"
             try:
                 log = MMRLog(f)
-            except Exception as e:
+            except Exception as e:  # noqa: BLE001 - fallback; the failure is recorded or degrades
                 out[key] = ("BREAK", f"unreadable: {e}"); continue
             ok, bad = log.verify()
             if not ok:
@@ -127,7 +127,7 @@ class Watcher:
         for pj in self.repo.glob("daisy/DAISY-BB-*.json"):
             try:
                 used |= set(json.loads(pj.read_text()).get("roots", {}))
-            except Exception:
+            except Exception:  # noqa: BLE001,S110 - best-effort, nothing to record
                 pass
         out = {}
         for name in sorted(used):
@@ -157,17 +157,17 @@ class Watcher:
         d = dangling(self.repo, store)
         if not d:
             return {"resolve:graph": ("OK", f"every referenced hash resolves ({len(store.index)} objects indexed)")}
-        return {f"resolve:{x['sha'][:12]}": ("BREAK", f"{x['kind']} referenced by {', '.join(x['contexts'])} "
-                                                         f"does not resolve to stored bytes") for x in d}
+        return {f"resolve:{x['sha'][:12]}": ("BREAK", (f"{x['kind']} referenced by {', '.join(x['contexts'])} "
+                                                          f"does not resolve to stored bytes")) for x in d}
 
     def check_git(self):
         try:
             dirty = subprocess.run(["git", "status", "--porcelain", "--untracked-files=no"], cwd=self.repo,
-                                   capture_output=True, text=True).stdout.strip()
+                                   capture_output=True, text=True, check=False).stdout.strip()
             ahead = subprocess.run(["git", "rev-list", "--count", "@{u}..HEAD"], cwd=self.repo,
-                                   capture_output=True, text=True).stdout.strip() or "0"
-            head = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=self.repo, capture_output=True, text=True).stdout.strip()
-        except Exception as e:
+                                   capture_output=True, text=True, check=False).stdout.strip() or "0"
+            head = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=self.repo, capture_output=True, text=True, check=False).stdout.strip()
+        except Exception as e:  # noqa: BLE001 - fallback; the failure is recorded or degrades
             return {"git": ("WARN", str(e))}
         if dirty:
             return {"git": ("WARN", f"tracked files modified at {head}: {len(dirty.splitlines())}")}
@@ -183,7 +183,7 @@ class Watcher:
                    self.check_resolvable, self.check_git):
             try:
                 new.update(fn())
-            except Exception as e:
+            except Exception as e:  # noqa: BLE001 - fallback; the failure is recorded or degrades
                 new[f"watcher:{getattr(fn, '__name__', 'check')}"] = ("WARN", f"check crashed: {type(e).__name__}: {e}")
         changed = []
         for k, (lvl, why) in new.items():
@@ -232,8 +232,8 @@ class Watcher:
         msg = f"{len(breaks)} custody BREAK: " + "; ".join(f"{b['check']}: {b['reason']}" for b in breaks[:3])
         try:
             subprocess.run(["osascript", "-e", f'display notification {json.dumps(msg[:220])} with title "baebugs custody"'],
-                           timeout=5, capture_output=True)
-        except Exception:
+                           timeout=5, capture_output=True, check=False)
+        except Exception:  # noqa: BLE001,S110 - best-effort, nothing to record
             pass
 
     def status(self):
@@ -308,7 +308,7 @@ def make_server(w, host, port):
                             self.wfile.write(f"data: {json.dumps(q.pop(0))}\n\n".encode()); self.wfile.flush()
                         else:
                             time.sleep(0.5); self.wfile.write(b": ping\n\n"); self.wfile.flush()
-                except Exception:
+                except Exception:  # noqa: BLE001,S110 - best-effort, nothing to record
                     pass
                 finally:
                     w.listeners.remove(q)

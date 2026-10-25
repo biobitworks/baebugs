@@ -121,7 +121,6 @@ def dish_objects(img, ppm_at=None, axis="y", dev=32, sat_dev=40, min_area_px=12,
     (darker, lighter or more/less saturated) are objects."""
     from .measure import _from_contour
     dishes = find_dishes(img)
-    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV).astype(np.int32)
     lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB).astype(np.int32)
     h, w = img.shape[:2]
     polys, objs, dish_of = [], [], []
@@ -233,7 +232,7 @@ def run(image_paths, student_weights, ref_truths, out_dir, analog_prompts=("rice
         dishes = find_dishes(img)
         try:
             polys, objs, dish_of = fastsam_objects(img, dishes, ppm_at if has_scale else None, axis or "y", ref_ppm)
-        except Exception as e:                       # FastSAM unavailable: colour threshold
+        except Exception as e:  # noqa: BLE001 - FastSAM unavailable: colour threshold
             print("FastSAM failed, using colour threshold:", e)
             dishes, polys, objs, dish_of = dish_objects(img, ppm_at if has_scale else None, axis or "y", ref_ppm=ref_ppm)
         if not objs:   # no dishes found: fall back to YOLOE prompted for food
@@ -241,8 +240,8 @@ def run(image_paths, student_weights, ref_truths, out_dir, analog_prompts=("rice
                                         min_area_mm2=0.2, length_range=(0.3, 60))
             dish_of = [-1] * len(objs)
         # production path, tiled at native resolution
-        a = tiled(lambda t: student(t, ref_ppm), img)
-        b = tiled(lambda t: segment_yoloe(t, ref_ppm, prompts=insect_prompts, length_range=(0.3, 60))[1], img)
+        a = tiled(lambda t, r=ref_ppm: student(t, r), img)
+        b = tiled(lambda t, r=ref_ppm: segment_yoloe(t, r, prompts=insect_prompts, length_range=(0.3, 60))[1], img)
         ms = consensus(a, b, ref_ppm, match_mm=2.0) if (a or b) else []
         verdicts = triage(ms, ref_L, ref_W, image=name)
         rows, vis = [], img.copy()

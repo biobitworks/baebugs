@@ -23,7 +23,7 @@ MP_LEVELS = (0.3, 1.0, 3.0, 5.0, 12.0)
 def at_megapixels(img, mp, px_per_mm=None):
     h, w = img.shape[:2]
     s = float(np.sqrt(mp * 1e6 / (h * w)))
-    nh, nw = max(8, int(round(h * s))), max(8, int(round(w * s)))
+    nh, nw = max(8, round(h * s)), max(8, round(w * s))
     interp = cv2.INTER_AREA if s < 1 else cv2.INTER_CUBIC
     out = cv2.resize(img, (nw, nh), interpolation=interp)
     return out, (px_per_mm * nw / w if px_per_mm else None), nw / w
@@ -90,8 +90,6 @@ def build_multires(data_yaml, out_dir, levels=(0.3, 1.0, 3.0)):
         o = Path(out_dir) / f"mp_{mp:g}"
         for split in ("train", "val"):
             simg = base / d[split]
-            slab = Path(str(simg).replace("/images/", "/labels/").replace("images", "labels", 1)) \
-                if "/images/" in str(simg) else base / "labels" / split
             (o / "images" / split).mkdir(parents=True, exist_ok=True)
             (o / "labels" / split).mkdir(parents=True, exist_ok=True)
             for p in sorted(Path(simg).glob("*.jpg")):

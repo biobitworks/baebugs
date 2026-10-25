@@ -228,7 +228,7 @@ class KGLedger:
     def flush(self, msg):
         if not self.pending:
             return
-        g = lambda *a: subprocess.run(["git", "-C", str(self.repo), *a], capture_output=True, text=True)
+        g = lambda *a: subprocess.run(["git", "-C", str(self.repo), *a], capture_output=True, text=True, check=False)
         g("add", "kg")
         g("-c", "user.name=biobitworks", "-c", "user.email=biobitworks@gmail.com", "commit", "-q", "-m",
           f"KG BP {msg} | insects {len(self.leaves)} | root {merkle_root(self.leaves)[:12]}\n\n"

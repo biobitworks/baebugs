@@ -44,7 +44,7 @@ def polite_get(url: str, timeout=30) -> tuple[str | None, str]:
         rp.read()
         if not rp.can_fetch(UA, url):
             return None, "blocked"
-    except Exception:
+    except Exception:  # noqa: BLE001,S110 - best-effort, nothing to record
         pass  # robots unreachable -> proceed as a normal browser would
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=timeout) as r:
@@ -154,7 +154,7 @@ def read_label_with_claude(image_bgr, model=None) -> dict:
 
     import anthropic
     import cv2
-    ok, buf = cv2.imencode(".jpg", image_bgr)
+    _ok, buf = cv2.imencode(".jpg", image_bgr)
     msg = anthropic.Anthropic().messages.create(
         model=model or os.environ.get("BAEBUGS_CLAUDE_MODEL", "claude-opus-5-5"),
         max_tokens=600, messages=[{"role": "user", "content": [

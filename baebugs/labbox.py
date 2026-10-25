@@ -17,6 +17,7 @@ PRINTED, BENCH_TESTED, QUALIFIED. Nothing here is past SIMULATED yet.
 from __future__ import annotations
 
 import hashlib
+import itertools
 import json
 from pathlib import Path
 
@@ -174,7 +175,7 @@ def route(g, cls="routine"):
         if not pick:
             breaks.append(st); steps.append({"stage": st, "platform": None, "modules": []}); continue
         steps.append({"stage": st, "platform": pick[0], "modules": sorted(pick[1])})
-    switches = sum(1 for a, b in zip(steps, steps[1:]) if a["platform"] and b["platform"] and a["platform"] != b["platform"])
+    switches = sum(1 for a, b in itertools.pairwise(steps) if a["platform"] and b["platform"] and a["platform"] != b["platform"])
     if switches and not handoff:
         breaks.append("platform switch without hand-off carrier")
     return {"class": cls, "steps": steps, "platform_switches": switches, "breaks": breaks,

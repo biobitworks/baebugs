@@ -57,7 +57,8 @@ def select(datasets, states=STATES, work=None):
                 try:
                     os.link(f, t)
                 except OSError:
-                    import shutil; shutil.copy2(f, t)
+                    import shutil
+                    shutil.copy2(f, t)
             r["admitted"] += 1
         report["states"][st] = r
     return report, work

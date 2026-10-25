@@ -30,7 +30,7 @@ from .mmr import MMRLog
 
 
 def _edge(kind, nodes, data=None):
-    body = {"kind": kind, "nodes": sorted(set(n for n in nodes if n)), "data": data or {}}
+    body = {"kind": kind, "nodes": sorted({n for n in nodes if n}), "data": data or {}}
     return {**body, "hash": H(body)}
 
 

@@ -69,7 +69,7 @@ def _v(xs, nd=4):
 
 
 def toy_scad(length_mm, plan, header):
-    prims, feats, d = insect_parts(length_mm, plan)
+    prims, feats, _d = insect_parts(length_mm, plan)
     lines = [f"// {header}", f"// plan={plan} length={length_mm} mm features: {'; '.join(feats) or 'body only'}",
              "// TOY model (parametric stand-in, not a replica). Canonical mesh: the matching STL.",
              'use <toy_lib.scad>', "union() {"]
@@ -106,7 +106,9 @@ def export(fuse_dir="print/fuse1", filt_dir="print/filters"):
     td = Path(fuse_dir) / "scad"; td.mkdir(parents=True, exist_ok=True)
     (td / "toy_lib.scad").write_text(TOY_LIB)
     n_toy = 0
-    for r in csv.DictReader(open(Path(fuse_dir) / "manifest.csv")):
+    with open(Path(fuse_dir) / "manifest.csv") as fh:
+        manifest = list(csv.DictReader(fh))
+    for r in manifest:
         stem = Path(r["file"]).stem
         hdr = f"{r['family']} {r['level']} | {r['size_source']} | size_flag: {r.get('size_flag', '')} | STL: {r['file']}"
         (td / f"{stem}.scad").write_text(toy_scad(float(r["length_mm"]), r["plan"], hdr)); n_toy += 1

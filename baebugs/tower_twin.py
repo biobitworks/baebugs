@@ -286,7 +286,7 @@ def main(argv=None):
     ap.add_argument("--tiers", type=int)
     ap.add_argument("--out")
     a = ap.parse_args(argv)
-    objs = demo_objects() if a.cmd == "demo" else [json.loads(l) for l in open(a.objects) if l.strip()]
+    objs = demo_objects() if a.cmd == "demo" else [json.loads(l) for l in Path(a.objects).read_text().splitlines() if l.strip()]
     r = run(objs, a.tiers)
     b = r["plan"]["best"]
     print(f"{r['plan']['n_objects']} objects, classes {r['plan']['class_counts']}")

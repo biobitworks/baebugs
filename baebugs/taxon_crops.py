@@ -89,7 +89,7 @@ def build(datasets=D, out=None):
     def view(run, key, subset):
         train_counts = Counter(r[key] for r in subset if r["split"] == "train")
         keep = {c for c, n in train_counts.items() if n >= MIN_TRAIN}
-        pooled = sorted(set(r[key] for r in subset) - keep)
+        pooled = sorted({r[key] for r in subset} - keep)
         for r in subset:
             cls = r[key] if r[key] in keep else "other"
             dst = out / "views" / run / r["split"] / cls.replace(" ", "_") / Path(r["path"]).name

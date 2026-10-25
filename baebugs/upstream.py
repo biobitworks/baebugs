@@ -98,8 +98,8 @@ def check(p):
 
 def remote_drift(p):
     try:
-        remote = subprocess.run(["git", "ls-remote", p["url"], "HEAD"], capture_output=True, text=True, timeout=20).stdout.split()
-    except Exception as e:
+        remote = subprocess.run(["git", "ls-remote", p["url"], "HEAD"], capture_output=True, text=True, timeout=20, check=False).stdout.split()
+    except Exception as e:  # noqa: BLE001 - fallback; the failure is recorded or degrades
         return {"repo": p["repo"], "level": "WARN", "reason": f"remote unreachable: {e}"}
     if not remote:
         return {"repo": p["repo"], "level": "WARN", "reason": "remote HEAD unknown"}
