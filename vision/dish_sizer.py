@@ -13,16 +13,20 @@ import cv2
 import numpy as np
 
 
-def find_dish(img):
+DISH_RADIUS_MM = (24, 36)  # the 63 mm dish's rings (floor edge to lid rim) all fall in this range
+
+
+def find_dish(img, px_per_mm):
     """Return (cx, cy, r) of the dish's strongest circular edge, or None.
 
     The dish has several concentric rings (rim, wall), so only the centre is reliable.
+    The search is limited to dish-sized circles in mm, so it works at any zoom or aspect ratio.
     """
     gray = cv2.medianBlur(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY), 5)
-    w = gray.shape[1]
+    lo, hi = (int(r * px_per_mm) for r in DISH_RADIUS_MM)
     circles = cv2.HoughCircles(
-        gray, cv2.HOUGH_GRADIENT, dp=1.5, minDist=w,
-        param1=100, param2=40, minRadius=int(0.25 * w), maxRadius=int(0.6 * w),
+        gray, cv2.HOUGH_GRADIENT, dp=1.5, minDist=max(gray.shape),
+        param1=100, param2=40, minRadius=lo, maxRadius=hi,
     )
     if circles is None:
         return None
@@ -129,7 +133,7 @@ def main():
     img = cv2.imread(args.image)
     if img is None:
         raise SystemExit(f"cannot read {args.image}")
-    dish = find_dish(img)
+    dish = find_dish(img, args.px_per_mm)
     mask = np.zeros(img.shape[:2], np.uint8)
     if dish:
         inner_r = int(args.floor_mm / 2 * args.px_per_mm)
