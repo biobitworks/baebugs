@@ -17,7 +17,7 @@ import os, json, math, time, hashlib, platform, shutil
 from pathlib import Path
 import torch, ultralytics
 from ultralytics import YOLO
-WORK = Path("/kaggle/working/daisy004"); WORK.mkdir(parents=True, exist_ok=True)
+WORK = Path(os.environ.get("DAISY_WORK", "/kaggle/working/daisy004")); WORK.mkdir(parents=True, exist_ok=True)
 EVENTS = []
 def sha(p):
     h = hashlib.sha256()
@@ -48,7 +48,7 @@ def tensor_sha(p):
 event("protocol", {"id": PROTO["id"], "sha256": PROTO_SHA})
 
 # G1 custody: crops + views re-hashed against the frozen manifest and root (fail closed)
-cj = next(Path("/kaggle/input").rglob("crops.jsonl"))
+cj = next(Path(os.environ.get("DAISY_INPUT", "/kaggle/input")).rglob("crops.jsonl"))
 BASE = cj.parent
 recs = [json.loads(l) for l in cj.read_text().splitlines() if l.strip()]
 bad = [r["path"] for r in recs if not (BASE / r["path"]).exists() or sha(BASE / r["path"]) != r["sha256"]]
@@ -66,7 +66,8 @@ g2 = isha is not None and (not S.get("init_sha256") or isha == S["init_sha256"])
 event("gate_G2_init_weights", {"observed": isha, "expected": S.get("init_sha256"), "pass": g2})
 if not g2: raise SystemExit("G2 FAIL init weights")
 env = {"python": platform.python_version(), "torch": torch.__version__, "cuda": torch.version.cuda,
-       "gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None, "ultralytics": ultralytics.__version__}
+       "gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None, "ultralytics": ultralytics.__version__,
+       "platform": platform.platform(), "machine": platform.machine(), "torch_threads": torch.get_num_threads()}
 event("gate_G3a_environment", {"observed": env, "pins": S.get("pins", {}), "pass": all(str(env.get(k)) == str(v) for k, v in S.get("pins", {}).items())})
 
 def track(run):
@@ -180,6 +181,16 @@ def build(proto_path, out_dir, user="biobitworks"):
     return psha
 
 
+def run_local(proto_path, input_dir, work_dir):
+    """Run the identical kernel code on this machine (CPU): same gates, same custody, bytes land in work_dir."""
+    import os
+    txt = Path(proto_path).read_text()
+    os.environ["DAISY_INPUT"] = str(Path(input_dir).resolve()); os.environ["DAISY_WORK"] = str(Path(work_dir).resolve())
+    g = {"PROTO_TXT": txt, "PROTO": json.loads(txt), "PROTO_SHA": hashlib.sha256(txt.encode()).hexdigest(), "__name__": "__daisy__"}
+    exec(compile(CODE, "daisy_bb_004_kernel", "exec"), g)  # noqa: S102 - the frozen kernel code itself, unmodified
+    return g["summary"]
+
+
 def freeze(report_path, out="daisy/DAISY-BB-004.json", init_sha=None):
     import subprocess
     rep = json.loads(Path(report_path).read_text())
@@ -205,11 +216,14 @@ def freeze(report_path, out="daisy/DAISY-BB-004.json", init_sha=None):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["freeze", "build"])
+    ap.add_argument("cmd", choices=["freeze", "build", "local"])
+    ap.add_argument("--input"); ap.add_argument("--work")
     ap.add_argument("--report"); ap.add_argument("--init-sha")
     ap.add_argument("--proto", default="daisy/DAISY-BB-004.json"); ap.add_argument("--out", default="kaggle/daisy_bb_004")
     a = ap.parse_args()
     if a.cmd == "freeze":
         print(freeze(a.report, a.proto, a.init_sha)["data_root"])
+    elif a.cmd == "local":
+        print(json.dumps(run_local(a.proto, a.input, a.work)["custody_status"]))
     else:
         print(build(a.proto, a.out))
