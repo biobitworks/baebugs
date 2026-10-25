@@ -1467,11 +1467,11 @@
 {
 "claim": "OWN",
 "kind": "meta",
-"leaf": "40a6e7237505711fe41b9f4092ebad8c0a7c4736569c4907c1eee36aa590b84a",
+"leaf": "11382f7e097d3380780d71d954e6f074929a66927b62b2792705401595ed4351",
 "licence": "MIT",
 "module": "repo-meta",
 "path": "README.md",
-"sha256": "5da1d200af669119ad10bf59903b8ceb901f455225800b1c5b2dfe3aa798a9c3",
+"sha256": "ea4a1071ece245b5d4133e2a00ee7aeec177d368d99c9ac316cf33929b3a5fe3",
 "status": "built"
 },
 {
@@ -3417,6 +3417,16 @@
 {
 "claim": "OWN",
 "kind": "notebook",
+"leaf": "e93c06e3e407510355aef2967ef0e4360ddf1e9ab1da2f4c2fda4f75d30121e4",
+"licence": "MIT",
+"module": "notebooks",
+"path": "notebooks/aok.ipynb",
+"sha256": "6cca169d4650d34a432faf3f126642b3ffd48cf1833ae86b478f96fb3d2ea386",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "notebook",
 "leaf": "5c8d81e47bcf93e26a2baa5a51bd3586b569e6ca2e1874cf9de496d7a46fdab6",
 "licence": "MIT",
 "module": "notebooks",
@@ -3442,6 +3452,16 @@
 "module": "notebooks",
 "path": "notebooks/bench_twin.ipynb",
 "sha256": "2e2445e8090db19890ad386bc69a12546b62f0c1a09f8ade5873fffa611a95ca",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "notebook",
+"leaf": "bb8f4e774a65f5088470425cfa3f49a7be678ec9963bfa49990c431fe666a467",
+"licence": "MIT",
+"module": "notebooks",
+"path": "notebooks/compare_byo.ipynb",
+"sha256": "f2a4a0de7a2fa69021a79882fd0fcedb4e3530818daf8f62d140d510b7df00af",
 "status": "built"
 },
 {
@@ -3527,6 +3547,16 @@
 {
 "claim": "OWN",
 "kind": "notebook",
+"leaf": "b10d31497c752880bbd94e02828f7503a1a147944867ce027555f9143963c1eb",
+"licence": "MIT",
+"module": "notebooks",
+"path": "notebooks/mvp_graph_pack.ipynb",
+"sha256": "06b4bc2aa37892845548486f2d8bdfc3e02ab4936767927147843dc3626e48ca",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "notebook",
 "leaf": "8be6777992753069fe2a6fc9bf2c7e4f4a263de18b3f7b2e1aa41f94d6975b96",
 "licence": "MIT",
 "module": "notebooks",
@@ -3557,6 +3587,16 @@
 {
 "claim": "OWN",
 "kind": "notebook",
+"leaf": "3312eabf763e2b66815e5a3240cee6f20a1966474e732de207cbddd99ed3b0f6",
+"licence": "MIT",
+"module": "notebooks",
+"path": "notebooks/taxon_crops_004.ipynb",
+"sha256": "71b4835d3c379841986a22789197d7590dde4e65737725f86747e98a9c5ea05d",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "notebook",
 "leaf": "cab673bd20202e2a99940382c9d78259355f340c020e51bfa8b666b61a23f0d0",
 "licence": "MIT",
 "module": "notebooks",
@@ -3572,6 +3612,16 @@
 "module": "notebooks",
 "path": "notebooks/toy_insect_kg_lomo.ipynb",
 "sha256": "0c62a8fb324e808082d93be22cec1a23935c5a4b76c1e3bd4f3d68722b5eb60f",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "notebook",
+"leaf": "5792078fee767320aee0de644bf0881040975764d4c6100a4f1d5f60348af40b",
+"licence": "MIT",
+"module": "notebooks",
+"path": "notebooks/watch_commit.ipynb",
+"sha256": "3271d6064d6503fad52c3ac91dfcc24021dbfa728fdbf6444d07b3d605046400",
 "status": "built"
 },
 {
@@ -8865,14 +8915,14 @@
 "terms": []
 },
 "notebooks": {
-"atoms": 16,
+"atoms": 21,
 "claims": {
-"OWN": 16
+"OWN": 21
 },
 "id": "module:notebooks",
-"root": "a20c483ea79c65619f309898b225355d1615c80547d3174840bdcf8c9d2e4818",
+"root": "80130cbaa3a04b2f436fa99eba421c1c5bdc9cd6013f8cb069b54e521ffb854d",
 "status": {
-"built": 16
+"built": 21
 },
 "terms": []
 },
@@ -8912,7 +8962,7 @@
 "OWN": 12
 },
 "id": "module:repo-meta",
-"root": "4581a5c08f5c8ca985ed3f8d96edd176dd33b4163ab051aba86348d747cd2344",
+"root": "3ea86d00d8b2f506bb73c96acf7328a86b71c239e9c8d3b34ec964229ea68ef4",
 "status": {
 "built": 12
 },
@@ -9566,9 +9616,9 @@
 ]
 }
 ],
-"root": "548b4d8fee9f1d1bf98cb03e69ca3d5278f03b1e477a6224c5f1c54fe6a60dc5",
+"root": "e21d484b986c15e03dc17788b61bb691cca11995949c40c5f6b6a05bb1a6cd4c",
 "roots": {
-"aok": "bb85c6734d9e55524ed7714f1db8385c17ed034807ee75d4a5e958008a63752b",
+"aok": "d07757fac6ee3f3a8af408d210af5fa1e2e6ac313e012edce7ac93303eecd6ab",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
 "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7",
 "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5",
@@ -13781,7 +13831,7 @@
 }
 ],
 "totals": {
-"OWN": 687,
+"OWN": 692,
 "OWN+TERMS": 42,
 "THIRD": 20
 },
