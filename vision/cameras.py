@@ -27,6 +27,15 @@ def find_camera(spec):
     return matches[0]
 
 
+ROTATIONS = {0: None, 90: cv2.ROTATE_90_CLOCKWISE, 180: cv2.ROTATE_180, 270: cv2.ROTATE_90_COUNTERCLOCKWISE}
+
+
+def rotate(frame, degrees):
+    """Turn a frame clockwise by 0, 90, 180 or 270 degrees (for a camera mounted sideways or upside down)."""
+    code = ROTATIONS[degrees % 360]
+    return frame if code is None else cv2.rotate(frame, code)
+
+
 def open_camera(spec, width=4000, height=3000):
     """Open a camera at its highest resolution (asking for more than it has gets the most it offers)."""
     index = find_camera(spec)

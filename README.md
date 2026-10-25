@@ -43,7 +43,7 @@ Cameras are picked by name because Windows renumbers them when one is plugged in
 
 ```powershell
 & $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\cameras.py                 # list cameras
-& $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\live_view.py --camera XWF  # the USB webcam (1920x1080)
+& $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\live_view.py --camera XWF --rotate 180  # USB webcam (1920x1080); T turns the picture live
 ```
 
 ```powershell
