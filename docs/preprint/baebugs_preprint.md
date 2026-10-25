@@ -44,7 +44,16 @@ We treat the record as part of the instrument. Our contributions are:
 
 **Printable, modular parts.** The graph links 91 parametric toy insects (67 California families at size levels, 12 novel outside-CA, 12 fill-in 1–3 mm), 25 lab parts across seven modules (trommel, vortex sieve kit, centrifuge strainer, Opentrons Flex adapters, hand-off carrier) and 4 Opentrons labware definitions (`site/mvp/mvp.json`). These are **concepts**: geometry is watertight and simulated, not tested on specimens (`print/parts/README.md`). Toys are parametric shapes, not replicas.
 
-**Cost.** [TO FILL: bill of materials for the target build, with the combination under US$200; no prices are committed in the repo yet, so none are claimed here.]
+**Cost (estimates, not quotes).** A separate bench twin built from 16 bench photos (`baebugs-twin/`, v0.1; not yet merged into the repo) adds 8 printable remixes on the SBS footprint (127.76 × 85.48 mm): 96, 24, 15 and 6-position tube racks with Opentrons labware definitions, a cryo grid insert, a lipped frame, a screened grid frame and a honeycomb insert. Each part has its own Merkle tree, and the part roots roll up into one lab root.
+
+| item | ≈ USD |
+|---|---|
+| all 8 remixes, ~330 g filament at 75% fill | 8 |
+| 1 kg PETG spool | 22 |
+| digital calipers (to replace photo-estimated dimensions) | 25 |
+| **parts kit total** | **≈ 55** |
+
+This is well under the US$200 target, assuming a printer is already available. Prices are 2026 retail estimates, and every dimension not set by a standard is a photo estimate until it is checked with calipers. [TO FILL: price the step-1 sieving parts (trommel, bearings, rod, mesh) to show the full combination stays under US$200.] The racks are tube racks, not tip racks; printed parts are not used at −80 °C or for anything that spins.
 
 ## 3. Atoms of knowledge and one graph for every surface
 
@@ -140,7 +149,7 @@ Against the teacher, a distilled student and FastSAM have median relative size d
 - Eight result realizations are custody-broken; 001b needs a v7 rerun with the fixed kernel before it can count as evidence.
 - Small, skewed out-of-state test sets (Nevada n=8; 004 test has no Diptera, 2 Hemiptera).
 - 004 ran on Apple MPS rather than the preregistered Kaggle GPU (amendments 1–2); weights are numerically different from a GPU run, and their tensor hash is their identity.
-- Parts are concepts. Cost figures are not yet committed.
+- Parts are concepts. Cost figures are retail estimates for printed parts only; the sieving hardware is not yet priced.
 - Much of the code and text was written by an AI agent (Claude) under the author's direction; see the statement below.
 
 ## 9. Future work
