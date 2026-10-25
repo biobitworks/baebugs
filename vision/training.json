@@ -1,19 +1,19 @@
 {
-  "_note": "Single-type photos that train pile_types.py. packed = the dish floor is full, so every square on it is that type; otherwise dish_sizer's segmentation splits squares into object and background. Type names are provisional until the team confirms the 9 types. label_threshold: colour difference that counts as object when labelling (low for pale types, high for dark ones so reflections aren't learned). samples/webcam_set2_yellow_grain.webp is left out: the grain covers most of the floor but not all, so neither labelling mode works on it. The flat/curved pale pasta seen in early mixed photos is not part of the sample (only short tube macaroni), so it has no type.",
+  "_note": "Single-type photos that train pile_types.py. packed = the dish floor is full, so every square on it is that type; otherwise dish_sizer's segmentation splits squares into object and background. The sample has 7 types; names follow the team's (small round grain is a placeholder). label_threshold: colour difference that counts as object when labelling (low for pale types, high for dark ones so reflections aren't learned). samples/webcam_set2_yellow_grain.webp is left out: the grain covers most of the floor but not all, so neither labelling mode works on it. The flat/curved pale pasta seen in early mixed photos is not part of the sample (only short tube macaroni), so it has no type. samples/webcam_set4_white_rice.webp is left out: it is hazy, and at any cutoff that finds the rice, reflections get labelled as rice too.",
   "photos": [
     {
-      "type": "dark seed",
+      "type": "tiny seed",
       "file": "samples/webcam_set1_dark_seeds.webp",
       "packed": false,
       "label_threshold": 20
     },
     {
-      "type": "small yellow grain",
+      "type": "small round grain",
       "file": "samples/webcam_set1_couscous_packed.webp",
       "packed": true
     },
     {
-      "type": "pasta tube",
+      "type": "macaroni",
       "file": "samples/webcam_set1_pasta_tubes.webp",
       "packed": false,
       "label_threshold": 10
@@ -24,25 +24,25 @@
       "packed": true
     },
     {
-      "type": "oat grain",
+      "type": "yellow rice",
       "file": "samples/webcam_set1_oat_grains.webp",
       "packed": false,
       "label_threshold": 10
     },
     {
-      "type": "red seed",
+      "type": "oval seed",
       "file": "samples/webcam_set1_red_seeds.webp",
       "packed": false,
       "label_threshold": 20
     },
     {
-      "type": "dark seed",
+      "type": "tiny seed",
       "file": "samples/webcam_set2_dark_seeds.webp",
       "packed": false,
       "label_threshold": 20
     },
     {
-      "type": "pasta tube",
+      "type": "macaroni",
       "file": "samples/webcam_set2_pasta_tubes.webp",
       "packed": false,
       "label_threshold": 10
@@ -53,40 +53,46 @@
       "packed": true
     },
     {
-      "type": "oat grain",
+      "type": "yellow rice",
       "file": "samples/webcam_set2_oat_grains.webp",
       "packed": false,
       "label_threshold": 10
     },
     {
-      "type": "red seed",
+      "type": "oval seed",
       "file": "samples/webcam_set2_red_seeds.webp",
       "packed": false,
       "label_threshold": 20
     },
     {
-      "type": "black grain",
+      "type": "long seed",
       "file": "samples/webcam_set2_black_grains.webp",
       "packed": false,
       "label_threshold": 20
     },
     {
-      "type": "black grain",
+      "type": "long seed",
       "file": "samples/webcam_set3_black_grains.webp",
       "packed": false,
       "label_threshold": 20
     },
     {
-      "type": "oat grain",
+      "type": "yellow rice",
       "file": "samples/webcam_set3_oat_grains.webp",
       "packed": false,
       "label_threshold": 10
     },
     {
-      "type": "red seed",
+      "type": "oval seed",
       "file": "samples/webcam_set3_red_seeds.webp",
       "packed": false,
       "label_threshold": 20
+    },
+    {
+      "type": "yellow rice",
+      "file": "samples/webcam_set4_yellow_rice.webp",
+      "packed": false,
+      "label_threshold": 10
     }
   ]
 }
