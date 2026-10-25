@@ -127,7 +127,7 @@ def leaf_hash(a):
 
 def build(repo="."):
     repo = Path(repo)
-    paths = sorted(p for p in _git(repo, "ls-files").splitlines() if (repo / p).is_file() and p not in INDEX_FILES)
+    paths = sorted({p for p in _git(repo, "ls-files").splitlines() if (repo / p).is_file() and p not in INDEX_FILES})  # set: unmerged files are listed once per stage
     tested = _test_coverage(paths)
     upstream = json.loads((repo / "daisy/upstream.json").read_text()) if (repo / "daisy/upstream.json").exists() else {}
     # authorship per file from git (counts, not names beyond the commit author field)

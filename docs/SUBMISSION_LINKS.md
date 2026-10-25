@@ -38,7 +38,7 @@ Agents read the same graph pack (`site/mvp/mvp.json`):
 ```
 npx github:biobitworks/baebugs get root
 baebugs-graph get root
-python -m baebugs.graph_mcp
+python -m baebugs.graph_mcp   # needs mcp>=1.2,<2
 ```
 
 Regenerate the story page after any data change: `python site/story/build_story.py`.
