@@ -1,6 +1,6 @@
 {
  "insect_hash": "f0caac72042765e71bc8bae5d34eb50cab1622a779b41feea98032737b95d4df",
- "specimen_hash": "bfe825703b8e89bc5cce0a78ee381b9e7a10d5c6685930574267579f06219efc",
+ "specimen_hash": "9f8d4a58e5fe25d4dddc5bd75472ad91979882882cebbea470569fd38baad114",
  "nodes": [
   {
    "level": 0,
@@ -504,6 +504,8 @@
   "kind": "specimen",
   "name": "Elachistidae_novel_8.4mm",
   "insect_hash": "f0caac72042765e71bc8bae5d34eb50cab1622a779b41feea98032737b95d4df",
+  "representation": "toy",
+  "size_flag": "database-derived, unverified",
   "group": "novel_outside_ca",
   "order": "Lepidoptera",
   "family": "Elachistidae",
@@ -511,6 +513,6 @@
   "note": "family absent from CA data",
   "file": "novel_outside_ca/Elachistidae_novel_8.4mm.stl",
   "stl_sha256": "0d094fd3f7f5d692d2dd1cba3fce047a0dbe1b2297b56611f5d17cf80e6cab55",
-  "hash": "bfe825703b8e89bc5cce0a78ee381b9e7a10d5c6685930574267579f06219efc"
+  "hash": "9f8d4a58e5fe25d4dddc5bd75472ad91979882882cebbea470569fd38baad114"
  }
 }

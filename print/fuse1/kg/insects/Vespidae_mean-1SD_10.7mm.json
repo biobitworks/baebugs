@@ -1,6 +1,6 @@
 {
  "insect_hash": "7e807fb06973d2b1eaf3fb4b9f78a037e1c2df6c6d36a991d8067ff7718eb52e",
- "specimen_hash": "13f43a3023e9a2d607d0150a6e722f05f1507040ecb72f3cf3804d3546f19968",
+ "specimen_hash": "e7a6a3a84b36d1fe6aa384e324431b5955c711bc68e155ffe40f939389722660",
  "nodes": [
   {
    "level": 0,
@@ -1206,6 +1206,8 @@
   "kind": "specimen",
   "name": "Vespidae_mean-1SD_10.7mm",
   "insect_hash": "7e807fb06973d2b1eaf3fb4b9f78a037e1c2df6c6d36a991d8067ff7718eb52e",
+  "representation": "toy",
+  "size_flag": "database-derived, unverified",
   "group": "california",
   "order": "Hymenoptera",
   "family": "Vespidae",
@@ -1213,6 +1215,6 @@
   "note": "",
   "file": "california/Vespidae_mean-1SD_10.7mm.stl",
   "stl_sha256": "b2f1a226fc76b1206c28d36ec8cc9e6c68a97819fe6980e10951abda3f4f32db",
-  "hash": "13f43a3023e9a2d607d0150a6e722f05f1507040ecb72f3cf3804d3546f19968"
+  "hash": "e7a6a3a84b36d1fe6aa384e324431b5955c711bc68e155ffe40f939389722660"
  }
 }

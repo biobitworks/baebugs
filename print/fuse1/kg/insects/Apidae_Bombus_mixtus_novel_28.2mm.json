@@ -1,6 +1,6 @@
 {
  "insect_hash": "a154f42c452126fe3302f34d51457e45c51312f34bb5f1536635e559fdad06b4",
- "specimen_hash": "d374985c623965562cf18f412867d17f02c3331cb46a705ce1f7e6d397355cb9",
+ "specimen_hash": "8e55d3953b08488fa3ce65da69ead66edaf5913364a3c41510da6f07de045f8a",
  "nodes": [
   {
    "level": 0,
@@ -1352,6 +1352,8 @@
   "kind": "specimen",
   "name": "Apidae_Bombus_mixtus_novel_28.2mm",
   "insect_hash": "a154f42c452126fe3302f34d51457e45c51312f34bb5f1536635e559fdad06b4",
+  "representation": "toy",
+  "size_flag": "suspect: 28.2 mm far larger than typical for this bumble bee",
   "group": "novel_outside_ca",
   "order": "Hymenoptera",
   "family": "Apidae (Bombus mixtus)",
@@ -1359,6 +1361,6 @@
   "note": "z = +4.1 vs CA Apidae",
   "file": "novel_outside_ca/Apidae_Bombus_mixtus_novel_28.2mm.stl",
   "stl_sha256": "e8842b2f54733a449b3b7f5a4658ce7a9d773de2d3448bf5a1b6de925bc9d000",
-  "hash": "d374985c623965562cf18f412867d17f02c3331cb46a705ce1f7e6d397355cb9"
+  "hash": "8e55d3953b08488fa3ce65da69ead66edaf5913364a3c41510da6f07de045f8a"
  }
 }

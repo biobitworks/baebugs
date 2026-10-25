@@ -1,6 +1,6 @@
 {
  "insect_hash": "96c1c5f565b367e5f34e2d9149c9176cff134456666d2ed10ac985aaa94c7330",
- "specimen_hash": "cd71857c60e128771451bcec83b1b8f0f100bda35cf2e499f3d41cc0a1eda902",
+ "specimen_hash": "464f85eb9399dd1e4a3d7325c3cecc0b1a4f0896211fd444926c84ab6b0c32c9",
  "nodes": [
   {
    "level": 0,
@@ -1062,6 +1062,8 @@
   "kind": "specimen",
   "name": "Andrenidae_mean-2SD_6.0mm",
   "insect_hash": "96c1c5f565b367e5f34e2d9149c9176cff134456666d2ed10ac985aaa94c7330",
+  "representation": "toy",
+  "size_flag": "database-derived, unverified",
   "group": "california",
   "order": "Hymenoptera",
   "family": "Andrenidae",
@@ -1069,6 +1071,6 @@
   "note": "",
   "file": "california/Andrenidae_mean-2SD_6.0mm.stl",
   "stl_sha256": "736698172090b885dd00ccb38d4cd293ad95354a2637c8c401b03d984f21589d",
-  "hash": "cd71857c60e128771451bcec83b1b8f0f100bda35cf2e499f3d41cc0a1eda902"
+  "hash": "464f85eb9399dd1e4a3d7325c3cecc0b1a4f0896211fd444926c84ab6b0c32c9"
  }
 }

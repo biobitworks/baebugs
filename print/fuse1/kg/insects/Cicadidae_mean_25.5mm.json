@@ -1,6 +1,6 @@
 {
  "insect_hash": "6af5172aad72d65db8320a93327ae2d54764eb6f6d9ae6b3fc81411215e3673d",
- "specimen_hash": "95e7c9b9542db6e718f2b76bec0c42f1aa7af43a767f883b573cf8d31fc060e9",
+ "specimen_hash": "1b6dcb4346ca5bb36dcc83c42813f297b65a3404607859f4d08aca31a8e94332",
  "nodes": [
   {
    "level": 0,
@@ -1352,6 +1352,8 @@
   "kind": "specimen",
   "name": "Cicadidae_mean_25.5mm",
   "insect_hash": "6af5172aad72d65db8320a93327ae2d54764eb6f6d9ae6b3fc81411215e3673d",
+  "representation": "toy",
+  "size_flag": "database-derived, unverified",
   "group": "california",
   "order": "Hemiptera",
   "family": "Cicadidae",
@@ -1359,6 +1361,6 @@
   "note": "",
   "file": "california/Cicadidae_mean_25.5mm.stl",
   "stl_sha256": "b3a4a679485cb686d43ecca4d8887ea43f9e62a03f7e46372a097986facf46f3",
-  "hash": "95e7c9b9542db6e718f2b76bec0c42f1aa7af43a767f883b573cf8d31fc060e9"
+  "hash": "1b6dcb4346ca5bb36dcc83c42813f297b65a3404607859f4d08aca31a8e94332"
  }
 }

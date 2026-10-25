@@ -1,6 +1,6 @@
 {
  "insect_hash": "9e04bad1e677fd42633f79a8d2b5ecddce140e2d5c5380197269cda83688ebb0",
- "specimen_hash": "8be83b747c9d42b2880032ffdc2b33408d301beb9fc1ae45bd85aa9c4eaaa91a",
+ "specimen_hash": "34adfbb180b0da493ab6379c0fa4ef518caad84910bbd398c4062422532bb3f0",
  "nodes": [
   {
    "level": 0,
@@ -1352,6 +1352,8 @@
   "kind": "specimen",
   "name": "Colletidae_Ptiloglossa_arizonensis_novel_16.2mm",
   "insect_hash": "9e04bad1e677fd42633f79a8d2b5ecddce140e2d5c5380197269cda83688ebb0",
+  "representation": "toy",
+  "size_flag": "database-derived, unverified",
   "group": "novel_outside_ca",
   "order": "Hymenoptera",
   "family": "Colletidae (Ptiloglossa arizonensis)",
@@ -1359,6 +1361,6 @@
   "note": "z = +4.2 vs CA Colletidae",
   "file": "novel_outside_ca/Colletidae_Ptiloglossa_arizonensis_novel_16.2mm.stl",
   "stl_sha256": "1b586f10987b043bcf09d6b3ca5998b67402bcbccd40147d58884adb4e08fe45",
-  "hash": "8be83b747c9d42b2880032ffdc2b33408d301beb9fc1ae45bd85aa9c4eaaa91a"
+  "hash": "34adfbb180b0da493ab6379c0fa4ef518caad84910bbd398c4062422532bb3f0"
  }
 }

@@ -1,6 +1,6 @@
 {
  "insect_hash": "91f91d4919f68a5581f30d41eb76ca43275e4f33cf7d807bae9c74c7cf2d1d20",
- "specimen_hash": "98f2c883ee23570a5c255676d3dc3b28111838517acef935ea0b4f5d11688601",
+ "specimen_hash": "a711333cb0faca5b60ea6fb323f186dc5b6199ed465c026dff44251bbc0545c0",
  "nodes": [
   {
    "level": 0,
@@ -360,6 +360,8 @@
   "kind": "specimen",
   "name": "Meloidae_Epicauta_fortis_novel_2.1mm",
   "insect_hash": "91f91d4919f68a5581f30d41eb76ca43275e4f33cf7d807bae9c74c7cf2d1d20",
+  "representation": "toy",
+  "size_flag": "suspect: 2.1 mm far smaller than typical for a blister beetle",
   "group": "novel_outside_ca",
   "order": "Coleoptera",
   "family": "Meloidae (Epicauta fortis)",
@@ -367,6 +369,6 @@
   "note": "z = -3.5 vs CA Meloidae",
   "file": "novel_outside_ca/Meloidae_Epicauta_fortis_novel_2.1mm.stl",
   "stl_sha256": "704d1ea49fe5c22353b06fd66b41773596e3fe6a0675c643057cd5ea7d0d7388",
-  "hash": "98f2c883ee23570a5c255676d3dc3b28111838517acef935ea0b4f5d11688601"
+  "hash": "a711333cb0faca5b60ea6fb323f186dc5b6199ed465c026dff44251bbc0545c0"
  }
 }

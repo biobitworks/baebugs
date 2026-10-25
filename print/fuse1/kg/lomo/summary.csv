@@ -1,0 +1,3 @@
+protocol,tier,n,valid,obs_consistent,exact_hash,topology_ok,tray_ok,family_ok,triage_ok,median_abs_len_err_mm
+lomo,logic,91,91,91,86,87,91,68,88,0.0
+lofo,logic,91,91,91,86,87,91,0,65,0.0

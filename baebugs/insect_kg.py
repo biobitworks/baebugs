@@ -262,7 +262,8 @@ def build_collection(manifest_csv, out_dir, ledger=None):
             level_ok[n["level"]][0] += 1
             level_ok[n["level"]][1] += all(n["checks"].values())
         stl = base / r["file"]
-        spec = {"group": r["group"], "order": r["order"], "family": r["family"], "level": r["level"],
+        spec = {"representation": r.get("representation", "toy"), "size_flag": r.get("size_flag", ""),
+                "group": r["group"], "order": r["order"], "family": r["family"], "level": r["level"],
                 "size_source": r["size_source"], "note": r["note"], "file": r["file"],
                 "stl_sha256": hashlib.sha256(stl.read_bytes()).hexdigest() if stl.exists() else None}
         l4 = {"level": 4, "kind": "specimen", "name": Path(r["file"]).stem, "insect_hash": root["hash"], **spec}
@@ -294,7 +295,7 @@ def build_collection(manifest_csv, out_dir, ledger=None):
     for g in sorted({fn["group"] for fn in fam_nodes}):
         body = {"level": 6, "kind": "group", "name": g, "children": sorted(fn["hash"] for fn in fam_nodes if fn["group"] == g)}
         body["hash"] = _h(body); groups.append(body)
-    coll = {"level": 7, "kind": "collection", "name": "baebugs_fuse1_print_kg", "children": sorted(g["hash"] for g in groups)}
+    coll = {"level": 7, "kind": "collection", "name": "baebugs_fuse1_TOY_print_kg", "representation": "toy", "children": sorted(g["hash"] for g in groups)}
     coll["hash"] = _h(coll)
     (out / "index.json").write_text(json.dumps(index, indent=1))
     (out / "collection.json").write_text(json.dumps({"root": coll, "groups": groups, "families": fam_nodes,

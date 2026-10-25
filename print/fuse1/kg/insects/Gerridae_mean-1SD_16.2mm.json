@@ -1,6 +1,6 @@
 {
  "insect_hash": "dc4dcdc4eb7a38dfffa94875aca8cb00e2786dcbfd9868719ee8731bb6c6d4a9",
- "specimen_hash": "e112318a4071b699959f818bc1ac9820aa2bbd0a8b3a1e695808f1e916435b0e",
+ "specimen_hash": "b8b0b107639ee132584d52ea21b823d53ca32805f500ec6ae93b79fed24d9532",
  "nodes": [
   {
    "level": 0,
@@ -1208,6 +1208,8 @@
   "kind": "specimen",
   "name": "Gerridae_mean-1SD_16.2mm",
   "insect_hash": "dc4dcdc4eb7a38dfffa94875aca8cb00e2786dcbfd9868719ee8731bb6c6d4a9",
+  "representation": "toy",
+  "size_flag": "suspect: family mean likely includes legs",
   "group": "california",
   "order": "Hemiptera",
   "family": "Gerridae",
@@ -1215,6 +1217,6 @@
   "note": "",
   "file": "california/Gerridae_mean-1SD_16.2mm.stl",
   "stl_sha256": "98623e51c899ee55226b78971ec8ef624f262bdd5fb90a1c4b780532c67a1878",
-  "hash": "e112318a4071b699959f818bc1ac9820aa2bbd0a8b3a1e695808f1e916435b0e"
+  "hash": "b8b0b107639ee132584d52ea21b823d53ca32805f500ec6ae93b79fed24d9532"
  }
 }

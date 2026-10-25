@@ -1,4 +1,4 @@
-"""Parametric, size-calibrated insect models for SLS printing (Formlabs Fuse 1+ 30W).
+"""TOY insect models for SLS printing (Formlabs Fuse 1+ 30W): parametric stand-ins, not replicas.
 
 Sizes come from the ruler-measured museum specimens (GBIF/UCSB etc., pulled and
 measured by baebugs): for each family, length = mean + k*SD for k in -2..+2,
@@ -79,6 +79,33 @@ NOVEL = [
 FILL_IN = [("Thysanoptera", "thrips-like", [1.0, 1.5, 2.0], "thrips"),
            ("Hemiptera", "aphid-like", [1.5, 2.0, 2.5, 3.0], "aphid"),
            ("Coleoptera", "small beetle", [1.0, 1.5, 2.0, 2.5, 3.0], "beetle_dome")]
+
+
+# Every model here is a TOY: a parametric stand-in (ellipsoids + 0.8 mm rods +
+# 0.8 mm plates) sized from database statistics. Not an anatomical replica and
+# not a validated size standard; use for handling, sieve and vision tests only.
+REPRESENTATION = "toy"
+TOY_SHAPE = "parametric toy: ellipsoid body segments, rod legs/antennae, flat plate wings"
+# sizes that disagree with typical published body lengths: museum-photo envelope
+# probably included wings / legs / labels (or a mis-scaled ruler). Flagged, not corrected.
+SIZE_SUSPECT = {
+    "Hesperiidae": "family mean likely wingspan, not body length",
+    "Gerridae": "family mean likely includes legs",
+    "Halictidae": "family mean runs large for sweat bees",
+    "Bombyliidae": "family mean runs large; likely includes wings",
+    "Apidae (Xylocopa tabaniformis orpifex)": "29.1 mm larger than typical for this carpenter bee",
+    "Apidae (Bombus mixtus)": "28.2 mm far larger than typical for this bumble bee",
+    "Andrenidae (Andrena prunorum)": "20.1 mm far larger than typical for this mining bee",
+    "Meloidae (Epicauta fortis)": "2.1 mm far smaller than typical for a blister beetle",
+}
+
+
+def toy_fields(family, size_source):
+    if size_source.startswith("fill-in"):
+        flag = "fill-in size, not measured"
+    else:
+        flag = "suspect: " + SIZE_SUSPECT[family] if family in SIZE_SUSPECT else "database-derived, unverified"
+    return {"representation": REPRESENTATION, "shape_fidelity": TOY_SHAPE, "size_flag": flag}
 
 
 def _ellipsoid(center, rx, ry, rz, sub=3):
@@ -216,7 +243,8 @@ def generate(out_dir):
         path = out / group / name
         mesh.export(path)
         rows.append({"group": group, "file": f"{group}/{name}", "order": order, "family": family, "level": label,
-                     **info, "kit_tray": tray_for(info["body_width_mm"]), "size_source": source, "note": note})
+                     **info, "kit_tray": tray_for(info["body_width_mm"]), "size_source": source, "note": note,
+                     **toy_fields(family, source)})
         return mesh
 
     for order, fam, n, mu, sd, plan in CA_FAMILIES:

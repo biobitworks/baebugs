@@ -1,6 +1,6 @@
 {
  "insect_hash": "cfb1aa5138b16928db44807d06ad3ebc2d66c30b320936f5b040cf249fa51326",
- "specimen_hash": "c92601505777e6add858e76dedfa9659661c9e74aaa47786aa93719cd0a6b6aa",
+ "specimen_hash": "aa1108757e930859576b3148f3524b939122866f0e24d1f9eabf8350563823d6",
  "nodes": [
   {
    "level": 0,
@@ -360,6 +360,8 @@
   "kind": "specimen",
   "name": "aphid_like_fill_2.5mm",
   "insect_hash": "cfb1aa5138b16928db44807d06ad3ebc2d66c30b320936f5b040cf249fa51326",
+  "representation": "toy",
+  "size_flag": "fill-in size, not measured",
   "group": "fill_in_1-3mm",
   "order": "Hemiptera",
   "family": "aphid-like",
@@ -367,6 +369,6 @@
   "note": "",
   "file": "fill_in_1-3mm/aphid_like_fill_2.5mm.stl",
   "stl_sha256": "38f5e8f1fb843c151b2be7ddae14505eca504505b128f53d7742544aaa59dae0",
-  "hash": "c92601505777e6add858e76dedfa9659661c9e74aaa47786aa93719cd0a6b6aa"
+  "hash": "aa1108757e930859576b3148f3524b939122866f0e24d1f9eabf8350563823d6"
  }
 }

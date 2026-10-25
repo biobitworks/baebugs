@@ -1,0 +1,44 @@
+{
+ "lomo": {
+  "cases": 91,
+  "logic": {
+   "n": 91,
+   "valid": 91,
+   "obs_consistent": 91,
+   "exact_hash": 86,
+   "topology_ok": 87,
+   "tray_ok": 91,
+   "family_ok": 68,
+   "triage_ok": 88,
+   "median_abs_len_err_mm": 0.0
+  },
+  "cascade": {
+   "resolved_by": {
+    "STEP-IN (human)": 91
+   },
+   "exact_hash": 0,
+   "triage_ok": 0
+  }
+ },
+ "lofo": {
+  "cases": 91,
+  "logic": {
+   "n": 91,
+   "valid": 91,
+   "obs_consistent": 91,
+   "exact_hash": 86,
+   "topology_ok": 87,
+   "tray_ok": 91,
+   "family_ok": 0,
+   "triage_ok": 65,
+   "median_abs_len_err_mm": 0.0
+  },
+  "cascade": {
+   "resolved_by": {
+    "STEP-IN (human)": 91
+   },
+   "exact_hash": 0,
+   "triage_ok": 0
+  }
+ }
+}

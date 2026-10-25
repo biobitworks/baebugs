@@ -1,6 +1,6 @@
 {
  "insect_hash": "ef5b57113939d082c2b25eb54c190b08233b9fc7b6e76da3d5b58e165097758e",
- "specimen_hash": "9524a5bb838e2bbab415ae10fc663ea770aec156ff49a3b2bd96cca2236bda2d",
+ "specimen_hash": "0a65a64bdad01d1d6a130b4d6b5dc44d274eb9bb3cd3988b7abd8f9a07a0ae67",
  "nodes": [
   {
    "level": 0,
@@ -1352,6 +1352,8 @@
   "kind": "specimen",
   "name": "Bombyliidae_mean_15.0mm",
   "insect_hash": "ef5b57113939d082c2b25eb54c190b08233b9fc7b6e76da3d5b58e165097758e",
+  "representation": "toy",
+  "size_flag": "suspect: family mean runs large; likely includes wings",
   "group": "california",
   "order": "Diptera",
   "family": "Bombyliidae",
@@ -1359,6 +1361,6 @@
   "note": "",
   "file": "california/Bombyliidae_mean_15.0mm.stl",
   "stl_sha256": "9f1708008c7a6b532a8bd9b05fbfb21ab59b274ffda992864d938bf14ff8c2b6",
-  "hash": "9524a5bb838e2bbab415ae10fc663ea770aec156ff49a3b2bd96cca2236bda2d"
+  "hash": "0a65a64bdad01d1d6a130b4d6b5dc44d274eb9bb3cd3988b7abd8f9a07a0ae67"
  }
 }

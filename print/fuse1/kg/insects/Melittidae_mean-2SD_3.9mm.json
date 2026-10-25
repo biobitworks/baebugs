@@ -1,6 +1,6 @@
 {
  "insect_hash": "2fed20c98b322b097aca53fc2afe5799db9f5638e640d8c5f28def56995c1dc9",
- "specimen_hash": "93ef7597611c2b40da5aedd9131aa2309740c3cd4a799818e15d08be039d1a63",
+ "specimen_hash": "5551b3051c4df79ba02ae8985ac30f686775277fde6037c4441f5d90a4ad6f81",
  "nodes": [
   {
    "level": 0,
@@ -360,6 +360,8 @@
   "kind": "specimen",
   "name": "Melittidae_mean-2SD_3.9mm",
   "insect_hash": "2fed20c98b322b097aca53fc2afe5799db9f5638e640d8c5f28def56995c1dc9",
+  "representation": "toy",
+  "size_flag": "database-derived, unverified",
   "group": "california",
   "order": "Hymenoptera",
   "family": "Melittidae",
@@ -367,6 +369,6 @@
   "note": "",
   "file": "california/Melittidae_mean-2SD_3.9mm.stl",
   "stl_sha256": "f3f4330bbc0dc76f0dd3fed69c8c78819452ccb13b4776fa67bbb726d6e9723e",
-  "hash": "93ef7597611c2b40da5aedd9131aa2309740c3cd4a799818e15d08be039d1a63"
+  "hash": "5551b3051c4df79ba02ae8985ac30f686775277fde6037c4441f5d90a4ad6f81"
  }
 }

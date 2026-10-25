@@ -1,6 +1,6 @@
 {
  "insect_hash": "a896db013496392560df62a1055e707b93d2f2fa6a2326e4a67a4003f49f2cbb",
- "specimen_hash": "c2a9ee9938f9f31b7b99e11b1bb78fddcd418cd241c77cdb6fb676496b26175a",
+ "specimen_hash": "83059aece43f5980a151b0acff804431d4af80273760a415ffb9b5cc30a8e346",
  "nodes": [
   {
    "level": 0,
@@ -1062,6 +1062,8 @@
   "kind": "specimen",
   "name": "Formicidae_mean+1SD_9.1mm",
   "insect_hash": "a896db013496392560df62a1055e707b93d2f2fa6a2326e4a67a4003f49f2cbb",
+  "representation": "toy",
+  "size_flag": "database-derived, unverified",
   "group": "california",
   "order": "Hymenoptera",
   "family": "Formicidae",
@@ -1069,6 +1071,6 @@
   "note": "",
   "file": "california/Formicidae_mean+1SD_9.1mm.stl",
   "stl_sha256": "fbfff087689757d411414775523d160b64ed1f267478d2843395d6158807bdcc",
-  "hash": "c2a9ee9938f9f31b7b99e11b1bb78fddcd418cd241c77cdb6fb676496b26175a"
+  "hash": "83059aece43f5980a151b0acff804431d4af80273760a415ffb9b5cc30a8e346"
  }
 }
