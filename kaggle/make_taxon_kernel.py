@@ -71,6 +71,17 @@ env = {"python": platform.python_version(), "torch": torch.__version__, "cuda": 
        "device": os.environ.get("DAISY_DEVICE") or "auto"}
 event("gate_G3a_environment", {"observed": env, "pins": S.get("pins", {}), "pass": all(str(env.get(k)) == str(v) for k, v in S.get("pins", {}).items())})
 
+def loss_values(t):
+    """Training loss as floats: Ultralytics 8.4 keeps tloss as a dict {name: tensor}; older versions as a tensor."""
+    if t is None: return []
+    if isinstance(t, dict): t = list(t.values())
+    if hasattr(t, "reshape"): t = t.reshape(-1).tolist()
+    out = []
+    for x in (t if isinstance(t, (list, tuple)) else [t]):
+        try: out += [float(v) for v in (x.reshape(-1).tolist() if hasattr(x, "reshape") else [x])]
+        except Exception: return []
+    return out
+
 def track(run):
     def on_save(tr):
         rec = {"run": run, "epoch": int(tr.epoch) + 1}
@@ -81,11 +92,7 @@ def track(run):
     seen = {}
     def on_train_epoch(tr):
         # capture the training loss before validation (ultralytics may reset tloss by on_fit_epoch_end)
-        t = tr.tloss
-        try:
-            seen[int(tr.epoch)] = [float(x) for x in (t.reshape(-1).tolist() if hasattr(t, "reshape") else (t if isinstance(t, (list, tuple)) else [t]))]
-        except Exception:
-            seen[int(tr.epoch)] = []
+        seen[int(tr.epoch)] = loss_values(tr.tloss)
     def on_epoch(tr):
         vals = {}
         for k, v in (tr.metrics or {}).items():
