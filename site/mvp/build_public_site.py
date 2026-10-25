@@ -37,7 +37,7 @@ def build(target: Path, source_ref: str):
     (target/"index.html").write_text(html)
     shutil.copy2(REPO/"site/mvp/mvp.json",target/"mvp.json")
     shutil.copy2(REPO/"docs/bench/bench_photo_observation_20261025.json",target/"bench_observation.json")
-    for rel in ["site/lab","site/twin","site/protocols"]:
+    for rel in ["site/lab","site/twin","site/protocols","site/detection"]:
         d=target/Path(rel).name
         if d.exists():
             shutil.rmtree(d)
@@ -50,6 +50,14 @@ def build(target: Path, source_ref: str):
     resolved["source_commit"] = source_ref
     (target/"protocols/catalog.json").write_text(
         json.dumps(resolved, indent=2, ensure_ascii=False, sort_keys=True)+chr(10))
+    # Public PA12 toy bounding boxes are recorded inference, not new model runs.
+    sys.path.insert(0, str(REPO / "site/detection"))
+    from build_detection import build_gallery
+    detections = build_gallery(REPO, target / "detection", source_ref, target / "mvp.json")
+    shutil.copy2(
+        REPO / "docs/toy_photo_models/pa12_toys_two_on_floor_models.jpg",
+        target / "detection" / "preview.jpg"
+    )
     # The 3D labware preview and Opentrons schemas linked by the Parts tab.
     for rel in ["print/labware/previews.png"]:
         dest = target / rel
@@ -161,6 +169,7 @@ def build(target: Path, source_ref: str):
         '<li><a href="../protocols/">Discover, save, and remix protocols</a></li>'
         '<li><a href="../board/">Specimen workflow board</a></li>'
         '<li><a href="../lab/">3D printed parts</a></li>'
+        '<li><a href="../detection/">Model bounding-box evidence</a></li>'
         '<li><a href="../">Root-to-leaf evidence graph</a></li>'
         '<li><a href="https://github.com/biobitworks/baebugs/blob/main/docs/SUBMISSION_LINKS.md">'
         'Repository submission index</a></li></ol>'
@@ -174,6 +183,28 @@ def build(target: Path, source_ref: str):
         'Open PR #34 contains face-bearing imagery and is not included here.</p>'
         '<p><a href="../deployment-manifest.json">Verify every deployed byte</a></p>'
         '</html>'
+    )
+    detector_preview = (
+        '<section aria-labelledby="bbox-home-title" style="display:grid;'
+        'grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));'
+        'gap:16px;margin:18px 0;padding:18px;border:1px solid #527469;'
+        'border-radius:12px;background:#152f31;color:#e7f7eb">'
+        '<div><span style="font-size:10px;letter-spacing:.16em;color:#91e2bd">'
+        'IMAGE ANALYSIS / RECORDED MODEL PREDICTIONS</span>'
+        '<h2 id="bbox-home-title" style="margin:10px 0;letter-spacing:-.04em">'
+        'See the bounding boxes. Trace the evidence.</h2>'
+        '<p style="font-size:12px;max-width:660px;color:#bdd6c7">'
+        'Compare YOLOE and OWLv2 on real photographs of printed PA12 toy insects.'
+        ' Adjust model confidence thresholds and inspect each source atom.'
+        ' Accuracy and biological identity remain NOT_VERIFIED.</p>'
+        '<a style="display:inline-block;padding:11px 15px;background:#c0eed0;'
+        'border-radius:8px;color:#184035;text-decoration:none;font-size:12px;'
+        'font-weight:750" href="detection/">Explore bounding boxes →</a>'
+        '</div><a href="detection/" aria-label="Open recorded object detection">'
+        '<img alt="Source-recorded blue and amber bounding boxes around two'
+        ' 3D printed toy insects" src="detection/preview.jpg" loading="lazy"'
+        ' style="width:100%;height:205px;object-fit:cover;object-position:center 40%;'
+        'border:1px solid #54786f;border-radius:9px"></a></section>'
     )
     marker = '<section class="protocol-discovery-entry"'
     homepage = (target / "index.html").read_text()
@@ -189,7 +220,7 @@ def build(target: Path, source_ref: str):
         '<a style="color:#b7f1d3" href="board/">Protocol Board</a>. '
         'Hardware recovery remains NOT_TESTED.</aside>'
     )
-    (target / "index.html").write_text(homepage.replace(marker, badge + marker, 1))
+    (target / "index.html").write_text(homepage.replace(marker, badge + detector_preview + marker, 1))
 
     # Do not package source photos withheld for licensing or consent.
     assert not (target/"assets/photos").exists()
@@ -210,6 +241,9 @@ def build(target: Path, source_ref: str):
                 "canonical_source_story_modified":False,
                 "signature":"NOT_SIGNED"
               },
+              "recorded_bounding_box_photo_count":len(detections["images"]),
+              "model_inference_on_deployment":"NOT_EXECUTED",
+              "detector_ground_truth":"NOT_VERIFIED",
               "excluded_pr34_face_photos":True,
               "submitted_google_slides_link":"NOT_VERIFIED",
               "submitted_youtube_link":external_youtube_status,

@@ -16,6 +16,7 @@ proof. This is a derived web projection, not a new Merkle/MMR commitment.
 - /board/ — workflow planner and source references pinned to the deployed
   source commit, rather than a mutable integration branch.
 - /lab/ — printable CAD viewer.
+- /detection/ — recorded YOLOE/OWLv2 toy-photo bounding boxes and source hashes.
 - /deployment-manifest.json — source SHA, files and exact-byte digests.
 
 ## Critical assertions
