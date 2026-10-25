@@ -219,7 +219,7 @@ function renderRoots() {
     .map(([k, v]) => `<div class="root"><b>${esc(k)}</b><span class="mono">${esc(v)}</span></div>`).join('');
   const c = P.custody;
   $('#custody').innerHTML = c.breaks
-    ? `<div class="banner" role="note"><b>Chain of custody: ${c.breaks} break(s) recorded.</b> Weights referenced by hash were never stored for ${esc(c.break_contexts.join(', '))}. Those results stay exploratory; the rule: ${esc(c.rule)}.</div>`
+    ? `<div class="banner" role="note"><b>Chain of custody: ${c.breaks} break(s) recorded${c.withheld_photo_breaks ? ` (${c.result_breaks} result, ${c.withheld_photo_breaks} withheld photo)` : ''}.</b>${c.result_breaks ? ` Weights referenced by hash were never stored for ${esc(c.break_contexts.join(', '))}; those results stay exploratory.` : ''}${c.withheld_photo_breaks ? ` ${c.withheld_photo_breaks} labware source photos are pinned by hash but kept off-repo because they show vendor marks.` : ''} The rule: ${esc(c.rule)}.</div>`
     : `<div class="banner ok" role="note"><b>Chain of custody intact.</b></div>`;
 }
 

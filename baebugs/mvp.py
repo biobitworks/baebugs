@@ -94,6 +94,8 @@ def build(repo="."):
                 "bbox_mm": p["bbox_mm"], "sha256": p["sha256"]} for p in ot["parts"]]
     breaks = [r["record"] for r in MMRLog(Path(repo, "daisy/impact_mmr.jsonl")).records if r["record"].get("type") == "custody_break"]
     missing = {b.get("missing_sha256") for b in breaks}
+    photo_breaks = Path(repo, "print/labware/merkle/breaks.json")      # labware twin: source photos withheld (vendor marks)
+    photo_breaks = json.loads(photo_breaks.read_text()) if photo_breaks.exists() else []
     results = []
     for f in sorted(Path(repo, "daisy/results").rglob("results.json")):
         d = json.loads(f.read_text()); rel = str(f.relative_to(repo))
@@ -108,7 +110,9 @@ def build(repo="."):
         roots["assets"] = json.loads(Path(repo, "kg/assets.json").read_text())["root"]
     root = merkle_root(sorted(v for v in roots.values() if v))
     return {"type": "baebugs-mvp", "root": root, "roots": roots, "mmr": mmr,
-            "custody": {"breaks": len(breaks), "break_contexts": sorted({c for b in breaks for c in b.get("contexts", [])}),
+            "custody": {"breaks": len(breaks) + len(photo_breaks), "result_breaks": len(breaks),
+                        "withheld_photo_breaks": len(photo_breaks),
+                        "break_contexts": sorted({c for b in breaks for c in b.get("contexts", [])}),
                         "rule": "every hash the graph references must resolve to stored bytes; otherwise BREAK"},
             "legend": A["legend"], "totals": A["totals"], "modules": A["modules"], "external": A["external"],
             "leaves": [{k: x[k] for k in ("path", "module", "kind", "claim", "licence", "status", "sha256", "leaf")}
