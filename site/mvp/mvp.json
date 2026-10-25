@@ -382,15 +382,17 @@
 "dims_source": "design",
 "id": "pa12_toy_insect_batch",
 "interfaces": [],
-"leaf": "54ec5ed3879cdbd813fe7a436fa5bd1bc1137bcc9267118acd7297907861c0bc",
+"leaf": "b98cd410de4ff1c9682f12539d26e44c96a74e514bd304962914c5faff2e42f7",
 "maker": null,
 "name": "Printed PA12 toy insects (print/fuse1 set), depowdering",
-"notes": "geometry in print/fuse1 (91 STLs, Merkle-addressed); several small toys visible on the Sift floor grate",
+"notes": "geometry in print/fuse1 (91 STLs, Merkle-addressed). Box photo: wings, legs and antennae mostly intact; count and per-toy identity not yet checked against the manifest; a few blue FDM strings cling to some toys (cross-contamination to remove before imaging); one blue FDM part is in the box",
 "photos": [
 "assets/photos/sift_drum_load.jpg",
 "assets/videos/sift_tumble_2.mp4",
 "assets/photos/sift_floor_1.jpg",
-"assets/photos/sift_floor_3.jpg"
+"assets/photos/sift_floor_3.jpg",
+"assets/photos/pa12_toys_box.jpg",
+"assets/photos/pa12_toys_two_on_floor.jpg"
 ],
 "ref": null,
 "role": "physical size standards for the sieve and vision lanes"
@@ -759,8 +761,8 @@ null
 "role": "photo scale"
 }
 ],
-"photos_root": "0d07fa8e36e0e81f057d1de94e9682736424e5e94e7571aa148e158585dff046",
-"root": "ff5e0e6d49862fae9893b69acf56e9237ec1e56d8fb25cf32f03eca609ee7011"
+"photos_root": "7f093d2482162bd020ed488ce458d9fa8ab0a79ed22fc219fbd99f50bfd0c199",
+"root": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190"
 },
 "bugs": [
 {
@@ -2300,11 +2302,11 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
-"leaf": "1900df5c5678244ac47204e1f238fe3e7352f13df1ba16f0dbb775c715d08bb0",
+"leaf": "3ad0f89c30a6e9452ab9827664432ff818d729930c286538387ba442159354d9",
 "licence": "MIT",
 "module": "repo-meta",
 "path": "assets/photos.json",
-"sha256": "a32624a0095ae5131533d9f4cd9c1e0d4ac6a71d7023690b59cded82af781c19",
+"sha256": "77612810291277474628aa451d4addab9990ed9e4d040809ca186c565ad29ffa",
 "status": "built"
 },
 {
@@ -2415,6 +2417,26 @@ null
 "module": "repo-meta",
 "path": "assets/photos/lift_columns.jpg",
 "sha256": "9501cca4880554de44a6894def68b61e3144215b7cbab771285a0ab306ae54fe",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "222761c6e69ccf119ca265dbd7b6d75b055132839ec1fc31705fd820e14de0c5",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/pa12_toys_box.jpg",
+"sha256": "9d819a7ac5271eaa71b803d37fcf7f7911a4cfc986556debd0b19d110b1eca4e",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "8e3704aaad10bfb133687f50f754c3c9d13071d1fba14e3f723343bd906ff81b",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/pa12_toys_two_on_floor.jpg",
+"sha256": "ce17c7f7fdd8c11d9b19c4301fab5a937b2105ca580ae0eded7cf54d00958187",
 "status": "built"
 },
 {
@@ -2640,11 +2662,11 @@ null
 {
 "claim": "OWN",
 "kind": "code",
-"leaf": "2669ac26d5d3eff9d02d0a89a7404aa67e0b584f118fa5fde9929a5917993251",
+"leaf": "19795c11a063f69a601b3750e8b22ed667145b765605c9f8a9407aaafd9f0825",
 "licence": "MIT",
 "module": "python-package",
 "path": "baebugs/assets.py",
-"sha256": "3fa9d9761fd4b81522a2a5f483694a551ef1f9f20d5e31e24a9cac952846d88f",
+"sha256": "8448defa71099b4dbe343ce1100bb8e23661fc4b2ebb3284eaa4f892f9faf7b1",
 "status": "tested"
 },
 {
@@ -3630,11 +3652,11 @@ null
 {
 "claim": "OWN",
 "kind": "ledger",
-"leaf": "7fe0101c356d0fcb285eaa2936dba423c8458049cc0264ebe3089a586c02a608",
+"leaf": "90574de16ebe1b2a769764033cffef473d48f68b1bc8e00d95979a4972466752",
 "licence": "MIT",
 "module": "custody-ledgers",
 "path": "daisy/assets_mmr.jsonl",
-"sha256": "589ebb4eae8b4c5608662aa9b0f9f7ac7d101c2af01b63adb4419b26bf8e237f",
+"sha256": "4a89aa88aa33f63c79164b7cbaa8993335b83005c43bbd6a45b73ce1bd855eb9",
 "status": "built"
 },
 {
@@ -4720,11 +4742,11 @@ null
 {
 "claim": "OWN+TERMS",
 "kind": "data",
-"leaf": "810cd4737a008baf9363c09fc937a38f7ce4fc8a1470858f8276d542f8851fe4",
+"leaf": "df9352e49539a80a1cee247903067b89ed788bb94e2adb02f45f441e129ecb03",
 "licence": "MIT + gbif-media terms",
 "module": "knowledge-graph",
 "path": "kg/assets.json",
-"sha256": "11d2d16549da7cdbfe6fea6c430e29760e2b00cf941fc865539defca35601a83",
+"sha256": "08a3f0bf2e21926d193cefd6506e3b2a20ba4231192a652a03f2d06fd2eab7eb",
 "status": "built"
 },
 {
@@ -10645,8 +10667,8 @@ null
 },
 "mmr": {
 "assets_mmr": {
-"n": 3,
-"root": "beeca968742be45cc813ecd11b3e7758bfd4b203c7e3fe52b07b00229cf24796",
+"n": 4,
+"root": "97d20c6b90e0385d7cbac87551f93381eba7eeb2e05cecb7ed9f352f349281b2",
 "verified": true
 },
 "hybrids_mmr": {
@@ -10682,7 +10704,7 @@ null
 "OWN": 34
 },
 "id": "module:custody-ledgers",
-"root": "03cf29e89fcc63b0fb63fa00ea85cd4ba69a2a2604e84715617dfbb53a9cfea0",
+"root": "75ac1d75740373ddee811cfd1b95ef52c6e65827dfc74f4c70f558954d3423ab",
 "status": {
 "built": 34
 },
@@ -10760,7 +10782,7 @@ null
 "OWN+TERMS": 6
 },
 "id": "module:knowledge-graph",
-"root": "b5e306268c8eb22412e48c628975acd2c1820cd019033b2600b4c55da8e5e5df",
+"root": "499b5c828f5eeed2dd21f0a2f1ff7a90642fe9a85750e2c8924feca30795d341",
 "status": {
 "built": 6
 },
@@ -10825,7 +10847,7 @@ null
 "OWN+TERMS": 8
 },
 "id": "module:python-package",
-"root": "bbe25ab4d31406cc8305d73c91b6da9ea0c574b4875c98363f42b65686862bb3",
+"root": "1fdae0902a96777a673ea60da75cd1478b4f7b62ba3f13745693e414f31df445",
 "status": {
 "built": 55,
 "tested": 31
@@ -10835,14 +10857,14 @@ null
 ]
 },
 "repo-meta": {
-"atoms": 47,
+"atoms": 49,
 "claims": {
-"OWN": 47
+"OWN": 49
 },
 "id": "module:repo-meta",
-"root": "dacef764e560b4f17147f827f23d45d62f58ca8a7ee138740b67cd0e3b9ca4ab",
+"root": "d70c7c8676a78e85c826da88c0f41e8408a91f2e7e62efcb1b2dd65ec56fa230",
 "status": {
-"built": 47
+"built": 49
 },
 "terms": []
 },
@@ -11504,11 +11526,11 @@ null
 ]
 }
 ],
-"root": "2c2eaaa8d481e46a310034c112d6c0c9fe450a2f2e3c372d4f6e46916068a198",
+"root": "3d86bf029905787b7982efb75e529c81c19962d5bd9a2ee7b9f4ee2ea61a756a",
 "roots": {
-"aok": "337336dd883b41da867c8274052519c5dca29a6168b669b550f065fbb966c1ba",
-"assets": "ff5e0e6d49862fae9893b69acf56e9237ec1e56d8fb25cf32f03eca609ee7011",
-"assets_mmr": "beeca968742be45cc813ecd11b3e7758bfd4b203c7e3fe52b07b00229cf24796",
+"aok": "c117b62b20179d2b7cfa39e0b99b99248d15d2881e122269857895991f7ba0aa",
+"assets": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
+"assets_mmr": "97d20c6b90e0385d7cbac87551f93381eba7eeb2e05cecb7ed9f352f349281b2",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
 "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7",
 "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5",
@@ -15721,7 +15743,7 @@ null
 }
 ],
 "totals": {
-"OWN": 796,
+"OWN": 798,
 "OWN+TERMS": 49,
 "THIRD": 20
 },

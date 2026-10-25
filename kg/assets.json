@@ -418,22 +418,27 @@
    "dims_source": "design",
    "id": "pa12_toy_insect_batch",
    "interfaces": [],
-   "leaf": "54ec5ed3879cdbd813fe7a436fa5bd1bc1137bcc9267118acd7297907861c0bc",
+   "leaf": "b98cd410de4ff1c9682f12539d26e44c96a74e514bd304962914c5faff2e42f7",
    "name": "Printed PA12 toy insects (print/fuse1 set), depowdering",
-   "notes": "geometry in print/fuse1 (91 STLs, Merkle-addressed); several small toys visible on the Sift floor grate",
+   "notes": "geometry in print/fuse1 (91 STLs, Merkle-addressed). Box photo: wings, legs and antennae mostly intact; count and per-toy identity not yet checked against the manifest; a few blue FDM strings cling to some toys (cross-contamination to remove before imaging); one blue FDM part is in the box",
    "photo_sha256": [
     "14ae23ecfac6ad13257fcbf57c12cc26fa185fe1d8cba22b8160257c48090a0a",
     "212652e90f5c0d11ed942f111ec81012f058a0c9e7d8281eef722bfadd0919ea",
     "3b97c17e9fc9aaa1c0ec93e220429879ec6c48a572dbe4ba2729f40f9f682f31",
-    "c4f845a92af92175eed9b8df04e78ca7426facc1a779ea41b43aa1620458bddd"
+    "402d9dbd542dad842503cebf0db2887763c4b295854ef9aed4e45b88b31958e3",
+    "c4f845a92af92175eed9b8df04e78ca7426facc1a779ea41b43aa1620458bddd",
+    "d3002ba152a96ef05f705c55f3b66875f50e42333f346c54512dfd1723579521"
    ],
    "photos": [
     "sift_drum_load",
     "sift_tumble_2",
     "sift_floor_1",
-    "sift_floor_3"
+    "sift_floor_3",
+    "pa12_toys_box",
+    "pa12_toys_two_on_floor"
    ],
-   "role": "physical size standards for the sieve and vision lanes"
+   "role": "physical size standards for the sieve and vision lanes",
+   "status": "PRINTED + DEPOWDERED (observed)"
   },
   {
    "category": "printed_part",
@@ -908,8 +913,8 @@
   "spec": 4
  },
  "n_assets": 35,
- "n_photos": 29,
- "photos_root": "0d07fa8e36e0e81f057d1de94e9682736424e5e94e7571aa148e158585dff046",
- "root": "ff5e0e6d49862fae9893b69acf56e9237ec1e56d8fb25cf32f03eca609ee7011",
+ "n_photos": 31,
+ "photos_root": "7f093d2482162bd020ed488ce458d9fa8ab0a79ed22fc219fbd99f50bfd0c199",
+ "root": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
  "type": "asset_db"
 }

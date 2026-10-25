@@ -81,8 +81,12 @@ ASSETS = [
      "interfaces": ["glove_box", "perforated_floor"], "dims_source": "not measured",
      "notes": "videos show the PA12 toy insects tumbling; fines fall through the drum and the perforated floor"},
     {"id": "pa12_toy_insect_batch", "name": "Printed PA12 toy insects (print/fuse1 set), depowdering", "category": "printed_part",
-     "photos": ["sift_drum_load", "sift_tumble_2", "sift_floor_1", "sift_floor_3"], "role": "physical size standards for the sieve and vision lanes",
-     "interfaces": [], "dims_source": "design", "notes": "geometry in print/fuse1 (91 STLs, Merkle-addressed); several small toys visible on the Sift floor grate"},
+     "photos": ["sift_drum_load", "sift_tumble_2", "sift_floor_1", "sift_floor_3", "pa12_toys_box", "pa12_toys_two_on_floor"],
+     "role": "physical size standards for the sieve and vision lanes", "status": "PRINTED + DEPOWDERED (observed)",
+     "interfaces": [], "dims_source": "design",
+     "notes": "geometry in print/fuse1 (91 STLs, Merkle-addressed). Box photo: wings, legs and antennae mostly intact; count and per-toy "
+              "identity not yet checked against the manifest; a few blue FDM strings cling to some toys (cross-contamination to remove "
+              "before imaging); one blue FDM part is in the box"},
     {"id": "fdm_trommel_attempt_1", "name": "FDM print attempt 1 of the trommel (blue translucent filament)", "category": "printed_part",
      "photos": ["fdm_trommel_attempt1"], "role": "trommel parts: caps with spokes, drum rings, crank, stand feet",
      "interfaces": [], "dims_source": "not measured", "status": "FAILED (observed)",

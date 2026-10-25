@@ -1,5 +1,5 @@
 {
- "atoms": 865,
+ "atoms": 867,
  "external": [
   {
    "claim": "THIRD",
@@ -343,8 +343,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 1,
-   "commits": 1,
+   "claude_coauthored_commits": 2,
+   "commits": 2,
    "id": "leaf:assets/README.md",
    "kind": "meta",
    "leaf": "d05a59dc4b8006084fd6497615768e8fa5bd25506880f9e2c27eafc982822b1c",
@@ -427,15 +427,15 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 1,
-   "commits": 1,
+   "claude_coauthored_commits": 2,
+   "commits": 2,
    "id": "leaf:assets/photos.json",
    "kind": "meta",
-   "leaf": "1900df5c5678244ac47204e1f238fe3e7352f13df1ba16f0dbb775c715d08bb0",
+   "leaf": "3ad0f89c30a6e9452ab9827664432ff818d729930c286538387ba442159354d9",
    "licence": "MIT",
    "module": "repo-meta",
    "path": "assets/photos.json",
-   "sha256": "a32624a0095ae5131533d9f4cd9c1e0d4ac6a71d7023690b59cded82af781c19",
+   "sha256": "77612810291277474628aa451d4addab9990ed9e4d040809ca186c565ad29ffa",
    "status": "built",
    "terms": []
   },
@@ -469,8 +469,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/fdm_trommel_attempt1.jpg",
    "kind": "meta",
    "leaf": "59dbc98b58fce93f1606665346004677702f11a2419aacc5c79f159a9445783b",
@@ -497,8 +497,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/fuse_side_fan.jpg",
    "kind": "meta",
    "leaf": "06acf006109199608bb8d793ec4ece26431e262a5eec22d1423d724600dd2822",
@@ -595,6 +595,34 @@
   },
   {
    "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:assets/photos/pa12_toys_box.jpg",
+   "kind": "meta",
+   "leaf": "222761c6e69ccf119ca265dbd7b6d75b055132839ec1fc31705fd820e14de0c5",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "assets/photos/pa12_toys_box.jpg",
+   "sha256": "9d819a7ac5271eaa71b803d37fcf7f7911a4cfc986556debd0b19d110b1eca4e",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:assets/photos/pa12_toys_two_on_floor.jpg",
+   "kind": "meta",
+   "leaf": "8e3704aaad10bfb133687f50f754c3c9d13071d1fba14e3f723343bd906ff81b",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "assets/photos/pa12_toys_two_on_floor.jpg",
+   "sha256": "ce17c7f7fdd8c11d9b19c4301fab5a937b2105ca580ae0eded7cf54d00958187",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
    "claude_coauthored_commits": 1,
    "commits": 1,
    "id": "leaf:assets/photos/plate384_ruler.jpg",
@@ -665,8 +693,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/sift_drum_load.jpg",
    "kind": "meta",
    "leaf": "ca54767536efb2b028ef5bafdefe1e922e945b8612b48c797a8de8e033af8a4b",
@@ -679,8 +707,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/sift_floor_1.jpg",
    "kind": "meta",
    "leaf": "c6ff3f0d14447ca1f5a85e97e9c7c3568a3a90a223c737b6eaa70855c649acf4",
@@ -693,8 +721,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/sift_floor_2.jpg",
    "kind": "meta",
    "leaf": "a0aa532016f8a6e52d3dbd578c411e50fbb70d4bf378ffbaefba287fc6c93233",
@@ -707,8 +735,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/sift_floor_3.jpg",
    "kind": "meta",
    "leaf": "a464f49444b1c3ac3287775c07383b55cb2999a1f02f60b77f8934af0b25d6ee",
@@ -721,8 +749,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/sift_gloves_overview.jpg",
    "kind": "meta",
    "leaf": "48ddd8edcd74d199dd5f43c905f541998a2bbc6e3cf3503d7a87ad07428c657d",
@@ -805,8 +833,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/videos/sift_tumble_1.mp4",
    "kind": "meta",
    "leaf": "c1e0197a132d56539dd3c3ec3b0cd10b7123cf5daa9ad2561f39e53b1372109b",
@@ -819,8 +847,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/videos/sift_tumble_2.mp4",
    "kind": "meta",
    "leaf": "843cb3b88ee7e1f507ddcc57b2ee25e9e0920b2172ae88a04f3424f24428a928",
@@ -907,15 +935,15 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 2,
-   "commits": 2,
+   "claude_coauthored_commits": 3,
+   "commits": 3,
    "id": "leaf:baebugs/assets.py",
    "kind": "code",
-   "leaf": "2669ac26d5d3eff9d02d0a89a7404aa67e0b584f118fa5fde9929a5917993251",
+   "leaf": "19795c11a063f69a601b3750e8b22ed667145b765605c9f8a9407aaafd9f0825",
    "licence": "MIT",
    "module": "python-package",
    "path": "baebugs/assets.py",
-   "sha256": "3fa9d9761fd4b81522a2a5f483694a551ef1f9f20d5e31e24a9cac952846d88f",
+   "sha256": "8448defa71099b4dbe343ce1100bb8e23661fc4b2ebb3284eaa4f892f9faf7b1",
    "status": "tested",
    "terms": []
   },
@@ -1969,8 +1997,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 1,
-   "commits": 1,
+   "claude_coauthored_commits": 2,
+   "commits": 2,
    "id": "leaf:baebugs/trommel_plate.py",
    "kind": "code",
    "leaf": "4303d988c7a37be35cdcaae1d3b92ec0251775908914ec233e5dbe48a8eedf88",
@@ -2305,15 +2333,15 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 2,
-   "commits": 2,
+   "claude_coauthored_commits": 3,
+   "commits": 3,
    "id": "leaf:daisy/assets_mmr.jsonl",
    "kind": "ledger",
-   "leaf": "7fe0101c356d0fcb285eaa2936dba423c8458049cc0264ebe3089a586c02a608",
+   "leaf": "90574de16ebe1b2a769764033cffef473d48f68b1bc8e00d95979a4972466752",
    "licence": "MIT",
    "module": "custody-ledgers",
    "path": "daisy/assets_mmr.jsonl",
-   "sha256": "589ebb4eae8b4c5608662aa9b0f9f7ac7d101c2af01b63adb4419b26bf8e237f",
+   "sha256": "4a89aa88aa33f63c79164b7cbaa8993335b83005c43bbd6a45b73ce1bd855eb9",
    "status": "built",
    "terms": []
   },
@@ -3889,15 +3917,15 @@
   },
   {
    "claim": "OWN+TERMS",
-   "claude_coauthored_commits": 2,
-   "commits": 2,
+   "claude_coauthored_commits": 3,
+   "commits": 3,
    "id": "leaf:kg/assets.json",
    "kind": "data",
-   "leaf": "810cd4737a008baf9363c09fc937a38f7ce4fc8a1470858f8276d542f8851fe4",
+   "leaf": "df9352e49539a80a1cee247903067b89ed788bb94e2adb02f45f441e129ecb03",
    "licence": "MIT + gbif-media terms",
    "module": "knowledge-graph",
    "path": "kg/assets.json",
-   "sha256": "11d2d16549da7cdbfe6fea6c430e29760e2b00cf941fc865539defca35601a83",
+   "sha256": "08a3f0bf2e21926d193cefd6506e3b2a20ba4231192a652a03f2d06fd2eab7eb",
    "status": "built",
    "terms": [
     "ext:gbif-media"
@@ -10297,8 +10325,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:print/packages/trommel_biokea_split.zip",
    "kind": "print",
    "leaf": "a2f776688e33b1949ad40a966835b70e3014256b3bbedae4a78b395957a80e83",
@@ -10311,8 +10339,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:print/packages/trommel_biokea_split/README.md",
    "kind": "print",
    "leaf": "e0934d28becce47a5bb74493c1c9ee300221b997ee15113e12513c1a2c5ba009",
@@ -10325,8 +10353,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:print/packages/trommel_biokea_split/fuse1_zones/fuse1_zones_build.stl",
    "kind": "print",
    "leaf": "381e10d6cc7c9ede795aa9286d7df2d283bc56617f8853ac78d6b0b6f714beb6",
@@ -10339,8 +10367,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:print/packages/trommel_biokea_split/fuse1_zones/trommel_zone_2mm.stl",
    "kind": "print",
    "leaf": "b8a7756c0401ab5a89cbfb9f8e398d512acee737053a90aafaaca5944d457c68",
@@ -10353,8 +10381,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:print/packages/trommel_biokea_split/fuse1_zones/trommel_zone_4mm.stl",
    "kind": "print",
    "leaf": "e79490a2d6d641612902e5697143424a76643fcb400349ee5dcde4a3ad0f0433",
@@ -10367,8 +10395,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:print/packages/trommel_biokea_split/fuse1_zones/trommel_zone_7mm.stl",
    "kind": "print",
    "leaf": "6b48e51e34bc78de94935fdba7ed20432824ca1c92b6a53e2fd0c429cc803691",
@@ -10381,8 +10409,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:print/packages/trommel_biokea_split/manifest.json",
    "kind": "print",
    "leaf": "09b646f5276a3e23904cb0ab3d73be713cccde466b988fa460fb230ac8841ef0",
@@ -10395,8 +10423,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:print/packages/trommel_biokea_split/x1c_rest/trommel_cap_inlet.stl",
    "kind": "print",
    "leaf": "b3a3ca84c151e3eb4f23002ba11a4767daa934f3382a56d2d06b84f4cccf7979",
@@ -10409,8 +10437,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:print/packages/trommel_biokea_split/x1c_rest/trommel_cap_outlet.stl",
    "kind": "print",
    "leaf": "73b3b5bc874b4f2f0e71ea590f967e44cc61bbebdb86792bc4152354d56a92c2",
@@ -10423,8 +10451,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:print/packages/trommel_biokea_split/x1c_rest/trommel_crank_hand.stl",
    "kind": "print",
    "leaf": "b7da21d53222438ed676fb600b5b131cd3b174a81a1393000cb6995fe17d4110",
@@ -10437,8 +10465,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:print/packages/trommel_biokea_split/x1c_rest/trommel_stand_inlet.stl",
    "kind": "print",
    "leaf": "6ce6800e21b6124fd4fb0ecd8fe3c688e7599575133f895f0b7f08a87c2a73be",
@@ -10451,8 +10479,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:print/packages/trommel_biokea_split/x1c_rest/trommel_stand_outlet.stl",
    "kind": "print",
    "leaf": "3e71b036782582e26c957537ad72ace6690d646b04e676eee90a26759d230d20",
@@ -10465,8 +10493,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:print/packages/trommel_biokea_split/x1c_rest/x1c_rest_plate.stl",
    "kind": "print",
    "leaf": "29ebdc41984eefa2065d55b6afabcccf1d463f2bc93efc84023f08f858605b54",
@@ -12226,7 +12254,7 @@
     "OWN": 34
    },
    "id": "module:custody-ledgers",
-   "root": "03cf29e89fcc63b0fb63fa00ea85cd4ba69a2a2604e84715617dfbb53a9cfea0",
+   "root": "75ac1d75740373ddee811cfd1b95ef52c6e65827dfc74f4c70f558954d3423ab",
    "status": {
     "built": 34
    },
@@ -12304,7 +12332,7 @@
     "OWN+TERMS": 6
    },
    "id": "module:knowledge-graph",
-   "root": "b5e306268c8eb22412e48c628975acd2c1820cd019033b2600b4c55da8e5e5df",
+   "root": "499b5c828f5eeed2dd21f0a2f1ff7a90642fe9a85750e2c8924feca30795d341",
    "status": {
     "built": 6
    },
@@ -12369,7 +12397,7 @@
     "OWN+TERMS": 8
    },
    "id": "module:python-package",
-   "root": "bbe25ab4d31406cc8305d73c91b6da9ea0c574b4875c98363f42b65686862bb3",
+   "root": "1fdae0902a96777a673ea60da75cd1478b4f7b62ba3f13745693e414f31df445",
    "status": {
     "built": 55,
     "tested": 31
@@ -12379,14 +12407,14 @@
    ]
   },
   "repo-meta": {
-   "atoms": 47,
+   "atoms": 49,
    "claims": {
-    "OWN": 47
+    "OWN": 49
    },
    "id": "module:repo-meta",
-   "root": "dacef764e560b4f17147f827f23d45d62f58ca8a7ee138740b67cd0e3b9ca4ab",
+   "root": "d70c7c8676a78e85c826da88c0f41e8408a91f2e7e62efcb1b2dd65ec56fa230",
    "status": {
-    "built": 47
+    "built": 49
    },
    "terms": []
   },
@@ -12416,9 +12444,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "337336dd883b41da867c8274052519c5dca29a6168b669b550f065fbb966c1ba",
+ "root": "c117b62b20179d2b7cfa39e0b99b99248d15d2881e122269857895991f7ba0aa",
  "totals": {
-  "OWN": 796,
+  "OWN": 798,
   "OWN+TERMS": 49,
   "THIRD": 20
  },

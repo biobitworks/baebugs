@@ -341,5 +341,29 @@
   "file": "assets/videos/sift_tumble_2.mp4",
   "published_sha256": "078f5b8b31447683926f2f724b29810caaae21d897b6c7481a32140f771a0a06",
   "note": "audio removed, metadata stripped, 960 px"
+ },
+ {
+  "photo_id": "pa12_toys_box",
+  "original_sha256": "d3002ba152a96ef05f705c55f3b66875f50e42333f346c54512dfd1723579521",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/pa12_toys_box.jpg",
+  "published_sha256": "9d819a7ac5271eaa71b803d37fcf7f7911a4cfc986556debd0b19d110b1eca4e"
+ },
+ {
+  "photo_id": "pa12_toys_two_on_floor",
+  "original_sha256": "402d9dbd542dad842503cebf0db2887763c4b295854ef9aed4e45b88b31958e3",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/pa12_toys_two_on_floor.jpg",
+  "published_sha256": "ce17c7f7fdd8c11d9b19c4301fab5a937b2105ca580ae0eded7cf54d00958187"
  }
 ]
