@@ -79,7 +79,9 @@ def drum_zone(hole_d):
     ang = [i * 360 / P["n_ribs"] for i in range(P["n_ribs"])]
     ribs = [box(P["rib_h"] + 1, P["rib_w"], L - 4).translate([ri - P["rib_h"], -P["rib_w"] / 2, 2]).rotate([0, 0, a]) for a in ang]
     half = math.degrees((P["rib_w"] / 2 + hole_d / 2 + 0.8) / ri)
-    holes = radial_holes(od, w, 4, L - 4, hole_d, P["hole_web"], ang, half)
+    band = P.get("hole_band")          # perforate only a centred band so fines land inside the tray under this zone
+    z0, z1 = ((L - band) / 2, (L + band) / 2) if band else (4, L - 4)
+    holes = radial_holes(od, w, z0, z1, hole_d, P["hole_web"], ang, half)
     return union([body, spigot] + ribs) - union(holes)
 
 

@@ -1,5 +1,5 @@
 {
- "atoms": 780,
+ "atoms": 808,
  "external": [
   {
    "claim": "THIRD",
@@ -1113,11 +1113,11 @@
    "commits": 1,
    "id": "leaf:baebugs/print_parts.py",
    "kind": "code",
-   "leaf": "8b6cedb952bfc571c538419e534bf42f5807d553db8bd65ea2a71421774d1639",
+   "leaf": "965d64985e7b22bacf3893bf1505b7154a97a543f8deb9473dfe72aac352216a",
    "licence": "MIT",
    "module": "python-package",
    "path": "baebugs/print_parts.py",
-   "sha256": "bc5908d20d34982dbb9c6404c7c51206b5bd1dbca01426638cdc4a97ed7e608a",
+   "sha256": "25a0ad040770d0c3a1172b59b57ca104314dcb07dc8edc2db23b25b10fa57a09",
    "status": "tested",
    "terms": []
   },
@@ -1431,6 +1431,20 @@
    "path": "baebugs/triage.py",
    "sha256": "00bc367aa866b7c255f1bd0578f10d2f38bcf2a3fa6e7cbebacd5f1908181ea0",
    "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:baebugs/trommel_plate.py",
+   "kind": "code",
+   "leaf": "bbe22f39d7b22c8fb40f1bac58e44b01222f62de323b33337ebf90efe0c3db53",
+   "licence": "MIT",
+   "module": "python-package",
+   "path": "baebugs/trommel_plate.py",
+   "sha256": "a5667ed4b2b58bf6ec628842601e6f3ac4069496cc8e77ce393b9252edb72e40",
+   "status": "tested",
    "terms": []
   },
   {
@@ -3763,6 +3777,20 @@
    "module": "notebooks",
    "path": "notebooks/toy_insect_kg_lomo.ipynb",
    "sha256": "0c62a8fb324e808082d93be22cec1a23935c5a4b76c1e3bd4f3d68722b5eb60f",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:notebooks/trommel_plate.ipynb",
+   "kind": "notebook",
+   "leaf": "cea20bb9ab0f98fb86a60a8bc250070b0f99263692d0abda59406649be0a7aa9",
+   "licence": "MIT",
+   "module": "notebooks",
+   "path": "notebooks/trommel_plate.ipynb",
+   "sha256": "6c4396adad47f1cadd980cbffc5a7c4bc326756f8e7d048e6bfa63199c7bfedb",
    "status": "built",
    "terms": []
   },
@@ -9674,6 +9702,356 @@
   },
   {
    "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:print/packages/trommel_biokea_x1c.zip",
+   "kind": "print",
+   "leaf": "ff53d3af790c0bc338151acd47c24313f5699188d36ec74df0bdb0782608a487",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_biokea_x1c.zip",
+   "sha256": "7aa693669d8a3ac8e464e2c2638f2c49723ceb0b1a928954f6f7b03e0c8fdea1",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:print/packages/trommel_biokea_x1c/README.md",
+   "kind": "print",
+   "leaf": "241f3aa0f3a378dd0f501823066d4883745da14941aafa6f95f7fe26a13ce796",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_biokea_x1c/README.md",
+   "sha256": "76c11de7b26dde136193a86c778532f1fca1003e3497035c8b9548618c6bf8ed",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:print/packages/trommel_biokea_x1c/manifest.json",
+   "kind": "print",
+   "leaf": "311d1f867ae1821a609d866b96240284985140f06f2fd151373c19b7845a53cd",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_biokea_x1c/manifest.json",
+   "sha256": "b690dbe311fd45bb24095a3c34a4553273f5a4b7172ed17dd1c749ac6c34bc62",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:print/packages/trommel_biokea_x1c/plate_preview.png",
+   "kind": "print",
+   "leaf": "b8ada982ae5d522ad08d31215daef6398283baae722dccd3f2c317d7c1c64692",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_biokea_x1c/plate_preview.png",
+   "sha256": "e46e977d195abedc5eabd559aa8c3a332acc0161589fefa55b0729867cfa140c",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:print/packages/trommel_biokea_x1c/stl/trommel_cap_inlet.stl",
+   "kind": "print",
+   "leaf": "61995c44f4f1c6db2cae4605f0b019a53ecfa0968be81741c404bfd2563d6104",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_biokea_x1c/stl/trommel_cap_inlet.stl",
+   "sha256": "5aabdafd3583e97377f78f6a56b83634e51b50222c810ad40250b8f34b0d3f9f",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:print/packages/trommel_biokea_x1c/stl/trommel_cap_outlet.stl",
+   "kind": "print",
+   "leaf": "9ccf9bc9b07b36f2b2762fafbe67ad01d3ad9c2a01903289ab39829332b26e31",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_biokea_x1c/stl/trommel_cap_outlet.stl",
+   "sha256": "a009d946c8f13c66b2cd3b2e86547e97d2af0f81a3aac00749771162e06a67bd",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:print/packages/trommel_biokea_x1c/stl/trommel_crank_hand.stl",
+   "kind": "print",
+   "leaf": "056b31603cb0ea1ab6d19fbaae517397e8c3f2e92c87991417bbda24776e478e",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_biokea_x1c/stl/trommel_crank_hand.stl",
+   "sha256": "ea5f0e9963d6a2a61651ccbf2301340979cab69026ba0ee14044d327a384c144",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:print/packages/trommel_biokea_x1c/stl/trommel_stand_inlet.stl",
+   "kind": "print",
+   "leaf": "e7f87d1298c40df526301efed80cfeb130904575e2071d6e1e00b843c786db43",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_biokea_x1c/stl/trommel_stand_inlet.stl",
+   "sha256": "4b1c46ae316f2791f6f0a5be3149e51457699fb475f8150b2329f2fad11b38f8",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:print/packages/trommel_biokea_x1c/stl/trommel_stand_outlet.stl",
+   "kind": "print",
+   "leaf": "f1a08f5b9ce53fe9b463ee49c18a13e405653f8804fce3ff2a9f3a1a4dc07faf",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_biokea_x1c/stl/trommel_stand_outlet.stl",
+   "sha256": "4ac2533a8db3bcb1159c2eee14dbf3fd7c8902099a0c913c01eb8785f02378b0",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:print/packages/trommel_biokea_x1c/stl/trommel_zone_2mm.stl",
+   "kind": "print",
+   "leaf": "bcb33fd4c26b3f2b53bc75d6b748b74ead31ebcf0c49d3fc258b2931c83c9921",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_biokea_x1c/stl/trommel_zone_2mm.stl",
+   "sha256": "37f2e8ff9c8c6cb96a76fb1b226cf5ca09a5b92d67ebb446f13d2ce6192128a8",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:print/packages/trommel_biokea_x1c/stl/trommel_zone_4mm.stl",
+   "kind": "print",
+   "leaf": "4b786d266f61d1e18ba60b0fedcd5919ac7af449107d6f41305919d46fb6ad97",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_biokea_x1c/stl/trommel_zone_4mm.stl",
+   "sha256": "6717bc04768870ae9d6b10b54e20f94987d22c661086b1e12c3d131c1de92761",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:print/packages/trommel_biokea_x1c/stl/trommel_zone_7mm.stl",
+   "kind": "print",
+   "leaf": "dea64b746cc892e32b884e8893da442d512bd54dd021d63ccba31a4551a8e57e",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_biokea_x1c/stl/trommel_zone_7mm.stl",
+   "sha256": "6f8e72ee2085d18d38ce3928b603e6d178b66adfd47e6fb70317baf95666a738",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:print/packages/trommel_biokea_x1c/trommel_plate_x1c.3mf",
+   "kind": "print",
+   "leaf": "b0d8a0f4d917033ed4a30a5a9782ffb705d716c9911bcf5d5800041db7d171e0",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_biokea_x1c/trommel_plate_x1c.3mf",
+   "sha256": "c6a9cdbf64f07d701253232ca4559b51d8b48af307a73b8280fda697f1d7b65f",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:print/packages/trommel_biokea_x1c/trommel_plate_x1c.stl",
+   "kind": "print",
+   "leaf": "e6bd88cf3b6b2bf001e608604893e8967690c2ee7636318cf0aab4064df4e1ca",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_biokea_x1c/trommel_plate_x1c.stl",
+   "sha256": "6bbdee0637b73f24d5af86fc39d94176bce2cde36095f2fe70a203843cdf28a2",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:print/packages/trommel_minimum.zip",
+   "kind": "print",
+   "leaf": "80542dc41fa5398963121770eecc6ea3728e8dc26aae849163c116a8f6b9193d",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_minimum.zip",
+   "sha256": "b907f4ee138edbc59a46a6acdf86e936185248e2146bb5ab3008fae9624c95e4",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:print/packages/trommel_minimum/README.md",
+   "kind": "print",
+   "leaf": "827f14720353170df01ad85a2c95b31a03ce7abb5a7f005e953fddf2845addee",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_minimum/README.md",
+   "sha256": "d98cda1a05a021539402f04192fd6ca3714dba8d1bebce2e55ef5287121d461b",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:print/packages/trommel_minimum/manifest.json",
+   "kind": "print",
+   "leaf": "51b1c6e11168d08ffb33afb34eed60869cc7ae136e654692e084e9df97bd4db9",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_minimum/manifest.json",
+   "sha256": "14803b6416d68d1b5d28f760e49bd95b0e3f367da9b279280010371377f3c45e",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:print/packages/trommel_minimum/stl/trommel_cap_inlet.stl",
+   "kind": "print",
+   "leaf": "526858899ecd4995c5f10f3ff617fa75d60c073bdf46499a05f58a428df618c9",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_minimum/stl/trommel_cap_inlet.stl",
+   "sha256": "406b2927eb902b52cc3139696fcf89059be1d1bd0408bb5192d5bf8d00dfe80e",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:print/packages/trommel_minimum/stl/trommel_cap_outlet.stl",
+   "kind": "print",
+   "leaf": "c40684b9b46fc37e430cf03fd17fea79e508f22ce2c1b01494cedd099a2696e5",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_minimum/stl/trommel_cap_outlet.stl",
+   "sha256": "fef87f7f0cc0d822815cdb27b5899773f223eec0b21087c9ebb4598af9ff812a",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:print/packages/trommel_minimum/stl/trommel_crank_hand.stl",
+   "kind": "print",
+   "leaf": "5e7bc9bc6c946c88575f1a3ea5b6b054c9b98cb63091abb477e8b2cc8215f2d4",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_minimum/stl/trommel_crank_hand.stl",
+   "sha256": "427d857804dc8d455404298e6879d2824375d8a12853c5ccf391bdba6aa12f1d",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:print/packages/trommel_minimum/stl/trommel_stand_inlet.stl",
+   "kind": "print",
+   "leaf": "5694c19e6195cf672caff527df91dd977399583cffba60552dd62b3399e69379",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_minimum/stl/trommel_stand_inlet.stl",
+   "sha256": "8ed1ad9ffc2a8b98c18b7a5bca34718a094c5da46e417f8246634ab98567592a",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:print/packages/trommel_minimum/stl/trommel_stand_outlet.stl",
+   "kind": "print",
+   "leaf": "404342694c7af0e2f495539a11cf98343815ac4bbe15f474d41184baeeef2060",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_minimum/stl/trommel_stand_outlet.stl",
+   "sha256": "238768d4c6e607568d55f9d4002c9797dfc3c0f3c3eeff1a1d915e9577f4e933",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:print/packages/trommel_minimum/stl/trommel_zone_2mm.stl",
+   "kind": "print",
+   "leaf": "0b0d95a7d8e87f7f1bb353314ab46577e56e1ce46df00c1e0b2bf1d8cd4856a8",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_minimum/stl/trommel_zone_2mm.stl",
+   "sha256": "cf07b0fd8a8a32ceed7ba8c1ecd2f949decebb54f184bc40d7ce0babfc2b3d5e",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:print/packages/trommel_minimum/stl/trommel_zone_4mm.stl",
+   "kind": "print",
+   "leaf": "9a63f9899f041bfe554723f672f40d529438f502ca79e748e60e3a631774e7d8",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_minimum/stl/trommel_zone_4mm.stl",
+   "sha256": "bd67b2b875b79de37d12249457c99d84882991cd69ad9cd3b94030bf81e90e02",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:print/packages/trommel_minimum/stl/trommel_zone_7mm.stl",
+   "kind": "print",
+   "leaf": "d69af14f9cb1da3fe8ccb2ca2883ff9bbf8840836d5bce2ff144edee9dce100b",
+   "licence": "MIT",
+   "module": "lab-parts",
+   "path": "print/packages/trommel_minimum/stl/trommel_zone_7mm.stl",
+   "sha256": "01fc906fa7e4a661d2922499e407b02d6371ec7e36547790bbfe914890d4b6b6",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
    "claude_coauthored_commits": 1,
    "commits": 1,
    "id": "leaf:print/parts/README.md",
@@ -10962,6 +11340,20 @@
   },
   {
    "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:tests/test_trommel_plate.py",
+   "kind": "test",
+   "leaf": "397c7c4f107f05f0371f39b4291feb5c57997b4bb45a7bb3177ee29250aceb98",
+   "licence": "MIT",
+   "module": "tests",
+   "path": "tests/test_trommel_plate.py",
+   "sha256": "9a2090dd3f0a72ed15e4a9f7f970b3e4271891684a2b923d73c8b70e425b36f0",
+   "status": "tested",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
    "claude_coauthored_commits": 2,
    "commits": 2,
    "id": "leaf:tests/test_twin_sim.py",
@@ -11116,14 +11508,14 @@
    ]
   },
   "lab-parts": {
-   "atoms": 106,
+   "atoms": 131,
    "claims": {
-    "OWN": 106
+    "OWN": 131
    },
    "id": "module:lab-parts",
-   "root": "a974e369a4d04726a4c9c501332d27f33a0c4598c977ac3985fb1e0589ee3430",
+   "root": "a21967d41d0ae4bab8f768113c024752ce4055e983ffee80cbb9fc9eb4d34bdf",
    "status": {
-    "built": 106
+    "built": 131
    },
    "terms": []
   },
@@ -11140,14 +11532,14 @@
    "terms": []
   },
   "notebooks": {
-   "atoms": 17,
+   "atoms": 18,
    "claims": {
-    "OWN": 17
+    "OWN": 18
    },
    "id": "module:notebooks",
-   "root": "f575207403b2c66d86e9d8176e5ba00650170d9c9e903bb6c89962d1fdef4609",
+   "root": "f3b21be7614924fd38d1a629f7c1d4861832347c127642f30deb4bcc79e541a8",
    "status": {
-    "built": 17
+    "built": 18
    },
    "terms": []
   },
@@ -11166,16 +11558,16 @@
    ]
   },
   "python-package": {
-   "atoms": 82,
+   "atoms": 83,
    "claims": {
-    "OWN": 75,
+    "OWN": 76,
     "OWN+TERMS": 7
    },
    "id": "module:python-package",
-   "root": "3d389279ca310628cdfb7246826025fbb1be6e8991270ac305083b6d05b15771",
+   "root": "042146978fd3105231b5e92c562bd41086d0f043be8bb1931829e4de07858ca0",
    "status": {
     "built": 54,
-    "tested": 28
+    "tested": 29
    },
    "terms": [
     "ext:ultralytics"
@@ -11194,14 +11586,14 @@
    "terms": []
   },
   "tests": {
-   "atoms": 36,
+   "atoms": 37,
    "claims": {
-    "OWN": 36
+    "OWN": 37
    },
    "id": "module:tests",
-   "root": "33bf673cdefaa9da250bff3c2bfc2d56a5e7b85b9aa09f662ad481b16f53233a",
+   "root": "15aa3bfe966302865f933e9cc003fb999c2d6c32da3b36b449b652cd44013d80",
    "status": {
-    "tested": 36
+    "tested": 37
    },
    "terms": []
   },
@@ -11219,9 +11611,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "58655a19d8e57c53e0b7ff50370ee931c2601624b06544dfe738311683c7591e",
+ "root": "0abb943bba6e790df7c77cc616e285e301c649fb61f3cf659b08ee364b94e643",
  "totals": {
-  "OWN": 714,
+  "OWN": 742,
   "OWN+TERMS": 46,
   "THIRD": 20
  },
