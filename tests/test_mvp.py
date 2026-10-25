@@ -21,6 +21,7 @@ def test_pack_levels_have_addresses(pack):
     assert mvp.get(pack, "root")["root"] == pack["root"]
     assert mvp.get(pack, "leaf:LICENSE")["claim"] == "OWN"
     assert mvp.get(pack, "module:daisy-results")["leaves"]
+    assert all(r["leaf"] for r in pack["remixes"])          # printable labware remixes resolve to STL leaves
 
 
 def test_prove_matches_and_differs(pack):

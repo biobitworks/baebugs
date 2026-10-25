@@ -2685,11 +2685,11 @@ null
 {
 "claim": "OWN",
 "kind": "code",
-"leaf": "30471b9ce4bd9581c73f59bdf9628377872d3f681f9d4348184fdaa7b6c0bbe9",
+"leaf": "09564404c9c5f8e84a5e0cee4401e8d8cdd8b588c46a2e99d3132db8005fd0da",
 "licence": "MIT",
 "module": "python-package",
 "path": "baebugs/graph_mcp.py",
-"sha256": "5589fac5a845b20d3429d2045125dd47856ca4bbfd5b1d2d11475ac5ab52db41",
+"sha256": "480226ba358c0137489204fb97185692c032e91774c0a5eedeb610fdf986289c",
 "status": "built"
 },
 {
@@ -2885,11 +2885,11 @@ null
 {
 "claim": "OWN",
 "kind": "code",
-"leaf": "c4823c6cad4b46f9fba9f756eb4554f68a7f9431a161b630ade70d8982dd550b",
+"leaf": "c8a7f8e581e02abdbcff0dba7f27d88f0cef1a4c234522fe29393b93aecb24f7",
 "licence": "MIT",
 "module": "python-package",
 "path": "baebugs/mvp.py",
-"sha256": "812ae64d3ee53c4c91703cbdcd9ca0f16e0a191a88da056fcd2aa1c70bed76e4",
+"sha256": "6851dd6608d40302c417502dfea117fb4862bc87671ab929b2c59079cfd0bc35",
 "status": "tested"
 },
 {
@@ -9845,21 +9845,21 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
-"leaf": "d9ed181e03d88e0b9ae8b8ce6e121dee404772f3d68f7eeb0a17a7c1a2698e0f",
+"leaf": "1ada73cbe00ef33d6e629dd88494adb934cc100d031993a7b0a8200c37fb2e62",
 "licence": "MIT",
 "module": "repo-meta",
 "path": "pyproject.toml",
-"sha256": "e13664d2b1917edb3954a9be0671211673c144075e6d14e3890a8f42885330da",
+"sha256": "466ef53867c8baed7df8c709d9bf0ac711858089d0e8626ca42047066fd96841",
 "status": "built"
 },
 {
 "claim": "OWN",
 "kind": "meta",
-"leaf": "86e35bc6c281168aadc4e5638dead31c047aa9e412ffa8610a8d0c13f51acb4f",
+"leaf": "49ac719949caaaa99de1017214506ad257545083129df04898ce9b05f00fc3b8",
 "licence": "MIT",
 "module": "repo-meta",
 "path": "requirements.txt",
-"sha256": "f1784c0736bc3caeb17db0c5f98815d0c1c093c243cdb32741fcb56cfce42e05",
+"sha256": "568304f92f5bcaecfbc4c1bd135666c2987ffbaf8c7aa6e90f7240b2930d9fbb",
 "status": "built"
 },
 {
@@ -10155,11 +10155,11 @@ null
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "90c64e1fab00f47c959c6342ba8a9cba12d68327ad37a657d7b4048f34259346",
+"leaf": "a600e898af83fc6258ec82f953cebcfd007a9a74249f76a33ad333d23c42a3f0",
 "licence": "MIT",
 "module": "mvp-site",
 "path": "site/mvp/index.html",
-"sha256": "e3e7bc8fa64c2a6dffb523445fc9d86795b0fa63db8d9826d19652f64025eef3",
+"sha256": "e510b0958c4b3cd9d72728e918a26587d75012eaf2c70166794dafe134e2c523",
 "status": "built"
 },
 {
@@ -10435,11 +10435,11 @@ null
 {
 "claim": "OWN",
 "kind": "test",
-"leaf": "2b8a51947f611d11e43eeb79321754629e2046e16c84e32f4f3f95d406c06e2f",
+"leaf": "b1cc06833229851e280eb529ae4a9b962cb26b3413e7cbc7c66f475dfcc041c7",
 "licence": "MIT",
 "module": "tests",
 "path": "tests/test_mvp.py",
-"sha256": "ce723a8f822c68398e571a079a867208da2d178a497e133b54f46cf11131a8b2",
+"sha256": "6dedaf4596fec6fe7f1a2e97a637cc7f3029deb16aee2add2bd566b2cce9ea45",
 "status": "tested"
 },
 {
@@ -10721,7 +10721,7 @@ null
 "OWN": 30
 },
 "id": "module:mvp-site",
-"root": "3a484fb0a5f1b91749e7e21d6ab8e66b8fe0db4a600e3c50d70be4c01c8573cc",
+"root": "2c1857dd6918a8e580da95650b08e8587f062cf27ff7d0b59faa1bcb8c7f5e05",
 "status": {
 "built": 30
 },
@@ -10760,7 +10760,7 @@ null
 "OWN+TERMS": 8
 },
 "id": "module:python-package",
-"root": "7e1102a2c963c5be6979c04102d8e521c63239f0620b44538bb16d228d042fc8",
+"root": "426e8e8695933e7809c6255e59578b7f80b6e2b5f4edd253846d78f33b0444d2",
 "status": {
 "built": 55,
 "tested": 31
@@ -10775,7 +10775,7 @@ null
 "OWN": 34
 },
 "id": "module:repo-meta",
-"root": "1dfd54c07e0cb512d82c9f354f96db0e73853ff7be933e7752e4c1f0674dea37",
+"root": "8fbf6cbdcf64dda0177fab7845be94a0634d063a81856fa541058eebe350bf09",
 "status": {
 "built": 34
 },
@@ -10787,7 +10787,7 @@ null
 "OWN": 39
 },
 "id": "module:tests",
-"root": "72d805c2e795a952b5452e132b6b6e3f6808fb7014a0a9327b728c01a882a6c9",
+"root": "71f732e849366ca8a3093254efabaf76dcf696b7cb240e250d1bceb5f4736f6c",
 "status": {
 "tested": 39
 },
@@ -11396,6 +11396,136 @@ null
 "status": "SIMULATED"
 }
 ],
+"remixes": [
+{
+"bbox_mm": [
+127.76,
+85.48,
+20.0
+],
+"grams": 50.6,
+"id": "print-rack-96",
+"leaf": "92c27bd73a58928a5a14cbbde4b29dc5c931c79aa18b6f7b46d6aff6e8ea84f4",
+"licence": "MIT",
+"material": "PETG",
+"name": "SBS 96 rack, 9 mm pitch",
+"opentrons": "print/labware/opentrons/baebugs_rack_96.json",
+"path": "print/labware/stl/print-rack-96.stl",
+"usd": 1.11
+},
+{
+"bbox_mm": [
+127.76,
+85.48,
+30.0
+],
+"grams": 56.0,
+"id": "print-cryo-24",
+"leaf": "71398756409f5eafdc5d99797de0b36f8ec6834364e8b0f73cf3ce3e5c8674cf",
+"licence": "MIT",
+"material": "PETG",
+"name": "SBS 4x6 rack, 2 mL cryotubes",
+"opentrons": "print/labware/opentrons/baebugs_cryo_24.json",
+"path": "print/labware/stl/print-cryo-24.stl",
+"usd": 1.23
+},
+{
+"bbox_mm": [
+127.76,
+85.48,
+40.0
+],
+"grams": 62.8,
+"id": "print-conical-15",
+"leaf": "fd4bda7858db43763facd08c9f16fe09d7fcc3720415bc6adab8308629973f99",
+"licence": "MIT",
+"material": "PETG",
+"name": "SBS 3x5 rack, 15 mL conicals",
+"opentrons": "print/labware/opentrons/baebugs_conical_15.json",
+"path": "print/labware/stl/print-conical-15.stl",
+"usd": 1.38
+},
+{
+"bbox_mm": [
+127.76,
+85.48,
+40.0
+],
+"grams": 61.2,
+"id": "print-conical-50",
+"leaf": "2051e448210fb31d3d29bafcbe60f3b0a023ef254643f8515bc50683fb1c9d4e",
+"licence": "MIT",
+"material": "PETG",
+"name": "SBS 2x3 rack, 50 mL conicals",
+"opentrons": "print/labware/opentrons/baebugs_conical_50.json",
+"path": "print/labware/stl/print-conical-50.stl",
+"usd": 1.35
+},
+{
+"bbox_mm": [
+133.0,
+133.0,
+12.0
+],
+"grams": 42.9,
+"id": "print-cryo-100",
+"leaf": "c125e41c6dd68c158fa8eaa6394945728e1d3ab4df5b9de60a64429819dad54f",
+"licence": "MIT",
+"material": "PP (filament)",
+"name": "10x10 cryo grid insert, 133 mm",
+"opentrons": null,
+"path": "print/labware/stl/print-cryo-100.stl",
+"usd": 1.93
+},
+{
+"bbox_mm": [
+127.76,
+85.48,
+12.0
+],
+"grams": 24.6,
+"id": "print-frame-sbs",
+"leaf": "2a0f5b06e1a854bc8bdab083fc8ac71c55c4b7aa61a1a4e81e0a8853007c80b8",
+"licence": "MIT",
+"material": "PETG",
+"name": "SBS lipped frame ('folder')",
+"opentrons": null,
+"path": "print/labware/stl/print-frame-sbs.stl",
+"usd": 0.54
+},
+{
+"bbox_mm": [
+127.76,
+85.48,
+8.0
+],
+"grams": 24.3,
+"id": "print-grid-mesh",
+"leaf": "7c5b54d53eb4ee14fc2ae6bc043de1af84287e0c54980ddbb0e8a17ea6274ced",
+"licence": "MIT",
+"material": "PETG",
+"name": "SBS 2x3 screened grid frame",
+"opentrons": null,
+"path": "print/labware/stl/print-grid-mesh.stl",
+"usd": 0.54
+},
+{
+"bbox_mm": [
+117.16,
+74.88,
+6.0
+],
+"grams": 13.9,
+"id": "print-honeycomb",
+"leaf": "71cf01166e8ca8f51f9860f3159651748a395c143736a376168b3770f38f8cc6",
+"licence": "MIT",
+"material": "PLA",
+"name": "Honeycomb insert for SBS frame",
+"opentrons": null,
+"path": "print/labware/stl/print-honeycomb.stl",
+"usd": 0.28
+}
+],
 "repo": "https://github.com/biobitworks/baebugs",
 "results": [
 {
@@ -11439,9 +11569,9 @@ null
 ]
 }
 ],
-"root": "39dc5040bb95b436210b758c4694fac14a07545d7fe1792543b00800da2b9947",
+"root": "4cab9a2351d80a5a8049960a3e9d0c12427a29b86702ea667121e7e4f93f9c96",
 "roots": {
-"aok": "b853dfc7badd68a9c236a0a4e06eda4b9aba36e846eda0514f43e387c85630a3",
+"aok": "134da9c78d9e104fdc3044a05ed3506ef1c0458a0860410ef66d645be18a64cb",
 "assets": "2aa571d0973f1995c303b86f4f8f9816f485a73bfd59822593d6caa138f6b72e",
 "assets_mmr": "0db28037a5744bcad439c5869ae5a1b4e849cbb65656c8532b82a70e03174fe4",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
