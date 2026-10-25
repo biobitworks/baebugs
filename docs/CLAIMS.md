@@ -2,7 +2,7 @@
 
 Every file is an *atom* with a claim, a licence in context, a status and a hash (full list for agents: [`kg/aok.json`](../kg/aok.json)). This page is the short version. It records what the licences say; it is not legal advice.
 
-**AoK root:** `1cb63c663525b583fa21b521693d65a4f8cdd75da38e82f261ffa6c8b6f942eb` · 940 atoms · OWN 868 · OWN+TERMS 52 · THIRD 20
+**AoK root:** `ec161c5e6d4f5929939559d4c721ea711253cf19fac4a6223c9bc4376d24aade` · 1104 atoms · OWN 1032 · OWN+TERMS 52 · THIRD 20
 
 | claim | meaning |
 |---|---|
@@ -18,16 +18,16 @@ Every file is an *atom* with a claim, a licence in context, a status and a hash 
 | daisy-protocols | 17 | OWN 17 | none | `401e52c7913d` |
 | daisy-results | 12 | OWN+TERMS 12 | gbif-media, ultralytics | `770c10edefa4` |
 | dashboards | 16 | OWN 16 | none | `350619827ff6` |
-| docs | 67 | OWN 67 | none | `82949ba1588e` |
+| docs | 93 | OWN 93 | none | `9c18c244f860` |
 | kaggle-kernels | 10 | OWN+TERMS 10 | gbif-media, ultralytics | `ff1a3e54c36a` |
 | knowledge-graph | 8 | OWN+TERMS 8 | gbif-media | `992bb16f6ba8` |
 | lab-parts | 172 | OWN 172 | none | `baa2835216a7` |
-| mvp-site | 31 | OWN 31 | none | `dde49f45a0d7` |
-| notebooks | 24 | OWN 24 | none | `04607d87cccf` |
+| mvp-site | 47 | OWN 47 | none | `302623438aa9` |
+| notebooks | 25 | OWN 25 | none | `05dd464c17cf` |
 | opentrons-modules | 13 | OWN+TERMS 13 | opentrons | `40b680b50dba` |
-| python-package | 92 | OWN 83, OWN+TERMS 9 | ultralytics | `23a2f8fb19df` |
-| repo-meta | 57 | OWN 57 | none | `14484f1b69f2` |
-| tests | 40 | OWN 40 | none | `4e6cfa0233ac` |
+| python-package | 92 | OWN 83, OWN+TERMS 9 | ultralytics | `5928e74d455f` |
+| repo-meta | 174 | OWN 174 | none | `78917980e108` |
+| tests | 44 | OWN 44 | none | `c41bca39a5e6` |
 | toy-insects | 326 | OWN 326 | none | `6f32a71b22ca` |
 
 ## Not ours (used, credited, never claimed)
