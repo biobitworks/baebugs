@@ -130,7 +130,7 @@ const STEPS = [
  {k:'Sieve robot', hue:'#a99cf4', html:`
   <div class="kicker">02 · Modified filtration system</div>
   <h2>Plastic plates to explore, a stainless stage for the robot.</h2>
-  <p class="lede">Cheap punched or printed plastic plates are for trying hole shapes. The robot stage is metal: two laser-cut 316L slot plates stacked, the top one driven across on a lead screw, so a single stage steps its opening down through size classes instead of swapping plates.</p>
+  <p class="lede">Rule from <code>baebugs/labbox.py</code>: plastic is the frame and robot interface, metal is the aperture. One printed tray frame takes 100 × 100 mm inserts 0.3 to 0.8 mm thick, so the aperture belongs to the insert. FDM PLA and PETG failed on the perforated trommel drum, so drum sections moved to PA12 on the Fuse 1+. Cheap punched or printed plastic plates are for trying hole shapes. The robot stage is metal: two laser-cut 316L slot plates stacked, the top one driven across on a lead screw, so a single stage steps its opening down through size classes instead of swapping plates.</p>
   <div class="grid">
    <div class="card"><h3>Plastic lane</h3><div class="big">${plastic.length} <small>plates</small></div><p class="note">PET or acetate (punched), plastic canvas and tulle (bought), PA12 printed on a Fuse 1+. Swappable by hand or by an arm. Holes under 1 mm are not printable.</p></div>
    <div class="card"><h3>Metal lane</h3><div class="big">${metal.length} <small>stainless options</small></div><p class="note">Perforated sheet ${metal.filter(r=>r.id.includes('PERF')).map(r=>r.inscribed_d_mm).join(', ')} mm, woven mesh, and slots. Thin, rigid, washable, and cut by laser for custom shapes.</p></div>
@@ -159,7 +159,7 @@ const STEPS = [
      <ul style="margin:4px 0 8px;padding-left:18px;font-size:13.5px">${p.owlv2.map(o=>`<li>${esc(o.label)} ${o.conf} → ${o.order?esc(o.order.label)+' '+o.order.conf:'n/a'}</li>`).join('')}</ul>
      <p><span class="tag t-warn">VLM</span>counted ${p.vlm_count??'n/a'} toys</p>
      <div class="note">frame root <span class="hash">${short(p.frame_root)}</span></div></div>`).join('')}
-   <div class="card"><h3>Where cameras check</h3><p class="note">Intake (scale ruler), each sieve width (G_measured), capture trays (G_capture), and label reading for museum specimens. The detectors disagree on the box photo (YOLOE 0, OWLv2 1, VLM ${V.photos[1]?.vlm_count}), which is why each model's answer is kept separately rather than merged.</p></div>
+   <div class="card"><h3>Where cameras check</h3><p class="note">Intake (scale ruler), each sieve width (G_measured), capture trays (G_capture), and label reading for museum specimens. The order model also labelled a patch of bare floor Lepidoptera at 0.998 in the two-toy photo, so a photo-versus-render check is the next fix. The detectors disagree on the box photo (YOLOE 0, OWLv2 1, VLM ${V.photos[1]?.vlm_count}), which is why each model's answer is kept separately rather than merged.</p></div>
   </div>
   ${sources('vision')}`},
 
