@@ -242,7 +242,7 @@ def write_csv(log, path="daisy/impact_events.csv"):
                 i = x["impact"]
                 b, v = i.get("vs_baseline") or {}, i.get("vs_values") or {}
                 w.writerow([r["index"], "evaluation", x["actor"]["name"], x["actor"]["kind"], json.dumps(x["weights"]),
-                            x["values"], x["n"], x["pass"], i["vs_truth"], len(b.get("gained", [])), len(b.get("lost", [])),
+                            x["values"], x["n"], x["pass"], i.get("vs_truth", x["n"] - x["pass"]), len(b.get("gained", [])), len(b.get("lost", [])),
                             len(v.get("gained", [])), len(v.get("lost", [])), "", r["root"][:16]])
             elif x["type"] == "consensus":
                 w.writerow([r["index"], "consensus", "+".join(a[:6] for a in x["actors"]), "", "", x["values"], "", "", "",
