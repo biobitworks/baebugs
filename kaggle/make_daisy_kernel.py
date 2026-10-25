@@ -265,7 +265,7 @@ summary = {"protocol": PROTO["id"], "protocol_sha256": PROTO_SHA, "custody": CUS
 import shutil
 for name in RESULTS:
     src = WORK / "runs" / name / "weights" / "best.pt"
-    if src.exists() and RESULTS[name]["status"] == "EXECUTED":
+    if src.exists() and RESULTS[name]["status"] in ("EXECUTED", "OBSERVED_EXPLORATORY"):   # EVAL relabels executed runs
         shutil.copy2(src, WORK / f"{name}_best.pt")
 shutil.rmtree(WORK / "runs", ignore_errors=True); shutil.rmtree(WORK / "val", ignore_errors=True)
 print("events root", root)
