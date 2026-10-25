@@ -1,3 +1,5 @@
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/brand/baebugs_logo_dark.svg"><img src="assets/brand/baebugs_logo.svg" alt="baebugs" width="360"></picture></p>
+
 # baebugs
 
 **→ [Open the MVP graph](https://biobitworks.github.io/baebugs/site/mvp/)**: review the whole project from root to leaf, see what is claimed under which licence ([short version](docs/CLAIMS.md)), check any hash in your browser, and contest it. Agents: `npx github:biobitworks/baebugs get root` · `baebugs-graph get root` · MCP `python -m baebugs.graph_mcp`.

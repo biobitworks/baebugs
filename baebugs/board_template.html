@@ -26,6 +26,12 @@ a{color:var(--accent)}
 header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px}
 h1{font:800 clamp(2rem,5vw,3.4rem)/1 var(--f-display);letter-spacing:-.02em;margin:0;text-wrap:balance}
 h1 .dot{color:var(--pin)}
+h1{display:flex;align-items:center;gap:12px}
+.dm{display:none!important}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dm{display:inline-flex!important}:root:not([data-theme="light"]) .lm{display:none!important}}
+:root[data-theme="dark"] .dm{display:inline-flex!important}:root[data-theme="dark"] .lm{display:none!important}
+:root[data-theme="light"] .lm{display:inline-flex!important}
+.logo{display:inline-flex;width:1.15em;height:1.15em;flex:none}.logo svg{width:100%;height:100%}
 .sub{color:var(--muted);max-width:60ch;margin:6px 0 0}
 .root{font:12px var(--f-mono);color:var(--muted);text-align:right}
 .root b{display:block;font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase}
@@ -90,7 +96,7 @@ dialog::backdrop{background:rgba(10,16,13,.55)}
 <main class="wrap">
   <header>
     <div>
-      <h1>Protocol Board<span class="dot">.</span></h1>
+      <h1><span class="logo lm" aria-hidden="true">/*__MARK__*/</span><span class="logo dm" aria-hidden="true">/*__MARKDARK__*/</span><span>Protocol Board<span class="dot">.</span></span></h1>
       <p class="sub">Pin the protocols, prints and bench gear you want. Open a card to run it step by step, remix it, or contest it. Every card points at exact bytes by hash.</p>
     </div>
     <div class="root"><b>Graph root</b><span id="root"></span></div>

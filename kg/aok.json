@@ -1,5 +1,5 @@
 {
- "atoms": 925,
+ "atoms": 934,
  "external": [
   {
    "claim": "THIRD",
@@ -333,11 +333,11 @@
    "commits": 6,
    "id": "leaf:README.md",
    "kind": "meta",
-   "leaf": "11382f7e097d3380780d71d954e6f074929a66927b62b2792705401595ed4351",
+   "leaf": "2a214efc46866539ec134bb53e1c6c2c7b69ff90331fe04b8542e21ee986deb2",
    "licence": "MIT",
    "module": "repo-meta",
    "path": "README.md",
-   "sha256": "ea4a1071ece245b5d4133e2a00ee7aeec177d368d99c9ac316cf33929b3a5fe3",
+   "sha256": "cf49300efb48509ed0daba3c0b4849222e13f9b7d18cc6cdfece0de8f0648f0e",
    "status": "built",
    "terms": []
   },
@@ -380,6 +380,118 @@
    "module": "repo-meta",
    "path": "assets/boxes_owlv2.json",
    "sha256": "efafffb5b2fbfb5133f6d2a48dc213e6f79ee88302a6e18f2c57859b3570c04c",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:assets/brand/baebugs_logo.svg",
+   "kind": "meta",
+   "leaf": "a4f685e1f10b599cd578b8707bcfba7488dfc931a278a967ad654f793a2023d4",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "assets/brand/baebugs_logo.svg",
+   "sha256": "8467fa7b506324109277302922595711f476d033be082cd90b4502e877128676",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:assets/brand/baebugs_logo_dark.png",
+   "kind": "meta",
+   "leaf": "1ad315c9900aab5c3a7a3aee79fca7640e29aea9bfa7f0704ceebc9a6d14352e",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "assets/brand/baebugs_logo_dark.png",
+   "sha256": "0e947d034b90f5c4e32f748c387ea86f052ef7bc9793bd1a9d33d42597f38518",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:assets/brand/baebugs_logo_dark.svg",
+   "kind": "meta",
+   "leaf": "497a2bd93801d2283b5761586ff2744d5aba2c603d3488d8ec1d86e051c842f6",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "assets/brand/baebugs_logo_dark.svg",
+   "sha256": "9a180a8f955a6fe513da36a590cd3496f703f9f8fc365be7d68599072b760b00",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:assets/brand/baebugs_logo_light.png",
+   "kind": "meta",
+   "leaf": "f7ec0f954371803106a2d89756fd86894563af10120d192d0a80d8a2600d953b",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "assets/brand/baebugs_logo_light.png",
+   "sha256": "5388d8edfca53ba2f9b081ed683366abb86b5f71506fd9051fcd4241205d53b3",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:assets/brand/baebugs_mark.svg",
+   "kind": "meta",
+   "leaf": "84412fb6c170f9f7cebdebcf201a150350b51bda6c5546de62d38b758b119bf0",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "assets/brand/baebugs_mark.svg",
+   "sha256": "44a43f02222578f66fcc05a2a20b1410154cdacf539448db9261c2edfd3bb8f7",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:assets/brand/baebugs_mark_512.png",
+   "kind": "meta",
+   "leaf": "e1374f407a350443b11a48e3aab1c39a3722b813399b3c8755bb967bf7aecfaf",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "assets/brand/baebugs_mark_512.png",
+   "sha256": "cca14cd46c423011d3752de18c06bfb5747aa6335312c48eddff24bbba496a01",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:assets/brand/baebugs_mark_dark.svg",
+   "kind": "meta",
+   "leaf": "a1ed25831534a47b80d08cfb1d3ae84c9c1c8918a3184d547185ba106fa1f3b4",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "assets/brand/baebugs_mark_dark.svg",
+   "sha256": "2df75b8c6af44c0e2dbbc522b1a141be504382709bf2956b5b9b6dfc4af158e8",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:assets/brand/favicon_64.png",
+   "kind": "meta",
+   "leaf": "0f6f88af806ee4ce1ca72920d648b7cf76afe4b376cecb2e9efdfcce4c5eeee1",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "assets/brand/favicon_64.png",
+   "sha256": "1c0f1c14b2a77896027ed2911aec65d233e50484639284b6dcbe550e8997780c",
    "status": "built",
    "terms": []
   },
@@ -919,8 +1031,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:baebugs/asbuilt.py",
    "kind": "code",
    "leaf": "c80eef7f195f6ff310f5b76199aa43e338e793872099f90cd47efdbc72a6b291",
@@ -995,11 +1107,11 @@
    "commits": 1,
    "id": "leaf:baebugs/board.py",
    "kind": "code",
-   "leaf": "6f809d1fef3830890aa486e02dca12eed1af8e33a3da6aa2d1340117843b878f",
+   "leaf": "226eb63b49ce589bcb24891f6053377550ae31017c0cd46cf9c4fa70a503913d",
    "licence": "MIT",
    "module": "python-package",
    "path": "baebugs/board.py",
-   "sha256": "73dde2bdb277adb9be554473fe849aab2ed79a51f0c0d502402432ab93e6a2e3",
+   "sha256": "a72c797d44791a8fb11bb2b0b76a3f684036c91aae3e26ad22f30a474c8af1fe",
    "status": "built",
    "terms": []
   },
@@ -1009,11 +1121,25 @@
    "commits": 1,
    "id": "leaf:baebugs/board_template.html",
    "kind": "code",
-   "leaf": "462bc3cfbc41f4b245cb06f5be14ce9f173b4d9d994dd8c4ccd834958f07cff5",
+   "leaf": "162b9576e60bef51c5e331a064b6156847fa3fac46371381c5cc43d7c5640013",
    "licence": "MIT",
    "module": "python-package",
    "path": "baebugs/board_template.html",
-   "sha256": "80c8e93ecd088051a064579a1758741ce867ef63b134584bd38d6869a7bd0159",
+   "sha256": "a10cca1aa5cf2ea9b0af73cd1e257baad4ce8c44654e76e80c8b6011ea8c6d0b",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:baebugs/brand.py",
+   "kind": "code",
+   "leaf": "012ce4fe996075997baf83f99c9bb5d75c2e3362848080b2a45c1da1d47947a1",
+   "licence": "MIT",
+   "module": "python-package",
+   "path": "baebugs/brand.py",
+   "sha256": "09d4b3f4cd8426833a89c377dacfd6ad77857bda39ef53dbbbd9e7c0d06640ed",
    "status": "built",
    "terms": []
   },
@@ -2515,8 +2641,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 1,
-   "commits": 1,
+   "claude_coauthored_commits": 2,
+   "commits": 2,
    "id": "leaf:daisy/labbox_mmr.jsonl",
    "kind": "ledger",
    "leaf": "c6e5575db78ec0f7c5d03f5c27d0c33ad4f4f28399187b7b74cb8a2195254b59",
@@ -3139,8 +3265,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:docs/ASBUILT_LOMO.md",
    "kind": "doc",
    "leaf": "9e35baf7f2221ea2ba75ac2f5c19f3fd2ccb13e3e1f3d3d3052f88c04119001c",
@@ -4211,8 +4337,8 @@
   },
   {
    "claim": "OWN+TERMS",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:kg/asbuilt.json",
    "kind": "data",
    "leaf": "c0683083cd9e2369ebb11f4bc640b7cb2fba90f3d89826e8ec244d002722338a",
@@ -12053,11 +12179,11 @@
    "commits": 1,
    "id": "leaf:site/board/index.html",
    "kind": "page",
-   "leaf": "0078c307443bc1a8257ccd59309b3ea8d948a7c3cbb2e5e34cb53b6f023dfde9",
+   "leaf": "e48c3eb06f14e8e0e1d07b0af7b9bc98209d3f25dc91d1f833f5150751122000",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/board/index.html",
-   "sha256": "de78e8311eb27a87dad6a787234788064e2fc70d6c0d4ae1ad65412b1c6828b5",
+   "sha256": "6ec88b4a3ed918af14750de52e9645acdc997d219e62ab99218c3a7dd11fe2d4",
    "status": "built",
    "terms": []
   },
@@ -13172,7 +13298,7 @@
     "OWN": 31
    },
    "id": "module:mvp-site",
-   "root": "001e0dfcb2dc9eb74f622859648c872f2c0902d5bedab113326d6920a23e8ab0",
+   "root": "048cc7cf790509ec448f6921951fcdf237851b5207cacc435e282fca192c85b9",
    "status": {
     "built": 31
    },
@@ -13205,15 +13331,15 @@
    ]
   },
   "python-package": {
-   "atoms": 90,
+   "atoms": 91,
    "claims": {
-    "OWN": 82,
+    "OWN": 83,
     "OWN+TERMS": 8
    },
    "id": "module:python-package",
-   "root": "38f67c801332f715addaa1cab2c63d1b1a8a94f79f151ae56b4daa4c9255ab2f",
+   "root": "4efe491f5be83704476c9739bdb87321d6d5c856b388934d983f8c554a718791",
    "status": {
-    "built": 58,
+    "built": 59,
     "tested": 32
    },
    "terms": [
@@ -13221,14 +13347,14 @@
    ]
   },
   "repo-meta": {
-   "atoms": 49,
+   "atoms": 57,
    "claims": {
-    "OWN": 49
+    "OWN": 57
    },
    "id": "module:repo-meta",
-   "root": "e080d0ffdf2cb3a71ac7e6dec52a2a377a430db6ec8a4d5b93636167050f9d8f",
+   "root": "14484f1b69f2c31e7404a0c57723d704f9c7859209c679d9985c98c3c83be7ff",
    "status": {
-    "built": 49
+    "built": 57
    },
    "terms": []
   },
@@ -13258,9 +13384,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "bea2078f1f597c3b20abf7e71fc02b8248b69f384d1ed727eaa18b26f8123719",
+ "root": "811dd5e50f9285fbc18cd09a02cdef1d70979dea4fa868dc4db8058d6a002c15",
  "totals": {
-  "OWN": 855,
+  "OWN": 864,
   "OWN+TERMS": 50,
   "THIRD": 20
  },

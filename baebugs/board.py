@@ -130,6 +130,10 @@ def build(repo="."):
 
 def render(data, full_doc):
     tpl = Path(__file__).with_name("board_template.html").read_text()
+    mk = Path(__file__).resolve().parents[1] / "assets/brand/baebugs_mark.svg"
+    mkd = mk.with_name("baebugs_mark_dark.svg")
+    tpl = tpl.replace("/*__MARK__*/", mk.read_text().strip() if mk.exists() else "")
+    tpl = tpl.replace("/*__MARKDARK__*/", mkd.read_text().strip() if mkd.exists() else "")
     html = tpl.replace("/*__DATA__*/null", json.dumps(data, separators=(",", ":"))).replace("__REPO__", REPO_URL)
     if full_doc:
         html = ('<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
