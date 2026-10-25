@@ -75,4 +75,4 @@ def test_photo_breaks_reach_the_mvp_custody_count():
     from baebugs import mvp
     c = mvp.build(lt.ROOT)["custody"]
     assert c["withheld_photo_breaks"] == len(lt.PHOTOS)
-    assert c["breaks"] == c["result_breaks"] + c["withheld_photo_breaks"]
+    assert c["breaks"] == c["result_breaks"] + c["withheld_photo_breaks"] + len(c["withheld_bench_sources"])
