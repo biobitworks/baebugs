@@ -8,6 +8,8 @@ ledgers, the logo (`assets/brand/`), the demo video and the reel's soundtrack (s
 Bench photos and videos in `assets/` were taken by the team at the event; they show third-party products and are published
 re-encoded without metadata; one photo with people's faces is withheld (hash only).
 
+`filtration-robot/` (SO-101 arm + webcam vision) was contributed by teammate lowojoandro through PR #24 with no separate licence file, so it is covered by the repository MIT licence as a contribution; its printable `filter_markers.pdf` is a fiducial marker sheet.
+
 ## Used under their own terms (not relicensed)
 | Thing | Licence | What it requires here |
 |---|---|---|
