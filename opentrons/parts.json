@@ -67,14 +67,14 @@
   {
    "part": "ot_handoff_plate",
    "stl": "stl/ot_handoff_plate.stl",
-   "sha256": "d123994e65897f66f2d0a711e261516a78aedde1a393d42641931ab40a86246a",
+   "sha256": "643cce3b18dbbf11b343047bf115e7c72fbf09a369d95415025ae1caab143b47",
    "watertight": true,
    "bbox_mm": [
     127.76,
     85.48,
     34.0
    ],
-   "volume_cm3": 48.04
+   "volume_cm3": 50.04
   }
  ]
 }

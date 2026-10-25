@@ -26,13 +26,13 @@
  },
  "wells": {
   "A1": {
-   "depth": 4,
-   "totalLiquidVolume": 7000,
+   "depth": 3,
+   "totalLiquidVolume": 5000,
    "shape": "circular",
    "diameter": 50.0,
    "x": 63.88,
    "y": 36.74,
-   "z": 8.0
+   "z": 9.0
   }
  },
  "groups": [

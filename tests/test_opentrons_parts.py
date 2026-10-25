@@ -13,6 +13,10 @@ def test_deck_parts_fit_the_slot_and_are_watertight():
         if name != "ot_mini_trommel_drum":
             assert abs(dx - SBS[0]) < 0.01 and abs(dy - SBS[1]) < 0.01, name
     assert O["axis_z"] - O["drum_od"] / 2 > O["well_depth"] + 2          # drum clears the bins
+    from manifold3d import Manifold
+    hz = O["skirt_h"] + O["plate_t"]
+    probe = Manifold.cube([2, 2, 0.5]).translate([SBS[0] / 2 - 1, SBS[1] / 2 - 7, hz - 3.6])
+    assert (parts()["ot_handoff_plate"] ^ probe).volume() > 1.9          # socket has a floor (not a through-hole)
 
 
 def test_labware_definitions_declare_flat_adapter_stacking():

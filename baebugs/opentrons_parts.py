@@ -91,7 +91,7 @@ def handoff_plate():
     vee = [Manifold.cube([3, 3, 30], True).rotate([0, 0, 45]).translate([x / 2 + sx * g / 2, y - 14, h + 11]) for sx in (-1, 1)]
     pad = cyl(1.2, O["pad_d"] / 2, seg=48).translate([22, y / 2, h])
     tag = box(O["tag"] + 0.4, O["tag"] + 0.4, 0.8).translate([x - 24, 8, h - 0.79])
-    socket = cyl(4.2, PP["mini_od"] / 2 + PP["fit"], seg=96).translate([x / 2, y / 2 - 6, h - 4])
+    socket = cyl(3.2, PP["mini_od"] / 2 + PP["fit"], seg=96).translate([x / 2, y / 2 - 6, h - 3])   # 3 mm recess, 1 mm floor
     return union([base, handle, pad]) - union(vee + [tag, socket])
 
 
@@ -136,8 +136,8 @@ def labware_defs():
                        O["axis_z"] + O["drum_od"] / 2 + 2, tw, grip_h=O["grip_h"])
     hz = O["skirt_h"] + O["plate_t"]
     handoff = _labware("baebugs_handoff_plate", "baebugs hand-off carrier (arm / suction / gripper)", hz + 22,
-                       {"A1": {"depth": 4, "totalLiquidVolume": 7000, "shape": "circular", "diameter": PP["mini_od"],
-                               "x": x / 2, "y": y / 2 - 6, "z": hz - 4}}, grip_h=O["grip_h"] / 2 + 2)
+                       {"A1": {"depth": 3, "totalLiquidVolume": 5000, "shape": "circular", "diameter": PP["mini_od"],
+                               "x": x / 2, "y": y / 2 - 6, "z": hz - 3}}, grip_h=O["grip_h"] / 2 + 2)
     return {d["parameters"]["loadName"]: d for d in (sieve, trommel, handoff)}
 
 
