@@ -65,7 +65,8 @@ def run_owl(model_id="google/owlv2-base-patch16-ensemble", conf=0.2, repo=".", o
         with torch.no_grad():
             enc = proc(text=texts, images=im, return_tensors="pt"); o = m(**enc)
         side = max(im.size)                                   # OWLv2 pads to a square
-        r = proc.post_process_object_detection(o, threshold=conf, target_sizes=torch.tensor([[side, side]]))[0]
+        pp = getattr(proc, "post_process_object_detection", None) or proc.image_processor.post_process_object_detection
+        r = pp(o, threshold=conf, target_sizes=torch.tensor([[side, side]]))[0]
         boxes = []
         for b, s, lab in zip(r["boxes"].tolist(), r["scores"].tolist(), r["labels"].tolist()):
             x0, y0, x1, y1 = (max(0, int(v)) for v in b)
