@@ -1,8 +1,11 @@
-"""Freeze DAISY-BB-002 (source-domain holdout) as preregistered in daisy/DAISY-BB-002-prereg.md.
+"""Freeze DAISY-BB-002 (source-domain holdout) as preregistered in daisy/DAISY-BB-002-prereg.md
+and amended (before any data/run) by daisy/DAISY-BB-002-prereg-amendment-1.md.
 
 Inherits settings, gates and variance from DAISY-BB-001b unchanged; pins the prereg sha256,
 the predecessor sha256 and the baebugs commit. Refuses to freeze unless every member used is
-VERIFIED and the dataset summary reports zero train/val overlap.
+VERIFIED and, PER RUN, no train-split file of a train member is byte-identical to a val-split
+file of any member evaluated in that run (pointer manifests). The global cross-dataset overlap is
+recorded but not used: r3 itself still holds the out-of-state photos in its train split.
 
   python kaggle/freeze_002.py --datasets /Volumes/magicBLACKbox/baebugs/daisy/datasets.json
 """
@@ -21,11 +24,23 @@ USE = ["baebugs-daisy-train", "baebugs-daisy-eval", "baebugs-daisy-holdout"]
 
 
 def runs():
-    base = SYN + PSE
-    out = [{"name": "CA_dominant", "train": base, "val": base + list(H.values())}]
-    for s, h in H.items():
-        others = [H[o] for o in H if o != s]
-        out.append({"name": f"LOSO_{s}", "train": base + others, "val": base + list(H.values()), "held_out": h})
+    hold = list(H.values())
+    return [{"name": "CA_only", "train": SYN + ["r3_ca"], "val": SYN + ["r3_ca"] + hold},
+            {"name": "Synth_only", "train": SYN, "val": SYN + ["r3_ca"] + hold}]
+
+
+def split_shas(manifests, name, split):
+    f = Path(manifests, f"{name}.jsonl")
+    return {l["sha256"] for l in map(json.loads, f.read_text().splitlines())
+            if l["path"].startswith(f"images/{split}/")}
+
+
+def run_leakage(manifests, runs_):
+    out = {}
+    for r in runs_:
+        tr = set().union(*(split_shas(manifests, m, "train") for m in r["train"]))
+        va = set().union(*(split_shas(manifests, m, "val") for m in r["val"]))
+        out[r["name"]] = {"train_files": len(tr), "val_files": len(va), "overlap": len(tr & va)}
     return out
 
 
@@ -43,19 +58,24 @@ def main():
     bad = {m: ds.get(m, {}).get("status") for m in need if ds.get(m, {}).get("status") != "VERIFIED"}
     if bad:
         raise SystemExit(f"refusing to freeze: not VERIFIED {bad}")
-    if s["global_leakage"].get("train_val_overlap"):
-        raise SystemExit(f"refusing to freeze: train/val overlap {s['global_leakage']}")
+    leak = run_leakage(Path(a.datasets).parent / "manifests", runs())
+    if any(v["overlap"] for v in leak.values()):
+        raise SystemExit(f"refusing to freeze: per-run train/val overlap {leak}")
     bundles = {b: [m for m in BUNDLES[b] if ds.get(m, {}).get("status") == "VERIFIED"] for b in USE}
     staged = sorted({m for ms in bundles.values() for m in ms})
     prev = json.loads(Path("daisy/DAISY-BB-001b.json").read_text())
     commit = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
     proto = {"id": "DAISY-BB-002", "status": "PROPOSED", "baebugs_commit": commit,
-             "preregistration": {"path": "daisy/DAISY-BB-002-prereg.md", "sha256": fsha("daisy/DAISY-BB-002-prereg.md")},
+             "preregistration": {"path": "daisy/DAISY-BB-002-prereg.md", "sha256": fsha("daisy/DAISY-BB-002-prereg.md"),
+                                 "amendment_1": {"path": "daisy/DAISY-BB-002-prereg-amendment-1.md",
+                                                 "sha256": fsha("daisy/DAISY-BB-002-prereg-amendment-1.md")}},
+             "split_report": json.loads((Path(a.datasets).parents[1] / "datasets" / "domain_split_report.json").read_text()),
+             "run_leakage": leak,
              "predecessor": {"protocol": "DAISY-BB-001b", "sha256": fsha("daisy/DAISY-BB-001b.json")},
              "datasets_root": s["root"], "roots": {m: ds[m]["merkle_root"] for m in staged},
              "bundles": bundles, "runs": runs(),
              "settings": prev["settings"], "gates": prev["gates"], "variance": prev["variance"],
-             "global_leakage": s["global_leakage"]}
+             "global_leakage": {**s["global_leakage"], "note": "includes r3 (not used by any 002 run) vs holdouts"}}
     Path(a.out).write_text(json.dumps(proto, indent=1, sort_keys=True))
     print(a.out, commit, len(staged), "members")
 

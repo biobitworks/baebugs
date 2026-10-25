@@ -74,18 +74,22 @@ REGISTRY = {
     "dataone_cib_raw":         {"path": f"{B}/dataone_cib", "kind": "tabular", "role": "source",
                                 "note": "raw DataONE soil survey; contains observer PII -> never staged"},
     "essig":                   {"path": f"{R}/essig", "kind": "json", "role": "context"},
+    "r3_ca":                   {"path": f"{B}/r3_ca", "kind": "yolo_seg", "role": "train",
+                                "derived_from": ["gbif_ca_2", "gbif_specimen_images"],
+                                "transform": "subset of pseudo_specimens_r3_real whose photo is byte-identical to a gbif_ca_2 / "
+                                             "gbif_specimen_images photo; r3 labels, ruler truth and split kept (domain_split.py)"},
     "holdout_az":              {"path": f"{B}/holdout_az", "kind": "yolo_seg", "role": "domain_holdout",
                                 "derived_from": ["gbif_az"],
-                                "transform": "YOLOE ruler-scaled teacher (train.pseudo_label_specimens, val_every=3) on gbif_az photos "
-                                             "not used in r3/teacher_check/rejected_v1 (domain_holdout.py)"},
+                                "transform": "subset of pseudo_specimens_r3_real whose photo is byte-identical to a gbif_az photo; "
+                                             "r3 labels + ruler truth, all photos in val (domain_split.py, 002 amendment 1)"},
     "holdout_nv":              {"path": f"{B}/holdout_nv", "kind": "yolo_seg", "role": "domain_holdout",
                                 "derived_from": ["gbif_nv"],
-                                "transform": "YOLOE ruler-scaled teacher (train.pseudo_label_specimens, val_every=3) on gbif_nv photos "
-                                             "not used in r3/teacher_check/rejected_v1 (domain_holdout.py)"},
+                                "transform": "subset of pseudo_specimens_r3_real whose photo is byte-identical to a gbif_nv photo; "
+                                             "r3 labels + ruler truth, all photos in val (domain_split.py, 002 amendment 1)"},
     "holdout_or":              {"path": f"{B}/holdout_or", "kind": "yolo_seg", "role": "domain_holdout",
                                 "derived_from": ["gbif_or"],
-                                "transform": "YOLOE ruler-scaled teacher (train.pseudo_label_specimens, val_every=3) on gbif_or photos "
-                                             "not used in r3/teacher_check/rejected_v1 (domain_holdout.py)"},
+                                "transform": "subset of pseudo_specimens_r3_real whose photo is byte-identical to a gbif_or photo; "
+                                             "r3 labels + ruler truth, all photos in val (domain_split.py, 002 amendment 1)"},
 }
 PII_COLS = re.compile(r"observer|email|phone|recorded_?by|creator|editor|owner|author|surveyor|contact|user_?name", re.I)
 EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
@@ -404,7 +408,7 @@ BUNDLES = {
     "baebugs-daisy-eval": ["teacher_check", "teacher_check2", "toy_renders"],
     "baebugs-daisy-context": ["dataone_cib_public", "essig", "gbif_manifests"],
     "baebugs-daisy-toykg": ["toy_kg"],
-    "baebugs-daisy-holdout": ["holdout_az", "holdout_nv", "holdout_or"],
+    "baebugs-daisy-holdout": ["r3_ca", "holdout_az", "holdout_nv", "holdout_or"],
 }
 
 

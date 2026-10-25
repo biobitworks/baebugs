@@ -107,7 +107,7 @@ def finite_last(csvp):
     return all(math.isfinite(v) for v in vals.values()), vals
 
 # G3b smoke: AMP is a conditional step decided by evidence, not a fixed setting
-smoke_run = PROTO["runs"][2]                                   # the all-data run
+smoke_run = PROTO["runs"][min(2, len(PROTO["runs"]) - 1)]          # 001: the all-data run; 002: last run
 dy = data_yaml("smoke", smoke_run["train"], smoke_run["val"])
 smoke = {}
 for amp in (False, True):
