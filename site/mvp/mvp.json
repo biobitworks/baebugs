@@ -1587,6 +1587,16 @@
 {
 "claim": "OWN",
 "kind": "code",
+"leaf": "e5ecabfb02291042c1af9dd6246762b3713ccd7ea661bc27a03b35d25e7e44b3",
+"licence": "MIT",
+"module": "python-package",
+"path": "baebugs/compare.py",
+"sha256": "a2b3e0f8504715591f3719094eef8d2ec37f8d108fcdc1aad78fb9ac5f15b3cc",
+"status": "tested"
+},
+{
+"claim": "OWN",
+"kind": "code",
 "leaf": "4aa901cc18794ad5aeca5f39001328e4831bde621b4544f79c552be56147abe3",
 "licence": "MIT",
 "module": "python-package",
@@ -2377,6 +2387,26 @@
 {
 "claim": "OWN",
 "kind": "protocol",
+"leaf": "280c68dae27b6cfb057c4a630d8f54368c02c4814550ee0e07776c40088678f9",
+"licence": "MIT",
+"module": "daisy-protocols",
+"path": "daisy/DAISY-BB-004-prereg-amendment-3.md",
+"sha256": "065bbaef95d6c5c57d182ddf3b1b23378b68a09b13dc87a7de9e511ae1a12706",
+"status": "frozen"
+},
+{
+"claim": "OWN",
+"kind": "protocol",
+"leaf": "2bec92ed86475c0ce8dba33fbbce68eabf93b14b66813f789e403f85f921b7cd",
+"licence": "MIT",
+"module": "daisy-protocols",
+"path": "daisy/DAISY-BB-004-prereg-amendment-4.md",
+"sha256": "cd1a03ad5a72f91b8b7709a0201b6eb3dc0362ad62a1f23b35942a4d51d5d89d",
+"status": "frozen"
+},
+{
+"claim": "OWN",
+"kind": "protocol",
 "leaf": "05a4b3627da8ee2c4f2e1cdb226225f700b0b4d6557f9b1944873cedc4b142a7",
 "licence": "MIT",
 "module": "daisy-protocols",
@@ -3127,11 +3157,11 @@
 {
 "claim": "OWN+TERMS",
 "kind": "code",
-"leaf": "7114d6167ee03f853eb52869e088fc3a3ad3f3023ff1bc70fb70dbeb4b90faf6",
+"leaf": "298f52a33843cce38bfa39f94195879be41ec9d97595beaef1e852b87b4d98a6",
 "licence": "MIT + gbif-media, ultralytics terms",
 "module": "kaggle-kernels",
 "path": "kaggle/daisy_bb_004/daisy_bb_004.ipynb",
-"sha256": "3a4d63c46872173312cb8773a75a41e3a620aea21cbbc4bf3a4c0cbd0fddf11d",
+"sha256": "f99e602ec19466c59aabdc258c4b91f39d1f4799291c8ca9413198f12da3d35c",
 "status": "built"
 },
 {
@@ -3177,11 +3207,11 @@
 {
 "claim": "OWN+TERMS",
 "kind": "code",
-"leaf": "0776c6add48a3693cf001689c44e5f7ff01040a17605da496f435cfcc0d2d22d",
+"leaf": "c6f3546f7aee9d513181b4e38e6ecabc410e035373196ee7ca92d0314afccbec",
 "licence": "MIT + ultralytics terms",
 "module": "kaggle-kernels",
 "path": "kaggle/make_taxon_kernel.py",
-"sha256": "d0e5c34a371fb6057ab5ab04616a4ca4ac3738742edde53e33246bcfb973ef4b",
+"sha256": "35c3aa14a95ba00247d0826f805bf9795e45ae366d16377481a81575541b3c30",
 "status": "built"
 },
 {
@@ -8357,6 +8387,16 @@
 {
 "claim": "OWN",
 "kind": "test",
+"leaf": "00b85283da3072d16b5ee6cd68e45860ceb44f8dfaaa057c370e0e86f1cc2656",
+"licence": "MIT",
+"module": "tests",
+"path": "tests/test_compare.py",
+"sha256": "6faf1aeb87188fc494e2d9c3e3b7509c3fcf76e1b4f7526baa03b24ffcfd1e25",
+"status": "tested"
+},
+{
+"claim": "OWN",
+"kind": "test",
 "leaf": "23d049d568bde4e0b43749c08a32c15b6916ea5b4e90a22d6f8366f83d734207",
 "licence": "MIT",
 "module": "tests",
@@ -8671,14 +8711,14 @@
 "terms": []
 },
 "daisy-protocols": {
-"atoms": 15,
+"atoms": 17,
 "claims": {
-"OWN": 15
+"OWN": 17
 },
 "id": "module:daisy-protocols",
-"root": "13bd3093c2a64553f7f0d4b76e67155990aef7362a2f54cecc26a73a01afc5e6",
+"root": "401e52c7913d2c364ed14e3c4f13694a3ed0bbc670b50b718e57ad49ae55a313",
 "status": {
-"frozen": 15
+"frozen": 17
 },
 "terms": []
 },
@@ -8727,7 +8767,7 @@
 "OWN+TERMS": 10
 },
 "id": "module:kaggle-kernels",
-"root": "906262f14f116d5007a3bb1476c8120f07adb4ef512d329e174b6acfd4f421b8",
+"root": "ff1a3e54c36a7e6e7a6439cfeef410da81e3093be6b2f650eb4a4bb65fd72868",
 "status": {
 "built": 10
 },
@@ -8801,16 +8841,16 @@
 ]
 },
 "python-package": {
-"atoms": 77,
+"atoms": 78,
 "claims": {
-"OWN": 71,
+"OWN": 72,
 "OWN+TERMS": 6
 },
 "id": "module:python-package",
-"root": "c33e2f1d756fac420bb4493ae133649d6c173d26205899f17b927f4fa7110824",
+"root": "4a774dbb5b871f28b714464a1b6b3bf1ebd4a4fcbeda665a6f45a091d27dddbb",
 "status": {
 "built": 53,
-"tested": 24
+"tested": 25
 },
 "terms": [
 "ext:ultralytics"
@@ -8829,14 +8869,14 @@
 "terms": []
 },
 "tests": {
-"atoms": 32,
+"atoms": 33,
 "claims": {
-"OWN": 32
+"OWN": 33
 },
 "id": "module:tests",
-"root": "4857f338963b6e3a9d9cad014bdf9b3d189f04d2f789b221650c0482605e4d35",
+"root": "e1bcd696a8ee9d092ca8e41d051a2fe932f77e0bb4a1bc29dbe308e33ae9c360",
 "status": {
-"tested": 32
+"tested": 33
 },
 "terms": []
 },
@@ -9476,9 +9516,9 @@
 ]
 }
 ],
-"root": "687c376bf4649b38b104421a190f72dba553f80fb7db26a23c201193d72ad07c",
+"root": "93f50060d21e9294da2657f6662f7a2e6226c905b945c4beb41c090aced65e42",
 "roots": {
-"aok": "09e841f4ff72c83f635b7802560c3b154ad28459ec4f14f0a2b390fbb0a0bfbd",
+"aok": "da159575f3aa0062188b4beab0ff4185e0bb88800ec2bf489b080e40fb77016d",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
 "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7",
 "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5",
@@ -13691,7 +13731,7 @@
 }
 ],
 "totals": {
-"OWN": 678,
+"OWN": 682,
 "OWN+TERMS": 42,
 "THIRD": 20
 },
