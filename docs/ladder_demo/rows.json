@@ -72,10 +72,10 @@
   "outcome": "APPROVE",
   "decided_by": "check:frame-diff",
   "rung": 1,
-  "label": "pick verified by Merkle diff",
+  "label": "pick verified: one break box around where the toy was",
   "novelty": 0.866,
-  "frame_root": "471b50d98a72fe9a9e06d116f5d417498a350a609184c7f7d35c5f303152fd5c",
-  "leaf": "f95978574d9cadc7c1c7e23a83af903183857ab9f99c97b5e521e8d7e584bf33"
+  "frame_root": "ee4384429797a6ea07b798e242d3788cf182a92c035939c6ce0d23da25b85b99",
+  "leaf": "9d01dd5db98119e5877eeb67771f64c951c200a2196ff4e776f00fbaff7563f6"
  },
  {
   "toy": "Halictidae_mean+1SD_13.4mm",
@@ -124,10 +124,10 @@
   "outcome": "APPROVE",
   "decided_by": "check:frame-diff",
   "rung": 1,
-  "label": "pick verified by Merkle diff",
+  "label": "pick verified: one break box around where the toy was",
   "novelty": 0.09,
-  "frame_root": "4c234b1adb67fbb7b5900afee978061e75da85fe5af50ebc6280fbcf0bafcc8c",
-  "leaf": "fc82ff21e0546114acfa1fc4d75a104ff248acd7cb6a213557adb577fdf87301"
+  "frame_root": "6f0238170debd4d4aeece99980f3db116169faa8aa95bb0cecdd1ab5ad58f800",
+  "leaf": "d898471a9532cf0b48611ee1dcbf23c06ad4e43f2de2fe97491e3ea195c4d93c"
  },
  {
   "toy": "Meloidae_mean-2SD_6.2mm",
