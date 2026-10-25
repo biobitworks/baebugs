@@ -152,3 +152,7 @@ MIT
 - [Essig Museum of Entomology](https://essigdb.berkeley.edu/query_specimens.html) / [Calbug](https://calbug.berkeley.edu/), via GBIF dataset `5d283bb6-64dd-4626-8b3b-a4e8db5415c3`
 - [BioKEA BugPicker](https://github.com/biokea/BugPicker) file protocol
 - Google Research, [VERID](https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/) (digital-twin preflight pattern)
+
+## Source-backed bounding-box viewer
+
+[Inspect recorded YOLOE and OWLv2 boxes on photographed printed insect toys](https://baebugs-lab-workcell.vercel.app/detection/). Model guesses, not verified species IDs or live robotic recovery.

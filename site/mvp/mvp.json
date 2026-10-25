@@ -2262,11 +2262,11 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
-"leaf": "e7ae4d821c83fcf78126392c078177cbe6af9457eea7ee1edf18893df1694188",
+"leaf": "b8874e1785d01c090e3470643ffa41140271bbf1da13539866ecfe0a0f022de8",
 "licence": "MIT",
 "module": "repo-meta",
 "path": "README.md",
-"sha256": "e46a275eb10d0596c145dc91d074d73694e3071bf3152a5748a55e4a6c813176",
+"sha256": "ca7b5311958ef4f27640bbfbd75d36c0ca3d9e03facf0661ddd519ffde16564f",
 "status": "built"
 },
 {
@@ -4622,11 +4622,11 @@ null
 {
 "claim": "OWN",
 "kind": "doc",
-"leaf": "0d2ec4145b0ec1752c4b602f3e8e5af0d0737e752ea1c5726d31c05eabee7aa1",
+"leaf": "8a4a6f04ed51d9cfd0cec81fbe8b2242ff903027d65132faf29b6fe58e45bd6f",
 "licence": "MIT",
 "module": "docs",
 "path": "docs/SUBMISSION_LINKS.md",
-"sha256": "70aaa9c96eeea7ce06024f20628d34b5b83bc18ace86e451ee42d2d74db8a852",
+"sha256": "b2b85d51d2858f778cb7cfd7e4b1197a55f17a1ecb25e50c56f2f0fc046f4d97",
 "status": "built"
 },
 {
@@ -5027,6 +5027,26 @@ null
 "module": "docs",
 "path": "docs/demo/record_demo.js",
 "sha256": "05936ce3f380223cbaadde89b7aefceea108903ccbf531eb8ff9efe6deec6c7d",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "c152746f31e8fc3d8576cb410340acf6206a94daa867f36865fed06665f2fc5c",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/detection/RECORDED_BOX_RELEASE_20261025.json",
+"sha256": "f20c33c22502d3ab243bb6ce9272a7439155ad6e326593b9c7faa1444a1804f3",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "dae165c23a1f22960528a948d175532b2a76811008c3ac15f6c77f48463638b1",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/detection/RELEASE_TEST_PREDECESSOR_20261025.json",
+"sha256": "64a22663c7a2c1653da6b22c4ff98cca50024c2e86679ba1d28339ea2188d2e7",
 "status": "built"
 },
 {
@@ -5597,6 +5617,36 @@ null
 "module": "docs",
 "path": "docs/story/step_7.png",
 "sha256": "b47388166b2a1b8d6a75310095fb19cdc28e077b1003817e816d7157e698f4b7",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "8239a644ebaeff4f779d0ec145fbf57cbbe319bf283f8aee28684b46402fa5d6",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/submission/FINAL_SITE_REVIEW_20261025.md",
+"sha256": "7f7052296847195d336782d7c5d61a3b2381db92f188c83d2d291c17b57c026b",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "a7bd9d3176c59c05c76108aaa904bf44a1b910d0a75f00fbfe8687f3afc23b59",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/submission/RELEASE_CHECK_RECEIPT_20261025.json",
+"sha256": "eb273e3938e65082d973f84abb17e1cdc5a6d5b62f1a7f34bfdd5128f8b01768",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "bbfaaed8922c561d6c321686d71557e864787ea040256ab00c154425ac75a25b",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/submission/RELEASE_SOURCE_SUCCESSOR_20261025.json",
+"sha256": "1e6da16d939e1094ff80bcd827428b15820eaf2035809d83d1c37f4a85278db2",
 "status": "built"
 },
 {
@@ -7677,6 +7727,16 @@ null
 "module": "notebooks",
 "path": "notebooks/novelty_test_case.ipynb",
 "sha256": "4a2da4801544356f5ef2a1e224b5ebad5ee7ba0447f49f0ad5f1594544748b6a",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "notebook",
+"leaf": "e565e39fc4c226068f9805afb5a4face9a8c7daee5a8056d83e0e51656f449a2",
+"licence": "MIT",
+"module": "notebooks",
+"path": "notebooks/pa12_bounding_box_audit.ipynb",
+"sha256": "8c499fbfa4427b68b2696246e5976db401f076683578e98f4664fbce9c84eb02",
 "status": "built"
 },
 {
@@ -13132,11 +13192,51 @@ null
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "bfb192849a20446d1431ea719eba1413d42a05bb70328a81c72c245ca39a5acb",
+"leaf": "1a7c6a2fae9c1321e05d305f4a14c14d63ab367c301e682ea587fe446b1e913b",
 "licence": "MIT",
 "module": "mvp-site",
 "path": "site/board/index.html",
-"sha256": "583ebb7998423e4dd75dc7177d3e2c87d58f09d126c5284ba7ac77723d806d85",
+"sha256": "525cd5b4666a62b331a0bc58822e03f1e477b52f7dd47d45c436fad230c1492d",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "page",
+"leaf": "ed27f91b73edb8a35df7b36b1f33dce292655bc8d67897a99ec8b2d4d572673f",
+"licence": "MIT",
+"module": "mvp-site",
+"path": "site/detection/app.js",
+"sha256": "a075bd75203170d9fd529a0e506d914db7b00d188ef66cc93bee44f8f9c998d1",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "page",
+"leaf": "a5d216134b670e30a39e6d78dfbe751767164349d2b93d3be5f2c065422b420b",
+"licence": "MIT",
+"module": "mvp-site",
+"path": "site/detection/build_detection.py",
+"sha256": "9c731fc3b53257427e9c3fcaee2ad1520eb153893541901df77b788f026bdd18",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "page",
+"leaf": "1bfd66d4a645742041395d1f9bc559f30e80c2c18b42ccd97776cd9a40603bbb",
+"licence": "MIT",
+"module": "mvp-site",
+"path": "site/detection/index.html",
+"sha256": "639f05724369e704a9169fb55d4d91c7c37f4bf6c3525bac395878232322d22c",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "page",
+"leaf": "0d519373bf028e417d059753c30af1633683e456809a5cef2037feeafdc99372",
+"licence": "MIT",
+"module": "mvp-site",
+"path": "site/detection/style.css",
+"sha256": "c0aceb9ee1ee9df4702367c75e967955fcd443611318e107e1481222d4dbdb53",
 "status": "built"
 },
 {
@@ -13422,11 +13522,11 @@ null
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "9cb3a3890b573575d76061ec26fcf960300109201e4bb9cde7d633ff1b9f6454",
+"leaf": "e10d99e8520aa7054af528b5f774d9b08456072fac3e15dbaff9b51f192b52e8",
 "licence": "MIT",
 "module": "mvp-site",
 "path": "site/mvp/build_public_site.py",
-"sha256": "cc25455c07813d6e141595eae515ecae20d57026d536074003352041b740d647",
+"sha256": "c9bcea7ac2b56e58e29c2d0731827c39028658b914fb3fe301df3747f38a9df6",
 "status": "built"
 },
 {
@@ -13482,21 +13582,21 @@ null
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "f32b317cd04d0e7c6b3159bc24bca9ed40d7ac908dd2a6c1ac351d292477b704",
+"leaf": "4415ab68586d8f4764596423aaf562590805f840a622a053e689bb85398bf3db",
 "licence": "MIT",
 "module": "mvp-site",
 "path": "site/story/build_story.py",
-"sha256": "44ee2ed4392b8a4353a152b928f1788c26f7e5b7a608c2dd9038654ea670727d",
+"sha256": "bf96f4ae1bf1b28a3dd3230107b5af5afdc34340c66c97a175f248de387f59da",
 "status": "built"
 },
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "34b1215595934a48e52e7336aa0f6524e1aba9c320a1f4af1ccdcf9080155fc8",
+"leaf": "0e4941fb642a1913387e6b4ec21fb8ca28c703f026ece8db84a4c05774eea58d",
 "licence": "MIT",
 "module": "mvp-site",
 "path": "site/story/index.html",
-"sha256": "707fabeb2735754ec67f3d789382f8eae90d853a8ab0abbc7244c96eb32f5a72",
+"sha256": "5ca9fa5325b4235df2ddbd86d6a7b9c72a27e75819376e20b6316b039e4c4549",
 "status": "built"
 },
 {
@@ -13672,6 +13772,16 @@ null
 {
 "claim": "OWN",
 "kind": "test",
+"leaf": "8f287ecbfa3fb728e69291a076d25d8b1a64f4278c7b7f3d77cbd0bc22c2a0f0",
+"licence": "MIT",
+"module": "tests",
+"path": "tests/test_detection_gallery.py",
+"sha256": "8bcbb6d53de2189789de1b8c372ca259a1f03902f59a6eac2206c903e3579c4e",
+"status": "tested"
+},
+{
+"claim": "OWN",
+"kind": "test",
 "leaf": "58637ee68f586cdb87669147b9eb2767e529e1704b0faec3775f0b537b5230e1",
 "licence": "MIT",
 "module": "tests",
@@ -13687,6 +13797,16 @@ null
 "module": "tests",
 "path": "tests/test_essig_fco.py",
 "sha256": "77e634dc900fa5b09500910439a08c43c7d1e2134249941e5a321314a5567025",
+"status": "tested"
+},
+{
+"claim": "OWN",
+"kind": "test",
+"leaf": "2ab8dbcf6a978357cc46cf20888d0801609854582a277f3893bda22b43a985eb",
+"licence": "MIT",
+"module": "tests",
+"path": "tests/test_final_site_publish.py",
+"sha256": "f7901c5db3c004053de24cac12e34a7728984a1e4c738ae82f26e5532ee25a11",
 "status": "tested"
 },
 {
@@ -14115,14 +14235,14 @@ null
 "terms": []
 },
 "docs": {
-"atoms": 127,
+"atoms": 132,
 "claims": {
-"OWN": 127
+"OWN": 132
 },
 "id": "module:docs",
-"root": "4925fdc94efb836c3c8aaca85b9caf735769e56d00ec7a8be584f39a816bc7d6",
+"root": "b86b17481cbbe7c5c4e39cdaa3a5f5f8a3806447d8653418e29a4cd6edd4c670",
 "status": {
-"built": 127
+"built": 132
 },
 "terms": []
 },
@@ -14168,26 +14288,26 @@ null
 "terms": []
 },
 "mvp-site": {
-"atoms": 50,
+"atoms": 54,
 "claims": {
-"OWN": 50
+"OWN": 54
 },
 "id": "module:mvp-site",
-"root": "ce9dcd1e18e9acb66ed8493c82d735fa9e73254d7fa893bf8bbc1bd339abd887",
+"root": "a870177d13847d6c87de86b71aa13a33b91b6fa308ea8c12bb345dcc9c0e377d",
 "status": {
-"built": 50
+"built": 54
 },
 "terms": []
 },
 "notebooks": {
-"atoms": 26,
+"atoms": 27,
 "claims": {
-"OWN": 26
+"OWN": 27
 },
 "id": "module:notebooks",
-"root": "071827be4113d1f565b81e7d44db9585e54c92c6115882ce350613359553535f",
+"root": "68ae77d7cf9def6f7c919b3e7adae5882883bc748749e26c21ee806cc46f05f5",
 "status": {
-"built": 26
+"built": 27
 },
 "terms": []
 },
@@ -14227,21 +14347,21 @@ null
 "OWN": 234
 },
 "id": "module:repo-meta",
-"root": "88e21cb2b5da77ed996f9f70d13c6b55a73ba70adc72a6cd64f83bd71566edd3",
+"root": "2daecf95e953c6f5104751d4b054a9eb9cbb978181a56a377b36d93afb16e0eb",
 "status": {
 "built": 234
 },
 "terms": []
 },
 "tests": {
-"atoms": 44,
+"atoms": 46,
 "claims": {
-"OWN": 44
+"OWN": 46
 },
 "id": "module:tests",
-"root": "290ce3f503e0a83919b26ea68b85f60356ae52c41c0cc7def9a0a0ca6646aee2",
+"root": "ade543e463263a532ebc4bd31a72d6a54077559c52b52a7862b37373cfc41142",
 "status": {
-"tested": 44
+"tested": 46
 },
 "terms": []
 },
@@ -15021,9 +15141,9 @@ null
 ]
 }
 ],
-"root": "7d63e9bab5e8f2c39a8808bc543427ced7ec176226e32f2618ba67f108775c44",
+"root": "a4b88a9e342642579a0dbf95c1dd104cd74341608525f643f634206c253e9ef9",
 "roots": {
-"aok": "92ae3e4df4d341050903a4869a27d829f67a1abb3ed6c5432e32e47f51435e0d",
+"aok": "f0d3cf4cf0968dacaf04f8e7efd05820c3fe5537b984cbdf2c19e794ce673481",
 "assets": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
 "assets_mmr": "97d20c6b90e0385d7cbac87551f93381eba7eeb2e05cecb7ed9f352f349281b2",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -19239,7 +19359,7 @@ null
 }
 ],
 "totals": {
-"OWN": 1130,
+"OWN": 1142,
 "OWN+TERMS": 52,
 "THIRD": 20
 },

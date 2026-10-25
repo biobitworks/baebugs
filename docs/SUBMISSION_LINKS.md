@@ -32,6 +32,7 @@ One page to click through everything we submit. Status as of 21:35 UTC. **Works*
 | 26 | Live: CAD custody workcell (OpenSCAD tower, browser-recomputed MMR) | https://baebugs-cad-custody.vercel.app/ | Vercel production alias |
 | 27 | Google Slides link submitted on the form | [add after upload] | Pending |
 | 28 | YouTube demo video | https://youtu.be/O4Gq-r018cI | Works (hosted on YouTube, outside the repo, not hashed) |
+| 29 | Bounding box viewer (YOLOE/OWLv2 recorded PA12 toy predictions) | https://baebugs-lab-workcell.vercel.app/detection/ | Source-linked model predictions, not validated live inference |
 
 Agents read the same graph pack (`site/mvp/mvp.json`):
 
