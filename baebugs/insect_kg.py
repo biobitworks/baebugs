@@ -199,12 +199,18 @@ def observe(root):
     ~10 px/mm), top-down silhouette area, appendage counts. No length, no hash."""
     m = root["_mesh"]
     ext = _ext(root["bbox"])
-    try:
-        from trimesh.path.polygons import projected
-        area = float(projected(m, normal=[0, 0, 1]).area)
-    except Exception:                                   # shapely missing etc.
-        area = float(m.area_faces[m.face_normals[:, 2] > 0].sum())
-    return {"envelope_mm": [round(e, 1) for e in ext], "top_area_mm2": round(area, 0), **root["counts"]}
+    return {"envelope_mm": [round(e, 1) for e in ext], "top_area_mm2": round(silhouette_area(m), 0), **root["counts"]}
+
+
+def silhouette_area(mesh):
+    """Top-down silhouette area (mm^2): union of the up-facing triangles
+    projected onto XY (shapely / GEOS). This is what a camera above the tray sees."""
+    from shapely.geometry import Polygon
+    from shapely.ops import unary_union
+    tri = mesh.vertices[mesh.faces[mesh.face_normals[:, 2] > 1e-9]][:, :, :2]
+    polys = [Polygon(t) for t in tri]
+    polys = [p for p in polys if p.area > 1e-12]
+    return float(unary_union(polys).area)
 
 
 def strip(n):

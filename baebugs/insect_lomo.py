@@ -175,12 +175,19 @@ def _env_fast(L, plan):
     prims, _, _ = insect_parts(L, plan)
     lo = np.min([m.bounds[0] for p in prims for m in p["meshes"]], axis=0)
     hi = np.max([m.bounds[1] for p in prims for m in p["meshes"]], axis=0)
+    # same rounding path as insect_kg.observe: bbox -> 0.01 mm, extent -> 0.01, then 0.1
+    lo, hi = np.array(_r2(lo)), np.array(_r2(hi))
+    ext = [round(round(float(h - l), 2), 1) for l, h in zip(lo, hi)]
     c = {"legs": 0, "antennae": 0, "wings": 0}
     for p in prims:
         if p["seg"] == "femur": c["legs"] += 1
         if p["seg"] == "antenna": c["antennae"] += 1
         if p["kind"] == "plate": c["wings"] += 1
-    return [round(float(e), 1) for e in hi - lo], c
+    return ext, c
+
+
+def _r2(a):
+    return [0.0 if round(float(v), 2) == 0 else round(float(v), 2) for v in a]
 
 
 _twin = None
@@ -208,6 +215,9 @@ def solve_logic(held_obs, ctx):
     if best is None:
         return {"plan": None, "length_mm": None, "family": None, "novel": True, "reason": "no twin match"}
     _, plan, L = best
+    tied_plans = sorted({p for p, l, env, c in twin_table()
+                         if all(c[k] == held_obs[k] for k in c)
+                         and sum(abs(a - b) for a, b in zip(env, held_obs["envelope_mm"])) <= best[0] + 1e-9})
     # refine with area among near-ties
     ties = [(p, l) for p, l, env, c in twin_table() if p == plan and abs(l - L) <= 0.3
             and all(c[k] == held_obs[k] for k in c)]
@@ -223,7 +233,8 @@ def solve_logic(held_obs, ctx):
         return 2.05 + min(abs(L - l) for l in f["lengths"]) / 2.0
     fam = min(cands, key=score)["family"] if cands else None
     nov, why = novelty_logic(fam, L, fams)
-    return {"plan": plan, "length_mm": L, "family": fam, "novel": nov, "reason": f"twin search; {why}"}
+    return {"plan": plan, "length_mm": L, "family": fam, "novel": nov, "reason": f"twin search; {why}",
+            "tied_plans": tied_plans, "ambiguous": len(tied_plans) > 1}
 
 
 SYSTEM = """You reconstruct 3D-printed insect size standards from what a camera sees.
@@ -270,20 +281,19 @@ def _parse_json(text):
 
 
 def ask_ollama(model, ctx_txt, obs, host="http://localhost:11434", timeout=180):
-    body = {"model": model, "stream": False, "format": "json", "think": False,
-            "options": {"temperature": 0, "num_ctx": 12288, "seed": 0},
+    body = {"model": model, "stream": False, "format": "json",
+            "options": {"temperature": 0, "num_ctx": 12288, "seed": 0, "num_predict": 1024},
             "messages": [{"role": "system", "content": SYSTEM.format(plans=", ".join(PLAN_LIST))},
                          {"role": "user", "content": ctx_txt + "\n\nHELD-OUT INSECT: " + query_text(obs)}]}
+    if model.startswith("qwen3"):
+        body["think"] = False
     req = urllib.request.Request(f"{host}/api/chat", data=json.dumps(body).encode(),
                                  headers={"Content-Type": "application/json"})
     t = time.time()
     try:
         r = json.loads(urllib.request.urlopen(req, timeout=timeout).read())
         txt = r["message"]["content"]
-    except Exception as e:                     # model without think flag, timeouts
-        if "think" in body and "think" in str(e).lower():
-            body.pop("think")
-            return ask_ollama(model, ctx_txt, obs, host, timeout)
+    except Exception as e:                     # timeouts, HTTP errors
         return None, f"error {e}", time.time() - t
     return _parse_json(txt), txt[:400], time.time() - t
 
@@ -333,6 +343,8 @@ def run(kg_dir, out_dir, protocols=("lomo", "lofo"), local=None, use_claude=Fals
             if local:
                 ans, raw, dt = ask_ollama(local, context_text(ctx), held["observation"])
                 r["local"] = {**check(ans or {}, held, ctx), "model": local, "seconds": round(dt, 1), "raw": raw}
+                if i % 10 == 0:
+                    print(f"[{proto}] {local} {i} {dt:.1f}s hash={r['local']['hash_match']}", flush=True)
             rows.append((r, held, ctx))
         # Claude on local misses (escalation by observation check only), batched by shared context
         if use_claude:
