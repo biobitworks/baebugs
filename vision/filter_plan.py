@@ -27,10 +27,11 @@ FRACTIONS = SHELVES + ["through"]
 COLORS = {"top": (60, 60, 230), "middle": (0, 165, 255), "bottom": (60, 200, 60), "through": (230, 160, 40)}  # BGR
 
 
-def load_filters(path):
-    """Return {filter_id: hole_mm} from a filters.json file."""
+def load_filters(path, include_planned=True):
+    """Return {filter_id: hole_mm} from a filters.json file, optionally leaving out filters not made yet."""
     data = json.loads(Path(path).read_text())
-    return {fid: float(hole) for fid, hole in data["filters"].items()}
+    planned = set(data.get("planned", [])) if not include_planned else set()
+    return {fid: float(hole) for fid, hole in data["filters"].items() if fid not in planned}
 
 
 def fraction_of(width, holes):
@@ -199,6 +200,7 @@ def main():
     ap.add_argument("--types", default=str(Path(__file__).with_name("types.json")), help="reference width of each type")
     ap.add_argument("--min-share", type=float, default=0.05, help="coarse mode: ignore types below this share of the pile")
     ap.add_argument("--filters", default=str(Path(__file__).with_name("filters.json")))
+    ap.add_argument("--made-only", action="store_true", help="leave out filters listed as planned (not made yet)")
     ap.add_argument("--target", type=float, nargs=2, metavar=("MIN", "MAX"), help="catch widths in this range, mm")
     ap.add_argument("--json", help="write the plan here")
     ap.add_argument("--image", help="photo to draw the plan on (the one dish_sizer measured)")
@@ -207,7 +209,7 @@ def main():
     if bool(args.objects) == bool(args.estimate):
         ap.error("give either an objects JSON or --estimate")
 
-    filters = load_filters(args.filters)
+    filters = load_filters(args.filters, include_planned=not args.made_only)
     if args.estimate:
         # a rough per-type estimate of a pile: each common type stands in as one "object" at its reference width
         shares = json.loads(Path(args.estimate).read_text())["shares"]
