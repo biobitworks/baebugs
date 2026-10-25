@@ -41,8 +41,8 @@ def _post(url, body, timeout=60):
 
 
 def summarise(diffstat, model=MODEL):
-    prompt = ("Write one short git commit subject (max 70 chars, no quotes) for these changed files "
-              "in a lab-automation repo. Files:\n" + diffstat[:3000])
+    prompt = ("Write one short git commit subject (max 70 chars, no quotes). Say only which files were added or "
+              "updated, using the file names below; do not guess reasons or invent work. Files:\n" + diffstat[:3000])
     for name, call in (
         ("ollarma", lambda: _post("http://127.0.0.1:8484/chat", {"message": prompt, "model": model}).get("response")),
         ("ollama", lambda: _post("http://127.0.0.1:11434/api/generate", {"model": model, "prompt": prompt, "stream": False,
