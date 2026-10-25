@@ -3,20 +3,22 @@
 Source of the Claude Slides deck *BaeBugs: bags in, barcodes out, with custody*. One HTML file per slide in `slides/`, ordered by `deck.json`.
 The live deck (private until shared) is a Claude Slides artifact; the demo clip on slide 3 is `docs/demo/baebugs_mvp_demo.mp4`.
 
+Counts and the graph root on slides 1, 4, 9 and 10 are pinned to the pack at mvp-kg@caf982f (root `da9b3edbaa4b484707cca41d562506e5b9a40289830d38c6b627047b046cb855`); the pack regenerates on later commits.
+
 Images reference uploaded assets (`/_blob/...`) and render only inside the artifact.
 
 | # | slide | sha256 | sources |
 |---|---|---|---|
-| 1 | BaeBugs | `69fbc5b205d9` | — |
+| 1 | BaeBugs | `5d008def3dfe` | — |
 | 2 | Look before you sieve, then prove what happened | `b7f57349544b` | — |
 | 3 | Demo: the MVP graph in 45 seconds | `82aecbe5973e` | docs/demo/baebugs_mvp_demo.mp4 |
-| 4 | One graph pack, read the same way by people and agents | `304a37b63e2a` | counts from site/mvp/mvp.json |
+| 4 | One graph pack, read the same way by people and agents | `128d603ca4dd` | counts from site/mvp/mvp.json at mvp-kg@caf982f |
 | 5 | Real California photos beat synthetic-only out of state | `92b3144fc1bf` | exploratory, silver teacher labels · daisy/results/DAISY-BB-002a/v2/DECISION.md |
 | 6 | Per-taxon preprocessors route a bug to the model that knows it | `ee9117dd43ba` | exploratory, GBIF taxonomy as labels · daisy/DAISY-BB-004-prereg.md + amendments 1–4 |
 | 7 | The order router transfers; the family model does not yet | `46dbf5d88e89` | test = AZ, NV, OR · daisy/results/DAISY-BB-004/v4/DECISION.md |
 | 8 | 8 breaks recorded, not hidden. | `b3794a7606e2` | custody_break events 96–103 in daisy/impact_mmr.jsonl |
-| 9 | Every file says who owns it and on what terms | `442f5f3ba762` | docs/CLAIMS.md, kg/aok.json · not legal advice |
-| 10 | Compare two labs top-down and find the one break point | `3a082f118862` | docs/byo_compare_example.json · baebugs/compare.py |
+| 9 | Every file says who owns it and on what terms | `2631f2d72961` | docs/CLAIMS.md, kg/aok.json at mvp-kg@caf982f · not legal advice |
+| 10 | Compare two labs top-down and find the one break point | `30c15b9fddcb` | docs/byo_compare_example.json · baebugs/compare.py |
 | 11 | The printable bench kit stays well under $200 | `1298498819e6` | bench twin v0.1, filament at 75% fill, 2026 retail estimates |
 | 12 | Open science you can verify from your own browser | `fbd52e232237` | — |
 
