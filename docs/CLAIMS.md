@@ -2,7 +2,7 @@
 
 Every file is an *atom* with a claim, a licence in context, a status and a hash (full list for agents: [`kg/aok.json`](../kg/aok.json)). This page is the short version. It records what the licences say; it is not legal advice.
 
-**AoK root:** `52d9904a9e58ac652387f740c18183be287825eb8ef5d71ec0d47dfafeb2313b` · 836 atoms · OWN 767 · OWN+TERMS 49 · THIRD 20
+**AoK root:** `89525f0b7a3f5e5eb8f0d8a2f1c59555561a1ad6a39368d297afbe0994da1b45` · 843 atoms · OWN 774 · OWN+TERMS 49 · THIRD 20
 
 | claim | meaning |
 |---|---|
@@ -14,20 +14,20 @@ Every file is an *atom* with a claim, a licence in context, a status and a hash 
 
 | module | atoms | claim | outside terms that apply here | module root |
 |---|---|---|---|---|
-| custody-ledgers | 34 | OWN 34 | none | `9a344d9cfb39` |
+| custody-ledgers | 34 | OWN 34 | none | `50e514dce783` |
 | daisy-protocols | 17 | OWN 17 | none | `401e52c7913d` |
 | daisy-results | 12 | OWN+TERMS 12 | gbif-media, ultralytics | `770c10edefa4` |
 | dashboards | 16 | OWN 16 | none | `350619827ff6` |
-| docs | 46 | OWN 46 | none | `756e249d48f9` |
+| docs | 47 | OWN 47 | none | `97cf54ef220a` |
 | kaggle-kernels | 10 | OWN+TERMS 10 | gbif-media, ultralytics | `ff1a3e54c36a` |
-| knowledge-graph | 6 | OWN+TERMS 6 | gbif-media | `0a7517349651` |
+| knowledge-graph | 6 | OWN+TERMS 6 | gbif-media | `2249e3089709` |
 | lab-parts | 131 | OWN 131 | none | `a21967d41d0a` |
 | mvp-site | 30 | OWN 30 | none | `b9000b134660` |
 | notebooks | 18 | OWN 18 | none | `f3b21be76149` |
 | opentrons-modules | 13 | OWN+TERMS 13 | opentrons | `40b680b50dba` |
-| python-package | 85 | OWN 77, OWN+TERMS 8 | ultralytics | `a3cfd61e68e5` |
-| repo-meta | 34 | OWN 34 | none | `891e3c4fbeae` |
-| tests | 38 | OWN 38 | none | `4b827430d954` |
+| python-package | 86 | OWN 78, OWN+TERMS 8 | ultralytics | `ee81cf344492` |
+| repo-meta | 38 | OWN 38 | none | `940a7936878a` |
+| tests | 39 | OWN 39 | none | `61b5a3ed754f` |
 | toy-insects | 326 | OWN 326 | none | `6f32a71b22ca` |
 
 ## Not ours (used, credited, never claimed)

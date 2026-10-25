@@ -2,10 +2,12 @@
 
 Each asset is a record with: what it is, maker/ref when readable, which photos show it (by sha256), its role in
 the BioKEA line, its interfaces (SBS footprint, rail tray, rod...), and dimensions with their SOURCE:
-  spec           published standard or manufacturer figure
+  spec           published standard or manufacturer figure (incl. Opentrons shared-data labware definitions)
   design         measured from a CAD/STL file (e.g. the pinned BugPicker tray designs)
   ruler-photo    read off the Helix ruler in a photo (still needs calipers)
   not measured   nothing claimed
+Library candidates (PyLabRobot / Opentrons resource libraries) are kept apart from dims: a near match with a reason it is
+not exact, never silently promoted to a measurement.
 Leaf = H(record); root = Merkle over sorted leaves; every change is appended to daisy/assets_mmr.jsonl.
 Photo boxes come from an open-vocabulary detector and are kept separately as INFERRED (assets/boxes.json).
 
@@ -63,6 +65,10 @@ ASSETS = [
     {"id": "opentrons_flex", "name": "Opentrons Flex with 8-channel 1000 uL pipette", "category": "instrument", "maker": "Opentrons",
      "photos": ["opentrons_flex_deck"], "role": "lyse / incubate / liquid handling (flex route)",
      "interfaces": ["flex_deck_slot", "SBS"], "dims_source": "not measured", "notes": "deck A1-D4; photo shows tip racks, deep-well plate, reservoir"},
+    {"id": "opentrons_flex_tiprack_50ul_filter", "name": "Opentrons Flex 96 Filter Tip Rack 50 uL", "category": "tip_box",
+     "maker": "Opentrons", "count": 2, "photos": ["lift_columns"], "role": "tips for the Flex 8-channel",
+     "interfaces": ["flex_deck_slot", "SBS"], "dims_mm": [127.75, 85.75, 99.0], "dims_source": "spec",
+     "spec_ref": "Opentrons shared-data labware definition opentrons_flex_96_filtertiprack_50ul (v1)"},
     {"id": "manual_lift_columns", "name": "Aluminium manual lift columns with handwheels (x3)", "category": "stage", "count": 3,
      "photos": ["lift_columns"], "role": "camera / tower height stage", "interfaces": ["T-slot_plate"], "dims_source": "not measured"},
     {"id": "formlabs_fuse", "name": "Formlabs Fuse 1+ printer and Fuse Sift", "category": "instrument", "maker": "Formlabs",
@@ -71,7 +77,11 @@ ASSETS = [
     # --- labware & consumables ----------------------------------------------------------------------------------------
     {"id": "plate_384_black", "name": "384-well plate, black", "category": "plate", "maker": "PerkinElmer",
      "photos": ["plate384_ruler", "plate384_top"], "role": "imaging / assay plate", "interfaces": ["SBS"],
-     "dims_mm": SBS + [None], "dims_source": "spec", "notes": "footprint is the SBS standard; height depends on the exact product"},
+     "dims_mm": SBS + [None], "dims_source": "spec", "notes": "footprint is the SBS standard; height depends on the exact product",
+     "library_candidates": [{"library": "pylabrobot 0.2.2", "resource": "Revvity_384_wellplate_28ul_Ub", "size_mm": [127.76, 85.48, 14.35],
+                             "why_not_exact": "ProxiPlate-384 Plus is white; photographed plate is black (PerkinElmer = Revvity)"},
+                            {"library": "pylabrobot 0.2.2", "resource": "Greiner_384_wellplate_28ul_Fb", "size_mm": [127.76, 85.48, 14.4],
+                             "why_not_exact": "different maker; same SBS 384 format"}]},
     {"id": "tipbox_vwr_purple", "name": "Tip box, purple, hinged lid", "category": "tip_box", "maker": "VWR",
      "photos": ["labware_overview_1", "labware_angle", "labware_overview_2", "labware_overview_3"], "role": "tips",
      "interfaces": ["SBS?"], "dims_source": "not measured"},
@@ -109,7 +119,9 @@ ASSETS = [
      "interfaces": ["cryo_rack"], "dims_source": "not measured", "notes": "read from the bag label"},
     {"id": "conical_50ml_vwr", "name": "50 mL conical tube, green cap", "category": "tube", "maker": "VWR",
      "photos": ["labware_overview_1", "labware_angle", "xtip4_box", "labware_overview_2"], "role": "bulk sample / ethanol",
-     "interfaces": ["rack_4way"], "dims_source": "not measured"},
+     "interfaces": ["rack_4way"], "dims_source": "not measured",
+     "library_candidates": [{"library": "pylabrobot 0.2.2", "resource": "cor_falcon_tube_50mL_Vb", "size_mm": [30, 30, 115],
+                             "why_not_exact": "Corning Falcon, not VWR; standard 50 mL conical format"}]},
     {"id": "tip_1000ul", "name": "1000 uL pipette tip (loose)", "category": "tip", "photos": ["labware_overview_1", "racks_diagonal_ruler"],
      "role": "transfer", "interfaces": [], "dims_source": "not measured"},
     {"id": "ruler_helix_46cm", "name": "Helix 46 cm steel ruler (scale reference in photos)", "category": "reference", "maker": "Helix",

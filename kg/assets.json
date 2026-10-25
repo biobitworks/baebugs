@@ -310,6 +310,32 @@
    "role": "lyse / incubate / liquid handling (flex route)"
   },
   {
+   "category": "tip_box",
+   "count": 2,
+   "dims_mm": [
+    127.75,
+    85.75,
+    99.0
+   ],
+   "dims_source": "spec",
+   "id": "opentrons_flex_tiprack_50ul_filter",
+   "interfaces": [
+    "flex_deck_slot",
+    "SBS"
+   ],
+   "leaf": "8c132992d082b372a298272b2ec10b7a932221db8d201ef573b964379d290e0d",
+   "maker": "Opentrons",
+   "name": "Opentrons Flex 96 Filter Tip Rack 50 uL",
+   "photo_sha256": [
+    "c46f5cfc139d42a4ada67b13d08687a74480cd16ec9e451b8fee687ab56d1a21"
+   ],
+   "photos": [
+    "lift_columns"
+   ],
+   "role": "tips for the Flex 8-channel",
+   "spec_ref": "Opentrons shared-data labware definition opentrons_flex_96_filtertiprack_50ul (v1)"
+  },
+  {
    "category": "stage",
    "count": 3,
    "dims_mm": null,
@@ -364,7 +390,29 @@
    "interfaces": [
     "SBS"
    ],
-   "leaf": "6bb2d030af01accc0d23150a6617d562a3504448b97093594083cb1cd5244d5a",
+   "leaf": "d0910ade30e4614fe307ddb402b5f8a9c0abcdea2466257f1f729a11d3af1d3a",
+   "library_candidates": [
+    {
+     "library": "pylabrobot 0.2.2",
+     "resource": "Revvity_384_wellplate_28ul_Ub",
+     "size_mm": [
+      127.76,
+      85.48,
+      14.35
+     ],
+     "why_not_exact": "ProxiPlate-384 Plus is white; photographed plate is black (PerkinElmer = Revvity)"
+    },
+    {
+     "library": "pylabrobot 0.2.2",
+     "resource": "Greiner_384_wellplate_28ul_Fb",
+     "size_mm": [
+      127.76,
+      85.48,
+      14.4
+     ],
+     "why_not_exact": "different maker; same SBS 384 format"
+    }
+   ],
    "maker": "PerkinElmer",
    "name": "384-well plate, black",
    "notes": "footprint is the SBS standard; height depends on the exact product",
@@ -695,7 +743,19 @@
    "interfaces": [
     "rack_4way"
    ],
-   "leaf": "629de60de2dbfed20fd27d814f50c9357cdbcd20249b5fb6fe9348bce89fed00",
+   "leaf": "6f82dd8e77fc76720618d21a7f0eb2a6a27f4d5ae0837d96478cb4b70b678068",
+   "library_candidates": [
+    {
+     "library": "pylabrobot 0.2.2",
+     "resource": "cor_falcon_tube_50mL_Vb",
+     "size_mm": [
+      30,
+      30,
+      115
+     ],
+     "why_not_exact": "Corning Falcon, not VWR; standard 50 mL conical format"
+    }
+   ],
    "maker": "VWR",
    "name": "50 mL conical tube, green cap",
    "photo_sha256": [
@@ -768,11 +828,11 @@
   "design": 2,
   "not measured": 24,
   "ruler-photo": 2,
-  "spec": 3
+  "spec": 4
  },
- "n_assets": 31,
+ "n_assets": 32,
  "n_photos": 20,
  "photos_root": "d0040690084c7bdeb77b8f30005216d47bdfd92f0c56883022a5bb35dc374751",
- "root": "2aa571d0973f1995c303b86f4f8f9816f485a73bfd59822593d6caa138f6b72e",
+ "root": "0d86b0ba2afe21d6fa2fed382856976dcb120311e816a817898d09b352a5a715",
  "type": "asset_db"
 }
