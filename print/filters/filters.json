@@ -946,5 +946,35 @@
   "stl": "stl/SS-MESH-2.0.stl",
   "holes": 218,
   "watertight": true
+ },
+ {
+  "id": "SS-HEX-2.5AF",
+  "category": "laser-cut 316L insert (concept C)",
+  "realisation": "metal",
+  "materials": [
+   "stainless sheet or woven mesh (bought; laser-cut for custom shapes)"
+  ],
+  "shape": "hexagon",
+  "params_mm": {
+   "across_flats": 2.5
+  },
+  "note": "hexagonal 2.5 mm across flats; distinct orientation / open-area alternative (uncalibrated concept)",
+  "nominal": true,
+  "area_mm2": 5.413,
+  "inscribed_d_mm": 2.5,
+  "min_width_mm": 2.5,
+  "max_width_mm": 2.887,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "5a11f91b8cbcd1027f629587be26e76feac77c32087eec7740bb05154f8c9d37",
+  "holes_on_50mm_plate": 154,
+  "open_area": 0.431,
+  "stl": "stl/SS-HEX-2.5AF.stl",
+  "holes": 154,
+  "watertight": true
  }
 ]

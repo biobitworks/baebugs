@@ -105,6 +105,8 @@ LIBRARY = [
     ("SS-SLOT-4.8x19", "metal slotted sheet", "metal", "slot", {"w": 4.8, "length": 19.05}, "slotted perforated 3/16 x 3/4 in"),
     ("SS-MESH-1.0", "woven wire mesh", "metal", "square", {"s": 1.0}, "woven stainless ~1.0 mm opening"),
     ("SS-MESH-2.0", "woven wire mesh", "metal", "square", {"s": 2.0}, "woven stainless ~2.0 mm opening"),
+    ("SS-HEX-2.5AF", "laser-cut 316L insert (concept C)", "metal", "hexagon", {"across_flats": 2.5},
+     "hexagonal 2.5 mm across flats; distinct orientation / open-area alternative (uncalibrated concept)"),
 ]
 
 # how each realisation is made; punch dies also cut thin aluminium shim, so punched shapes have a metal route
