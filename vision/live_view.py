@@ -1,9 +1,10 @@
-"""Live view of a camera (default: the microscope, camera 1) with a focus meter.
+"""Live view of a camera with a focus meter.
 
-Put something with fine detail in view (e.g. ruler ticks), turn the focus knob until the
+Put something with fine detail in view (e.g. ruler ticks), adjust focus until the
 sharpness number peaks, then press Space to save a full-resolution photo.
 
-Usage: python live_view.py [--camera 1] [--save-dir vision/captures]
+Usage: python live_view.py [--camera XWF] [--save-dir vision/captures]
+  --camera takes part of a camera's name or its number; `python cameras.py` lists them.
 Keys: Space = save photo, R = reset best sharpness, Esc = quit
 """
 import argparse
@@ -13,6 +14,8 @@ from pathlib import Path
 
 import cv2
 from PIL import Image, ImageTk
+
+from cameras import camera_names, find_camera, open_camera
 
 
 def sharpness(frame):
@@ -78,20 +81,14 @@ class Viewer:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--camera", type=int, default=1, help="camera number (microscope is 1 on this laptop)")
-    ap.add_argument("--width", type=int, default=2048)
-    ap.add_argument("--height", type=int, default=1536)
+    ap.add_argument("--camera", default="XWF", help="part of the camera's name, or its number (XWF = the USB webcam)")
     ap.add_argument("--save-dir", type=Path, default=Path(__file__).with_name("captures"))
     args = ap.parse_args()
 
-    cap = cv2.VideoCapture(args.camera, cv2.CAP_DSHOW)
-    if not cap.isOpened():
-        raise SystemExit(f"camera {args.camera} not available (unplugged, or open in another app?)")
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, args.width)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, args.height)
+    cap = open_camera(args.camera)
 
     root = tk.Tk()
-    root.title(f"Live view - camera {args.camera}")
+    root.title(f"Live view - {camera_names()[find_camera(args.camera)]}")
     Viewer(root, cap, args.save_dir)
     try:
         root.mainloop()

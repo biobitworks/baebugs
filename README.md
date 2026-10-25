@@ -39,6 +39,13 @@ Commands below use that environment's `python.exe` directly; no activation neede
 
 ## Vision
 
+Cameras are picked by name because Windows renumbers them when one is plugged in or out. `vision\cameras.py` lists them; `vision\live_view.py` shows one live with a focus meter and saves full-resolution photos (Space) to `vision\captures\`:
+
+```powershell
+& $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\cameras.py                 # list cameras
+& $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\live_view.py --camera XWF  # the USB webcam (1920x1080)
+```
+
 ```powershell
 & $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\dish_sizer.py vision\samples\dish_phone_01.webp --px-per-mm 9.12 --out vision\output\annotated.png --json vision\output\objects.json
 ```
