@@ -1,6 +1,6 @@
 {
  "schema": "baebugs.daisy.datasets.v1",
- "created": "2026-10-25T03:56:21Z",
+ "created": "2026-10-25T04:23:48Z",
  "datasets": {
   "gbif_ca_2": {
    "dataset": "gbif_ca_2",
@@ -691,28 +691,26 @@
    "kind": "tabular",
    "role": "context",
    "files": 3,
-   "bytes": 582635,
-   "merkle_root": "9e324c9bb79fd1be696dbce0e495b3afad9aa05bc0bc872a82152b6d3e743339",
+   "bytes": 554185,
+   "merkle_root": "29d56fff44ce9be3b6ea7a9faec7394cd69d3f0bcbcfc327436b38bbf769f580",
    "checks": {
     "files": {
      "soil_sampling_survey_public_noPII.csv": {
       "pii_columns": [],
-      "email_cells": 81,
+      "email_cells": 0,
       "phone_cells": 0,
-      "columns": 29
+      "columns": 27
      }
     },
-    "pii_found": true
+    "pii_found": false
    },
-   "fails": [
-    "pii_present"
-   ],
+   "fails": [],
    "derived_from": null,
    "transform": "drop PII + free-text columns",
    "synthetic": false,
    "note": null,
-   "seconds": 0.3,
-   "status": "QUARANTINED_PII"
+   "seconds": 0.2,
+   "status": "VERIFIED"
   },
   "toy_renders": {
    "dataset": "toy_renders",
@@ -780,5 +778,5 @@
   "train_val_overlap": 0,
   "overlap_examples": []
  },
- "root": "ed85205278a19f7f3b68892a93a1fb7b3d2d4d177ccc11f6108c028974055125"
+ "root": "5a0d1661538f2a9c1338a274f90477cade19ed034bb09b607ee08ec82004bd86"
 }
