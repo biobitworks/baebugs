@@ -75,6 +75,7 @@ textarea{width:100%;min-height:140px}
   <button type="button" role="tab" id="t-ca" aria-controls="p-ca" aria-selected="false" tabindex="-1">California search</button>
   <button type="button" role="tab" id="t-claims" aria-controls="p-claims" aria-selected="false" tabindex="-1">Claims</button>
   <button type="button" role="tab" id="t-prove" aria-controls="p-prove" aria-selected="false" tabindex="-1">Prove / contest</button>
+  <button type="button" role="tab" id="t-assets" aria-controls="p-assets" aria-selected="false" tabindex="-1">Bench assets</button>
   <button type="button" role="tab" id="t-agents" aria-controls="p-agents" aria-selected="false" tabindex="-1">Agents</button>
 </nav>
 
@@ -150,6 +151,17 @@ textarea{width:100%;min-height:140px}
     </div>
   </div>
   <div class="card mt"><h2>Contest</h2><p>Every detail card has a <b>Contest</b> button. It opens a GitHub issue that carries the address and hash; attach your attestation from above. A contest is answered by recomputing the hashes, never by opinion.</p></div>
+</section>
+
+<section role="tabpanel" id="p-assets" aria-labelledby="t-assets" hidden>
+  <div class="filters">
+    <label>Search<input type="search" id="a-q" placeholder="rack, SBS, Greiner, tray"></label>
+    <label>Category<select id="a-cat"><option value="">all</option></select></label>
+    <label>Dimensions<select id="a-src"><option value="">any source</option></select></label>
+  </div>
+  <p class="mute" id="a-note"></p>
+  <div class="count" id="a-count" role="status"></div>
+  <section class="scroll tbl-wrap" tabindex="0" aria-label="Bench assets table"><table class="tbl"><thead><tr><th scope="col">Object</th><th scope="col">Role</th><th scope="col">Size (mm)</th><th scope="col">Photos</th><th scope="col">Leaf</th></tr></thead><tbody id="a-rows"></tbody></table></section>
 </section>
 
 <section role="tabpanel" id="p-agents" aria-labelledby="t-agents" hidden>
@@ -264,6 +276,18 @@ function renderBugs() {
 }
 ['#b-q', '#b-order', '#b-tray'].forEach((s) => $(s).addEventListener('input', renderBugs));
 
+function renderAssets() {
+  const A = P.assets || { items: [] };
+  const q = $('#a-q').value.toLowerCase(), c = $('#a-cat').value, src = $('#a-src').value;
+  const rows = A.items.filter((x) => (!c || x.category === c) && (!src || x.dims_source === src) && (!q || JSON.stringify(x).toLowerCase().includes(q)));
+  $('#a-note').textContent = `Every object photographed at the bench. Sizes say where they come from (spec, design file, read off a ruler in a photo, or not measured). Asset root ${short(A.root)}.`;
+  $('#a-count').textContent = `${rows.length} of ${A.items.length} objects`;
+  $('#a-rows').innerHTML = rows.map((x) => `<tr><td>${esc(x.name)}${x.maker ? `<br><span class="mute">${esc(x.maker)}${x.ref ? ' ' + esc(x.ref) : ''}</span>` : ''}</td><td>${esc(x.role || '')}</td>
+    <td>${x.dims_mm ? esc(x.dims_mm.map((v) => v ?? '?').join(' × ')) : '—'}<br><span class="chip">${esc(x.dims_source)}</span></td>
+    <td>${x.photos.slice(0, 3).map((f, i) => `<a href="../../${encodeURI(f)}">photo ${i + 1}</a>`).join(' ')}</td><td class="mono">${short(x.leaf)}</td></tr>`).join('');
+}
+['#a-q', '#a-cat', '#a-src'].forEach((s) => $(s).addEventListener('input', renderAssets));
+
 function renderParts() {
   $('#p-rows').innerHTML = P.parts.map((x) => `<tr><td>${esc(x.name)}</td><td>${esc(x.modules.join(', '))}</td><td>${esc(x.status)}</td><td>${leafLink(x)}</td></tr>`).join('');
   $('#o-rows').innerHTML = P.labware.map((x) => `<tr><td>${esc(x.name)}</td><td>${x.bbox_mm.join(' × ')}</td><td>${leafLink(x)}</td></tr>`).join('');
@@ -318,7 +342,8 @@ fetch('mvp.json').then((r) => r.json()).then((d) => {
   opts('#g-mod', Object.keys(P.modules)); opts('#g-status', P.leaves.map((x) => x.status)); opts('#g-kind', P.leaves.map((x) => x.kind));
   opts('#b-order', P.bugs.map((x) => x.order).concat(P.species.map((x) => x.order))); opts('#b-tray', P.bugs.map((x) => x.kit_tray));
   const lic = leafBy.get('LICENSE'); if (lic) $('#pv-json').value = JSON.stringify({ leaves: [{ path: 'LICENSE', sha256: lic.sha256 }, { path: 'README.md', sha256: 'paste-your-hash-here' }] }, null, 1);
-  renderRoots(); renderGraph(); renderBugs(); renderParts(); renderClaims();
+  if (P.assets) { opts('#a-cat', P.assets.items.map((x) => x.category)); opts('#a-src', P.assets.items.map((x) => x.dims_source)); }
+  renderRoots(); renderGraph(); renderBugs(); renderParts(); renderClaims(); renderAssets();
   let t = null; try { t = localStorage.getItem('bb-tab'); } catch (e) {}
   const want = location.hash.startsWith('#leaf:') ? null : t && document.getElementById(t);
   if (want) show(want);

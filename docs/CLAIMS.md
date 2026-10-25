@@ -2,7 +2,7 @@
 
 Every file is an *atom* with a claim, a licence in context, a status and a hash (full list for agents: [`kg/aok.json`](../kg/aok.json)). This page is the short version. It records what the licences say; it is not legal advice.
 
-**AoK root:** `0abb943bba6e790df7c77cc616e285e301c649fb61f3cf659b08ee364b94e643` · 808 atoms · OWN 742 · OWN+TERMS 46 · THIRD 20
+**AoK root:** `52d9904a9e58ac652387f740c18183be287825eb8ef5d71ec0d47dfafeb2313b` · 836 atoms · OWN 767 · OWN+TERMS 49 · THIRD 20
 
 | claim | meaning |
 |---|---|
@@ -14,20 +14,20 @@ Every file is an *atom* with a claim, a licence in context, a status and a hash 
 
 | module | atoms | claim | outside terms that apply here | module root |
 |---|---|---|---|---|
-| custody-ledgers | 33 | OWN 33 | none | `8f48e4f879b1` |
+| custody-ledgers | 34 | OWN 34 | none | `9a344d9cfb39` |
 | daisy-protocols | 17 | OWN 17 | none | `401e52c7913d` |
-| daisy-results | 11 | OWN+TERMS 11 | gbif-media, ultralytics | `b071c5cb0af3` |
+| daisy-results | 12 | OWN+TERMS 12 | gbif-media, ultralytics | `770c10edefa4` |
 | dashboards | 16 | OWN 16 | none | `350619827ff6` |
 | docs | 46 | OWN 46 | none | `756e249d48f9` |
 | kaggle-kernels | 10 | OWN+TERMS 10 | gbif-media, ultralytics | `ff1a3e54c36a` |
-| knowledge-graph | 5 | OWN+TERMS 5 | gbif-media | `f76004ad5e8e` |
+| knowledge-graph | 6 | OWN+TERMS 6 | gbif-media | `0a7517349651` |
 | lab-parts | 131 | OWN 131 | none | `a21967d41d0a` |
-| mvp-site | 30 | OWN 30 | none | `e9559d478120` |
+| mvp-site | 30 | OWN 30 | none | `b9000b134660` |
 | notebooks | 18 | OWN 18 | none | `f3b21be76149` |
 | opentrons-modules | 13 | OWN+TERMS 13 | opentrons | `40b680b50dba` |
-| python-package | 83 | OWN 76, OWN+TERMS 7 | ultralytics | `042146978fd3` |
-| repo-meta | 12 | OWN 12 | none | `4581a5c08f5c` |
-| tests | 37 | OWN 37 | none | `15aa3bfe9663` |
+| python-package | 85 | OWN 77, OWN+TERMS 8 | ultralytics | `a3cfd61e68e5` |
+| repo-meta | 34 | OWN 34 | none | `891e3c4fbeae` |
+| tests | 38 | OWN 38 | none | `4b827430d954` |
 | toy-insects | 326 | OWN 326 | none | `6f32a71b22ca` |
 
 ## Not ours (used, credited, never claimed)
