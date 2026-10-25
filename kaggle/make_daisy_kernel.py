@@ -103,7 +103,7 @@ def finite_last(csvp):
     df = pd.read_csv(csvp); df.columns = [c.strip() for c in df.columns]
     cols = [c for c in df.columns if c.startswith("train/") and c.endswith("_loss")]
     row = df.iloc[-1]
-    vals = {c: float(row[c]) for c in cols}
+    vals = {c: float(pd.to_numeric(row[c], errors="coerce")) for c in cols}
     return all(math.isfinite(v) for v in vals.values()), vals
 
 # G3b smoke: AMP is a conditional step decided by evidence, not a fixed setting
@@ -134,13 +134,31 @@ if not smoke[False]["finite"]:
     raise SystemExit("G3b FAIL: fp32 smoke training is not finite -> data or environment problem, not AMP")
 
 # G3c per-epoch evidence; first non-finite epoch is the break point and stops that run
+def _nums(x):
+    """flatten tensors / lists / dicts of numbers to a list of floats (ultralytics 8.4 nests some values)."""
+    if hasattr(x, "tolist"):
+        x = x.tolist()
+    if isinstance(x, dict):
+        return [v for k in sorted(x) for v in _nums(x[k])]
+    if isinstance(x, (list, tuple)):
+        return [v for i in x for v in _nums(i)]
+    try:
+        return [float(x)]
+    except (TypeError, ValueError):
+        return []
+
 def epoch_gate(run_name):
     def cb(trainer):
-        losses = [float(x) for x in (trainer.tloss.tolist() if hasattr(trainer.tloss, "tolist") else [trainer.tloss])]
-        fin = all(math.isfinite(v) for v in losses)
-        mp = {k: float(v) for k, v in (trainer.metrics or {}).items() if "mAP" in k}
-        event("gate_G3c_epoch", {"run": run_name, "epoch": int(trainer.epoch) + 1, "losses": losses, "finite": fin,
-                                 "map": mp, "pass": fin})
+        try:
+            losses = _nums(trainer.tloss)
+            fin = bool(losses) and all(math.isfinite(v) for v in losses)
+            mp = {k: _nums(v)[0] for k, v in (trainer.metrics or {}).items() if "mAP" in k and _nums(v)}
+            event("gate_G3c_epoch", {"run": run_name, "epoch": int(trainer.epoch) + 1, "losses": losses, "finite": fin,
+                                     "map": mp, "pass": fin})
+        except Exception as e:                       # the gate itself failed: recorded, fail closed
+            fin = False
+            event("gate_G3c_epoch", {"run": run_name, "epoch": int(getattr(trainer, "epoch", -1)) + 1,
+                                     "error": f"{type(e).__name__}: {e}"[:300], "pass": False})
         if not fin:
             trainer.stop = True
     return cb
