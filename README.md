@@ -2,6 +2,10 @@
 
 # baebugs
 
+## Human and AI review entry point
+
+Start with the [workflow README](docs/workflow/README.md) for the current MVP scope, local demo instructions and evidence boundaries. AI reviewers: use the [review brief](docs/workflow/AI_REVIEW.md). The workflow page generates draft protocols; live inference and hardware execution are not connected to it. Older pipeline descriptions below describe architecture and must be checked against current receipts before treating them as observed runs.
+
 **→ [Open the MVP graph](https://biobitworks.github.io/baebugs/site/mvp/)**: review the whole project from root to leaf, see what is claimed under which licence ([short version](docs/CLAIMS.md)), check any hash in your browser, and contest it. Agents: `npx github:biobitworks/baebugs get root` · `baebugs-graph get root` · MCP `python -m baebugs.graph_mcp`.
 
 **Vision lane for BioKEA Track A, step 1 (BugSorter).** A USB camera looks at a preserved sample *before* it is sieved, measures every body in millimetres, and decides which sieves to stack and how hard to run the water. It then checks that plan against a digital twin of the bench and hands each sieve fraction to BugPicker in BugPicker's own file format. Every step is logged to a hash-chained provenance record.

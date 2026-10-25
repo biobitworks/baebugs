@@ -1,5 +1,5 @@
 {
- "atoms": 964,
+ "atoms": 974,
  "external": [
   {
    "claim": "THIRD",
@@ -333,11 +333,11 @@
    "commits": 4,
    "id": "leaf:README.md",
    "kind": "meta",
-   "leaf": "2a214efc46866539ec134bb53e1c6c2c7b69ff90331fe04b8542e21ee986deb2",
+   "leaf": "540938b1d1de12a035dbd7aa387e415505a23d44f9c577e14179f47567a2a4dc",
    "licence": "MIT",
    "module": "repo-meta",
    "path": "README.md",
-   "sha256": "cf49300efb48509ed0daba3c0b4849222e13f9b7d18cc6cdfece0de8f0648f0e",
+   "sha256": "2f3fcaf6bc002a0b887a14e586cc78e0018b5125de4ddd847c0c4199d772bab5",
    "status": "built",
    "terms": []
   },
@@ -4564,6 +4564,104 @@
    "module": "docs",
    "path": "docs/toy_photo_models/results.json",
    "sha256": "a631e70047f561ebfd63356e16f9973784aba08de29f1dd0f0d8dc88a15c6028",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:docs/workflow/AI_REVIEW.md",
+   "kind": "doc",
+   "leaf": "64080caebef093bbaddd9ce70090e4643d0b8a8a68c7f7fc72c0f06c57a2dafd",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/workflow/AI_REVIEW.md",
+   "sha256": "5ab28e2bedc81535ba28abd5a6e1344891598ac74c35b97a73881f2df7712efb",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:docs/workflow/README.md",
+   "kind": "doc",
+   "leaf": "3ea939ce3516d1e9fb3565ea9f955aa131299bc2111ede6daa0af712dc806984",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/workflow/README.md",
+   "sha256": "749a9d102c3741e73aa2797e1bed245e75c42f52ac4749fd6b05505b483b3544",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:docs/workflow/REVIEW_20261025.md",
+   "kind": "doc",
+   "leaf": "8705616dbfb63ebb52622c1010581d20ecbdbb637a0df3d98a10eb0f50ba79a2",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/workflow/REVIEW_20261025.md",
+   "sha256": "e517acce5893ad955e68a23987382d0323a2217bbbd341abdc0ae97bd7d396ba",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:docs/workflow/reproduce.ipynb",
+   "kind": "doc",
+   "leaf": "e4e49c1f5f79db1d450a6eacc849e0bc6c09321a6c8139610f9810444ac029f3",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/workflow/reproduce.ipynb",
+   "sha256": "d11cd8db3e2adef8c3ea6fd3924ee9ea95562055254b1fba15ec0639ef019760",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:docs/workflow/turn_20261025_01.json",
+   "kind": "doc",
+   "leaf": "0ce6619f5f36e1eac5ebf56bd42638b0c3c37a99a33a8c9136c554a936722c6d",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/workflow/turn_20261025_01.json",
+   "sha256": "a98b25594cfdb7affed36ddb6ab5339c930c89c9ce060edde01780a801361cc6",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:docs/workflow/turn_20261025_02.json",
+   "kind": "doc",
+   "leaf": "8903bf10ff6646d98a53c2104db5c0a13e20abdb151b66d851ca9e77677e54d6",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/workflow/turn_20261025_02.json",
+   "sha256": "a207c4909643791febe53b3b841617a0d693a32baf0264fcf4a7b2338869a313",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:docs/workflow/turn_20261025_03.json",
+   "kind": "doc",
+   "leaf": "6066d2d5c28c99e886712b0d2dc151e382ab99bc52c53f7a4b9c0fa8d739d497",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/workflow/turn_20261025_03.json",
+   "sha256": "d00fbfe2377050ed2c4432a7df732144f2065b8897106d09dee6da9a146f7f43",
    "status": "built",
    "terms": []
   },
@@ -12600,14 +12698,42 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 2,
-   "commits": 3,
+   "commits": 4,
    "id": "leaf:site/board/index.html",
    "kind": "page",
-   "leaf": "310c73007c2b98ba32e555ce82f0712c8b3f007e9d8379dfde3aa8998e21692b",
+   "leaf": "1e5fd8117cd10d819ecaf91c86936840ab28c728d222f5b95787c62d411743e6",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/board/index.html",
-   "sha256": "38095f48251686fa36b013f2c2c21b1ba6af456623317bc28d3b8eba7a63f327",
+   "sha256": "62c766bfaac7590bd6834c3cf14679959a783dac8d58aecc5ee491ea5359de00",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 2,
+   "commits": 4,
+   "id": "leaf:site/board/index.html",
+   "kind": "page",
+   "leaf": "1e5fd8117cd10d819ecaf91c86936840ab28c728d222f5b95787c62d411743e6",
+   "licence": "MIT",
+   "module": "mvp-site",
+   "path": "site/board/index.html",
+   "sha256": "62c766bfaac7590bd6834c3cf14679959a783dac8d58aecc5ee491ea5359de00",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 2,
+   "commits": 4,
+   "id": "leaf:site/board/index.html",
+   "kind": "page",
+   "leaf": "1e5fd8117cd10d819ecaf91c86936840ab28c728d222f5b95787c62d411743e6",
+   "licence": "MIT",
+   "module": "mvp-site",
+   "path": "site/board/index.html",
+   "sha256": "62c766bfaac7590bd6834c3cf14679959a783dac8d58aecc5ee491ea5359de00",
    "status": "built",
    "terms": []
   },
@@ -13028,6 +13154,20 @@
    "module": "mvp-site",
    "path": "site/twin/index.html",
    "sha256": "71c3762d5f734d076ef19c069824a95588520f261231fa2948d7b3c48ddd31ff",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:site/workflow/index.html",
+   "kind": "page",
+   "leaf": "cacff90cbb233e6fade42a4858b2c78008c2df7f1401d0897d5ca1d4ee5fa7ae",
+   "licence": "MIT",
+   "module": "mvp-site",
+   "path": "site/workflow/index.html",
+   "sha256": "9652d6cd4eaea31c6f2526863a3238635d82214ac1b717b2ee7d9b22598d0d54",
    "status": "built",
    "terms": []
   },
@@ -13664,14 +13804,14 @@
    "terms": []
   },
   "docs": {
-   "atoms": 69,
+   "atoms": 76,
    "claims": {
-    "OWN": 69
+    "OWN": 76
    },
    "id": "module:docs",
-   "root": "8a55ae1653d950ef0feaa4ddac99b3ce53e9bd2b3c5a05596f4e4e951ae14ee5",
+   "root": "5c2b381395294ec95c97f677ef26b6f99751bffc91eeadc11d13d6c4aace4a00",
    "status": {
-    "built": 69
+    "built": 76
    },
    "terms": []
   },
@@ -13717,14 +13857,14 @@
    "terms": []
   },
   "mvp-site": {
-   "atoms": 31,
+   "atoms": 34,
    "claims": {
-    "OWN": 31
+    "OWN": 34
    },
    "id": "module:mvp-site",
-   "root": "d3b294e024e76dc0757adc9bb6238a6e14842f268a595166f71635b3216c7077",
+   "root": "d4ec594ec598d35f944f53bbef0cd5a92ec334c9ea1b3e51c4ad0ff559874e99",
    "status": {
-    "built": 31
+    "built": 34
    },
    "terms": []
   },
@@ -13776,7 +13916,7 @@
     "OWN": 79
    },
    "id": "module:repo-meta",
-   "root": "f85e459c5fe1084fb1705a5ebf39bd3c25cd8a775a7d3ede32e357d473f8e653",
+   "root": "2c0c1f4d039baba77f0282fd51de06568179356099bc54b7185fae1441048508",
    "status": {
     "built": 79
    },
@@ -13808,9 +13948,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "36c3b1ca38666ce1a08269ea382d4a855b22bf5bba8776bd5b646e953992e00a",
+ "root": "932db47880e579d7e789803a1cfd9c214d2da3db877d793948774adabaf95a94",
  "totals": {
-  "OWN": 892,
+  "OWN": 902,
   "OWN+TERMS": 52,
   "THIRD": 20
  },
