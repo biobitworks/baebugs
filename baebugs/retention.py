@@ -212,3 +212,99 @@ def main(argv=None):
 
 if __name__ == "__main__":
     main()
+
+
+# ------------------------------------------------- verify DROPPABLE before deletion
+
+def verify_droppable(base="/Volumes/magicBLACKbox/baebugs", lab="/Volumes/magicLABbox/baebugs", repo="/Users/byron/Projects/baebugs"):
+    """Per droppable item: VERIFIED_DROPPABLE / DROPPABLE_AFTER_RECORDING (hashes must be
+    written to the MMR first) / NOT_DROPPABLE, with the evidence that decided it."""
+    B, D = Path(base), Path(base, "datasets")
+    out = {}
+    ds = json.loads(Path(repo, "daisy/datasets.json").read_text())["datasets"]
+    refs = "".join(p.read_text() for p in [*D.glob("mix_*/data.yaml"), *Path(repo, "daisy").glob("DAISY-BB-*.json")] if p.exists())
+
+    # 1. rejected pseudo v1: manifest reproduces root; unreferenced; images are byte copies of raw GBIF
+    man = Path(B, "daisy/manifests/rejected_pseudo_v1.jsonl")
+    leaves = [json.loads(l) for l in man.read_text().splitlines() if l.strip()] if man.exists() else []
+    import hashlib as _hl
+    root = merkle_root([_hl.sha256(json.dumps(l, sort_keys=True, separators=(",", ":")).encode()).hexdigest() for l in leaves]) if leaves else None
+    raw = set()
+    for n, p in [("gbif_ca_2", D), ("gbif_az", D), ("gbif_nv", D), ("gbif_or", D), ("gbif_specimen_images", Path(lab, "datasets"))]:
+        mf = Path(p, n, "manifest.jsonl")
+        if mf.exists():
+            raw |= {json.loads(l).get("sha256") for l in mf.read_text().splitlines() if l.strip()}
+    imgs = [l for l in leaves if l["path"].startswith("images/")]
+    copies = sum(l["sha256"] in raw for l in imgs)
+    v = {"manifest_root_matches": root == ds.get("rejected_pseudo_v1", {}).get("merkle_root"),
+         "referenced_by_training": "rejected_pseudo" in refs, "images": len(imgs), "images_identical_to_raw_gbif": copies}
+    out["rejected_pseudo_v1/images"] = {**v, "verdict": "VERIFIED_DROPPABLE" if v["manifest_root_matches"] and not v["referenced_by_training"]
+                                         and copies == len(imgs) else "DROPPABLE_AFTER_RECORDING" if v["manifest_root_matches"] and not v["referenced_by_training"]
+                                         else "NOT_DROPPABLE",
+                                         "note": "labels/*.txt kept (the negative record); images only"}
+
+    # 2. Kaggle staging: each file hardlink or identical copy of a verified member file; remote ready
+    stage = Path(B, "daisy/kaggle"); bad, links, copies_ok, n = [], 0, 0, 0
+    mans = {m.stem: {json.loads(l)["path"]: json.loads(l)["sha256"] for l in m.read_text().splitlines() if l.strip()}
+            for m in Path(B, "daisy/manifests").glob("*.jsonl")}
+    for f in stage.rglob("*"):
+        if not f.is_file() or f.name in ("DAISY_POINTERS.jsonl", "DAISY_DATASETS.json", "dataset-metadata.json"):
+            continue
+        n += 1
+        member, rel = f.relative_to(stage).parts[1], str(Path(*f.relative_to(stage).parts[2:]))
+        if f.stat().st_nlink > 1:
+            links += 1; continue
+        if mans.get(member, {}).get(rel) == sha(f):
+            copies_ok += 1
+        else:
+            bad.append(str(f.relative_to(stage)))
+    import subprocess
+    ready = {}
+    for b in ("baebugs-daisy-train", "baebugs-daisy-eval", "baebugs-daisy-context"):
+        r = subprocess.run(["/Users/byron/.local/bin/kaggle", "datasets", "status", f"biobitworks/{b}"], capture_output=True, text=True)
+        ready[b] = "ready" in (r.stdout + r.stderr).lower()
+    out["daisy/kaggle (staging)"] = {"files": n, "hardlinks": links, "verified_copies": copies_ok, "unverified": bad[:5],
+                                     "n_unverified": len(bad), "kaggle_ready": ready,
+                                     "verdict": "VERIFIED_DROPPABLE" if not bad and all(ready.values()) else "NOT_DROPPABLE"}
+
+    # 3. stopped round 4: no weights; sweep_before images are derived intermediates
+    w = list(Path(B, "runs/r4_multires/weights").glob("*.pt"))
+    sw = [f for f in Path(B, "work/r4_multires").rglob("*") if f.is_file()]
+    sweep_json = [str(p) for p in Path(repo).rglob("*sweep*.json") if "node_modules" not in str(p)][:5]
+    out["runs/r4_multires"] = {"weights": len(w), "verdict": "VERIFIED_DROPPABLE" if not w else "NOT_DROPPABLE",
+                               "note": "stopped in epoch 1; fit_start (incl. init weights hash) is in ledger/r4_multires.jsonl"}
+    out["work/r4_multires (sweep_before)"] = {"files": len(sw), "sweep_results_in_repo": sweep_json,
+                                              "verdict": "DROPPABLE_AFTER_RECORDING",
+                                              "note": "resampled truth images (not byte-reproducible like multires); record their manifest root first"}
+
+    # 4. failed AMP output: NaN weights, pinned public base weights, keep log/evidence
+    k3 = Path(B, "daisy/kaggle_out3")
+    nan_info = {}
+    try:
+        import torch
+        for p in k3.rglob("*.pt"):
+            ck = torch.load(p, map_location="cpu", weights_only=False)
+            model = ck.get("model") if isinstance(ck, dict) else None
+            sd = model.state_dict() if hasattr(model, "state_dict") else {}
+            tens = [t for t in sd.values() if hasattr(t, "isnan") and t.is_floating_point()]
+            nan_info[str(p.relative_to(k3))] = {"sha256": sha(p), "tensors": len(tens),
+                                               "nan_tensors": sum(bool(t.isnan().any()) for t in tens)}
+    except Exception as e:
+        nan_info["error"] = str(e)[:200]
+    base_ok = nan_info.get("yolo11n-seg.pt", {}).get("sha256") == "55ed65c56c91713d23e8402371c6c49a6fd84f257f7dce452e8d70e41dcbe152"
+    run_w = {k: v for k, v in nan_info.items() if k.startswith("daisy/runs")}
+    out["daisy/kaggle_out3 (*.pt)"] = {"weights": nan_info, "base_weights_match_pin": base_ok,
+                                      "verdict": "DROPPABLE_AFTER_RECORDING" if run_w and all(v.get("nan_tensors", 0) > 0 for v in run_w.values()) and base_ok
+                                      else "NOT_DROPPABLE",
+                                      "note": "keep baebugs-daisy-bb-001.log, summary.txt, events.jsonl (evidence)"}
+
+    # 5. last.pt vs best.pt
+    for p in sorted(B.glob("runs/*/weights/last.pt")):
+        b = p.with_name("best.pt")
+        same = b.exists() and sha(b) == sha(p)
+        out[str(p.relative_to(B))] = {"sha256": sha(p), "identical_to_best": same,
+                                      "verdict": "VERIFIED_DROPPABLE" if same else "DROPPABLE_AFTER_RECORDING",
+                                      "note": "identical duplicate" if same else "different realization (final epoch); record hash before dropping"}
+    for k, v in out.items():
+        pass
+    return out
