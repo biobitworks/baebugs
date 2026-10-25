@@ -1,5 +1,5 @@
 {
- "atoms": 1205,
+ "atoms": 1206,
  "external": [
   {
    "claim": "THIRD",
@@ -361,11 +361,11 @@
    "commits": 16,
    "id": "leaf:README.md",
    "kind": "meta",
-   "leaf": "fd51c244ef918eb32b0de86dd5363c84b7ce3a09e4863009af1b60e819575ffe",
+   "leaf": "e7ae4d821c83fcf78126392c078177cbe6af9457eea7ee1edf18893df1694188",
    "licence": "MIT",
    "module": "repo-meta",
    "path": "README.md",
-   "sha256": "0e4e81ec6d65dc838facbabbd7c15a7ec152f8ee56a235afd6f3558bd9563d59",
+   "sha256": "e46a275eb10d0596c145dc91d074d73694e3071bf3152a5748a55e4a6c813176",
    "status": "built",
    "terms": []
   },
@@ -3719,11 +3719,11 @@
    "commits": 3,
    "id": "leaf:docs/SUBMISSION_LINKS.md",
    "kind": "doc",
-   "leaf": "900197c76cc1ae5955dc23589d9337bea18e86d1eaab655349617759867c643c",
+   "leaf": "0d2ec4145b0ec1752c4b602f3e8e5af0d0737e752ea1c5726d31c05eabee7aa1",
    "licence": "MIT",
    "module": "docs",
    "path": "docs/SUBMISSION_LINKS.md",
-   "sha256": "cdd0093b25c4d48c72dd9bd2e35916e5b490a3c4d5e0bcefd173d307118f524c",
+   "sha256": "70aaa9c96eeea7ce06024f20628d34b5b83bc18ace86e451ee42d2d74db8a852",
    "status": "built",
    "terms": []
   },
@@ -5088,7 +5088,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/submission/FINAL_SITE_REVIEW_20261025.md",
    "kind": "doc",
    "leaf": "8984cf411028c596d1b8e3adadf7038d97040425c4b6dafdd604a6bb3b7312af",
@@ -5102,7 +5102,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/submission/RELEASE_CHECK_RECEIPT_20261025.json",
    "kind": "doc",
    "leaf": "a7bd9d3176c59c05c76108aaa904bf44a1b910d0a75f00fbfe8687f3afc23b59",
@@ -5110,6 +5110,20 @@
    "module": "docs",
    "path": "docs/submission/RELEASE_CHECK_RECEIPT_20261025.json",
    "sha256": "eb273e3938e65082d973f84abb17e1cdc5a6d5b62f1a7f34bfdd5128f8b01768",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:docs/submission/RELEASE_SOURCE_SUCCESSOR_20261025.json",
+   "kind": "doc",
+   "leaf": "bbfaaed8922c561d6c321686d71557e864787ea040256ab00c154425ac75a25b",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/submission/RELEASE_SOURCE_SUCCESSOR_20261025.json",
+   "sha256": "1e6da16d939e1094ff80bcd827428b15820eaf2035809d83d1c37f4a85278db2",
    "status": "built",
    "terms": []
   },
@@ -15725,11 +15739,11 @@
    "commits": 8,
    "id": "leaf:site/board/index.html",
    "kind": "page",
-   "leaf": "bfb192849a20446d1431ea719eba1413d42a05bb70328a81c72c245ca39a5acb",
+   "leaf": "1a7c6a2fae9c1321e05d305f4a14c14d63ab367c301e682ea587fe446b1e913b",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/board/index.html",
-   "sha256": "583ebb7998423e4dd75dc7177d3e2c87d58f09d126c5284ba7ac77723d806d85",
+   "sha256": "525cd5b4666a62b331a0bc58822e03f1e477b52f7dd47d45c436fad230c1492d",
    "status": "built",
    "terms": []
   },
@@ -16128,14 +16142,14 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 4,
+   "commits": 5,
    "id": "leaf:site/mvp/build_public_site.py",
    "kind": "page",
-   "leaf": "9f3ffac5359e95252c2dcc4e5e7e523630149c843e56d1cd8e3fc2b6d24fee79",
+   "leaf": "c4758bcfea53a3c1afabf774552864b4969a423cb0fb571465c074df153449a9",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/mvp/build_public_site.py",
-   "sha256": "0ad04859e39442cfcdfb3457001566be19e12235a500876c2f231d9174fe79dc",
+   "sha256": "f8a16274153a43581ea8abb6be1640bdb3448a9b62874a1df2bc74ad5a4a4e26",
    "status": "built",
    "terms": []
   },
@@ -16145,11 +16159,11 @@
    "commits": 7,
    "id": "leaf:site/mvp/index.html",
    "kind": "page",
-   "leaf": "20d322fc4f08eefcce3d4c2ded9ccfbfced833228548136f8f656d451ab84062",
+   "leaf": "5e1bcfd6299feb6206ff0726897ab48ca6f8fafb45ba5c80342b0373d47590a0",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/mvp/index.html",
-   "sha256": "150dd8c324e20c1243dd0296dc09d3563bb1ffedbb3c6bb0ca2a75bedbd68d7c",
+   "sha256": "9890bb4490f9a905f30c888ed51d58fe35979a5b2dd23ac1fb9f65baef5b95ff",
    "status": "built",
    "terms": []
   },
@@ -16212,7 +16226,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 3,
-   "commits": 3,
+   "commits": 4,
    "id": "leaf:site/story/build_story.py",
    "kind": "page",
    "leaf": "4415ab68586d8f4764596423aaf562590805f840a622a053e689bb85398bf3db",
@@ -16229,11 +16243,11 @@
    "commits": 7,
    "id": "leaf:site/story/index.html",
    "kind": "page",
-   "leaf": "de111191811d10541b664072601ee17693aa4d00dbfabca1af68c90b9287fabc",
+   "leaf": "0e4941fb642a1913387e6b4ec21fb8ca28c703f026ece8db84a4c05774eea58d",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/story/index.html",
-   "sha256": "a90b61a7700ee94322583d4dee3ade54c21d11a6eace8cea80e70ba0732ba5de",
+   "sha256": "5ca9fa5325b4235df2ddbd86d6a7b9c72a27e75819376e20b6316b039e4c4549",
    "status": "built",
    "terms": []
   },
@@ -16243,11 +16257,11 @@
    "commits": 5,
    "id": "leaf:site/story/template.html",
    "kind": "page",
-   "leaf": "3aa0ef83d1930f66d90226733bb9422bd3dbbbc3fb1848e318d46b28bd3b241f",
+   "leaf": "d3c7a6208f38fee7ebcd14dbfe2233021bb33d0a8576a6deae9332bda9af87e9",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/story/template.html",
-   "sha256": "335e7a967f5f6a9b4d4ab928103528d763f56101f2081c3ebc6a6434001136d1",
+   "sha256": "14797130aa4b1bfeb5e9253fdc853b65a7a80954210273fd30a7e77b1189971a",
    "status": "built",
    "terms": []
   },
@@ -16506,14 +16520,14 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:tests/test_final_site_publish.py",
    "kind": "test",
-   "leaf": "d848a0e42ab0e5a878095871ad93730989c16b2d9bfeaca0c4d21f9243fc341c",
+   "leaf": "2ab8dbcf6a978357cc46cf20888d0801609854582a277f3893bda22b43a985eb",
    "licence": "MIT",
    "module": "tests",
    "path": "tests/test_final_site_publish.py",
-   "sha256": "f5a46c6d363f5da1eaaca5da25f8dc641c8443cab8b2340070e0ebb50c65d75c",
+   "sha256": "f7901c5db3c004053de24cac12e34a7728984a1e4c738ae82f26e5532ee25a11",
    "status": "tested",
    "terms": []
   },
@@ -17038,14 +17052,14 @@
    "terms": []
   },
   "docs": {
-   "atoms": 129,
+   "atoms": 130,
    "claims": {
-    "OWN": 129
+    "OWN": 130
    },
    "id": "module:docs",
-   "root": "ed8df3f3e7b7f92940486d4983d30f1c9342933aaeb0dbcfd8ef8f9b55dc07b8",
+   "root": "cc49eaaf985474b30f69cab0df6e8dc945ed1aec353873c19891cc9a838c56e9",
    "status": {
-    "built": 129
+    "built": 130
    },
    "terms": []
   },
@@ -17096,7 +17110,7 @@
     "OWN": 50
    },
    "id": "module:mvp-site",
-   "root": "bfb0afb22a67eb4d7f5b63bf2f46717aa1fc269439ac9fe9179a425fc77bfac3",
+   "root": "0cae8081d5f6116160ff67f8c5f65a16ea8fcc1c4e4957357fe8fc875b73254e",
    "status": {
     "built": 50
    },
@@ -17150,7 +17164,7 @@
     "OWN": 234
    },
    "id": "module:repo-meta",
-   "root": "152a19529c0fb1d53f31aabef2d935742a82f9a189fd6caeaed462d1a544f64d",
+   "root": "88e21cb2b5da77ed996f9f70d13c6b55a73ba70adc72a6cd64f83bd71566edd3",
    "status": {
     "built": 234
    },
@@ -17162,7 +17176,7 @@
     "OWN": 45
    },
    "id": "module:tests",
-   "root": "77748249f575edee85af24f9ddfaf5e465daac8cbf04ab051ac85c46e26a4b8d",
+   "root": "51f99fc86c991c6a471ac35fdb1e81a1a3d1ee3a2490fcf98685729556cc7ee7",
    "status": {
     "tested": 45
    },
@@ -17182,9 +17196,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "59498b8548ab6ba27ca6cf796240fdd051363b95286ef9b9c1ec060343222313",
+ "root": "ca031753960b47256a51bef7703fcdeada8cb49fcf2eeb3978560a5f17916c26",
  "totals": {
-  "OWN": 1133,
+  "OWN": 1134,
   "OWN+TERMS": 52,
   "THIRD": 20
  },

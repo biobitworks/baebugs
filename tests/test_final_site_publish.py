@@ -25,7 +25,8 @@ def test_all_final_review_routes_source_pinned_and_private_media_excluded():
         assert manifest["source_ref"]==ref
         assert manifest["evidence_pack_root"]==json.loads((site/"mvp.json").read_text())["root"]
         assert manifest["excluded_pr34_face_photos"] is True
-        assert manifest["submitted_youtube_link"]=="NOT_VERIFIED"
+        assert manifest["submitted_youtube_link"]=="SOURCE_REPORTED_NOT_INDEPENDENTLY_VERIFIED"
+        assert manifest["reported_youtube_url"]=="https://youtu.be/O4Gq-r018cI"
         assert manifest["submitted_google_slides_link"]=="NOT_VERIFIED"
         for route in [
             "index.html","story/index.html","board/index.html","review/index.html",

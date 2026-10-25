@@ -125,6 +125,21 @@ def build(target: Path, source_ref: str):
         'Submission source ledger</a></p></html>'
     )
 
+    # A video URL supplied in merged source is not evidence of duration,
+    # unlisted visibility or hardware demonstration; display its status clearly.
+    submitted_links_text = (REPO / "docs/SUBMISSION_LINKS.md").read_text()
+    yt_matches = re.findall(r"https://youtu\.be/[A-Za-z0-9_-]{11}", submitted_links_text)
+    source_youtube_url = yt_matches[0] if yt_matches else None
+    external_youtube_status = (
+        "SOURCE_REPORTED_NOT_INDEPENDENTLY_VERIFIED" if source_youtube_url
+        else "NOT_PROVIDED"
+    )
+    youtube_markup = (
+        '<a href="' + html_module.escape(source_youtube_url, quote=True) +
+        '" target="_blank" rel="noopener noreferrer">'
+        'Team-reported YouTube video (external, unverified)</a>'
+        if source_youtube_url else "No YouTube link recorded in source ledger"
+    )
     review_out = target / "review" / "index.html"
     review_out.parent.mkdir(parents=True, exist_ok=True)
     pack = json.loads((target / "mvp.json").read_text())
@@ -149,10 +164,11 @@ def build(target: Path, source_ref: str):
         '<li><a href="../">Root-to-leaf evidence graph</a></li>'
         '<li><a href="https://github.com/biobitworks/baebugs/blob/main/docs/SUBMISSION_LINKS.md">'
         'Repository submission index</a></li></ol>'
-        '<p><strong>Submission gates:</strong> Google Slides URL and unlisted '
-        'YouTube URL are not verified in this build. The 14-slide extended '
-        'lab-stack deck and autoplay slideshows do not substitute for the '
-        'event-required maximum five-slide presentation.</p>'
+        '<p><strong>Submission gates:</strong> The GitHub ledger reports '
+        + youtube_markup + '. The external video content and visibility are '
+        'NOT_INDEPENDENTLY_VERIFIED. A Google Slides submission URL is not '
+        'recorded. A 14-slide extended deck and autoplay slideshows do not '
+        'satisfy the maximum five-slide requirement.</p>'
         '<p>Physical arm transfer, calibrated purity and specimen recovery: '
         '<strong>NOT_TESTED</strong>. Photo permissions stay source-specific. '
         'Open PR #34 contains face-bearing imagery and is not included here.</p>'
@@ -196,7 +212,8 @@ def build(target: Path, source_ref: str):
               },
               "excluded_pr34_face_photos":True,
               "submitted_google_slides_link":"NOT_VERIFIED",
-              "submitted_youtube_link":"NOT_VERIFIED"}
+              "submitted_youtube_link":external_youtube_status,
+              "reported_youtube_url":source_youtube_url}
     (target/"deployment-manifest.json").write_text(json.dumps(manifest,indent=2,sort_keys=True)+"\n")
     return manifest
 
