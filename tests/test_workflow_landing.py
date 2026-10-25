@@ -1,11 +1,12 @@
-from pathlib import Path
-from tempfile import TemporaryDirectory
 import json
 import sys
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"site/mvp"))
-from build_public_site import build, H
+from build_public_site import H, build
+
 
 def test_workflow_main_page_has_truthful_stage_and_twin():
     s=(ROOT/"site/mvp/index.html").read_text()

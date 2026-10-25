@@ -1,10 +1,10 @@
 """End-to-end evidence browser test. Local HTTP and Chrome only; no robots or external writes."""
-import contextlib
 import functools
 import http.server
 import json
 import pathlib
 import threading
+
 from playwright.sync_api import sync_playwright
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]/"site/aok"
@@ -22,7 +22,7 @@ def main():
         for width in (1440,390):
             page=browser.new_page(viewport={"width":width,"height":900})
             errs=[]
-            page.on("pageerror",lambda e:errs.append(str(e)))
+            page.on("pageerror",lambda e,errs=errs:errs.append(str(e)))
             page.goto(base,wait_until="domcontentloaded")
             page.wait_for_function("document.querySelector('#rootState').textContent.includes('PASS')",timeout=30000)
             assert page.locator("#snapshotCount").inner_text().startswith("247")

@@ -1,6 +1,7 @@
 """AoK source/atom/Merkle contract and adversarial negative controls."""
-import copy,hashlib,importlib.util,json,pathlib,sys
-import pytest
+import copy
+import importlib.util
+import pathlib
 
 REPO=pathlib.Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location("aok",(REPO/"tools/aok_build.py"))
