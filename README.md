@@ -10,6 +10,7 @@
 | **Every submitted link, one page** | [`docs/SUBMISSION_LINKS.md`](docs/SUBMISSION_LINKS.md) |
 | End-to-end story page (7 steps, every number hashed) | [`site/story/`](site/story/) |
 | Sieving robot (teammates: video, deck, arm code) | [`docs/sieving_robot/`](docs/sieving_robot/), [`filtration-robot/`](filtration-robot/) |
+| **Demo video (YouTube)** | [https://youtu.be/O4Gq-r018cI](https://youtu.be/O4Gq-r018cI) |
 | Demo reel (67 s, 7 steps, original music) | [`docs/demo/baebugs_reel.mp4`](docs/demo/baebugs_reel.mp4) |
 | MVP graph page (root to leaf, check any hash, contest) | [`site/mvp/`](site/mvp/) · Protocol Board [`site/board/`](site/board/) |
 | Training results, wins and nulls | [`docs/TRAINING_REVIEW.md`](docs/TRAINING_REVIEW.md) |
