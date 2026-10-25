@@ -24,9 +24,9 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from .address import H
 from .explore import merkle_root
 from .mmr import MMRLog
-from .address import H
 
 
 def _edge(kind, nodes, data=None):

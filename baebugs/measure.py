@@ -7,8 +7,7 @@ acts on has been measured twice by methods that fail differently.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, asdict
-from typing import Optional
+from dataclasses import asdict, dataclass
 
 import cv2
 import numpy as np
@@ -24,7 +23,7 @@ class Measurement:
     source: str            # "yolo" | "classical" | "consensus"
     conf: float = 1.0
     label: str = "insect"
-    flag: Optional[str] = None
+    flag: str | None = None
 
     def to_dict(self):
         return asdict(self)
@@ -33,7 +32,7 @@ class Measurement:
 # ---------- calibration ----------
 
 def px_per_mm_from_aruco(image: np.ndarray, marker_mm: float,
-                         dictionary=cv2.aruco.DICT_4X4_50) -> Optional[float]:
+                         dictionary=cv2.aruco.DICT_4X4_50) -> float | None:
     """Scale from a printed ArUco marker of known side length in the field of view."""
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if image.ndim == 3 else image
     det = cv2.aruco.ArucoDetector(cv2.aruco.getPredefinedDictionary(dictionary))
@@ -59,7 +58,7 @@ def _from_contour(cnt, px_per_mm, source, conf=1.0, label="insect") -> Measureme
 
 def classical_measure(image: np.ndarray, px_per_mm: float,
                       min_area_mm2: float = 0.01, dark_on_light: bool = True,
-                      roi_mask: Optional[np.ndarray] = None) -> list[Measurement]:
+                      roi_mask: np.ndarray | None = None) -> list[Measurement]:
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if image.ndim == 3 else image
     gray = cv2.GaussianBlur(gray, (5, 5), 0)
     flag = cv2.THRESH_BINARY_INV if dark_on_light else cv2.THRESH_BINARY

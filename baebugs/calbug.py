@@ -18,7 +18,6 @@ import json
 import urllib.parse
 import urllib.request
 from collections import Counter
-from pathlib import Path
 
 import numpy as np
 

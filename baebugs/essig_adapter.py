@@ -72,7 +72,7 @@ def page_fco(name: str, saved_html_path: str | None = None, live=False) -> FCO:
         txt, status = "", "unknown"
     fields = {"url": url, "text": txt[:20000]}
     if name == "home":
-        m = re.search(r"([\d,]{5,})\s+(?:specimen\s+)?records", txt, re.I)
+        m = re.search(r"([\d,]{5,})\s+(?:specimen\s+)?records", txt, re.IGNORECASE)
         fields["record_count"] = int(m.group(1).replace(",", "")) if m else None
         fields["links"] = re.findall(r"https?://\S+", txt)[:200]
     if name == "gaps":
@@ -149,7 +149,11 @@ def vision_label_fco(fields: dict, model: str, image_sha: str) -> FCO:
 
 def read_label_with_claude(image_bgr, model=None) -> dict:
     """OCR + structure a pinned-specimen label via Claude (optional)."""
-    import base64, os, cv2, anthropic
+    import base64
+    import os
+
+    import anthropic
+    import cv2
     ok, buf = cv2.imencode(".jpg", image_bgr)
     msg = anthropic.Anthropic().messages.create(
         model=model or os.environ.get("BAEBUGS_CLAUDE_MODEL", "claude-opus-5-5"),

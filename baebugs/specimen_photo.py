@@ -16,7 +16,7 @@ from __future__ import annotations
 import cv2
 import numpy as np
 
-from .measure import Measurement, _from_contour
+from .measure import _from_contour
 
 
 def ruler_px_per_mm(img, search_frac=0.35, min_ppm=2.0, max_ppm=80.0):

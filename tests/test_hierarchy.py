@@ -1,4 +1,11 @@
-from baebugs.hierarchy import build, leave_one_level_out, attest_label, with_expert, partition, UNPLACED
+from baebugs.hierarchy import (
+    UNPLACED,
+    attest_label,
+    build,
+    leave_one_level_out,
+    partition,
+    with_expert,
+)
 
 M = [{"id": f"s{i}", "size": s, "order": o, "species": sp} for i, (s, o, sp) in enumerate([
     ("L", "Coleoptera", "a"), ("L", "Coleoptera", "b"), ("L", "Diptera", "c"),

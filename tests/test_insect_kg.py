@@ -1,8 +1,13 @@
-import json
-from baebugs.insect_kg import insect_tree, verify_tree, break_point, strip, rebuild_hash
+from baebugs.insect_kg import (
+    break_point,
+    insect_tree,
+    observe,
+    rebuild_hash,
+    strip,
+    verify_tree,
+)
+from baebugs.insect_lomo import check, family_stats, novelty_logic
 from baebugs.printmodels import toy_fields
-from baebugs.insect_lomo import obs_consistent, check, cases, novelty_logic, family_stats
-from baebugs.insect_kg import observe
 
 
 def test_insect_hash_deterministic_and_tamper_evident():

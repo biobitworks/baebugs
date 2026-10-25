@@ -1,9 +1,21 @@
 import cv2
 
-from baebugs.bugpicker_bridge import export_yolo, manifest_record, object_records, write_scan
-from baebugs.essig_adapter import (gbif_fco, label_fco, page_fco, parse_label,
-                                   specimen_context, vision_label_fco, vision_prompt_context)
-from baebugs.fco import FCO, hybridize
+from baebugs.bugpicker_bridge import (
+    export_yolo,
+    manifest_record,
+    object_records,
+    write_scan,
+)
+from baebugs.essig_adapter import (
+    gbif_fco,
+    label_fco,
+    page_fco,
+    parse_label,
+    specimen_context,
+    vision_label_fco,
+    vision_prompt_context,
+)
+from baebugs.fco import FCO
 from baebugs.measure import classical_measure
 from baebugs.synthetic import make_sample
 

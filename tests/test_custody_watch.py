@@ -1,5 +1,5 @@
-import json, subprocess
-from pathlib import Path
+import json
+
 from baebugs.custody_watch import Watcher
 from baebugs.mmr import MMRLog
 

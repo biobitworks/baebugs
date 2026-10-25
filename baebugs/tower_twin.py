@@ -30,7 +30,6 @@ from __future__ import annotations
 import hashlib
 import itertools
 import json
-import math
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -40,7 +39,6 @@ from shapely.geometry import Point
 from . import punch_filters as PF
 from .explore import merkle_root
 from .sieve import classify, load_yaml
-
 
 # ------------------------------------------------------------------ filters
 

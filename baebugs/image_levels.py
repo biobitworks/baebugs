@@ -129,7 +129,6 @@ def _largest(contours):
 
 
 def mask_classical(img, ppm):
-    from .specimen_photo import stage_mask
     g = cv2.GaussianBlur(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY), (5, 5), 0)
     _, bw = cv2.threshold(g, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
     bw = cv2.morphologyEx(bw, cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
@@ -144,7 +143,7 @@ _U = {}
 
 
 def mask_ultra(img, kind, weights):
-    from ultralytics import YOLO, FastSAM, YOLOE
+    from ultralytics import YOLO, YOLOE, FastSAM
     key = (kind, weights)
     if key not in _U:
         if kind == "yoloe":

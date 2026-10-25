@@ -91,7 +91,7 @@ REGISTRY = {
                                 "transform": "subset of pseudo_specimens_r3_real whose photo is byte-identical to a gbif_or photo; "
                                              "r3 labels + ruler truth, all photos in val (domain_split.py, 002 amendment 1)"},
 }
-PII_COLS = re.compile(r"observer|email|phone|recorded_?by|creator|editor|owner|author|surveyor|contact|user_?name", re.I)
+PII_COLS = re.compile(r"observer|email|phone|recorded_?by|creator|editor|owner|author|surveyor|contact|user_?name", re.IGNORECASE)
 EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 PHONE = re.compile(r"\(?\b\d{3}\)?[-. ]\d{3}[-. ]\d{4}\b")
 FREE_TEXT_DROP = ("survey_comments", "location_notes", "habitat_notes")
@@ -362,10 +362,11 @@ def toy_renders(out_dir, kg="print/fuse1/kg", ppms=(10, 20)):
     px/mm; label = silhouette polygon (YOLO-seg), truth = envelope, area, insect hash."""
     import cv2
     import numpy as np
-    from .insect_kg import insect_tree
-    from .model_compare import render
     from shapely.geometry import Polygon
     from shapely.ops import unary_union
+
+    from .insect_kg import insect_tree
+    from .model_compare import render
     index = json.loads((Path(kg) / "index.json").read_text())
     out = Path(out_dir)
     truth = []

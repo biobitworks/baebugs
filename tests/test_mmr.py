@@ -1,4 +1,5 @@
 import hashlib
+
 from baebugs.mmr import MMR, MMRLog
 
 

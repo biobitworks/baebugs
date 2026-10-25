@@ -1,7 +1,9 @@
-import json, shutil, subprocess
-from pathlib import Path
+import shutil
+import subprocess
+
 import pytest
-from baebugs.opentrons_parts import parts, labware_defs, SBS, O
+
+from baebugs.opentrons_parts import SBS, O, labware_defs, parts
 from baebugs.print_parts import to_trimesh
 
 

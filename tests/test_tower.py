@@ -1,6 +1,7 @@
 import pytest
-from baebugs import tower_twin as TT
+
 from baebugs import punch_filters as PF
+from baebugs import tower_twin as TT
 from baebugs.sieve import load_yaml
 
 

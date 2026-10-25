@@ -1,7 +1,11 @@
 import json
 
-from baebugs.bugpicker_bridge import (manifest_record, object_records,
-                                      read_bugpicker_objects, write_scan)
+from baebugs.bugpicker_bridge import (
+    manifest_record,
+    object_records,
+    read_bugpicker_objects,
+    write_scan,
+)
 from baebugs.measure import classical_measure
 from baebugs.provenance import Provenance
 from baebugs.sieve import plan_stack

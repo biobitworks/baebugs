@@ -2,8 +2,14 @@ import itertools
 
 import numpy as np
 
-from baebugs.explore import (CAPTURE, HARDWARE, Ledger, compare_lomo_breakpoints,
-                             lomo, simulate_run)
+from baebugs.explore import (
+    CAPTURE,
+    HARDWARE,
+    Ledger,
+    compare_lomo_breakpoints,
+    lomo,
+    simulate_run,
+)
 from baebugs.novelty import mesh_gaps, novel_sizes, suggest_filters
 from baebugs.preservation import part_risks
 from baebugs.sieve import load_yaml

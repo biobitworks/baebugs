@@ -15,7 +15,6 @@ import json
 from pathlib import Path
 
 import cv2
-import numpy as np
 
 # photo 01, dishes top -> bottom (docs/analog_test/README.md)
 DISH_CONTENTS = ["mixed: wild rice, red rice, ditalini, white rice, pasta shard", "chia", "couscous",

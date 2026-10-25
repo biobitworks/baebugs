@@ -54,10 +54,9 @@ def _need(tool):
 
 
 def _html_files():
+    """Full HTML documents only: site/ pages. dashboard/twin/bench_twin.html is an artifact source fragment
+    (no <html>/<head>, wrapped at publish time) and is validated through its full copy site/twin/index.html."""
     out = []
-    p = ROOT / "dashboard" / "twin" / "bench_twin.html"
-    if p.exists():
-        out.append(p)
     site = ROOT / "site"
     if site.is_dir():
         out += sorted(site.rglob("*.html"))

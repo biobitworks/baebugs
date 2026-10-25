@@ -1,5 +1,6 @@
 import pytest
-from baebugs.inserts import Registry, DESIGNS
+
+from baebugs.inserts import DESIGNS, Registry
 
 
 def test_ladder_and_qualification(tmp_path):

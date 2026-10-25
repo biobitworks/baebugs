@@ -44,7 +44,7 @@ RAIL_STRIP = (12.0, 6.0)   # plywood rail-arm cross-section (MEASURE)
 
 
 def _R():
-    from pylabrobot.resources import Resource, Coordinate
+    from pylabrobot.resources import Coordinate, Resource
     return Resource, Coordinate
 
 
@@ -369,6 +369,7 @@ def preview_png(twin, path):
 
 def main(argv=None):
     import argparse
+
     from . import tower_twin as TT
     ap = argparse.ArgumentParser("baebugs-bench-twin")
     ap.add_argument("--out", default="print/bench")

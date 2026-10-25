@@ -1,4 +1,7 @@
-import json, shutil, subprocess
+import json
+import shutil
+import subprocess
+
 import pytest
 
 NODE = shutil.which("node")

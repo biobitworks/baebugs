@@ -1,4 +1,4 @@
-from baebugs.print_parts import parts, to_trimesh, P
+from baebugs.print_parts import P, parts, to_trimesh
 
 
 def test_all_parts_watertight_and_sized():

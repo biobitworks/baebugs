@@ -1,8 +1,6 @@
-import json
-from pathlib import Path
+from baebugs.custody_watch import Watcher
 from baebugs.mmr import MMRLog
 from baebugs.resolve import Store, dangling, record_breaks
-from baebugs.custody_watch import Watcher
 
 
 def test_dangling_weights_reference_is_a_break(tmp_path):

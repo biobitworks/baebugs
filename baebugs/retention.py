@@ -16,7 +16,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import os
 import shutil
 import tempfile
 from pathlib import Path
@@ -89,6 +88,7 @@ def prove_toy_kg(repo="."):
 def prove_multires(data_root, n=25):
     """Re-resample n pseudo images at each MP level and compare bytes."""
     import cv2
+
     from .resolution import at_megapixels
     src = Path(data_root, "pseudo_specimens_r3_real/images")
     out = {"compared": 0, "n_mismatch": 0, "mismatch": []}
@@ -109,6 +109,7 @@ def prove_multires(data_root, n=25):
 
 def prove_toy_renders(render_root, n=20):
     import cv2
+
     from .model_compare import render
     files = sorted(Path(render_root).rglob("*.png"))[:n]
     idx = {}

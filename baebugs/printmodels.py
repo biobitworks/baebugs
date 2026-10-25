@@ -19,7 +19,6 @@ small parts from getting lost in the powder).
 from __future__ import annotations
 
 import csv
-import math
 from pathlib import Path
 
 import numpy as np

@@ -266,8 +266,8 @@ def query_text(obs, qid=None):
 
 
 def _parse_json(text):
-    text = re.sub(r"<think>.*?</think>", "", text or "", flags=re.S)
-    m = re.search(r"```(?:json)?\s*(.*?)```", text, re.S)
+    text = re.sub(r"<think>.*?</think>", "", text or "", flags=re.DOTALL)
+    m = re.search(r"```(?:json)?\s*(.*?)```", text, re.DOTALL)
     if m:
         text = m.group(1)
     for o, c in (("[", "]"), ("{", "}")):
