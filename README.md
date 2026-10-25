@@ -2,6 +2,25 @@
 
 # baebugs
 
+
+## Submission (BioKEA Track A, Physical AI for Science Hack, Oct 25 2026)
+
+| What | Where |
+|---|---|
+| Demo reel (67 s, 7 steps, original music) | [`docs/demo/baebugs_reel.mp4`](docs/demo/baebugs_reel.mp4) |
+| MVP graph page (root to leaf, check any hash, contest) | [`site/mvp/`](site/mvp/) · Protocol Board [`site/board/`](site/board/) |
+| Training results, wins and nulls | [`docs/TRAINING_REVIEW.md`](docs/TRAINING_REVIEW.md) |
+| Planned vs built (LOMO, Merkle break points) | [`docs/ASBUILT_LOMO.md`](docs/ASBUILT_LOMO.md) |
+| Everything under custody (counts and roots) | [`kg/custody_inventory.json`](kg/custody_inventory.json) |
+| Interchangeable filters (32 plates, 316L inserts, variable aperture) | [`print/filters/`](print/filters/), [`baebugs/inserts.py`](baebugs/inserts.py), [`baebugs/variable_aperture.py`](baebugs/variable_aperture.py) |
+| Trommel print packages (BioKEA trays; Fuse 1+ zones + X1C rest) | [`print/packages/`](print/packages/) |
+| Toy insects (91, STL + OpenSCAD + hash) | [`print/fuse1/`](print/fuse1/) |
+| Vision at every step + escalation ladder | [`baebugs/tiers.py`](baebugs/tiers.py), [`baebugs/ladder.py`](baebugs/ladder.py), [`docs/ladder_demo/`](docs/ladder_demo/) |
+| Bench asset database (35 objects, photos) | [`kg/assets.json`](kg/assets.json), [`assets/`](assets/) |
+| Licensing | [`NOTICE.md`](NOTICE.md), [`docs/CLAIMS.md`](docs/CLAIMS.md) |
+
+Code is MIT. Trained weights would be AGPL-3.0 (Ultralytics) and are not distributed here. Museum photos keep their CC0 / CC BY terms. See `NOTICE.md`.
+
 ## Human and AI review entry point
 
 Start with the [workflow README](docs/workflow/README.md) for the current MVP scope, local demo instructions and evidence boundaries. AI reviewers: use the [review brief](docs/workflow/AI_REVIEW.md). The workflow page generates draft protocols; live inference and hardware execution are not connected to it. Older pipeline descriptions below describe architecture and must be checked against current receipts before treating them as observed runs.
