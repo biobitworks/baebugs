@@ -12942,11 +12942,11 @@
       "content": {
         "body": "Coarse specimen fractionation",
         "details": {},
-        "source_sha256": "57eb6fa7ff990c9c0c6790180e5b9342dc932a5a9690319d5e4f3b1b01c4a654",
+        "source_sha256": "4e1dcb29b4085ba10439662b2d89dbd4891ad47d898905349b63f04e16598486",
         "title": "BugSorter / EntoSieve",
         "type": "module"
       },
-      "content_canonical_utf8": "{\"body\":\"Coarse specimen fractionation\",\"details\":{},\"source_sha256\":\"57eb6fa7ff990c9c0c6790180e5b9342dc932a5a9690319d5e4f3b1b01c4a654\",\"title\":\"BugSorter / EntoSieve\",\"type\":\"module\"}",
+      "content_canonical_utf8": "{\"body\":\"Coarse specimen fractionation\",\"details\":{},\"source_sha256\":\"4e1dcb29b4085ba10439662b2d89dbd4891ad47d898905349b63f04e16598486\",\"title\":\"BugSorter / EntoSieve\",\"type\":\"module\"}",
       "context": {
         "id": "stage:sorter",
         "license": "MIT_REPO_CONTEXT",
@@ -12958,14 +12958,14 @@
       },
       "context_canonical_utf8": "{\"id\":\"stage:sorter\",\"license\":\"MIT_REPO_CONTEXT\",\"path\":\"baebugs/tower_twin.py\",\"rights\":\"UPSTREAM_SEPARATE\",\"source\":\"baebugs\",\"stage\":\"sorter\",\"status\":\"PHYSICAL_SORTING_NOT_TESTED\"}",
       "details": {},
-      "fco_id": "fco:sha256:3398c4295d1dcc39b58d1e3b417776aaaef946978958c73203a5d25115696bcd",
+      "fco_id": "fco:sha256:686bc6b75764bfeaf891faba6751a1ad89430323466fd7877ab7964942f5213f",
       "id": "stage:sorter",
       "license": "MIT_REPO_CONTEXT",
       "occurrence_id": "occ:sha256:35b7753225f7083d6075b60c3eeead33f2c71deccc1578168a41ba944ba06658",
       "rights": "UPSTREAM_SEPARATE",
       "source": "baebugs",
       "source_path": "baebugs/tower_twin.py",
-      "source_sha256": "57eb6fa7ff990c9c0c6790180e5b9342dc932a5a9690319d5e4f3b1b01c4a654",
+      "source_sha256": "4e1dcb29b4085ba10439662b2d89dbd4891ad47d898905349b63f04e16598486",
       "stage": "sorter",
       "status": "PHYSICAL_SORTING_NOT_TESTED",
       "title": "BugSorter / EntoSieve",
@@ -13012,6 +13012,6 @@
       "url": "https://github.com/biobitworks/baebugs/issues/2"
     }
   ],
-  "root": "4faa8c3c48f910748d91c87753e529a1c3104defe7e90666066c05f647a03bcf",
+  "root": "698d9a83566da66a9ff0adb2c0e26ce1856d2f0cdfc6200b0729cbaef021dc37",
   "schema": "baebugs.aok.graph.v1"
 }
