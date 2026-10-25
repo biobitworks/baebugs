@@ -19,6 +19,25 @@ def test_tamper_is_caught(tmp_path):
     assert not r["ok"] and r["fails"] == ["file stl/print-honeycomb.stl"]
 
 
+def test_dropped_fragment_and_library_edit_are_caught(tmp_path):
+    import shutil
+    shutil.copytree(lt.OUT, tmp_path / "lw")
+    pj = tmp_path / "lw" / "merkle" / "parts.json"
+    parts = json.loads(pj.read_text())
+    t = parts["print-honeycomb"]
+    t["fragments"] = [f for f in t["fragments"] if f["name"] != "output.stl"]
+    pj.write_text(json.dumps(parts))
+    lib = tmp_path / "lw" / "scad" / "labware.scad"
+    lib.write_text(lib.read_text() + "\n// edit\n")
+    fails = lt.verify(tmp_path / "lw")["fails"]
+    assert "part tree print-honeycomb" in fails and "file scad/labware.scad" in fails
+
+
+def test_library_hash_is_in_every_wrapper():
+    h = lt.sha(lt.SCAD_LIB.read_bytes())
+    assert all(h in (lt.OUT / "scad" / f"{p['id']}.scad").read_text() for p in lt.PRINTS)
+
+
 def test_remixes_are_centered_and_printable():
     for p in lt.PRINTS:
         q = p["params"]

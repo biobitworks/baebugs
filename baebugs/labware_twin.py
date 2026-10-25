@@ -272,9 +272,11 @@ def tree(fragments):
 
 
 # ---------- outputs ----------
-def scad_source(p: dict) -> str:
+def scad_source(p: dict, lib_hash: str) -> str:
+    """The library hash is part of the wrapper text, so a library edit re-renders every STL."""
     args = ", ".join(f"{k} = {v}" for k, v in p["params"].items())
     return (f"// {p['name']}\n// part id: {p['id']}  license: {p['license']}\n"
+            f"// labware.scad sha256: {lib_hash}\n"
             f"// derived from: {', '.join(p['derived_from'])}\n"
             f"// Edit the parameters to remix. Catalog dimensions marked est. need calipers before a production run.\n"
             f"use <labware.scad>\n\n{MODULE[p['family']]}({args});\n")
@@ -364,7 +366,7 @@ def build(out: Path | str = OUT, prints: list[dict] | None = None, photo_dir: Pa
     meta = {}
     for p in prints:
         scad, stl = out / "scad" / f"{p['id']}.scad", out / "stl" / f"{p['id']}.stl"
-        src = scad_source(p)
+        src = scad_source(p, lib_hash)
         changed = not scad.exists() or scad.read_text() != src
         if changed:
             scad.write_text(src)
@@ -436,8 +438,11 @@ def verify(out: Path | str = OUT) -> dict:
     parts = json.loads((out / "merkle" / "parts.json").read_text())
     lab = json.loads((out / "merkle" / "lab_root.json").read_text())
     log = json.loads((out / "merkle" / "custody_log.json").read_text())
-    fails, n = [], 0
+    fails, n, libs = [], 0, set()
     for pid, t in parts.items():
+        names = [f["name"] for f in t["fragments"]]
+        if names != sorted(set(names)) or merkle([f["leaf"] for f in t["fragments"]])[0] != t["root"]:
+            fails.append(f"part tree {pid}")             # a dropped or reordered fragment changes the root
         for f in t["fragments"]:
             n += 1
             if leaf(f["name"], f["payload"]) != f["leaf"] or climb(f["leaf"], f["proof"]) != t["root"]:
@@ -447,6 +452,13 @@ def verify(out: Path | str = OUT) -> dict:
                 fp = out / pl["file"]
                 if not fp.exists() or sha(fp.read_bytes()) != pl["sha256"]:
                     fails.append(f"file {pl['file']}")
+                if pl.get("library_sha256"):
+                    libs.add(pl["library_sha256"])
+    lib = out / "scad" / "labware.scad"
+    if libs and (not lib.exists() or {sha(lib.read_bytes())} != libs):
+        fails.append("file scad/labware.scad")
+    if merkle([parts[i]["root"] for i in sorted(parts)])[0] != lab["root"]:
+        fails.append("lab root")
     for p in lab["parts"]:
         if parts[p["id"]]["root"] != p["root"] or climb(p["root"], p["proof"]) != lab["root"]:
             fails.append(f"part root {p['id']}")

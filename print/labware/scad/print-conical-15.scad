@@ -1,5 +1,6 @@
 // SBS 3x5 rack, 15 mL conicals
 // part id: print-conical-15  license: CERN-OHL-W-2.0
+// labware.scad sha256: 025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2
 // derived from: obs-rack-18-white
 // Edit the parameters to remix. Catalog dimensions marked est. need calipers before a production run.
 use <labware.scad>

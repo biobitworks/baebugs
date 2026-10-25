@@ -1,5 +1,6 @@
 // SBS 2x3 rack, 50 mL conicals
 // part id: print-conical-50  license: CERN-OHL-W-2.0
+// labware.scad sha256: 025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2
 // derived from: obs-conical-50, obs-rack-4way-orange
 // Edit the parameters to remix. Catalog dimensions marked est. need calipers before a production run.
 use <labware.scad>

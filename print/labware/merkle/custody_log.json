@@ -65,17 +65,17 @@
   "action": "modeled",
   "detail": "8 parametric remixes rendered with OpenSCAD; Opentrons defs for SBS racks",
   "commits_to": {
-   "print-rack-96": "ca1f0dcf28c059ecbd7cf0eebc5426d78922ed715556565a5f34aa4ebc62bd06",
-   "print-cryo-24": "5bc08b719905f493401ba20faab8eb1b595822788d260aac466b01d3f9645df4",
-   "print-conical-15": "8330b4293975e4d6452245be448b2a256c2ddbef9949f8d9db3c183ef661a7e4",
-   "print-conical-50": "a185b79b426faf65d48b024f051f8eb2d1fd16fa616f611b39f666db1f5fb81f",
-   "print-cryo-100": "e9db855b5317bd1eb1bd27a329d2a1d12df1bcf293a48ec1a1925ac61794052d",
-   "print-frame-sbs": "4e5f5fffe88af6d515110f5456bcb8952d2726e9e3a65aef626474e8878cc13d",
-   "print-grid-mesh": "c2b783403191c680fd229beb0c4dc0db5333f153a6e3e945110ba0dc9f675fb0",
-   "print-honeycomb": "690ec8f491b5da5a578c9a1577de3150c2df9a03ae0f38e1d29bfe34644c3217"
+   "print-rack-96": "c38ee2f089daebc515288902f23a4cb9475960a115b7398af8750e7910917867",
+   "print-cryo-24": "950ffc190d97ec982b27ce2cf57e5c1ec205817e834cae320942f70083db51ad",
+   "print-conical-15": "1d82cd3b2eb6f22b8834e4d3c2abd30e212cf0c79fe050130daf9c3566b0bf92",
+   "print-conical-50": "8a311c22c2d7aba350146297f5ab36badb057ccd2f7ad6733e8e483a1566e945",
+   "print-cryo-100": "d72e0d3ddf33b9d2f187ebdfef98aaf952b19000d20e517f9e5d0b962775b2dc",
+   "print-frame-sbs": "2c626238b7ebe01c2083955b6febb1fc1e163b28de6061c7981d9587cef7f380",
+   "print-grid-mesh": "164967adb7772618683f1b2464448051d80eeaa692e359d05d5328e47220a03b",
+   "print-honeycomb": "483b2148d2951b8a5a748c51fc0e12bedbf30c930120da613bd57bca56297024"
   },
   "prev": "66b253955c91a0976fc10803e30d59992fa28ff1296422fa79435a98d9f112d6",
-  "hash": "407725023db1cb71b00a9aa6d541b3d101368d63b981a8c683539f16fed0dc11"
+  "hash": "1644e624b72194309569fd17d53ce0bef04e60c9f55e0cd05e4f6dcef5c6fabf"
  },
  {
   "seq": 3,
@@ -84,9 +84,9 @@
   "action": "sealed",
   "detail": "lab Merkle root over all part roots",
   "commits_to": {
-   "lab_root": "e37c080dccce76862746834ebbab7ce674bfcec2b20e60b4d5700446040ba7ae"
+   "lab_root": "b8ce84b5ee1d33bbb31eb359c742732a207ca7e4b254582fd78625dec6edff85"
   },
-  "prev": "407725023db1cb71b00a9aa6d541b3d101368d63b981a8c683539f16fed0dc11",
-  "hash": "7677231c6067a51993c63e4b933282759a93f937e94b3890c2769a2aeec1edce"
+  "prev": "1644e624b72194309569fd17d53ce0bef04e60c9f55e0cd05e4f6dcef5c6fabf",
+  "hash": "01c74500371dbd4efc7af247f4085c39ebdc60cd04cd465dbadcbe10aae17a48"
  }
 ]

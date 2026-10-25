@@ -4289,7 +4289,7 @@
   ]
  },
  "print-rack-96": {
-  "root": "ca1f0dcf28c059ecbd7cf0eebc5426d78922ed715556565a5f34aa4ebc62bd06",
+  "root": "c38ee2f089daebc515288902f23a4cb9475960a115b7398af8750e7910917867",
   "fragments": [
    {
     "name": "derivation",
@@ -4313,7 +4313,7 @@
      },
      {
       "side": "R",
-      "hash": "d15651eceadbb1fd1f9f53763938623d3453de84c480d01728d23f8efc7c7f3e"
+      "hash": "8b7fddaec6d20b87bfa44afd1926963cfc8d6c392cd319048550122bcb62b892"
      }
     ]
    },
@@ -4336,7 +4336,7 @@
      },
      {
       "side": "R",
-      "hash": "d15651eceadbb1fd1f9f53763938623d3453de84c480d01728d23f8efc7c7f3e"
+      "hash": "8b7fddaec6d20b87bfa44afd1926963cfc8d6c392cd319048550122bcb62b892"
      }
     ]
    },
@@ -4357,7 +4357,7 @@
      },
      {
       "side": "R",
-      "hash": "d15651eceadbb1fd1f9f53763938623d3453de84c480d01728d23f8efc7c7f3e"
+      "hash": "8b7fddaec6d20b87bfa44afd1926963cfc8d6c392cd319048550122bcb62b892"
      }
     ]
    },
@@ -4381,7 +4381,7 @@
      },
      {
       "side": "R",
-      "hash": "d15651eceadbb1fd1f9f53763938623d3453de84c480d01728d23f8efc7c7f3e"
+      "hash": "8b7fddaec6d20b87bfa44afd1926963cfc8d6c392cd319048550122bcb62b892"
      }
     ]
    },
@@ -4400,7 +4400,7 @@
      },
      {
       "side": "R",
-      "hash": "5443736e8302c4bfd427fd0bd38aab2c59d17ae8fafe1b1f6e1546ae79b09f47"
+      "hash": "b085aa10e767c924caf95e5dbbd6fe2b1ac6a0bbc95cac35a2f3d5596066f9d4"
      },
      {
       "side": "L",
@@ -4428,7 +4428,7 @@
      },
      {
       "side": "R",
-      "hash": "5443736e8302c4bfd427fd0bd38aab2c59d17ae8fafe1b1f6e1546ae79b09f47"
+      "hash": "b085aa10e767c924caf95e5dbbd6fe2b1ac6a0bbc95cac35a2f3d5596066f9d4"
      },
      {
       "side": "L",
@@ -4453,7 +4453,7 @@
     "proof": [
      {
       "side": "R",
-      "hash": "870e5d7a55dcb29451eb6d4686ce7aac68ba831a33dfbb29d7dbc7ed2c873c2a"
+      "hash": "6ad7f92084d056fb5f22e10e09a142e3d7d61b5a5402255a6893ac6972116fe6"
      },
      {
       "side": "L",
@@ -4469,10 +4469,10 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-rack-96.scad",
-     "sha256": "fb5bbf9d8a86bf0d47a902664b68a073ab353769e7bfb4c64d51a77b8fdc9ee8",
+     "sha256": "7ee84360b2b07013b8e9853b152d71ab4c39373f9fce58c006cc15e41c1d9c64",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "870e5d7a55dcb29451eb6d4686ce7aac68ba831a33dfbb29d7dbc7ed2c873c2a",
+    "leaf": "6ad7f92084d056fb5f22e10e09a142e3d7d61b5a5402255a6893ac6972116fe6",
     "proof": [
      {
       "side": "L",
@@ -4491,7 +4491,7 @@
   ]
  },
  "print-cryo-24": {
-  "root": "5bc08b719905f493401ba20faab8eb1b595822788d260aac466b01d3f9645df4",
+  "root": "950ffc190d97ec982b27ce2cf57e5c1ec205817e834cae320942f70083db51ad",
   "fragments": [
    {
     "name": "derivation",
@@ -4513,7 +4513,7 @@
      },
      {
       "side": "R",
-      "hash": "48e80907fea38ea9a081306ce954aaa96f1174112d3be67e024c2bc9b69962ce"
+      "hash": "8b9dd22c62cb3a54f5e221645a1c85c36af18b833cb1e78b21b2273ceb2d6b86"
      }
     ]
    },
@@ -4536,7 +4536,7 @@
      },
      {
       "side": "R",
-      "hash": "48e80907fea38ea9a081306ce954aaa96f1174112d3be67e024c2bc9b69962ce"
+      "hash": "8b9dd22c62cb3a54f5e221645a1c85c36af18b833cb1e78b21b2273ceb2d6b86"
      }
     ]
    },
@@ -4557,7 +4557,7 @@
      },
      {
       "side": "R",
-      "hash": "48e80907fea38ea9a081306ce954aaa96f1174112d3be67e024c2bc9b69962ce"
+      "hash": "8b9dd22c62cb3a54f5e221645a1c85c36af18b833cb1e78b21b2273ceb2d6b86"
      }
     ]
    },
@@ -4581,7 +4581,7 @@
      },
      {
       "side": "R",
-      "hash": "48e80907fea38ea9a081306ce954aaa96f1174112d3be67e024c2bc9b69962ce"
+      "hash": "8b9dd22c62cb3a54f5e221645a1c85c36af18b833cb1e78b21b2273ceb2d6b86"
      }
     ]
    },
@@ -4600,7 +4600,7 @@
      },
      {
       "side": "R",
-      "hash": "e174206ad5c1e113806e25f1aff39f522e4a9c2f376b45bb540ce23a717482f5"
+      "hash": "de8ee931843237814bf850fb3a14462899977d668c8032d2b8dd2a01f31669e2"
      },
      {
       "side": "L",
@@ -4628,7 +4628,7 @@
      },
      {
       "side": "R",
-      "hash": "e174206ad5c1e113806e25f1aff39f522e4a9c2f376b45bb540ce23a717482f5"
+      "hash": "de8ee931843237814bf850fb3a14462899977d668c8032d2b8dd2a01f31669e2"
      },
      {
       "side": "L",
@@ -4653,7 +4653,7 @@
     "proof": [
      {
       "side": "R",
-      "hash": "e50c1de5d8922078f90d11000549a3506c401ed45d4f5dfe56662d71534ca3d3"
+      "hash": "9abe0d9779a44746701c8399371aa36e7a552ff116e4d19f44671f6eb66b9184"
      },
      {
       "side": "L",
@@ -4669,10 +4669,10 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-cryo-24.scad",
-     "sha256": "88404135d09bbc45ab88c46e26c7c1e25b511f5cc81b73d6b4fafecb50115cdd",
+     "sha256": "c99bb4428cb472a641412089f39e1b6cdfbcb8cb170e5297ca27222e362c9cb7",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "e50c1de5d8922078f90d11000549a3506c401ed45d4f5dfe56662d71534ca3d3",
+    "leaf": "9abe0d9779a44746701c8399371aa36e7a552ff116e4d19f44671f6eb66b9184",
     "proof": [
      {
       "side": "L",
@@ -4691,7 +4691,7 @@
   ]
  },
  "print-conical-15": {
-  "root": "8330b4293975e4d6452245be448b2a256c2ddbef9949f8d9db3c183ef661a7e4",
+  "root": "1d82cd3b2eb6f22b8834e4d3c2abd30e212cf0c79fe050130daf9c3566b0bf92",
   "fragments": [
    {
     "name": "derivation",
@@ -4712,7 +4712,7 @@
      },
      {
       "side": "R",
-      "hash": "3aee2bde0bf4f3b0811cf9861fa7b71f0ad146c63ad160fb3459ab0f6cd419c7"
+      "hash": "29e3bcfeac346dd62e70000e0f661ef861889b1ab151e6f33f14bf5bff62f20d"
      }
     ]
    },
@@ -4735,7 +4735,7 @@
      },
      {
       "side": "R",
-      "hash": "3aee2bde0bf4f3b0811cf9861fa7b71f0ad146c63ad160fb3459ab0f6cd419c7"
+      "hash": "29e3bcfeac346dd62e70000e0f661ef861889b1ab151e6f33f14bf5bff62f20d"
      }
     ]
    },
@@ -4756,7 +4756,7 @@
      },
      {
       "side": "R",
-      "hash": "3aee2bde0bf4f3b0811cf9861fa7b71f0ad146c63ad160fb3459ab0f6cd419c7"
+      "hash": "29e3bcfeac346dd62e70000e0f661ef861889b1ab151e6f33f14bf5bff62f20d"
      }
     ]
    },
@@ -4780,7 +4780,7 @@
      },
      {
       "side": "R",
-      "hash": "3aee2bde0bf4f3b0811cf9861fa7b71f0ad146c63ad160fb3459ab0f6cd419c7"
+      "hash": "29e3bcfeac346dd62e70000e0f661ef861889b1ab151e6f33f14bf5bff62f20d"
      }
     ]
    },
@@ -4799,7 +4799,7 @@
      },
      {
       "side": "R",
-      "hash": "2fc689e91b61ced9c78f5854fe3c60e163f675f0418adc2f232736af2f9f9d98"
+      "hash": "4d676dc58247be725a558149b944633fd664b393b1e937960c495cacc1a0513e"
      },
      {
       "side": "L",
@@ -4827,7 +4827,7 @@
      },
      {
       "side": "R",
-      "hash": "2fc689e91b61ced9c78f5854fe3c60e163f675f0418adc2f232736af2f9f9d98"
+      "hash": "4d676dc58247be725a558149b944633fd664b393b1e937960c495cacc1a0513e"
      },
      {
       "side": "L",
@@ -4852,7 +4852,7 @@
     "proof": [
      {
       "side": "R",
-      "hash": "8ae8445105b3e04182217dcd246a80a9c104415618c834fb24e03c7c754f727d"
+      "hash": "8636ca55e84373f7f360e57aa2121c70d40eff2adf5e33fe2ac8ccbb54204c8b"
      },
      {
       "side": "L",
@@ -4868,10 +4868,10 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-conical-15.scad",
-     "sha256": "c710b6fb6a5a683109a930ca8154be4a1652c9769c72501a11c6aaada3ad4bc2",
+     "sha256": "058c2b93678678a3004fcf8fc5867ac350811c7eea63b46317261e9545be0717",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "8ae8445105b3e04182217dcd246a80a9c104415618c834fb24e03c7c754f727d",
+    "leaf": "8636ca55e84373f7f360e57aa2121c70d40eff2adf5e33fe2ac8ccbb54204c8b",
     "proof": [
      {
       "side": "L",
@@ -4890,7 +4890,7 @@
   ]
  },
  "print-conical-50": {
-  "root": "a185b79b426faf65d48b024f051f8eb2d1fd16fa616f611b39f666db1f5fb81f",
+  "root": "8a311c22c2d7aba350146297f5ab36badb057ccd2f7ad6733e8e483a1566e945",
   "fragments": [
    {
     "name": "derivation",
@@ -4912,7 +4912,7 @@
      },
      {
       "side": "R",
-      "hash": "1d85551f3e92c2e94144f76d3ed891d98b9ab1d49d40d980727b6e0df78a052e"
+      "hash": "d4054e658f5ebaa81a6d88e21f04705679ee1d2639f8c1a0f3a3129ca36e1b9f"
      }
     ]
    },
@@ -4935,7 +4935,7 @@
      },
      {
       "side": "R",
-      "hash": "1d85551f3e92c2e94144f76d3ed891d98b9ab1d49d40d980727b6e0df78a052e"
+      "hash": "d4054e658f5ebaa81a6d88e21f04705679ee1d2639f8c1a0f3a3129ca36e1b9f"
      }
     ]
    },
@@ -4956,7 +4956,7 @@
      },
      {
       "side": "R",
-      "hash": "1d85551f3e92c2e94144f76d3ed891d98b9ab1d49d40d980727b6e0df78a052e"
+      "hash": "d4054e658f5ebaa81a6d88e21f04705679ee1d2639f8c1a0f3a3129ca36e1b9f"
      }
     ]
    },
@@ -4980,7 +4980,7 @@
      },
      {
       "side": "R",
-      "hash": "1d85551f3e92c2e94144f76d3ed891d98b9ab1d49d40d980727b6e0df78a052e"
+      "hash": "d4054e658f5ebaa81a6d88e21f04705679ee1d2639f8c1a0f3a3129ca36e1b9f"
      }
     ]
    },
@@ -4999,7 +4999,7 @@
      },
      {
       "side": "R",
-      "hash": "de970de82f73ff7752311b667e81c819623cbc242d08583db392bfb4f5c68608"
+      "hash": "4b4fa878e00973539cf87448b35c18ce2560cb40e0dc60f3270401a2122da943"
      },
      {
       "side": "L",
@@ -5027,7 +5027,7 @@
      },
      {
       "side": "R",
-      "hash": "de970de82f73ff7752311b667e81c819623cbc242d08583db392bfb4f5c68608"
+      "hash": "4b4fa878e00973539cf87448b35c18ce2560cb40e0dc60f3270401a2122da943"
      },
      {
       "side": "L",
@@ -5052,7 +5052,7 @@
     "proof": [
      {
       "side": "R",
-      "hash": "568e31d2d24c481ebdadd310b7bf26bad6890645cf8e83564a19ba5676a18837"
+      "hash": "93669d9410ae3cf436baeaad1381b461ccbe4e188ac0c549b42a32a8bf4fcb9a"
      },
      {
       "side": "L",
@@ -5068,10 +5068,10 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-conical-50.scad",
-     "sha256": "fb6024f82cba09b6d8c0a581bf3944744559a3c5ab61f6b1544691a68111ff65",
+     "sha256": "5851bf892bc7b33172ea84cb9ed8bc6c60d2188815faf7bbbc5cc85a5e88e26a",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "568e31d2d24c481ebdadd310b7bf26bad6890645cf8e83564a19ba5676a18837",
+    "leaf": "93669d9410ae3cf436baeaad1381b461ccbe4e188ac0c549b42a32a8bf4fcb9a",
     "proof": [
      {
       "side": "L",
@@ -5090,7 +5090,7 @@
   ]
  },
  "print-cryo-100": {
-  "root": "e9db855b5317bd1eb1bd27a329d2a1d12df1bcf293a48ec1a1925ac61794052d",
+  "root": "d72e0d3ddf33b9d2f187ebdfef98aaf952b19000d20e517f9e5d0b962775b2dc",
   "fragments": [
    {
     "name": "derivation",
@@ -5111,7 +5111,7 @@
      },
      {
       "side": "R",
-      "hash": "0092e295982f7939c41edae111660176e6b2bc88b33a35685f5e2a4350448f94"
+      "hash": "a9a18ac3ac895734c8acabe7424bc42806c9e134a1808be40d4c243bd7afaffb"
      }
     ]
    },
@@ -5134,7 +5134,7 @@
      },
      {
       "side": "R",
-      "hash": "0092e295982f7939c41edae111660176e6b2bc88b33a35685f5e2a4350448f94"
+      "hash": "a9a18ac3ac895734c8acabe7424bc42806c9e134a1808be40d4c243bd7afaffb"
      }
     ]
    },
@@ -5155,7 +5155,7 @@
      },
      {
       "side": "R",
-      "hash": "0092e295982f7939c41edae111660176e6b2bc88b33a35685f5e2a4350448f94"
+      "hash": "a9a18ac3ac895734c8acabe7424bc42806c9e134a1808be40d4c243bd7afaffb"
      }
     ]
    },
@@ -5179,7 +5179,7 @@
      },
      {
       "side": "R",
-      "hash": "0092e295982f7939c41edae111660176e6b2bc88b33a35685f5e2a4350448f94"
+      "hash": "a9a18ac3ac895734c8acabe7424bc42806c9e134a1808be40d4c243bd7afaffb"
      }
     ]
    },
@@ -5203,7 +5203,7 @@
      },
      {
       "side": "R",
-      "hash": "a4c4d92f39a6831732696af95ea235b087f94fe39f1913139ffad9d769feffb3"
+      "hash": "2fa95f35c062cef49e2688c1ad226f430d659960347b82e38937037f4ea4dffe"
      },
      {
       "side": "L",
@@ -5232,7 +5232,7 @@
      },
      {
       "side": "R",
-      "hash": "a4c4d92f39a6831732696af95ea235b087f94fe39f1913139ffad9d769feffb3"
+      "hash": "2fa95f35c062cef49e2688c1ad226f430d659960347b82e38937037f4ea4dffe"
      },
      {
       "side": "L",
@@ -5244,10 +5244,10 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-cryo-100.scad",
-     "sha256": "7ee59cdf53b2b1f25abab38b6700d10b87ff16e9bbd81a5fc597648a2036bb8e",
+     "sha256": "0298752bd63b467163eee9b7673164dd138b9960c43c2aad303d6aa22a120805",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "a4c4d92f39a6831732696af95ea235b087f94fe39f1913139ffad9d769feffb3",
+    "leaf": "2fa95f35c062cef49e2688c1ad226f430d659960347b82e38937037f4ea4dffe",
     "proof": [
      {
       "side": "L",
@@ -5262,7 +5262,7 @@
   ]
  },
  "print-frame-sbs": {
-  "root": "4e5f5fffe88af6d515110f5456bcb8952d2726e9e3a65aef626474e8878cc13d",
+  "root": "2c626238b7ebe01c2083955b6febb1fc1e163b28de6061c7981d9587cef7f380",
   "fragments": [
    {
     "name": "derivation",
@@ -5283,7 +5283,7 @@
      },
      {
       "side": "R",
-      "hash": "5a838b388e7147121192fad08c0cf89a03fc755bcf39346ec457337d096984b4"
+      "hash": "2edbe8de07fc49433e0368950652221367970288b0f464b9f97106ba04785146"
      }
     ]
    },
@@ -5306,7 +5306,7 @@
      },
      {
       "side": "R",
-      "hash": "5a838b388e7147121192fad08c0cf89a03fc755bcf39346ec457337d096984b4"
+      "hash": "2edbe8de07fc49433e0368950652221367970288b0f464b9f97106ba04785146"
      }
     ]
    },
@@ -5327,7 +5327,7 @@
      },
      {
       "side": "R",
-      "hash": "5a838b388e7147121192fad08c0cf89a03fc755bcf39346ec457337d096984b4"
+      "hash": "2edbe8de07fc49433e0368950652221367970288b0f464b9f97106ba04785146"
      }
     ]
    },
@@ -5351,7 +5351,7 @@
      },
      {
       "side": "R",
-      "hash": "5a838b388e7147121192fad08c0cf89a03fc755bcf39346ec457337d096984b4"
+      "hash": "2edbe8de07fc49433e0368950652221367970288b0f464b9f97106ba04785146"
      }
     ]
    },
@@ -5375,7 +5375,7 @@
      },
      {
       "side": "R",
-      "hash": "1b9be950a8cf6f57d5ef517380dc0b996594fa0a6dfc668999432e541a4755fd"
+      "hash": "28df5110be6c3234d309fdad7583851bf1d421961d3d1b3238826fa3f3dd970f"
      },
      {
       "side": "L",
@@ -5401,7 +5401,7 @@
      },
      {
       "side": "R",
-      "hash": "1b9be950a8cf6f57d5ef517380dc0b996594fa0a6dfc668999432e541a4755fd"
+      "hash": "28df5110be6c3234d309fdad7583851bf1d421961d3d1b3238826fa3f3dd970f"
      },
      {
       "side": "L",
@@ -5413,10 +5413,10 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-frame-sbs.scad",
-     "sha256": "55a007097059cea1b826430248ff83a5ff5bb4d48c8c6e7208740eb37f45166a",
+     "sha256": "6a0d0685b6e72ccab43206d87757f350e610356b27db8ddb0284aee0b346da98",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "1b9be950a8cf6f57d5ef517380dc0b996594fa0a6dfc668999432e541a4755fd",
+    "leaf": "28df5110be6c3234d309fdad7583851bf1d421961d3d1b3238826fa3f3dd970f",
     "proof": [
      {
       "side": "L",
@@ -5431,7 +5431,7 @@
   ]
  },
  "print-grid-mesh": {
-  "root": "c2b783403191c680fd229beb0c4dc0db5333f153a6e3e945110ba0dc9f675fb0",
+  "root": "164967adb7772618683f1b2464448051d80eeaa692e359d05d5328e47220a03b",
   "fragments": [
    {
     "name": "derivation",
@@ -5453,7 +5453,7 @@
      },
      {
       "side": "R",
-      "hash": "9012083df6e62c63a1523dc8794c24d1eaf2aac7120ee858debc293c54aebb05"
+      "hash": "775f0c9263c262641a6a1f50c4afdbecbe81dc75943a446a9f9fd9bf5c129132"
      }
     ]
    },
@@ -5476,7 +5476,7 @@
      },
      {
       "side": "R",
-      "hash": "9012083df6e62c63a1523dc8794c24d1eaf2aac7120ee858debc293c54aebb05"
+      "hash": "775f0c9263c262641a6a1f50c4afdbecbe81dc75943a446a9f9fd9bf5c129132"
      }
     ]
    },
@@ -5497,7 +5497,7 @@
      },
      {
       "side": "R",
-      "hash": "9012083df6e62c63a1523dc8794c24d1eaf2aac7120ee858debc293c54aebb05"
+      "hash": "775f0c9263c262641a6a1f50c4afdbecbe81dc75943a446a9f9fd9bf5c129132"
      }
     ]
    },
@@ -5521,7 +5521,7 @@
      },
      {
       "side": "R",
-      "hash": "9012083df6e62c63a1523dc8794c24d1eaf2aac7120ee858debc293c54aebb05"
+      "hash": "775f0c9263c262641a6a1f50c4afdbecbe81dc75943a446a9f9fd9bf5c129132"
      }
     ]
    },
@@ -5545,7 +5545,7 @@
      },
      {
       "side": "R",
-      "hash": "f65f6df54450c869c692b6d29fedb238c17682178c502de180b7c49f9ec4c93c"
+      "hash": "973720c75e57f9a4312f4f91bc0d7cb88e4986754c2ed03761d08ce04996a964"
      },
      {
       "side": "L",
@@ -5575,7 +5575,7 @@
      },
      {
       "side": "R",
-      "hash": "f65f6df54450c869c692b6d29fedb238c17682178c502de180b7c49f9ec4c93c"
+      "hash": "973720c75e57f9a4312f4f91bc0d7cb88e4986754c2ed03761d08ce04996a964"
      },
      {
       "side": "L",
@@ -5587,10 +5587,10 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-grid-mesh.scad",
-     "sha256": "2fe54978a18036d70637083d2e8cc5f4573f38b78a53f2a50bc7bd52d0e1bd00",
+     "sha256": "b5ec4e944b955bd823b0231964f056cbbfd9c334ccf6388d965312a4dbde93f5",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "f65f6df54450c869c692b6d29fedb238c17682178c502de180b7c49f9ec4c93c",
+    "leaf": "973720c75e57f9a4312f4f91bc0d7cb88e4986754c2ed03761d08ce04996a964",
     "proof": [
      {
       "side": "L",
@@ -5605,7 +5605,7 @@
   ]
  },
  "print-honeycomb": {
-  "root": "690ec8f491b5da5a578c9a1577de3150c2df9a03ae0f38e1d29bfe34644c3217",
+  "root": "483b2148d2951b8a5a748c51fc0e12bedbf30c930120da613bd57bca56297024",
   "fragments": [
    {
     "name": "derivation",
@@ -5626,7 +5626,7 @@
      },
      {
       "side": "R",
-      "hash": "fff869a5962a94f73bd713e6e9b92fc3ae5426f874ac897be6bd04cad6a0b788"
+      "hash": "00fe0a6003830a901933d0bfa92a8c8d309064dc91284c89ebb59e8e8b361410"
      }
     ]
    },
@@ -5649,7 +5649,7 @@
      },
      {
       "side": "R",
-      "hash": "fff869a5962a94f73bd713e6e9b92fc3ae5426f874ac897be6bd04cad6a0b788"
+      "hash": "00fe0a6003830a901933d0bfa92a8c8d309064dc91284c89ebb59e8e8b361410"
      }
     ]
    },
@@ -5670,7 +5670,7 @@
      },
      {
       "side": "R",
-      "hash": "fff869a5962a94f73bd713e6e9b92fc3ae5426f874ac897be6bd04cad6a0b788"
+      "hash": "00fe0a6003830a901933d0bfa92a8c8d309064dc91284c89ebb59e8e8b361410"
      }
     ]
    },
@@ -5694,7 +5694,7 @@
      },
      {
       "side": "R",
-      "hash": "fff869a5962a94f73bd713e6e9b92fc3ae5426f874ac897be6bd04cad6a0b788"
+      "hash": "00fe0a6003830a901933d0bfa92a8c8d309064dc91284c89ebb59e8e8b361410"
      }
     ]
    },
@@ -5718,7 +5718,7 @@
      },
      {
       "side": "R",
-      "hash": "9017c163029b2d47cc2374e70887e6177d4428bfa23e8ed85033f0d4d072492c"
+      "hash": "0e5f19ab117ef26a7f1fad930bfca267c4b91845174b85d4dae2ed67a0f5493a"
      },
      {
       "side": "L",
@@ -5743,7 +5743,7 @@
      },
      {
       "side": "R",
-      "hash": "9017c163029b2d47cc2374e70887e6177d4428bfa23e8ed85033f0d4d072492c"
+      "hash": "0e5f19ab117ef26a7f1fad930bfca267c4b91845174b85d4dae2ed67a0f5493a"
      },
      {
       "side": "L",
@@ -5755,10 +5755,10 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-honeycomb.scad",
-     "sha256": "5526e01bed7cf77067865b4009660f8690085456680c8230515802d8ceb34832",
+     "sha256": "bf73eabaf44def894a8d3ab86a9e87080290213665750df4cb04a9e8ef0d6d21",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "9017c163029b2d47cc2374e70887e6177d4428bfa23e8ed85033f0d4d072492c",
+    "leaf": "0e5f19ab117ef26a7f1fad930bfca267c4b91845174b85d4dae2ed67a0f5493a",
     "proof": [
      {
       "side": "L",
