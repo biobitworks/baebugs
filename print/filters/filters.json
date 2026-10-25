@@ -1,0 +1,541 @@
+[
+ {
+  "id": "RND-1/16",
+  "category": "single hole punch",
+  "realisation": "punched",
+  "shape": "circle",
+  "params_mm": {
+   "d": 1.587
+  },
+  "note": "1/16 in round punch",
+  "nominal": true,
+  "area_mm2": 1.979,
+  "inscribed_d_mm": 1.587,
+  "min_width_mm": 1.587,
+  "max_width_mm": 1.587,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "6556124813f75c62e3433179289438aa2b5b58b56b1e51aee5e1e921a5b860f8",
+  "holes_on_50mm_plate": 314,
+  "open_area": 0.321,
+  "stl": "stl/RND-1-16.stl",
+  "holes": 314,
+  "watertight": true
+ },
+ {
+  "id": "RND-1/8",
+  "category": "single hole punch",
+  "realisation": "punched",
+  "shape": "circle",
+  "params_mm": {
+   "d": 3.175
+  },
+  "note": "1/8 in round punch",
+  "nominal": true,
+  "area_mm2": 7.917,
+  "inscribed_d_mm": 3.175,
+  "min_width_mm": 3.175,
+  "max_width_mm": 3.175,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "e573bdc95d2d6281a1da76db89756b884aedd009b89b9a6e0356178266ebac87",
+  "holes_on_50mm_plate": 120,
+  "open_area": 0.491,
+  "stl": "stl/RND-1-8.stl",
+  "holes": 120,
+  "watertight": true
+ },
+ {
+  "id": "RND-3/16",
+  "category": "single hole punch",
+  "realisation": "punched",
+  "shape": "circle",
+  "params_mm": {
+   "d": 4.762
+  },
+  "note": "3/16 in round punch",
+  "nominal": true,
+  "area_mm2": 17.812,
+  "inscribed_d_mm": 4.762,
+  "min_width_mm": 4.762,
+  "max_width_mm": 4.762,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "f1a0d2095fcdb8655d354cc09e84c8f7e31ed1164a56ed263ff2a2de59719e80",
+  "holes_on_50mm_plate": 56,
+  "open_area": 0.515,
+  "stl": "stl/RND-3-16.stl",
+  "holes": 56,
+  "watertight": true
+ },
+ {
+  "id": "RND-1/4",
+  "category": "single hole punch",
+  "realisation": "punched",
+  "shape": "circle",
+  "params_mm": {
+   "d": 6.35
+  },
+  "note": "1/4 in round (standard office/craft)",
+  "nominal": true,
+  "area_mm2": 31.666,
+  "inscribed_d_mm": 6.35,
+  "min_width_mm": 6.35,
+  "max_width_mm": 6.35,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "8a216a138fa90eca9e44d6f3d2418b838c42979dc08ffffaa4a2849f4460dce0",
+  "holes_on_50mm_plate": 33,
+  "open_area": 0.54,
+  "stl": "stl/RND-1-4.stl",
+  "holes": 33,
+  "watertight": true
+ },
+ {
+  "id": "RND-3/8",
+  "category": "shape punch",
+  "realisation": "punched",
+  "shape": "circle",
+  "params_mm": {
+   "d": 9.525
+  },
+  "note": "3/8 in circle",
+  "nominal": true,
+  "area_mm2": 71.249,
+  "inscribed_d_mm": 9.524,
+  "min_width_mm": 9.524,
+  "max_width_mm": 9.524,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "fdc895f3f427888e8f850ffe61195e6b87413313355d19aa44071a619b0f7b83",
+  "holes_on_50mm_plate": 14,
+  "open_area": 0.515,
+  "stl": "stl/RND-3-8.stl",
+  "holes": 14,
+  "watertight": true
+ },
+ {
+  "id": "RND-1/2",
+  "category": "shape punch",
+  "realisation": "punched",
+  "shape": "circle",
+  "params_mm": {
+   "d": 12.7
+  },
+  "note": "1/2 in circle",
+  "nominal": true,
+  "area_mm2": 126.664,
+  "inscribed_d_mm": 12.699,
+  "min_width_mm": 12.699,
+  "max_width_mm": 12.699,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "cefba0482f399e2afbaa9fd24313e0088a44bb7f79fadb7d7204b496cf9441cd",
+  "holes_on_50mm_plate": 8,
+  "open_area": 0.523,
+  "stl": "stl/RND-1-2.stl",
+  "holes": 8,
+  "watertight": true
+ },
+ {
+  "id": "RND-5/8",
+  "category": "shape punch",
+  "realisation": "punched",
+  "shape": "circle",
+  "params_mm": {
+   "d": 15.875
+  },
+  "note": "5/8 in circle",
+  "nominal": true,
+  "area_mm2": 197.913,
+  "inscribed_d_mm": 15.874,
+  "min_width_mm": 15.874,
+  "max_width_mm": 15.874,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "b7daf445e477227430de9abecb004d4d7bea290e6bb1f60c5786dffc283450eb",
+  "holes_on_50mm_plate": 4,
+  "open_area": 0.409,
+  "stl": "stl/RND-5-8.stl",
+  "holes": 4,
+  "watertight": true
+ },
+ {
+  "id": "RND-1",
+  "category": "shape punch",
+  "realisation": "punched",
+  "shape": "circle",
+  "params_mm": {
+   "d": 25.4
+  },
+  "note": "1 in circle",
+  "nominal": true,
+  "area_mm2": 506.657,
+  "inscribed_d_mm": 25.398,
+  "min_width_mm": 25.398,
+  "max_width_mm": 25.398,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "0ca6a887921b5b5b7f16dfcf4b63ade89da1237b649cc6efceec1974acdfc1c0",
+  "holes_on_50mm_plate": 1,
+  "open_area": 0.262,
+  "stl": "stl/RND-1.stl",
+  "holes": 1,
+  "watertight": true
+ },
+ {
+  "id": "SQ-1/4",
+  "category": "shape punch",
+  "realisation": "punched",
+  "shape": "square",
+  "params_mm": {
+   "s": 6.35
+  },
+  "note": "1/4 in square",
+  "nominal": true,
+  "area_mm2": 40.322,
+  "inscribed_d_mm": 6.35,
+  "min_width_mm": 6.35,
+  "max_width_mm": 6.35,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "5a5cfab4be80c03f435c13dfef514638d6c1525251b853b1d1a6c54a70898c6c",
+  "holes_on_50mm_plate": 33,
+  "open_area": 0.687,
+  "stl": "stl/SQ-1-4.stl",
+  "holes": 33,
+  "watertight": true
+ },
+ {
+  "id": "STAR-1/4",
+  "category": "shape punch",
+  "realisation": "punched",
+  "shape": "star",
+  "params_mm": {
+   "outer_d": 6.35
+  },
+  "note": "1/4 in star",
+  "nominal": true,
+  "area_mm2": 13.332,
+  "inscribed_d_mm": 2.852,
+  "min_width_mm": 5.744,
+  "max_width_mm": 6.039,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "98d7439d8fce7c2c4fa6244f3429d18432221acfc2e7833f3b539be1df3f3d79",
+  "holes_on_50mm_plate": 33,
+  "open_area": 0.227,
+  "stl": "stl/STAR-1-4.stl",
+  "holes": 33,
+  "watertight": true
+ },
+ {
+  "id": "STAR-1/2",
+  "category": "shape punch",
+  "realisation": "punched",
+  "shape": "star",
+  "params_mm": {
+   "outer_d": 12.7
+  },
+  "note": "1/2 in star",
+  "nominal": true,
+  "area_mm2": 53.327,
+  "inscribed_d_mm": 5.703,
+  "min_width_mm": 11.487,
+  "max_width_mm": 12.078,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "ccf0825ecd47c79ee8653cc408c4da3e3ca0d69cc1868540a3b50727e92f66e0",
+  "holes_on_50mm_plate": 8,
+  "open_area": 0.22,
+  "stl": "stl/STAR-1-2.stl",
+  "holes": 8,
+  "watertight": true
+ },
+ {
+  "id": "HEART-1/4",
+  "category": "shape punch",
+  "realisation": "punched",
+  "shape": "heart",
+  "params_mm": {
+   "width": 6.35
+  },
+  "note": "1/4 in heart",
+  "nominal": true,
+  "area_mm2": 22.246,
+  "inscribed_d_mm": 3.328,
+  "min_width_mm": 5.553,
+  "max_width_mm": 5.7,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "5c2bdb4eec136eb735301c1d5f49326d87e56d4cc05c178da6112074cf2ac56b",
+  "holes_on_50mm_plate": 33,
+  "open_area": 0.379,
+  "stl": "stl/HEART-1-4.stl",
+  "holes": 33,
+  "watertight": true
+ },
+ {
+  "id": "HEART-1/2",
+  "category": "shape punch",
+  "realisation": "punched",
+  "shape": "heart",
+  "params_mm": {
+   "width": 12.7
+  },
+  "note": "1/2 in heart",
+  "nominal": true,
+  "area_mm2": 88.986,
+  "inscribed_d_mm": 6.656,
+  "min_width_mm": 11.106,
+  "max_width_mm": 11.401,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "22491ed836efd45f894c6c51c10466ca8c894445f37e493e3d28f656a159071f",
+  "holes_on_50mm_plate": 8,
+  "open_area": 0.368,
+  "stl": "stl/HEART-1-2.stl",
+  "holes": 8,
+  "watertight": true
+ },
+ {
+  "id": "HEX-1/4",
+  "category": "shape punch",
+  "realisation": "punched",
+  "shape": "hexagon",
+  "params_mm": {
+   "across_flats": 6.35
+  },
+  "note": "1/4 in hexagon",
+  "nominal": true,
+  "area_mm2": 34.92,
+  "inscribed_d_mm": 6.35,
+  "min_width_mm": 6.35,
+  "max_width_mm": 7.332,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "7415b8889d72cd77e21c371fccd4439e65001469f9d8edb404ab94015f908b70",
+  "holes_on_50mm_plate": 27,
+  "open_area": 0.487,
+  "stl": "stl/HEX-1-4.stl",
+  "holes": 27,
+  "watertight": true
+ },
+ {
+  "id": "SLOT-1/8x1/2",
+  "category": "badge slot punch",
+  "realisation": "punched",
+  "shape": "slot",
+  "params_mm": {
+   "w": 3.175,
+   "length": 12.7
+  },
+  "note": "ID-badge slot",
+  "nominal": true,
+  "area_mm2": 38.156,
+  "inscribed_d_mm": 3.175,
+  "min_width_mm": 3.175,
+  "max_width_mm": 12.7,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "ad156a16319f611fd9939906e1d1846296f585fb520f9465a45c406ef26932ed",
+  "holes_on_50mm_plate": 25,
+  "open_area": 0.493,
+  "stl": "stl/SLOT-1-8x1-2.stl",
+  "holes": 25,
+  "watertight": true
+ },
+ {
+  "id": "SLOT-3/16x5/8",
+  "category": "badge slot punch",
+  "realisation": "punched",
+  "shape": "slot",
+  "params_mm": {
+   "w": 4.762,
+   "length": 15.875
+  },
+  "note": "wide slot",
+  "nominal": true,
+  "area_mm2": 70.73,
+  "inscribed_d_mm": 4.762,
+  "min_width_mm": 4.762,
+  "max_width_mm": 15.875,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "bbd970d7d8081db2b74f3e28cab4ede82ba5e06046efb15b807351f5d23b0404",
+  "holes_on_50mm_plate": 14,
+  "open_area": 0.511,
+  "stl": "stl/SLOT-3-16x5-8.stl",
+  "holes": 14,
+  "watertight": true
+ },
+ {
+  "id": "CANVAS-7",
+  "category": "plastic canvas",
+  "realisation": "bought",
+  "shape": "square",
+  "params_mm": {
+   "s": 2.729
+  },
+  "note": "7-count, bar ~0.9 mm (nominal)",
+  "nominal": true,
+  "area_mm2": 7.445,
+  "inscribed_d_mm": 2.729,
+  "min_width_mm": 2.729,
+  "max_width_mm": 2.729,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "c6432444325410f8be28499ec2746bb5ef0828c1afb1535f8517cf41d597a60c",
+  "holes_on_50mm_plate": 144,
+  "open_area": 0.554,
+  "stl": "stl/CANVAS-7.stl",
+  "holes": 144,
+  "watertight": true
+ },
+ {
+  "id": "CANVAS-10",
+  "category": "plastic canvas",
+  "realisation": "bought",
+  "shape": "square",
+  "params_mm": {
+   "s": 1.64
+  },
+  "note": "10-count, bar ~0.9 mm (nominal)",
+  "nominal": true,
+  "area_mm2": 2.69,
+  "inscribed_d_mm": 1.64,
+  "min_width_mm": 1.64,
+  "max_width_mm": 1.64,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "176f6ac5fb3655633336f8e973d29bf4a59d7bc9d0b36cbfb5a82488e86bab59",
+  "holes_on_50mm_plate": 289,
+  "open_area": 0.401,
+  "stl": "stl/CANVAS-10.stl",
+  "holes": 289,
+  "watertight": true
+ },
+ {
+  "id": "CANVAS-14",
+  "category": "plastic canvas",
+  "realisation": "bought",
+  "shape": "square",
+  "params_mm": {
+   "s": 0.914
+  },
+  "note": "14-count, bar ~0.9 mm (nominal)",
+  "nominal": true,
+  "area_mm2": 0.836,
+  "inscribed_d_mm": 0.914,
+  "min_width_mm": 0.914,
+  "max_width_mm": 0.914,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": false,
+  "hash": "37ea2100ee9d3f4b53790296482710e65b5fbd622f20ab3cc8fed7227b4b2db1",
+  "holes_on_50mm_plate": 529,
+  "open_area": 0.228
+ },
+ {
+  "id": "TULLE",
+  "category": "netting",
+  "realisation": "bought",
+  "shape": "hexagon",
+  "params_mm": {
+   "across_flats": 1.2
+  },
+  "note": "bridal tulle hex ~1.2 mm (nominal)",
+  "nominal": true,
+  "area_mm2": 1.247,
+  "inscribed_d_mm": 1.2,
+  "min_width_mm": 1.2,
+  "max_width_mm": 1.386,
+  "plate": {
+   "size_mm": 50.0,
+   "thickness_mm": 1.6,
+   "web_mm": 1.0
+  },
+  "fuse_printable": true,
+  "hash": "03d4ad1df0c4ff2ee9584f22266a7aacc1fb49fbaf33ca7208bd65ef9f062bc4",
+  "holes_on_50mm_plate": 414,
+  "open_area": 0.267,
+  "stl": "stl/TULLE.stl",
+  "holes": 414,
+  "watertight": true
+ }
+]
