@@ -6,3 +6,4 @@ runs/
 *.ts
 *.egg-info/
 .custody_watch/
+.claude/
