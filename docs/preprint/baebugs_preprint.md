@@ -26,7 +26,7 @@ Physical AI for science fails quietly in two places: the bench, where a robot ac
 We treat the record as part of the instrument. Our contributions are:
 
 1. **A vision-to-sieve lane for BioKEA step 1** with two independent sizers in consensus, a sieve planner, a VERID-style digital-twin preflight [5] and a BugPicker bridge [3] (§2).
-2. **Atoms of knowledge (AoK)**: 808 atoms, each with claim, licence in context, status and leaf hash, rolled into one root (`0abb943b…`) and one graph pack shared by every access surface (§3).
+2. **Atoms of knowledge (AoK)**: 919 atoms, each with claim, licence in context, status and leaf hash, rolled into one root (`ab8f72bb…`) and one graph pack shared by every access surface (§3).
 3. **Deterministic custody**: Merkle break points, MMR ledgers, LOMO checks and FCO/FCG context objects, with a resolvability invariant that records a BREAK instead of trusting an unresolvable hash (§4).
 4. **Preregistered experiments (DAISY-BB-001b, 002a, 004)** reported with their failures (§5).
 5. **A Claude-vs-BYO comparison** showing how a second agent's graph differs from ours, top-down from the root to the leaf (§3.3).
@@ -43,7 +43,7 @@ We treat the record as part of the instrument. Our contributions are:
 
 **Printable, modular parts.** The graph links 91 parametric toy insects (67 California families at size levels, 12 novel outside-CA, 12 fill-in 1–3 mm), 25 lab parts across seven modules (trommel, vortex sieve kit, centrifuge strainer, Opentrons Flex adapters, hand-off carrier) and 4 Opentrons labware definitions (`site/mvp/mvp.json`). These are **concepts**: geometry is watertight and simulated, not tested on specimens (`print/parts/README.md`). Toys are parametric shapes, not replicas.
 
-**Cost (estimates, not quotes).** A labware twin built from 16 bench photos (`print/labware/`, `baebugs/labware_twin.py`, PR #12) adds 8 printable remixes on the SBS footprint (127.76 × 85.48 mm): 96, 24, 15 and 6-position tube racks with Opentrons labware definitions, a cryo grid insert, a lipped frame, a screened grid frame and a honeycomb insert. Each part has its own Merkle tree, and the part roots roll up into one lab root.
+**Cost (estimates, not quotes).** A labware twin built from 16 bench photos (`print/labware/`, `baebugs/labware_twin.py`) adds 8 printable remixes on the SBS footprint (127.76 × 85.48 mm): 96, 24, 15 and 6-position tube racks with Opentrons labware definitions, a cryo grid insert, a lipped frame, a screened grid frame and a honeycomb insert. Each part has its own Merkle tree, and the part roots roll up into one lab root.
 
 | item | ≈ USD |
 |---|---|
@@ -58,11 +58,11 @@ This is well under the US$200 target, assuming a printer is already available. P
 
 ### 3.1 Atoms
 
-Every file is an atom with a claim (`OWN`, `OWN+TERMS`, `THIRD`), the licence that applies *in its context*, a status and a leaf hash (`kg/aok.json`, summarised in `docs/CLAIMS.md`). At the snapshot this draft describes (commit `98443ab` on `mvp-kg`, the base of this text) the root is `0abb943bba6e790d…` over 808 atoms: OWN 742, OWN+TERMS 46, THIRD 20. Adding this preprint to the repository will itself change the root on the next rebuild; that is the system working, and the commit pins the snapshot. Atoms roll up file → module → repository, so a reviewer can stop at any module root (for example `lab-parts` `a21967d4…`) and check only what is under it.
+Every file is an atom with a claim (`OWN`, `OWN+TERMS`, `THIRD`), the licence that applies *in its context*, a status and a leaf hash (`kg/aok.json`, summarised in `docs/CLAIMS.md`). At the snapshot this draft describes (commit `2a04033` on `mvp-kg`, after the labware twin, training review and this preprint were merged and the graph regenerated) the root is `ab8f72bb0bf303bd…` over 919 atoms: OWN 850, OWN+TERMS 49, THIRD 20. Committing this sentence will itself change the root on the next rebuild; that is the system working, and the commit pins the snapshot. Atoms roll up file → module → repository, so a reviewer can stop at any module root (for example `lab-parts` `baa28352…`) and check only what is under it.
 
 ### 3.2 One graph pack, many readers
 
-A single pack, `site/mvp/mvp.json` (root `e485c83c9174f083…` at the same snapshot), is read by the MVP page, the `baebugs-graph` CLI, the MCP server (`python -m baebugs.graph_mcp`), `npx github:biobitworks/baebugs` and a Claude plugin/skill. Because every surface reads the same bytes, they all return the same root; a disagreement between surfaces is itself a detectable break. Any atom can be contested through a GitHub issue template that carries the atom address, and a contester can submit their own FCO/FCG JSON for verification (`.github/ISSUE_TEMPLATE/contest.yml`).
+A single pack, `site/mvp/mvp.json` (root `59696de1ecda99ab…` at the same snapshot), is read by the MVP page, the `baebugs-graph` CLI, the MCP server (`python -m baebugs.graph_mcp`), `npx github:biobitworks/baebugs` and a Claude plugin/skill. Because every surface reads the same bytes, they all return the same root; a disagreement between surfaces is itself a detectable break. Any atom can be contested through a GitHub issue template that carries the atom address, and a contester can submit their own FCO/FCG JSON for verification (`.github/ISSUE_TEMPLATE/contest.yml`).
 
 ### 3.3 Claude vs bring-your-own
 
