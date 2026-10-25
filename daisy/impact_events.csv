@@ -72,3 +72,14 @@ index,type,actor,kind,weights,values,n,pass,not_reproduced,gained_vs_baseline,lo
 70,evaluation,vlm_qwen2.5vl_3b@10px/mm,measurer,"{""ppm"": 10.0, ""weights"": null}",plan_only,91,7,84,0,80,6,0,,716481252308b24a
 71,evaluation,vlm_qwen2.5vl_3b@20px/mm,measurer,"{""ppm"": 20.0, ""weights"": null}",plan_only,91,10,81,0,77,9,0,,8840526d3d64ce68
 72,consensus,13cfc7+14c495+1797b1+2109a8+4a2d93+5052e1+5526e5+650f2a+6bc98f+7c50fa+83becb+8fb7ed+a1bad2+cc5ca3+f5f2e1,,,plan_only,,,,,,,,"{""DISPUTED"": 74, ""FAILED"": 4, ""SUPPORTED"": 13}",ccb825593b9f23c8
+73,retention_record,,,,,,,,,,,,,bca0e6a4fc56232f
+74,dedupe,,,,,,,,,,,,,74820347194b4b92
+75,evaluation,logic-twin,code,"{""code"": ""baebugs.insect_lomo.solve_logic""}",exact,91,86,5,0,0,0,0,,da7270b2c59146ee
+76,evaluation,lfm2.5-1.2b-thinking_q4_k_m,model,"{""ollama_digest"": ""fb0859e74b54""}",exact,91,0,91,0,86,0,0,,e943394cc1026870
+77,consensus,13cfc7+14c495+1797b1+2109a8+4a2d93+5526e5+650f2a+6bc98f+7c50fa+83becb+8fb7ed+a1bad2+a871df+cc5ca3+ee99fd+f5f2e1,,,exact,,,,,,,,"{""DISPUTED"": 86, ""FAILED"": 5}",8207d950b56fbd53
+78,evaluation,logic-twin,code,"{""code"": ""baebugs.insect_lomo.solve_logic""}",tol_0.5mm,91,87,4,0,0,1,0,,6324a295ca507d53
+79,evaluation,lfm2.5-1.2b-thinking_q4_k_m,model,"{""ollama_digest"": ""fb0859e74b54""}",tol_0.5mm,91,0,91,0,87,0,0,,8cb529387a93e89a
+80,consensus,13cfc7+14c495+1797b1+2109a8+4a2d93+5526e5+650f2a+6bc98f+7c50fa+83becb+8fb7ed+a1bad2+a871df+cc5ca3+ee99fd+f5f2e1,,,tol_0.5mm,,,,,,,,"{""DISPUTED"": 86, ""SUPPORTED"": 1, ""FAILED"": 4}",cc119f78dc7ae347
+81,evaluation,logic-twin,code,"{""code"": ""baebugs.insect_lomo.solve_logic""}",plan_only,91,87,4,0,0,1,0,,7ff29c8f35e0c317
+82,evaluation,lfm2.5-1.2b-thinking_q4_k_m,model,"{""ollama_digest"": ""fb0859e74b54""}",plan_only,91,2,89,0,85,2,0,,ffbfe1246467e3f3
+83,consensus,13cfc7+14c495+1797b1+2109a8+4a2d93+5526e5+650f2a+6bc98f+7c50fa+83becb+8fb7ed+a1bad2+a871df+cc5ca3+ee99fd+f5f2e1,,,plan_only,,,,,,,,"{""DISPUTED"": 78, ""SUPPORTED"": 9, ""FAILED"": 4}",29032c83b2a242b9
