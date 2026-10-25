@@ -2153,6 +2153,26 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
+"leaf": "a8c6cb3bc139a077f6898ce4640b2ccb4fed0f1db6615444689ad0981571ed36",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/README.md",
+"sha256": "81360471e1708be5836e9f06d7bca9927db7ee9de809e9cf58b17469cfe3d4ac",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "d590aae4911939c19d044eaa40a66cfb27c0222785979fafc625fdf0f578c7e6",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/boxes.json",
+"sha256": "e9afc2d1e781c4dabc8c6785acfedcfaa167f74d0fdee017402599a2eda1e83c",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
 "leaf": "2a3736fab9f2af56068a906ad52cabaacb5779a5dfaaf7606d25184c513317b5",
 "licence": "MIT",
 "module": "repo-meta",
@@ -2389,6 +2409,16 @@ null
 "path": "baebugs/aok.py",
 "sha256": "282215fb133ab90ffa49a9e99f300e3b677414be4baa9f6166ec907f1f4bb61d",
 "status": "tested"
+},
+{
+"claim": "OWN+TERMS",
+"kind": "code",
+"leaf": "784b81aa211686ba10138f20ee9e10e0bd2316fc365ac313cd7656b9e5bfde86",
+"licence": "MIT + ultralytics terms",
+"module": "python-package",
+"path": "baebugs/asset_boxes.py",
+"sha256": "42ef15e13918b871067eacb16557b1e5c42b25126f8b233f1cf4588ec756baa2",
+"status": "built"
 },
 {
 "claim": "OWN",
@@ -10412,15 +10442,15 @@ null
 ]
 },
 "python-package": {
-"atoms": 84,
+"atoms": 85,
 "claims": {
 "OWN": 77,
-"OWN+TERMS": 7
+"OWN+TERMS": 8
 },
 "id": "module:python-package",
-"root": "4d4d2fcc739524f1094eb72a9420593dbce5b4704af3cabe8f6f3c2bdab85707",
+"root": "a3cfd61e68e51b54078da9af79ba26b02ea138cecba505ba76cf70c47fb92025",
 "status": {
-"built": 54,
+"built": 55,
 "tested": 30
 },
 "terms": [
@@ -10428,14 +10458,14 @@ null
 ]
 },
 "repo-meta": {
-"atoms": 32,
+"atoms": 34,
 "claims": {
-"OWN": 32
+"OWN": 34
 },
 "id": "module:repo-meta",
-"root": "012f123b39a22a0547e690074c4314ac2c941f60d6d44ab55d0a4c40adb93b97",
+"root": "891e3c4fbeaee05e82aad78e0f0183ebce385968a86d63bed970351dc43eba07",
 "status": {
-"built": 32
+"built": 34
 },
 "terms": []
 },
@@ -11097,9 +11127,9 @@ null
 ]
 }
 ],
-"root": "da9b3edbaa4b484707cca41d562506e5b9a40289830d38c6b627047b046cb855",
+"root": "d42a6157048a028706a501a79249185e19a29ad0fa760808611db12cb91f9be9",
 "roots": {
-"aok": "5fdac42048f7c833a712aaee8a13580dabb536c39c46884ca82780525119d62e",
+"aok": "52d9904a9e58ac652387f740c18183be287825eb8ef5d71ec0d47dfafeb2313b",
 "assets": "2aa571d0973f1995c303b86f4f8f9816f485a73bfd59822593d6caa138f6b72e",
 "assets_mmr": "0db28037a5744bcad439c5869ae5a1b4e849cbb65656c8532b82a70e03174fe4",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -15314,8 +15344,8 @@ null
 }
 ],
 "totals": {
-"OWN": 765,
-"OWN+TERMS": 48,
+"OWN": 767,
+"OWN+TERMS": 49,
 "THIRD": 20
 },
 "type": "baebugs-mvp"
