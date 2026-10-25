@@ -1,0 +1,1 @@
+{"t": 1792897142.7519922, "run": "print_kg", "step": "verify_L0", "payload": {"nodes": 1133, "passed": 1110}, "files": {}, "leaf": "86d74e0686ca9d89ba4dff3da1cbb3f994bcaa76437933ae03081b84effe4670", "n": 1, "root": "86d74e0686ca9d89ba4dff3da1cbb3f994bcaa76437933ae03081b84effe4670"}
