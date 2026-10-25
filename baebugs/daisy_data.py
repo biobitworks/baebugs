@@ -391,6 +391,7 @@ BUNDLES = {
                             "synth_1_30_r2", "synth_1_30_r3_real", "synth_seg"],
     "baebugs-daisy-eval": ["teacher_check", "teacher_check2", "toy_renders"],
     "baebugs-daisy-context": ["dataone_cib_public", "essig", "gbif_manifests"],
+    "baebugs-daisy-toykg": ["toy_kg"],
 }
 
 
@@ -435,10 +436,31 @@ def stage(out_dir, user, summary=None):
     return staged
 
 
+def toy_kg_copy(out_dir, kg="print/fuse1/kg"):
+    """The toy Merkle KG for AI evaluation on Kaggle: index, collection roots and
+    every per-insect tree (no results). Verified tree-by-tree before copying."""
+    from .insect_kg import verify_tree
+    src, dst = Path(kg), Path(out_dir)
+    if dst.exists():
+        shutil.rmtree(dst)
+    (dst / "insects").mkdir(parents=True)
+    bad = []
+    for f in sorted((src / "insects").glob("*.json")):
+        ok, where = verify_tree(json.loads(f.read_text())["nodes"])
+        if not ok:
+            bad.append((f.name, where))
+        shutil.copy2(f, dst / "insects" / f.name)
+    for name in ("index.json", "collection.json", "nodes.csv"):
+        shutil.copy2(src / name, dst / name)
+    if bad:
+        raise SystemExit(f"toy KG trees fail verification: {bad[:5]}")
+    return len(list((dst / "insects").glob("*.json")))
+
+
 def main(argv=None):
     import argparse
     ap = argparse.ArgumentParser("baebugs-daisy-data")
-    ap.add_argument("cmd", choices=["verify", "transform-dataone", "toys", "gbif-manifests", "stage"])
+    ap.add_argument("cmd", choices=["verify", "transform-dataone", "toys", "gbif-manifests", "stage", "toy-kg"])
     ap.add_argument("--out", default="/Volumes/magicBLACKbox/baebugs/daisy")
     ap.add_argument("--only")
     ap.add_argument("--kaggle-user", default="biobitworks")
@@ -450,6 +472,8 @@ def main(argv=None):
         print(transform_dataone(REGISTRY["dataone_cib_raw"]["path"], out / "derived" / "dataone_cib_public"))
     elif a.cmd == "toys":
         print(toy_renders(out / "derived" / "toy_renders"))
+    elif a.cmd == "toy-kg":
+        print(toy_kg_copy(out / "derived" / "toy_kg"))
     elif a.cmd == "gbif-manifests":
         d = out / "derived" / "gbif_manifests"; d.mkdir(parents=True, exist_ok=True)
         for n in ("gbif_ca_2", "gbif_az", "gbif_nv", "gbif_or", "gbif_specimen_images"):
@@ -464,6 +488,9 @@ def main(argv=None):
         if (der / "toy_renders").exists():
             REGISTRY["toy_renders"] = {"path": str(der / "toy_renders"), "kind": "yolo_seg", "role": "eval",
                                        "synthetic": True, "transform": "insect_kg toys rendered top-down at 10/20 px/mm"}
+        if (der / "toy_kg").exists():
+            REGISTRY["toy_kg"] = {"path": str(der / "toy_kg"), "kind": "json", "role": "eval",
+                                  "transform": "print/fuse1/kg copy (index, collection roots, per-insect Merkle trees)"}
         if (der / "gbif_manifests").exists():
             REGISTRY["gbif_manifests"] = {"path": str(der / "gbif_manifests"), "kind": "json", "role": "context"}
         led = None
