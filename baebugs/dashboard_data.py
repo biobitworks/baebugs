@@ -78,6 +78,43 @@ def database(pseudo_dirs, synth_truth, essig_json=None, dataone_csv=None):
     return db
 
 
+def write_csvs(repo):
+    """Flat CSVs the dashboard loads (one per dataset), from dashboard/data/*.json."""
+    import csv
+    d = Path(repo) / "dashboard" / "data"; out = Path(repo) / "dashboard" / "csv"; out.mkdir(parents=True, exist_ok=True)
+    def w(name, header, rows):
+        with (out / f"{name}.csv").open("w", newline="") as f:
+            wr = csv.writer(f); wr.writerow(header); wr.writerows(rows)
+    r = json.loads((d / "runs.json").read_text())
+    rows = []
+    for run, v in r.items():
+        for stage, key in (("before", "baseline_bench"), ("after", "bench")):
+            b = v.get(key) or {}
+            for model in ("yolo", "classical", "consensus"):
+                if model in b:
+                    m = b[model]; rows.append([run, stage, model, m["recall"], m["median_len_err"], m["median_wid_err"], m["p90_wid_err"], b.get("n_true")])
+    w("bench", ["run", "stage", "model", "recall", "median_len_err", "median_wid_err", "p90_wid_err", "n_true"], rows)
+    w("epochs", ["run", "epoch", "mAP50_mask", "mAP50_box", "seg_loss"],
+      [[run, e["epoch"], e.get("mAP50_mask"), e.get("mAP50_box"), e.get("seg_loss")] for run, v in r.items() for e in v["epochs"]])
+    w("ledger", ["run", "leaves", "root", "last_step"], [[run, v["leaves"], v["root"], (v["steps"] or ["?"])[-1]] for run, v in r.items()])
+    rows = []
+    for f in sorted(d.glob("*_sweep_*.json")):
+        run, when = f.stem.rsplit("_sweep_", 1)
+        sw = json.loads(f.read_text())
+        for set_ in ("real", "synthetic"):
+            for mp, b in sw.get(set_, {}).items():
+                y = b.get("yolo") or {}
+                if y:
+                    rows.append([run, when, set_, float(mp.replace("MP", "")), y.get("recall"), y.get("median_wid_err"), y.get("p90_wid_err")])
+    w("sweep", ["run", "when", "set", "megapixels", "recall", "median_wid_err", "p90_wid_err"], rows)
+    rows = []
+    for f in sorted(d.glob("*_alerts.json")):
+        for a in json.loads(f.read_text()):
+            rows.append([a["status"], a["priority"], "; ".join(a["reasons"]), a["length_mm"], a["width_mm"], a["conf"], a["novelty"], Path(a["image"] or "").name])
+    w("alerts", ["status", "priority", "reasons", "length_mm", "width_mm", "conf", "novelty", "image"], rows)
+    return out
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser("baebugs-dashboard-data")
     ap.add_argument("--repo", default=str(Path(__file__).resolve().parents[1]))
@@ -89,7 +126,7 @@ def main(argv=None):
     out = Path(a.repo) / "dashboard" / "data"; out.mkdir(parents=True, exist_ok=True)
     (out / "runs.json").write_text(json.dumps(runs(a.repo), indent=1))
     (out / "database.json").write_text(json.dumps(database(a.pseudo, a.synth_truth, a.essig, a.dataone_csv), indent=1))
-    print("wrote", out)
+    print("wrote", out, write_csvs(a.repo))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,7 @@
+run,stage,model,recall,median_len_err,median_wid_err,p90_wid_err,n_true
+r2_synth_1_30,before,yolo,0.931,0.0236,0.0574,0.2197,2160
+r2_synth_1_30,before,classical,0.594,0.0625,0.0935,0.4409,2160
+r2_synth_1_30,before,consensus,0.369,0.0296,0.0345,0.1928,2160
+r2_synth_1_30,after,yolo,1.0,0.025,0.0481,0.1785,2160
+r2_synth_1_30,after,classical,0.594,0.0625,0.0935,0.4409,2160
+r2_synth_1_30,after,consensus,0.352,0.0268,0.0333,0.125,2160
