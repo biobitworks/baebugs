@@ -100,50 +100,74 @@ def _rod(a, b, d):
     return [m] + caps
 
 
-def build_insect(length_mm, plan_name):
-    """Watertight mesh of a length_mm insect with the given body plan, honouring
-    Fuse minimums. Returns (mesh, info)."""
+def insect_parts(length_mm, plan_name):
+    """The insect as named primitives, in build order. Each entry:
+    {"part": "leg_2R", "tagma": "thorax", "kind": "rod", "spec": {...}, "meshes": [...]}.
+    Specs are the exact build parameters, so a part can be hashed and rebuilt
+    deterministically (baebugs.insect_kg)."""
     p = PLANS[plan_name]
     L = float(length_mm)
     W = max(L * p["aspect"], 0.7)            # body width
     H = max(W * p["h"], 0.6)
     fh, ft, fa = p["seg"]
     xs = [-L / 2 + fh * L / 2, -L / 2 + fh * L + ft * L / 2, L / 2 - fa * L / 2]
-    parts = [_ellipsoid([xs[0], 0, 0], fh * L / 2 * 1.15, W * 0.30 + 0.15, H * 0.40 + 0.1),
-             _ellipsoid([xs[1], 0, 0], ft * L / 2 * 1.10, W * 0.45, H * 0.48),
-             _ellipsoid([xs[2], 0, 0], fa * L / 2 * 1.05, W * 0.50, H * 0.50)]
-    feats = []
+    prims, feats = [], []
+
+    def ell(part, tagma, c, r):
+        prims.append({"part": part, "tagma": tagma, "kind": "ellipsoid", "seg": part,
+                      "spec": {"center": list(c), "radii": list(r)}, "meshes": [_ellipsoid(c, *r)]})
+
+    def rod(part, tagma, seg, a, b, d):
+        prims.append({"part": part, "tagma": tagma, "kind": "rod", "seg": seg,
+                      "spec": {"a": list(a), "b": list(b), "d": d}, "meshes": _rod(a, b, d)})
+
+    def box(part, tagma, ext, c):
+        m = trimesh.creation.box(extents=ext); m.apply_translation(c)
+        prims.append({"part": part, "tagma": tagma, "kind": "plate", "seg": part,
+                      "spec": {"center": list(c), "extents": list(ext)}, "meshes": [m]})
+
+    ell("head_body", "head", [xs[0], 0, 0], (fh * L / 2 * 1.15, W * 0.30 + 0.15, H * 0.40 + 0.1))
+    ell("thorax_body", "thorax", [xs[1], 0, 0], (ft * L / 2 * 1.10, W * 0.45, H * 0.48))
+    ell("abdomen_body", "abdomen", [xs[2], 0, 0], (fa * L / 2 * 1.05, W * 0.50, H * 0.50))
     leg_d = max(PIN, 0.09 * W)
     if p["legs"] and L >= 6.0 and leg_d <= 0.45 * W + 0.4:
         span = W * (2.6 if plan_name == "strider" else 0.75)   # total leg spread ~1.5x body width
         for i, dx in enumerate((-0.30, 0.0, 0.30)):
             x0 = xs[1] + dx * ft * L
             for s in (-1, 1):
+                side = "L" if s < 0 else "R"
                 knee = [x0 + dx * L * 0.25, s * span * 0.55, -H * 0.10]
                 foot = [x0 + dx * L * 0.55 + (0.15 * L if i == 2 else 0), s * span, -H * 0.45]
-                parts += _rod([x0, s * W * 0.25, -H * 0.1], knee, leg_d) + _rod(knee, foot, leg_d)
+                rod(f"leg_{i + 1}{side}", "thorax", "femur", [x0, s * W * 0.25, -H * 0.1], knee, leg_d)
+                rod(f"leg_{i + 1}{side}", "thorax", "tibia", knee, foot, leg_d)
         feats.append(f"6 legs Ø{leg_d:.2f}")
     if L >= 12.0 and plan_name not in ("damselfly",):
         a0 = [-L / 2 + 0.1 * fh * L, 0, H * 0.15]
         for s in (-1, 1):
-            parts += _rod(a0, [-L / 2 - 0.25 * L, s * W * 0.6, H * 0.45], PIN)
+            rod(f"antenna_{'L' if s < 0 else 'R'}", "head", "antenna", a0, [-L / 2 - 0.25 * L, s * W * 0.6, H * 0.45], PIN)
         feats.append(f"antennae Ø{PIN}")
     if p["wings"] and L >= 8.0:
         t = PLATE
         if p["wings"] == "spread":
             wl, ww = 0.55 * L, (0.95 if plan_name == "moth" else 0.6) * L
             for s in (-1, 1):
-                wing = trimesh.creation.box(extents=[wl, ww, t])
-                wing.apply_translation([xs[1] + 0.05 * L, s * (ww / 2 + W * 0.2), H * 0.30])
-                parts.append(wing)
+                box(f"wing_{'L' if s < 0 else 'R'}", "thorax", [wl, ww, t], [xs[1] + 0.05 * L, s * (ww / 2 + W * 0.2), H * 0.30])
             feats.append(f"spread wings {t} mm")
         else:
             wl, ww = 0.75 * L, max(W * 0.55, 1.2)
             for s in (-1, 1):
-                wing = trimesh.creation.box(extents=[wl, ww, t])
-                wing.apply_translation([xs[1] + 0.30 * L, s * ww * 0.35, H * 0.52])
-                parts.append(wing)
+                box(f"wing_{'L' if s < 0 else 'R'}", "thorax", [wl, ww, t], [xs[1] + 0.30 * L, s * ww * 0.35, H * 0.52])
             feats.append(f"folded wings {t} mm")
+    dims = {"L": L, "W": W, "H": H, "xs": xs}
+    return prims, feats, dims
+
+
+def build_insect(length_mm, plan_name):
+    """Watertight mesh of a length_mm insect with the given body plan, honouring
+    Fuse minimums. Returns (mesh, info)."""
+    prims, feats, d = insect_parts(length_mm, plan_name)
+    L, W, H = d["L"], d["W"], d["H"]
+    parts = [m for pr in prims for m in pr["meshes"]]
     mesh = trimesh.boolean.union(parts, engine="manifold")
     if not mesh.is_watertight:                      # repair pass (rare): fill holes, fix winding
         trimesh.repair.fill_holes(mesh); trimesh.repair.fix_normals(mesh)

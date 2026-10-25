@@ -1,0 +1,579 @@
+{
+ "root": {
+  "level": 7,
+  "kind": "collection",
+  "name": "baebugs_fuse1_print_kg",
+  "children": [
+   "7b6bf4340af232b211a331afa35456790fd1398a24900cb8b024fb6faac89c0a",
+   "93f127937e079adf89847e9832337ae34dfc6d19ecd94ddde056d070a8b8b39d",
+   "df0fcf8a4bb5121d7f9d9532920c74720f844a83a74049bc1a92f08939cd47f4"
+  ],
+  "hash": "c7395e0b663621b884426b9766bdbded879451a36f48880f8689d30fa69c1c8f"
+ },
+ "groups": [
+  {
+   "level": 6,
+   "kind": "group",
+   "name": "california",
+   "children": [
+    "0395823e8f3d54d5dd3b720b8de6c5cfc56d747a9f31d89caa472ab1e618546d",
+    "101574ba9a527725dcdc861436126a4cc2a6de201bada710cedb16e83f5978a7",
+    "25567b31fee44f71c69b70fdd272eec735e08eff89c4c009dd637b43e24820aa",
+    "31e4eac98597fba0584f7d26da0ad21052031f4dd51caa3da42491bd7b0cb6da",
+    "48998d8c53211bb821ddf3ed31bca5d37f80391128884411fffeb9020c232b96",
+    "4a7c7410aeca14439802cf9a8c6fa9adb4b66107d5f38459aea436ec00d54590",
+    "6f27523ed01172eb59986aed7b30a6764b8d9c37d7782c8df85c0cecf955d691",
+    "759087c722e82e526e15b3e93c479c4bf55fa6d06725788a49ceca3679563df8",
+    "8b3b76826301fd4436f841199cca086303ecc6eac9b1da5e7d01f1559aa439e2",
+    "ac80a36e807ef4b122a99677ca2625d9d961a6eec4bcc5906c3f547c49a137b8",
+    "b5c1797afd79e6441aa04a930b9cc50e6fa4edb97ef225a4b2b234a871091205",
+    "cea2dfd14b309dc87a028a632f9e60007b0b8ddb687ad4c507a7c10db772e60f",
+    "d3a7fa3663d9f4857e57e1d6fe0ff931a2eee134f3efbd78b8b0d3a5bfeacc1f",
+    "d7ec47c05e9c1c098e15406e82fce5b29981801d11d29a3d7efc466b240fc51c"
+   ],
+   "hash": "7b6bf4340af232b211a331afa35456790fd1398a24900cb8b024fb6faac89c0a"
+  },
+  {
+   "level": 6,
+   "kind": "group",
+   "name": "fill_in_1-3mm",
+   "children": [
+    "76b00757baf33afd3bddb0621e4f4ab08ab26df372874050e90872a482c1846a",
+    "e933ebbab63123a8f8e295875be548505d45cfee7403d84b97aed3a52fce5d41",
+    "f0a204ea93e0c964d6f40278a91f8cae722b10549557bbfc97143b1a5f4a11fd"
+   ],
+   "hash": "93f127937e079adf89847e9832337ae34dfc6d19ecd94ddde056d070a8b8b39d"
+  },
+  {
+   "level": 6,
+   "kind": "group",
+   "name": "novel_outside_ca",
+   "children": [
+    "2d2d672d958a1a74164459cd10d92b704672e3c5b84b7669c766ec74e654dff3",
+    "2eff489f8b94096039f6beb8abdb1c7f0d4889130c5d120a5ffc5db6ae28d3a5",
+    "404f032af4cea88e5adfb03b79f061b4b82e40f491d9183c3baf4324415f8ea6",
+    "7fc09813afe3dac5d9f330eeb38dff636e6ab4d617f48e8902baf61dd17137da",
+    "cc1b03a124f58dec97a5d61917536cfc6ee468513b3e4a8f0c3ab49eaa90a59b",
+    "e9f1c59e0d9ce130388ebf7f10e9a4e4afeedc7bce82bfb13703e461084b0766"
+   ],
+   "hash": "df0fcf8a4bb5121d7f9d9532920c74720f844a83a74049bc1a92f08939cd47f4"
+  }
+ ],
+ "families": [
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Andrenidae",
+   "group": "california",
+   "children": [
+    "31a5603ab39c1b5d35843a261fb05624b153603c41c385134408b8889f01567c",
+    "7bf6fc0c92d817addbe928a12ce04ade1d38fe3b11aaa88ddb1de76efb67c98d",
+    "ad90a9addadbc22d7b768e4657cb727b932594f5b3a79cccb606f28ae0d279c6",
+    "c5c60ced1497c2ec22421b1924f55364f294680b6c8a7004bf97b9526ddf58ed",
+    "cd71857c60e128771451bcec83b1b8f0f100bda35cf2e499f3d41cc0a1eda902"
+   ],
+   "stats": {
+    "order": "Hymenoptera",
+    "n": 158,
+    "mean": 9.8,
+    "sd": 1.9,
+    "plan": "bee"
+   },
+   "length_range_mm": [
+    6.0,
+    13.6
+   ],
+   "hash": "b5c1797afd79e6441aa04a930b9cc50e6fa4edb97ef225a4b2b234a871091205"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Apidae",
+   "group": "california",
+   "children": [
+    "38d67b07eec4cccdf487ddd1e8dd0c5f9ed6194661b8d84f7f31eef9896c7939",
+    "4c911bb74039955ed4e930c6a23c4f44e1467661cf62d050d9d169c94d2c9714",
+    "adbe670f41d6a2571d298ff3150a71f476a1a952a8f9bc92b58e92cd2ec1027d",
+    "b56855241076687c4d74ee1c87474d80593e1ea26d0e2ac60db7aa5f9c26233e",
+    "c9e71f29033b1373ac322ae0ab72ae76bbaf372468f54414dc4695f536bc7cbc"
+   ],
+   "stats": {
+    "order": "Hymenoptera",
+    "n": 361,
+    "mean": 13.5,
+    "sd": 3.6,
+    "plan": "bee"
+   },
+   "length_range_mm": [
+    6.3,
+    20.7
+   ],
+   "hash": "31e4eac98597fba0584f7d26da0ad21052031f4dd51caa3da42491bd7b0cb6da"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Bombyliidae",
+   "group": "california",
+   "children": [
+    "053ce96e8adfcbb52f9afa67e61ad655d381f203f2e63fb2ad3ecb7cc8d0e24c",
+    "1f280d4b37bd9d8d509a94c813f1526714405279dfc181cd489a5554f59fc207",
+    "616a9d70ba33dd510ecff06a92db419fa5c03c5c67fbc94952487960446f7808",
+    "9524a5bb838e2bbab415ae10fc663ea770aec156ff49a3b2bd96cca2236bda2d",
+    "9d26dcdfb2bbc9371e74315cf024409155e369be8282ec453a4d7109724e17fe"
+   ],
+   "stats": {
+    "order": "Diptera",
+    "n": 326,
+    "mean": 15.0,
+    "sd": 3.2,
+    "plan": "fly"
+   },
+   "length_range_mm": [
+    8.6,
+    21.4
+   ],
+   "hash": "25567b31fee44f71c69b70fdd272eec735e08eff89c4c009dd637b43e24820aa"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Cicadidae",
+   "group": "california",
+   "children": [
+    "0877ca8ac2369b1a52c5e68e23bb19bf622f01db0551fa30c45d6800169504a4",
+    "36da843e5831c486fa7397c3ad7116e79e74b65ae8f22c25568c9ff0c69c3e01",
+    "899e67e4bd65e57e1c98bd028d7635e0f35ef08c6306d9b930445031deb2e990",
+    "95e7c9b9542db6e718f2b76bec0c42f1aa7af43a767f883b573cf8d31fc060e9"
+   ],
+   "stats": {
+    "order": "Hemiptera",
+    "n": 18,
+    "mean": 25.5,
+    "sd": 3.3,
+    "plan": "cicada"
+   },
+   "length_range_mm": [
+    18.9,
+    28.8
+   ],
+   "hash": "6f27523ed01172eb59986aed7b30a6764b8d9c37d7782c8df85c0cecf955d691"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Coccinellidae",
+   "group": "california",
+   "children": [
+    "0f5f4464b89da65440c4211b00e5e8a956e89eff65900b77fc60cab81e869e96",
+    "0fc512365c88d80d7cec1b53fa7b5d5c2f39049bd3f01cb90b94021088cb78d2",
+    "1132741b02856f39d30c0ea7ff951bae576a09b00187d0aecc7e8cffeac15716",
+    "281382f5f4967d6f8ebb6e5dd42f6ae332ce46827ade6473d6403820e18d1118",
+    "5ce74cd62b87aa93bd5ac13a1b58779a6c0377e8f5e72d289165fd44a46a73d8"
+   ],
+   "stats": {
+    "order": "Coleoptera",
+    "n": 54,
+    "mean": 6.3,
+    "sd": 1.3,
+    "plan": "beetle_dome"
+   },
+   "length_range_mm": [
+    3.7,
+    8.9
+   ],
+   "hash": "759087c722e82e526e15b3e93c479c4bf55fa6d06725788a49ceca3679563df8"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Formicidae",
+   "group": "california",
+   "children": [
+    "0e65d3bc1adc14ee0574737a75ed195f80c544a370d1cee99c8d657cb95b8b59",
+    "26551fd5abbd8a01d5f86275cfa667626e0d7d3c187efd4854d2f8dfe62d2b7e",
+    "962587bdfd1152c4e7173f1e434bc3f15faa09d21d51f3e034be37269bdb946f",
+    "9ef992ee66cab30ebdfe68eb5081440323985ba0440e26b4e05a8e1a84245317",
+    "c2a9ee9938f9f31b7b99e11b1bb78fddcd418cd241c77cdb6fb676496b26175a"
+   ],
+   "stats": {
+    "order": "Hymenoptera",
+    "n": 26,
+    "mean": 6.9,
+    "sd": 2.2,
+    "plan": "ant"
+   },
+   "length_range_mm": [
+    2.5,
+    11.3
+   ],
+   "hash": "101574ba9a527725dcdc861436126a4cc2a6de201bada710cedb16e83f5978a7"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Gerridae",
+   "group": "california",
+   "children": [
+    "195df6965062439e5bcff54ae7ede3f1bbb12cee1552a0d7e0fdc7b08510d1eb",
+    "49ffa07906a3cbe2ec767db07ab574182d86335fa6a2299ecb2664a9e7532177",
+    "a37eb81280c64401983113764f25cf71e3397a06bababcfe55411511954c692f",
+    "e112318a4071b699959f818bc1ac9820aa2bbd0a8b3a1e695808f1e916435b0e"
+   ],
+   "stats": {
+    "order": "Hemiptera",
+    "n": 44,
+    "mean": 21.3,
+    "sd": 5.1,
+    "plan": "strider"
+   },
+   "length_range_mm": [
+    11.1,
+    26.4
+   ],
+   "hash": "d7ec47c05e9c1c098e15406e82fce5b29981801d11d29a3d7efc466b240fc51c"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Halictidae",
+   "group": "california",
+   "children": [
+    "320807018776453dda960021b57ebd81091bf95548e0761797c2aed215e7594a",
+    "3f8cd40cdba3f282a42e21d7d0d143172392e543ee3250cd4dfe36e7d6aea274",
+    "7948e50e767b1e1e0789b7d62c301afdb6c17e999d37155bba1aa3557cd7a95f",
+    "8ba27bd11a06ef3dde078f2cfbc6894a5a8b0f1cbcd003a6d53c96df736bb8f6",
+    "af9ef33130c1ecccd58f6733ff105519534f086b5b463bb22012d5a317756eca"
+   ],
+   "stats": {
+    "order": "Hymenoptera",
+    "n": 308,
+    "mean": 9.9,
+    "sd": 3.5,
+    "plan": "bee"
+   },
+   "length_range_mm": [
+    2.9,
+    16.9
+   ],
+   "hash": "ac80a36e807ef4b122a99677ca2625d9d961a6eec4bcc5906c3f547c49a137b8"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Hesperiidae",
+   "group": "california",
+   "children": [
+    "2ef700b337e6381627ba2be0ed2c9429f42ea6d1267b8d53a209c5e73b73f4b6",
+    "93e9c1ff025b06acc845c31eff31350a39ae1f1eac7abca8555ad4c0d66d2989",
+    "9626edb2dd6611011e1a8107145b0f21ba5a0f43be5e2ba7676e02ad21ad88f7",
+    "aaaef079b5eae79e20a6c609842d7da832736a5d3cb4aec9381522b1f40d5d59"
+   ],
+   "stats": {
+    "order": "Lepidoptera",
+    "n": 30,
+    "mean": 24.4,
+    "sd": 4.0,
+    "plan": "moth"
+   },
+   "length_range_mm": [
+    16.4,
+    28.4
+   ],
+   "hash": "cea2dfd14b309dc87a028a632f9e60007b0b8ddb687ad4c507a7c10db772e60f"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Largidae",
+   "group": "california",
+   "children": [
+    "42fc9d2909f01df0491298ff52d803024d5233fc2d6d880abfa42e18dda9fe81",
+    "4842130c55a56784448671de974c6c4ebfb5fe8e253158f1ccc62b25c1ddcece",
+    "a5f344524a2646fd9a98e2aaef152aff40c34b467cd35944b2ebcd470aabc338",
+    "b38c24d57145cc0231a5d293672b0adc2f1dcd8e29392963e29307313e801d99",
+    "be90e50173c48c70a7ae941b4c8627e14f82106ddae050b639ca8ae97b7b9a40"
+   ],
+   "stats": {
+    "order": "Hemiptera",
+    "n": 51,
+    "mean": 13.0,
+    "sd": 2.7,
+    "plan": "bug"
+   },
+   "length_range_mm": [
+    7.6,
+    18.4
+   ],
+   "hash": "48998d8c53211bb821ddf3ed31bca5d37f80391128884411fffeb9020c232b96"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Melittidae",
+   "group": "california",
+   "children": [
+    "2a77dfa0a52cdbf2dacb8eade52a43f20803d557587f9c254bf96e3a0c694699",
+    "5d3f69e53326e1546ae3a3768f2a4ba98bc3dce360ea98c47b154dbd4806bd2d",
+    "93ef7597611c2b40da5aedd9131aa2309740c3cd4a799818e15d08be039d1a63",
+    "b3bf26c69b8b910e3cc30b5adf6e6ac8eb0e5db38c08336b018a33f049559f6b",
+    "e9faf4e9b2abd4d11807a1b47f6ce7728737c633f3f1ad5f43383b90ec6d1d27"
+   ],
+   "stats": {
+    "order": "Hymenoptera",
+    "n": 23,
+    "mean": 7.7,
+    "sd": 1.9,
+    "plan": "bee"
+   },
+   "length_range_mm": [
+    3.9,
+    11.5
+   ],
+   "hash": "0395823e8f3d54d5dd3b720b8de6c5cfc56d747a9f31d89caa472ab1e618546d"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Meloidae",
+   "group": "california",
+   "children": [
+    "0d1737d21b86bd8e43d9046674fcbfab53ef286f2b1e04689dbee407313e1b0e",
+    "25e8633ede57beb964a3110b9062cd96053318966bd2c153baacc5e14d9c1aed",
+    "4cae998fbb83e60c819d0f0e67d9b2778b79b03b7ff3ff918f6f0afee7f9375f",
+    "9508731bebc31a2656cf0e234df63cf0a0109e6f96aba8709fd9880834df007d",
+    "cd80416fa831dac98e03fa3fe852a464f9bd8ee1bd59f72f2d09a138cab08a2b"
+   ],
+   "stats": {
+    "order": "Coleoptera",
+    "n": 15,
+    "mean": 11.4,
+    "sd": 2.6,
+    "plan": "beetle_long"
+   },
+   "length_range_mm": [
+    6.2,
+    16.6
+   ],
+   "hash": "8b3b76826301fd4436f841199cca086303ecc6eac9b1da5e7d01f1559aa439e2"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Syrphidae",
+   "group": "california",
+   "children": [
+    "39c267f14db0fbbf53c76fa846ce24887a6c74a294e299b3873b1f6affd6cc09",
+    "a411e1101068749efa891ca09bdd4e94fcb23312ed7ebf9bdf5826244d7eb7e1",
+    "c79f46809e0d8bcce313039dd794836ae7d44e600b7fa07475352a5a56efb1a0",
+    "e3d52513a8c1ef514e7d0fec05fc8452eb4395610aa07825ed47ec5e76c9357e",
+    "f3bed84a6497f45b6886731af1c7b3bf74d15e840a6a1c98ccdf4857b4493c83"
+   ],
+   "stats": {
+    "order": "Diptera",
+    "n": 94,
+    "mean": 10.7,
+    "sd": 2.8,
+    "plan": "fly"
+   },
+   "length_range_mm": [
+    5.1,
+    16.3
+   ],
+   "hash": "d3a7fa3663d9f4857e57e1d6fe0ff931a2eee134f3efbd78b8b0d3a5bfeacc1f"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Vespidae",
+   "group": "california",
+   "children": [
+    "13f43a3023e9a2d607d0150a6e722f05f1507040ecb72f3cf3804d3546f19968",
+    "2a3ba3cb2f5cb0a21abc3de206d28fe32794978049f6368a430120bd72872aeb",
+    "57d1729318bfd146eada20d14ac5d7c020b4a3ca228659507df7f74c25140771",
+    "6cb9975ac8f4a0551bf9a70c096a8f9b5dcb911ddd9d025674cd0d14b9c82c22",
+    "ec00b460b8553a190708f313440c529556c167c2695b86696af6ee352fc00558"
+   ],
+   "stats": {
+    "order": "Hymenoptera",
+    "n": 34,
+    "mean": 13.2,
+    "sd": 2.5,
+    "plan": "wasp"
+   },
+   "length_range_mm": [
+    8.2,
+    18.2
+   ],
+   "hash": "4a7c7410aeca14439802cf9a8c6fa9adb4b66107d5f38459aea436ec00d54590"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "aphid-like",
+   "group": "fill_in_1-3mm",
+   "children": [
+    "41681178f3c0e45f87a0bcbca28afa06e9bd3a40fb468dae743c1985cc9e6261",
+    "c92601505777e6add858e76dedfa9659661c9e74aaa47786aa93719cd0a6b6aa",
+    "de41e6aaf8a4df779cdf952b7cfdb79108909dc604ecf5cef7e7e03e1d9c4135",
+    "e928eda0fbab6c926d954359adfdadce3b837cc8d61c4342209b8bb5f881f001"
+   ],
+   "stats": null,
+   "length_range_mm": [
+    1.5,
+    3.0
+   ],
+   "hash": "f0a204ea93e0c964d6f40278a91f8cae722b10549557bbfc97143b1a5f4a11fd"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "small beetle",
+   "group": "fill_in_1-3mm",
+   "children": [
+    "2583f81fa0b56b870709cc0bac41be06e6fe6babd76ebf3623bbf5c71cbd28fa",
+    "bbaf6d8851f79bdc68b278f32f1cfe3c2c86645a3a3ce0452e07a54b0abdfe84",
+    "d30a3c6f48843940e2868aa46f64a2e0fb8e21c0a8255c12744b0ba55c9c98df",
+    "de8463755ad10d07af0cc6567127263f2fe93c7efece39dbad2498115f442dd7",
+    "e84ffcd3d09fcf8e2023a0473498560fa0f3efaf6dcc4a41786c24b7d24b92c5"
+   ],
+   "stats": null,
+   "length_range_mm": [
+    1.0,
+    3.0
+   ],
+   "hash": "76b00757baf33afd3bddb0621e4f4ab08ab26df372874050e90872a482c1846a"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "thrips-like",
+   "group": "fill_in_1-3mm",
+   "children": [
+    "0cf37d34bb969d7e27b5630aa2b2d9436c046227881b6003c281511ae9b85cd2",
+    "59875013fd14de2618ba82099c3c3cbf53d5463ce07adbcd2f7c80748fd3b7ab",
+    "a1e3bdef7182740f6da811339a35fdc3af078a5f3f8e911c137ed170b23b4b20"
+   ],
+   "stats": null,
+   "length_range_mm": [
+    1.0,
+    2.0
+   ],
+   "hash": "e933ebbab63123a8f8e295875be548505d45cfee7403d84b97aed3a52fce5d41"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Andrenidae",
+   "group": "novel_outside_ca",
+   "children": [
+    "221de813e3d0080c526ab17b0c5f21c70597ed132638e5ec8294e72488011b13",
+    "6c58d7d276c8b2b79d7f5e02756363342db80a31eff1cf27dde3531de100b456"
+   ],
+   "stats": null,
+   "length_range_mm": [
+    3.6,
+    20.1
+   ],
+   "hash": "404f032af4cea88e5adfb03b79f061b4b82e40f491d9183c3baf4324415f8ea6"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Apidae",
+   "group": "novel_outside_ca",
+   "children": [
+    "cd08463bbedc9a462893f3f64ba92ca3766c8482603d5a5b7363b3df9cba5fbe",
+    "d374985c623965562cf18f412867d17f02c3331cb46a705ce1f7e6d397355cb9"
+   ],
+   "stats": null,
+   "length_range_mm": [
+    28.2,
+    29.1
+   ],
+   "hash": "2eff489f8b94096039f6beb8abdb1c7f0d4889130c5d120a5ffc5db6ae28d3a5"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Coenagrionidae",
+   "group": "novel_outside_ca",
+   "children": [
+    "903528d9cda80b0fe2a7ce18b1349376bf331fc9b88f6a24182a77f350c3778f",
+    "bc955ecb18019bdc0520528c515e4dfb82e926e862115f9b2cba9ad2fb3e2939",
+    "ee96340343ccb6b6007660c4fac6cbdc12a8923b3a15558d7aa07bc43f340bbf"
+   ],
+   "stats": null,
+   "length_range_mm": [
+    22.9,
+    29.9
+   ],
+   "hash": "2d2d672d958a1a74164459cd10d92b704672e3c5b84b7669c766ec74e654dff3"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Colletidae",
+   "group": "novel_outside_ca",
+   "children": [
+    "8be83b747c9d42b2880032ffdc2b33408d301beb9fc1ae45bd85aa9c4eaaa91a"
+   ],
+   "stats": null,
+   "length_range_mm": [
+    16.2,
+    16.2
+   ],
+   "hash": "e9f1c59e0d9ce130388ebf7f10e9a4e4afeedc7bce82bfb13703e461084b0766"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Elachistidae",
+   "group": "novel_outside_ca",
+   "children": [
+    "744bab3e9d2c331ec52e31632593bd3435ca9374420886ca5e66cc052c7787cb",
+    "bfe825703b8e89bc5cce0a78ee381b9e7a10d5c6685930574267579f06219efc",
+    "e0876563140a3b596ec503d53c7c0995ab7ae88e76b598f1a96ef9f9153236ad"
+   ],
+   "stats": null,
+   "length_range_mm": [
+    6.7,
+    10.1
+   ],
+   "hash": "cc1b03a124f58dec97a5d61917536cfc6ee468513b3e4a8f0c3ab49eaa90a59b"
+  },
+  {
+   "level": 5,
+   "kind": "family",
+   "name": "Meloidae",
+   "group": "novel_outside_ca",
+   "children": [
+    "98f2c883ee23570a5c255676d3dc3b28111838517acef935ea0b4f5d11688601"
+   ],
+   "stats": null,
+   "length_range_mm": [
+    2.1,
+    2.1
+   ],
+   "hash": "7fc09813afe3dac5d9f330eeb38dff636e6ab4d617f48e8902baf61dd17137da"
+  }
+ ],
+ "level_checks": {
+  "L0": {
+   "nodes": 1133,
+   "passed": 1110
+  },
+  "L1": {
+   "nodes": 779,
+   "passed": 779
+  },
+  "L2": {
+   "nodes": 273,
+   "passed": 273
+  },
+  "L3": {
+   "nodes": 91,
+   "passed": 91
+  }
+ }
+}
