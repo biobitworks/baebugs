@@ -93,7 +93,7 @@ for run in PROTO["runs"]:
     m = YOLO(S["model"])
     m.train(data=str(dy), epochs=S["epochs"], imgsz=S["imgsz"], batch=S["batch"], seed=S["seed"],
             deterministic=True, patience=10_000, project=str(WORK / "runs"), name=name, exist_ok=True,
-            workers=S["workers"], plots=False, verbose=False)
+            workers=S["workers"], plots=False, verbose=False, amp=S.get("amp", True))
     best = WORK / "runs" / name / "weights" / "best.pt"
     RESULTS[name] = {"train": run["train"], "val": run["val"], "weights_sha256": sha(best),
                      "minutes": round((time.time() - t0) / 60, 1), "status": "EXECUTED"}
