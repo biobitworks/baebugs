@@ -3116,6 +3116,26 @@
 },
 {
 "claim": "OWN",
+"kind": "doc",
+"leaf": "9a3bffb2b4b482709e6ec3f281f77b32dd871e10db49cafa108492b5207a55db",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/demo/baebugs_mvp_demo.mp4",
+"sha256": "9056bb0dc30485450b492b8b568bd05dff695c478dca231634e1bbbb46702059",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "c6c63f8561b85412b7eb7956e4cbb7ed741c01af0c8acd5ed4cd3ffb5f004fe1",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/demo/record_demo.js",
+"sha256": "05936ce3f380223cbaadde89b7aefceea108903ccbf531eb8ff9efe6deec6c7d",
+"status": "built"
+},
+{
+"claim": "OWN",
 "kind": "meta",
 "leaf": "f42c9af3613d7caa02ac0626baeab2f692006ac819c7e055de7b415220040063",
 "licence": "MIT",
@@ -8760,14 +8780,14 @@
 "terms": []
 },
 "docs": {
-"atoms": 22,
+"atoms": 24,
 "claims": {
-"OWN": 22
+"OWN": 24
 },
 "id": "module:docs",
-"root": "c4ef6cf883b8fdbd82898925d2e9bc782ba24a05111965fafe0e309bec40a40a",
+"root": "6b4f845f2ad104263b26639a8f147ae5bbbad5340f9566bade6f55221040a502",
 "status": {
-"built": 22
+"built": 24
 },
 "terms": []
 },
@@ -9526,9 +9546,9 @@
 ]
 }
 ],
-"root": "0fac28939a78563c22ec7814eb671805e4d5087b8ac6a7e5597962adab569871",
+"root": "14ec150e831b04a91f69936272cb94a90691740fb12a4b0b67fc9bd0d649b411",
 "roots": {
-"aok": "56c6e935de80f6c4ab44fb843cfd1f1a64bfbcd48ecf10a18e03d1528b961b62",
+"aok": "bf5a9998694a3f4ce1e9e38b3bb91c507632a8365ab7b6e297a6690cc672b3cd",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
 "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7",
 "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5",
@@ -13741,7 +13761,7 @@
 }
 ],
 "totals": {
-"OWN": 683,
+"OWN": 685,
 "OWN+TERMS": 42,
 "THIRD": 20
 },

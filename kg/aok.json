@@ -1,5 +1,5 @@
 {
- "atoms": 745,
+ "atoms": 747,
  "external": [
   {
    "claim": "THIRD",
@@ -995,8 +995,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 1,
-   "commits": 1,
+   "claude_coauthored_commits": 2,
+   "commits": 2,
    "id": "leaf:baebugs/mvp.py",
    "kind": "code",
    "leaf": "0d9fbcb2e80555c7b431152badbff1ac4f8954d8291fd58ba6770e1ff7c15471",
@@ -2661,8 +2661,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:docs/byo_compare_example.json",
    "kind": "doc",
    "leaf": "98e2529692c54dec56632a26dc74f122518c92d01e51ba155d52bf48826965da",
@@ -2670,6 +2670,34 @@
    "module": "docs",
    "path": "docs/byo_compare_example.json",
    "sha256": "0f2a78ce47c3ddc11122b5d45e69de1d8b634c6e1d0797cd548b182ec3e5992d",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:docs/demo/baebugs_mvp_demo.mp4",
+   "kind": "doc",
+   "leaf": "9a3bffb2b4b482709e6ec3f281f77b32dd871e10db49cafa108492b5207a55db",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/demo/baebugs_mvp_demo.mp4",
+   "sha256": "9056bb0dc30485450b492b8b568bd05dff695c478dca231634e1bbbb46702059",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:docs/demo/record_demo.js",
+   "kind": "doc",
+   "leaf": "c6c63f8561b85412b7eb7956e4cbb7ed741c01af0c8acd5ed4cd3ffb5f004fe1",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/demo/record_demo.js",
+   "sha256": "05936ce3f380223cbaadde89b7aefceea108903ccbf531eb8ff9efe6deec6c7d",
    "status": "built",
    "terms": []
   },
@@ -10574,14 +10602,14 @@
    "terms": []
   },
   "docs": {
-   "atoms": 22,
+   "atoms": 24,
    "claims": {
-    "OWN": 22
+    "OWN": 24
    },
    "id": "module:docs",
-   "root": "c4ef6cf883b8fdbd82898925d2e9bc782ba24a05111965fafe0e309bec40a40a",
+   "root": "6b4f845f2ad104263b26639a8f147ae5bbbad5340f9566bade6f55221040a502",
    "status": {
-    "built": 22
+    "built": 24
    },
    "terms": []
   },
@@ -10718,9 +10746,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "56c6e935de80f6c4ab44fb843cfd1f1a64bfbcd48ecf10a18e03d1528b961b62",
+ "root": "bf5a9998694a3f4ce1e9e38b3bb91c507632a8365ab7b6e297a6690cc672b3cd",
  "totals": {
-  "OWN": 683,
+  "OWN": 685,
   "OWN+TERMS": 42,
   "THIRD": 20
  },
