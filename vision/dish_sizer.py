@@ -17,36 +17,64 @@ import numpy as np
 CALIBRATION = Path(__file__).with_name("calibration.json")
 
 
-DISH_RADIUS_MM = (24, 36)  # the 63 mm dish's rings (floor edge to lid rim) all fall in this range
+RIM_RADIUS_MM = (28, 34)  # outer rim of the 63 mm dish (with or without lid), where its edge is strongest
 
 
-def find_dish(img, px_per_mm):
-    """Return (cx, cy, r) of the dish's strongest circular edge, or None.
+def _edges(gray):
+    """Horizontal and vertical brightness gradients."""
+    return cv2.Sobel(gray, cv2.CV_32F, 1, 0), cv2.Sobel(gray, cv2.CV_32F, 0, 1)
 
-    The dish has several concentric rings (rim, wall), so only the centre is reliable.
-    The search is limited to dish-sized circles in mm, so it works at any zoom or aspect ratio.
-    On a pale background the clear rim has little contrast, so the edge thresholds are relaxed
-    step by step until circles turn up. Only circles that fit inside the photo count (straight
-    edges such as a ruler can produce huge circles centred near the border), and the centre is
-    the median of the strongest few, since the dish's rings give slightly different circles.
+
+def _ring_scores(edges, cxs, cys, r, n=180):
+    """How strongly a circle of radius r around each centre (cxs, cys: 1-D arrays) follows an edge.
+
+    Only the gradient across the circle counts (pointing at the centre or away from it), so edges
+    the circle merely cuts through, like reflections or objects inside the dish, add little.
     """
-    gray = cv2.medianBlur(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY), 5)
-    h, w = gray.shape
-    lo, hi = (int(r * px_per_mm) for r in DISH_RADIUS_MM)
-    margin = 0.02 * max(h, w)
-    for edge, votes in ((100, 40), (60, 30), (40, 25)):
-        circles = cv2.HoughCircles(
-            gray, cv2.HOUGH_GRADIENT, dp=1.5, minDist=20,
-            param1=edge, param2=votes, minRadius=lo, maxRadius=hi,
-        )
-        if circles is None:
+    gx, gy = edges
+    t = np.linspace(0, 2 * np.pi, n, endpoint=False)
+    cos, sin = np.cos(t), np.sin(t)
+    xs = np.clip(np.rint(cxs[:, None] + r * cos).astype(int), 0, gx.shape[1] - 1)
+    ys = np.clip(np.rint(cys[:, None] + r * sin).astype(int), 0, gx.shape[0] - 1)
+    return np.abs(gx[ys, xs] * cos + gy[ys, xs] * sin).mean(axis=1)
+
+
+def fit_rim(img, px_per_mm, scale=4):
+    """Return (cx, cy, r) of the dish rim: the dish-sized circle with the strongest edge all the way round.
+
+    Tries every centre where the whole dish fits in the photo on a 1/4-size edge map, then refines
+    at full size. A straight edge such as a ruler lines up with only a small part of any circle, so
+    it can't win, and a faint rim on white paper still beats the background.
+    """
+    gray = cv2.GaussianBlur(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY), (5, 5), 0).astype(np.float32)
+    small = _edges(cv2.resize(gray, None, fx=1 / scale, fy=1 / scale, interpolation=cv2.INTER_AREA))
+    h, w = small[0].shape
+    best = None
+    for r_mm in np.arange(RIM_RADIUS_MM[0], RIM_RADIUS_MM[1] + 0.01, 0.5):
+        r = r_mm * px_per_mm / scale
+        ys, xs = np.mgrid[int(r):int(h - r):2, int(r):int(w - r):2]
+        if not xs.size:
             continue
-        inside = [(x, y, r) for x, y, r in circles[0]
-                  if x - r > -margin and y - r > -margin and x + r < w + margin and y + r < h + margin][:5]
-        if inside:
-            cx, cy, r = np.median(np.array(inside), axis=0)
-            return int(cx), int(cy), int(r)
-    return None
+        xs, ys = xs.ravel().astype(float), ys.ravel().astype(float)
+        scores = _ring_scores(small, xs, ys, r)
+        i = int(scores.argmax())
+        if best is None or scores[i] > best[0]:
+            best = (scores[i], xs[i] * scale, ys[i] * scale, r * scale)
+    if best is None:
+        return None
+
+    full = _edges(gray)
+    _, cx0, cy0, r0 = best
+    ys, xs = np.mgrid[cy0 - 2 * scale:cy0 + 2 * scale + 1, cx0 - 2 * scale:cx0 + 2 * scale + 1]
+    xs, ys = xs.ravel().astype(float), ys.ravel().astype(float)
+    refined = max(
+        (scores[i], xs[i], ys[i], r)
+        for r in np.arange(r0 - px_per_mm, r0 + px_per_mm + 0.01, 0.1 * px_per_mm)
+        for scores in [_ring_scores(full, xs, ys, r, n=360)]
+        for i in [int(scores.argmax())]
+    )
+    _, cx, cy, r = refined
+    return int(round(cx)), int(round(cy)), int(round(r))
 
 
 def colour_distance(diff, shadow_weight):
@@ -167,7 +195,7 @@ def main():
     img = cv2.imread(args.image)
     if img is None:
         raise SystemExit(f"cannot read {args.image}")
-    dish = (*args.dish_center, 0) if args.dish_center else find_dish(img, args.px_per_mm)
+    dish = (*args.dish_center, 0) if args.dish_center else fit_rim(img, args.px_per_mm)
     mask = np.zeros(img.shape[:2], np.uint8)
     if dish:
         inner_r = int(args.floor_mm / 2 * args.px_per_mm)
