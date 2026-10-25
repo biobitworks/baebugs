@@ -26,7 +26,7 @@ Physical AI for science fails quietly in two places: the bench, where a robot ac
 We treat the record as part of the instrument. Our contributions are:
 
 1. **A vision-to-sieve lane for BioKEA step 1** with two independent sizers in consensus, a sieve planner, a VERID-style digital-twin preflight [5] and a BugPicker bridge [3] (§2).
-2. **Atoms of knowledge (AoK)**: 749 atoms, each with claim, licence in context, status and leaf hash, rolled into one root (`bb85c673…`) and one graph pack shared by every access surface (§3).
+2. **Atoms of knowledge (AoK)**: 808 atoms, each with claim, licence in context, status and leaf hash, rolled into one root (`0abb943b…`) and one graph pack shared by every access surface (§3).
 3. **Deterministic custody**: Merkle break points, MMR ledgers, LOMO checks and FCO/FCG context objects, with a resolvability invariant that records a BREAK instead of trusting an unresolvable hash (§4).
 4. **Preregistered experiments (DAISY-BB-001b, 002a, 004)** reported with their failures (§5).
 5. **A Claude-vs-BYO comparison** showing how a second agent's graph differs from ours, top-down from the root to the leaf (§3.3).
@@ -58,15 +58,15 @@ This is well under the US$200 target, assuming a printer is already available. P
 
 ### 3.1 Atoms
 
-Every file is an atom with a claim (`OWN`, `OWN+TERMS`, `THIRD`), the licence that applies *in its context*, a status and a leaf hash (`kg/aok.json`, summarised in `docs/CLAIMS.md`). The current root is `bb85c6734d9e5552…` over 749 atoms: OWN 687, OWN+TERMS 42, THIRD 20. Atoms roll up file → module → repository, so a reviewer can stop at any module root (for example `lab-parts` `a974e369…`) and check only what is under it.
+Every file is an atom with a claim (`OWN`, `OWN+TERMS`, `THIRD`), the licence that applies *in its context*, a status and a leaf hash (`kg/aok.json`, summarised in `docs/CLAIMS.md`). At the snapshot this draft describes (commit `98443ab` on `mvp-kg`, the base of this text) the root is `0abb943bba6e790d…` over 808 atoms: OWN 742, OWN+TERMS 46, THIRD 20. Adding this preprint to the repository will itself change the root on the next rebuild; that is the system working, and the commit pins the snapshot. Atoms roll up file → module → repository, so a reviewer can stop at any module root (for example `lab-parts` `a21967d4…`) and check only what is under it.
 
 ### 3.2 One graph pack, many readers
 
-A single pack, `site/mvp/mvp.json` (root `548b4d8f…`), is read by the MVP page, the `baebugs-graph` CLI, the MCP server (`python -m baebugs.graph_mcp`), `npx github:biobitworks/baebugs` and a Claude plugin/skill. Because every surface reads the same bytes, they all return the same root; a disagreement between surfaces is itself a detectable break. Any atom can be contested through a GitHub issue template that carries the atom address, and a contester can submit their own FCO/FCG JSON for verification (`.github/ISSUE_TEMPLATE/contest.yml`).
+A single pack, `site/mvp/mvp.json` (root `e485c83c9174f083…` at the same snapshot), is read by the MVP page, the `baebugs-graph` CLI, the MCP server (`python -m baebugs.graph_mcp`), `npx github:biobitworks/baebugs` and a Claude plugin/skill. Because every surface reads the same bytes, they all return the same root; a disagreement between surfaces is itself a detectable break. Any atom can be contested through a GitHub issue template that carries the atom address, and a contester can submit their own FCO/FCG JSON for verification (`.github/ISSUE_TEMPLATE/contest.yml`).
 
 ### 3.3 Claude vs bring-your-own
 
-`baebugs/compare.py` compares two graphs top-down: roots, then module break points, then leaves (MATCH / DIFFERS / ONLY). In the worked example (`docs/byo_compare_example.json`) a BYO party scales one part by 5% and adds its own tray. The comparison finds the two repository roots differ, isolates the difference to one module (`lab-parts`; the other 14 module roots are SAME), and within it reports 105 leaves MATCH, 1 DIFFERS (`arm_grip_handle.stl`) and 1 ONLY_byo (`byo_flat_tray.stl`). The point is not that the two agree; it is that a disagreement is located in O(depth) steps without either party trusting the other.
+`baebugs/compare.py` compares two graphs top-down: roots, then module break points, then leaves (MATCH / DIFFERS / ONLY). In the worked example (`docs/byo_compare_example.json`, recorded at an earlier snapshot, so its roots differ from those above) a BYO party scales one part by 5% and adds its own tray. The comparison finds the two repository roots differ, isolates the difference to one module (`lab-parts`; the other 14 module roots are SAME), and within it reports 105 leaves MATCH, 1 DIFFERS (`arm_grip_handle.stl`) and 1 ONLY_byo (`byo_flat_tray.stl`). The point is not that the two agree; it is that a disagreement is located in O(depth) steps without either party trusting the other.
 
 ## 4. Deterministic custody
 
@@ -134,7 +134,7 @@ Weaknesses we report rather than average away:
 
 ### 5.4 Sizing methods on museum photos
 
-Against the teacher, a distilled student and FastSAM have median relative size deviations of 0.022 and 0.023 (n≈2,550–2,580), while classical `skimage` thresholding deviates 0.31 (`kg/lomo_methods.json`). Odonata is the hardest order for every learned method (≈0.10). This supports keeping a learned sizer in consensus and using classical morphometrics as a cross-check on clean backgrounds rather than as a primary sizer.
+A leave-one-method-out check compares each sizer's width with the median width of the *other* methods on the same specimen (`baebugs/kg.py::lomo_methods`, `kg/lomo_methods.json`). The YOLOE teacher deviates from the others by a median 0.016, a distilled student by 0.022 and FastSAM by 0.023 (n≈2,550–2,620), while classical `skimage` thresholding deviates by 0.31. Odonata is the hardest order for every learned method (≈0.10). This is agreement between methods, not accuracy against ground truth: the learned sizers agree with one another, and classical thresholding disagrees with all of them. That supports keeping a learned sizer in the consensus and using classical morphometrics as a cross-check on clean backgrounds rather than as a primary sizer.
 
 ## 6. Licensing in three lines
 
