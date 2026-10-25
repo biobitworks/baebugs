@@ -288,12 +288,28 @@ def c_resolve():
     return "baebugs.resolve.references importable"
 
 
+def c_graph():
+    """Graph pack is current and every agent surface (Python, npx) returns the same root."""
+    import json as _j
+
+    from baebugs import mvp
+    built = mvp.build(ROOT)["root"]
+    packed = mvp.load(ROOT / mvp.OUT)["root"]
+    if built != packed:
+        raise Fail(f"site/mvp/mvp.json is stale ({packed[:12]} != {built[:12]}); run python -m baebugs.mvp")
+    if shutil.which("node"):
+        rc, out = _run(["node", "bin/baebugs.mjs", "get", "root"], timeout=60)
+        if rc != 0 or _j.loads(out)["root"] != packed:
+            raise Fail("npx surface returns a different root")
+    return f"root {packed[:12]} (python == npx == pack)"
+
+
 HEAVY = {"pytest", "ruff", "pip check", "stl watertight", "html-validate", "axe a11y", "npm doctor", "brew doctor"}
 CHECKS = [
     ("pytest", c_pytest), ("ruff", c_ruff), ("pip check", c_pip_check), ("imports", c_imports),
     ("notebooks", c_notebooks), ("stl watertight", c_stl), ("labware json", c_labware_json),
     ("html-validate", c_html_validate), ("axe a11y", c_a11y), ("npm doctor", c_npm_doctor),
-    ("brew doctor", c_brew_doctor), ("gum", c_gum), ("resolve", c_resolve),
+    ("brew doctor", c_brew_doctor), ("gum", c_gum), ("resolve", c_resolve), ("graph root", c_graph),
 ]
 
 

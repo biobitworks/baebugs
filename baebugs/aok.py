@@ -26,7 +26,7 @@ from pathlib import Path
 
 from .explore import merkle_root
 
-INDEX_FILES = {"kg/aok.json", "docs/CLAIMS.md"}   # the index itself is not an atom (it would hash itself)
+INDEX_FILES = {"kg/aok.json", "docs/CLAIMS.md", "site/mvp/mvp.json"}   # the index itself is not an atom (it would hash itself)
 OWN, OWN_T, THIRD = "OWN", "OWN+TERMS", "THIRD"
 MIT = "MIT"
 

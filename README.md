@@ -1,5 +1,7 @@
 # baebugs
 
+**→ [Open the MVP graph](https://biobitworks.github.io/baebugs/site/mvp/)**: review the whole project from root to leaf, see what is claimed under which licence ([short version](docs/CLAIMS.md)), check any hash in your browser, and contest it. Agents: `npx github:biobitworks/baebugs get root` · `baebugs-graph get root` · MCP `python -m baebugs.graph_mcp`.
+
 **Vision lane for BioKEA Track A, step 1 (BugSorter).** A USB camera looks at a preserved sample *before* it is sieved, measures every body in millimetres, and decides which sieves to stack and how hard to run the water. It then checks that plan against a digital twin of the bench and hands each sieve fraction to BugPicker in BugPicker's own file format. Every step is logged to a hash-chained provenance record.
 
 Built at the Physical AI for Science Hack (Oct 24–25, 2026). The challenge is to make sample prep robust: "bags in, barcodes out".
