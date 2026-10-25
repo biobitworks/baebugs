@@ -74,6 +74,23 @@ ASSETS = [
     {"id": "formlabs_fuse", "name": "Formlabs Fuse 1+ printer and Fuse Sift", "category": "instrument", "maker": "Formlabs",
      "photos": ["formlabs_fuse"], "role": "PA12 powder prints (toy insects, parts)", "interfaces": [],
      "dims_mm": [165, 165, 300], "dims_source": "spec", "notes": "dims = Fuse 1+ build volume"},
+    {"id": "fuse_sift_drum", "name": "Fuse Sift tumbler: rotating perforated steel drum with mat liner, glove box, air nozzle",
+     "category": "instrument", "maker": "Formlabs",
+     "photos": ["sift_floor_1", "sift_floor_2", "sift_gloves_overview", "sift_floor_3", "sift_drum_load", "sift_tumble_1", "sift_tumble_2"],
+     "role": "depowders PA12 prints; also a working example of a rotating perforated drum (prebuilt trommel analogue)",
+     "interfaces": ["glove_box", "perforated_floor"], "dims_source": "not measured",
+     "notes": "videos show the PA12 toy insects tumbling; fines fall through the drum and the perforated floor"},
+    {"id": "pa12_toy_insect_batch", "name": "Printed PA12 toy insects (print/fuse1 set), depowdering", "category": "printed_part",
+     "photos": ["sift_drum_load", "sift_tumble_2", "sift_floor_1", "sift_floor_3", "pa12_toys_box", "pa12_toys_two_on_floor"],
+     "role": "physical size standards for the sieve and vision lanes", "status": "PRINTED + DEPOWDERED (observed)",
+     "interfaces": [], "dims_source": "design",
+     "notes": "geometry in print/fuse1 (91 STLs, Merkle-addressed). Box photo: wings, legs and antennae mostly intact; count and per-toy "
+              "identity not yet checked against the manifest; a few blue FDM strings cling to some toys (cross-contamination to remove "
+              "before imaging); one blue FDM part is in the box"},
+    {"id": "fdm_trommel_attempt_1", "name": "FDM print attempt 1 of the trommel (blue translucent filament)", "category": "printed_part",
+     "photos": ["fdm_trommel_attempt1"], "role": "trommel parts: caps with spokes, drum rings, crank, stand feet",
+     "interfaces": [], "dims_source": "not measured", "status": "FAILED (observed)",
+     "notes": "caps, crank and stand feet printed; the perforated drum zones failed (spaghetti / loose loops) and rings show heavy stringing"},
     # --- labware & consumables ----------------------------------------------------------------------------------------
     {"id": "plate_384_black", "name": "384-well plate, black", "category": "plate", "maker": "PerkinElmer",
      "photos": ["plate384_ruler", "plate384_top"], "role": "imaging / assay plate", "interfaces": ["SBS"],

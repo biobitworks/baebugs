@@ -29,7 +29,7 @@ def _b64(img_bgr, max_side=1024):
     s = min(1.0, max_side / max(h, w))
     if s < 1:
         img_bgr = cv2.resize(img_bgr, None, fx=s, fy=s, interpolation=cv2.INTER_AREA)
-    ok, buf = cv2.imencode(".jpg", img_bgr, [cv2.IMWRITE_JPEG_QUALITY, 88])
+    _ok, buf = cv2.imencode(".jpg", img_bgr, [cv2.IMWRITE_JPEG_QUALITY, 88])
     return base64.b64encode(buf.tobytes()).decode()
 
 
@@ -65,7 +65,7 @@ def available(model=None) -> bool:
         with urllib.request.urlopen(f"{OLLAMA_URL}/api/tags", timeout=5) as r:
             names = {m["name"] for m in json.loads(r.read())["models"]}
         return (model or DEFAULT_MODEL) in names
-    except Exception:
+    except Exception:  # noqa: BLE001 - fallback; the failure is recorded or degrades
         return False
 
 

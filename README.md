@@ -1,3 +1,5 @@
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/brand/baebugs_logo_dark.svg"><img src="assets/brand/baebugs_logo.svg" alt="baebugs" width="360"></picture></p>
+
 # baebugs
 
 ## Human and AI review entry point
@@ -90,6 +92,11 @@ pip install -e ".[notebook,dev]"          # add [yolo] and [claude] as needed
 pytest -q
 jupyter lab notebooks/baebugs_pipeline.ipynb          # main pipeline; swap data in the first cell
 jupyter lab notebooks/essig_context_novelty.ipynb     # Essig FCO context + novelty/filter test case
+jupyter lab notebooks/aok.ipynb                       # atoms of knowledge + licensing; swap REPO / AOK_JSON
+jupyter lab notebooks/mvp_graph_pack.ipynb            # one graph pack, every surface same root; swap PACK / REPO
+jupyter lab notebooks/compare_byo.ipynb               # Claude vs BYO break points; swap A / B
+jupyter lab notebooks/watch_commit.ipynb              # watcher cycle in a scratch clone + receipt check
+jupyter lab notebooks/taxon_crops_004.ipynb           # DAISY-BB-004 crops, thin-class flags, results + custody; swap RUN_DIR
 baebugs analyze --image tray.jpg --px-per-mm 40          # or --camera 0 --aruco-mm 10
 python -m baebugs.mcp_server                             # instrument as MCP server
 ```

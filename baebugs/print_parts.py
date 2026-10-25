@@ -146,7 +146,7 @@ def mini_ring(hole_d=None):
     if hole_d:
         pitch = hole_d + 1.2
         pts = [(x, y) for x in np.arange(-ri, ri, pitch) for y in np.arange(-ri, ri, pitch * math.sqrt(3) / 2)]
-        pts = [(x + (pitch / 2 if int(round(y / (pitch * math.sqrt(3) / 2))) % 2 else 0), y) for x, y in pts]
+        pts = [(x + (pitch / 2 if round(y / (pitch * math.sqrt(3) / 2)) % 2 else 0), y) for x, y in pts]
         holes = [cyl(4, hole_d / 2, seg=12).translate([x, y, -1]) for x, y in pts if math.hypot(x, y) < ri - hole_d / 2 - 0.6]
         floor = floor - union(holes)
     spigot = tube(3, ri - P["fit"], ri - 2.0, seg=72).translate([0, 0, -3])
@@ -187,7 +187,6 @@ def grip_handle():
     vee = [Manifold.cube([3, 3, 30], True).rotate([0, 0, 45]).translate([sx * g / 2, 0, 15]) for sx in (-1, 1)]
     tag = box(14.4, 14.4, 0.8).translate([-7.2, -7.2, 25.21])
     screws = [cyl(10, P["m3"] / 2, seg=16).translate([dx, 0, -1]) for dx in (-10, 10)]
-    heads = [cyl(4, 3.1, seg=16).translate([dx, 0, 4]) for dx in (-10, 10)]
     return union([base, body]) - union(vee + [tag] + screws)
 
 

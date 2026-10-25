@@ -26,7 +26,7 @@ def device():
             return "mps"
         if torch.cuda.is_available():
             return 0
-    except Exception:
+    except Exception:  # noqa: BLE001,S110 - best-effort, nothing to record
         pass
     return "cpu"
 
@@ -177,8 +177,8 @@ def pseudo_label_specimens(image_dirs, out_dir, min_ruler_conf=0.4, max_objects=
         stats["kept_images"] += 1; stats["objects"] += len(keep)
         if len(previews) < preview_n:
             previews.append(preview(img, [pp for pp, _ in keep], [m for _, m in keep], ppm, conf))
-    for split in truth:
-        (out / f"truth_real_{split}.json").write_text(json.dumps(truth[split]))
+    for split, rows in truth.items():
+        (out / f"truth_real_{split}.json").write_text(json.dumps(rows))
     (out / "data.yaml").write_text(f"path: {out.resolve()}\ntrain: images/train\nval: images/val\n"
                                    "names:\n  0: specimen\n")
     if previews:

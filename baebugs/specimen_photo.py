@@ -55,8 +55,8 @@ def ruler_px_per_mm(img, search_frac=0.35, min_ppm=2.0, max_ppm=80.0):
         a_, b_, c_ = seg[i - 1], seg[i], seg[i + 1]
         lag = lo + i + 0.5 * (a_ - c_) / (a_ - 2 * b_ + c_ + 1e-9)
         # a tick ruler repeats: autocorrelation must stay high at 2x..5x the period
-        reps = [ac[max(0, int(round(m * lag)) - 2): int(round(m * lag)) + 3].max()
-                for m in range(2, 6) if int(round(m * lag)) + 3 < n]
+        reps = [ac[max(0, round(m * lag) - 2): round(m * lag) + 3].max()
+                for m in range(2, 6) if round(m * lag) + 3 < n]
         regular = len(reps) >= 3 and min(reps) > 0.35
         score = float(b_) if regular else 0.0
         if score > best[1]:

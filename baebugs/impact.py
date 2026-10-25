@@ -51,7 +51,7 @@ def _sha_file(p):
 
 
 def _commit():
-    return subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip() or None
+    return subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True, check=False).stdout.strip() or None
 
 
 def freeze(truth_path=TRUTH, kg=KG):
@@ -110,7 +110,7 @@ def observations(results_path, tier):
         a = (r.get(tier) or {}).get("answer") or {}
         try:
             obs[r["held"]] = {"plan": a.get("plan"), "length_mm": round(float(a["length_mm"]), 2)}
-        except Exception:
+        except Exception:  # noqa: BLE001 - fallback; the failure is recorded or degrades
             obs[r["held"]] = None
     return obs
 
@@ -192,7 +192,7 @@ def vision_obs(f):
         r = json.loads(line); a = (r.get("tier") or {}).get("answer") or {}
         try:
             obs[r["held"]] = {"plan": a.get("plan"), "length_mm": round(float(a["length_mm"]), 2)}
-        except Exception:
+        except Exception:  # noqa: BLE001 - fallback; the failure is recorded or degrades
             obs[r["held"]] = None
     return obs
 

@@ -57,7 +57,7 @@ def heart(width):
     pts = [(16 * math.sin(t) ** 3, 13 * math.cos(t) - 5 * math.cos(2 * t) - 2 * math.cos(3 * t) - math.cos(4 * t))
            for t in [2 * math.pi * i / 120 for i in range(120)]]
     p = Polygon(pts)
-    minx, miny, maxx, maxy = p.bounds
+    minx, _miny, maxx, _maxy = p.bounds
     p = affinity.scale(p, width / (maxx - minx), width / (maxx - minx), origin=(0, 0))
     c = p.centroid
     return affinity.translate(p, -c.x, -c.y)
@@ -133,7 +133,7 @@ def hole_metrics(h):
     try:
         from shapely import maximum_inscribed_circle
         r = maximum_inscribed_circle(h).length
-    except Exception:
+    except Exception:  # noqa: BLE001 - fallback; the failure is recorded or degrades
         from shapely.ops import polylabel
         c = polylabel(h, 0.01); r = h.exterior.distance(c)
     return {"area_mm2": round(h.area, 3), "inscribed_d_mm": round(2 * r, 3),
@@ -197,7 +197,7 @@ def build(out_dir, stl=True):
             try:
                 s["stl"] = f"stl/{s['id'].replace('/', '-')}.stl"
                 s.update(plate_stl(e, out / s["stl"], grid=grid))
-            except Exception as ex:                     # missing triangulator etc.
+            except Exception as ex:  # noqa: BLE001 - missing triangulator etc.
                 s["stl"] = None; s["stl_error"] = str(ex)[:120]
         rows.append(s)
     (out / "filters.json").write_text(json.dumps(rows, indent=1))

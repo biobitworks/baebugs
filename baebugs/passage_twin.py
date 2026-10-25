@@ -194,7 +194,7 @@ def lopo(edges, H):
         acc = [np.mean([(w < k * d) == y for _, w, d, y in train]) for k in ks]
         k = float(ks[int(np.argmax(acc))])
         a = float(np.mean([(w < k * d) == y for _, w, d, y in test]))
-        per[hname] = {"k": k, "accuracy": round(a, 3), "errors": int(round((1 - a) * len(test)))}
+        per[hname] = {"k": k, "accuracy": round(a, 3), "errors": round((1 - a) * len(test))}
     worst = sorted(per.items(), key=lambda kv: kv[1]["accuracy"])[:6]
     return {"per_plate": per, "overall": round(float(np.mean([v["accuracy"] for v in per.values()])), 3),
             "shape_matters_most": [w[0] for w in worst]}

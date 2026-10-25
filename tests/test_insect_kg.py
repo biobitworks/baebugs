@@ -20,7 +20,7 @@ def test_insect_hash_deterministic_and_tamper_evident():
 
 
 def test_break_point_and_topology():
-    a, ra = insect_tree(13.5, "bee"); b, rb = insect_tree(13.6, "bee"); c, rc = insect_tree(13.5, "wasp")
+    a, ra = insect_tree(13.5, "bee"); b, rb = insect_tree(13.6, "bee"); _c, rc = insect_tree(13.5, "wasp")
     assert break_point(a, b)["level"] == 0 and ra["topo"] == rb["topo"] and ra["topo"] != rc["topo"]
 
 

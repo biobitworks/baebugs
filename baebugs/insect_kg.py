@@ -105,7 +105,7 @@ def _group_checks(children, mesh):
 def insect_tree(length_mm, plan):
     """Build the L0-L3 Merkle tree for one insect. Returns (nodes, root) where
     nodes is a flat list (parents after children) and root is the L3 node."""
-    prims, feats, d = insect_parts(length_mm, plan)
+    prims, _feats, d = insect_parts(length_mm, plan)
     L, W = d["L"], d["W"]
     nodes = []
     # L0
@@ -259,7 +259,8 @@ def build_collection(manifest_csv, out_dir, ledger=None):
     """Per-insect trees + family/group/collection roots. Writes
     out_dir/insects/<stem>.json, index.json, collection.json, nodes.csv."""
     out = Path(out_dir); (out / "insects").mkdir(parents=True, exist_ok=True)
-    rows = list(csv.DictReader(open(manifest_csv)))
+    with open(manifest_csv) as fh:
+        rows = list(csv.DictReader(fh))
     base = Path(manifest_csv).parent
     index, level_ok = [], {0: [0, 0], 1: [0, 0], 2: [0, 0], 3: [0, 0]}
     for r in rows:

@@ -58,7 +58,7 @@ def _download(url, dest: Path, retries=3, timeout=60):
                 data = r.read()
             dest.write_bytes(data)
             return hashlib.sha256(data).hexdigest()
-        except Exception:
+        except Exception:  # noqa: BLE001 - fallback; the failure is recorded or degrades
             time.sleep(1.5 * (k + 1))
     return None
 
@@ -99,7 +99,6 @@ def pull_essig_facets(root: Path, log, workers=3, family_limit=300):
             keys |= {x["name"] for x in facets.get("FAMILY_KEY", [])}
     with cf.ThreadPoolExecutor(max_workers=workers) as ex:   # resolve names in parallel
         names = dict(zip(keys, ex.map(lambda k: _get_json(f"species/{k}").get("canonicalName", k), keys)))
-    gadm_names = {}
     for r in rows:
         r["families"] = {names.get(x["name"], x["name"]): x["count"] for x in r.pop("FAMILY_KEY", [])}
     (out / "essig_family_by_county.json").write_text(json.dumps(rows))
@@ -202,7 +201,7 @@ def main(argv=None):
         for f in cf.as_completed(futs):
             try:
                 f.result()
-            except Exception as e:
+            except Exception as e:  # noqa: BLE001 - fallback; the failure is recorded or degrades
                 log(futs[f], {"status": "error", "error": repr(e)})
 
 

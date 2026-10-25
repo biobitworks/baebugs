@@ -104,6 +104,40 @@ def _build(q, printer, out, spacing):
     return info
 
 
+def build_split(out="print/packages/trommel_biokea_split", spacing=8.0):
+    """After FDM attempt 1: perforated drum zones go to the Fuse 1+ (PA12 powder needs no supports, holes stay clean);
+    caps, stands and crank stay on one X1C plate. Same geometry and tray fit as the one-plate package."""
+    import tempfile
+    src = Path(tempfile.mkdtemp())
+    info = build("x1c", src)
+    out = Path(out); (out / "fuse1_zones").mkdir(parents=True, exist_ok=True); (out / "x1c_rest").mkdir(parents=True, exist_ok=True)
+    meshes = {f.stem: trimesh.load(f) for f in sorted((src / "stl").glob("*.stl"))}
+    zones = [k for k in meshes if "zone" in k]; rest = [k for k in meshes if k not in zones]
+    files = []
+
+    def place(keys, bed, sub, name, gap=spacing):
+        x = y = gap; row_h = 0.0; placed = []
+        for k in keys:
+            t = meshes[k].copy(); t.apply_translation(-t.bounds[0])
+            if x + t.extents[0] > bed[0] - gap:
+                x = gap; y += row_h + gap; row_h = 0.0
+            t.apply_translation([x, y, 0]); placed.append(t); x += t.extents[0] + gap; row_h = max(row_h, t.extents[1])
+            f = out / sub / f"{k}.stl"; meshes[k].export(f)
+            files.append({"file": f"{sub}/{f.name}", "sha256": hashlib.sha256(f.read_bytes()).hexdigest()})
+        plate = trimesh.util.concatenate(placed); hi = plate.bounds[1]
+        plate.export(out / sub / name)
+        return {"extent_mm": [round(float(v), 1) for v in hi], "fits": bool(hi[0] <= bed[0] and hi[1] <= bed[1] and hi[2] <= bed[2])}
+
+    fuse = place(zones, (165.0, 165.0, 300.0), "fuse1_zones", "fuse1_zones_build.stl", gap=4.0)   # powder bed: 4 mm gaps
+    x1c = place(rest, (256.0 - 5, 256.0 - 5, 256.0), "x1c_rest", "x1c_rest_plate.stl")
+    from .explore import merkle_root
+    m = {"params": info["params"], "trays_mm": TRAYS, "fuse1_build": fuse, "x1c_plate": x1c, "rod_mm": info["rod_mm"],
+         "files": files, "merkle_root": merkle_root(sorted(f["sha256"] for f in files)),
+         "why": "FDM attempt 1 (blue, photo fdm_trommel_attempt1): caps/crank/feet printed, perforated zones failed"}
+    (out / "manifest.json").write_text(json.dumps(m, indent=1))
+    return m
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("--printer", default="x1c"); ap.add_argument("--out", default="print/packages/trommel_biokea_x1c")
     a = ap.parse_args()
