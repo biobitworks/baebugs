@@ -112,7 +112,7 @@ Transfer from the CA validation score (0.852) is near zero for Arizona (−0.007
 
 **Data.** 2,627 crops cut from teacher segmentations (train 2,015 CA; val 381 CA; test 231 out-of-state), labelled with GBIF order/family, split by source photo (media-id leakage 0), data root `4d5f2831…`; 2,613 crops CC0, 14 CC BY 4.0 (`daisy/taxon_crops_report.json`). Model yolo11n-cls [6], 224 px, 15 epochs, run locally on Apple MPS after Kaggle's GPU quota ran out (amendments 1–2). Decision rule: USEFUL if test macro-F1 beats the majority-class baseline by more than 0.10.
 
-Results (`daisy/results/DAISY-BB-004/v4/`, events root `d47ecaf1…`, 104 events). All gates passed, 15 epochs per run, and all three weights files are stored and re-verified: custody **INTACT**, no breaks.
+Results (`daisy/results/DAISY-BB-004/v4/`, events root `d47ecaf1…`, 104 events). All gates passed, 15 epochs per run, and all three weights files are stored on the author's drive and re-verified there: custody **INTACT**, no breaks. A replay from the repository alone reports these weights hashes as UNVERIFIED until the weights are released.
 
 | run | classes | val n | val macro-F1 | test n | test macro-F1 | majority | margin | verdict |
 |---|---|---|---|---|---|---|---|---|
@@ -162,7 +162,7 @@ Per-species preprocessors beyond order and family where data allow, tracked on b
 
 ## Data and code availability
 
-Everything is in https://github.com/biobitworks/baebugs: graph pack `site/mvp/mvp.json`, atoms `kg/aok.json`, protocols and amendments `daisy/`, results `daisy/results/`, ledgers `ledger/` and `daisy/*_mmr.jsonl`, notebooks `notebooks/` (each replayable with swappable data), demo video `docs/demo/baebugs_mvp_demo.mp4`. DAISY-BB-004 weights live on the author's drive and are referenced by hash; per the AGPL they are released with source.
+Everything is in https://github.com/biobitworks/baebugs: graph pack `site/mvp/mvp.json`, atoms `kg/aok.json`, protocols and amendments `daisy/`, results `daisy/results/`, ledgers `ledger/` and `daisy/*_mmr.jsonl`, notebooks `notebooks/` (each replayable with swappable data), demo video `docs/demo/baebugs_mvp_demo.mp4`. DAISY-BB-004 weights are stored on the author's drive and re-verified there; they are referenced by hash, so a repo-only replay reports them as UNVERIFIED until they are released (under AGPL-3.0, with source).
 
 ## AI use statement
 
