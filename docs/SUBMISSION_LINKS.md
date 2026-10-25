@@ -31,7 +31,7 @@ One page to click through everything we submit. Status as of 21:35 UTC. **Works*
 | 25 | Live: evidence lab (AoK/FCG explorer, licences, contest) | https://baebugs-evidence-lab.vercel.app/ | Vercel production alias |
 | 26 | Live: CAD custody workcell (OpenSCAD tower, browser-recomputed MMR) | https://baebugs-cad-custody.vercel.app/ | Vercel production alias |
 | 27 | Google Slides link submitted on the form | [add after upload] | Pending |
-| 28 | YouTube (unlisted) demo link | [add after upload] | Pending |
+| 28 | YouTube demo video | https://youtu.be/O4Gq-r018cI | Works (hosted on YouTube, outside the repo, not hashed) |
 
 Agents read the same graph pack (`site/mvp/mvp.json`):
 
