@@ -28,12 +28,17 @@ def leaf(rec):
 
 from baebugs.explore import merkle_root
 
+ROOT = Path("/kaggle/input")
+for p in sorted(ROOT.glob("*")) + sorted(ROOT.glob("*/*")) + sorted(ROOT.glob("*/*/*")):
+    print("mount:", p)
+POINTERS = list(ROOT.rglob("DAISY_POINTERS.jsonl"))
+
 def find_member(bundle, name):
-    for base in Path("/kaggle/input").glob(f"*{bundle}*"):
-        for cand in [base / name, *base.glob(f"**/{name}")]:
-            if (cand / "DAISY_POINTERS.jsonl").exists():
-                return cand
-    return None
+    """Kaggle has mounted datasets at /kaggle/input/<slug>/ and deeper
+    (/kaggle/input/datasets/<user>/<slug>/...): search recursively, prefer a path inside the bundle."""
+    hits = [p.parent for p in POINTERS if p.parent.name == name]
+    inb = [h for h in hits if bundle in str(h)]
+    return (inb or hits or [None])[0]
 
 MEMBERS, CUSTODY_REPORT = {}, {}
 for bundle, names in PROTO["bundles"].items():
