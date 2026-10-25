@@ -1,0 +1,18 @@
+import os
+from pathlib import Path
+from baebugs import dedupe as D
+
+
+def test_pointer_roundtrip(tmp_path):
+    (tmp_path / "keep").mkdir(); (tmp_path / "copy").mkdir()
+    (tmp_path / "keep/a.jpg").write_bytes(b"A" * 1000)
+    (tmp_path / "copy/a.jpg").write_bytes(b"A" * 1000)
+    (tmp_path / "copy/b.jpg").write_bytes(b"B" * 10)
+    os.link(tmp_path / "keep/a.jpg", tmp_path / "keep/a_link.jpg")       # hardlink: no saving
+    p = D.plan([tmp_path], tmp_path, keep_prefixes=("keep",))
+    assert p["pointers"] == 1 and p["bytes_saved"] == 1000 and p["items"][0]["canonical"] == "keep/a.jpg"
+    assert D.apply(p)["replaced"] == 1
+    ptr = tmp_path / "copy/a.jpg.ptr.json"
+    assert ptr.exists() and not (tmp_path / "copy/a.jpg").exists() and D.verify(ptr, tmp_path)["ok"]
+    out = D.materialize(ptr, tmp_path)
+    assert out.read_bytes() == b"A" * 1000 and not ptr.exists()
