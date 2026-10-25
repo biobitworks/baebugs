@@ -56,13 +56,15 @@ def plan(roots, base, keep_prefixes=()):
         rank = lambda l: (not any(l["path"].startswith(p) for p in keep_prefixes), l["path"])
         locs = sorted(locs, key=rank)
         canon = locs[0]
-        inodes = {canon["inode"]}
+        counted = {canon["inode"]}
         for l in locs[1:]:
-            if l["inode"] in inodes:                 # hardlink of an inode already kept: no saving
+            if l["inode"] == canon["inode"]:          # already a hardlink of the canonical
                 continue
-            inodes.add(l["inode"])
+            # every path of a non-canonical inode is relinked (otherwise the old inode survives
+            # through its other links); its bytes are counted once
             items.append({"sha256": h, "size": l["size"], "path": l["path"], "canonical": canon["path"]})
-            saved += l["size"]
+            if l["inode"] not in counted:
+                counted.add(l["inode"]); saved += l["size"]
     return {"base": str(base), "index_root": root, "unique": len(leaves),
             "files": sum(len(v) for v in idx.values()), "pointers": len(items),
             "bytes_saved": saved, "items": items, "_leaves": leaves}
