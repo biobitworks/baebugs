@@ -1,5 +1,5 @@
 {
- "atoms": 873,
+ "atoms": 883,
  "external": [
   {
    "claim": "THIRD",
@@ -3168,7 +3168,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/bench/WORKCELL_DEPLOY_PACKAGING_FAILURE_20261025.json",
    "kind": "doc",
    "leaf": "6045cd6b3a552c5df94956b229461f050726c3302ff25686b55d18245943cc29",
@@ -3568,6 +3568,48 @@
    "module": "docs",
    "path": "docs/ladder_demo/snapshots/11_sort.png",
    "sha256": "250a8340e7b5bea6373160cc0ea00d92fccc3a4fe1e7dd313ef7d7708aabcd8b",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:docs/protocols/DISCOVERY_MVP_CONTRACT.md",
+   "kind": "doc",
+   "leaf": "f836df18a519c59570a8c72a8c7a14a0a24ec9f76e430c2bf23c331ef61e8cad",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/protocols/DISCOVERY_MVP_CONTRACT.md",
+   "sha256": "f1e1be8905e056f8cbf2dfa420ea7a95674e3466684c8cdf4d2bd9de0ccdd489",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:docs/protocols/NOTEBOOK_PRECURSOR_FAILURE_20261025.json",
+   "kind": "doc",
+   "leaf": "34d0337595c7b421fb7911bee2abd8ff52d753c417cc56daac927d373ff503a2",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/protocols/NOTEBOOK_PRECURSOR_FAILURE_20261025.json",
+   "sha256": "7d77bece6e382b4e09851a11235683e392896b29f0df976980a73e58d8a4b919",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:docs/protocols/TEST_RUN_RECEIPT_20261025.json",
+   "kind": "doc",
+   "leaf": "3eacbc63d7561ff207a3fc1f6c05c14dd4d88f83116926ea06d1a899af2e4dea",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/protocols/TEST_RUN_RECEIPT_20261025.json",
+   "sha256": "7426a7d4b1edab493a20c726a428eea398fde5accc8341ed03f30f9762129ed1",
    "status": "built",
    "terms": []
   },
@@ -4176,6 +4218,20 @@
    "module": "notebooks",
    "path": "notebooks/novelty_test_case.ipynb",
    "sha256": "4a2da4801544356f5ef2a1e224b5ebad5ee7ba0447f49f0ad5f1594544748b6a",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:notebooks/protocol_discovery.ipynb",
+   "kind": "notebook",
+   "leaf": "c4b233cafeb72a3ac0048b7316a870aab90c8f207c70e54c699d816945f37574",
+   "licence": "MIT",
+   "module": "notebooks",
+   "path": "notebooks/protocol_discovery.ipynb",
+   "sha256": "d19c1a887a550cc8374677871cbf4c1cd42e6fb33ce7cae34dc429e072eb2844",
    "status": "built",
    "terms": []
   },
@@ -11277,6 +11333,20 @@
   },
   {
    "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:protocols/catalog.json",
+   "kind": "meta",
+   "leaf": "a87103ea16c5842a079991088b0575f799248cec435909b9014de0e94cc33a99",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "protocols/catalog.json",
+   "sha256": "5601b5cc12b66bf4ee002f8dead7b7f9378237e0d1b05087281f0ecfc7cd5011",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
    "claude_coauthored_commits": 3,
    "commits": 3,
    "id": "leaf:pyproject.toml",
@@ -11712,14 +11782,14 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 1,
+   "commits": 2,
    "id": "leaf:site/mvp/build_public_site.py",
    "kind": "page",
-   "leaf": "7fcd7e195f1f4bbd13547ab0f034b290189003dd160570a17d33c80085917d5c",
+   "leaf": "f87def700aed340a93f524c69a8ec94e9742591a3bcd268dd349323197e95347",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/mvp/build_public_site.py",
-   "sha256": "d73b8b7115e89627ebf5dbec6fce92d79ffaaa9eebf4708c89e93f0303eab5af",
+   "sha256": "8cda3c17322149eae65fbd50adaaf78fafc5f99e872e7e1f29bfe6d0e8be4612",
    "status": "built",
    "terms": []
   },
@@ -11729,11 +11799,67 @@
    "commits": 6,
    "id": "leaf:site/mvp/index.html",
    "kind": "page",
-   "leaf": "2e0a676ff40ae0267e97cc0e2d1d1e1725e77e6becf5ade7f744af27e3392fd1",
+   "leaf": "20d322fc4f08eefcce3d4c2ded9ccfbfced833228548136f8f656d451ab84062",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/mvp/index.html",
-   "sha256": "c02d8c08eb11f6a769885121d17c69ba2cc8ee278de977d1540752a844ef2e08",
+   "sha256": "150dd8c324e20c1243dd0296dc09d3563bb1ffedbb3c6bb0ca2a75bedbd68d7c",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:site/protocols/app.js",
+   "kind": "page",
+   "leaf": "5201e787b26ac693b4c319a2d24e247ca11a8610bb6ddcb9c378f1ff60796ab7",
+   "licence": "MIT",
+   "module": "mvp-site",
+   "path": "site/protocols/app.js",
+   "sha256": "f4e689c7b276fa17f1aae3166323bdd446047123fa753bedd030b0d26e5daca0",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:site/protocols/build_catalog.py",
+   "kind": "page",
+   "leaf": "2f07a4d726fbacbc1d0d23e56e838f582a0fd69094a23cf83954b425ab12862f",
+   "licence": "MIT",
+   "module": "mvp-site",
+   "path": "site/protocols/build_catalog.py",
+   "sha256": "0b901996360d1a4ef6226653c83fcf2d31b6ca6efa2b90eb37930fde61585d5e",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:site/protocols/index.html",
+   "kind": "page",
+   "leaf": "f0aaf02e6852c87f270b8e5350fe90f581093ede0ad3931d8a29fef7c8b14cc0",
+   "licence": "MIT",
+   "module": "mvp-site",
+   "path": "site/protocols/index.html",
+   "sha256": "fc23b21ec6527fff6cd1a57e9dd1df32a29f40ac8789377c99de8fd15002b820",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:site/protocols/styles.css",
+   "kind": "page",
+   "leaf": "7c7edab578d73bef686c08082e44ac69e6b72b8395cf72eed486b6ce5530080e",
+   "licence": "MIT",
+   "module": "mvp-site",
+   "path": "site/protocols/styles.css",
+   "sha256": "faca80c91ee00cd0ba3ce79ab30b8d24910078305769442738b979cce6049399",
    "status": "built",
    "terms": []
   },
@@ -12187,6 +12313,20 @@
   },
   {
    "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:tests/test_protocol_discovery.py",
+   "kind": "test",
+   "leaf": "9c2a6cd8209c3e52bce54637b0708c60eb67b5d2773b7bb32b251e7533f16bd0",
+   "licence": "MIT",
+   "module": "tests",
+   "path": "tests/test_protocol_discovery.py",
+   "sha256": "812bc24ac901b8bbdd0a564a62c31b324a2dc654439442a0f93297704d4508e2",
+   "status": "tested",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
    "claude_coauthored_commits": 2,
    "commits": 2,
    "id": "leaf:tests/test_resolve.py",
@@ -12314,7 +12454,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 2,
+   "commits": 3,
    "id": "leaf:tests/test_workflow_landing.py",
    "kind": "test",
    "leaf": "3271033dc965baa68bc32cf37f9f1f4634fe2bb245466dba0f8c2ae170e695cf",
@@ -12384,14 +12524,14 @@
    "terms": []
   },
   "docs": {
-   "atoms": 50,
+   "atoms": 53,
    "claims": {
-    "OWN": 50
+    "OWN": 53
    },
    "id": "module:docs",
-   "root": "f4091d8260febf0be830af92ba9bb6b6d0e03018ba16fe7a6e21c6d7ab2b1186",
+   "root": "6cad1396d8365eba0365a5025b0236e2b0ac8e67ac7a96d0a38ab4bab5f470f1",
    "status": {
-    "built": 50
+    "built": 53
    },
    "terms": []
   },
@@ -12437,26 +12577,26 @@
    "terms": []
   },
   "mvp-site": {
-   "atoms": 31,
+   "atoms": 35,
    "claims": {
-    "OWN": 31
+    "OWN": 35
    },
    "id": "module:mvp-site",
-   "root": "1ac7c76a29b3cd96e0526330673efafcdd89960921d95ae52096c8be06327431",
+   "root": "59e133f368c39a2f732727f8bd3c78fa54390649bc58895c13e7bb388374d0fc",
    "status": {
-    "built": 31
+    "built": 35
    },
    "terms": []
   },
   "notebooks": {
-   "atoms": 19,
+   "atoms": 20,
    "claims": {
-    "OWN": 19
+    "OWN": 20
    },
    "id": "module:notebooks",
-   "root": "e52f3bacbeae68b42a76f4ec2ca9f7418c089d93ad0cb512518b8ad7d025216d",
+   "root": "1a40f6444caddd08a1839b7239f7f120544f3c248a05f97f464415cc11e240a6",
    "status": {
-    "built": 19
+    "built": 20
    },
    "terms": []
   },
@@ -12491,26 +12631,26 @@
    ]
   },
   "repo-meta": {
-   "atoms": 34,
+   "atoms": 35,
    "claims": {
-    "OWN": 34
+    "OWN": 35
    },
    "id": "module:repo-meta",
-   "root": "8fbf6cbdcf64dda0177fab7845be94a0634d063a81856fa541058eebe350bf09",
+   "root": "b8e6b57e48394a1dde96544e7b398dce60ea8ad43b735f044c1e51c14f8da30c",
    "status": {
-    "built": 34
+    "built": 35
    },
    "terms": []
   },
   "tests": {
-   "atoms": 40,
+   "atoms": 41,
    "claims": {
-    "OWN": 40
+    "OWN": 41
    },
    "id": "module:tests",
-   "root": "8d73335a479594e66b22830df1be9e24bd56d90649a23982f3c789a266c97f1f",
+   "root": "2383109e094494ec6e6f0bdeb57350e684274ef69eca1db805533423b732a943",
    "status": {
-    "tested": 40
+    "tested": 41
    },
    "terms": []
   },
@@ -12528,9 +12668,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "c2456d59c638105e74fe5bc10ea077c4acf0ae5afc9ee569ab6e664708872c02",
+ "root": "108185abaca759a7c65e42e501b69364e13703e040904fce8475f3eb9f6a0e1e",
  "totals": {
-  "OWN": 804,
+  "OWN": 814,
   "OWN+TERMS": 49,
   "THIRD": 20
  },

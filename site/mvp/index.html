@@ -83,6 +83,30 @@ pre.mono{white-space:pre-wrap;overflow-wrap:anywhere;margin:0}
 .twin-frame{height:min(650px,70vh);min-height:390px}
 @media(max-width:1040px){.flowsteps{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:620px){.flowsteps{grid-template-columns:repeat(2,minmax(0,1fr))}.workcell-evidence{grid-template-columns:1fr}.twin-frame{min-height:350px;height:65vh}}
+
+.protocol-discovery-entry{background:linear-gradient(110deg,#244942,#1a3538 55%,#304044);border:1px solid #648379;border-radius:14px;padding:31px 34px;display:grid;grid-template-columns:1.4fr .6fr;gap:20px;margin:23px 0 26px;position:relative;overflow:hidden}
+.protocol-discovery-entry:before{content:"";position:absolute;right:-60px;bottom:-130px;width:420px;height:320px;border:1px solid #8eaea650;border-radius:50%;pointer-events:none}
+.proto-entry-copy{position:relative;z-index:1}
+.proto-overline{font-size:10px;font-weight:800;letter-spacing:.15em;color:#a7f1cb}
+.proto-entry-copy h2{font-size:clamp(26px,3vw,39px);letter-spacing:-.05em;line-height:1.1;margin:12px 0}
+.proto-entry-copy h2 span{color:#b6ebcc}
+.proto-entry-copy p{font-size:12px;color:#c5d5d0;max-width:650px;line-height:1.7}
+.proto-entry-search label{font-size:11px;color:#b6d6c7;display:block;margin:15px 0 6px}
+.proto-entry-search>div{display:flex;gap:8px;flex-wrap:wrap}
+.proto-entry-search input{min-width:220px;flex:1;border:1px solid #698e83;border-radius:8px;background:#132d2b;color:#e0f4eb;padding:11px}
+.proto-entry-search button{background:#b4efca;color:#193b2c;border:1px solid #b4efca;padding:11px 15px;font-size:12px;font-weight:800;border-radius:8px;cursor:pointer}
+.proto-entry-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:13px;font-size:11px}
+.proto-entry-actions a{color:#aef1cd;font-weight:750}
+.proto-entry-cards{position:relative;min-height:250px;transform:translateY(8px)}
+.proto-mini{position:absolute;width:190px;min-height:104px;border-radius:10px;padding:13px;background:#c9e4d6;color:#25453b;box-shadow:0 16px 29px #0005;display:flex;flex-direction:column}
+.proto-mini strong{font-size:13px;margin-top:7px;letter-spacing:-.03em}
+.proto-mini small{font-size:10px;color:#607e6b}
+.proto-visual-icon{font-size:27px;line-height:1;color:#518e7f}
+.mini-a{top:15px;left:7%;transform:rotate(-7deg);z-index:2}
+.mini-b{top:5px;right:-7%;transform:rotate(10deg);background:#ddcdba}
+.mini-c{bottom:15px;right:0;transform:rotate(6deg);background:#a7d7d7}
+@media(max-width:850px){.protocol-discovery-entry{grid-template-columns:1fr}.proto-entry-cards{height:150px;min-height:150px}.mini-a{left:8%;top:8px}.mini-b{right:8%;top:8px}.mini-c{bottom:0;right:28%}}
+@media(max-width:580px){.protocol-discovery-entry{padding:23px}.proto-entry-cards{min-height:155px}.proto-mini{width:156px;min-height:90px;padding:10px}.mini-b{right:0}.mini-c{right:8%}}
 </style>
 </head>
 <body>
@@ -90,7 +114,24 @@ pre.mono{white-space:pre-wrap;overflow-wrap:anywhere;margin:0}
 <header>
   <h1>Baebugs · BioKEA specimen-to-evidence workcell</h1>
   <p>Explore the proposed path from specimen imaging and size filtering to plate handling and addressable evidence. The photographed bench establishes equipment presence, not a successful automated end-to-end run.</p>
-  <div class="roots" id="roots" aria-live="polite"><div class="root"><b>Loading</b><span class="mono">mvp.json</span></div></div>
+  <section class="protocol-discovery-entry" aria-labelledby="proto-entry-heading">
+ <div class="proto-entry-copy">
+  <span class="proto-overline">EXPLORE / SAVE / REMIX</span>
+  <h2 id="proto-entry-heading">Find your protocol.<br><span>Build on what already exists.</span></h2>
+  <p>Search Baebugs research workflows by purpose, equipment or evidence. Bookmark what matters, import your own method, and review a source-linked remix without sending commands to laboratory hardware.</p>
+  <form action="../protocols/" method="get" class="proto-entry-search" role="search">
+   <label for="proto-main-search">What are you working on?</label>
+   <div><input id="proto-main-search" name="q" placeholder="Camera intake, steel inserts, Opentrons…" type="search"><button type="submit">Find protocols ↗</button></div>
+  </form>
+  <div class="proto-entry-actions"><a href="../protocols/">Explore 9 curated workflows</a><span>·</span><a href="../protocols/#new">Bring your own or remix</a></div>
+ </div>
+ <div class="proto-entry-cards" aria-hidden="true">
+   <div class="proto-mini mini-a"><span class="proto-visual-icon">▦</span><strong>Modular filter studio</strong><small>geometry → evidence</small></div>
+   <div class="proto-mini mini-b"><span class="proto-visual-icon">◎</span><strong>Camera intake</strong><small>specimen → identity</small></div>
+   <div class="proto-mini mini-c"><span class="proto-visual-icon">⌘</span><strong>Opentrons modules</strong><small>labware → review</small></div>
+ </div>
+</section>
+<div class="roots" id="roots" aria-live="polite"><div class="root"><b>Loading</b><span class="mono">mvp.json</span></div></div>
   <div id="custody"></div>
 </header>
 

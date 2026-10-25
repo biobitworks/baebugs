@@ -37,10 +37,18 @@ def build(target: Path, source_ref: str):
     (target/"index.html").write_text(html)
     shutil.copy2(REPO/"site/mvp/mvp.json",target/"mvp.json")
     shutil.copy2(REPO/"docs/bench/bench_photo_observation_20261025.json",target/"bench_observation.json")
-    for rel in ["site/lab","site/twin"]:
+    for rel in ["site/lab","site/twin","site/protocols"]:
         d=target/Path(rel).name
         if d.exists(): shutil.rmtree(d)
         shutil.copytree(REPO/rel,d)
+    # Public protocols are source-verified derived projections, not execution proof.
+    import sys
+    sys.path.insert(0, str(REPO / "site/protocols"))
+    from build_catalog import build as compile_protocols
+    resolved = compile_protocols(REPO, target/"mvp.json")
+    resolved["source_commit"] = source_ref
+    (target/"protocols/catalog.json").write_text(
+        json.dumps(resolved, indent=2, ensure_ascii=False, sort_keys=True)+chr(10))
     # The 3D labware preview and Opentrons schemas linked by the Parts tab.
     for rel in ["print/labware/previews.png"]:
         dest=target/rel;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(REPO/rel,dest)
