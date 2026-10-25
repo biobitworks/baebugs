@@ -2,9 +2,11 @@
 
 Team demo-day project. See README.md for layout and commands. These notes hold the hardware facts and decisions agreed so far.
 
+**Project map:** https://claude.ai/artifact/LXUP6UCqxiUcj7pKq4E9h3 (private to the owner unless shared). It is the team's task tracker: tasks live in its database collection `tasks` (fields `area` = vision|plan|planner|arm|rig|mcu|demo|setup, `title`, `detail`, `status` = doing|next|blocked|decide|later|done, `order`, optional `who`, `updatedAt` ISO date). When work here finishes or new work comes up, update those rows with the ArtifactData tool (read first, pin `if_version`) rather than republishing the page.
+
 ## Pipeline
 
-1. **Vision:** petri dish (pebbles, dry noodles, seeds, crumbs; ~1–20 mm) photographed; objects measured by size. Objects are too big for a microscope's field of view, so the demo uses an overhead camera. The "real" system would use an automated microscope.
+1. **Vision:** petri dish (pebbles, dry noodles, seeds, crumbs; ~1–20 mm) photographed; objects measured by size. The "real" system would use an automated microscope, but for the demo objects the team's iQCrew microscope zooms in too far (tested 2026-10-24), so the demo uses an overhead camera (phone or USB webcam, still to be chosen) with a backlight. The microscope's camera is an AmScope MD300A: plain UVC, camera index 1 on this laptop, 2048×1536, no vendor software needed (`vision/live_view.py` shows it with a focus meter).
 2. **Planner:** sizes → which of the 5 filters go into the 3 rig slots (coarse-to-fine order is a rule) → list of moves.
 3. **Arm:** SO-101 follower moves filters between the rig and a side storage shelf.
 
