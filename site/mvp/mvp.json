@@ -2354,6 +2354,226 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
+"leaf": "b78cc88116fd5f2771f1ae9ca3bf5f20fcc4dccbbcb411c1fc8eaff56435811c",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/README.md",
+"sha256": "9e5e2f0569e9154b1109f926656882db29ec662ccd985f4ea885f50ff70990a3",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "90f89ac0048d7a4bca467f7c5fdd2c67a76f6014e51b7273566cf7619fc87447",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/index.html",
+"sha256": "c3ac83b2b9c01bbafca156388519bf06f736cd93597edefa9075a9605dc03dfd",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "8c477e85798096a4b43955748fb009fae7d7051c9eb4375e7b86f0982f2a7932",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_a_favicon.svg",
+"sha256": "8f51a65b794c75c2785bb8d172a20914efc274ce5dbee41586b9b7cbd35cf362",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "84555b39aa4cb688db5e045aa1ad46b20f15ca6519ec32e763614ae03f1ee54e",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_a_logo.svg",
+"sha256": "3b12868a526a3fe709dd7420f6eddf89a80352e19d1fb6ad5ce02e2e85bc7ff9",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "b92eb7b8afd15235e7a3fb8dc4639d7f5779df374556faeec13eed346d5139ee",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_a_logo_dark.svg",
+"sha256": "3a4157c624e56a95cdccb417af66aa16280ea3d1d74161a60abf3cc610c41bfc",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "17c7f963d40a72d393c1cae272a15223dbf148c2700f4a84860583bd9f85deee",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_a_mark.svg",
+"sha256": "7e83476fa7f4fe4ff279db28d431041f040e98d14fd905e99cb4bb8a1a81b38f",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "11d9d3186bb31a5f65c6e1fb34acc1332815ccd05206eb26959911afa360ffed",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_a_mark_dark.svg",
+"sha256": "c0b8267a855610d80ea438caa5ac314db97aa5652179e8f41ded196f0b6ca08d",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "d1012f83eacc01caeedfdc25363e99c43859152901ca578cd71fa613bd2c0b72",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_b_favicon.svg",
+"sha256": "cf760b978b1c4f57715efe13203431a5ff3d5a4cb6d4f6f6c6909ad1de4a9c91",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "84de861fe425613080994aa56432d777a0afe64d8b8335f57b89e4991ad3b201",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_b_logo.svg",
+"sha256": "fc220fc6d4d998619533511429913186efb0231b9cb9bd8b5c86d45bb2a02c05",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "33b9911eb365593f1eca842901ae2f49eb2aa7f5fa3826137228a6c8b94ef99e",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_b_logo_dark.svg",
+"sha256": "42ff02c9982ea61e1c79cccf51a402aadc555de5b78249473a56103cee9b5bd4",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "57995bc2e7d555edd2e3c082a2556da7f9b94dfe0a07922e28a89ac87f34dfd0",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_b_mark.svg",
+"sha256": "2b302f6343e6393d6da7ab54d39a363647be7b430f46f93e8e8fbf6118fd8126",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "9783a057b29f6b38df7223c5501907aaddeba6479fe08582ce82ebf0faf8bc39",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_b_mark_dark.svg",
+"sha256": "91c977f7189b0e01f745015370a1fabeddda781b9da114241a02c4965b4f7add",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "9c3c2ac85f07d484eb15cc6a904cbe7a28ba7ff20eb90a01e902f108436d0d9e",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_c_favicon.svg",
+"sha256": "979f72bd73657b6a7ccd8f5c8406e04f37bd0c113f467a0e6d49d2f97372437b",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "fe4165b5ff39077c11f171dceffcef627c91c239099bf00ea1435405fc253e57",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_c_logo.svg",
+"sha256": "b95170db0cfdf004f8f914351a02f1aec716142d11ce5e878b4efb91d1e9c81e",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "42b5f3013c5b4cbe1af8c1d46cdd40d83fe3f7dda537f29b9ec1bd9bab954e56",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_c_logo_dark.svg",
+"sha256": "0567b0581e00904546dbd88541f50310f64df80609069e02b748b9b0cbbe7b48",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "f97e08adc751e7178f872c35164ada02e5444bdc085bc3d948cc0723d808503f",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_c_mark.svg",
+"sha256": "89ca85d239c707cb0fb11750c663d329a71ac0bc589867d81123f7c9bc05fbf8",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "6a9d0ecdf06373e98fa0da5b36f00e36db19b78e27ac93d764bc3ab07478c8c1",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_c_mark_dark.svg",
+"sha256": "5fcf9f5bd2a2f9df9a76fa943fd3803d62c5bc240d91e44c45f5a45f5242618f",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "260f088c25cfd3252de052a6d28be9840fffcfaa464a22be91c42b1f461ebe2c",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_d_favicon.svg",
+"sha256": "0cf6c884cd6118cc3fe8c4f0593f94d8971876c3aba799e69c64a7ee6a75b005",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "1cc170e7fbba43dceae1d50a50ce2d735d4d9b69f13d6202b83531c8765ce727",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_d_logo.svg",
+"sha256": "3ca694fda2a8372e9c9b760e83da6a0ed88fcff093932b43ad9425eb0fad6bd1",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "be606fd40497b3371dfa35d2df42cfa078daa288c56a1065cb339e772fb56955",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_d_logo_dark.svg",
+"sha256": "cb16e70d098504c41146f2510a7b34354244e59d136efcf07a0156a7da244237",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "8dc32ae74578607c856e23c7408f3e583aa55c3a4b0e0fbd606946f32088f587",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_d_mark.svg",
+"sha256": "44906dff927cd4d6faab9e241945b0e1f5789ba31c30c8e87eb225caa8499003",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "43d483a87432220b75daac197d3f4cb1e2442674379d4ef6c41739c7c38315c8",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/brand/options/option_d_mark_dark.svg",
+"sha256": "77768f41ff83b7f4af115dbb16374b9edaffe95fa3a7165668516178859a18a3",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
 "leaf": "b3098d9b8eccde6ce3a8446270af8149a1e63641562edb4e59e1c7fb7360947a",
 "licence": "MIT",
 "module": "repo-meta",
@@ -4419,6 +4639,26 @@ null
 "module": "docs",
 "path": "docs/analog_test/README.md",
 "sha256": "dffe80558e0a4bb05e9644434ac038b41cb95c17dc4fde50b115dcca7417873d",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "150eb5adc2fc001e87fc027d110029c7cb16d0a84b2791482dc6a44e579f33a6",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/bench-boards/README.md",
+"sha256": "63fba6bfa277789a0c45ce83a3cf43f7f8aa8b8ef29aa0ccb20320ea7f4308e6",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "9cffe08c6814a33cb044fcd3b64447021772701560672eb595bd65162af348ac",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/bench-boards/index.html",
+"sha256": "83260da2c81bc634a26b2c9ae6ccf127f8bfe1ad25d1aa1331b9ee720dbb6182",
 "status": "built"
 },
 {
@@ -10674,11 +10914,11 @@ null
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "bfa151c50ac69205733f8dd7b43626316678c41fb5549c5a3895f962e3bb4a83",
+"leaf": "310c73007c2b98ba32e555ce82f0712c8b3f007e9d8379dfde3aa8998e21692b",
 "licence": "MIT",
 "module": "mvp-site",
 "path": "site/board/index.html",
-"sha256": "cdf61a6927f556ba4c292962588ac4f0ef57388378632efc720b232ba39c059f",
+"sha256": "38095f48251686fa36b013f2c2c21b1ba6af456623317bc28d3b8eba7a63f327",
 "status": "built"
 },
 {
@@ -11487,14 +11727,14 @@ null
 "terms": []
 },
 "docs": {
-"atoms": 67,
+"atoms": 69,
 "claims": {
-"OWN": 67
+"OWN": 69
 },
 "id": "module:docs",
-"root": "35695b0beaeaccb2c009ed3cbca5ae5ddd79c6fe204fff3fe86031e4a403ca95",
+"root": "8a55ae1653d950ef0feaa4ddac99b3ce53e9bd2b3c5a05596f4e4e951ae14ee5",
 "status": {
-"built": 67
+"built": 69
 },
 "terms": []
 },
@@ -11545,7 +11785,7 @@ null
 "OWN": 31
 },
 "id": "module:mvp-site",
-"root": "2a90a25322f3879bdf80b197acc3c95249d39edb545d5ba0bf0497e9e42c059c",
+"root": "d3b294e024e76dc0757adc9bb6238a6e14842f268a595166f71635b3216c7077",
 "status": {
 "built": 31
 },
@@ -11594,14 +11834,14 @@ null
 ]
 },
 "repo-meta": {
-"atoms": 57,
+"atoms": 79,
 "claims": {
-"OWN": 57
+"OWN": 79
 },
 "id": "module:repo-meta",
-"root": "14484f1b69f2c31e7404a0c57723d704f9c7859209c679d9985c98c3c83be7ff",
+"root": "f85e459c5fe1084fb1705a5ebf39bd3c25cd8a775a7d3ede32e357d473f8e653",
 "status": {
-"built": 57
+"built": 79
 },
 "terms": []
 },
@@ -12393,9 +12633,9 @@ null
 ]
 }
 ],
-"root": "69ffcaaeb4861fe4de84333631bb395a212fe2a6c8482cbc06d9812830de726c",
+"root": "82fea49ad895fb9d09cd28490fbd357a36db59148f2790081461c925f1ede7f4",
 "roots": {
-"aok": "8882cf5b89f8cf578b1b71f23e39068c5142c654b604a9a1aa0f994ae0650c52",
+"aok": "36c3b1ca38666ce1a08269ea382d4a855b22bf5bba8776bd5b646e953992e00a",
 "assets": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
 "assets_mmr": "97d20c6b90e0385d7cbac87551f93381eba7eeb2e05cecb7ed9f352f349281b2",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -16611,7 +16851,7 @@ null
 }
 ],
 "totals": {
-"OWN": 868,
+"OWN": 892,
 "OWN+TERMS": 52,
 "THIRD": 20
 },
