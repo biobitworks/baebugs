@@ -263,6 +263,7 @@ def build_collection(manifest_csv, out_dir, ledger=None):
             level_ok[n["level"]][1] += all(n["checks"].values())
         stl = base / r["file"]
         spec = {"representation": r.get("representation", "toy"), "size_flag": r.get("size_flag", ""),
+                "training_role": r.get("training_role", ""),
                 "group": r["group"], "order": r["order"], "family": r["family"], "level": r["level"],
                 "size_source": r["size_source"], "note": r["note"], "file": r["file"],
                 "stl_sha256": hashlib.sha256(stl.read_bytes()).hexdigest() if stl.exists() else None}

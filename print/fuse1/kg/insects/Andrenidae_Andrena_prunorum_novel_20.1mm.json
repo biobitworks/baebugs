@@ -1,6 +1,6 @@
 {
  "insect_hash": "54e99140bc306542dab8507e838df2945d1ff65365e0138f7c3103c5fba3615f",
- "specimen_hash": "8938fc9f2e5c7f23483928c84a14c99b5d3e8057fc32b86f202ba9be794e9e94",
+ "specimen_hash": "aa7f18095865593a6ed0586460a41b77749762dfc64cfa78a7401c2582cb3680",
  "nodes": [
   {
    "level": 0,
@@ -1354,6 +1354,7 @@
   "insect_hash": "54e99140bc306542dab8507e838df2945d1ff65365e0138f7c3103c5fba3615f",
   "representation": "toy",
   "size_flag": "suspect: 20.1 mm far larger than typical for this mining bee",
+  "training_role": "edge_negative:size_suspect",
   "group": "novel_outside_ca",
   "order": "Hymenoptera",
   "family": "Andrenidae (Andrena prunorum)",
@@ -1361,6 +1362,6 @@
   "note": "z = +5.6 vs CA Andrenidae",
   "file": "novel_outside_ca/Andrenidae_Andrena_prunorum_novel_20.1mm.stl",
   "stl_sha256": "8facd77ee215aa646c7355f527f0e7538eefc2ffaeb6af59b70e8c3dbd80679b",
-  "hash": "8938fc9f2e5c7f23483928c84a14c99b5d3e8057fc32b86f202ba9be794e9e94"
+  "hash": "aa7f18095865593a6ed0586460a41b77749762dfc64cfa78a7401c2582cb3680"
  }
 }

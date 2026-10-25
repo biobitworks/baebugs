@@ -1,6 +1,6 @@
 {
  "insect_hash": "b65db9afd6b84e02fce0d1930275ba208be7c872fe9cb549c485ae8d53134e2e",
- "specimen_hash": "a89495558a32737bb1e6150fcbf53ff1ca319d4dd9fafeb95aacd0a7c95b1afa",
+ "specimen_hash": "a7bb14ba6556089cf1a9ef44717fc10341d271cd6c1eb9049746295932659ded",
  "nodes": [
   {
    "level": 0,
@@ -1354,6 +1354,7 @@
   "insect_hash": "b65db9afd6b84e02fce0d1930275ba208be7c872fe9cb549c485ae8d53134e2e",
   "representation": "toy",
   "size_flag": "database-derived, unverified",
+  "training_role": "positive",
   "group": "california",
   "order": "Diptera",
   "family": "Syrphidae",
@@ -1361,6 +1362,6 @@
   "note": "",
   "file": "california/Syrphidae_mean+1SD_13.5mm.stl",
   "stl_sha256": "faa8e49746c6d3f0eeafdcb2fb1455c99c2d865aa488a8686e96f1acd80781e9",
-  "hash": "a89495558a32737bb1e6150fcbf53ff1ca319d4dd9fafeb95aacd0a7c95b1afa"
+  "hash": "a7bb14ba6556089cf1a9ef44717fc10341d271cd6c1eb9049746295932659ded"
  }
 }

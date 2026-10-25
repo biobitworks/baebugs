@@ -1,6 +1,6 @@
 {
  "insect_hash": "6fe382aee32083add6a35c6cd3b0b2e84756fe1117b68bf47d27ae54d332e05f",
- "specimen_hash": "6abef8b856e857a93c365e8154146a75f52f76794066d44a7dda7def5fc62e3e",
+ "specimen_hash": "b8ed870686ba8aa5d9084ab0c6351bbb4051e314234e44b439e36396fd611ae9",
  "nodes": [
   {
    "level": 0,
@@ -362,6 +362,7 @@
   "insect_hash": "6fe382aee32083add6a35c6cd3b0b2e84756fe1117b68bf47d27ae54d332e05f",
   "representation": "toy",
   "size_flag": "fill-in size, not measured",
+  "training_role": "positive",
   "group": "fill_in_1-3mm",
   "order": "Coleoptera",
   "family": "small beetle",
@@ -369,6 +370,6 @@
   "note": "",
   "file": "fill_in_1-3mm/small_beetle_fill_3.0mm.stl",
   "stl_sha256": "3c956a12d95a3f661dd0c004957feef3008062979ddbf8b7ffc717eed12273da",
-  "hash": "6abef8b856e857a93c365e8154146a75f52f76794066d44a7dda7def5fc62e3e"
+  "hash": "b8ed870686ba8aa5d9084ab0c6351bbb4051e314234e44b439e36396fd611ae9"
  }
 }

@@ -1,6 +1,6 @@
 {
  "insect_hash": "4edbc9adec453e4dfb8e3853e0be4b19917aca3e4b923dc334ed237fe01901e1",
- "specimen_hash": "aa6bfa0341f045ac5bbb77f5a0ac2f5bbe5e2a44b90bda1396a51abcb12fbf01",
+ "specimen_hash": "28f8d1f2a6098dd7ce3ca298061aa580c7aac91bf14eb3cf8f1077ce0db28879",
  "nodes": [
   {
    "level": 0,
@@ -1064,6 +1064,7 @@
   "insect_hash": "4edbc9adec453e4dfb8e3853e0be4b19917aca3e4b923dc334ed237fe01901e1",
   "representation": "toy",
   "size_flag": "database-derived, unverified",
+  "training_role": "positive",
   "group": "california",
   "order": "Hemiptera",
   "family": "Largidae",
@@ -1071,6 +1072,6 @@
   "note": "",
   "file": "california/Largidae_mean-2SD_7.6mm.stl",
   "stl_sha256": "821d295ea7a5c74cab9b1ed3d18acb2de613df5bafb928287f972b31e6aa5909",
-  "hash": "aa6bfa0341f045ac5bbb77f5a0ac2f5bbe5e2a44b90bda1396a51abcb12fbf01"
+  "hash": "28f8d1f2a6098dd7ce3ca298061aa580c7aac91bf14eb3cf8f1077ce0db28879"
  }
 }

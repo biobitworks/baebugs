@@ -1,6 +1,6 @@
 {
  "insect_hash": "b6012f571a0a68b31fb812e914c56cde16987928f3c7b168ef2e3c6850b0cfa7",
- "specimen_hash": "0f994a73a261799a835da329490865bca7cb048754032d3021be2f656194e0f4",
+ "specimen_hash": "aa524929e0187a57eb383c52a512cec5f78ae8a007a24a51cc629f987536f539",
  "nodes": [
   {
    "level": 0,
@@ -506,6 +506,7 @@
   "insect_hash": "b6012f571a0a68b31fb812e914c56cde16987928f3c7b168ef2e3c6850b0cfa7",
   "representation": "toy",
   "size_flag": "database-derived, unverified",
+  "training_role": "positive",
   "group": "novel_outside_ca",
   "order": "Odonata",
   "family": "Coenagrionidae",
@@ -513,6 +514,6 @@
   "note": "family absent from CA data",
   "file": "novel_outside_ca/Coenagrionidae_novel_29.9mm.stl",
   "stl_sha256": "cfc277e6c31d28bf7386753131fdb4400caf7c596fb4ef534133632170cd79f1",
-  "hash": "0f994a73a261799a835da329490865bca7cb048754032d3021be2f656194e0f4"
+  "hash": "aa524929e0187a57eb383c52a512cec5f78ae8a007a24a51cc629f987536f539"
  }
 }

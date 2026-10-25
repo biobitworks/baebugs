@@ -1,6 +1,6 @@
 {
  "insect_hash": "dae2144caa291a9a300871a754dce9fe8d9da79ca9e212c7deba99245c8867c2",
- "specimen_hash": "0bb45f556b040e50e23a936be5162a517d45c8444f72a2f164222bf965cd8482",
+ "specimen_hash": "4ba9b264f143609c5c41aee4f47914cc40c803a53126d044ec4cd0e1834199ea",
  "nodes": [
   {
    "level": 0,
@@ -1208,6 +1208,7 @@
   "insect_hash": "dae2144caa291a9a300871a754dce9fe8d9da79ca9e212c7deba99245c8867c2",
   "representation": "toy",
   "size_flag": "suspect: family mean runs large; likely includes wings",
+  "training_role": "edge_negative:family_stats_suspect",
   "group": "california",
   "order": "Diptera",
   "family": "Bombyliidae",
@@ -1215,6 +1216,6 @@
   "note": "",
   "file": "california/Bombyliidae_mean-2SD_8.6mm.stl",
   "stl_sha256": "1038c26a60860cf21b85ef70df6e17c5d135c4e380ea9c6de6bb9ca187d80246",
-  "hash": "0bb45f556b040e50e23a936be5162a517d45c8444f72a2f164222bf965cd8482"
+  "hash": "4ba9b264f143609c5c41aee4f47914cc40c803a53126d044ec4cd0e1834199ea"
  }
 }

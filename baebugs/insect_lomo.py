@@ -68,13 +68,35 @@ def family_stats(ctx):
     return fams
 
 
+SIZE_BINS = [1.0, 3.0, 6.0, 12.0, 20.0, 30.01]     # mm: XS, S, M, L, XL
+
+
+def size_bin(L):
+    for i in range(len(SIZE_BINS) - 1):
+        if SIZE_BINS[i] <= L < SIZE_BINS[i + 1]:
+            return f"{SIZE_BINS[i]:g}-{min(SIZE_BINS[i + 1], 30):g}mm"
+    return "out"
+
+
 def cases(index, protocol):
+    """Yield (held, context, step). lomo / lofo: step None.
+    s2l: small->large curriculum: context = all insects in smaller bins, query = next bin.
+    l2s: large->small, the reverse."""
     if protocol == "lomo":
         for i, x in enumerate(index):
-            yield x, index[:i] + index[i + 1:]
+            yield x, index[:i] + index[i + 1:], None
     elif protocol == "lofo":
         for x in index:
-            yield x, [y for y in index if y["family_base"] != x["family_base"]]
+            yield x, [y for y in index if y["family_base"] != x["family_base"]], None
+    elif protocol in ("s2l", "l2s"):
+        nb = len(SIZE_BINS) - 1
+        order = list(range(nb)) if protocol == "s2l" else list(range(nb))[::-1]
+        bins = {k: [x for x in index if SIZE_BINS[k] <= x["length_mm"] < SIZE_BINS[k + 1]] for k in range(nb)}
+        for j in range(1, nb):
+            ctx = [x for k in order[:j] for x in bins[k]]
+            step = f"{j}: train {'+'.join(size_bin(SIZE_BINS[k]) for k in order[:j])} -> test {size_bin(SIZE_BINS[order[j]])}"
+            for x in bins[order[j]]:
+                yield x, ctx, step
     else:
         raise ValueError(protocol)
 
@@ -301,10 +323,11 @@ def run(kg_dir, out_dir, protocols=("lomo", "lofo"), local=None, use_claude=Fals
     twin_table()
     for proto in protocols:
         rows = []
-        for i, (held, ctx) in enumerate(cases(index, proto)):
+        for i, (held, ctx, step) in enumerate(cases(index, proto)):
             if limit and i >= limit:
                 break
-            r = {"protocol": proto, "held": held["name"], "group": held["group"], "family": held["family_base"],
+            r = {"protocol": proto, "step": step, "training_role": held.get("training_role", ""),
+                 "size_bin": size_bin(held["length_mm"]), "held": held["name"], "group": held["group"], "family": held["family_base"],
                  "plan": held["plan"], "length_mm": held["length_mm"], "insect_hash": held["insect_hash"][:16]}
             r["logic"] = check(solve_logic(held["observation"], ctx), held, ctx)
             if local:
@@ -339,10 +362,13 @@ def run(kg_dir, out_dir, protocols=("lomo", "lofo"), local=None, use_claude=Fals
                             "hash_match": bool(res and r[res]["hash_match"]),
                             "triage_ok": bool(res and r[res]["triage_ok"])}
         recs = [r for r, _, _ in rows]
+        steps = sorted({r["step"] for r in recs if r.get("step")})
         with (out / f"{proto}.jsonl").open("w") as f:
             for r in recs:
                 f.write(json.dumps(r, default=_np) + "\n")
         summary[proto] = summarize(recs)
+        if steps:
+            summary[proto]["steps"] = {st: summarize([r for r in recs if r.get("step") == st]) for st in steps}
         if ledger is not None:
             ledger.append(f"{proto}_done", json.loads(json.dumps(summary[proto], default=_np)), files={proto: out / f"{proto}.jsonl"})
     (out / "summary.json").write_text(json.dumps(summary, indent=1, default=_np))
@@ -365,6 +391,9 @@ def summarize(recs):
                 "family_ok": sum(bool(x.get("family_match")) for x in rs),
                 "triage_ok": sum(bool(x.get("triage_ok")) for x in rs),
                 "median_abs_len_err_mm": float(np.median([abs(x["length_err_mm"]) for x in rs if "length_err_mm" in x])) if any("length_err_mm" in x for x in rs) else None}
+        neg = [r[t] for r in recs if t in r and r.get("training_role", "").startswith("edge_negative")]
+        s[t]["edge_negatives"] = len(neg)
+        s[t]["edge_negatives_rejected"] = sum(bool(x.get("novel_logic")) for x in neg)
     if any("cascade" in r for r in recs):
         by = {}
         for r in recs:
@@ -378,14 +407,17 @@ def write_csv(out, summary):
     import csv
     with (Path(out) / "summary.csv").open("w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["protocol", "tier", "n", "valid", "obs_consistent", "exact_hash", "topology_ok", "tray_ok",
-                    "family_ok", "triage_ok", "median_abs_len_err_mm"])
+        w.writerow(["protocol", "step", "tier", "n", "valid", "obs_consistent", "exact_hash", "topology_ok", "tray_ok",
+                    "family_ok", "triage_ok", "edge_negatives", "edge_negatives_rejected", "median_abs_len_err_mm"])
         for p, s in summary.items():
-            for t in ("logic", "local", "claude"):
-                if t in s:
-                    x = s[t]
-                    w.writerow([p, t, x["n"], x["valid"], x["obs_consistent"], x["exact_hash"], x["topology_ok"],
-                                x["tray_ok"], x["family_ok"], x["triage_ok"], x["median_abs_len_err_mm"]])
+            blocks = [("all", s)] + list(s.get("steps", {}).items())
+            for st, b in blocks:
+                for t in ("logic", "local", "claude"):
+                    if t in b:
+                        x = b[t]
+                        w.writerow([p, st, t, x["n"], x["valid"], x["obs_consistent"], x["exact_hash"], x["topology_ok"],
+                                    x["tray_ok"], x["family_ok"], x["triage_ok"], x["edge_negatives"],
+                                    x["edge_negatives_rejected"], x["median_abs_len_err_mm"]])
 
 
 def main(argv=None):
@@ -393,7 +425,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser("baebugs-insect-lomo")
     ap.add_argument("--kg", default="print/fuse1/kg")
     ap.add_argument("--out", default="print/fuse1/kg/lomo")
-    ap.add_argument("--protocols", default="lomo,lofo")
+    ap.add_argument("--protocols", default="lomo,lofo,s2l,l2s")
     ap.add_argument("--local", help="Ollama model, e.g. qwen3:1.7b")
     ap.add_argument("--claude", action="store_true", help="escalate local misses to `claude -p`")
     ap.add_argument("--claude-model")

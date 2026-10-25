@@ -1,6 +1,6 @@
 {
  "insect_hash": "a87e482fe87bfddab3dc02b16b0309840e904c7d0c257dc58246cac595eff87a",
- "specimen_hash": "2cd1b3b606f7a80b4bfed502142c4cc6c525c4d7ef01c8923dbb07cf312a68f8",
+ "specimen_hash": "700c2e49453d4069193ac5213084f6e23a22da4440c7e84b5608126853c787b8",
  "nodes": [
   {
    "level": 0,
@@ -1210,6 +1210,7 @@
   "insect_hash": "a87e482fe87bfddab3dc02b16b0309840e904c7d0c257dc58246cac595eff87a",
   "representation": "toy",
   "size_flag": "database-derived, unverified",
+  "training_role": "positive",
   "group": "california",
   "order": "Coleoptera",
   "family": "Meloidae",
@@ -1217,6 +1218,6 @@
   "note": "",
   "file": "california/Meloidae_mean+1SD_14.0mm.stl",
   "stl_sha256": "bc9a553d00a750148ea25b9f0c6f9d34ef6c22ca3032283cc163af195476fbd2",
-  "hash": "2cd1b3b606f7a80b4bfed502142c4cc6c525c4d7ef01c8923dbb07cf312a68f8"
+  "hash": "700c2e49453d4069193ac5213084f6e23a22da4440c7e84b5608126853c787b8"
  }
 }

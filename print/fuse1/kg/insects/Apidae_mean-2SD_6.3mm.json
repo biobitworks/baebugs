@@ -1,6 +1,6 @@
 {
  "insect_hash": "32a925cc2bb13f81b090ec90d163d96f4c57e49779ea390eb820686e54794f59",
- "specimen_hash": "2ff643d7b0f61f436a2075860913bd8972f8ec76767e3f15996554d09751bad3",
+ "specimen_hash": "43981ed4fad6ccf2554966757ab281a734d2944ed22a91a67f38dda071587591",
  "nodes": [
   {
    "level": 0,
@@ -1064,6 +1064,7 @@
   "insect_hash": "32a925cc2bb13f81b090ec90d163d96f4c57e49779ea390eb820686e54794f59",
   "representation": "toy",
   "size_flag": "database-derived, unverified",
+  "training_role": "positive",
   "group": "california",
   "order": "Hymenoptera",
   "family": "Apidae",
@@ -1071,6 +1072,6 @@
   "note": "",
   "file": "california/Apidae_mean-2SD_6.3mm.stl",
   "stl_sha256": "33be140a263ec9be0fccd7fa12e19efa7a53be7f4573969e60a69289ca47711e",
-  "hash": "2ff643d7b0f61f436a2075860913bd8972f8ec76767e3f15996554d09751bad3"
+  "hash": "43981ed4fad6ccf2554966757ab281a734d2944ed22a91a67f38dda071587591"
  }
 }

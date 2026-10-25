@@ -1,6 +1,6 @@
 {
  "insect_hash": "aef16df31c1717c42d46886a7830d047632ce99d479da4092314f62eb9ea9ddc",
- "specimen_hash": "443ce4df6ef762708c7796458461452f2df2dcd12e1bb8c3ac8ba933edec8b6e",
+ "specimen_hash": "aac40e24953eca4e2bb2e525d56777a6eab48798fac36c267d1d901fd1db08fd",
  "nodes": [
   {
    "level": 0,
@@ -1064,6 +1064,7 @@
   "insect_hash": "aef16df31c1717c42d46886a7830d047632ce99d479da4092314f62eb9ea9ddc",
   "representation": "toy",
   "size_flag": "suspect: family mean runs large for sweat bees",
+  "training_role": "edge_negative:family_stats_suspect",
   "group": "california",
   "order": "Hymenoptera",
   "family": "Halictidae",
@@ -1071,6 +1072,6 @@
   "note": "",
   "file": "california/Halictidae_mean-1SD_6.4mm.stl",
   "stl_sha256": "5426e5bb865e1b5125ef189b9cb05ce0c99e706ee4ed8d3fb12646ee2b3ac638",
-  "hash": "443ce4df6ef762708c7796458461452f2df2dcd12e1bb8c3ac8ba933edec8b6e"
+  "hash": "aac40e24953eca4e2bb2e525d56777a6eab48798fac36c267d1d901fd1db08fd"
  }
 }

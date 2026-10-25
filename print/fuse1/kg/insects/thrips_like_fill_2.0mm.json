@@ -1,6 +1,6 @@
 {
  "insect_hash": "7b923f9260174389ebfb08e8f957b3a96d7647a363553f5b0311ba120416c614",
- "specimen_hash": "1ac53ca563906b2b26ae17d1fceca94e15f1068b88daabba02d4032d296642e9",
+ "specimen_hash": "8dd8658c654b177da46d77d84f86fe6403e9ac7f5cf83e66382cc662ae6a7940",
  "nodes": [
   {
    "level": 0,
@@ -362,6 +362,7 @@
   "insect_hash": "7b923f9260174389ebfb08e8f957b3a96d7647a363553f5b0311ba120416c614",
   "representation": "toy",
   "size_flag": "fill-in size, not measured",
+  "training_role": "edge_negative:below_database",
   "group": "fill_in_1-3mm",
   "order": "Thysanoptera",
   "family": "thrips-like",
@@ -369,6 +370,6 @@
   "note": "",
   "file": "fill_in_1-3mm/thrips_like_fill_2.0mm.stl",
   "stl_sha256": "835500b1ebdf6e9b655f13a09af8dd9789ee3e9dfe58b6de39e7f1b7927df9f4",
-  "hash": "1ac53ca563906b2b26ae17d1fceca94e15f1068b88daabba02d4032d296642e9"
+  "hash": "8dd8658c654b177da46d77d84f86fe6403e9ac7f5cf83e66382cc662ae6a7940"
  }
 }

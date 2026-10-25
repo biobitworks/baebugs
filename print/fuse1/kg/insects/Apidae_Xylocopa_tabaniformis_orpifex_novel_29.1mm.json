@@ -1,6 +1,6 @@
 {
  "insect_hash": "f7627a51d0059d6cb52c83f9def1d367fb3175fdc7b63ea1c14052c30130f703",
- "specimen_hash": "323c919fdd7130057379b868177f6e851f1d500db28837dec83b19d5835bf48c",
+ "specimen_hash": "95cfd7f5227eae16a090ee191b91b45df2e03ba613e64b429297cfbfb0e3038c",
  "nodes": [
   {
    "level": 0,
@@ -1354,6 +1354,7 @@
   "insect_hash": "f7627a51d0059d6cb52c83f9def1d367fb3175fdc7b63ea1c14052c30130f703",
   "representation": "toy",
   "size_flag": "suspect: 29.1 mm larger than typical for this carpenter bee",
+  "training_role": "edge_negative:size_suspect",
   "group": "novel_outside_ca",
   "order": "Hymenoptera",
   "family": "Apidae (Xylocopa tabaniformis orpifex)",
@@ -1361,6 +1362,6 @@
   "note": "z = +4.4 vs CA Apidae",
   "file": "novel_outside_ca/Apidae_Xylocopa_tabaniformis_orpifex_novel_29.1mm.stl",
   "stl_sha256": "57daf08c6dd430932fd1e46aa28a816291bf59fa043e00e25cd0df567e237ec6",
-  "hash": "323c919fdd7130057379b868177f6e851f1d500db28837dec83b19d5835bf48c"
+  "hash": "95cfd7f5227eae16a090ee191b91b45df2e03ba613e64b429297cfbfb0e3038c"
  }
 }

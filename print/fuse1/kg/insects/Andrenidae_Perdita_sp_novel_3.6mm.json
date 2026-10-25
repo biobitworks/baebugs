@@ -1,6 +1,6 @@
 {
  "insect_hash": "317a03565e8cad08ad4d0d32f9ec7cbe5bc529db362935ebd33d77213e2af8f7",
- "specimen_hash": "9d2b7802e597e0fe70e57a28754f4875f7960aa49eb237daa6c7aa4366a5a0ce",
+ "specimen_hash": "bd2c9f8f7b6020ce1793200a5cbf8fdfd7e074c74211ae337e246bc48f2f19d0",
  "nodes": [
   {
    "level": 0,
@@ -362,6 +362,7 @@
   "insect_hash": "317a03565e8cad08ad4d0d32f9ec7cbe5bc529db362935ebd33d77213e2af8f7",
   "representation": "toy",
   "size_flag": "database-derived, unverified",
+  "training_role": "positive",
   "group": "novel_outside_ca",
   "order": "Hymenoptera",
   "family": "Andrenidae (Perdita sp.)",
@@ -369,6 +370,6 @@
   "note": "z = -3.3 vs CA Andrenidae",
   "file": "novel_outside_ca/Andrenidae_Perdita_sp_novel_3.6mm.stl",
   "stl_sha256": "af72a3aa8b93882411830d1a994ca095000fcf73fcf6d5818b80431459cefe19",
-  "hash": "9d2b7802e597e0fe70e57a28754f4875f7960aa49eb237daa6c7aa4366a5a0ce"
+  "hash": "bd2c9f8f7b6020ce1793200a5cbf8fdfd7e074c74211ae337e246bc48f2f19d0"
  }
 }

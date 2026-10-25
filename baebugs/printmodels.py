@@ -100,12 +100,21 @@ SIZE_SUSPECT = {
 }
 
 
-def toy_fields(family, size_source):
+DB_MIN_MM = 2.8   # smallest ruler-measured specimen in the pulled database
+
+
+def toy_fields(family, size_source, length_mm):
+    """Toy labels + training role. Edge negatives look like insects but must NOT
+    be triaged as known database insects: suspect sizes (wrong size for the named
+    taxon) and anything below the database minimum."""
     if size_source.startswith("fill-in"):
         flag = "fill-in size, not measured"
     else:
         flag = "suspect: " + SIZE_SUSPECT[family] if family in SIZE_SUSPECT else "database-derived, unverified"
-    return {"representation": REPRESENTATION, "shape_fidelity": TOY_SHAPE, "size_flag": flag}
+    role = ("edge_negative:family_stats_suspect" if flag.startswith("suspect") and family in dict((f, 1) for _, f, *_ in CA_FAMILIES) else
+            "edge_negative:size_suspect" if flag.startswith("suspect") else
+            "edge_negative:below_database" if length_mm < DB_MIN_MM else "positive")
+    return {"representation": REPRESENTATION, "shape_fidelity": TOY_SHAPE, "size_flag": flag, "training_role": role}
 
 
 def _ellipsoid(center, rx, ry, rz, sub=3):
@@ -244,7 +253,7 @@ def generate(out_dir):
         mesh.export(path)
         rows.append({"group": group, "file": f"{group}/{name}", "order": order, "family": family, "level": label,
                      **info, "kit_tray": tray_for(info["body_width_mm"]), "size_source": source, "note": note,
-                     **toy_fields(family, source)})
+                     **toy_fields(family, source, L)})
         return mesh
 
     for order, fam, n, mu, sd, plan in CA_FAMILIES:

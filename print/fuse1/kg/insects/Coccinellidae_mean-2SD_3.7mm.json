@@ -1,6 +1,6 @@
 {
  "insect_hash": "ed9bfcff190b088c3e3536d63797ab229b9d07d934bc77eea59d1dc9ba37c356",
- "specimen_hash": "e7505341be54900c008c80850178a60db2f894998260ef6e7aa7837c53d5c642",
+ "specimen_hash": "6c0b2a7db857f1c2ec64b928175ac531afdefdbc5b77c45674282aa09c43532c",
  "nodes": [
   {
    "level": 0,
@@ -362,6 +362,7 @@
   "insect_hash": "ed9bfcff190b088c3e3536d63797ab229b9d07d934bc77eea59d1dc9ba37c356",
   "representation": "toy",
   "size_flag": "database-derived, unverified",
+  "training_role": "positive",
   "group": "california",
   "order": "Coleoptera",
   "family": "Coccinellidae",
@@ -369,6 +370,6 @@
   "note": "",
   "file": "california/Coccinellidae_mean-2SD_3.7mm.stl",
   "stl_sha256": "8ec9c4d7a1e1d7afe8d072be5783b9e178cb7bba3f5c734e57297ebca2110501",
-  "hash": "e7505341be54900c008c80850178a60db2f894998260ef6e7aa7837c53d5c642"
+  "hash": "6c0b2a7db857f1c2ec64b928175ac531afdefdbc5b77c45674282aa09c43532c"
  }
 }
