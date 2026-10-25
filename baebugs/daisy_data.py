@@ -75,7 +75,7 @@ REGISTRY = {
                                 "note": "raw DataONE soil survey; contains observer PII -> never staged"},
     "essig":                   {"path": f"{R}/essig", "kind": "json", "role": "context"},
 }
-PII_COLS = re.compile(r"observer|email|phone|recorded_?by|creator_?name|surveyor|contact", re.I)
+PII_COLS = re.compile(r"observer|email|phone|recorded_?by|creator|editor|owner|author|surveyor|contact|user_?name", re.I)
 EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 PHONE = re.compile(r"\(?\b\d{3}\)?[-. ]\d{3}[-. ]\d{4}\b")
 FREE_TEXT_DROP = ("survey_comments", "location_notes", "habitat_notes")
@@ -288,6 +288,7 @@ def lineage(results, ids):
 def verify(out_dir, names=None, ledger=None):
     out = Path(out_dir); out.mkdir(parents=True, exist_ok=True)
     results, ids = {}, {}
+    prev = json.loads((out / "datasets.json").read_text())["datasets"] if names and (out / "datasets.json").exists() else {}
     for name, spec in REGISTRY.items():
         if names and name not in names:
             continue
@@ -298,11 +299,12 @@ def verify(out_dir, names=None, ledger=None):
         rec, i = verify_one(name, spec, out)
         results[name], ids[name] = rec, i
         print(f"[verify] {name}: {rec['files']} files, root {str(rec['merkle_root'])[:12]}, fails {rec['fails']} ({rec['seconds']}s)", flush=True)
-    glob = lineage(results, ids)
+    glob = lineage(results, ids) if not names else json.loads((out / "datasets.json").read_text())["global_leakage"]
     for name, rec in results.items():
         rec["status"] = ("REJECTED" if rec["role"] == "negative" else
                          "QUARANTINED_PII" if "pii_present" in rec.get("fails", []) else
                          "FAILED" if rec.get("fails") else "VERIFIED")
+    results = {**prev, **results}                       # partial re-verify merges into the existing summary
     summary = {"schema": "baebugs.daisy.datasets.v1", "created": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                "datasets": results, "global_leakage": glob,
                "root": merkle_root(sorted(r["merkle_root"] for r in results.values() if r.get("merkle_root")))}
