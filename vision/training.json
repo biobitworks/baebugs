@@ -1,5 +1,5 @@
 {
-  "_note": "Single-type photos that train pile_types.py. packed = the dish floor is full, so every square on it is that type; otherwise dish_sizer's segmentation splits squares into object and background. Type names are provisional until the team confirms the 9 types. label_threshold: colour difference that counts as object when labelling (low for pale types, high for dark ones so reflections aren't learned). samples/webcam_set2_yellow_grain.webp is left out: the grain covers most of the floor but not all, so neither labelling mode works on it.",
+  "_note": "Single-type photos that train pile_types.py. packed = the dish floor is full, so every square on it is that type; otherwise dish_sizer's segmentation splits squares into object and background. Type names are provisional until the team confirms the 9 types. label_threshold: colour difference that counts as object when labelling (low for pale types, high for dark ones so reflections aren't learned). samples/webcam_set2_yellow_grain.webp is left out: the grain covers most of the floor but not all, so neither labelling mode works on it. The flat/curved pale pasta seen in early mixed photos is not part of the sample (only short tube macaroni), so it has no type.",
   "photos": [
     {
       "type": "dark seed",
@@ -67,6 +67,24 @@
     {
       "type": "black grain",
       "file": "samples/webcam_set2_black_grains.webp",
+      "packed": false,
+      "label_threshold": 20
+    },
+    {
+      "type": "black grain",
+      "file": "samples/webcam_set3_black_grains.webp",
+      "packed": false,
+      "label_threshold": 20
+    },
+    {
+      "type": "oat grain",
+      "file": "samples/webcam_set3_oat_grains.webp",
+      "packed": false,
+      "label_threshold": 10
+    },
+    {
+      "type": "red seed",
+      "file": "samples/webcam_set3_red_seeds.webp",
       "packed": false,
       "label_threshold": 20
     }
