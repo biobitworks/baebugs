@@ -9,8 +9,8 @@ For each model's outline of an object:
   L5 poly_05pct polygon simplified at 0.5%
   L6 contour   full outline
 Each node: coordinates in mm (rounded 0.01), area, length/width, and checks
-(contained in the level above within 1 px, area not larger than the level above,
-L2 length/width finite). node hash = H(level, geometry, checks, child hash):
+(boxes and hull contain the contour; hull inside both boxes; simplified polygons
+within their epsilon of the contour (Hausdorff) since Douglas-Peucker output is not nested). node hash = H(level, geometry, checks, child hash):
 the tree root is the object's geometry hash at full detail.
 
 Across models, each level is compared pairwise (IoU and length difference);
@@ -58,24 +58,42 @@ def level_geoms(contour):
 
 
 def tree(contour, ppm, model):
-    """Merkle tree from coarse to fine; returns nodes (L1..L6) and root (L1 hash covers all)."""
+    """Merkle tree from coarse to fine. Claims per level (exact geometry facts):
+      L1 aabb, L2 obb, L3 hull : contain the full contour (1 px)
+      L3 hull                  : inside L1 and inside L2 (1 px); area <= both
+      L4 / L5 simplified       : Hausdorff distance to the contour <= the simplification
+                                 epsilon (+1 px). Douglas-Peucker polygons are NOT nested
+                                 (they cut corners), so containment is the wrong claim there;
+                                 the tolerance is the claim's variance policy.
+      L6 contour               : valid polygon, area <= hull."""
     g = level_geoms(contour)
+    c = g["L6_contour"]
+    per = cv2.arcLength(c.reshape(-1, 1, 2), True)
+    eps = {"L4_poly_2pct": 0.02 * per, "L5_poly_05pct": 0.005 * per}
     polys = {k: _poly(v) if len(v) >= 3 else None for k, v in g.items()}
+    C = polys["L6_contour"]
     nodes, child = [], None
-    for i in range(len(LEVELS) - 1, -1, -1):              # build fine -> coarse so parents cover children
+    for i in range(len(LEVELS) - 1, -1, -1):              # fine -> coarse so parents cover children
         lv = LEVELS[i]
         P = polys[lv]
         (cx, cy), (rw, rh), _ = cv2.minAreaRect(g[lv].reshape(-1, 1, 2).astype(np.float32))
         geom = [[round(float(x) / ppm, 2), round(float(y) / ppm, 2)] for x, y in g[lv]]
         checks = {"valid_polygon": P is not None and P.area > 0}
-        if i > 0 and polys[LEVELS[i - 1]] is not None and P is not None:
-            parent = polys[LEVELS[i - 1]]
-            checks["inside_parent_1px"] = bool(parent.buffer(1.0).contains(P))
-            checks["area_not_above_parent"] = bool(P.area <= parent.area * 1.001 + 1.0)
+        if P is not None and C is not None:
+            if lv in ("L1_aabb", "L2_obb", "L3_hull"):
+                checks["contains_contour_1px"] = bool(P.buffer(1.0).contains(C))
+            if lv == "L3_hull":
+                for par in ("L1_aabb", "L2_obb"):
+                    checks[f"inside_{par}_1px"] = bool(polys[par].buffer(1.0).contains(P))
+                    checks[f"area_le_{par}"] = bool(P.area <= polys[par].area + 1.0)
+            if lv in eps:
+                checks["hausdorff_le_eps"] = bool(P.hausdorff_distance(C) <= eps[lv] + 1.0)
+            if lv == "L6_contour":
+                checks["area_le_hull"] = bool(P.area <= polys["L3_hull"].area + 1.0)
         body = {"model": model, "level": lv, "geometry_mm": geom,
                 "area_mm2": round(P.area / ppm ** 2, 3) if P is not None else None,
                 "length_mm": round(max(rw, rh) / ppm, 3), "width_mm": round(min(rw, rh) / ppm, 3),
-                "checks": checks, "child": child}
+                "policy_px": round(eps.get(lv, 1.0), 2), "checks": checks, "child": child}
         node = {**body, "hash": H(body)}
         nodes.insert(0, node); child = node["hash"]
     return nodes, polys
