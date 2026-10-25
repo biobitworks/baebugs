@@ -1877,6 +1877,16 @@
 {
 "claim": "OWN",
 "kind": "code",
+"leaf": "ed792a70b02fe4784a6dffde7a97783e419730dbe90c5406a747a01dbffddf6e",
+"licence": "MIT",
+"module": "python-package",
+"path": "baebugs/ladder.py",
+"sha256": "9cfa86004ba78cc14e023e0351861b46241c6bf8d7618bdda77c8270e3fb6d14",
+"status": "tested"
+},
+{
+"claim": "OWN",
+"kind": "code",
 "leaf": "bd7290769fdb8c76349ed3e6421db5dcb4fa50834d823599e45b8be4c49c1c31",
 "licence": "MIT",
 "module": "python-package",
@@ -2173,6 +2183,16 @@
 "path": "baebugs/taxon_crops.py",
 "sha256": "32ba70706d84b3fcaae09ea1e26689f5334b652783dc759ad94aba6d73519765",
 "status": "built"
+},
+{
+"claim": "OWN",
+"kind": "code",
+"leaf": "541d476ee12de1d13ef647b406f8fa8585177354aa3db59ce1e8fee2f290e885",
+"licence": "MIT",
+"module": "python-package",
+"path": "baebugs/tiers.py",
+"sha256": "c55045b861a0ff1c567c05332b19956dc8717d44a80f43b0341ec2ba07d0f445",
+"status": "tested"
 },
 {
 "claim": "OWN",
@@ -2632,6 +2652,36 @@
 "module": "daisy-results",
 "path": "daisy/results/DAISY-BB-002a/v2/results.json",
 "sha256": "9ca0af5f4b3dd80a6b994131ad3230dc2895397770ad05491b153b467d04932e",
+"status": "result"
+},
+{
+"claim": "OWN+TERMS",
+"kind": "result",
+"leaf": "16345238580008e78d29ff4629ff657376e1962f15a48cd312c8253c53652fc6",
+"licence": "MIT + gbif-media, ultralytics terms",
+"module": "daisy-results",
+"path": "daisy/results/DAISY-BB-004/v4/DECISION.md",
+"sha256": "e30513d7a1dd3851ba6c978f50834addcb49ea04d95cd32b3908d6ac8cb13f91",
+"status": "result"
+},
+{
+"claim": "OWN+TERMS",
+"kind": "result",
+"leaf": "458fbfa3d33bd776bb441772e3a5c5398bc46f9e23d95a4558d4f5a0709baa3a",
+"licence": "MIT + gbif-media, ultralytics terms",
+"module": "daisy-results",
+"path": "daisy/results/DAISY-BB-004/v4/events.jsonl",
+"sha256": "d284d47745be6f7cd50609424bfdc0835b3974369f25a5a52ff2b9c6fae4d474",
+"status": "result"
+},
+{
+"claim": "OWN+TERMS",
+"kind": "result",
+"leaf": "af13e04f41ef8dfa4e727641bac1d0fd5fe4e5325714d6412615c7971569e4e5",
+"licence": "MIT + gbif-media, ultralytics terms",
+"module": "daisy-results",
+"path": "daisy/results/DAISY-BB-004/v4/results.json",
+"sha256": "41beb0f25268b186b639e2069177ed9638f85a17442157eaf84202bd7f3019f8",
 "status": "result"
 },
 {
@@ -3417,11 +3467,11 @@
 {
 "claim": "OWN",
 "kind": "notebook",
-"leaf": "e93c06e3e407510355aef2967ef0e4360ddf1e9ab1da2f4c2fda4f75d30121e4",
+"leaf": "df3c75626e7d7543511eee6927eac40b39a94cf6ad740106b7f105788a75dff0",
 "licence": "MIT",
 "module": "notebooks",
 "path": "notebooks/aok.ipynb",
-"sha256": "6cca169d4650d34a432faf3f126642b3ffd48cf1833ae86b478f96fb3d2ea386",
+"sha256": "d3065b4473fc6775978c8503ed7c78555b4868adc4c6ddcfadf5b8bad2941b78",
 "status": "built"
 },
 {
@@ -3457,11 +3507,11 @@
 {
 "claim": "OWN",
 "kind": "notebook",
-"leaf": "bb8f4e774a65f5088470425cfa3f49a7be678ec9963bfa49990c431fe666a467",
+"leaf": "a60258ffb5cd212770b3d4ce568e29d9da76c917e7059f72f6ef0f8d6d339282",
 "licence": "MIT",
 "module": "notebooks",
 "path": "notebooks/compare_byo.ipynb",
-"sha256": "f2a4a0de7a2fa69021a79882fd0fcedb4e3530818daf8f62d140d510b7df00af",
+"sha256": "dbb6c6a70aa546ba12d6e945d531ee11789c83699c9a6f5261111c2807399dbc",
 "status": "built"
 },
 {
@@ -3547,11 +3597,11 @@
 {
 "claim": "OWN",
 "kind": "notebook",
-"leaf": "b10d31497c752880bbd94e02828f7503a1a147944867ce027555f9143963c1eb",
+"leaf": "fa4e88a65474acd1078034facc5a3fc9656a944626c0e3b1976c5f3fda3f36b0",
 "licence": "MIT",
 "module": "notebooks",
 "path": "notebooks/mvp_graph_pack.ipynb",
-"sha256": "06b4bc2aa37892845548486f2d8bdfc3e02ab4936767927147843dc3626e48ca",
+"sha256": "0bb945578b08f16b99c941582029d06893f2cf9bfc113a47c2765c64dd1c6879",
 "status": "built"
 },
 {
@@ -3587,11 +3637,11 @@
 {
 "claim": "OWN",
 "kind": "notebook",
-"leaf": "3312eabf763e2b66815e5a3240cee6f20a1966474e732de207cbddd99ed3b0f6",
+"leaf": "1abe56ec36b965a9e25b8282459e6bb4ef4a8ca1bd95f8379c732766fe421f30",
 "licence": "MIT",
 "module": "notebooks",
 "path": "notebooks/taxon_crops_004.ipynb",
-"sha256": "71b4835d3c379841986a22789197d7590dde4e65737725f86747e98a9c5ea05d",
+"sha256": "f0288e3c59600303baa169be67d52421c825dfeb68fd7db6923beab39e6d0d92",
 "status": "built"
 },
 {
@@ -3617,11 +3667,11 @@
 {
 "claim": "OWN",
 "kind": "notebook",
-"leaf": "5792078fee767320aee0de644bf0881040975764d4c6100a4f1d5f60348af40b",
+"leaf": "86f1a8dcf587ac30ecd67b641cd3a82aaabb94af8645eb7aa832c153851b5ab7",
 "licence": "MIT",
 "module": "notebooks",
 "path": "notebooks/watch_commit.ipynb",
-"sha256": "3271d6064d6503fad52c3ac91dfcc24021dbfa728fdbf6444d07b3d605046400",
+"sha256": "6bef6c667f74f629c5aaae2dd75522037116eaa89eed8cd1dcd32ba23ca94020",
 "status": "built"
 },
 {
@@ -8617,6 +8667,16 @@
 {
 "claim": "OWN",
 "kind": "test",
+"leaf": "814e214adcf055caaaa47484b7223861afc9c96a234e83f6537d2e4161fbb134",
+"licence": "MIT",
+"module": "tests",
+"path": "tests/test_ladder.py",
+"sha256": "adc6f860f478840f557aee6e00ca591d4251eccbf37a904c3892d38b360ca82b",
+"status": "tested"
+},
+{
+"claim": "OWN",
+"kind": "test",
 "leaf": "ede57dae080147b52839f4bbdf9a122067f0ac2d1806e1b21b85ce7c83f48f97",
 "licence": "MIT",
 "module": "tests",
@@ -8702,6 +8762,16 @@
 "module": "tests",
 "path": "tests/test_resolve.py",
 "sha256": "e90ad7fff952f813070ee2598339a5d6a79eb9be39669646e712eebf2149256f",
+"status": "tested"
+},
+{
+"claim": "OWN",
+"kind": "test",
+"leaf": "64bd1162f83abf5bca5d3170a6a3fd16b29a3e864c1a7ed8df1c00f85dfb6461",
+"licence": "MIT",
+"module": "tests",
+"path": "tests/test_tiers.py",
+"sha256": "0e005dfac577e9b198481c4f77a80b2a82766db999515c02c007aa68d8d29375",
 "status": "tested"
 },
 {
@@ -8823,14 +8893,14 @@
 "terms": []
 },
 "daisy-results": {
-"atoms": 8,
+"atoms": 11,
 "claims": {
-"OWN+TERMS": 8
+"OWN+TERMS": 11
 },
 "id": "module:daisy-results",
-"root": "72b5fef9fe0e5078506220a89e6831cecdd6ba49b6aa5c3a4f03629e54130bd9",
+"root": "b071c5cb0af378403f8126de58fec540ca8b55b9a21dc545dac8def5de3eae57",
 "status": {
-"result": 8
+"result": 11
 },
 "terms": [
 "ext:gbif-media",
@@ -8920,7 +8990,7 @@
 "OWN": 21
 },
 "id": "module:notebooks",
-"root": "80130cbaa3a04b2f436fa99eba421c1c5bdc9cd6013f8cb069b54e521ffb854d",
+"root": "8bc9010eca4489b765e6a8982bd1b5f68c6440bd868fe02b758d4680a3087901",
 "status": {
 "built": 21
 },
@@ -8941,16 +9011,16 @@
 ]
 },
 "python-package": {
-"atoms": 79,
+"atoms": 81,
 "claims": {
-"OWN": 73,
+"OWN": 75,
 "OWN+TERMS": 6
 },
 "id": "module:python-package",
-"root": "f78405327e8f3971918034e83f29fd03f112f32aea191d2a70b52c6ae93e1d84",
+"root": "513583401e3164a0573b705fa4afb95ca874538a2c5f8ecb453a1edeff5bc776",
 "status": {
 "built": 53,
-"tested": 26
+"tested": 28
 },
 "terms": [
 "ext:ultralytics"
@@ -8969,14 +9039,14 @@
 "terms": []
 },
 "tests": {
-"atoms": 34,
+"atoms": 36,
 "claims": {
-"OWN": 34
+"OWN": 36
 },
 "id": "module:tests",
-"root": "bf55c473af871f3efe8c8fe5036629e35cdd83e6d403a4c0ec303235452effdc",
+"root": "33bf673cdefaa9da250bff3c2bfc2d56a5e7b85b9aa09f662ad481b16f53233a",
 "status": {
-"tested": 34
+"tested": 36
 },
 "terms": []
 },
@@ -9614,11 +9684,21 @@
 "statuses": [
 "OBSERVED_EXPLORATORY"
 ]
+},
+{
+"custody": "INTACT",
+"leaf": "af13e04f41ef8dfa4e727641bac1d0fd5fe4e5325714d6412615c7971569e4e5",
+"path": "daisy/results/DAISY-BB-004/v4/results.json",
+"protocol": "DAISY-BB-004",
+"runs": 3,
+"statuses": [
+"OBSERVED_EXPLORATORY"
+]
 }
 ],
-"root": "e21d484b986c15e03dc17788b61bb691cca11995949c40c5f6b6a05bb1a6cd4c",
+"root": "24a8a0ff9d173a38ce0920919e593168f967421fd81533cfe4b285e9d5669859",
 "roots": {
-"aok": "d07757fac6ee3f3a8af408d210af5fa1e2e6ac313e012edce7ac93303eecd6ab",
+"aok": "d15b21ef510f6e787c86ef30e7d972670860d0117e3e86346852be658b621d58",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
 "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7",
 "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5",
@@ -13831,8 +13911,8 @@
 }
 ],
 "totals": {
-"OWN": 692,
-"OWN+TERMS": 42,
+"OWN": 696,
+"OWN+TERMS": 45,
 "THIRD": 20
 },
 "type": "baebugs-mvp"
