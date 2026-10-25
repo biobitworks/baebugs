@@ -4289,7 +4289,7 @@
   ]
  },
  "print-rack-96": {
-  "root": "c38ee2f089daebc515288902f23a4cb9475960a115b7398af8750e7910917867",
+  "root": "5b1f987e37e815d2133bbfde7cb570dc8dffb83429bda5ed6df6a030fa5f6384",
   "fragments": [
    {
     "name": "derivation",
@@ -4309,11 +4309,11 @@
      },
      {
       "side": "R",
-      "hash": "d6a822063067c83275581bb40ec1dcd4e491e82f37ee453ccf8d664e2776abac"
+      "hash": "d80dda26bbc4e3441d781a12d5baefe87492f614531713c004e1069889fcd1f5"
      },
      {
       "side": "R",
-      "hash": "8b7fddaec6d20b87bfa44afd1926963cfc8d6c392cd319048550122bcb62b892"
+      "hash": "009833b1c853d01c4e2117ab30c875ba98b150a5f8fa0d9ae7b3a71e208544ea"
      }
     ]
    },
@@ -4332,20 +4332,20 @@
      },
      {
       "side": "R",
-      "hash": "d6a822063067c83275581bb40ec1dcd4e491e82f37ee453ccf8d664e2776abac"
+      "hash": "d80dda26bbc4e3441d781a12d5baefe87492f614531713c004e1069889fcd1f5"
      },
      {
       "side": "R",
-      "hash": "8b7fddaec6d20b87bfa44afd1926963cfc8d6c392cd319048550122bcb62b892"
+      "hash": "009833b1c853d01c4e2117ab30c875ba98b150a5f8fa0d9ae7b3a71e208544ea"
      }
     ]
    },
    {
     "name": "license",
     "payload": {
-     "spdx": "CERN-OHL-W-2.0"
+     "spdx": "MIT"
     },
-    "leaf": "91ed9d75da53f38678bdd11d86c17e421ec4edc5afc20ad0c74b7a33713a7500",
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
     "proof": [
      {
       "side": "R",
@@ -4357,7 +4357,7 @@
      },
      {
       "side": "R",
-      "hash": "8b7fddaec6d20b87bfa44afd1926963cfc8d6c392cd319048550122bcb62b892"
+      "hash": "009833b1c853d01c4e2117ab30c875ba98b150a5f8fa0d9ae7b3a71e208544ea"
      }
     ]
    },
@@ -4373,7 +4373,7 @@
     "proof": [
      {
       "side": "L",
-      "hash": "91ed9d75da53f38678bdd11d86c17e421ec4edc5afc20ad0c74b7a33713a7500"
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
      },
      {
       "side": "L",
@@ -4381,7 +4381,7 @@
      },
      {
       "side": "R",
-      "hash": "8b7fddaec6d20b87bfa44afd1926963cfc8d6c392cd319048550122bcb62b892"
+      "hash": "009833b1c853d01c4e2117ab30c875ba98b150a5f8fa0d9ae7b3a71e208544ea"
      }
     ]
    },
@@ -4396,15 +4396,15 @@
     "proof": [
      {
       "side": "R",
-      "hash": "300b4c25fe0188fb2be0c8a28d6df47a871bd1bd7abd08f0f9e80b581ba7e7c9"
+      "hash": "5b9c7bc2be9184e48123b646f64448f4d7e3c165c8b30e9037cabae8472698ad"
      },
      {
       "side": "R",
-      "hash": "b085aa10e767c924caf95e5dbbd6fe2b1ac6a0bbc95cac35a2f3d5596066f9d4"
+      "hash": "2e11d7c9b5e886a7bf5f24ba5cd2dfbd0c12865a3783660ae6bff1e1c8447bdb"
      },
      {
       "side": "L",
-      "hash": "3f244a8da7ea632876d51d6ce25a999b5173ee5abcdc3feab8c84da543de1105"
+      "hash": "1375254fa94b6212995d560574fc113c269b067765e71742a6df6b69f71eafee"
      }
     ]
    },
@@ -4412,7 +4412,7 @@
     "name": "output.stl",
     "payload": {
      "file": "stl/print-rack-96.stl",
-     "sha256": "3dae5a801523dd907ec693cb1c24fd25fc5c88c96feb51c25c0799b8589a2837",
+     "sha256": "b1861b9e41d83412761f6aacbc99396c36b5661b21fb1eecaf9b1d763681a13a",
      "bbox_mm": [
       127.76,
       85.48,
@@ -4420,7 +4420,7 @@
      ],
      "watertight": true
     },
-    "leaf": "300b4c25fe0188fb2be0c8a28d6df47a871bd1bd7abd08f0f9e80b581ba7e7c9",
+    "leaf": "5b9c7bc2be9184e48123b646f64448f4d7e3c165c8b30e9037cabae8472698ad",
     "proof": [
      {
       "side": "L",
@@ -4428,11 +4428,11 @@
      },
      {
       "side": "R",
-      "hash": "b085aa10e767c924caf95e5dbbd6fe2b1ac6a0bbc95cac35a2f3d5596066f9d4"
+      "hash": "2e11d7c9b5e886a7bf5f24ba5cd2dfbd0c12865a3783660ae6bff1e1c8447bdb"
      },
      {
       "side": "L",
-      "hash": "3f244a8da7ea632876d51d6ce25a999b5173ee5abcdc3feab8c84da543de1105"
+      "hash": "1375254fa94b6212995d560574fc113c269b067765e71742a6df6b69f71eafee"
      }
     ]
    },
@@ -4453,15 +4453,15 @@
     "proof": [
      {
       "side": "R",
-      "hash": "6ad7f92084d056fb5f22e10e09a142e3d7d61b5a5402255a6893ac6972116fe6"
+      "hash": "cbda27f7afe8f9a0ec0c7c2fb3e080d3a62b11f1d96afbe418d0fcc8256f1f51"
      },
      {
       "side": "L",
-      "hash": "55b8f48f26d03dc1f8e1a31ea67d0eb3115a5d305911156f3b2dd163159ecea5"
+      "hash": "5f65d6e735bf606a7fb2ef2d2e040c7120de0df628475e30d2f7f8c9b0250ea9"
      },
      {
       "side": "L",
-      "hash": "3f244a8da7ea632876d51d6ce25a999b5173ee5abcdc3feab8c84da543de1105"
+      "hash": "1375254fa94b6212995d560574fc113c269b067765e71742a6df6b69f71eafee"
      }
     ]
    },
@@ -4469,10 +4469,10 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-rack-96.scad",
-     "sha256": "7ee84360b2b07013b8e9853b152d71ab4c39373f9fce58c006cc15e41c1d9c64",
+     "sha256": "fa7fad026f3b2efb5a3a5eb6cbfb715590385c12a4393a073d2c148e33d3d74b",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "6ad7f92084d056fb5f22e10e09a142e3d7d61b5a5402255a6893ac6972116fe6",
+    "leaf": "cbda27f7afe8f9a0ec0c7c2fb3e080d3a62b11f1d96afbe418d0fcc8256f1f51",
     "proof": [
      {
       "side": "L",
@@ -4480,18 +4480,18 @@
      },
      {
       "side": "L",
-      "hash": "55b8f48f26d03dc1f8e1a31ea67d0eb3115a5d305911156f3b2dd163159ecea5"
+      "hash": "5f65d6e735bf606a7fb2ef2d2e040c7120de0df628475e30d2f7f8c9b0250ea9"
      },
      {
       "side": "L",
-      "hash": "3f244a8da7ea632876d51d6ce25a999b5173ee5abcdc3feab8c84da543de1105"
+      "hash": "1375254fa94b6212995d560574fc113c269b067765e71742a6df6b69f71eafee"
      }
     ]
    }
   ]
  },
  "print-cryo-24": {
-  "root": "950ffc190d97ec982b27ce2cf57e5c1ec205817e834cae320942f70083db51ad",
+  "root": "a76d3ec59ee66cb6e64297e2d3f72839d3a6bbdf8fabeb5e13d1229006ee4929",
   "fragments": [
    {
     "name": "derivation",
@@ -4509,11 +4509,11 @@
      },
      {
       "side": "R",
-      "hash": "7a170ec2aedfe4f0a58791a4652da37dd5bf8a877ed8672ed61c024cc8d92458"
+      "hash": "54aee427c0e4aece33f743ade8725de67e87667b54837b90d420b004081101b3"
      },
      {
       "side": "R",
-      "hash": "8b9dd22c62cb3a54f5e221645a1c85c36af18b833cb1e78b21b2273ceb2d6b86"
+      "hash": "4c190f01d75ec7ec67c0e32d6cda14fb822ede5b42fe4fcda7c972b1f765bdd2"
      }
     ]
    },
@@ -4532,20 +4532,20 @@
      },
      {
       "side": "R",
-      "hash": "7a170ec2aedfe4f0a58791a4652da37dd5bf8a877ed8672ed61c024cc8d92458"
+      "hash": "54aee427c0e4aece33f743ade8725de67e87667b54837b90d420b004081101b3"
      },
      {
       "side": "R",
-      "hash": "8b9dd22c62cb3a54f5e221645a1c85c36af18b833cb1e78b21b2273ceb2d6b86"
+      "hash": "4c190f01d75ec7ec67c0e32d6cda14fb822ede5b42fe4fcda7c972b1f765bdd2"
      }
     ]
    },
    {
     "name": "license",
     "payload": {
-     "spdx": "CERN-OHL-W-2.0"
+     "spdx": "MIT"
     },
-    "leaf": "91ed9d75da53f38678bdd11d86c17e421ec4edc5afc20ad0c74b7a33713a7500",
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
     "proof": [
      {
       "side": "R",
@@ -4557,7 +4557,7 @@
      },
      {
       "side": "R",
-      "hash": "8b9dd22c62cb3a54f5e221645a1c85c36af18b833cb1e78b21b2273ceb2d6b86"
+      "hash": "4c190f01d75ec7ec67c0e32d6cda14fb822ede5b42fe4fcda7c972b1f765bdd2"
      }
     ]
    },
@@ -4573,7 +4573,7 @@
     "proof": [
      {
       "side": "L",
-      "hash": "91ed9d75da53f38678bdd11d86c17e421ec4edc5afc20ad0c74b7a33713a7500"
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
      },
      {
       "side": "L",
@@ -4581,7 +4581,7 @@
      },
      {
       "side": "R",
-      "hash": "8b9dd22c62cb3a54f5e221645a1c85c36af18b833cb1e78b21b2273ceb2d6b86"
+      "hash": "4c190f01d75ec7ec67c0e32d6cda14fb822ede5b42fe4fcda7c972b1f765bdd2"
      }
     ]
    },
@@ -4596,15 +4596,15 @@
     "proof": [
      {
       "side": "R",
-      "hash": "258a86b943a6796b402b34685558d52a5b761c0de117cb5c8b48ea0c8dc06a4d"
+      "hash": "6d6ad99becdee5b1f9182b87f6ad6ac8c6d72ab9b0c31c5e0a131f7b8d49cbeb"
      },
      {
       "side": "R",
-      "hash": "de8ee931843237814bf850fb3a14462899977d668c8032d2b8dd2a01f31669e2"
+      "hash": "5f45dde203fb697b634e8e1ac09b197cbaf5df58818d31d9b25b9285ad179214"
      },
      {
       "side": "L",
-      "hash": "7c72732b30fa6a72aab58200d7bc04eeb8483a953560ec404ac0e16cc4a2a3b8"
+      "hash": "7a8217f69f9bf97a568bd9488bcdab7b1c64e9ef9012ed4e4ee2800be125dc7f"
      }
     ]
    },
@@ -4612,7 +4612,7 @@
     "name": "output.stl",
     "payload": {
      "file": "stl/print-cryo-24.stl",
-     "sha256": "ddaa772dfee7497df741bc7fff877b9d10b802c78ef6445d99eb92f5c5282746",
+     "sha256": "516a4154a6ce4be47219516496871e0fef78e1a289b7b780669efdc309749968",
      "bbox_mm": [
       127.76,
       85.48,
@@ -4620,7 +4620,7 @@
      ],
      "watertight": true
     },
-    "leaf": "258a86b943a6796b402b34685558d52a5b761c0de117cb5c8b48ea0c8dc06a4d",
+    "leaf": "6d6ad99becdee5b1f9182b87f6ad6ac8c6d72ab9b0c31c5e0a131f7b8d49cbeb",
     "proof": [
      {
       "side": "L",
@@ -4628,11 +4628,11 @@
      },
      {
       "side": "R",
-      "hash": "de8ee931843237814bf850fb3a14462899977d668c8032d2b8dd2a01f31669e2"
+      "hash": "5f45dde203fb697b634e8e1ac09b197cbaf5df58818d31d9b25b9285ad179214"
      },
      {
       "side": "L",
-      "hash": "7c72732b30fa6a72aab58200d7bc04eeb8483a953560ec404ac0e16cc4a2a3b8"
+      "hash": "7a8217f69f9bf97a568bd9488bcdab7b1c64e9ef9012ed4e4ee2800be125dc7f"
      }
     ]
    },
@@ -4653,15 +4653,15 @@
     "proof": [
      {
       "side": "R",
-      "hash": "9abe0d9779a44746701c8399371aa36e7a552ff116e4d19f44671f6eb66b9184"
+      "hash": "6bcb88a7c3d05f50f58db02463c65274155af71963d249a17e8cc32d1ebd55f4"
      },
      {
       "side": "L",
-      "hash": "4dc20884c4b0bf15f27f2301400d7b6a65782d41d14e7d305051bcf96de40455"
+      "hash": "bfa639836e474b2a9b0872d508fdfaf7cc91f2a76f7947d13d6762392acca262"
      },
      {
       "side": "L",
-      "hash": "7c72732b30fa6a72aab58200d7bc04eeb8483a953560ec404ac0e16cc4a2a3b8"
+      "hash": "7a8217f69f9bf97a568bd9488bcdab7b1c64e9ef9012ed4e4ee2800be125dc7f"
      }
     ]
    },
@@ -4669,10 +4669,10 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-cryo-24.scad",
-     "sha256": "c99bb4428cb472a641412089f39e1b6cdfbcb8cb170e5297ca27222e362c9cb7",
+     "sha256": "c5a009a4881c9a640ea4f1995c66be6657e889b1ba49fdef591a400c7e5d565d",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "9abe0d9779a44746701c8399371aa36e7a552ff116e4d19f44671f6eb66b9184",
+    "leaf": "6bcb88a7c3d05f50f58db02463c65274155af71963d249a17e8cc32d1ebd55f4",
     "proof": [
      {
       "side": "L",
@@ -4680,18 +4680,18 @@
      },
      {
       "side": "L",
-      "hash": "4dc20884c4b0bf15f27f2301400d7b6a65782d41d14e7d305051bcf96de40455"
+      "hash": "bfa639836e474b2a9b0872d508fdfaf7cc91f2a76f7947d13d6762392acca262"
      },
      {
       "side": "L",
-      "hash": "7c72732b30fa6a72aab58200d7bc04eeb8483a953560ec404ac0e16cc4a2a3b8"
+      "hash": "7a8217f69f9bf97a568bd9488bcdab7b1c64e9ef9012ed4e4ee2800be125dc7f"
      }
     ]
    }
   ]
  },
  "print-conical-15": {
-  "root": "1d82cd3b2eb6f22b8834e4d3c2abd30e212cf0c79fe050130daf9c3566b0bf92",
+  "root": "dc7a2bd4bc503c393010ae840691bc6a85cc0646ba33f3e89c01c62e908e86a4",
   "fragments": [
    {
     "name": "derivation",
@@ -4708,11 +4708,11 @@
      },
      {
       "side": "R",
-      "hash": "1b5c88dd0b3372d6a5363bb215838cf79e8b72dfb718f02b30bf74468271ba06"
+      "hash": "25d6199febad58d39b443c87cdc4361b9c2fa0056d071e8e0512c2553bfd06f1"
      },
      {
       "side": "R",
-      "hash": "29e3bcfeac346dd62e70000e0f661ef861889b1ab151e6f33f14bf5bff62f20d"
+      "hash": "648f6970500a53735ba3a5f2c739208d221f6722049db55d84ab173fbb250c60"
      }
     ]
    },
@@ -4731,20 +4731,20 @@
      },
      {
       "side": "R",
-      "hash": "1b5c88dd0b3372d6a5363bb215838cf79e8b72dfb718f02b30bf74468271ba06"
+      "hash": "25d6199febad58d39b443c87cdc4361b9c2fa0056d071e8e0512c2553bfd06f1"
      },
      {
       "side": "R",
-      "hash": "29e3bcfeac346dd62e70000e0f661ef861889b1ab151e6f33f14bf5bff62f20d"
+      "hash": "648f6970500a53735ba3a5f2c739208d221f6722049db55d84ab173fbb250c60"
      }
     ]
    },
    {
     "name": "license",
     "payload": {
-     "spdx": "CERN-OHL-W-2.0"
+     "spdx": "MIT"
     },
-    "leaf": "91ed9d75da53f38678bdd11d86c17e421ec4edc5afc20ad0c74b7a33713a7500",
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
     "proof": [
      {
       "side": "R",
@@ -4756,7 +4756,7 @@
      },
      {
       "side": "R",
-      "hash": "29e3bcfeac346dd62e70000e0f661ef861889b1ab151e6f33f14bf5bff62f20d"
+      "hash": "648f6970500a53735ba3a5f2c739208d221f6722049db55d84ab173fbb250c60"
      }
     ]
    },
@@ -4772,7 +4772,7 @@
     "proof": [
      {
       "side": "L",
-      "hash": "91ed9d75da53f38678bdd11d86c17e421ec4edc5afc20ad0c74b7a33713a7500"
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
      },
      {
       "side": "L",
@@ -4780,7 +4780,7 @@
      },
      {
       "side": "R",
-      "hash": "29e3bcfeac346dd62e70000e0f661ef861889b1ab151e6f33f14bf5bff62f20d"
+      "hash": "648f6970500a53735ba3a5f2c739208d221f6722049db55d84ab173fbb250c60"
      }
     ]
    },
@@ -4795,15 +4795,15 @@
     "proof": [
      {
       "side": "R",
-      "hash": "b3831a9ad46d08425960a8978320b09495d75e17042b54557e0c8963b97951df"
+      "hash": "7f46011a99f2feb955696bfc9da4c1c01bf097c7e97f41881d457c48533e0c9a"
      },
      {
       "side": "R",
-      "hash": "4d676dc58247be725a558149b944633fd664b393b1e937960c495cacc1a0513e"
+      "hash": "1cdc51e20bb30399c886a55ca8617b105eb66ad96c53dddfc0d86b08f37f94ce"
      },
      {
       "side": "L",
-      "hash": "511c601467dcbd4b896c9e3250ad08d0d9d5398c031c701c1014d401dfbb6f25"
+      "hash": "d8e4c933176138f92de5b4f6f55b6172e4b40b58b8e52f659752672752a2cdd0"
      }
     ]
    },
@@ -4811,7 +4811,7 @@
     "name": "output.stl",
     "payload": {
      "file": "stl/print-conical-15.stl",
-     "sha256": "08a2b8c1b324f21f33214219d8557f930a15e9c88b2b679da167f4054f617c64",
+     "sha256": "cfbed30d31be7e9ac67092cc2a7ce9949dc081e601f8992a7e23ea4d5c026352",
      "bbox_mm": [
       127.76,
       85.48,
@@ -4819,7 +4819,7 @@
      ],
      "watertight": true
     },
-    "leaf": "b3831a9ad46d08425960a8978320b09495d75e17042b54557e0c8963b97951df",
+    "leaf": "7f46011a99f2feb955696bfc9da4c1c01bf097c7e97f41881d457c48533e0c9a",
     "proof": [
      {
       "side": "L",
@@ -4827,11 +4827,11 @@
      },
      {
       "side": "R",
-      "hash": "4d676dc58247be725a558149b944633fd664b393b1e937960c495cacc1a0513e"
+      "hash": "1cdc51e20bb30399c886a55ca8617b105eb66ad96c53dddfc0d86b08f37f94ce"
      },
      {
       "side": "L",
-      "hash": "511c601467dcbd4b896c9e3250ad08d0d9d5398c031c701c1014d401dfbb6f25"
+      "hash": "d8e4c933176138f92de5b4f6f55b6172e4b40b58b8e52f659752672752a2cdd0"
      }
     ]
    },
@@ -4852,15 +4852,15 @@
     "proof": [
      {
       "side": "R",
-      "hash": "8636ca55e84373f7f360e57aa2121c70d40eff2adf5e33fe2ac8ccbb54204c8b"
+      "hash": "e30a82ec1b487ace10e853634acdbf01bb0f6e6aa9e452b9c4b572c5b0e2ed2e"
      },
      {
       "side": "L",
-      "hash": "796b63183c55fdd3c5ca94ad908427d3d83059c53eb2ffb58bb85802a96a4f52"
+      "hash": "d41bfeb891953dac011a8d8b0f6debe024deb9610b38e288f0557eab71469700"
      },
      {
       "side": "L",
-      "hash": "511c601467dcbd4b896c9e3250ad08d0d9d5398c031c701c1014d401dfbb6f25"
+      "hash": "d8e4c933176138f92de5b4f6f55b6172e4b40b58b8e52f659752672752a2cdd0"
      }
     ]
    },
@@ -4868,10 +4868,10 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-conical-15.scad",
-     "sha256": "058c2b93678678a3004fcf8fc5867ac350811c7eea63b46317261e9545be0717",
+     "sha256": "4cbaa53338d2a0f04ffc1128b885e923994fcb63263425322ef352b4be6025d6",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "8636ca55e84373f7f360e57aa2121c70d40eff2adf5e33fe2ac8ccbb54204c8b",
+    "leaf": "e30a82ec1b487ace10e853634acdbf01bb0f6e6aa9e452b9c4b572c5b0e2ed2e",
     "proof": [
      {
       "side": "L",
@@ -4879,18 +4879,18 @@
      },
      {
       "side": "L",
-      "hash": "796b63183c55fdd3c5ca94ad908427d3d83059c53eb2ffb58bb85802a96a4f52"
+      "hash": "d41bfeb891953dac011a8d8b0f6debe024deb9610b38e288f0557eab71469700"
      },
      {
       "side": "L",
-      "hash": "511c601467dcbd4b896c9e3250ad08d0d9d5398c031c701c1014d401dfbb6f25"
+      "hash": "d8e4c933176138f92de5b4f6f55b6172e4b40b58b8e52f659752672752a2cdd0"
      }
     ]
    }
   ]
  },
  "print-conical-50": {
-  "root": "8a311c22c2d7aba350146297f5ab36badb057ccd2f7ad6733e8e483a1566e945",
+  "root": "570734f1e6244089069f93209ac703bd6a535cb3a2e0093f3da39a20421646eb",
   "fragments": [
    {
     "name": "derivation",
@@ -4908,11 +4908,11 @@
      },
      {
       "side": "R",
-      "hash": "2dd2a36168cf1cfef3e804c410c62bd3f3bfebde69c5b676c1437d415649c06e"
+      "hash": "25b426dac8741aa4716ff655cf71201da8e3c0a462da354b53568b2e3e3c5a2a"
      },
      {
       "side": "R",
-      "hash": "d4054e658f5ebaa81a6d88e21f04705679ee1d2639f8c1a0f3a3129ca36e1b9f"
+      "hash": "6e63a495a622d23b671060aabbc9d86759cdb34ce4c52a0bdc3ac496bd360f01"
      }
     ]
    },
@@ -4931,20 +4931,20 @@
      },
      {
       "side": "R",
-      "hash": "2dd2a36168cf1cfef3e804c410c62bd3f3bfebde69c5b676c1437d415649c06e"
+      "hash": "25b426dac8741aa4716ff655cf71201da8e3c0a462da354b53568b2e3e3c5a2a"
      },
      {
       "side": "R",
-      "hash": "d4054e658f5ebaa81a6d88e21f04705679ee1d2639f8c1a0f3a3129ca36e1b9f"
+      "hash": "6e63a495a622d23b671060aabbc9d86759cdb34ce4c52a0bdc3ac496bd360f01"
      }
     ]
    },
    {
     "name": "license",
     "payload": {
-     "spdx": "CERN-OHL-W-2.0"
+     "spdx": "MIT"
     },
-    "leaf": "91ed9d75da53f38678bdd11d86c17e421ec4edc5afc20ad0c74b7a33713a7500",
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
     "proof": [
      {
       "side": "R",
@@ -4956,7 +4956,7 @@
      },
      {
       "side": "R",
-      "hash": "d4054e658f5ebaa81a6d88e21f04705679ee1d2639f8c1a0f3a3129ca36e1b9f"
+      "hash": "6e63a495a622d23b671060aabbc9d86759cdb34ce4c52a0bdc3ac496bd360f01"
      }
     ]
    },
@@ -4972,7 +4972,7 @@
     "proof": [
      {
       "side": "L",
-      "hash": "91ed9d75da53f38678bdd11d86c17e421ec4edc5afc20ad0c74b7a33713a7500"
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
      },
      {
       "side": "L",
@@ -4980,7 +4980,7 @@
      },
      {
       "side": "R",
-      "hash": "d4054e658f5ebaa81a6d88e21f04705679ee1d2639f8c1a0f3a3129ca36e1b9f"
+      "hash": "6e63a495a622d23b671060aabbc9d86759cdb34ce4c52a0bdc3ac496bd360f01"
      }
     ]
    },
@@ -4995,15 +4995,15 @@
     "proof": [
      {
       "side": "R",
-      "hash": "39697d2d2f4d266f808c51a8ce4d8080ec8a90191d1d05cf74b3be9f5bdaccac"
+      "hash": "4afb8559da574b63cfa3e7dca40e5220b86b0df09daf4043242db9e6a71134c4"
      },
      {
       "side": "R",
-      "hash": "4b4fa878e00973539cf87448b35c18ce2560cb40e0dc60f3270401a2122da943"
+      "hash": "6929c9880e847220ed1400cb81a6591050652e5b5b438e3d345c748c7fbe7694"
      },
      {
       "side": "L",
-      "hash": "49f761bea9bc533de45a831be8ba246aa79e9a13c23cbc6e3f4e71ee9f354a4d"
+      "hash": "d1afebc77bc9da04073d67f29c742dd0b072f0a93c5e86df3840a44a9e6f6ad8"
      }
     ]
    },
@@ -5011,7 +5011,7 @@
     "name": "output.stl",
     "payload": {
      "file": "stl/print-conical-50.stl",
-     "sha256": "1ff438b6ade3e1632eb572ceb9389096069bcae8ddadea6131eae5cafd5f5eab",
+     "sha256": "e9e09bc1385705d75c8ba5bbb627f8ab27dcbdb9d9fcf8c13c1cd171ce13f944",
      "bbox_mm": [
       127.76,
       85.48,
@@ -5019,7 +5019,7 @@
      ],
      "watertight": true
     },
-    "leaf": "39697d2d2f4d266f808c51a8ce4d8080ec8a90191d1d05cf74b3be9f5bdaccac",
+    "leaf": "4afb8559da574b63cfa3e7dca40e5220b86b0df09daf4043242db9e6a71134c4",
     "proof": [
      {
       "side": "L",
@@ -5027,11 +5027,11 @@
      },
      {
       "side": "R",
-      "hash": "4b4fa878e00973539cf87448b35c18ce2560cb40e0dc60f3270401a2122da943"
+      "hash": "6929c9880e847220ed1400cb81a6591050652e5b5b438e3d345c748c7fbe7694"
      },
      {
       "side": "L",
-      "hash": "49f761bea9bc533de45a831be8ba246aa79e9a13c23cbc6e3f4e71ee9f354a4d"
+      "hash": "d1afebc77bc9da04073d67f29c742dd0b072f0a93c5e86df3840a44a9e6f6ad8"
      }
     ]
    },
@@ -5052,15 +5052,15 @@
     "proof": [
      {
       "side": "R",
-      "hash": "93669d9410ae3cf436baeaad1381b461ccbe4e188ac0c549b42a32a8bf4fcb9a"
+      "hash": "4ccbce382aa258e1b4c46197b6c1f5676887cbc070a50b8e0678514a30961e6a"
      },
      {
       "side": "L",
-      "hash": "2da466a2e1802e6d89409c2d1ec3b88f6be1b2afee2b459476c1d7d30ec544cd"
+      "hash": "dc646a264db180674cffc368fb0346302ababff0201563b778deabfa2e2bfa0f"
      },
      {
       "side": "L",
-      "hash": "49f761bea9bc533de45a831be8ba246aa79e9a13c23cbc6e3f4e71ee9f354a4d"
+      "hash": "d1afebc77bc9da04073d67f29c742dd0b072f0a93c5e86df3840a44a9e6f6ad8"
      }
     ]
    },
@@ -5068,10 +5068,10 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-conical-50.scad",
-     "sha256": "5851bf892bc7b33172ea84cb9ed8bc6c60d2188815faf7bbbc5cc85a5e88e26a",
+     "sha256": "ea0f7e0638fe38b64ece178c3b8762a80cf92f9186ec85d26b7d21ce1adc6afb",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "93669d9410ae3cf436baeaad1381b461ccbe4e188ac0c549b42a32a8bf4fcb9a",
+    "leaf": "4ccbce382aa258e1b4c46197b6c1f5676887cbc070a50b8e0678514a30961e6a",
     "proof": [
      {
       "side": "L",
@@ -5079,18 +5079,18 @@
      },
      {
       "side": "L",
-      "hash": "2da466a2e1802e6d89409c2d1ec3b88f6be1b2afee2b459476c1d7d30ec544cd"
+      "hash": "dc646a264db180674cffc368fb0346302ababff0201563b778deabfa2e2bfa0f"
      },
      {
       "side": "L",
-      "hash": "49f761bea9bc533de45a831be8ba246aa79e9a13c23cbc6e3f4e71ee9f354a4d"
+      "hash": "d1afebc77bc9da04073d67f29c742dd0b072f0a93c5e86df3840a44a9e6f6ad8"
      }
     ]
    }
   ]
  },
  "print-cryo-100": {
-  "root": "d72e0d3ddf33b9d2f187ebdfef98aaf952b19000d20e517f9e5d0b962775b2dc",
+  "root": "2b87a368d3d6ed192ad05857c265d917cd7a6ffdb3be686047c065ff046d3a24",
   "fragments": [
    {
     "name": "derivation",
@@ -5107,11 +5107,11 @@
      },
      {
       "side": "R",
-      "hash": "c7310e780f8d0a0a1ec97cc39c3e820a1d73a12f79ecfd418b17adb6100b1913"
+      "hash": "93554f43128ad8f01b5b35e8abd45bbde29140c7d39cfe41faf9af2e47c6b89e"
      },
      {
       "side": "R",
-      "hash": "a9a18ac3ac895734c8acabe7424bc42806c9e134a1808be40d4c243bd7afaffb"
+      "hash": "e45c3279ac2d0059acb4401e511396ffb92aafcdbe075065c9d542cbd3f070d2"
      }
     ]
    },
@@ -5130,20 +5130,20 @@
      },
      {
       "side": "R",
-      "hash": "c7310e780f8d0a0a1ec97cc39c3e820a1d73a12f79ecfd418b17adb6100b1913"
+      "hash": "93554f43128ad8f01b5b35e8abd45bbde29140c7d39cfe41faf9af2e47c6b89e"
      },
      {
       "side": "R",
-      "hash": "a9a18ac3ac895734c8acabe7424bc42806c9e134a1808be40d4c243bd7afaffb"
+      "hash": "e45c3279ac2d0059acb4401e511396ffb92aafcdbe075065c9d542cbd3f070d2"
      }
     ]
    },
    {
     "name": "license",
     "payload": {
-     "spdx": "CERN-OHL-W-2.0"
+     "spdx": "MIT"
     },
-    "leaf": "91ed9d75da53f38678bdd11d86c17e421ec4edc5afc20ad0c74b7a33713a7500",
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
     "proof": [
      {
       "side": "R",
@@ -5155,7 +5155,7 @@
      },
      {
       "side": "R",
-      "hash": "a9a18ac3ac895734c8acabe7424bc42806c9e134a1808be40d4c243bd7afaffb"
+      "hash": "e45c3279ac2d0059acb4401e511396ffb92aafcdbe075065c9d542cbd3f070d2"
      }
     ]
    },
@@ -5171,7 +5171,7 @@
     "proof": [
      {
       "side": "L",
-      "hash": "91ed9d75da53f38678bdd11d86c17e421ec4edc5afc20ad0c74b7a33713a7500"
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
      },
      {
       "side": "L",
@@ -5179,7 +5179,7 @@
      },
      {
       "side": "R",
-      "hash": "a9a18ac3ac895734c8acabe7424bc42806c9e134a1808be40d4c243bd7afaffb"
+      "hash": "e45c3279ac2d0059acb4401e511396ffb92aafcdbe075065c9d542cbd3f070d2"
      }
     ]
    },
@@ -5187,7 +5187,7 @@
     "name": "output.stl",
     "payload": {
      "file": "stl/print-cryo-100.stl",
-     "sha256": "f1e761a4ec75342d16b30abe2b0824c9065c1361ee0fcc824eebb633b7e3a0ea",
+     "sha256": "913d4df36c3fdae1c9cf119b03173c44a2752be253006fbedc42accb9ffaba68",
      "bbox_mm": [
       133.0,
       133.0,
@@ -5195,7 +5195,7 @@
      ],
      "watertight": true
     },
-    "leaf": "8d8b32fbf831d2b7c1bcd89de4b521dd756748aa82fbef9de6b1520a573c1fd4",
+    "leaf": "ff3c11c38ee3845c30ed7de1f00ca38b1a07173bf4d38e7fbbf63d056749e1f4",
     "proof": [
      {
       "side": "R",
@@ -5203,11 +5203,11 @@
      },
      {
       "side": "R",
-      "hash": "2fa95f35c062cef49e2688c1ad226f430d659960347b82e38937037f4ea4dffe"
+      "hash": "b14cc352c370f72130c5bd9db6709b8a159bc74619f5e4aee422269ac6e34956"
      },
      {
       "side": "L",
-      "hash": "8eb387a2a225c78b09f25e64ebab7e5e329d10e8e855bd59adb65701cf72365a"
+      "hash": "5785daf57a96dfefa587a73577f2e20b9b84d31aba6afac019df197a151fb7c5"
      }
     ]
    },
@@ -5228,15 +5228,15 @@
     "proof": [
      {
       "side": "L",
-      "hash": "8d8b32fbf831d2b7c1bcd89de4b521dd756748aa82fbef9de6b1520a573c1fd4"
+      "hash": "ff3c11c38ee3845c30ed7de1f00ca38b1a07173bf4d38e7fbbf63d056749e1f4"
      },
      {
       "side": "R",
-      "hash": "2fa95f35c062cef49e2688c1ad226f430d659960347b82e38937037f4ea4dffe"
+      "hash": "b14cc352c370f72130c5bd9db6709b8a159bc74619f5e4aee422269ac6e34956"
      },
      {
       "side": "L",
-      "hash": "8eb387a2a225c78b09f25e64ebab7e5e329d10e8e855bd59adb65701cf72365a"
+      "hash": "5785daf57a96dfefa587a73577f2e20b9b84d31aba6afac019df197a151fb7c5"
      }
     ]
    },
@@ -5244,25 +5244,25 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-cryo-100.scad",
-     "sha256": "0298752bd63b467163eee9b7673164dd138b9960c43c2aad303d6aa22a120805",
+     "sha256": "bc06e837c5a21673d7dcf4abfa971525295834dee55b8c0d82bd78c7dd9339d6",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "2fa95f35c062cef49e2688c1ad226f430d659960347b82e38937037f4ea4dffe",
+    "leaf": "b14cc352c370f72130c5bd9db6709b8a159bc74619f5e4aee422269ac6e34956",
     "proof": [
      {
       "side": "L",
-      "hash": "607fad85e8caa98c30658ecee0ef03784b62b45c63b9fc7f04f1e5b5dd952439"
+      "hash": "aa240017c9a356b6735750e75366c979ed7dc405d0f32632c02f3ed2aa4addff"
      },
      {
       "side": "L",
-      "hash": "8eb387a2a225c78b09f25e64ebab7e5e329d10e8e855bd59adb65701cf72365a"
+      "hash": "5785daf57a96dfefa587a73577f2e20b9b84d31aba6afac019df197a151fb7c5"
      }
     ]
    }
   ]
  },
  "print-frame-sbs": {
-  "root": "2c626238b7ebe01c2083955b6febb1fc1e163b28de6061c7981d9587cef7f380",
+  "root": "afd97cb3a3f76c1d98a36dee31ffa856bfbd3ec25af4e0c908989905623aae95",
   "fragments": [
    {
     "name": "derivation",
@@ -5279,11 +5279,11 @@
      },
      {
       "side": "R",
-      "hash": "32a914000baa97d75303edd0687f78d05434223d37a0f486677785192478937a"
+      "hash": "b9ee91f5cf005260738a232ab722f4fd3234d31024146ee47f3fe2e8a3983053"
      },
      {
       "side": "R",
-      "hash": "2edbe8de07fc49433e0368950652221367970288b0f464b9f97106ba04785146"
+      "hash": "3d325962c59eb08376cf282612b61e645b2aa49b2bc1d244d84d8aa1a041ceff"
      }
     ]
    },
@@ -5302,20 +5302,20 @@
      },
      {
       "side": "R",
-      "hash": "32a914000baa97d75303edd0687f78d05434223d37a0f486677785192478937a"
+      "hash": "b9ee91f5cf005260738a232ab722f4fd3234d31024146ee47f3fe2e8a3983053"
      },
      {
       "side": "R",
-      "hash": "2edbe8de07fc49433e0368950652221367970288b0f464b9f97106ba04785146"
+      "hash": "3d325962c59eb08376cf282612b61e645b2aa49b2bc1d244d84d8aa1a041ceff"
      }
     ]
    },
    {
     "name": "license",
     "payload": {
-     "spdx": "CERN-OHL-S-2.0"
+     "spdx": "MIT"
     },
-    "leaf": "70bc254f6b4ec80cbde24651a0171106c62cc3a92617bff5f8e3233f7f9784a2",
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
     "proof": [
      {
       "side": "R",
@@ -5327,7 +5327,7 @@
      },
      {
       "side": "R",
-      "hash": "2edbe8de07fc49433e0368950652221367970288b0f464b9f97106ba04785146"
+      "hash": "3d325962c59eb08376cf282612b61e645b2aa49b2bc1d244d84d8aa1a041ceff"
      }
     ]
    },
@@ -5343,7 +5343,7 @@
     "proof": [
      {
       "side": "L",
-      "hash": "70bc254f6b4ec80cbde24651a0171106c62cc3a92617bff5f8e3233f7f9784a2"
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
      },
      {
       "side": "L",
@@ -5351,7 +5351,7 @@
      },
      {
       "side": "R",
-      "hash": "2edbe8de07fc49433e0368950652221367970288b0f464b9f97106ba04785146"
+      "hash": "3d325962c59eb08376cf282612b61e645b2aa49b2bc1d244d84d8aa1a041ceff"
      }
     ]
    },
@@ -5359,7 +5359,7 @@
     "name": "output.stl",
     "payload": {
      "file": "stl/print-frame-sbs.stl",
-     "sha256": "2a078dc03d47198441b1cbf61aba88435c96320b66ff4f157ba6c8d2b7b53fc9",
+     "sha256": "1e24cfd32cf512c37fc855c8e2d52b53629c7803a005b1f3a83d6834337a1aa0",
      "bbox_mm": [
       127.76,
       85.48,
@@ -5367,7 +5367,7 @@
      ],
      "watertight": true
     },
-    "leaf": "75b8d7ce4852cc7e9c25552bfd86733ba5b3c787a46983c46b97cf9c49ef3414",
+    "leaf": "080cc69c20196ee17d9cde8731e90084ad84ee5f36e32215f0983edef09fde97",
     "proof": [
      {
       "side": "R",
@@ -5375,11 +5375,11 @@
      },
      {
       "side": "R",
-      "hash": "28df5110be6c3234d309fdad7583851bf1d421961d3d1b3238826fa3f3dd970f"
+      "hash": "34799c1f1ff72dc23d8b8e8d022051c5cd495d5dd0a0b942ef04c1f08760381a"
      },
      {
       "side": "L",
-      "hash": "d1583a572d877b521bd2f0d1ba03be6694bef2d48c8c203a787aefc938040d88"
+      "hash": "332b48ff8bb4b746f16b2292a161d33914dfa5085ccdf711b5d52159ab063198"
      }
     ]
    },
@@ -5397,15 +5397,15 @@
     "proof": [
      {
       "side": "L",
-      "hash": "75b8d7ce4852cc7e9c25552bfd86733ba5b3c787a46983c46b97cf9c49ef3414"
+      "hash": "080cc69c20196ee17d9cde8731e90084ad84ee5f36e32215f0983edef09fde97"
      },
      {
       "side": "R",
-      "hash": "28df5110be6c3234d309fdad7583851bf1d421961d3d1b3238826fa3f3dd970f"
+      "hash": "34799c1f1ff72dc23d8b8e8d022051c5cd495d5dd0a0b942ef04c1f08760381a"
      },
      {
       "side": "L",
-      "hash": "d1583a572d877b521bd2f0d1ba03be6694bef2d48c8c203a787aefc938040d88"
+      "hash": "332b48ff8bb4b746f16b2292a161d33914dfa5085ccdf711b5d52159ab063198"
      }
     ]
    },
@@ -5413,25 +5413,25 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-frame-sbs.scad",
-     "sha256": "6a0d0685b6e72ccab43206d87757f350e610356b27db8ddb0284aee0b346da98",
+     "sha256": "c21663478fd101df879f3f1e8a3b28b37667ba1c7ba99a909efeab970bd7e380",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "28df5110be6c3234d309fdad7583851bf1d421961d3d1b3238826fa3f3dd970f",
+    "leaf": "34799c1f1ff72dc23d8b8e8d022051c5cd495d5dd0a0b942ef04c1f08760381a",
     "proof": [
      {
       "side": "L",
-      "hash": "184905d7a2f8e1d310cd995674a859430fae3cffeac4f4e7f1dab72d8c3a0f9d"
+      "hash": "c15d9d6d7252c17ba1b37154100904067d3550f94c1b77e6cbae95c99113e4fa"
      },
      {
       "side": "L",
-      "hash": "d1583a572d877b521bd2f0d1ba03be6694bef2d48c8c203a787aefc938040d88"
+      "hash": "332b48ff8bb4b746f16b2292a161d33914dfa5085ccdf711b5d52159ab063198"
      }
     ]
    }
   ]
  },
  "print-grid-mesh": {
-  "root": "164967adb7772618683f1b2464448051d80eeaa692e359d05d5328e47220a03b",
+  "root": "0b84aa715965e3a95dbb0940b16b8bf20483feef8cefcb71c9f65c90d55621c6",
   "fragments": [
    {
     "name": "derivation",
@@ -5449,11 +5449,11 @@
      },
      {
       "side": "R",
-      "hash": "e71599b23d45835381b6b315a2c18b049f2f24c392ffd653d7fb21d2e862d9c8"
+      "hash": "f7893d75c406c009ef877bd9d71c03eeef0b2fe7ff6ebb1dff3c87561b168d4e"
      },
      {
       "side": "R",
-      "hash": "775f0c9263c262641a6a1f50c4afdbecbe81dc75943a446a9f9fd9bf5c129132"
+      "hash": "098b2f43489b440971df2a3c4b3e3e5fdc355e96ce0d2fe722d12295d956a5dc"
      }
     ]
    },
@@ -5472,20 +5472,20 @@
      },
      {
       "side": "R",
-      "hash": "e71599b23d45835381b6b315a2c18b049f2f24c392ffd653d7fb21d2e862d9c8"
+      "hash": "f7893d75c406c009ef877bd9d71c03eeef0b2fe7ff6ebb1dff3c87561b168d4e"
      },
      {
       "side": "R",
-      "hash": "775f0c9263c262641a6a1f50c4afdbecbe81dc75943a446a9f9fd9bf5c129132"
+      "hash": "098b2f43489b440971df2a3c4b3e3e5fdc355e96ce0d2fe722d12295d956a5dc"
      }
     ]
    },
    {
     "name": "license",
     "payload": {
-     "spdx": "CERN-OHL-S-2.0"
+     "spdx": "MIT"
     },
-    "leaf": "70bc254f6b4ec80cbde24651a0171106c62cc3a92617bff5f8e3233f7f9784a2",
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
     "proof": [
      {
       "side": "R",
@@ -5497,7 +5497,7 @@
      },
      {
       "side": "R",
-      "hash": "775f0c9263c262641a6a1f50c4afdbecbe81dc75943a446a9f9fd9bf5c129132"
+      "hash": "098b2f43489b440971df2a3c4b3e3e5fdc355e96ce0d2fe722d12295d956a5dc"
      }
     ]
    },
@@ -5513,7 +5513,7 @@
     "proof": [
      {
       "side": "L",
-      "hash": "70bc254f6b4ec80cbde24651a0171106c62cc3a92617bff5f8e3233f7f9784a2"
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
      },
      {
       "side": "L",
@@ -5521,7 +5521,7 @@
      },
      {
       "side": "R",
-      "hash": "775f0c9263c262641a6a1f50c4afdbecbe81dc75943a446a9f9fd9bf5c129132"
+      "hash": "098b2f43489b440971df2a3c4b3e3e5fdc355e96ce0d2fe722d12295d956a5dc"
      }
     ]
    },
@@ -5529,7 +5529,7 @@
     "name": "output.stl",
     "payload": {
      "file": "stl/print-grid-mesh.stl",
-     "sha256": "3e7e2072859264c78730816b53ae3468b7f38fef399dd04302c369c0362bfecb",
+     "sha256": "cca6d5aef804b188f2721b26fbbfc03687ba955edb1145b081c903535212e523",
      "bbox_mm": [
       127.76,
       85.48,
@@ -5537,7 +5537,7 @@
      ],
      "watertight": true
     },
-    "leaf": "ca24c1f8ab8a94854c2a4101989950f1353a3cff271413007f7e47b66219061d",
+    "leaf": "d621d5fc014d81589adec65cc6ad2ad462d18945e5312934eac2fb3d441b4431",
     "proof": [
      {
       "side": "R",
@@ -5545,11 +5545,11 @@
      },
      {
       "side": "R",
-      "hash": "973720c75e57f9a4312f4f91bc0d7cb88e4986754c2ed03761d08ce04996a964"
+      "hash": "8f8f3a795a17262d5269781516392483bc9eb3a2dede2144323ecdab8be2b0ec"
      },
      {
       "side": "L",
-      "hash": "8c0f6099c00dc8385cc7069dac15e7b91633725a06de24a7507344ae3cbd9368"
+      "hash": "948bf13ffc5bb2074f579a25202773c4a88339f1ea81c58fdaf9fff55620af3c"
      }
     ]
    },
@@ -5571,15 +5571,15 @@
     "proof": [
      {
       "side": "L",
-      "hash": "ca24c1f8ab8a94854c2a4101989950f1353a3cff271413007f7e47b66219061d"
+      "hash": "d621d5fc014d81589adec65cc6ad2ad462d18945e5312934eac2fb3d441b4431"
      },
      {
       "side": "R",
-      "hash": "973720c75e57f9a4312f4f91bc0d7cb88e4986754c2ed03761d08ce04996a964"
+      "hash": "8f8f3a795a17262d5269781516392483bc9eb3a2dede2144323ecdab8be2b0ec"
      },
      {
       "side": "L",
-      "hash": "8c0f6099c00dc8385cc7069dac15e7b91633725a06de24a7507344ae3cbd9368"
+      "hash": "948bf13ffc5bb2074f579a25202773c4a88339f1ea81c58fdaf9fff55620af3c"
      }
     ]
    },
@@ -5587,25 +5587,25 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-grid-mesh.scad",
-     "sha256": "b5ec4e944b955bd823b0231964f056cbbfd9c334ccf6388d965312a4dbde93f5",
+     "sha256": "f922d5f1a2f729320c438aa2690c02ff810225cefcf1aeafb5556f66699bec2b",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "973720c75e57f9a4312f4f91bc0d7cb88e4986754c2ed03761d08ce04996a964",
+    "leaf": "8f8f3a795a17262d5269781516392483bc9eb3a2dede2144323ecdab8be2b0ec",
     "proof": [
      {
       "side": "L",
-      "hash": "05fe82399ddd4b38fce5d3d58bc7179521f80add57a948070eefdaed260d5caa"
+      "hash": "5884bd60a982c42b3a80272342037cc626e90409692453932016a22ab9a21177"
      },
      {
       "side": "L",
-      "hash": "8c0f6099c00dc8385cc7069dac15e7b91633725a06de24a7507344ae3cbd9368"
+      "hash": "948bf13ffc5bb2074f579a25202773c4a88339f1ea81c58fdaf9fff55620af3c"
      }
     ]
    }
   ]
  },
  "print-honeycomb": {
-  "root": "483b2148d2951b8a5a748c51fc0e12bedbf30c930120da613bd57bca56297024",
+  "root": "6b864896a283f37582c86d2b0cf335fd34d613ad607f47e61c36dd51de6b991a",
   "fragments": [
    {
     "name": "derivation",
@@ -5622,11 +5622,11 @@
      },
      {
       "side": "R",
-      "hash": "e7e300837ad4a6347a2523455a7ec246b7b3b2afa5cfb8b95fa15af9d978e1d3"
+      "hash": "6464c8e3918632cf3f87165902464474cd37c96e7da9d6f89666035adcd3974d"
      },
      {
       "side": "R",
-      "hash": "00fe0a6003830a901933d0bfa92a8c8d309064dc91284c89ebb59e8e8b361410"
+      "hash": "7b7c698e086d73f6169c2199cffea7bf47b4aa55bbb021d0b95088f008b0997b"
      }
     ]
    },
@@ -5645,20 +5645,20 @@
      },
      {
       "side": "R",
-      "hash": "e7e300837ad4a6347a2523455a7ec246b7b3b2afa5cfb8b95fa15af9d978e1d3"
+      "hash": "6464c8e3918632cf3f87165902464474cd37c96e7da9d6f89666035adcd3974d"
      },
      {
       "side": "R",
-      "hash": "00fe0a6003830a901933d0bfa92a8c8d309064dc91284c89ebb59e8e8b361410"
+      "hash": "7b7c698e086d73f6169c2199cffea7bf47b4aa55bbb021d0b95088f008b0997b"
      }
     ]
    },
    {
     "name": "license",
     "payload": {
-     "spdx": "CC0-1.0"
+     "spdx": "MIT"
     },
-    "leaf": "2ec6c42f1a16da6725830501089fff700366c25910134886085af0b3038699a9",
+    "leaf": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac",
     "proof": [
      {
       "side": "R",
@@ -5670,7 +5670,7 @@
      },
      {
       "side": "R",
-      "hash": "00fe0a6003830a901933d0bfa92a8c8d309064dc91284c89ebb59e8e8b361410"
+      "hash": "7b7c698e086d73f6169c2199cffea7bf47b4aa55bbb021d0b95088f008b0997b"
      }
     ]
    },
@@ -5686,7 +5686,7 @@
     "proof": [
      {
       "side": "L",
-      "hash": "2ec6c42f1a16da6725830501089fff700366c25910134886085af0b3038699a9"
+      "hash": "ded1052edb3574761573e5000656be1390105ee561edfa1a08c5a6b0587c3eac"
      },
      {
       "side": "L",
@@ -5694,7 +5694,7 @@
      },
      {
       "side": "R",
-      "hash": "00fe0a6003830a901933d0bfa92a8c8d309064dc91284c89ebb59e8e8b361410"
+      "hash": "7b7c698e086d73f6169c2199cffea7bf47b4aa55bbb021d0b95088f008b0997b"
      }
     ]
    },
@@ -5702,7 +5702,7 @@
     "name": "output.stl",
     "payload": {
      "file": "stl/print-honeycomb.stl",
-     "sha256": "11948587da1cb2a871b09d23fa462e09eb0ecd59f131d7db6277d5e29ca3e59e",
+     "sha256": "6cdca6da9d22dce856d8fc66f7940f2b8176ae8cb017de72952eab73f8385a7b",
      "bbox_mm": [
       117.16,
       74.88,
@@ -5710,7 +5710,7 @@
      ],
      "watertight": true
     },
-    "leaf": "d527335fe03a77bbd395159a73d87840dd539dbe3ece7da6b3358939a01f9506",
+    "leaf": "a8512f1ff927eaa4e3c159de33cd9aae4519c02d00d764ecd86911b4dc7bc221",
     "proof": [
      {
       "side": "R",
@@ -5718,11 +5718,11 @@
      },
      {
       "side": "R",
-      "hash": "0e5f19ab117ef26a7f1fad930bfca267c4b91845174b85d4dae2ed67a0f5493a"
+      "hash": "f2391a6fb56d4c39274b5e4df41a1715870d76705936fd93aeaa6d0b90943579"
      },
      {
       "side": "L",
-      "hash": "16cb6745d6de943bf4d7195256a6d5d923faa59946210c98885c2e5e4bf9efbc"
+      "hash": "7070d65563e2e681de77c35b548bcd7434b73fbe740b542ac9270c6ab11738e1"
      }
     ]
    },
@@ -5739,15 +5739,15 @@
     "proof": [
      {
       "side": "L",
-      "hash": "d527335fe03a77bbd395159a73d87840dd539dbe3ece7da6b3358939a01f9506"
+      "hash": "a8512f1ff927eaa4e3c159de33cd9aae4519c02d00d764ecd86911b4dc7bc221"
      },
      {
       "side": "R",
-      "hash": "0e5f19ab117ef26a7f1fad930bfca267c4b91845174b85d4dae2ed67a0f5493a"
+      "hash": "f2391a6fb56d4c39274b5e4df41a1715870d76705936fd93aeaa6d0b90943579"
      },
      {
       "side": "L",
-      "hash": "16cb6745d6de943bf4d7195256a6d5d923faa59946210c98885c2e5e4bf9efbc"
+      "hash": "7070d65563e2e681de77c35b548bcd7434b73fbe740b542ac9270c6ab11738e1"
      }
     ]
    },
@@ -5755,18 +5755,18 @@
     "name": "source.scad",
     "payload": {
      "file": "scad/print-honeycomb.scad",
-     "sha256": "bf73eabaf44def894a8d3ab86a9e87080290213665750df4cb04a9e8ef0d6d21",
+     "sha256": "e8f53158658fb9cd97145684f5a76f0f85f8a297341d60b2f1ec875a595e4a86",
      "library_sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2"
     },
-    "leaf": "0e5f19ab117ef26a7f1fad930bfca267c4b91845174b85d4dae2ed67a0f5493a",
+    "leaf": "f2391a6fb56d4c39274b5e4df41a1715870d76705936fd93aeaa6d0b90943579",
     "proof": [
      {
       "side": "L",
-      "hash": "4e6da2951daeecac62b31dc8d9a0489aa59911d1251d56f4827b777021579e1b"
+      "hash": "6088993dd74e9ecafb078d35de2eab036ae745b204144547d355b348230e608a"
      },
      {
       "side": "L",
-      "hash": "16cb6745d6de943bf4d7195256a6d5d923faa59946210c98885c2e5e4bf9efbc"
+      "hash": "7070d65563e2e681de77c35b548bcd7434b73fbe740b542ac9270c6ab11738e1"
      }
     ]
    }

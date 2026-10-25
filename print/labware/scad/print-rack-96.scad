@@ -1,5 +1,5 @@
 // SBS 96 rack, 9 mm pitch
-// part id: print-rack-96  license: CERN-OHL-W-2.0
+// part id: print-rack-96  license: MIT
 // labware.scad sha256: 025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2
 // derived from: obs-tipbox-1000-blue, obs-tipbox-200f-magenta, obs-tipbox-purple-hinged, obs-microtube-96-purple
 // Edit the parameters to remix. Catalog dimensions marked est. need calipers before a production run.

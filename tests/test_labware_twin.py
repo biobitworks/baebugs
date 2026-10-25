@@ -69,3 +69,10 @@ def test_no_vendor_marks_and_estimates_flagged():
     assert not re.search(banned, text, re.IGNORECASE)
     assert all(p["dims"]["est"] for p in lt.OBSERVED if p["kind"] != "reference")
     assert len(json.loads((lt.OUT / "merkle" / "breaks.json").read_text())) == len(lt.PHOTOS)
+
+
+def test_photo_breaks_reach_the_mvp_custody_count():
+    from baebugs import mvp
+    c = mvp.build(lt.ROOT)["custody"]
+    assert c["withheld_photo_breaks"] == len(lt.PHOTOS)
+    assert c["breaks"] == c["result_breaks"] + c["withheld_photo_breaks"]

@@ -19,7 +19,7 @@ python -m baebugs.labware_twin --verify-only   # re-hash every fragment, proof, 
 |---|---|
 | `scad/labware.scad` | Library: `sbs_plate`, `grid_insert`, `frame`, `grid_frame`, `honeycomb` (2D profiles, fast) |
 | `scad/print-*.scad` | One file per remix; edit the numbers and re-render |
-| `stl/` | OpenSCAD 2021.01 renders, all watertight |
+| `stl/` | OpenSCAD 2021.01 renders stored as binary STL, all watertight |
 | `opentrons/` | Labware defs, schema v2, validated against `opentrons-shared-data`. Not in `opentrons/labware/` yet: well depths are estimates. |
 | `merkle/parts.json` | Every fragment with payload, leaf and inclusion proof |
 | `merkle/lab_root.json`, `custody_log.json` | Lab root over part roots; hash-linked events captured → cataloged → modeled → sealed |
@@ -58,4 +58,4 @@ assuming a printer is on hand.
 - **Trademarks:** brand names and logos stay out of every file and render; describe compatibility in words only.
 - **Design rights:** copy function, not form (SBS footprint, 9 mm pitch, measured tube diameters). Skip distinctive insert spines and 4-way cube interlocks.
 - **Standards:** ANSI/SLAS 1-2004 footprint dimensions are free to use.
-- **Licenses:** racks CERN-OHL-W-2.0, frame family CERN-OHL-S-2.0, honeycomb CC0, data CC-BY-4.0. A starting recommendation, not legal advice.
+- **Licence:** MIT, like everything else written in this repo (see `docs/CLAIMS.md`). CERN-OHL-W/S would be the hardware-specific alternative if the repo ever adopts it; that is a repo-wide call, not a per-folder one.

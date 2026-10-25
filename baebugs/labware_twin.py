@@ -170,39 +170,39 @@ PRINTS = [
                      "footprint_x": SBS_X, "footprint_y": SBS_Y},
          "derived_from": ["obs-tipbox-1000-blue", "obs-tipbox-200f-magenta", "obs-tipbox-purple-hinged", "obs-microtube-96-purple"],
          "ot": {"well_depth": 18.0, "well_vol": 200, "display": "BaeBugs 96 microtube rack (printed)"},
-         "material": "PETG", "license": "CERN-OHL-W-2.0"},
+         "material": "PETG", "license": "MIT"},
     {"id": "print-cryo-24", "name": "SBS 4x6 rack, 2 mL cryotubes", "family": "sbs-plate",
          "params": {"rows": 4, "cols": 6, "pitch": 19.3, "hole_d": 13.2, "height": 30.0, "a1_x": 15.63, "a1_y": 13.79,
                      "footprint_x": SBS_X, "footprint_y": SBS_Y},
          "derived_from": ["obs-cryotube-2ml", "obs-microtube-50-purple"],
          "ot": {"well_depth": 42.0, "well_vol": 2000, "display": "BaeBugs 24 rack, 2 mL cryotube (printed)"},
-         "material": "PETG", "license": "CERN-OHL-W-2.0"},
+         "material": "PETG", "license": "MIT"},
     {"id": "print-conical-15", "name": "SBS 3x5 rack, 15 mL conicals", "family": "sbs-plate",
          "params": {"rows": 3, "cols": 5, "pitch": 25.0, "hole_d": 17.5, "height": 40.0, "a1_x": 13.88, "a1_y": 17.74,
                      "footprint_x": SBS_X, "footprint_y": SBS_Y},
          "derived_from": ["obs-rack-18-white"],
          "ot": {"well_depth": 110.0, "well_vol": 15000, "display": "BaeBugs 15 rack, 15 mL conical (printed)"},
-         "material": "PETG", "license": "CERN-OHL-W-2.0"},
+         "material": "PETG", "license": "MIT"},
     {"id": "print-conical-50", "name": "SBS 2x3 rack, 50 mL conicals", "family": "sbs-plate",
          "params": {"rows": 2, "cols": 3, "pitch": 35.0, "hole_d": 29.5, "height": 40.0, "a1_x": 28.88, "a1_y": 25.24,
                      "footprint_x": SBS_X, "footprint_y": SBS_Y},
          "derived_from": ["obs-conical-50", "obs-rack-4way-orange"],
          "ot": {"well_depth": 110.0, "well_vol": 50000, "display": "BaeBugs 6 rack, 50 mL conical (printed)"},
-         "material": "PETG", "license": "CERN-OHL-W-2.0"},
+         "material": "PETG", "license": "MIT"},
     {"id": "print-cryo-100", "name": "10x10 cryo grid insert, 133 mm", "family": "grid-insert",
          "params": {"rows": 10, "cols": 10, "pitch": 13.0, "hole_d": 12.6, "height": 12.0, "a1_x": 8.0, "a1_y": 8.0,
                      "footprint_x": 133.0, "footprint_y": 133.0},
-         "derived_from": ["obs-cryobox-100"], "ot": None, "material": "PP (filament)", "license": "CERN-OHL-W-2.0"},
+         "derived_from": ["obs-cryobox-100"], "ot": None, "material": "PP (filament)", "license": "MIT"},
     {"id": "print-frame-sbs", "name": "SBS lipped frame ('folder')", "family": "frame",
          "params": {"footprint_x": SBS_X, "footprint_y": SBS_Y, "height": 12.0, "wall": 5.0, "lip": 2.0, "lip_z": 2.0},
-         "derived_from": ["obs-printed-frame-open"], "ot": None, "material": "PETG", "license": "CERN-OHL-S-2.0"},
+         "derived_from": ["obs-printed-frame-open"], "ot": None, "material": "PETG", "license": "MIT"},
     {"id": "print-grid-mesh", "name": "SBS 2x3 screened grid frame", "family": "grid-frame",
          "params": {"footprint_x": SBS_X, "footprint_y": SBS_Y, "height": 8.0, "wall": 4.0, "rows": 2, "cols": 3,
                      "rib": 3.0, "floor": 1.2, "mesh_hole": 2.0, "mesh_pitch": 3.0},
-         "derived_from": ["obs-printed-grid-mesh", "obs-perforated-sheet"], "ot": None, "material": "PETG", "license": "CERN-OHL-S-2.0"},
+         "derived_from": ["obs-printed-grid-mesh", "obs-perforated-sheet"], "ot": None, "material": "PETG", "license": "MIT"},
     {"id": "print-honeycomb", "name": "Honeycomb insert for SBS frame", "family": "honeycomb",
          "params": {"footprint_x": 117.16, "footprint_y": 74.88, "height": 6.0, "cell": 14.0, "wall": 1.6},
-         "derived_from": ["obs-printed-honeycomb"], "ot": None, "material": "PLA", "license": "CC0-1.0"},
+         "derived_from": ["obs-printed-honeycomb"], "ot": None, "material": "PLA", "license": "MIT"},
 ]
 
 MODULE = {"sbs-plate": "sbs_plate", "grid-insert": "grid_insert", "frame": "frame",
@@ -372,6 +372,7 @@ def build(out: Path | str = OUT, prints: list[dict] | None = None, photo_dir: Pa
             scad.write_text(src)
         if changed or not stl.exists():
             _render(scad, stl)
+            trimesh.load(stl).export(stl, file_type="stl")      # OpenSCAD 2021 writes ASCII; store binary (~5x smaller)
         mesh = trimesh.load(stl)
         dens, usd_kg = MATERIAL[p["material"]]
         grams = abs(mesh.volume) / 1000 * dens * FILL

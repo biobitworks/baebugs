@@ -1,5 +1,5 @@
 // SBS 2x3 screened grid frame
-// part id: print-grid-mesh  license: CERN-OHL-S-2.0
+// part id: print-grid-mesh  license: MIT
 // labware.scad sha256: 025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2
 // derived from: obs-printed-grid-mesh, obs-perforated-sheet
 // Edit the parameters to remix. Catalog dimensions marked est. need calipers before a production run.

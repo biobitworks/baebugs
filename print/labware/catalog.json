@@ -687,7 +687,7 @@
     "display": "BaeBugs 96 microtube rack (printed)"
    },
    "material": "PETG",
-   "license": "CERN-OHL-W-2.0"
+   "license": "MIT"
   },
   {
    "id": "print-cryo-24",
@@ -714,7 +714,7 @@
     "display": "BaeBugs 24 rack, 2 mL cryotube (printed)"
    },
    "material": "PETG",
-   "license": "CERN-OHL-W-2.0"
+   "license": "MIT"
   },
   {
    "id": "print-conical-15",
@@ -740,7 +740,7 @@
     "display": "BaeBugs 15 rack, 15 mL conical (printed)"
    },
    "material": "PETG",
-   "license": "CERN-OHL-W-2.0"
+   "license": "MIT"
   },
   {
    "id": "print-conical-50",
@@ -767,7 +767,7 @@
     "display": "BaeBugs 6 rack, 50 mL conical (printed)"
    },
    "material": "PETG",
-   "license": "CERN-OHL-W-2.0"
+   "license": "MIT"
   },
   {
    "id": "print-cryo-100",
@@ -789,7 +789,7 @@
    ],
    "ot": null,
    "material": "PP (filament)",
-   "license": "CERN-OHL-W-2.0"
+   "license": "MIT"
   },
   {
    "id": "print-frame-sbs",
@@ -808,7 +808,7 @@
    ],
    "ot": null,
    "material": "PETG",
-   "license": "CERN-OHL-S-2.0"
+   "license": "MIT"
   },
   {
    "id": "print-grid-mesh",
@@ -832,7 +832,7 @@
    ],
    "ot": null,
    "material": "PETG",
-   "license": "CERN-OHL-S-2.0"
+   "license": "MIT"
   },
   {
    "id": "print-honeycomb",
@@ -850,7 +850,7 @@
    ],
    "ot": null,
    "material": "PLA",
-   "license": "CC0-1.0"
+   "license": "MIT"
   }
  ],
  "print_meta": {
@@ -935,5 +935,5 @@
    "watertight": true
   }
  },
- "lab_root": "b8ce84b5ee1d33bbb31eb359c742732a207ca7e4b254582fd78625dec6edff85"
+ "lab_root": "d469e0e9b7f9395156a240f03ea1a4cf4249210ac2d4d7d0e6b91a458ea3aa6d"
 }

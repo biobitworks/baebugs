@@ -1,5 +1,5 @@
 // 10x10 cryo grid insert, 133 mm
-// part id: print-cryo-100  license: CERN-OHL-W-2.0
+// part id: print-cryo-100  license: MIT
 // labware.scad sha256: 025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2
 // derived from: obs-cryobox-100
 // Edit the parameters to remix. Catalog dimensions marked est. need calipers before a production run.
