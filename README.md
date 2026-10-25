@@ -30,6 +30,7 @@ Commands below use that environment's `python.exe` directly; no activation neede
 - **Power:** leader arm on the **5 V** supply, follower on **12 V**. 12 V on the leader triggers over-voltage errors on its motors.
 - **Ports:** leader = COM5, follower = COM6 (check with `arm/probe_arms.py COM5 COM6`; the leader's motors read ~5 V).
 - **Mirror the leader:** `arm\mirror.cmd` (or `mirror` if it's copied into a folder on your PATH). Hold the follower before pressing Ctrl+C: it goes limp when mirroring stops.
+- **Teach and repeat:** `arm\teach.py` saves named positions while the follower copies the leader, then replays routines (pick, place, move a filter between the rig and storage, dump the dish) on the follower alone. Step-by-step guide: [arm/TEACHING.md](arm/TEACHING.md). Add `--practice` to try anything without the arm. Tests: `cd arm; python -m unittest test_motion`.
 - **Calibration backups:** `arm/calibration/` mirrors `%USERPROFILE%\.cache\huggingface\lerobot\calibration\` (`robots\so_follower\`, `teleoperators\so_leader\`). Copy them back if that cache is lost.
 
 ```powershell

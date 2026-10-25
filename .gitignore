@@ -4,3 +4,5 @@ __pycache__/
 vision/output/
 vision/captures/
 vision/models/
+arm/practice_poses.json
+arm/captures/

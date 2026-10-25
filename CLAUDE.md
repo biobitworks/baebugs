@@ -43,6 +43,13 @@ Team demo-day project. See README.md for layout and commands. These notes hold t
 - A hand-typed plan is the demo-day fallback if vision fails.
 - Microcontroller (user wants one): optional and off the critical path, USB serial text protocol, system must run with it unplugged. Ideas: status screen (user's first pick, deferred), per-slot status LEDs, slot-seated sensors, start button, backlight box for the dish. Real e-stop = inline power switch on the follower's 12 V supply.
 
+## Teach and repeat (arm/, built 2026-10-25, tested only in practice mode so far)
+
+- The rig is built (user, 2026-10-25): an upside-down T; filter shelf (3 slots) left of the vertical extrusion, storage on the right at the same heights. Storage slot count assumed 3 (`storage/top|middle|bottom`); change in `arm/layout.json` if different.
+- `arm/motion.py`: `Arm` sends smooth, speed-limited joint moves (smoothstep, 50 Hz; speeds in layout.json), routines are step lists (`move`, `open`, `close`, `check_grip`, `side`, `leave_side`, `shake`, `wait`, `capture`). Rules: in/out of a slot at slow speed and always back out to `<slot>/front`; switch sides only between the two `carry` poses; missed grab = gripper closed > `missed_grab_at` of open->closed -> open, back out to the previous pose, stop. `connect()` writes Goal_Position = Present_Position before torque comes on (no jump to a stale goal).
+- `arm/teach.py`: `teach` (mirror thread, rate-limited 2 deg/tick, so jumps become glides; commands save/todo/list/where/delete/goto/check/pick/place/move/dump/follow/quit), `todo`, `run ...`. `--practice` uses stand-in arm/leader and `practice_poses.json` (git-ignored); `--practice-miss` simulates an empty grab. Poses in `arm/poses.json` (commit them once taught).
+- Dish grabbing needs a repeatable dish spot (corner guide); the arm doesn't look for the dish yet. Wrist-camera photo on each pick is wired (`wrist_camera` in layout.json); the size/novelty check on those photos is later work.
+
 ## Build order (shelves are still being built)
 
 - Now: reach/clearance check of the planned shelf dimensions with the leader (urgent); **vision sizing** (current focus); teach-and-repeat tool tested with free-air poses; planner logic.
