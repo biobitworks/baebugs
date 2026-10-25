@@ -60,3 +60,6 @@ attachment, mirror symmetry, tagma order, body span, counts, tray) are hashed in
 check is a break point. 13 of the smallest toys fail `fuse_minimum` (body segments under 0.6 mm).
 `python -m baebugs.insect_kg --ledger` rebuilds it; `python -m baebugs.insect_lomo` runs
 leave-one-model-out / leave-one-family-out with a logic → local model → Claude → human cascade.
+
+## OpenSCAD
+`scad/<toy>.scad` (one per STL, exact primitives; rods as hulled spheres) + `scad/toy_lib.scad`. The STL stays canonical (Merkle insect hash); the .scad is the editable equivalent. Regenerate: `python -m baebugs.scad_export`.
