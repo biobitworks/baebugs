@@ -1,0 +1,241 @@
+[
+ {
+  "photo_id": "tower_arm_side_1",
+  "original_sha256": "46b3c75f068357555dc4dc943eb28ec5908cc3bbd0a758678c6ff5660853df67",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/tower_arm_side_1.jpg",
+  "published_sha256": "82f593b9a577d0340c40bef05d0605099fbccbcd8987b08f8673189d9cb31185"
+ },
+ {
+  "photo_id": "tower_arm_side_2",
+  "original_sha256": "89c1970d28c87a4ecbda5b5eb1ddd85eb421d75f1141ce7dcf0dc0c26eaae83e",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/tower_arm_side_2.jpg",
+  "published_sha256": "d3c2844e62da4a7e88583e4d2e7b582fc04bc7d1e12dd235129be5ec94904d47"
+ },
+ {
+  "photo_id": "tower_top",
+  "original_sha256": "03948e079041e2e4eb311a65815622ae676970b625997e6f4afc2c459d4581c5",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/tower_top.jpg",
+  "published_sha256": "7c7566eefeb1388ffa05551b935a62fba6bf179975cb3753f6c787788988162a"
+ },
+ {
+  "photo_id": "tower_arm_side_3",
+  "original_sha256": "e84db1219e98fa07e338e08fb2bbaa217999943d54ff96745ce7c3573e4e11cf",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/tower_arm_side_3.jpg",
+  "published_sha256": "1c44664503c584cc43a303f5b223fc3a3599b6a95c6c7db8d0bb816fce6986e2"
+ },
+ {
+  "photo_id": "breadboard_ruler",
+  "original_sha256": "92734540f071fb5953fc11f5d2d5cefe9efa14ba06a65442a3b33a7b0d4e5710",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/breadboard_ruler.jpg",
+  "published_sha256": "20f18c558202f08627d9f928bafc0e6b065eaef2d1779ee30786dde7602d6ad1"
+ },
+ {
+  "photo_id": "plate384_ruler",
+  "original_sha256": "c7071955b0299d86a9a7a735f8fdbdb8ff4c06bc26eb71e995c5e46e27043b4b",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/plate384_ruler.jpg",
+  "published_sha256": "91fb1d1173d4251882a9f5f7db24a83d380e6f880766715603158225c1c5bf1d"
+ },
+ {
+  "photo_id": "plate384_top",
+  "original_sha256": "d4f31b557ec67a50adc4cc5b752f2b2edbe2263b42c686bbe292c7b2eb000562",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/plate384_top.jpg",
+  "published_sha256": "117c725af22a2c05fb895a576b7b59e8d25ff8fbcd2e5c3c7a555a47e3c41555"
+ },
+ {
+  "photo_id": "opentrons_flex_deck",
+  "original_sha256": "813205c2f14b530ae9b84e1694db549cb2eb9774d9ea633a0ccb529a69b3c1cf",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": false,
+  "withheld_reason": "people's faces reflected in the enclosure glass; hash only, image not published"
+ },
+ {
+  "photo_id": "lift_columns",
+  "original_sha256": "c46f5cfc139d42a4ada67b13d08687a74480cd16ec9e451b8fee687ab56d1a21",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/lift_columns.jpg",
+  "published_sha256": "9501cca4880554de44a6894def68b61e3144215b7cbab771285a0ab306ae54fe"
+ },
+ {
+  "photo_id": "formlabs_fuse",
+  "original_sha256": "ce67fe10b6acf2ba100b1af9176c5e10b7fa97668f6454e771e21fbb9a5720bd",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/formlabs_fuse.jpg",
+  "published_sha256": "d0cf3972f9bf9c842fe39f8ed2c2b936b86eb8f009a5c0dc29cca3e574357ffd"
+ },
+ {
+  "photo_id": "rack_edge_ruler",
+  "original_sha256": "09aa41a30bc187a992835dca4d4162f1b2522638931e044c0ad599e79ada0507",
+  "size_px": [
+   2212,
+   1659
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/rack_edge_ruler.jpg",
+  "published_sha256": "282cc0f2a2c9f23161c26fe44df7a0613739679d959bcc1e89524b6cf47c86fa"
+ },
+ {
+  "photo_id": "xtip4_box",
+  "original_sha256": "683b61a6ee5c5efdbe5a106ed0aa424376082e18ff3ee39860b90f7594234271",
+  "size_px": [
+   2212,
+   1659
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/xtip4_box.jpg",
+  "published_sha256": "86e990548b4520cf3f0fa94822432808fa56e768b3461773524fb34159e5151e"
+ },
+ {
+  "photo_id": "labware_overview_1",
+  "original_sha256": "a7a408bc79a87a1e2c7d707bf5cb998f7b626ef3ff8f0b80e6f11fbc8c669efc",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/labware_overview_1.jpg",
+  "published_sha256": "22d1861d5faefa12be34b2840ff3c4556ca70d29e2890886d28f9d456a51c2fb"
+ },
+ {
+  "photo_id": "labware_angle",
+  "original_sha256": "a40363d0f6a183a19f6ad8cbb8f0b266c817c3794e60d6aa92354b42cfc1d74c",
+  "size_px": [
+   2212,
+   1659
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/labware_angle.jpg",
+  "published_sha256": "aa4e721ad06be52de4988d04612fb5e35646924c9fae743382a1465c1c1aa40c"
+ },
+ {
+  "photo_id": "racks_closeup_ruler",
+  "original_sha256": "3bbb75964176e29d75fe4c8b35c9e173c219a945c9b65980d21ee3693ca816e5",
+  "size_px": [
+   2212,
+   1659
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/racks_closeup_ruler.jpg",
+  "published_sha256": "d6db1ce5191c037c3e2521b48e33431eaa060963833775c0536c4736a8b7ef3a"
+ },
+ {
+  "photo_id": "labware_overview_2",
+  "original_sha256": "292f60b545df9e820de13bc5cf87a158bcab3cc43c0508def5de4bdd5317f14e",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/labware_overview_2.jpg",
+  "published_sha256": "bde66bf80a02dd2b4559008545124e9996a49ca48154720a61862c76255590f2"
+ },
+ {
+  "photo_id": "biokea_frames_tub",
+  "original_sha256": "9e3b417fd967a1b84d13595b374dfc9a6fe5684b5526fefc205f9b36f5ebf5c5",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/biokea_frames_tub.jpg",
+  "published_sha256": "8355782a460fcf2dcf8334749c3c4edf466efcaeecd8bf6be5e381491b5a4baf"
+ },
+ {
+  "photo_id": "racks_diagonal_ruler",
+  "original_sha256": "a34f359c175d021d3e4af0c8e2839637d7b5b78a60aa19b0ce2f059ea6013d74",
+  "size_px": [
+   2212,
+   1659
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/racks_diagonal_ruler.jpg",
+  "published_sha256": "3127b5d1e9772bd951139ef6031d8371cd684f34a83cfe42b3bb6ec567df6b37"
+ },
+ {
+  "photo_id": "labware_overview_3",
+  "original_sha256": "11a54b15a8de8a5f35f1ac8b130e85ca67cd05dca101a7e1013e8e79fc0fc1ec",
+  "size_px": [
+   1659,
+   2212
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/labware_overview_3.jpg",
+  "published_sha256": "b462d854a0259a334f0b834d783752505f7de5491c392cec90ff2e24a7e6024b"
+ },
+ {
+  "photo_id": "greiner_cryos_bag",
+  "original_sha256": "89037c3250261b3df7decd018177f07b3a3d1fca2e3e7ac29c36d945c2019a9d",
+  "size_px": [
+   2212,
+   1659
+  ],
+  "taken": "2026-10-25, BioKEA Track A hack (Studio45)",
+  "published": true,
+  "file": "assets/photos/greiner_cryos_bag.jpg",
+  "published_sha256": "42edba7c1ed8181044941d6247eb2ca181ae2c4e2b4ef341d968b3fdfe8840a6"
+ }
+]

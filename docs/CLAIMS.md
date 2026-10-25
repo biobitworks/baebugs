@@ -2,7 +2,7 @@
 
 Every file is an *atom* with a claim, a licence in context, a status and a hash (full list for agents: [`kg/aok.json`](../kg/aok.json)). This page is the short version. It records what the licences say; it is not legal advice.
 
-**AoK root:** `75d147803a723e619bddd2e809146e10ce01972e7ed959a67d8acdb768404dd4` · 761 atoms · OWN 696 · OWN+TERMS 45 · THIRD 20
+**AoK root:** `96847d46477038c6958f652350595dc825bacee928a6bf199b7a84ab6f6dbf5a` · 841 atoms · OWN 772 · OWN+TERMS 49 · THIRD 20
 
 | claim | meaning |
 |---|---|
@@ -14,20 +14,20 @@ Every file is an *atom* with a claim, a licence in context, a status and a hash 
 
 | module | atoms | claim | outside terms that apply here | module root |
 |---|---|---|---|---|
-| custody-ledgers | 33 | OWN 33 | none | `8f48e4f879b1` |
+| custody-ledgers | 34 | OWN 34 | none | `9a344d9cfb39` |
 | daisy-protocols | 17 | OWN 17 | none | `401e52c7913d` |
-| daisy-results | 11 | OWN+TERMS 11 | gbif-media, ultralytics | `b071c5cb0af3` |
+| daisy-results | 12 | OWN+TERMS 12 | gbif-media, ultralytics | `770c10edefa4` |
 | dashboards | 16 | OWN 16 | none | `350619827ff6` |
-| docs | 24 | OWN 24 | none | `6b4f845f2ad1` |
+| docs | 46 | OWN 46 | none | `756e249d48f9` |
 | kaggle-kernels | 10 | OWN+TERMS 10 | gbif-media, ultralytics | `ff1a3e54c36a` |
-| knowledge-graph | 5 | OWN+TERMS 5 | gbif-media | `f76004ad5e8e` |
-| lab-parts | 106 | OWN 106 | none | `a974e369a4d0` |
-| mvp-site | 30 | OWN 30 | none | `e9559d478120` |
-| notebooks | 21 | OWN 21 | none | `2b2e162c148d` |
+| knowledge-graph | 6 | OWN+TERMS 6 | gbif-media | `0a7517349651` |
+| lab-parts | 131 | OWN 131 | none | `a21967d41d0a` |
+| mvp-site | 30 | OWN 30 | none | `b9000b134660` |
+| notebooks | 23 | OWN 23 | none | `c35793f4eed3` |
 | opentrons-modules | 13 | OWN+TERMS 13 | opentrons | `40b680b50dba` |
-| python-package | 81 | OWN 75, OWN+TERMS 6 | ultralytics | `b27e61e14eec` |
-| repo-meta | 12 | OWN 12 | none | `3ea86d00d8b2` |
-| tests | 36 | OWN 36 | none | `941a343c45da` |
+| python-package | 85 | OWN 77, OWN+TERMS 8 | ultralytics | `bc6fae4180f2` |
+| repo-meta | 34 | OWN 34 | none | `ccd350f4469b` |
+| tests | 38 | OWN 38 | none | `61f925b1abd5` |
 | toy-insects | 326 | OWN 326 | none | `6f32a71b22ca` |
 
 ## Not ours (used, credited, never claimed)

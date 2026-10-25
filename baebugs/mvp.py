@@ -57,6 +57,19 @@ def _species(repo, leaf_of):
     return out
 
 
+def _assets(repo):
+    p = Path(repo, "kg/assets.json")
+    if not p.exists():
+        return {"root": None, "items": []}
+    db = json.loads(p.read_text())
+    photos = {x["photo_id"]: x for x in json.loads(Path(repo, "assets/photos.json").read_text())}
+    return {"root": db["root"], "photos_root": db["photos_root"], "dims_by_source": db["dims_by_source"],
+            "items": [{k: a.get(k) for k in ("id", "name", "category", "maker", "ref", "count", "role", "interfaces",
+                                             "dims_mm", "dims_source", "notes", "leaf")}
+                      | {"photos": [photos[ph].get("file") for ph in a["photos"] if photos[ph].get("file")]}
+                      for a in db["assets"]]}
+
+
 def build(repo="."):
     repo = Path(repo)
     A = aokm.build(repo)
@@ -91,6 +104,8 @@ def build(repo="."):
                             r.get("weights_sha256") for r in runs.values()) else (d.get("custody_status") or "INTACT"),
                         "statuses": sorted({r.get("status") for r in runs.values()} - {None})})
     roots = {"aok": A["root"], "hypergraph": hg["root"], **{k: v["root"] for k, v in mmr.items()}}
+    if Path(repo, "kg/assets.json").exists():
+        roots["assets"] = json.loads(Path(repo, "kg/assets.json").read_text())["root"]
     root = merkle_root(sorted(v for v in roots.values() if v))
     return {"type": "baebugs-mvp", "root": root, "roots": roots, "mmr": mmr,
             "custody": {"breaks": len(breaks), "break_contexts": sorted({c for b in breaks for c in b.get("contexts", [])}),
@@ -99,6 +114,7 @@ def build(repo="."):
             "leaves": [{k: x[k] for k in ("path", "module", "kind", "claim", "licence", "status", "sha256", "leaf")}
                        for x in A["leaves"]],
             "bugs": bugs, "species": _species(repo, leaf_of), "parts": parts, "labware": labware, "results": results,
+            "assets": _assets(repo),
             "repo": "https://github.com/biobitworks/baebugs"}
 
 
