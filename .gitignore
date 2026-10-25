@@ -3,3 +3,5 @@ __pycache__/
 runs/
 .ipynb_checkpoints/
 *.pt
+*.ts
+*.egg-info/
