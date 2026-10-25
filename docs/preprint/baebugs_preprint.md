@@ -7,8 +7,7 @@
 **Licence of this text:** CC BY 4.0 [confirm]. Code MIT; trained weights AGPL-3.0 (see §6).
 
 > Every number below is taken from a committed file in the repository and cites its path. Results are
-> **exploratory** (silver labels, no human-reviewed ground truth) unless stated otherwise. Slots marked
-> `[V4: …]` are filled when DAISY-BB-004 attempt v4 is ingested.
+> **exploratory** (silver labels, no human-reviewed ground truth) unless stated otherwise.
 
 ---
 
@@ -16,7 +15,7 @@
 
 Insect bulk samples are sorted by hand before anything can be imaged, picked or barcoded. BioKEA's Track A asks for robust sample preparation, "bags in, barcodes out". We built baebugs, the vision and planning lane for step 1 (sieving): a camera measures every body in a sample before sieving, a planner chooses a sieve stack and flow, a digital twin of the bench rejects physically invalid plans before hardware moves, and each fraction is handed to BioKEA BugPicker in its own file format. Around that lane we built the thing we think matters more for open science: a single knowledge graph in which every file, model, dataset, printed part and result is an "atom of knowledge" with a claim, a licence in context and a content hash, rolled up by Merkle roots from leaf to repository and appended to Merkle Mountain Range (MMR) ledgers. The same graph pack is served to a web page, a CLI, an MCP server, `npx` and a Claude plugin, so a person or any bring-your-own (BYO) agent can reproduce the root and contest any atom.
 
-Three findings. (1) Training a segmentation model on real California museum photos beats synthetic-only training on out-of-state holdouts by +0.696 (Arizona, n=72) and +0.521 (Oregon, n=132) mask mAP50-95, while synthetic training sizes printed toy insects better (median length error 0.094 vs 0.227). (2) A small per-taxon "preprocessor" that routes a specimen crop to its insect order reached a test macro-F1 of 0.70 against a 0.14 majority baseline on out-of-state photos, passing its preregistered usefulness margin, but it scores 0 F1 on Hemiptera (2 test crops) and the planned Diptera family router has no test split at all. (3) Our custody rule (any hash the graph references must resolve to stored bytes) turned two lost-weights defects into eight recorded breaks rather than eight silently trusted results. We report these breaks as results.
+Three findings. (1) Training a segmentation model on real California museum photos beats synthetic-only training on out-of-state holdouts by +0.696 (Arizona, n=72) and +0.521 (Oregon, n=132) mask mAP50-95, while synthetic training sizes printed toy insects better (median length error 0.094 vs 0.227). (2) A small per-taxon "preprocessor" that routes a specimen crop to its insect order transfers out of state: test macro-F1 0.70 (top-1 0.95) against a 0.14 majority baseline, passing its preregistered margin. The Hymenoptera family router does not transfer (0.88 in-state, 0.17 out of state, NULL), Hemiptera scores 0 F1 from 2 test crops, and the Diptera family router cannot be judged because the holdouts contain no Diptera. (3) Our custody rule (any hash the graph references must resolve to stored bytes) turned two lost-weights defects into eight recorded breaks rather than eight silently trusted results. We report these breaks as results.
 
 ---
 
@@ -113,20 +112,25 @@ Transfer from the CA validation score (0.852) is near zero for Arizona (−0.007
 
 **Data.** 2,627 crops cut from teacher segmentations (train 2,015 CA; val 381 CA; test 231 out-of-state), labelled with GBIF order/family, split by source photo (media-id leakage 0), data root `4d5f2831…`; 2,613 crops CC0, 14 CC BY 4.0 (`daisy/taxon_crops_report.json`). Model yolo11n-cls [6], 224 px, 15 epochs, run locally on Apple MPS after Kaggle's GPU quota ran out (amendments 1–2). Decision rule: USEFUL if test macro-F1 beats the majority-class baseline by more than 0.10.
 
-| run | classes | test crops | test macro-F1 | baseline | verdict |
-|---|---|---|---|---|---|
-| ORDER | 5 orders + other | 231 | **0.70** [V4: confirm from results.json] | 0.14 | USEFUL |
-| FAMILY_Hymenoptera | 6 families + other | 86 | [V4] | [V4] | [V4] |
-| FAMILY_Diptera | 3 families + other | **0** | none | none | **no test split** |
+Results (`daisy/results/DAISY-BB-004/v4/`, events root `d47ecaf1…`, 104 events). All gates passed, 15 epochs per run, and all three weights files are stored and re-verified: custody **INTACT**, no breaks.
+
+| run | classes | val n | val macro-F1 | test n | test macro-F1 | majority | margin | verdict |
+|---|---|---|---|---|---|---|---|---|
+| ORDER | 6 | 381 | 0.919 | 231 | **0.700** (top-1 0.948) | 0.135 | +0.565 | **USEFUL** |
+| FAMILY_Hymenoptera | 7 | 169 | 0.883 | 86 | 0.167 (top-1 0.267) | 0.068 | +0.099 | NULL |
+| FAMILY_Diptera | 4 | 74 | 0.967 | 0 | none | none | none | undecided |
+
+ORDER per-class test F1: Lepidoptera 0.97, Hymenoptera 0.97, Coleoptera 0.89, other 0.67, **Hemiptera 0.00**.
+
+Weights identity (file sha256 / canonical tensor sha256): ORDER `8a9dcb7a…` / `04cf5c6b…`; FAMILY_Hymenoptera `002cc26e…` / `09bc986b…`; FAMILY_Diptera `cf0500dd…` / `0da6bf31…`.
 
 Weaknesses we report rather than average away:
 
-- **Hemiptera test F1 is 0.** There are only 2 Hemiptera crops in the out-of-state test set (133 in train), so the score is both zero and nearly uninformative.
-- **No Diptera in test at all.** The test set has 0 Diptera crops, so the ORDER router was never tested on flies, and the FAMILY_Diptera router has no test split. It can be reported on CA validation only, which is not out-of-state.
-- **The test set is skewed**: Lepidoptera 118 and Hymenoptera 87 of 231. The baseline (always Lepidoptera) has macro-F1 ≈ 0.14 over the five labels present.
-- Labels are GBIF identifications (silver), so this measures routing to what the collections say, not verified taxonomy.
-
-[V4: per-class F1 table, val vs test, weights tensor sha and resolvability result for each run, DECISION.md path `daisy/results/DAISY-BB-004/v4/DECISION.md`.]
+- **The order router transfers; the family router does not.** Hymenoptera families score 0.88 in California and 0.17 outside it, just under the 0.10 margin. Formicidae, Vespidae and other score 0 on test. Until it is retrained with out-of-state data, it should be treated as California-only: in an escalation ladder it hands off rather than decides.
+- **Hemiptera test F1 is 0.** There are only 2 Hemiptera crops in the out-of-state test set (133 in train, val F1 0.88), so the score is both zero and nearly uninformative.
+- **No Diptera in test at all.** The ORDER test covers 5 of its 6 classes, so the router was never tested on flies out of state, and FAMILY_Diptera (val 0.97) has no test split and no verdict.
+- **The test set is skewed**: Lepidoptera 118 and Hymenoptera 87 of 231.
+- Labels are GBIF identifications (silver), so this measures routing to what the collections say, not verified taxonomy. The runs were short (1–4 minutes each on MPS).
 
 ### 5.4 Sizing methods on museum photos
 
@@ -147,7 +151,7 @@ Against the teacher, a distilled student and FastSAM have median relative size d
 - No hardware run on real specimens yet; apertures, tower geometry and damage parameters are placeholders or photo estimates.
 - Every real-photo label is silver (YOLOE teacher or GBIF identification). No human-reviewed test set.
 - Eight result realizations are custody-broken; 001b needs a v7 rerun with the fixed kernel before it can count as evidence.
-- Small, skewed out-of-state test sets (Nevada n=8; 004 test has no Diptera, 2 Hemiptera).
+- Small, skewed out-of-state test sets (Nevada n=8; 004 test has no Diptera, 2 Hemiptera). The 004 family router does not transfer out of California.
 - 004 ran on Apple MPS rather than the preregistered Kaggle GPU (amendments 1–2); weights are numerically different from a GPU run, and their tensor hash is their identity.
 - Parts are concepts. Cost figures are retail estimates for printed parts only; the sieving hardware is not yet priced.
 - Much of the code and text was written by an AI agent (Claude) under the author's direction; see the statement below.
