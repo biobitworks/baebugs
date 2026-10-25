@@ -2,7 +2,7 @@
 
 Every file is an *atom* with a claim, a licence in context, a status and a hash (full list for agents: [`kg/aok.json`](../kg/aok.json)). This page is the short version. It records what the licences say; it is not legal advice.
 
-**AoK root:** `19ccaf4a5d96704713537a2e125d47fe128447ff91e1b0ce722db821ff399c8f` · 739 atoms · OWN 677 · OWN+TERMS 42 · THIRD 20
+**AoK root:** `56c6e935de80f6c4ab44fb843cfd1f1a64bfbcd48ecf10a18e03d1528b961b62` · 745 atoms · OWN 683 · OWN+TERMS 42 · THIRD 20
 
 | claim | meaning |
 |---|---|
@@ -15,19 +15,19 @@ Every file is an *atom* with a claim, a licence in context, a status and a hash 
 | module | atoms | claim | outside terms that apply here | module root |
 |---|---|---|---|---|
 | custody-ledgers | 33 | OWN 33 | none | `8f48e4f879b1` |
-| daisy-protocols | 14 | OWN 14 | none | `5930b002f718` |
+| daisy-protocols | 17 | OWN 17 | none | `401e52c7913d` |
 | daisy-results | 8 | OWN+TERMS 8 | gbif-media, ultralytics | `72b5fef9fe0e` |
 | dashboards | 16 | OWN 16 | none | `350619827ff6` |
-| docs | 21 | OWN 21 | none | `b36b5f07dd87` |
-| kaggle-kernels | 10 | OWN+TERMS 10 | gbif-media, ultralytics | `139583b71278` |
+| docs | 22 | OWN 22 | none | `c4ef6cf883b8` |
+| kaggle-kernels | 10 | OWN+TERMS 10 | gbif-media, ultralytics | `ff1a3e54c36a` |
 | knowledge-graph | 5 | OWN+TERMS 5 | gbif-media | `f76004ad5e8e` |
 | lab-parts | 106 | OWN 106 | none | `a974e369a4d0` |
 | mvp-site | 30 | OWN 30 | none | `e9559d478120` |
 | notebooks | 16 | OWN 16 | none | `a20c483ea79c` |
 | opentrons-modules | 13 | OWN+TERMS 13 | opentrons | `40b680b50dba` |
-| python-package | 77 | OWN 71, OWN+TERMS 6 | ultralytics | `c33e2f1d756f` |
+| python-package | 78 | OWN 72, OWN+TERMS 6 | ultralytics | `2505892e0a19` |
 | repo-meta | 12 | OWN 12 | none | `4581a5c08f5c` |
-| tests | 32 | OWN 32 | none | `4857f338963b` |
+| tests | 33 | OWN 33 | none | `e1bcd696a8ee` |
 | toy-insects | 326 | OWN 326 | none | `6f32a71b22ca` |
 
 ## Not ours (used, credited, never claimed)

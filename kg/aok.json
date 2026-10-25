@@ -1,5 +1,5 @@
 {
- "atoms": 739,
+ "atoms": 745,
  "external": [
   {
    "claim": "THIRD",
@@ -273,8 +273,8 @@
  "leaves": [
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:.claude-plugin/plugin.json",
    "kind": "meta",
    "leaf": "853442a0b8909bb1eb4b5e4ddbed4f4b2493a4ce7b87976fd928bdefd7458230",
@@ -287,8 +287,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:.github/ISSUE_TEMPLATE/contest.yml",
    "kind": "meta",
    "leaf": "d247677a5237e1d27afa3748c27612557430062cc1384260614a72f58e4964da",
@@ -329,8 +329,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 4,
-   "commits": 4,
+   "claude_coauthored_commits": 5,
+   "commits": 5,
    "id": "leaf:README.md",
    "kind": "meta",
    "leaf": "40a6e7237505711fe41b9f4092ebad8c0a7c4736569c4907c1eee36aa590b84a",
@@ -387,8 +387,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 2,
-   "commits": 2,
+   "claude_coauthored_commits": 3,
+   "commits": 3,
    "id": "leaf:baebugs/aok.py",
    "kind": "code",
    "leaf": "d4096529c2eaa075f68c0d8f344181cb30ffcdceb8e4d294f659a8914a09e29f",
@@ -495,6 +495,20 @@
    "path": "baebugs/cli.py",
    "sha256": "a98577c7ace6864f6b0ad00f0e0c24cc56c63146aacc1bfdfaaf42bf8f2ec339",
    "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:baebugs/compare.py",
+   "kind": "code",
+   "leaf": "e5ecabfb02291042c1af9dd6246762b3713ccd7ea661bc27a03b35d25e7e44b3",
+   "licence": "MIT",
+   "module": "python-package",
+   "path": "baebugs/compare.py",
+   "sha256": "a2b3e0f8504715591f3719094eef8d2ec37f8d108fcdc1aad78fb9ac5f15b3cc",
+   "status": "tested",
    "terms": []
   },
   {
@@ -639,8 +653,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 2,
-   "commits": 2,
+   "claude_coauthored_commits": 3,
+   "commits": 3,
    "id": "leaf:baebugs/doctor.py",
    "kind": "code",
    "leaf": "7fe1f818f787f2c7f7949d408b9f361da423a0525e523b5f76e84890fdf3c7cf",
@@ -737,8 +751,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:baebugs/graph_mcp.py",
    "kind": "code",
    "leaf": "30471b9ce4bd9581c73f59bdf9628377872d3f681f9d4348184fdaa7b6c0bbe9",
@@ -981,15 +995,15 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:baebugs/mvp.py",
    "kind": "code",
-   "leaf": "796b273759292dfbec4833936410dffd459015c62bf3b246b02c9bc61701f3d4",
+   "leaf": "0d9fbcb2e80555c7b431152badbff1ac4f8954d8291fd58ba6770e1ff7c15471",
    "licence": "MIT",
    "module": "python-package",
    "path": "baebugs/mvp.py",
-   "sha256": "ddbed62081f14ba765af448fefa4a4db75df9c343c02642234a318f3c7e34ab3",
+   "sha256": "af092b0d249492cdac6474810130dfce042884abbeeeb33335c4f8335c192488",
    "status": "tested",
    "terms": []
   },
@@ -1433,8 +1447,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:bin/baebugs.mjs",
    "kind": "meta",
    "leaf": "f47a18e48ccf939fcb06df639230834891547e33f1d6f0851543a5ae50714f47",
@@ -1596,6 +1610,48 @@
    "module": "daisy-protocols",
    "path": "daisy/DAISY-BB-004-prereg-amendment-1.md",
    "sha256": "58d7a9c79cc639ce6db59f3cf9ab3daeb1109dc859ec610e8cf2accf4ff89e52",
+   "status": "frozen",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:daisy/DAISY-BB-004-prereg-amendment-2.md",
+   "kind": "protocol",
+   "leaf": "6bdd58d13d54a1683aa3e5e6c7172b35dd13b96335bbb4190c28e8187f348f57",
+   "licence": "MIT",
+   "module": "daisy-protocols",
+   "path": "daisy/DAISY-BB-004-prereg-amendment-2.md",
+   "sha256": "2c99e44bb68834d4523824d2e5621ef31587b1a6dc2ed469cdef1736f0050e5f",
+   "status": "frozen",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:daisy/DAISY-BB-004-prereg-amendment-3.md",
+   "kind": "protocol",
+   "leaf": "280c68dae27b6cfb057c4a630d8f54368c02c4814550ee0e07776c40088678f9",
+   "licence": "MIT",
+   "module": "daisy-protocols",
+   "path": "daisy/DAISY-BB-004-prereg-amendment-3.md",
+   "sha256": "065bbaef95d6c5c57d182ddf3b1b23378b68a09b13dc87a7de9e511ae1a12706",
+   "status": "frozen",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:daisy/DAISY-BB-004-prereg-amendment-4.md",
+   "kind": "protocol",
+   "leaf": "2bec92ed86475c0ce8dba33fbbce68eabf93b14b66813f789e403f85f921b7cd",
+   "licence": "MIT",
+   "module": "daisy-protocols",
+   "path": "daisy/DAISY-BB-004-prereg-amendment-4.md",
+   "sha256": "cd1a03ad5a72f91b8b7709a0201b6eb3dc0362ad62a1f23b35942a4d51d5d89d",
    "status": "frozen",
    "terms": []
   },
@@ -2607,6 +2663,20 @@
    "claim": "OWN",
    "claude_coauthored_commits": 0,
    "commits": 0,
+   "id": "leaf:docs/byo_compare_example.json",
+   "kind": "doc",
+   "leaf": "98e2529692c54dec56632a26dc74f122518c92d01e51ba155d52bf48826965da",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/byo_compare_example.json",
+   "sha256": "0f2a78ce47c3ddc11122b5d45e69de1d8b634c6e1d0797cd548b182ec3e5992d",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:index.html",
    "kind": "meta",
    "leaf": "f42c9af3613d7caa02ac0626baeab2f692006ac819c7e055de7b415220040063",
@@ -2683,15 +2753,15 @@
   },
   {
    "claim": "OWN+TERMS",
-   "claude_coauthored_commits": 2,
-   "commits": 2,
+   "claude_coauthored_commits": 5,
+   "commits": 5,
    "id": "leaf:kaggle/daisy_bb_004/daisy_bb_004.ipynb",
    "kind": "code",
-   "leaf": "1da5b1d3246fef94cc4763474518aad6ba1170e9fba68843be492263d7741962",
+   "leaf": "298f52a33843cce38bfa39f94195879be41ec9d97595beaef1e852b87b4d98a6",
    "licence": "MIT + gbif-media, ultralytics terms",
    "module": "kaggle-kernels",
    "path": "kaggle/daisy_bb_004/daisy_bb_004.ipynb",
-   "sha256": "6dea6c419106ce0284a360d9481789e6f718068cbac580c1d3e4cd1d7c1eb63e",
+   "sha256": "f99e602ec19466c59aabdc258c4b91f39d1f4799291c8ca9413198f12da3d35c",
    "status": "built",
    "terms": [
     "ext:gbif-media",
@@ -2765,15 +2835,15 @@
   },
   {
    "claim": "OWN+TERMS",
-   "claude_coauthored_commits": 2,
-   "commits": 2,
+   "claude_coauthored_commits": 5,
+   "commits": 5,
    "id": "leaf:kaggle/make_taxon_kernel.py",
    "kind": "code",
-   "leaf": "fa5583ca99ab6d1a6a17bd5d8484bcfad6139328bf9282e38f4846da716aff93",
+   "leaf": "c6f3546f7aee9d513181b4e38e6ecabc410e035373196ee7ca92d0314afccbec",
    "licence": "MIT + ultralytics terms",
    "module": "kaggle-kernels",
    "path": "kaggle/make_taxon_kernel.py",
-   "sha256": "effacdf6aca3594beee13f8dc760b734424d67cd8d13ef01916152743cd31754",
+   "sha256": "35c3aa14a95ba00247d0826f805bf9795e45ae366d16377481a81575541b3c30",
    "status": "built",
    "terms": [
     "ext:ultralytics"
@@ -3447,8 +3517,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:package.json",
    "kind": "meta",
    "leaf": "cc8cbe5ee8fb006bc9ae09ffb90d6513f70e4b120290698527c93c772a643db0",
@@ -9509,8 +9579,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 5,
-   "commits": 6,
+   "claude_coauthored_commits": 6,
+   "commits": 7,
    "id": "leaf:pyproject.toml",
    "kind": "meta",
    "leaf": "d9ed181e03d88e0b9ae8b8ce6e121dee404772f3d68f7eeb0a17a7c1a2698e0f",
@@ -9943,8 +10013,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:site/mvp/index.html",
    "kind": "page",
    "leaf": "d35009356954b2cda8910e09c896902311146e8b7be10372fa6239c7750399ad",
@@ -9971,8 +10041,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:skills/baebugs-graph/SKILL.md",
    "kind": "meta",
    "leaf": "778c6ec25d1b06672eeb1f8119b44d4166bc48163a88e6600fb23c8d770f5778",
@@ -10050,6 +10120,20 @@
    "module": "tests",
    "path": "tests/test_calbug.py",
    "sha256": "8a1b5f5018da5aef3ba1fd0cd367af91810c31c457d0dfd1919904083bab6771",
+   "status": "tested",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:tests/test_compare.py",
+   "kind": "test",
+   "leaf": "00b85283da3072d16b5ee6cd68e45860ceb44f8dfaaa057c370e0e86f1cc2656",
+   "licence": "MIT",
+   "module": "tests",
+   "path": "tests/test_compare.py",
+   "sha256": "6faf1aeb87188fc494e2d9c3e3b7509c3fcf76e1b4f7526baa03b24ffcfd1e25",
    "status": "tested",
    "terms": []
   },
@@ -10279,8 +10363,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:tests/test_mvp.py",
    "kind": "test",
    "leaf": "2b8a51947f611d11e43eeb79321754629e2046e16c84e32f4f3f95d406c06e2f",
@@ -10451,14 +10535,14 @@
    "terms": []
   },
   "daisy-protocols": {
-   "atoms": 14,
+   "atoms": 17,
    "claims": {
-    "OWN": 14
+    "OWN": 17
    },
    "id": "module:daisy-protocols",
-   "root": "5930b002f718cc8f9291edb6e980c1304892300044b4f90cdd23b77913dc8d41",
+   "root": "401e52c7913d2c364ed14e3c4f13694a3ed0bbc670b50b718e57ad49ae55a313",
    "status": {
-    "frozen": 14
+    "frozen": 17
    },
    "terms": []
   },
@@ -10490,14 +10574,14 @@
    "terms": []
   },
   "docs": {
-   "atoms": 21,
+   "atoms": 22,
    "claims": {
-    "OWN": 21
+    "OWN": 22
    },
    "id": "module:docs",
-   "root": "b36b5f07dd87945b029815485f311b47030ba602e89eb725b07b986d8dc83d60",
+   "root": "c4ef6cf883b8fdbd82898925d2e9bc782ba24a05111965fafe0e309bec40a40a",
    "status": {
-    "built": 21
+    "built": 22
    },
    "terms": []
   },
@@ -10507,7 +10591,7 @@
     "OWN+TERMS": 10
    },
    "id": "module:kaggle-kernels",
-   "root": "139583b712787992dd0e107d94f7217f47f4b391d72625c90a89c1636da64523",
+   "root": "ff1a3e54c36a7e6e7a6439cfeef410da81e3093be6b2f650eb4a4bb65fd72868",
    "status": {
     "built": 10
    },
@@ -10581,16 +10665,16 @@
    ]
   },
   "python-package": {
-   "atoms": 77,
+   "atoms": 78,
    "claims": {
-    "OWN": 71,
+    "OWN": 72,
     "OWN+TERMS": 6
    },
    "id": "module:python-package",
-   "root": "c33e2f1d756fac420bb4493ae133649d6c173d26205899f17b927f4fa7110824",
+   "root": "2505892e0a19eff4fd35a193a80bbf896f1cd4d57b7c52091f11b98311a2e322",
    "status": {
     "built": 53,
-    "tested": 24
+    "tested": 25
    },
    "terms": [
     "ext:ultralytics"
@@ -10609,14 +10693,14 @@
    "terms": []
   },
   "tests": {
-   "atoms": 32,
+   "atoms": 33,
    "claims": {
-    "OWN": 32
+    "OWN": 33
    },
    "id": "module:tests",
-   "root": "4857f338963b6e3a9d9cad014bdf9b3d189f04d2f789b221650c0482605e4d35",
+   "root": "e1bcd696a8ee9d092ca8e41d051a2fe932f77e0bb4a1bc29dbe308e33ae9c360",
    "status": {
-    "tested": 32
+    "tested": 33
    },
    "terms": []
   },
@@ -10634,9 +10718,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "19ccaf4a5d96704713537a2e125d47fe128447ff91e1b0ce722db821ff399c8f",
+ "root": "56c6e935de80f6c4ab44fb843cfd1f1a64bfbcd48ecf10a18e03d1528b961b62",
  "totals": {
-  "OWN": 677,
+  "OWN": 683,
   "OWN+TERMS": 42,
   "THIRD": 20
  },

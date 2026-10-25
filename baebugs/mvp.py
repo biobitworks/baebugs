@@ -157,6 +157,11 @@ def main(argv=None):
     if argv and argv[0] == "prove":
         print(json.dumps(prove(load(), json.loads(Path(argv[1]).read_text())), indent=1))
         return 0
+    if argv and argv[0] == "compare":
+        from .compare import compare
+        other = json.loads(Path(argv[1]).read_text())
+        print(json.dumps(compare(load(argv[2]) if len(argv) > 2 else load(), other, "claude", "byo"), indent=1))
+        return 0
     if argv and argv[0] == "fco":
         print(json.dumps(fco_of(argv[1:]), indent=1))
         return 0

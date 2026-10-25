@@ -1937,11 +1937,11 @@
 {
 "claim": "OWN",
 "kind": "code",
-"leaf": "796b273759292dfbec4833936410dffd459015c62bf3b246b02c9bc61701f3d4",
+"leaf": "0d9fbcb2e80555c7b431152badbff1ac4f8954d8291fd58ba6770e1ff7c15471",
 "licence": "MIT",
 "module": "python-package",
 "path": "baebugs/mvp.py",
-"sha256": "ddbed62081f14ba765af448fefa4a4db75df9c343c02642234a318f3c7e34ab3",
+"sha256": "af092b0d249492cdac6474810130dfce042884abbeeeb33335c4f8335c192488",
 "status": "tested"
 },
 {
@@ -3102,6 +3102,16 @@
 "module": "docs",
 "path": "docs/bench/13.jpg",
 "sha256": "46faf045cbac39537e54c94ce02092eacad304837a3494c9ef682cbbd007b998",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "98e2529692c54dec56632a26dc74f122518c92d01e51ba155d52bf48826965da",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/byo_compare_example.json",
+"sha256": "0f2a78ce47c3ddc11122b5d45e69de1d8b634c6e1d0797cd548b182ec3e5992d",
 "status": "built"
 },
 {
@@ -8750,14 +8760,14 @@
 "terms": []
 },
 "docs": {
-"atoms": 21,
+"atoms": 22,
 "claims": {
-"OWN": 21
+"OWN": 22
 },
 "id": "module:docs",
-"root": "b36b5f07dd87945b029815485f311b47030ba602e89eb725b07b986d8dc83d60",
+"root": "c4ef6cf883b8fdbd82898925d2e9bc782ba24a05111965fafe0e309bec40a40a",
 "status": {
-"built": 21
+"built": 22
 },
 "terms": []
 },
@@ -8847,7 +8857,7 @@
 "OWN+TERMS": 6
 },
 "id": "module:python-package",
-"root": "4a774dbb5b871f28b714464a1b6b3bf1ebd4a4fcbeda665a6f45a091d27dddbb",
+"root": "2505892e0a19eff4fd35a193a80bbf896f1cd4d57b7c52091f11b98311a2e322",
 "status": {
 "built": 53,
 "tested": 25
@@ -9516,9 +9526,9 @@
 ]
 }
 ],
-"root": "93f50060d21e9294da2657f6662f7a2e6226c905b945c4beb41c090aced65e42",
+"root": "0fac28939a78563c22ec7814eb671805e4d5087b8ac6a7e5597962adab569871",
 "roots": {
-"aok": "da159575f3aa0062188b4beab0ff4185e0bb88800ec2bf489b080e40fb77016d",
+"aok": "56c6e935de80f6c4ab44fb843cfd1f1a64bfbcd48ecf10a18e03d1528b961b62",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
 "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7",
 "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5",
@@ -13731,7 +13741,7 @@
 }
 ],
 "totals": {
-"OWN": 682,
+"OWN": 683,
 "OWN+TERMS": 42,
 "THIRD": 20
 },
