@@ -1,7 +1,7 @@
 {
   "edge_count": 135,
-  "node_count": 112,
-  "root": "a44ed1482566a0279448e158c3fd6555a8cdf53df2459c71655949f5fc029d4d",
+  "node_count": 247,
+  "root": "4faa8c3c48f910748d91c87753e529a1c3104defe7e90666066c05f647a03bcf",
   "schema": "baebugs.aok.sources.v1",
   "source_git_commit": "3a1806000ec4ca38e25f2749712d54b82ef612af",
   "source_hashes": {

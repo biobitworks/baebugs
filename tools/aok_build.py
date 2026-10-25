@@ -134,9 +134,23 @@ def build_records():
         "daisy/results/DAISY-BB-002a/v2/events.jsonl","",{"root":TRAIN,"signed":False})
     edge("breakpoint:002a41","experiment:002a","INCLUDES_SOURCE_EVENTS")
     edge("breakpoint:cad14","breakpoint:002a41","DECLARED_CROSS_LANE_REFERENCE")
+    # Each declared FCG edge is a separate immutable addressable *atom* as well.
+    # This makes the Merkle root commit both scientific objects and their typed
+    # declared graph relationships. Edges remain noncausal until independently tested.
+    edge_snapshot=sorted(e,key=lambda v:(v["from"],v["to"],v["type"],v["status"]))
+    for relation in edge_snapshot:
+        payload={k:relation[k] for k in ("from","to","type","status")}
+        edge_hash=h(canon(payload))
+        node_id="fcg-edge:"+edge_hash
+        add(node_id,"fcg_edge",
+            payload["type"]+" / "+payload["from"]+" → "+payload["to"],
+            "Typed relationship proposed or sourced from repository declarations; causal effect NOT_ESTABLISHED.",
+            "baebugs","DECLARED_NOT_CAUSAL","ENDPOINT_SPECIFIC","DECLARED_NOT_CAUSAL",
+            "","",{"relationship":payload,"relationship_sha256":edge_hash})
+        relation["atom_id"]=node_id
     ids={x["id"] for x in n}
-    if any(x["from"] not in ids or x["to"] not in ids for x in e):raise ValueError("DANGLING_EDGE")
-    return sorted(n,key=lambda v:v["id"]),sorted(e,key=lambda v:(v["from"],v["to"],v["type"])),dict(sorted(files.items()))
+    if any(x["from"] not in ids or x["to"] not in ids or x["atom_id"] not in ids for x in e):raise ValueError("DANGLING_EDGE")
+    return sorted(n,key=lambda v:v["id"]),edge_snapshot,dict(sorted(files.items()))
 def tree(nodes):
     leaf=[h(b"baebugs:aok:leaf:v1\x00"+canon(n)) for n in nodes]
     proofs=[[] for _ in leaf]
@@ -186,8 +200,14 @@ def verify():
         if r["id"]!=n["id"] or r["sha256"]!=leaves[i] or not proof_ok(leaves[i],r["proof"],root):errors.append("INCLUSION_MISMATCH:"+n["id"])
         if n["fco_id"]!="fco:sha256:"+h(canon(n["content"])):errors.append("FCO_IDENTITY:"+n["id"])
         if n["occurrence_id"]!="occ:sha256:"+h(canon(n["context"])):errors.append("OCCURRENCE_IDENTITY:"+n["id"])
-    ids={n["id"] for n in reg["nodes"]}
-    if any(e["from"] not in ids or e["to"] not in ids for e in reg["edges"]):errors.append("DANGLING_EDGE")
+    lookup={n["id"]:n for n in reg["nodes"]};ids=set(lookup)
+    for edge in reg["edges"]:
+        if edge["from"] not in ids or edge["to"] not in ids or edge.get("atom_id") not in ids:
+            errors.append("DANGLING_EDGE");continue
+        atom=lookup[edge["atom_id"]]
+        payload={k:edge[k] for k in ("from","to","type","status")}
+        if atom["type"]!="fcg_edge" or atom["details"].get("relationship")!=payload or atom["details"].get("relationship_sha256")!=h(canon(payload)):
+            errors.append("EDGE_ATOM_MISMATCH:"+edge["atom_id"])
     for path,d in manifest["source_hashes"].items():
         if fpath(path)!=d:errors.append("SOURCE_DRIFT:"+path)
     return {"PASS":not errors,"root":root,"nodes":len(leaves),"edges":len(reg["edges"]),

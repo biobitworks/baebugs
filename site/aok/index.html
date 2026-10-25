@@ -54,9 +54,9 @@
       <div id="searchResults" class="resultlist" aria-label="Search results"></div>
     </aside>
     <section class="networkpanel panel" aria-label="Selected evidence neighborhood">
-     <div class="sectionbar"><div><h2>Knowledge graph</h2><p>Click a node or choose an item. Lines are declared links, not causal proof.</p></div><button id="centerGraph" class="quiet">Center</button></div>
+     <div class="sectionbar"><div><h2>Knowledge graph</h2><p>Click a node or choose an item. Each edge has its own inspectable Merkle leaf; declared links are not causal proof.</p></div><button id="centerGraph" class="quiet">Center</button></div>
      <div class="graphlegend"><span><i class="dot source"></i> Source</span><span><i class="dot part"></i> Part</span><span><i class="dot module"></i> Module</span><span><i class="dot claim"></i> Claim</span><span><i class="dot unknown"></i> Other</span></div>
-     <svg id="graph" class="graph" viewBox="0 0 610 395" role="group" aria-label="One-hop knowledge graph around selected item. Accessible item links listed on the right."></svg>
+     <svg id="graph" class="graph" viewBox="0 0 610 395" role="group" aria-label="One-hop knowledge graph around selected item. Each relationship is an independently addressable FCG leaf."></svg>
      <div class="minor">One-hop neighborhood · <span id="graphSubtitle">Waiting for data</span> · Full graph in <a href="data/graph.json">JSON</a></div>
     </section>
     <aside class="detailpanel panel" aria-label="Evidence inspection">

@@ -11,7 +11,7 @@ const get=id=>graph.nodes.find(n=>n.id===id);
 const text=(id,value)=>$(id).textContent=value==null?"UNKNOWN":String(value);
 const elt=(tag,value,cls)=>{const x=document.createElement(tag);if(value!=null)x.textContent=value;if(cls)x.className=cls;return x};
 const svg=(tag,attrs={})=>{const x=document.createElementNS("http://www.w3.org/2000/svg",tag);for(const[k,v]of Object.entries(attrs))x.setAttribute(k,String(v));return x};
-const linkages=id=>graph.edges.filter(e=>e.from===id||e.to===id).map(e=>({id:e.from===id?e.to:e.from,type:e.type,direction:e.from===id?"→":"←",status:e.status}));
+const linkages=id=>graph.edges.filter(e=>e.from===id||e.to===id).map(e=>({id:e.from===id?e.to:e.from,type:e.type,direction:e.from===id?"→":"←",status:e.status,atom_id:e.atom_id}));
 async function copy(s){await navigator.clipboard.writeText(s)}
 function copier(id,s){const b=$(id);b.textContent=s||"UNKNOWN";b.onclick=()=>copy(s).then(()=>{b.title="Copied";setTimeout(()=>b.title="Click to copy",1400)}).catch(()=>{b.title="Clipboard unavailable"})}
 function show(view){
@@ -46,7 +46,7 @@ function details(){
  const list=$("relationships");list.replaceChildren();
  for(const x of rel.slice(0,55)){
   const y=get(x.id),b=elt("button",null,"relation");
-  b.append(elt("b",y?.title||x.id),elt("span",x.direction+" "+x.type+" · "+x.status));b.onclick=()=>select(x.id);list.append(b)
+  b.append(elt("b",y?.title||x.id),elt("span",x.direction+" "+x.type+" · "+x.status));b.onclick=()=>select(x.id);list.append(b);if(x.atom_id){const leaf=elt("button","Inspect FCG leaf ↗","relation");leaf.onclick=()=>select(x.atom_id);list.append(leaf)}
  }
  const ex=$("detailExtra");ex.replaceChildren();ex.append(elt("div","Rights: "+n.rights),elt("div","Source exact SHA-256: "+(n.source_sha256||"UNKNOWN")),elt("pre",JSON.stringify(n.details,null,2),"snippet"));
  $("contestButton").onclick=()=>{$("contestNode").value=selected;show("challenge")}
@@ -70,6 +70,10 @@ async function verifyOne(id){
  const n=get(id),r=receipt.ordered_leaves.find(v=>v.id===id);
  if(!n||!r)return false;
  if(canonical(JSON.parse(r.canonical_utf8))!==canonical(n))return false;
+ if(canonical(JSON.parse(n.content_canonical_utf8))!==canonical(n.content))return false;
+ if(canonical(JSON.parse(n.context_canonical_utf8))!==canonical(n.context))return false;
+ if("fco:sha256:"+await sha(enc.encode(n.content_canonical_utf8))!==n.fco_id)return false;
+ if("occ:sha256:"+await sha(enc.encode(n.context_canonical_utf8))!==n.occurrence_id)return false;
  let x=await sha(join(enc.encode("baebugs:aok:leaf:v1\0"),enc.encode(r.canonical_utf8)));
  if(x!==r.sha256)return false;
  for(const p of r.proof){x=await sha(join(enc.encode("baebugs:aok:node:v1\0"),bytes(p.side==="left"?p.hash:x),bytes(p.side==="left"?x:p.hash)))}
@@ -79,6 +83,11 @@ async function verifyAll(){
  text("rootState","VERIFYING");
  try{if(graph.nodes.length!==receipt.size)throw Error("SIZE");
   for(const n of graph.nodes)if(!await verifyOne(n.id))throw Error(n.id);
+  for(const edge of graph.edges){
+   const atom=get(edge.atom_id);
+   const payload={from:edge.from,to:edge.to,type:edge.type,status:edge.status};
+   if(!atom||atom.type!=="fcg_edge"||canonical(atom.details.relationship)!==canonical(payload)||atom.details.relationship_sha256!==await sha(enc.encode(canonical(payload))))throw Error("FCG mismatch");
+  }
   text("rootState","PASS · "+receipt.size+" LEAVES");$("rootState").className="status";return true
  }catch(e){text("rootState","FAIL · "+e.message);$("rootState").className="status caution";return false}
 }

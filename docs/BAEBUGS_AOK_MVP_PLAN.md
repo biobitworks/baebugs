@@ -17,7 +17,7 @@ A \`source_path\` and its SHA-256 identify actual local input bytes. FCO id hash
 Build \`tools/aok_build.py\`:
 - read manifests for 20 trommel/vortex/arm STLs, 4 Opentrons STL adapters, filter registry, DAISY inventory, and source rules;
 - fail closed if any claimed part bytes do not equal recorded manifest SHA-256;
-- hash 112 node objects with canonical JSON + domain-separated SHA-256;
+- hash 112 content objects plus 135 distinct typed relationship atoms with canonical JSON + domain-separated SHA-256;
 - sort leaves by stable node ID and compute binary Merkle root, duplicate odd-final leaf, carry per-leaf sibling inclusion proof;
 - output root, graph, source manifest and machine-readable access interfaces;
 - **do not** treat this tree as an extension of the historical CAD14 MMR or DAISY experiment tree.
@@ -64,3 +64,6 @@ Catalog snapshots can be cached immutably with versioned names and canonical roo
 ### Safe Next Action
 
 Expert review of claims and licenses → obtain physical calibration and specimen recovery evidence → successor graph snapshot under documented new root. Do not rewrite predecessor.
+
+## FCG relationship-atom successor
+The initial 112-node root was superseded by an append-only successor: 135 declared relationships have independent content FCOs and ordered Merkle leaves, yielding 247 leaf identities. The predecessor root and bytes remain archived under docs/aok-predecessor-20261025/v2-nodes-only. This is not an MMR append to the predecessor tree; it is a new deterministic snapshot rooted in expanded source declarations.

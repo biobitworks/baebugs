@@ -8,7 +8,7 @@ aok=importlib.util.module_from_spec(spec);spec.loader.exec_module(aok)
 def test_complete_receipts_and_recomputed_tree():
     v=aok.verify()
     assert v["PASS"],v
-    assert v["nodes"]>=100 and v["edges"]>=100
+    assert v["nodes"]==247 and v["edges"]==135
     assert v["source_files_rehashed"]>=25
     r=aok.read("site/aok/data/root.json")
     assert r["root"]==v["root"]
@@ -67,3 +67,29 @@ def test_no_restricted_media_in_public_site():
     assert not list(site.rglob("*.tiff"))
     assert not list(site.rglob("*.fastq"))
     assert not list(site.rglob("*.fasta"))
+
+
+def test_every_fcg_relation_has_included_leaf():
+    g=aok.read("site/aok/data/graph.json")
+    r=aok.read("site/aok/data/root.json")
+    index={n["id"]:n for n in g["nodes"]}
+    assert len([n for n in g["nodes"] if n["type"]=="fcg_edge"])==135
+    for e in g["edges"]:
+        x=index[e["atom_id"]]
+        payload={k:e[k] for k in ("from","to","type","status")}
+        assert x["details"]["relationship"]==payload
+        assert x["details"]["relationship_sha256"]==aok.h(aok.canon(payload))
+        proof=next(z for z in r["ordered_leaves"] if z["id"]==e["atom_id"])
+        assert aok.proof_ok(proof["sha256"],proof["proof"],r["root"])
+
+def test_adversarial_relation_retcon_detection(monkeypatch):
+    read_orig=aok.read
+    def compromised(path):
+        g=read_orig(path)
+        if path=="site/aok/data/graph.json":
+            g["edges"][0]["type"]="SILENT_CAUSAL_CLAIM"
+        return g
+    monkeypatch.setattr(aok,"read",compromised)
+    report=aok.verify()
+    assert not report["PASS"]
+    assert any(s.startswith("EDGE_ATOM_MISMATCH:") for s in report["errors"])
