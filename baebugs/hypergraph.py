@@ -51,10 +51,11 @@ def build(repo="."):
             edges.append(_edge("amendment", [pid, f"protocol:{P['amends']['protocol']}"],
                                {"reason": P["amends"]["reason"][:160]}))
         for run in P["runs"]:
-            members = run["train"] + run["val"]
-            edges.append(_edge("recipe", [pid, f"run:{P['id']}:{run['name']}",
+            members = run.get("train", []) + run.get("val", [])
+            data_nodes = ([f"dataset:{P['bundle']}", f"root:{P['data_root']}"] if P.get("data_root") else [])
+            edges.append(_edge("recipe", [pid, f"run:{P['id']}:{run['name']}", *data_nodes,
                                           *[f"dataset:{m}" for m in members],
-                                          *[f"root:{P['roots'].get(m)}" for m in members]],
+                                          *[f"root:{P.get('roots', {}).get(m)}" for m in members]],
                                {"settings": {k: v for k, v in P["settings"].items() if k != "workers"}}))
     truth = json.loads((R / "daisy/TRUTH-001.json").read_text())
     tnode = f"truth:{truth['id']}"
