@@ -1,6 +1,6 @@
 {
  "schema": "baebugs.daisy.datasets.v1",
- "created": "2026-10-25T07:30:16Z",
+ "created": "2026-10-25T08:00:38Z",
  "datasets": {
   "gbif_ca_2": {
    "dataset": "gbif_ca_2",
@@ -33,7 +33,7 @@
     "unlisted": [],
     "missing": []
    },
-   "seconds": 8.8,
+   "seconds": 9.0,
    "status": "VERIFIED"
   },
   "gbif_az": {
@@ -75,7 +75,7 @@
     "unlisted": [],
     "missing": []
    },
-   "seconds": 2.8,
+   "seconds": 2.6,
    "status": "FAILED"
   },
   "gbif_nv": {
@@ -109,7 +109,7 @@
     "unlisted": [],
     "missing": []
    },
-   "seconds": 5.3,
+   "seconds": 5.1,
    "status": "VERIFIED"
   },
   "gbif_or": {
@@ -176,7 +176,7 @@
     "unlisted": [],
     "missing": []
    },
-   "seconds": 3.8,
+   "seconds": 3.9,
    "status": "VERIFIED"
   },
   "pseudo_specimens_r3_real": {
@@ -220,7 +220,7 @@
    "synthetic": false,
    "note": null,
    "examples": {},
-   "seconds": 4.2,
+   "seconds": 4.0,
    "lineage": {
     "derived_items": 2551,
     "found_in_source": 2551,
@@ -316,7 +316,7 @@
    "synthetic": false,
    "note": null,
    "examples": {},
-   "seconds": 2.4,
+   "seconds": 2.3,
    "lineage": {
     "derived_items": 2551,
     "found_in_source": 2551,
@@ -364,7 +364,7 @@
    "synthetic": false,
    "note": null,
    "examples": {},
-   "seconds": 2.9,
+   "seconds": 2.8,
    "lineage": {
     "derived_items": 2551,
     "found_in_source": 2551,
@@ -410,7 +410,7 @@
    "synthetic": true,
    "note": null,
    "examples": {},
-   "seconds": 0.9,
+   "seconds": 0.8,
    "status": "VERIFIED"
   },
   "synth_1_30_r3_real": {
@@ -448,7 +448,7 @@
    "synthetic": true,
    "note": null,
    "examples": {},
-   "seconds": 0.9,
+   "seconds": 0.8,
    "status": "VERIFIED"
   },
   "synth_seg": {
@@ -628,7 +628,7 @@
    "synthetic": false,
    "note": "v1 pseudo-labels marked barcodes/labels as insects; kept as a negative record",
    "examples": {},
-   "seconds": 1.4,
+   "seconds": 1.3,
    "status": "REJECTED"
   },
   "dataone_cib_raw": {
@@ -692,21 +692,21 @@
    "path": "/Volumes/magicBLACKbox/baebugs/datasets/r3_ca",
    "kind": "yolo_seg",
    "role": "train",
-   "files": 3938,
-   "bytes": 1534852238,
-   "merkle_root": "d7e2716853d723df165e1d461b3dd10f6dcd46685ef4d2eb4cf7cc62fadad9ff",
+   "files": 4682,
+   "bytes": 1910833487,
+   "merkle_root": "7f165212b10035e3dda9d099b59ce6da8ca2ea270c2d09f8d049ce9abf9e4fbe",
    "checks": {
     "splits": {
      "train": {
-      "images": 1651,
-      "labels": 1651,
-      "objects": 1685,
+      "images": 1970,
+      "labels": 1970,
+      "objects": 2015,
       "orphan_labels": 0
      },
      "val": {
-      "images": 316,
-      "labels": 316,
-      "objects": 328,
+      "images": 369,
+      "labels": 369,
+      "objects": 381,
       "orphan_labels": 0
      }
     },
@@ -725,10 +725,10 @@
    "synthetic": false,
    "note": null,
    "examples": {},
-   "seconds": 2.8,
+   "seconds": 3.2,
    "lineage": {
-    "derived_items": 1967,
-    "found_in_source": 1967,
+    "derived_items": 2339,
+    "found_in_source": 2339,
     "orphans": 0,
     "orphan_examples": [],
     "split_crossings": 0,
@@ -741,15 +741,15 @@
    "path": "/Volumes/magicBLACKbox/baebugs/datasets/holdout_az",
    "kind": "yolo_seg",
    "role": "domain_holdout",
-   "files": 144,
-   "bytes": 58330254,
-   "merkle_root": "fada9c4fe98886fb0f49dc60af7d2b9131554c5159f2f2a5deed551f2b9b8b69",
+   "files": 148,
+   "bytes": 61053118,
+   "merkle_root": "16187b8f389891c02a35085814e30240d0bd51cf6dc375d56d78a8acf49b26ec",
    "checks": {
     "splits": {
      "val": {
-      "images": 70,
-      "labels": 70,
-      "objects": 72,
+      "images": 72,
+      "labels": 72,
+      "objects": 74,
       "orphan_labels": 0
      }
     },
@@ -769,8 +769,8 @@
    "examples": {},
    "seconds": 0.1,
    "lineage": {
-    "derived_items": 70,
-    "found_in_source": 70,
+    "derived_items": 72,
+    "found_in_source": 72,
     "orphans": 0,
     "orphan_examples": [],
     "split_crossings": 0,
@@ -783,15 +783,15 @@
    "path": "/Volumes/magicBLACKbox/baebugs/datasets/holdout_nv",
    "kind": "yolo_seg",
    "role": "domain_holdout",
-   "files": 16,
-   "bytes": 4989690,
-   "merkle_root": "31fc7243534fdeb0ca2c158631d219a0b6fc23966ed34ebca8fab359c063150f",
+   "files": 20,
+   "bytes": 7769754,
+   "merkle_root": "c8169e2e0bd5b8e35ee8cbe523f943b2999a40ce5aadbd47d6095b08a1e88247",
    "checks": {
     "splits": {
      "val": {
-      "images": 6,
-      "labels": 6,
-      "objects": 7,
+      "images": 8,
+      "labels": 8,
+      "objects": 9,
       "orphan_labels": 0
      }
     },
@@ -811,8 +811,8 @@
    "examples": {},
    "seconds": 0.0,
    "lineage": {
-    "derived_items": 6,
-    "found_in_source": 6,
+    "derived_items": 8,
+    "found_in_source": 8,
     "orphans": 0,
     "orphan_examples": [],
     "split_crossings": 0,
@@ -825,15 +825,15 @@
    "path": "/Volumes/magicBLACKbox/baebugs/datasets/holdout_or",
    "kind": "yolo_seg",
    "role": "domain_holdout",
-   "files": 164,
-   "bytes": 117290210,
-   "merkle_root": "5834dd0c4b075c5d5498bb476c11b6ed3b64efb4025e6c0e12a3d5ca2375af91",
+   "files": 268,
+   "bytes": 167317709,
+   "merkle_root": "7d7fddd381bdfaf514bcd83e8c3ea774951b29038abffe2780226b1fa5b3a486",
    "checks": {
     "splits": {
      "val": {
-      "images": 80,
-      "labels": 80,
-      "objects": 86,
+      "images": 132,
+      "labels": 132,
+      "objects": 148,
       "orphan_labels": 0
      }
     },
@@ -851,10 +851,10 @@
    "synthetic": false,
    "note": null,
    "examples": {},
-   "seconds": 0.2,
+   "seconds": 0.3,
    "lineage": {
-    "derived_items": 80,
-    "found_in_source": 80,
+    "derived_items": 132,
+    "found_in_source": 132,
     "orphans": 0,
     "orphan_examples": [],
     "split_crossings": 0,
@@ -924,7 +924,7 @@
    "synthetic": true,
    "note": null,
    "examples": {},
-   "seconds": 0.2,
+   "seconds": 0.1,
    "status": "VERIFIED"
   },
   "gbif_manifests": {
@@ -951,8 +951,8 @@
  },
  "global_leakage": {
   "train_ids": 2162,
-  "val_ids": 534,
-  "train_val_overlap": 134,
+  "val_ids": 582,
+  "train_val_overlap": 182,
   "overlap_examples": [
    "1317334061: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
    "1317671674: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']",
@@ -964,5 +964,5 @@
    "1977822792: train in ['multires_mp_0.3', 'multires_mp_1', 'multires_mp_3', 'pseudo_specimens_r3_real'], val in ['holdout_or']"
   ]
  },
- "root": "8f9e8b33f9ad54c3d6c051437dcd2c84ea1a7eb70d726d2631aa05cc170f45e8"
+ "root": "ab0c6de78eae7f38448bc711264ebdbcb334c2c390ac737d7c028286ef6bafa8"
 }
