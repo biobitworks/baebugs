@@ -26,5 +26,19 @@ One page to click through everything we submit. Status as of 21:35 UTC. **Works*
 | 20 | Preprint draft | https://github.com/biobitworks/baebugs/blob/main/docs/preprint/baebugs_preprint.md | Works |
 | 21 | Licensing | https://github.com/biobitworks/baebugs/blob/main/NOTICE.md | Works |
 | 22 | New slide deck + live demo (team Drive folder) | https://drive.google.com/drive/folders/11-WYJ-ADuBkXb53xUPbTeefuBf64radz | Outside the repo: not reviewed here, not hashed |
+| 23 | Full lab stack deck, 14 slides (.pptx for Google Slides, from the team template) | https://github.com/biobitworks/baebugs/blob/main/docs/slides/baebugs_full_lab_stack.pptx | Works. Says 25 breaks |
+| 24 | Live: evidence workcell (MVP graph, bench twin, Protocol Board, prove/contest) | https://baebugs-lab-workcell.vercel.app/ | Vercel production alias |
+| 25 | Live: evidence lab (AoK/FCG explorer, licences, contest) | https://baebugs-evidence-lab.vercel.app/ | Vercel production alias |
+| 26 | Live: CAD custody workcell (OpenSCAD tower, browser-recomputed MMR) | https://baebugs-cad-custody.vercel.app/ | Vercel production alias |
+| 27 | Google Slides link submitted on the form | [add after upload] | Pending |
+| 28 | YouTube (unlisted) demo link | [add after upload] | Pending |
+
+Agents read the same graph pack (`site/mvp/mvp.json`):
+
+```
+npx github:biobitworks/baebugs get root
+baebugs-graph get root
+python -m baebugs.graph_mcp
+```
 
 Regenerate the story page after any data change: `python site/story/build_story.py`.
