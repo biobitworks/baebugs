@@ -15,7 +15,7 @@
 
 Insect bulk samples are sorted by hand before anything can be imaged, picked or barcoded. BioKEA's Track A asks for robust sample preparation, "bags in, barcodes out". We built baebugs, the vision and planning lane for step 1 (sieving): a camera measures every body in a sample before sieving, a planner chooses a sieve stack and flow, a digital twin of the bench rejects physically invalid plans before hardware moves, and each fraction is handed to BioKEA BugPicker in its own file format. Around that lane we built the thing we think matters more for open science: a single knowledge graph in which every file, model, dataset, printed part and result is an "atom of knowledge" with a claim, a licence in context and a content hash, rolled up by Merkle roots from leaf to repository and appended to Merkle Mountain Range (MMR) ledgers. The same graph pack is served to a web page, a CLI, an MCP server, `npx` and a Claude plugin, so a person or any bring-your-own (BYO) agent can reproduce the root and contest any atom.
 
-Three findings. (1) Training a segmentation model on real California museum photos beats synthetic-only training on out-of-state holdouts by +0.696 (Arizona, n=72) and +0.521 (Oregon, n=132) mask mAP50-95, while synthetic training sizes printed toy insects better (median length error 0.094 vs 0.227). (2) A small per-taxon "preprocessor" that routes a specimen crop to its insect order transfers out of state: test macro-F1 0.70 (top-1 0.95) against a 0.14 majority baseline, passing its preregistered margin. The Hymenoptera family router does not transfer (0.88 in-state, 0.17 out of state, NULL), Hemiptera scores 0 F1 from 2 test crops, and the Diptera family router cannot be judged because the holdouts contain no Diptera. (3) Our custody rule (any hash the graph references must resolve to stored bytes) turned two lost-weights defects into eight recorded breaks rather than eight silently trusted results. We report these breaks as results.
+Three findings. (1) Training a segmentation model on real California museum photos beats synthetic-only training on out-of-state holdouts by +0.696 (Arizona, n=72) and +0.521 (Oregon, n=132) mask mAP50-95, while synthetic training sizes printed toy insects better (median length error 0.094 vs 0.227). (2) A small per-taxon "preprocessor" that routes a specimen crop to its insect order transfers out of state: test macro-F1 0.70 (top-1 0.95) against a 0.14 majority baseline, passing its preregistered margin. The Hymenoptera family router does not transfer (0.88 in-state, 0.17 out of state, NULL), Hemiptera scores 0 F1 from 2 test crops, and the Diptera family router cannot be judged because the holdouts contain no Diptera. (3) Our custody rule (any hash the graph references must resolve to stored bytes) turned two lost-weights defects into eight recorded result breaks rather than eight silently trusted results, and records 16 more for bench photos we pinned by hash but withheld: 24 breaks in all. We report these breaks as results.
 
 ---
 
@@ -43,7 +43,7 @@ We treat the record as part of the instrument. Our contributions are:
 
 **Printable, modular parts.** The graph links 91 parametric toy insects (67 California families at size levels, 12 novel outside-CA, 12 fill-in 1–3 mm), 25 lab parts across seven modules (trommel, vortex sieve kit, centrifuge strainer, Opentrons Flex adapters, hand-off carrier) and 4 Opentrons labware definitions (`site/mvp/mvp.json`). These are **concepts**: geometry is watertight and simulated, not tested on specimens (`print/parts/README.md`). Toys are parametric shapes, not replicas.
 
-**Cost (estimates, not quotes).** A separate bench twin built from 16 bench photos (`baebugs-twin/`, v0.1; not yet merged into the repo) adds 8 printable remixes on the SBS footprint (127.76 × 85.48 mm): 96, 24, 15 and 6-position tube racks with Opentrons labware definitions, a cryo grid insert, a lipped frame, a screened grid frame and a honeycomb insert. Each part has its own Merkle tree, and the part roots roll up into one lab root.
+**Cost (estimates, not quotes).** A labware twin built from 16 bench photos (`print/labware/`, `baebugs/labware_twin.py`, PR #12) adds 8 printable remixes on the SBS footprint (127.76 × 85.48 mm): 96, 24, 15 and 6-position tube racks with Opentrons labware definitions, a cryo grid insert, a lipped frame, a screened grid frame and a honeycomb insert. Each part has its own Merkle tree, and the part roots roll up into one lab root.
 
 | item | ≈ USD |
 |---|---|
@@ -75,7 +75,7 @@ A single pack, `site/mvp/mvp.json` (root `e485c83c9174f083…` at the same snaps
 - **LOMO.** Leave-one-level-out (and leave-one-model-out over the toy-insect KG) asks how much each factor or model actually contributes (`baebugs/explore.py`, `baebugs/insect_lomo.py`).
 - **FCO/FCG.** One content-addressed custody object per source (web page, GBIF record, camera, model, human); sources hybridize at a break point into a new FCO whose parents are the input roots, so the context a model used can be untangled later. Missing fields stay explicit as `unknown` (`baebugs/fco.py`).
 - **Variance is allowed; unhashed steps are not.** Training is `deterministic=false`; the canonical tensor hash of the weights is the identity of each realization.
-- **Resolvability invariant.** Every hash the graph references must resolve to stored bytes; otherwise a `custody_break` event is recorded. The graph currently carries **8 breaks** (§5.1).
+- **Resolvability invariant.** Every hash the graph references must resolve to stored bytes; otherwise a `custody_break` event is recorded. The graph carries **24 breaks: 8 result + 16 withheld photo** (§5.1).
 
 Frozen protocols, preregistrations and amendments are never edited; corrections are new amendment files (e.g. DAISY-BB-004 amendment 4 corrects amendment 3).
 
@@ -89,6 +89,9 @@ All three experiments were preregistered before data were seen (`daisy/*-prereg*
 |---|---|---|---|
 | DAISY-BB-001b v6 (6 runs) | trained weights (sha256 recorded, no bytes anywhere) | resolvability invariant | 6 `custody_break` events, `daisy/impact_mmr.jsonl` |
 | DAISY-BB-002a v2 (2 runs) | trained weights for CA_only and Synth_only | resolvability invariant | 2 `custody_break` events, idx 96–97 |
+| labware twin (16 photos) | source bench photos, pinned by sha256 but kept off-repo because they show vendor marks | resolvability invariant | 16 photo BREAKs, `print/labware/` |
+
+Total: **24 breaks (8 result + 16 withheld photo)**. The photo breaks are deliberate: we chose not to redistribute images of trademarked products, and the graph says so rather than pretending the hashes resolve.
 
 Cause, the same in both: the Kaggle kernel's FINISH step exported weights only for runs with status EXECUTED, but EVAL had already relabelled them OBSERVED_EXPLORATORY, so the working directory was deleted with the weights in it (`daisy/results/DAISY-BB-002a/v2/DECISION.md`). The fix (weights hashed every epoch, best.pt copied and re-verified right after training, fail-closed custody check before `results.json`) is in every later kernel. 001b v6 numbers (synth_seg 0.92, real pseudo-labelled specimens 0.25–0.26 mask mAP50-95) are recorded but **cannot be used as evidence**. 002a numbers below are reported with this break attached.
 
@@ -138,7 +141,7 @@ A leave-one-method-out check compares each sizer's width with the median width o
 
 ## 6. Licensing in three lines
 
-1. Code, prints, labware, pages, protocols and ledgers written here are ours (MIT).
+1. Code, prints, labware, pages, protocols and ledgers written here are ours (MIT). That includes the printed labware remixes; vendor names and logos are left out of every file.
 2. Trained weights are AGPL-3.0 because they come from Ultralytics YOLO [6].
 3. Specimen photos belong to the museums (CC0 needs nothing; CC BY needs the rights holder credited). BioKEA and zlite repositories are pinned by commit and sha256, never copied; those with no licence need the owner's permission before reuse (`docs/CLAIMS.md`).
 
@@ -150,7 +153,7 @@ A leave-one-method-out check compares each sizer's width with the median width o
 
 - No hardware run on real specimens yet; apertures, tower geometry and damage parameters are placeholders or photo estimates.
 - Every real-photo label is silver (YOLOE teacher or GBIF identification). No human-reviewed test set.
-- Eight result realizations are custody-broken; 001b needs a v7 rerun with the fixed kernel before it can count as evidence.
+- Eight result realizations are custody-broken (plus 16 withheld-photo breaks); 001b needs a v7 rerun with the fixed kernel before it can count as evidence.
 - Small, skewed out-of-state test sets (Nevada n=8; 004 test has no Diptera, 2 Hemiptera). The 004 family router does not transfer out of California.
 - 004 ran on Apple MPS rather than the preregistered Kaggle GPU (amendments 1–2); weights are numerically different from a GPU run, and their tensor hash is their identity.
 - Parts are concepts. Cost figures are retail estimates for printed parts only; the sieving hardware is not yet priced.
