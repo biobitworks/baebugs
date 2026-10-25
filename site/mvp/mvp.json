@@ -1,4 +1,680 @@
 {
+"assets": {
+"dims_by_source": {
+"design": 2,
+"not measured": 24,
+"ruler-photo": 2,
+"spec": 3
+},
+"items": [
+{
+"category": "rack",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "tray_tower_orange",
+"interfaces": [
+"rail_tray",
+"arm_reach"
+],
+"leaf": "37c49c8be5fc6997ab2bdec1ba83e863c47a0f6a1bf8c31dbef0a680b3fd8f4d",
+"maker": null,
+"name": "Printed tray tower (orange), 5 levels, two prongs per level",
+"notes": "printed replacement for the wood tower; prong pitch and level pitch to measure (twin still uses wood-tower guesses)",
+"photos": [
+"assets/photos/tower_arm_side_1.jpg",
+"assets/photos/tower_arm_side_2.jpg",
+"assets/photos/tower_top.jpg",
+"assets/photos/tower_arm_side_3.jpg"
+],
+"ref": null,
+"role": "tray storage / filter face for the arm"
+},
+{
+"category": "fixture",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "tray_tower_mount_orange",
+"interfaces": [
+"screw_m3_or_wood"
+],
+"leaf": "7bfe7828a7157c6de24933c14eff51f172b6c552a8ef1962445ac3f09932ffd9",
+"maker": null,
+"name": "Printed L-bracket / wall mount (orange, 2 screw holes)",
+"notes": null,
+"photos": [
+"assets/photos/tower_arm_side_1.jpg",
+"assets/photos/tower_arm_side_2.jpg",
+"assets/photos/tower_top.jpg",
+"assets/photos/tower_arm_side_3.jpg"
+],
+"ref": null,
+"role": "mount for the tray tower"
+},
+{
+"category": "rack",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "wood_tray_tower",
+"interfaces": [
+"rail_tray"
+],
+"leaf": "00b383c95fe88e41ba6f2d4da59de0606e9c59380e399ea6ca907e67523a3e6d",
+"maker": null,
+"name": "Wood post tower with plywood rail arms",
+"notes": "twin values are MEASURE estimates",
+"photos": [
+"assets/photos/tower_arm_side_1.jpg",
+"assets/photos/tower_arm_side_2.jpg",
+"assets/photos/tower_arm_side_3.jpg"
+],
+"ref": null,
+"role": "first tray tower (bench twin config/tower.yaml)"
+},
+{
+"category": "arm",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "partabot_arm",
+"interfaces": [
+"fork_or_gripper",
+"clamp_mount"
+],
+"leaf": "7fd6dc78d87aed73bbd6a62a45e9ec26532fd9e86b0a25feee0fbd018219cb5b",
+"maker": "Partabot",
+"name": "Partabot servo arm",
+"notes": "clamped to the MDF bench board",
+"photos": [
+"assets/photos/tower_arm_side_1.jpg",
+"assets/photos/tower_arm_side_2.jpg",
+"assets/photos/tower_top.jpg",
+"assets/photos/tower_arm_side_3.jpg"
+],
+"ref": null,
+"role": "pick / tray handling"
+},
+{
+"category": "instrument",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "vortexer",
+"interfaces": [
+"vortex_platform"
+],
+"leaf": "9a8cc6f6a9e287fbef58ff7c5f6f99a31f4d56d8be57cf773b9530fe9b2da2e5",
+"maker": null,
+"name": "Vortex mixer (blue)",
+"notes": null,
+"photos": [
+"assets/photos/tower_arm_side_1.jpg",
+"assets/photos/tower_arm_side_3.jpg"
+],
+"ref": null,
+"role": "vortex sieve kit platform (vortex_puck_76)"
+},
+{
+"category": "tray",
+"count": 1,
+"dims_mm": [
+103.0,
+140.0,
+12.5
+],
+"dims_source": "design",
+"id": "biokea_tray_frame_2x3_hex",
+"interfaces": [
+"rail_tray",
+"side_tab_handle"
+],
+"leaf": "4505201c2646c6bec74f577a42accc980be43d37223c167be5dcd1afbf3ac948",
+"maker": null,
+"name": "BioKEA printed tray frame, 2x3 cells, hex mesh insert",
+"notes": "matches BioKEA/BugPicker Designs/tray.stl (pinned upstream, measured not copied)",
+"photos": [
+"assets/photos/biokea_frames_tub.jpg",
+"assets/photos/tower_arm_side_1.jpg",
+"assets/photos/tower_arm_side_3.jpg"
+],
+"ref": null,
+"role": "sieve tray (HEX mesh)"
+},
+{
+"category": "tray",
+"count": 2,
+"dims_mm": [
+113.6,
+149.7,
+10.0
+],
+"dims_source": "design",
+"id": "biokea_tray_frame_plain",
+"interfaces": [
+"rail_tray",
+"side_tab_handle",
+"insert_pocket"
+],
+"leaf": "cc689e70c5547fb54aa65cb94fc808d873c7afa6c5bf5d7e18b9004d5e5482e2",
+"maker": null,
+"name": "BioKEA printed tray frame, open (insert holder), side tab",
+"notes": "closest pinned design: screentray.stl; confirm with calipers",
+"photos": [
+"assets/photos/biokea_frames_tub.jpg"
+],
+"ref": null,
+"role": "carrier for swappable inserts"
+},
+{
+"category": "insert",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "hex_grid_insert",
+"interfaces": [
+"insert_pocket"
+],
+"leaf": "28f10f4d07bd2cb25485801af4e6b870812a7111e42c90db9bf7dff62d8ceb6b",
+"maker": null,
+"name": "Printed hex grid insert (coarse)",
+"notes": null,
+"photos": [
+"assets/photos/biokea_frames_tub.jpg",
+"assets/photos/tower_arm_side_1.jpg"
+],
+"ref": null,
+"role": "coarse sieve insert (GRID/HEX)"
+},
+{
+"category": "insert",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "perforated_plate_ss",
+"interfaces": [
+"insert_pocket"
+],
+"leaf": "fc3fa37692ecd262b0f2b164976f738ff9e4165f59864dcda6e01dccf4b11b20",
+"maker": null,
+"name": "Stainless perforated plate (round holes)",
+"notes": "hole size to measure (PERF-5 in config)",
+"photos": [
+"assets/photos/biokea_frames_tub.jpg"
+],
+"ref": null,
+"role": "PERF sieve insert"
+},
+{
+"category": "container",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "yellow_tub",
+"interfaces": [],
+"leaf": "10c59fa8f0aae6a69ff4ea936893dac6933453e11c21d3117b5a22bd144d0723",
+"maker": null,
+"name": "Yellow plastic tub",
+"notes": null,
+"photos": [
+"assets/photos/biokea_frames_tub.jpg",
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/labware_overview_3.jpg"
+],
+"ref": null,
+"role": "wash / catch basin"
+},
+{
+"category": "rack",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "ss_frame_3bay",
+"interfaces": [
+"rail_tray?"
+],
+"leaf": "d0d510ff7702c3a28ec7038b02a6e9fdedc9ca75d00c68564d741ba13f83bc19",
+"maker": null,
+"name": "Stainless 3-bay frame with notched rail",
+"notes": null,
+"photos": [
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/labware_overview_3.jpg",
+"assets/photos/labware_angle.jpg"
+],
+"ref": null,
+"role": "candidate tray rack over the tub"
+},
+{
+"category": "electronics",
+"count": 1,
+"dims_mm": [
+83,
+55,
+9
+],
+"dims_source": "ruler-photo",
+"id": "breadboard_half",
+"interfaces": [],
+"leaf": "f4cba16a440705dc42518c9467d3a518f04be4a2d046863b109c56429ad5e20c",
+"maker": null,
+"name": "Solderless breadboard, half size (30 rows)",
+"notes": "length read off the ruler ~8.3 cm; width/height typical for half-size boards",
+"photos": [
+"assets/photos/breadboard_ruler.jpg"
+],
+"ref": null,
+"role": "sensor / camera trigger wiring"
+},
+{
+"category": "instrument",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "opentrons_flex",
+"interfaces": [
+"flex_deck_slot",
+"SBS"
+],
+"leaf": "86c80661df614284758760c5a633ebc1699bdf09be90419108a3ad1968f45d74",
+"maker": "Opentrons",
+"name": "Opentrons Flex with 8-channel 1000 uL pipette",
+"notes": "deck A1-D4; photo shows tip racks, deep-well plate, reservoir",
+"photos": [],
+"ref": null,
+"role": "lyse / incubate / liquid handling (flex route)"
+},
+{
+"category": "stage",
+"count": 3,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "manual_lift_columns",
+"interfaces": [
+"T-slot_plate"
+],
+"leaf": "974bea55f3368d4597c920cb51fb95b4cdf6272d76bff53a32b0246a1c4fb64d",
+"maker": null,
+"name": "Aluminium manual lift columns with handwheels (x3)",
+"notes": null,
+"photos": [
+"assets/photos/lift_columns.jpg"
+],
+"ref": null,
+"role": "camera / tower height stage"
+},
+{
+"category": "instrument",
+"count": 1,
+"dims_mm": [
+165,
+165,
+300
+],
+"dims_source": "spec",
+"id": "formlabs_fuse",
+"interfaces": [],
+"leaf": "18bf10b74297e15d482ae872a1fcdcac2767a854e04188e8468e1a446aa72e99",
+"maker": "Formlabs",
+"name": "Formlabs Fuse 1+ printer and Fuse Sift",
+"notes": "dims = Fuse 1+ build volume",
+"photos": [
+"assets/photos/formlabs_fuse.jpg"
+],
+"ref": null,
+"role": "PA12 powder prints (toy insects, parts)"
+},
+{
+"category": "plate",
+"count": 1,
+"dims_mm": [
+127.76,
+85.48,
+null
+],
+"dims_source": "spec",
+"id": "plate_384_black",
+"interfaces": [
+"SBS"
+],
+"leaf": "6bb2d030af01accc0d23150a6617d562a3504448b97093594083cb1cd5244d5a",
+"maker": "PerkinElmer",
+"name": "384-well plate, black",
+"notes": "footprint is the SBS standard; height depends on the exact product",
+"photos": [
+"assets/photos/plate384_ruler.jpg",
+"assets/photos/plate384_top.jpg"
+],
+"ref": null,
+"role": "imaging / assay plate"
+},
+{
+"category": "tip_box",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "tipbox_vwr_purple",
+"interfaces": [
+"SBS?"
+],
+"leaf": "0944c2e8c5a4865190fb80f39c885a2c8c354ce5cc97319ec195bf612f1b8040",
+"maker": "VWR",
+"name": "Tip box, purple, hinged lid",
+"notes": null,
+"photos": [
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/labware_angle.jpg",
+"assets/photos/labware_overview_2.jpg",
+"assets/photos/labware_overview_3.jpg"
+],
+"ref": null,
+"role": "tips"
+},
+{
+"category": "tip_box",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "tipbox_kashi",
+"interfaces": [
+"SBS?"
+],
+"leaf": "3b9dfd0b480bdc9e415b17c03d10df32a4cb5f43393a21d61a545ccc789c7571",
+"maker": "KASHI",
+"name": "Tip box, clear (96 tips)",
+"notes": null,
+"photos": [
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/labware_angle.jpg",
+"assets/photos/labware_overview_2.jpg",
+"assets/photos/labware_overview_3.jpg"
+],
+"ref": null,
+"role": "tips"
+},
+{
+"category": "tip_box",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "tipbox_xtip4_1000",
+"interfaces": [
+"SBS?"
+],
+"leaf": "e56e0a0b8fd6ba030ddcaf0b22ec5a5f32944477243c8bef32a9107ce49a49b0",
+"maker": "Biotix",
+"name": "xTIP4 1000 uL tip box with blue rack",
+"notes": null,
+"photos": [
+"assets/photos/xtip4_box.jpg",
+"assets/photos/rack_edge_ruler.jpg",
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/labware_overview_2.jpg",
+"assets/photos/labware_overview_3.jpg"
+],
+"ref": null,
+"role": "tips"
+},
+{
+"category": "rack",
+"count": 1,
+"dims_mm": null,
+"dims_source": "ruler-photo",
+"id": "rack_96_pink",
+"interfaces": [
+"SBS?"
+],
+"leaf": "93d8b6e68f7e45d600505f6278f2c125365587fbc80018891f0b354a1892a4d7",
+"maker": null,
+"name": "96-position rack, pink",
+"notes": "length ~14 cm read off the ruler (rack_edge_ruler)",
+"photos": [
+"assets/photos/rack_edge_ruler.jpg",
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/labware_angle.jpg",
+"assets/photos/labware_overview_2.jpg",
+"assets/photos/labware_overview_3.jpg"
+],
+"ref": null,
+"role": "microtube rack"
+},
+{
+"category": "rack",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "rack_96_purple",
+"interfaces": [],
+"leaf": "fe84fc6d67c6d4136ba0c901a28ffa7f3714ad93606ac4c5b624b5305cbd4d75",
+"maker": null,
+"name": "96-position rack, purple (deep)",
+"notes": null,
+"photos": [
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/labware_angle.jpg",
+"assets/photos/labware_overview_2.jpg",
+"assets/photos/labware_overview_3.jpg"
+],
+"ref": null,
+"role": "microtube rack"
+},
+{
+"category": "rack",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "rack_60_purple",
+"interfaces": [],
+"leaf": "6667fe011698e684911f4beecc2a643e6b73db6c601d913e56a466e3cc38e56b",
+"maker": null,
+"name": "60-position tube rack, purple (5 x 12)",
+"notes": null,
+"photos": [
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/labware_angle.jpg",
+"assets/photos/racks_closeup_ruler.jpg",
+"assets/photos/labware_overview_2.jpg",
+"assets/photos/labware_overview_3.jpg",
+"assets/photos/racks_diagonal_ruler.jpg"
+],
+"ref": null,
+"role": "1.5-2 mL tube rack"
+},
+{
+"category": "rack",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "rack_4way_orange",
+"interfaces": [],
+"leaf": "3c7d395b18bbce10b59944c7764a618e552fca1b449ae4ed6022fb42c5f01ce3",
+"maker": null,
+"name": "4-way tube rack, orange (50 mL / 15 mL / micro)",
+"notes": null,
+"photos": [
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/labware_angle.jpg",
+"assets/photos/labware_overview_2.jpg"
+],
+"ref": null,
+"role": "conical tube rack"
+},
+{
+"category": "rack",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "rack_18_white",
+"interfaces": [],
+"leaf": "e5fa4c18502dbf5e87e2a0381d353219f376efdce71cdc0015d946a120207c21",
+"maker": null,
+"name": "18-hole rack, white (3 x 6)",
+"notes": null,
+"photos": [
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/labware_angle.jpg",
+"assets/photos/racks_closeup_ruler.jpg",
+"assets/photos/racks_diagonal_ruler.jpg",
+"assets/photos/labware_overview_3.jpg"
+],
+"ref": null,
+"role": "15 mL tube rack"
+},
+{
+"category": "rack",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "cryo_grid_81_blue",
+"interfaces": [],
+"leaf": "55dcc8847d3f7d2ad255ac6727e8e31e1dc86a10168d24fb8541fc40acb0b6e2",
+"maker": null,
+"name": "81-cell cryobox grid, blue (9 x 9)",
+"notes": null,
+"photos": [
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/labware_angle.jpg",
+"assets/photos/racks_closeup_ruler.jpg",
+"assets/photos/racks_diagonal_ruler.jpg",
+"assets/photos/labware_overview_3.jpg"
+],
+"ref": null,
+"role": "cryovial storage"
+},
+{
+"category": "rack",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "cryo_rack_100_white",
+"interfaces": [],
+"leaf": "19e4fb8bd9b9785de689338804abbb9c36568e09eb743d9d6b984854fba277a0",
+"maker": null,
+"name": "100-position numbered cryo rack, white",
+"notes": null,
+"photos": [
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/racks_closeup_ruler.jpg",
+"assets/photos/racks_diagonal_ruler.jpg",
+"assets/photos/labware_overview_2.jpg",
+"assets/photos/labware_overview_3.jpg"
+],
+"ref": null,
+"role": "cryovial storage (specimen-to-vial hand-off)"
+},
+{
+"category": "container",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "cryo_box_biologix",
+"interfaces": [],
+"leaf": "822e04d3c2d7e06e688d2d5ef78bc15825ea879f201cd2bffe2b984774a90736",
+"maker": "Biologix",
+"name": "Clear cryo box",
+"notes": null,
+"photos": [
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/racks_closeup_ruler.jpg",
+"assets/photos/racks_diagonal_ruler.jpg",
+"assets/photos/labware_overview_2.jpg",
+"assets/photos/labware_overview_3.jpg"
+],
+"ref": null,
+"role": "vial box"
+},
+{
+"category": "tube",
+"count": 100,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "cryovial_greiner_2ml",
+"interfaces": [
+"cryo_rack"
+],
+"leaf": "7b6193d7483c6b740130a3a71e2d87ed16ee1714e8e6c560c01aa7b48b9d4db9",
+"maker": "Greiner Bio-One",
+"name": "Cryo.s 2 mL PP cryovial, round bottom, external thread, starfoot, sterile",
+"notes": "read from the bag label",
+"photos": [
+"assets/photos/greiner_cryos_bag.jpg",
+"assets/photos/racks_closeup_ruler.jpg",
+"assets/photos/racks_diagonal_ruler.jpg"
+],
+"ref": "126263",
+"role": "whole-body specimen storage for DNA/RNA"
+},
+{
+"category": "tube",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "conical_50ml_vwr",
+"interfaces": [
+"rack_4way"
+],
+"leaf": "629de60de2dbfed20fd27d814f50c9357cdbcd20249b5fb6fe9348bce89fed00",
+"maker": "VWR",
+"name": "50 mL conical tube, green cap",
+"notes": null,
+"photos": [
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/labware_angle.jpg",
+"assets/photos/xtip4_box.jpg",
+"assets/photos/labware_overview_2.jpg"
+],
+"ref": null,
+"role": "bulk sample / ethanol"
+},
+{
+"category": "tip",
+"count": 1,
+"dims_mm": null,
+"dims_source": "not measured",
+"id": "tip_1000ul",
+"interfaces": [],
+"leaf": "cbde7d4c9d0a6074b31bdcf28e965bff860d68976883169fd925681edd406fca",
+"maker": null,
+"name": "1000 uL pipette tip (loose)",
+"notes": null,
+"photos": [
+"assets/photos/labware_overview_1.jpg",
+"assets/photos/racks_diagonal_ruler.jpg"
+],
+"ref": null,
+"role": "transfer"
+},
+{
+"category": "reference",
+"count": 1,
+"dims_mm": [
+460,
+null,
+null
+],
+"dims_source": "spec",
+"id": "ruler_helix_46cm",
+"interfaces": [],
+"leaf": "48be1d1c96cf23d45a9383b163979825bb6d2d810bf4c5c94f0ac1974e69166b",
+"maker": "Helix",
+"name": "Helix 46 cm steel ruler (scale reference in photos)",
+"notes": null,
+"photos": [
+"assets/photos/breadboard_ruler.jpg",
+"assets/photos/plate384_ruler.jpg",
+"assets/photos/rack_edge_ruler.jpg",
+"assets/photos/racks_closeup_ruler.jpg",
+"assets/photos/racks_diagonal_ruler.jpg",
+"assets/photos/labware_overview_1.jpg"
+],
+"ref": null,
+"role": "photo scale"
+}
+],
+"photos_root": "d0040690084c7bdeb77b8f30005216d47bdfd92f0c56883022a5bb35dc374751",
+"root": "2aa571d0973f1995c303b86f4f8f9816f485a73bfd59822593d6caa138f6b72e"
+},
 "bugs": [
 {
 "family": "Coccinellidae",
@@ -1476,6 +2152,206 @@
 },
 {
 "claim": "OWN",
+"kind": "meta",
+"leaf": "2a3736fab9f2af56068a906ad52cabaacb5779a5dfaaf7606d25184c513317b5",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos.json",
+"sha256": "58927ad9a13051688eea21c854e447678bdf8b053b55c62939a0d88d4dd6f59e",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "26f2d5c26c62b2c98ac88280be97206ca60c0a17a36019b4d5c615cba29a1244",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/biokea_frames_tub.jpg",
+"sha256": "8355782a460fcf2dcf8334749c3c4edf466efcaeecd8bf6be5e381491b5a4baf",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "9ff0bf3c81630444fe28365049cba76146e8b3d95f919bb80dc5eb52d2e4b5dd",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/breadboard_ruler.jpg",
+"sha256": "20f18c558202f08627d9f928bafc0e6b065eaef2d1779ee30786dde7602d6ad1",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "ef1da8893a5caff40d2c757892953f4caad18fa2d1ebdda41daafa155552a9f3",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/formlabs_fuse.jpg",
+"sha256": "d0cf3972f9bf9c842fe39f8ed2c2b936b86eb8f009a5c0dc29cca3e574357ffd",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "f7fb4c3b1ea1576b6d56789e2c29f570420867f9258acc767d0539572e048ffb",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/greiner_cryos_bag.jpg",
+"sha256": "42edba7c1ed8181044941d6247eb2ca181ae2c4e2b4ef341d968b3fdfe8840a6",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "fa317eceb02785266ce82b379f8cb117ac503e351d08b223259b5005d0d428a0",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/labware_angle.jpg",
+"sha256": "aa4e721ad06be52de4988d04612fb5e35646924c9fae743382a1465c1c1aa40c",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "5f2a6b85be3c12c423b0908949735ac02290c54b2d0788d00af94164ceba820e",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/labware_overview_1.jpg",
+"sha256": "22d1861d5faefa12be34b2840ff3c4556ca70d29e2890886d28f9d456a51c2fb",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "9eb7403fe80f9d60be9d03f6ead48b76956244431ab45faca63d7ec6220a36ee",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/labware_overview_2.jpg",
+"sha256": "bde66bf80a02dd2b4559008545124e9996a49ca48154720a61862c76255590f2",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "e9575338dfa17fcd69c59f701e1834347c0694f27a89909f087c78efc5338dfd",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/labware_overview_3.jpg",
+"sha256": "b462d854a0259a334f0b834d783752505f7de5491c392cec90ff2e24a7e6024b",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "e9c68e2b3be21c8e4aabb8123acccb153a0f0d6af42a0fde3d0630845a253e63",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/lift_columns.jpg",
+"sha256": "9501cca4880554de44a6894def68b61e3144215b7cbab771285a0ab306ae54fe",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "64d840b6f6bac158751d69854c91a868d712f28f7eba6a7323bb5fbfe782b91f",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/plate384_ruler.jpg",
+"sha256": "91fb1d1173d4251882a9f5f7db24a83d380e6f880766715603158225c1c5bf1d",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "4fbe4b1b0a79ecb943ff193466064c014aa6a487941f767798fd64b82d7c888d",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/plate384_top.jpg",
+"sha256": "117c725af22a2c05fb895a576b7b59e8d25ff8fbcd2e5c3c7a555a47e3c41555",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "661fee1579bde9b3df2fa0f0da9af1c11168ea7a96a74162e9cbc99bac7e3b71",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/rack_edge_ruler.jpg",
+"sha256": "282cc0f2a2c9f23161c26fe44df7a0613739679d959bcc1e89524b6cf47c86fa",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "d90211b0be1e5efc89fc39d1c8d23695440bd7e619528d3084616b3c7d0eaf23",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/racks_closeup_ruler.jpg",
+"sha256": "d6db1ce5191c037c3e2521b48e33431eaa060963833775c0536c4736a8b7ef3a",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "9000beda13b8c65fda7fc52e620f26335e5e406deddfa7a9857046e64642e1a9",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/racks_diagonal_ruler.jpg",
+"sha256": "3127b5d1e9772bd951139ef6031d8371cd684f34a83cfe42b3bb6ec567df6b37",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "e3bde517dc6f5d03f85233b9d23bbdee143e30b1bf9a92c9bfa641d41e6de077",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/tower_arm_side_1.jpg",
+"sha256": "82f593b9a577d0340c40bef05d0605099fbccbcd8987b08f8673189d9cb31185",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "ae2aaf0858be96f74fb7e73e69d3d626531acac9bfd60ca9c77dd11ebff48a92",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/tower_arm_side_2.jpg",
+"sha256": "d3c2844e62da4a7e88583e4d2e7b582fc04bc7d1e12dd235129be5ec94904d47",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "1dbb538542c1f60414ec3209514d3a89640c251382433a3278234bf7cb4a02c6",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/tower_arm_side_3.jpg",
+"sha256": "1c44664503c584cc43a303f5b223fc3a3599b6a95c6c7db8d0bb816fce6986e2",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "e4dbfb5af0767063b19efdb5c9877cfd358e00ad711eb9ec46d0d83e4c637cab",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/tower_top.jpg",
+"sha256": "7c7566eefeb1388ffa05551b935a62fba6bf179975cb3753f6c787788988162a",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "f29c383dd46a357eb6931b2cc803fa8e90f2294a59267a51e623dc172eb2badb",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/photos/xtip4_box.jpg",
+"sha256": "86e990548b4520cf3f0fa94822432808fa56e768b3461773524fb34159e5151e",
+"status": "built"
+},
+{
+"claim": "OWN",
 "kind": "code",
 "leaf": "a13b8e3ec30d21d00649f0382ad2c9f69aecad1277e539396514841312cb28d1",
 "licence": "MIT",
@@ -1512,6 +2388,16 @@
 "module": "python-package",
 "path": "baebugs/aok.py",
 "sha256": "282215fb133ab90ffa49a9e99f300e3b677414be4baa9f6166ec907f1f4bb61d",
+"status": "tested"
+},
+{
+"claim": "OWN",
+"kind": "code",
+"leaf": "9b0263ee439baff57a4244ece4e86c496e5b87bd75389e5faa9f61b3e365ca1e",
+"licence": "MIT",
+"module": "python-package",
+"path": "baebugs/assets.py",
+"sha256": "e836a141960cf45bc8b15147c45b63863c27b76576f32bb003628f87d365dfd7",
 "status": "tested"
 },
 {
@@ -1957,11 +2843,11 @@
 {
 "claim": "OWN",
 "kind": "code",
-"leaf": "0d9fbcb2e80555c7b431152badbff1ac4f8954d8291fd58ba6770e1ff7c15471",
+"leaf": "3e404c89b2f2762be4f79a164de0b5ce8882df7c27e227be62687ee72af94063",
 "licence": "MIT",
 "module": "python-package",
 "path": "baebugs/mvp.py",
-"sha256": "af092b0d249492cdac6474810130dfce042884abbeeeb33335c4f8335c192488",
+"sha256": "569c695a766c5ad5972ab63181ad9f97dc968e428a36b2bfe200eb129e5919b0",
 "status": "tested"
 },
 {
@@ -2487,6 +3373,16 @@
 {
 "claim": "OWN",
 "kind": "ledger",
+"leaf": "bb001bd0162a86c30a4bb25287e8c63e95fd9f71cf2eb3872f2b3040cff747c5",
+"licence": "MIT",
+"module": "custody-ledgers",
+"path": "daisy/assets_mmr.jsonl",
+"sha256": "fa227cb1e424fbf03b47a9c256f2102565408462fb15e94412ca8161602f1131",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "ledger",
 "leaf": "e9e0345e07de895fc0aacf975411e335989df0074e92004ba32aad7ba7c9c8c1",
 "licence": "MIT",
 "module": "custody-ledgers",
@@ -2547,11 +3443,11 @@
 {
 "claim": "OWN",
 "kind": "ledger",
-"leaf": "593268a02c4ab98b6d3dbc371a6a8aeba8494c4494127b1a7a20f74d21784fdd",
+"leaf": "36b8cca10647e131e89f9292577443a7be33f1697d0cf1f4a115a3902041b530",
 "licence": "MIT",
 "module": "custody-ledgers",
 "path": "daisy/impact_mmr.jsonl",
-"sha256": "0f786b0b6ee09b87825a8cc307cf73c960e32b1ca58b4ebc84d0bf715c723835",
+"sha256": "c498e8dbbd77dd3d98f22d70c860be2af9e2f1d9701ce29e22c5a06fd104157b",
 "status": "built"
 },
 {
@@ -2672,6 +3568,16 @@
 "module": "daisy-results",
 "path": "daisy/results/DAISY-BB-002a/v2/results.json",
 "sha256": "9ca0af5f4b3dd80a6b994131ad3230dc2895397770ad05491b153b467d04932e",
+"status": "result"
+},
+{
+"claim": "OWN+TERMS",
+"kind": "result",
+"leaf": "c12cd615e1cbcc5dc38b6a11da88a708d12936f6f006616e06f468e5a33bc18c",
+"licence": "MIT + gbif-media, ultralytics terms",
+"module": "daisy-results",
+"path": "daisy/results/DAISY-BB-004/v4/ADDENDUM.md",
+"sha256": "4f1c2f02ffd3981a22bd3b873438ff1cef2c192817be90bdb612826be443e2ad",
 "status": "result"
 },
 {
@@ -3542,6 +4448,16 @@
 "module": "kaggle-kernels",
 "path": "kaggle/make_taxon_kernel.py",
 "sha256": "35c3aa14a95ba00247d0826f805bf9795e45ae366d16377481a81575541b3c30",
+"status": "built"
+},
+{
+"claim": "OWN+TERMS",
+"kind": "data",
+"leaf": "20c6afb8d0ab09ec4ba1c97f27ca46b29a4b79b84529a73085bea83d017ac115",
+"licence": "MIT + gbif-media terms",
+"module": "knowledge-graph",
+"path": "kg/assets.json",
+"sha256": "4cc42116d77740ac94f868d5ab7d7d22f52138738de2132b549021cfafa7b840",
 "status": "built"
 },
 {
@@ -8907,11 +9823,11 @@
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "d35009356954b2cda8910e09c896902311146e8b7be10372fa6239c7750399ad",
+"leaf": "3e8cee479cd08c668ad688252eff8a0ad42b150db54f0e5328a6a3c5de6c8299",
 "licence": "MIT",
 "module": "mvp-site",
 "path": "site/mvp/index.html",
-"sha256": "688f2388a5822fc5878b577a96963d9e01e5cf73015ae3c6ab138f931af523de",
+"sha256": "5585ea14ffe1e621d34ea2bc1d233470674123db537cb4c39a33f888e081a874",
 "status": "built"
 },
 {
@@ -8952,6 +9868,16 @@
 "module": "tests",
 "path": "tests/test_aok.py",
 "sha256": "5277d38663181903e25b5d03e0d01c7c7ec881b9e5c359fd9a122fb9bb93fd79",
+"status": "tested"
+},
+{
+"claim": "OWN",
+"kind": "test",
+"leaf": "6132d80606c888cd72b4be60688ff71aaf0bbebc8933b2fdea42fac6703dc61b",
+"licence": "MIT",
+"module": "tests",
+"path": "tests/test_assets.py",
+"sha256": "855ed15cf016bc9ff277152302333e40f7eff9af273a6675e55583845dacd8b9",
 "status": "tested"
 },
 {
@@ -9311,6 +10237,11 @@
 "THIRD": "not ours; used under its licence; credited, pinned by hash, never claimed"
 },
 "mmr": {
+"assets_mmr": {
+"n": 1,
+"root": "0db28037a5744bcad439c5869ae5a1b4e849cbb65656c8532b82a70e03174fe4",
+"verified": true
+},
 "hybrids_mmr": {
 "n": 3,
 "root": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -9322,8 +10253,8 @@
 "verified": true
 },
 "impact_mmr": {
-"n": 104,
-"root": "125c3fc63a3be7728fdde40b8532ee963bd1cc74351deb24058116752a0bef45",
+"n": 105,
+"root": "bbbf8f3daaac1f80cc418c20d1f096307195798f378383ab4807a69fd1dba359",
 "verified": true
 },
 "labbox_mmr": {
@@ -9339,14 +10270,14 @@
 },
 "modules": {
 "custody-ledgers": {
-"atoms": 33,
+"atoms": 34,
 "claims": {
-"OWN": 33
+"OWN": 34
 },
 "id": "module:custody-ledgers",
-"root": "8f48e4f879b13375979db2f4aa0325b924dcd0e5b0e35cb0a8f36a8934b14acd",
+"root": "9a344d9cfb392711bf2920e8310092d83d62ac5fdb7b0a4a75cef755fb90fc71",
 "status": {
-"built": 33
+"built": 34
 },
 "terms": []
 },
@@ -9363,14 +10294,14 @@
 "terms": []
 },
 "daisy-results": {
-"atoms": 11,
+"atoms": 12,
 "claims": {
-"OWN+TERMS": 11
+"OWN+TERMS": 12
 },
 "id": "module:daisy-results",
-"root": "b071c5cb0af378403f8126de58fec540ca8b55b9a21dc545dac8def5de3eae57",
+"root": "770c10edefa40477087f4af97f11efc0cb83cd13578dbf389934e02438678210",
 "status": {
-"result": 11
+"result": 12
 },
 "terms": [
 "ext:gbif-media",
@@ -9417,14 +10348,14 @@
 ]
 },
 "knowledge-graph": {
-"atoms": 5,
+"atoms": 6,
 "claims": {
-"OWN+TERMS": 5
+"OWN+TERMS": 6
 },
 "id": "module:knowledge-graph",
-"root": "f76004ad5e8e07ed1ebebbc89f62923c978738238700f7e2bd420d5e7e09d9a2",
+"root": "0a751734965127a667f9f586b056d22096522f34eaae00f342b7bb02c77597ea",
 "status": {
-"built": 5
+"built": 6
 },
 "terms": [
 "ext:gbif-media"
@@ -9448,7 +10379,7 @@
 "OWN": 30
 },
 "id": "module:mvp-site",
-"root": "e9559d478120870e80b787617cb88faf7cb1096f4d2aa0a0a2873d8b166a0dc5",
+"root": "b9000b134660a77753cb4cd1b86d623f54e824f286c707497e0daee2f4859d8d",
 "status": {
 "built": 30
 },
@@ -9481,42 +10412,42 @@
 ]
 },
 "python-package": {
-"atoms": 83,
+"atoms": 84,
 "claims": {
-"OWN": 76,
+"OWN": 77,
 "OWN+TERMS": 7
 },
 "id": "module:python-package",
-"root": "042146978fd3105231b5e92c562bd41086d0f043be8bb1931829e4de07858ca0",
+"root": "4d4d2fcc739524f1094eb72a9420593dbce5b4704af3cabe8f6f3c2bdab85707",
 "status": {
 "built": 54,
-"tested": 29
+"tested": 30
 },
 "terms": [
 "ext:ultralytics"
 ]
 },
 "repo-meta": {
-"atoms": 12,
+"atoms": 32,
 "claims": {
-"OWN": 12
+"OWN": 32
 },
 "id": "module:repo-meta",
-"root": "4581a5c08f5c8ca985ed3f8d96edd176dd33b4163ab051aba86348d747cd2344",
+"root": "012f123b39a22a0547e690074c4314ac2c941f60d6d44ab55d0a4c40adb93b97",
 "status": {
-"built": 12
+"built": 32
 },
 "terms": []
 },
 "tests": {
-"atoms": 37,
+"atoms": 38,
 "claims": {
-"OWN": 37
+"OWN": 38
 },
 "id": "module:tests",
-"root": "15aa3bfe966302865f933e9cc003fb999c2d6c32da3b36b449b652cd44013d80",
+"root": "4b827430d954e797605f4f96611e5338c31b0d4c303263aa9e2dbecfff859396",
 "status": {
-"tested": 37
+"tested": 38
 },
 "terms": []
 },
@@ -10166,13 +11097,15 @@
 ]
 }
 ],
-"root": "e485c83c9174f083afdfa362767ab0991632e468c213364a49ca28a350850cdd",
+"root": "da9b3edbaa4b484707cca41d562506e5b9a40289830d38c6b627047b046cb855",
 "roots": {
-"aok": "0abb943bba6e790df7c77cc616e285e301c649fb61f3cf659b08ee364b94e643",
+"aok": "5fdac42048f7c833a712aaee8a13580dabb536c39c46884ca82780525119d62e",
+"assets": "2aa571d0973f1995c303b86f4f8f9816f485a73bfd59822593d6caa138f6b72e",
+"assets_mmr": "0db28037a5744bcad439c5869ae5a1b4e849cbb65656c8532b82a70e03174fe4",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
 "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7",
 "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5",
-"impact_mmr": "125c3fc63a3be7728fdde40b8532ee963bd1cc74351deb24058116752a0bef45",
+"impact_mmr": "bbbf8f3daaac1f80cc418c20d1f096307195798f378383ab4807a69fd1dba359",
 "labbox_mmr": "234a9637a12b23e7c4f1b22e4a1f4e0d5734da43f9e12decb034622aa2746ff8",
 "upstream_mmr": "38a4a379f5c6d0d5eb9b742eceb698f8cb4e72309bf1f2095cca9e7d87c85513"
 },
@@ -14381,8 +15314,8 @@
 }
 ],
 "totals": {
-"OWN": 742,
-"OWN+TERMS": 46,
+"OWN": 765,
+"OWN+TERMS": 48,
 "THIRD": 20
 },
 "type": "baebugs-mvp"
