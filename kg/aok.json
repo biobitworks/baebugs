@@ -1,5 +1,5 @@
 {
- "atoms": 841,
+ "atoms": 843,
  "external": [
   {
    "claim": "THIRD",
@@ -373,6 +373,34 @@
    "claim": "OWN",
    "claude_coauthored_commits": 1,
    "commits": 1,
+   "id": "leaf:assets/boxes_owlv2.json",
+   "kind": "meta",
+   "leaf": "8ce958492c29fe0010cd406ebf1a12d3491fda4ea74bbd284a765badb155e590",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "assets/boxes_owlv2.json",
+   "sha256": "efafffb5b2fbfb5133f6d2a48dc213e6f79ee88302a6e18f2c57859b3570c04c",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:assets/detector_eval.json",
+   "kind": "meta",
+   "leaf": "b3098d9b8eccde6ce3a8446270af8149a1e63641562edb4e59e1c7fb7360947a",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "assets/detector_eval.json",
+   "sha256": "411147fdeeefc0484e7794dab4fff52d84df0ded77c5a7d66a06655220c77018",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/label_studio/config.xml",
    "kind": "meta",
    "leaf": "18a5d65a93c3f1813bd8a2b58259555147128b687e1bc646bdcdcafdb99c41c1",
@@ -385,8 +413,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 1,
-   "commits": 1,
+   "claude_coauthored_commits": 2,
+   "commits": 2,
    "id": "leaf:assets/label_studio/tasks.json",
    "kind": "meta",
    "leaf": "767807db9afc57f7e6d147d13544e943e72a18be02f6cccf06c17befec825323",
@@ -12043,14 +12071,14 @@
    ]
   },
   "repo-meta": {
-   "atoms": 36,
+   "atoms": 38,
    "claims": {
-    "OWN": 36
+    "OWN": 38
    },
    "id": "module:repo-meta",
-   "root": "e22047591a7fb4089267c2f6bceac1ae30f9061608a0e7eae126f20cbc4e883c",
+   "root": "940a7936878a2d7a3e7ca6914de867d057336087f692fbdcc88478858be1f220",
    "status": {
-    "built": 36
+    "built": 38
    },
    "terms": []
   },
@@ -12080,9 +12108,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "0476394e6c13d0ed0d75c5e5b53ae3cf112a580d623d866814b8c895ab9c2fcc",
+ "root": "89525f0b7a3f5e5eb8f0d8a2f1c59555561a1ad6a39368d297afbe0994da1b45",
  "totals": {
-  "OWN": 772,
+  "OWN": 774,
   "OWN+TERMS": 49,
   "THIRD": 20
  },
