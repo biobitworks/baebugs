@@ -1780,9 +1780,17 @@ null
 "DAISY-BB-002a/CA_only",
 "DAISY-BB-002a/Synth_only"
 ],
-"breaks": 24,
+"breaks": 25,
 "result_breaks": 8,
 "rule": "every hash the graph references must resolve to stored bytes; otherwise BREAK",
+"withheld_bench_sources": [
+{
+"public_rehash": "NOT_AVAILABLE",
+"reason": "source bytes withheld; distribution consent/rights UNKNOWN",
+"record_path": "docs/bench/bench_photo_observation_20261025.json",
+"source_sha256": "a396a9b9f800733fed9e2750dda0fed2de49083df0760b8d9088b4ec51f2452c"
+}
+],
 "withheld_photo_breaks": 16
 },
 "external": [
@@ -2885,11 +2893,11 @@ null
 {
 "claim": "OWN",
 "kind": "code",
-"leaf": "c8a7f8e581e02abdbcff0dba7f27d88f0cef1a4c234522fe29393b93aecb24f7",
+"leaf": "fb249b9d5c753295b11dad6e7fd590407ca825bef956cd331c092b570909eb6a",
 "licence": "MIT",
 "module": "python-package",
 "path": "baebugs/mvp.py",
-"sha256": "6851dd6608d40302c417502dfea117fb4862bc87671ab929b2c59079cfd0bc35",
+"sha256": "6ef1caedc507d9e8947b1de9a764512f0b8afac141e9c828fc9deb78c0ca0491",
 "status": "tested"
 },
 {
@@ -4130,6 +4138,16 @@ null
 "module": "docs",
 "path": "docs/bench/13.jpg",
 "sha256": "46faf045cbac39537e54c94ce02092eacad304837a3494c9ef682cbbd007b998",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "d0e6fdaaa083d3183e5fa2aab9bdb9d146592d486d3ad8efe5a1d410731204b2",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/bench/WORKCELL_DEPLOY_PREDECESSOR_20261025.json",
+"sha256": "f5806ed42f0a4a2bb85ec5d64cc02b48a9377c07f03dfa29652da0ae286229e8",
 "status": "built"
 },
 {
@@ -10185,11 +10203,11 @@ null
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "356ad2a6ac7a3854f4131e8c5aa538e7c78d51007c861fd3da1b498e217a57fc",
+"leaf": "2e0a676ff40ae0267e97cc0e2d1d1e1725e77e6becf5ade7f744af27e3392fd1",
 "licence": "MIT",
 "module": "mvp-site",
 "path": "site/mvp/index.html",
-"sha256": "3b07011401bee01d3a81cabdc4106aab3258d9c0bc206fdeb336c9fe8c3ebe34",
+"sha256": "c02d8c08eb11f6a769885121d17c69ba2cc8ee278de977d1540752a844ef2e08",
 "status": "built"
 },
 {
@@ -10415,11 +10433,11 @@ null
 {
 "claim": "OWN",
 "kind": "test",
-"leaf": "18a49c6bd02731839db21b0e40432920e32ce0e335ee421422cb4331d3eb6af9",
+"leaf": "f4673241a759e7479cb4b12ce056a85a6b7bdb11430865174b1bfa039f1f75f7",
 "licence": "MIT",
 "module": "tests",
 "path": "tests/test_labware_twin.py",
-"sha256": "029bb6c6f8d3c85d58a087699068fe8409bdc5f92b1e183cadb34e6c25351b50",
+"sha256": "201aa89c72b1ea20978408b6772d4b31b52ebeb7759978a2045c5f47d06262ad",
 "status": "tested"
 },
 {
@@ -10605,11 +10623,11 @@ null
 {
 "claim": "OWN",
 "kind": "test",
-"leaf": "6249b0000096db08258c30e2d1c4d10ab7c7a324e8b83fcf605204c76e528ca3",
+"leaf": "68fdec65a9a53e2be6c4a8a61e13d635d343196a8c50d44347d823355e57bdd4",
 "licence": "MIT",
 "module": "tests",
 "path": "tests/test_workflow_landing.py",
-"sha256": "9ffb89b2267392d118ecb3bb0f05ac05f1c7ee45475388818438da6eb8cbad80",
+"sha256": "b9643ebde013665daa93c8a2cbf7919b810eb5f4325a45bde4ea1fa85524ecb2",
 "status": "tested"
 }
 ],
@@ -10703,14 +10721,14 @@ null
 "terms": []
 },
 "docs": {
-"atoms": 48,
+"atoms": 49,
 "claims": {
-"OWN": 48
+"OWN": 49
 },
 "id": "module:docs",
-"root": "faf720257d9ed0c3759ef96aade8647597f3079797d5816c428335a79638edcd",
+"root": "648866cd5d7498d3e2c1ceedbbb02d30258589f9e8f44073f6a9a8da644c7c65",
 "status": {
-"built": 48
+"built": 49
 },
 "terms": []
 },
@@ -10761,7 +10779,7 @@ null
 "OWN": 31
 },
 "id": "module:mvp-site",
-"root": "6cc8d9c27aeca392566b75178607479f11c7aca1adea9a89b646775a0da23ced",
+"root": "cad476d85790631cb484516c1a3b9a983b1b411c99d19d62a23718271e1e01c1",
 "status": {
 "built": 31
 },
@@ -10800,7 +10818,7 @@ null
 "OWN+TERMS": 8
 },
 "id": "module:python-package",
-"root": "426e8e8695933e7809c6255e59578b7f80b6e2b5f4edd253846d78f33b0444d2",
+"root": "dac661f679f1fe8745d0b4ad5f41f60c9e291873c783fdd90b773ddd180abdc8",
 "status": {
 "built": 55,
 "tested": 31
@@ -10827,7 +10845,7 @@ null
 "OWN": 40
 },
 "id": "module:tests",
-"root": "7b07202bfb5ab7940d0d43d4af4af2d4872c68e27e03a1e73ac8eae76ab4d5b8",
+"root": "57ee3903a7b2fefe82fd2e5ab4b391b707aa20b69a397ab268806b566fb660d5",
 "status": {
 "tested": 40
 },
@@ -11609,9 +11627,9 @@ null
 ]
 }
 ],
-"root": "9a6598cb25025a8cc905472b95add1765e8541680969fea360d0c79af1a1b658",
+"root": "9081c2802b28ce2e0ebd98c85736e8e32295d8b1958891d38d7a8aa975452919",
 "roots": {
-"aok": "3eb6c7a61d97c7829c74b7de795b6d4496bc77788d7c47698674022010339121",
+"aok": "42791ba908af36254945aa482ecb539400f1cde70717dd220af09b3492136927",
 "assets": "2aa571d0973f1995c303b86f4f8f9816f485a73bfd59822593d6caa138f6b72e",
 "assets_mmr": "0db28037a5744bcad439c5869ae5a1b4e849cbb65656c8532b82a70e03174fe4",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -15826,7 +15844,7 @@ null
 }
 ],
 "totals": {
-"OWN": 802,
+"OWN": 803,
 "OWN+TERMS": 49,
 "THIRD": 20
 },

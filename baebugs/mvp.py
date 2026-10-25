@@ -106,6 +106,19 @@ def build(repo="."):
     missing = {b.get("missing_sha256") for b in breaks}
     photo_breaks = Path(repo, "print/labware/merkle/breaks.json")      # labware twin: source photos withheld (vendor marks)
     photo_breaks = json.loads(photo_breaks.read_text()) if photo_breaks.exists() else []
+    bench_photo_note = Path(repo, "docs/bench/bench_photo_observation_20261025.json")
+    withheld_bench_sources = []
+    if bench_photo_note.exists():
+        bench_note = json.loads(bench_photo_note.read_text())
+        source = bench_note["source"]
+        if source["public_source_bytes"] != "PUBLISHED":
+            withheld_bench_sources.append({
+                "record_path": "docs/bench/bench_photo_observation_20261025.json",
+                "source_sha256": source["sha256_exact_file_bytes"],
+                "reason": "source bytes withheld; distribution consent/rights UNKNOWN",
+                "public_rehash": "NOT_AVAILABLE"
+            })
+
     results = []
     for f in sorted(Path(repo, "daisy/results").rglob("results.json")):
         d = json.loads(f.read_text()); rel = str(f.relative_to(repo))
@@ -120,8 +133,9 @@ def build(repo="."):
         roots["assets"] = json.loads(Path(repo, "kg/assets.json").read_text())["root"]
     root = merkle_root(sorted(v for v in roots.values() if v))
     return {"type": "baebugs-mvp", "root": root, "roots": roots, "mmr": mmr,
-            "custody": {"breaks": len(breaks) + len(photo_breaks), "result_breaks": len(breaks),
+            "custody": {"breaks": len(breaks) + len(photo_breaks) + len(withheld_bench_sources), "result_breaks": len(breaks),
                         "withheld_photo_breaks": len(photo_breaks),
+                        "withheld_bench_sources": withheld_bench_sources,
                         "break_contexts": sorted({c for b in breaks for c in b.get("contexts", [])}),
                         "rule": "every hash the graph references must resolve to stored bytes; otherwise BREAK"},
             "legend": A["legend"], "totals": A["totals"], "modules": A["modules"], "external": A["external"],

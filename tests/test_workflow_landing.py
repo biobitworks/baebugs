@@ -43,3 +43,10 @@ def test_private_photo_record_never_bundles_source_pixels():
     assert note["source"]["public_source_bytes"]=="WITHHELD"
     assert note["source"]["publication_consent"]=="UNKNOWN"
     assert len(note["source"]["sha256_exact_file_bytes"])==64
+
+def test_bench_source_withheld_is_reported_as_custody_gap():
+    from baebugs import mvp
+    report=mvp.build(ROOT)
+    assert report["custody"]["withheld_bench_sources"]
+    assert report["custody"]["withheld_bench_sources"][0]["public_rehash"]=="NOT_AVAILABLE"
+    assert report["custody"]["breaks"]==report["custody"]["result_breaks"]+report["custody"]["withheld_photo_breaks"]+len(report["custody"]["withheld_bench_sources"])
