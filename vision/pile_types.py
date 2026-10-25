@@ -7,7 +7,7 @@ filter choice needs; each type's size comes from a reference table.
 
 Usage:
   python pile_types.py train                    # trains from training.json, saves models/pile_types.yml
-  python pile_types.py predict IMAGE [--out overlay.png]
+  python pile_types.py predict IMAGE [--out overlay.png] [--json estimate.json]
 """
 import argparse
 import json
@@ -143,7 +143,7 @@ def train():
     print(f"trained on {len(y)} squares from {len(photos)} photos, saved {MODEL.relative_to(HERE)}")
 
 
-def predict(image, out):
+def predict(image, out, json_out=None):
     px_per_mm, floor_mm = setup()
     classes = json.loads(MODEL.with_suffix(".json").read_text())["classes"]
     model = cv2.ml.RTrees_load(str(MODEL))
@@ -172,6 +172,9 @@ def predict(image, out):
         cv2.putText(out_img, text, (38, 27 + row * 28), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (0, 0, 0), 3)
         cv2.putText(out_img, text, (38, 27 + row * 28), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (255, 255, 255), 1)
     cv2.imwrite(out, out_img)
+    if json_out:
+        Path(json_out).write_text(json.dumps({"image": image, "squares": int(objects),
+                                              "shares": {k: round(v, 3) for k, v in shares.items()}}, indent=2))
 
 
 def main():
@@ -181,8 +184,9 @@ def main():
     p = sub.add_parser("predict")
     p.add_argument("image")
     p.add_argument("--out", default="pile_types.png")
+    p.add_argument("--json", help="write the estimate (share of each type) here, for filter_plan.py --estimate")
     args = ap.parse_args()
-    train() if args.cmd == "train" else predict(args.image, args.out)
+    train() if args.cmd == "train" else predict(args.image, args.out, args.json)
 
 
 if __name__ == "__main__":

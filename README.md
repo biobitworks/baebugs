@@ -71,6 +71,13 @@ Then turn the measurements into a filter plan for the rig (filters stacked coars
 
 - **split** (default): picks the 3 filters that sort the objects into the most separate groups, with hole sizes as far from any object as possible.
 - **target**: picks filters so one shelf catches objects whose width is in the given range (later selectable with a microcontroller button).
+- **coarse** (for piles): from the recogniser's rough estimate, picks filters that give the largest common types a shelf of their own first. Each type's width comes from `vision/types.json`.
+
+```powershell
+& $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\pile_types.py predict photo.png --out vision\output\types.png --json vision\output\estimate.json
+& $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\filter_plan.py --estimate vision\output\estimate.json --json vision\output\plan.json
+```
+
 - Hole sizes live in `vision/filters.json` and are **placeholders** until the real filters are measured.
 - Tests: `cd vision; python -m unittest test_filter_plan`.
 

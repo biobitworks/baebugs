@@ -8,10 +8,13 @@ Modes:
   split   (default) pick the 3 filters that sort the objects into as many separate groups as
           possible, with hole sizes as far as possible from any object's width.
   target  pick filters so one shelf catches objects whose width is between MIN and MAX mm.
+  coarse  for a pile, from pile_types.py's estimate: pick filters that give the largest common
+          types a shelf of their own first. Each type's width comes from types.json.
 
 Usage:
   python filter_plan.py objects.json [--filters filters.json] [--target MIN MAX]
                         [--json plan.json] [--image photo.jpg --out plan.png]
+  python filter_plan.py --estimate estimate.json [--min-share 0.05] [--json plan.json]
 """
 import argparse
 import itertools
@@ -56,6 +59,28 @@ def plan_split(widths, filters):
         holes = [filters[f] for f in ordered]
         groups = len({fraction_of(w, holes) for w in widths})
         score = (groups, closest_call(widths, holes)[0] if widths else 0)
+        if best is None or score > best[0]:
+            best = (score, ordered)
+    return best[1]
+
+
+def plan_coarse(widths, filters):
+    """Filter ids, top to bottom, that separate the largest types first.
+
+    `widths` are the reference widths of the types present. Going from the widest type down, a rig
+    scores one point per type that gets a fraction to itself, stopping at the first type that shares
+    one. Ties go to more separate groups, then to the widest gap between any width and any hole.
+    """
+    if len(filters) < 3:
+        raise ValueError("need at least 3 filters")
+    widths = sorted(widths, reverse=True)
+    best = None
+    for combo in itertools.combinations(filters, 3):
+        ordered = sorted(combo, key=lambda f: -filters[f])
+        holes = [filters[f] for f in ordered]
+        fractions = [fraction_of(w, holes) for w in widths]
+        separated = next((k for k, f in enumerate(fractions) if fractions.count(f) > 1), len(fractions))
+        score = (separated, len(set(fractions)), closest_call(widths, holes)[0] if widths else 0)
         if best is None or score > best[0]:
             best = (score, ordered)
     return best[1]
@@ -128,8 +153,11 @@ def describe(plan):
     rig = " | ".join(f"{f} {h:g} mm" if f else "empty" for f, h in zip(plan["rig"].values(), plan["holes_mm"].values()))
     lines = [f"mode: {plan['mode']}", f"rig (top to bottom): {rig}"]
     for name, frac in plan["fractions"].items():
-        ids = " ".join(f"#{i}" for i in frac["objects"]) or "-"
+        # measured objects are numbered; types in coarse mode are listed by name
+        ids = ", ".join(f"#{i}" if isinstance(i, int) else i for i in frac["objects"]) or "-"
         lines.append(f"  {name:8s} {fmt_range(frac['range_mm']):14s} {ids}")
+    if "ignored" in plan:
+        lines.append(f"ignored (under {plan['min_share']:.0%} of the pile): {', '.join(plan['ignored']) or '-'}")
     if "closest_call" in plan:
         c = plan["closest_call"]
         lines.append(f"closest call: a {c['width_mm']:g} mm wide object vs the {c['hole_mm']:g} mm hole ({c['apart_pct']}% apart)")
@@ -166,16 +194,35 @@ def draw(image_path, objects, plan, out_path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("objects", help="objects JSON written by dish_sizer.py --json")
+    ap.add_argument("objects", nargs="?", help="objects JSON written by dish_sizer.py --json")
+    ap.add_argument("--estimate", help="estimate JSON written by pile_types.py --json (coarse mode)")
+    ap.add_argument("--types", default=str(Path(__file__).with_name("types.json")), help="reference width of each type")
+    ap.add_argument("--min-share", type=float, default=0.05, help="coarse mode: ignore types below this share of the pile")
     ap.add_argument("--filters", default=str(Path(__file__).with_name("filters.json")))
     ap.add_argument("--target", type=float, nargs=2, metavar=("MIN", "MAX"), help="catch widths in this range, mm")
     ap.add_argument("--json", help="write the plan here")
     ap.add_argument("--image", help="photo to draw the plan on (the one dish_sizer measured)")
     ap.add_argument("--out", default="plan.png")
     args = ap.parse_args()
+    if bool(args.objects) == bool(args.estimate):
+        ap.error("give either an objects JSON or --estimate")
+
+    filters = load_filters(args.filters)
+    if args.estimate:
+        # a rough per-type estimate of a pile: each common type stands in as one "object" at its reference width
+        shares = json.loads(Path(args.estimate).read_text())["shares"]
+        widths = {name: t["width_mm"] for name, t in json.loads(Path(args.types).read_text())["types"].items()}
+        common = [name for name, share in sorted(shares.items(), key=lambda kv: -kv[1]) if share >= args.min_share]
+        objects = [{"id": name, "width_mm": widths[name], "share": shares[name]} for name in common]
+        plan = build_plan(objects, filters, plan_coarse([o["width_mm"] for o in objects], filters), "coarse")
+        plan["min_share"] = args.min_share
+        plan["ignored"] = [name for name in shares if name not in common]
+        print(describe(plan))
+        if args.json:
+            Path(args.json).write_text(json.dumps(plan, indent=2))
+        return
 
     objects = json.loads(Path(args.objects).read_text())
-    filters = load_filters(args.filters)
     if args.target:
         lo, hi = sorted(args.target)
         plan = build_plan(objects, filters, plan_target(filters, lo, hi), "target", (lo, hi))
