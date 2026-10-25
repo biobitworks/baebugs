@@ -2092,7 +2092,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 5,
-   "commits": 5,
+   "commits": 6,
    "id": "leaf:baebugs/mvp.py",
    "kind": "code",
    "leaf": "fb249b9d5c753295b11dad6e7fd590407ca825bef956cd331c092b570909eb6a",
@@ -4108,7 +4108,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/bench/WORKCELL_DEPLOY_PACKAGING_FAILURE_20261025.json",
    "kind": "doc",
    "leaf": "6045cd6b3a552c5df94956b229461f050726c3302ff25686b55d18245943cc29",
@@ -4122,7 +4122,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/bench/WORKCELL_DEPLOY_PREDECESSOR_20261025.json",
    "kind": "doc",
    "leaf": "d0e6fdaaa083d3183e5fa2aab9bdb9d146592d486d3ad8efe5a1d410731204b2",
@@ -4136,7 +4136,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/bench/WORKCELL_PORTAL_REVIEW_20261025.md",
    "kind": "doc",
    "leaf": "07694f49632d755610ef84269cc2ab30d315cedb6fef8fb525f0bc5221c14d9d",
@@ -4150,7 +4150,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/bench/bench_photo_observation_20261025.json",
    "kind": "doc",
    "leaf": "7a33fd052a3b769753567a31b64f97d91153dc3ce88e6da30ca750ba38d30b1c",
@@ -4528,7 +4528,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/protocols/DEPLOY_READBACK_PREDECESSOR_20261025.json",
    "kind": "doc",
    "leaf": "2797e68bfeadb67e758eb9548d7bb730d4ee5fce66d47e314a18b2e50b3d7812",
@@ -4542,7 +4542,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/protocols/DISCOVERY_MVP_CONTRACT.md",
    "kind": "doc",
    "leaf": "f836df18a519c59570a8c72a8c7a14a0a24ec9f76e430c2bf23c331ef61e8cad",
@@ -4556,7 +4556,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/protocols/NOTEBOOK_PRECURSOR_FAILURE_20261025.json",
    "kind": "doc",
    "leaf": "34d0337595c7b421fb7911bee2abd8ff52d753c417cc56daac927d373ff503a2",
@@ -4570,7 +4570,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/protocols/TEST_RUN_RECEIPT_20261025.json",
    "kind": "doc",
    "leaf": "3eacbc63d7561ff207a3fc1f6c05c14dd4d88f83116926ea06d1a899af2e4dea",
@@ -6722,7 +6722,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:notebooks/protocol_discovery.ipynb",
    "kind": "notebook",
    "leaf": "c4b233cafeb72a3ac0048b7316a870aab90c8f207c70e54c699d816945f37574",
@@ -7111,43 +7111,43 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 2,
+   "claude_coauthored_commits": 1,
+   "commits": 3,
    "id": "leaf:packages/baebugs-aok/data/graph.json",
    "kind": "meta",
-   "leaf": "e2e405f1c0958da1dcd27e15a3bbd226e0e69f56d918f204fdc37b907b651d29",
+   "leaf": "8442ae4883a2f43dc15483634b15e67115d126571898415d5f30b45dbcb1fa90",
    "licence": "MIT",
    "module": "repo-meta",
    "path": "packages/baebugs-aok/data/graph.json",
-   "sha256": "87f0c8a59b69722bb00dbcf4a2e20516a76082afcb2afa7efddde0d1523d1900",
+   "sha256": "eacb3a2e9a02409e65811678cc5ceeb2475123c082a6d526e1312ac21b57b7ff",
    "status": "built",
    "terms": []
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 2,
+   "claude_coauthored_commits": 1,
+   "commits": 3,
    "id": "leaf:packages/baebugs-aok/data/manifest.json",
    "kind": "meta",
-   "leaf": "4b4f2fd8911dba62e58beec5508b99892781841a418431f8b82db0390820fbb8",
+   "leaf": "1e9ff9e8255b0d33dfc5f480912dd2b038e01c961d235e05c8823a7ae3c94d7d",
    "licence": "MIT",
    "module": "repo-meta",
    "path": "packages/baebugs-aok/data/manifest.json",
-   "sha256": "e57634ecfa4dda07b546cc66f130c54c860572b5725277c600c4501cb1c2320f",
+   "sha256": "4dafc942b9458d30062ef92be4b2f27e3664548bf34dabd8b5f83d447c5cad11",
    "status": "built",
    "terms": []
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 2,
+   "claude_coauthored_commits": 1,
+   "commits": 3,
    "id": "leaf:packages/baebugs-aok/data/root.json",
    "kind": "meta",
-   "leaf": "a3429c47e309f28ba6ce69d887d5539b0f235b8c978375272ee4c56665adf47c",
+   "leaf": "2179762d3f898544feee841230de10d0d217d48b121d299fdcfe8891e09b9742",
    "licence": "MIT",
    "module": "repo-meta",
    "path": "packages/baebugs-aok/data/root.json",
-   "sha256": "f1eeda122e374407d129622308de76e392b55d6c94c10f6245212aad0b33423e",
+   "sha256": "98c0703d946b16a273a8286cc85d2036fad822b10df66fb0d1cd19ab15d6f715",
    "status": "built",
    "terms": []
   },
@@ -14154,7 +14154,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:protocols/catalog.json",
    "kind": "meta",
    "leaf": "a87103ea16c5842a079991088b0575f799248cec435909b9014de0e94cc33a99",
@@ -14293,43 +14293,43 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 2,
+   "claude_coauthored_commits": 1,
+   "commits": 3,
    "id": "leaf:site/aok/data/graph.json",
    "kind": "page",
-   "leaf": "e2412fb4a68fd0703267a7cec42c87b5a8057a8801bc11b71f96433a18fd2bcb",
+   "leaf": "2fa123cc376b23cc5619e27465b5c90cde40014b2b2db33daf41adbe8cbf3fb5",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/aok/data/graph.json",
-   "sha256": "87f0c8a59b69722bb00dbcf4a2e20516a76082afcb2afa7efddde0d1523d1900",
+   "sha256": "eacb3a2e9a02409e65811678cc5ceeb2475123c082a6d526e1312ac21b57b7ff",
    "status": "built",
    "terms": []
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 2,
+   "claude_coauthored_commits": 1,
+   "commits": 3,
    "id": "leaf:site/aok/data/manifest.json",
    "kind": "page",
-   "leaf": "7896a605a596c19bd98a79507dd0ab150960bf807906f04f3d4af6d4b52d0f53",
+   "leaf": "0a7b27ccead9b80dbb8d7b583d22f4b5450bd20754ccdd81ecb98bd603c611ed",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/aok/data/manifest.json",
-   "sha256": "e57634ecfa4dda07b546cc66f130c54c860572b5725277c600c4501cb1c2320f",
+   "sha256": "4dafc942b9458d30062ef92be4b2f27e3664548bf34dabd8b5f83d447c5cad11",
    "status": "built",
    "terms": []
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 2,
+   "claude_coauthored_commits": 1,
+   "commits": 3,
    "id": "leaf:site/aok/data/root.json",
    "kind": "page",
-   "leaf": "d33db1f92dfd07964ca21049f723f33f8e9b4bf835d336cf8caf978b3e8863c6",
+   "leaf": "a2e8ff28a6e1c467fc8f100b53673529a31c5c94b77ba7bcc63924d28aa4ced1",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/aok/data/root.json",
-   "sha256": "f1eeda122e374407d129622308de76e392b55d6c94c10f6245212aad0b33423e",
+   "sha256": "98c0703d946b16a273a8286cc85d2036fad822b10df66fb0d1cd19ab15d6f715",
    "status": "built",
    "terms": []
   },
@@ -14367,11 +14367,11 @@
    "commits": 3,
    "id": "leaf:site/board/index.html",
    "kind": "page",
-   "leaf": "021f3805e4f8626dad9ea3262178ed9d666b7e98e817d1211d25a8cdfc2f6389",
+   "leaf": "89d6e2f221568330fe0b735cf69b24a96816f0422c2d69263760cb415702f6fd",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/board/index.html",
-   "sha256": "f1318a395b875e0893628fd7aaff509cde615f8ad76441854b11df7327c1baa3",
+   "sha256": "54ee916a7bf2f7c61843fafcf7e3c5ab0f9ef5d3da0abfad8ebcc06959426f0c",
    "status": "built",
    "terms": []
   },
@@ -14770,7 +14770,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 4,
    "id": "leaf:site/mvp/build_public_site.py",
    "kind": "page",
    "leaf": "9cb3a3890b573575d76061ec26fcf960300109201e4bb9cde7d633ff1b9f6454",
@@ -14784,7 +14784,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 4,
-   "commits": 4,
+   "commits": 7,
    "id": "leaf:site/mvp/index.html",
    "kind": "page",
    "leaf": "20d322fc4f08eefcce3d4c2ded9ccfbfced833228548136f8f656d451ab84062",
@@ -14798,7 +14798,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:site/protocols/app.js",
    "kind": "page",
    "leaf": "5201e787b26ac693b4c319a2d24e247ca11a8610bb6ddcb9c378f1ff60796ab7",
@@ -14812,7 +14812,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:site/protocols/build_catalog.py",
    "kind": "page",
    "leaf": "2f07a4d726fbacbc1d0d23e56e838f582a0fd69094a23cf83954b425ab12862f",
@@ -14826,7 +14826,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:site/protocols/index.html",
    "kind": "page",
    "leaf": "f0aaf02e6852c87f270b8e5350fe90f581093ede0ad3931d8a29fef7c8b14cc0",
@@ -14840,7 +14840,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:site/protocols/styles.css",
    "kind": "page",
    "leaf": "7c7edab578d73bef686c08082e44ac69e6b72b8395cf72eed486b6ce5530080e",
@@ -14854,7 +14854,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 1,
-   "commits": 1,
+   "commits": 2,
    "id": "leaf:site/twin/index.html",
    "kind": "page",
    "leaf": "845d6255e9eb794535d064d784e52567e128952054f7b0261cb30ab44f014e36",
@@ -15232,7 +15232,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 3,
-   "commits": 3,
+   "commits": 4,
    "id": "leaf:tests/test_labware_twin.py",
    "kind": "test",
    "leaf": "f4673241a759e7479cb4b12ce056a85a6b7bdb11430865174b1bfa039f1f75f7",
@@ -15372,7 +15372,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 2,
    "id": "leaf:tests/test_protocol_discovery.py",
    "kind": "test",
    "leaf": "a243a9ec00c348def080b5faaedf1e8fed2cd64a463109bc6d55db741555ba17",
@@ -15512,7 +15512,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 3,
    "id": "leaf:tests/test_workflow_landing.py",
    "kind": "test",
    "leaf": "3271033dc965baa68bc32cf37f9f1f4634fe2bb245466dba0f8c2ae170e695cf",
@@ -15682,7 +15682,7 @@
     "OWN": 47
    },
    "id": "module:mvp-site",
-   "root": "302623438aa9e35d07246fc0bcaee68e678974b6b0a63ae87044973c29510932",
+   "root": "ecf1a1934903deb1653fa38ac46044564fa2187d1cb8469505d235be46751872",
    "status": {
     "built": 47
    },
@@ -15736,7 +15736,7 @@
     "OWN": 174
    },
    "id": "module:repo-meta",
-   "root": "78917980e108a649ca5b4f2e5f33eaf6443da0fda4be3c7b0ab5eba506072283",
+   "root": "f1d632181d692349692af44766baa3f567906ad9e7a46fe38bb2eb46e9fa741c",
    "status": {
     "built": 174
    },
@@ -15768,7 +15768,7 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "ec161c5e6d4f5929939559d4c721ea711253cf19fac4a6223c9bc4376d24aade",
+ "root": "f0800808e9351c821e604e76e2eedf4e544cd5667165175b308195dbbbd4612b",
  "totals": {
   "OWN": 1032,
   "OWN+TERMS": 52,
