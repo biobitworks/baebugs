@@ -23,7 +23,7 @@ results are **OBSERVED_EXPLORATORY** (silver labels from a teacher model, not hu
 | FAMILY_Hymenoptera preprocessor (DAISY-004) | val 0.883 → test 0.167 vs 0.068 baseline (+0.099, under the 0.10 margin) → **NULL** | does not transfer out of California; in the ladder it may only advise, CA-only |
 | FAMILY_Diptera | no Diptera in any test split | **undecided** under the frozen rule |
 | Toy renders (002a) | Synth_only sizes the printed-toy renders better than CA_only (0.094 vs 0.227 median length error at 20 px/mm) | real-photo training does not help on renders; the physical demo uses printed toys |
-| ORDER model on toy renders (ladder demo) | confidently wrong on 3 toys (e.g. Bombyliidae → Hymenoptera at 0.97) and those were approved | confidence alone is not a safe gate; needs a photo-vs-render domain check + calibration |
+| ORDER model on toy renders (ladder demo) | 6 approvals, only 2 correct (both ladybirds); 4 wrong across 3 toys (e.g. Bombyliidae → Hymenoptera at 0.97) | confidence alone is not a safe gate; needs a photo-vs-render domain check + calibration before the rung may decide |
 | Local VLM rung (qwen2.5vl:3b) | confidence 0.9 every time, mostly HOLD | uncalibrated; advisory only |
 | teacher_check eval set | ~0 for both 002a runs | that eval set is anomalous; not used for decisions |
 
