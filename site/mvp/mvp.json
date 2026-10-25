@@ -2793,6 +2793,16 @@ null
 {
 "claim": "OWN",
 "kind": "code",
+"leaf": "bfc8679887083486bbeee1dd17ec6bad6e7d7318822a31959ed6f69c96f80c66",
+"licence": "MIT",
+"module": "python-package",
+"path": "baebugs/labware_twin.py",
+"sha256": "ee263b6d35514bcee64c0a4dcf1d63ec83261951cc857481015777af09b34c65",
+"status": "tested"
+},
+{
+"claim": "OWN",
+"kind": "code",
 "leaf": "ed792a70b02fe4784a6dffde7a97783e419730dbe90c5406a747a01dbffddf6e",
 "licence": "MIT",
 "module": "python-package",
@@ -4748,6 +4758,16 @@ null
 "module": "notebooks",
 "path": "notebooks/labbox.ipynb",
 "sha256": "ad86f2a7439e3f7cb2ade6162a410fdb84644d18bca0772e8b86912031931027",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "notebook",
+"leaf": "0f3f9c70e7766bddf18300082b73fb27ae9aa6f6e4e17932c130051608a2d1f0",
+"licence": "MIT",
+"module": "notebooks",
+"path": "notebooks/labware_twin.ipynb",
+"sha256": "1c60fcc34edea44ee09f8326b25e72a9833d8348c2b8af2245aeb8437fb2549d",
 "status": "built"
 },
 {
@@ -9033,6 +9053,286 @@ null
 {
 "claim": "OWN",
 "kind": "print",
+"leaf": "c21c87b1480e01ff35885ab702548209b8ee6dddf2c020be316a781ab41cda73",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/README.md",
+"sha256": "ba33bad9fe92b8e89bfcf155086ecde342d5305cccfa0f617e92a88282b08bb9",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "614b4a12f8816ce95ec00b4eeb9c459e9d381d5d0b60129cbc1750c9cf6aa0c3",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/catalog.json",
+"sha256": "4463dc50303c9ddc1917f50822531b772e43248ebb8047bde59d35e12205b1dd",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "422f74160e983d11c79a518edd1a8139ad56c3bf49c8be226f25f3fa014d2eda",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/merkle/breaks.json",
+"sha256": "6dc1b49251eb126a91efd9e90cebbda7594278d76270f2456a6dd0c39c0bb2c2",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "f9d6cd6095ce610e16e73e432868560f5310234c01772ef5c86319fe582c25b8",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/merkle/custody_log.json",
+"sha256": "d11b6843e07314a78b832c802b64ef482e158fc1ed8725a757c6671ad0b0de3f",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "fc6d8e998f6dc47b4b5cfd3d24c4bfea868782f2082249f55ca7a4c33e74a54b",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/merkle/lab_root.json",
+"sha256": "4226c14270c6484bb33e227714895f721e9ea47cf62cc5d2e3a85a3d43d1c17f",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "7874e8fb494ff03fde8bb7c403700342fcc2206707d4143e1a9b2263449159e8",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/merkle/parts.json",
+"sha256": "8a201218bce263493841071cec6e87057bdfec1562ef1ea25fdd9bbcce587a1c",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "6dbfd21b9eff74472f3417d5499788339804441af8c635b122e87da864307c2d",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/opentrons/baebugs_conical_15.json",
+"sha256": "40484dff1a74d6291a9cd69b6627d0afe441ebdd56378e62b0e86a6a5e837378",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "d55b6469f6e6a1a51de16c4e3ac205624ee70e132c56920e591eeaeae8c25dec",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/opentrons/baebugs_conical_50.json",
+"sha256": "786220cc481155b90970005a91fad0018bdaed28b793fe52d869fbffd3a81fa9",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "926c5db56ddd896931d339ab1d51e366c48d343f73796d44a2cc9600db89bdb8",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/opentrons/baebugs_cryo_24.json",
+"sha256": "779922c2684fbbbaf042da3dbd46d5ead182b90ad1e601d57559e04aa2990371",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "c393270f402f74d9289ae170e243e1bf910d7c892ce5c9f7fecf62614c9a55bf",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/opentrons/baebugs_rack_96.json",
+"sha256": "a25cf21492b388b26e50a15873e5f05c8ce72f7505a0e24adc37eac6fed36dd4",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "0d592ea3f63df250eeb8f5e538dfa3830dcb322acc0b4ebfcd1727df4a34f51b",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/previews.png",
+"sha256": "32efa1a3344172d2e7ae7ba79db870abfd85990c3a2a6755ed2b921f3a4d8f93",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "2f3ec417f23d3ae07b858a2b26aa54fb03d0366b9618d5cc98e1b8baa7273024",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/scad/labware.scad",
+"sha256": "025cbfe59bfb2d32557e6a9d5cc7a1fbf1fc54a5ea617dbfabe5a0ebfc3ffba2",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "68be6b73ffc291cc1ba97df2cc5dee00577ffc35dd1287a0e8ef42d2ab30a52c",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/scad/print-conical-15.scad",
+"sha256": "c710b6fb6a5a683109a930ca8154be4a1652c9769c72501a11c6aaada3ad4bc2",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "1390c08dc2ee26bf72be9cd8e325137849ec01a0fe12045bb123f64c4676108d",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/scad/print-conical-50.scad",
+"sha256": "fb6024f82cba09b6d8c0a581bf3944744559a3c5ab61f6b1544691a68111ff65",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "92a07460fbc7dafa8e117f21967bc78f87e66468e966c174d36df10756f91383",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/scad/print-cryo-100.scad",
+"sha256": "7ee59cdf53b2b1f25abab38b6700d10b87ff16e9bbd81a5fc597648a2036bb8e",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "65a44eb91317f3c3a6e4beb2d7a7a19ada50908b7e21dc9140f5ad82183e0859",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/scad/print-cryo-24.scad",
+"sha256": "88404135d09bbc45ab88c46e26c7c1e25b511f5cc81b73d6b4fafecb50115cdd",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "7858fb13745284a46e377cafce1028a430a00492175e3d5a3899f2e9e3fb40d9",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/scad/print-frame-sbs.scad",
+"sha256": "55a007097059cea1b826430248ff83a5ff5bb4d48c8c6e7208740eb37f45166a",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "bce39ea8e76f270036a198fd673890f7f6e98b6e41654bd74e96fd0b46d72d5d",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/scad/print-grid-mesh.scad",
+"sha256": "2fe54978a18036d70637083d2e8cc5f4573f38b78a53f2a50bc7bd52d0e1bd00",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "0f29a2fa2cc0818f5984f5a36a5be84cd0a7837bc181a6d9f4b2a9968c90c315",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/scad/print-honeycomb.scad",
+"sha256": "5526e01bed7cf77067865b4009660f8690085456680c8230515802d8ceb34832",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "2bf6590847849d05525a6b9b9e23cd43872875cde77bcee48e5d7f407868ad98",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/scad/print-rack-96.scad",
+"sha256": "fb5bbf9d8a86bf0d47a902664b68a073ab353769e7bfb4c64d51a77b8fdc9ee8",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "a425e3bb551c9bedda4a110787206de2d302f18e6f876e6c87bc470dd73bd22a",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/stl/print-conical-15.stl",
+"sha256": "08a2b8c1b324f21f33214219d8557f930a15e9c88b2b679da167f4054f617c64",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "3346bb598746e886197973be8f5d3e597987d82000d732fcdd2e973e7f230eec",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/stl/print-conical-50.stl",
+"sha256": "1ff438b6ade3e1632eb572ceb9389096069bcae8ddadea6131eae5cafd5f5eab",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "8e5927c060bbb595692b21f3e4801cd5df898ae1927578dc3c3a873c958c582d",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/stl/print-cryo-100.stl",
+"sha256": "f1e761a4ec75342d16b30abe2b0824c9065c1361ee0fcc824eebb633b7e3a0ea",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "69e5e3bfc5eb07788ba7258dd1e0ed160b564142c4723e8baeeb0bd78351f01e",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/stl/print-cryo-24.stl",
+"sha256": "ddaa772dfee7497df741bc7fff877b9d10b802c78ef6445d99eb92f5c5282746",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "1fcd5b7f2b9d54586e4098b35ecd5f13b7e4635ef3a9b34fcb3c3c2276c79026",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/stl/print-frame-sbs.stl",
+"sha256": "2a078dc03d47198441b1cbf61aba88435c96320b66ff4f157ba6c8d2b7b53fc9",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "173b275f3e35d34a5183f68350c6e91310f24ab223e4598c3acc5a916156866b",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/stl/print-grid-mesh.stl",
+"sha256": "3e7e2072859264c78730816b53ae3468b7f38fef399dd04302c369c0362bfecb",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "4eb4148879ebdcc9afc0766eb12b8be731ec96f1cb42d53c5722accc3d6ddb19",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/stl/print-honeycomb.stl",
+"sha256": "11948587da1cb2a871b09d23fa462e09eb0ecd59f131d7db6277d5e29ca3e59e",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
+"leaf": "60423d1a5a2631f9981a0d6aebeb9a6afa8c9eb2a404443b2748844c6443b4bc",
+"licence": "MIT",
+"module": "lab-parts",
+"path": "print/labware/stl/print-rack-96.stl",
+"sha256": "3dae5a801523dd907ec693cb1c24fd25fc5c88c96feb51c25c0799b8589a2837",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "print",
 "leaf": "ff53d3af790c0bc338151acd47c24313f5699188d36ec74df0bdb0782608a487",
 "licence": "MIT",
 "module": "lab-parts",
@@ -10083,6 +10383,16 @@ null
 {
 "claim": "OWN",
 "kind": "test",
+"leaf": "e6814bcf449e5c91ee3ba6b9ea9816677d689e9d28a1fe0f71188348aa9d5812",
+"licence": "MIT",
+"module": "tests",
+"path": "tests/test_labware_twin.py",
+"sha256": "c06a1c57c8bde53fa2c317b2ca321262714e20710afc119608a5d5de665e45d6",
+"status": "tested"
+},
+{
+"claim": "OWN",
+"kind": "test",
 "leaf": "814e214adcf055caaaa47484b7223861afc9c96a234e83f6537d2e4161fbb134",
 "licence": "MIT",
 "module": "tests",
@@ -10392,14 +10702,14 @@ null
 ]
 },
 "lab-parts": {
-"atoms": 131,
+"atoms": 159,
 "claims": {
-"OWN": 131
+"OWN": 159
 },
 "id": "module:lab-parts",
-"root": "a21967d41d0ae4bab8f768113c024752ce4055e983ffee80cbb9fc9eb4d34bdf",
+"root": "cd098289ee445e72d9986106b80b0b698ccd8ef6bcbcf45759d69c741613712f",
 "status": {
-"built": 131
+"built": 159
 },
 "terms": []
 },
@@ -10416,14 +10726,14 @@ null
 "terms": []
 },
 "notebooks": {
-"atoms": 18,
+"atoms": 19,
 "claims": {
-"OWN": 18
+"OWN": 19
 },
 "id": "module:notebooks",
-"root": "f3b21be7614924fd38d1a629f7c1d4861832347c127642f30deb4bcc79e541a8",
+"root": "65fe185ea095dfe92aa4b4c3dbe18e994185897eb0943c28b1823afc0990aa29",
 "status": {
-"built": 18
+"built": 19
 },
 "terms": []
 },
@@ -10442,16 +10752,16 @@ null
 ]
 },
 "python-package": {
-"atoms": 85,
+"atoms": 86,
 "claims": {
-"OWN": 77,
+"OWN": 78,
 "OWN+TERMS": 8
 },
 "id": "module:python-package",
-"root": "a3cfd61e68e51b54078da9af79ba26b02ea138cecba505ba76cf70c47fb92025",
+"root": "0a9de8c9ba6c7bbda4dfeccb7c6a8109d6a0f88ee32a178f1401b4994637f422",
 "status": {
 "built": 55,
-"tested": 30
+"tested": 31
 },
 "terms": [
 "ext:ultralytics"
@@ -10470,14 +10780,14 @@ null
 "terms": []
 },
 "tests": {
-"atoms": 38,
+"atoms": 39,
 "claims": {
-"OWN": 38
+"OWN": 39
 },
 "id": "module:tests",
-"root": "4b827430d954e797605f4f96611e5338c31b0d4c303263aa9e2dbecfff859396",
+"root": "b95f40372d367f116b3c87e8f7fd2ef3b3df675b2ccecd6e9a27b6ff2e39f4be",
 "status": {
-"tested": 38
+"tested": 39
 },
 "terms": []
 },
@@ -11127,9 +11437,9 @@ null
 ]
 }
 ],
-"root": "d42a6157048a028706a501a79249185e19a29ad0fa760808611db12cb91f9be9",
+"root": "ce190ee64461a9ed26f32ddcdcb5e5f4ba7b18649fb48d867a3c202c1bebcf4b",
 "roots": {
-"aok": "52d9904a9e58ac652387f740c18183be287825eb8ef5d71ec0d47dfafeb2313b",
+"aok": "8ca00a43b9e1013782e46da54bdbbb52926124cd160eca22637182f8d7df2a11",
 "assets": "2aa571d0973f1995c303b86f4f8f9816f485a73bfd59822593d6caa138f6b72e",
 "assets_mmr": "0db28037a5744bcad439c5869ae5a1b4e849cbb65656c8532b82a70e03174fe4",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -15344,7 +15654,7 @@ null
 }
 ],
 "totals": {
-"OWN": 767,
+"OWN": 798,
 "OWN+TERMS": 49,
 "THIRD": 20
 },
