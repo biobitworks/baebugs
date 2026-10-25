@@ -26,7 +26,7 @@ def load(path):
     return json.loads((ROOT / path).read_text())
 
 
-def build():
+def build(output_path: Path | None = None):
     filters = load("print/filters/filters.json")
     passage = load("print/filters/passage/body_folded/summary.json")
     mvp = load("site/mvp/mvp.json")
@@ -101,8 +101,10 @@ def build():
         },
     }
     html = (HERE / "template.html").read_text().replace("/*STORY_DATA*/null", json.dumps(data, sort_keys=True))
-    (HERE / "index.html").write_text(html)
-    print("wrote", HERE / "index.html", len(html), "bytes")
+    destination = HERE / "index.html" if output_path is None else Path(output_path)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(html)
+    print("wrote", destination, len(html), "bytes")
 
 
 if __name__ == "__main__":

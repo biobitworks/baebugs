@@ -39,7 +39,8 @@ def build(target: Path, source_ref: str):
     shutil.copy2(REPO/"docs/bench/bench_photo_observation_20261025.json",target/"bench_observation.json")
     for rel in ["site/lab","site/twin","site/protocols"]:
         d=target/Path(rel).name
-        if d.exists(): shutil.rmtree(d)
+        if d.exists():
+            shutil.rmtree(d)
         shutil.copytree(REPO/rel,d,ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
     # Public protocols are source-verified derived projections, not execution proof.
     import sys
@@ -51,12 +52,129 @@ def build(target: Path, source_ref: str):
         json.dumps(resolved, indent=2, ensure_ascii=False, sort_keys=True)+chr(10))
     # The 3D labware preview and Opentrons schemas linked by the Parts tab.
     for rel in ["print/labware/previews.png"]:
-        dest=target/rel;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(REPO/rel,dest)
+        dest = target / rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(REPO / rel, dest)
     sh=REPO/"print/labware/opentrons"
     if sh.exists():
         d=target/"print/labware/opentrons"
-        if d.exists(): shutil.rmtree(d)
+        if d.exists():
+            shutil.rmtree(d)
         shutil.copytree(sh,d)
+    # Build the story in the derived output, never over the committed predecessor.
+    # The story refers to the source graph root but its bytes differ from the
+    # committed older story occurrence, which is recorded below.
+    sys.path.insert(0, str(REPO / "site/story"))
+    from build_story import build as compile_story
+    story_out = target / "story" / "index.html"
+    compile_story(story_out)
+    committed_story = REPO / "site/story/index.html"
+
+    # Portal board has older mvp-kg branch links. Pin browsing to this exact
+    # source commit, without rewriting historical source files.
+    board_out = target / "board" / "index.html"
+    board_out.parent.mkdir(parents=True, exist_ok=True)
+    board_html = (REPO / "site/board/index.html").read_text()
+    board_html = board_html.replace("/blob/mvp-kg/", "/blob/" + source_ref + "/")
+    board_html = board_html.replace("/raw/mvp-kg/", "/raw/" + source_ref + "/")
+    board_out.write_text(board_html)
+
+    # Publish only already-present, explicitly classified repo-owned media.
+    # In particular, do not ingest PR #34 or other user/team face photos.
+    videos = [
+        ("docs/demo/baebugs_mvp_demo.mp4", "mvp_walkthrough_45s.mp4", 44.64,
+         "Silent screen walkthrough; software only; older counts shown inside the recording"),
+        ("docs/workflow_video/biokea_vs_baebugs_v2.mp4", "biokea_vs_baebugs_animation_30s.mp4", 30.0,
+         "Silent CAD animation; not real hardware footage"),
+        ("docs/sieving_robot/sieving_demo.mp4", "robot_animation_63s.mp4", 62.65,
+         "Silent animation; exceeds event 60-second limit; purity figures illustrative"),
+        ("docs/demo/baebugs_reel.mp4", "research_reel_67s.mp4", 66.60,
+         "Soundtrack and over-length; not compliant with event footage requirement"),
+    ]
+    media_out = target / "demo"
+    media_out.mkdir(parents=True, exist_ok=True)
+    for original, dest, duration, note in videos:
+        shutil.copy2(REPO / original, media_out / dest)
+
+    import html as html_module
+    media_cards = "".join(
+        '<article><h2>' + html_module.escape(dest.replace("_", " ").replace(".mp4", "")) +
+        '</h2><p>' + html_module.escape(note) +
+        '</p><video controls muted preload="metadata" playsinline src="' +
+        html_module.escape(dest, quote=True) +
+        '" width="600"></video><p><a href="' + html_module.escape(dest, quote=True) +
+        '">Open video file</a></p></article>'
+        for original, dest, duration, note in videos
+    )
+    (media_out / "index.html").write_text(
+        '<!doctype html><html lang="en"><meta charset="utf-8">'
+        '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        '<title>Baebugs · video evidence review</title>'
+        '<style>body{font:16px system-ui;background:#0a191d;color:#e9f4eb;'
+        'max-width:1050px;margin:2rem auto;padding:0 1rem}'
+        'article{border:1px solid #48695e;border-radius:12px;'
+        'margin:20px 0;padding:16px}video{max-width:100%;height:auto}'
+        'a{color:#a9efce}</style>'
+        '<h1>Video review · software evidence vs physical validation</h1>'
+        '<p>No independently verified unedited physical sorting video is '
+        'included in this source. Animation and software footage do not '
+        'establish specimen recovery.</p>' + media_cards +
+        '<p><a href="../story/">Seven-stage story</a> · '
+        '<a href="../">Evidence homepage</a> · '
+        '<a href="https://github.com/biobitworks/baebugs/blob/main/docs/SUBMISSION_LINKS.md">'
+        'Submission source ledger</a></p></html>'
+    )
+
+    review_out = target / "review" / "index.html"
+    review_out.parent.mkdir(parents=True, exist_ok=True)
+    pack = json.loads((target / "mvp.json").read_text())
+    review_out.write_text(
+        '<!doctype html><html lang="en"><meta charset="utf-8">'
+        '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        '<title>Baebugs · final publication review</title>'
+        '<style>body{font:16px system-ui;background:#0a191d;color:#e9f4eb;'
+        'max-width:970px;margin:2rem auto;padding:0 1rem}'
+        'a{color:#a9efce}li{margin:.8rem 0}code{overflow-wrap:anywhere}</style>'
+        '<h1>Baebugs · publication review</h1><p>Source commit <code>' + source_ref +
+        '</code>; snapshot root <code>' + html_module.escape(pack["root"]) +
+        '</code>; ' + str(len(pack["leaves"])) +
+        ' addressable leaves; ' + str(pack["custody"]["breaks"]) +
+        ' declared custody gaps. The published website is a derived projection '
+        'and is <strong>not a new signed MMR commitment</strong>.</p>'
+        '<ol><li><a href="../story/">End-to-end BioKEA story</a></li>'
+        '<li><a href="../demo/">Four video assets, with compliance boundaries</a></li>'
+        '<li><a href="../protocols/">Discover, save, and remix protocols</a></li>'
+        '<li><a href="../board/">Specimen workflow board</a></li>'
+        '<li><a href="../lab/">3D printed parts</a></li>'
+        '<li><a href="../">Root-to-leaf evidence graph</a></li>'
+        '<li><a href="https://github.com/biobitworks/baebugs/blob/main/docs/SUBMISSION_LINKS.md">'
+        'Repository submission index</a></li></ol>'
+        '<p><strong>Submission gates:</strong> Google Slides URL and unlisted '
+        'YouTube URL are not verified in this build. The 14-slide extended '
+        'lab-stack deck and autoplay slideshows do not substitute for the '
+        'event-required maximum five-slide presentation.</p>'
+        '<p>Physical arm transfer, calibrated purity and specimen recovery: '
+        '<strong>NOT_TESTED</strong>. Photo permissions stay source-specific. '
+        'Open PR #34 contains face-bearing imagery and is not included here.</p>'
+        '<p><a href="../deployment-manifest.json">Verify every deployed byte</a></p>'
+        '</html>'
+    )
+    marker = '<section class="protocol-discovery-entry"'
+    homepage = (target / "index.html").read_text()
+    assert homepage.count(marker) == 1, "Homepage placement drift"
+    badge = (
+        '<aside aria-label="Submission review" style="border:1px solid #77b39c;'
+        'background:#123436;color:#e6f2eb;padding:15px 19px;'
+        'border-radius:10px;margin:18px 0">'
+        '<strong>BioKEA · end-to-end team review</strong> · '
+        '<a style="color:#b7f1d3" href="review/">Publication review</a> · '
+        '<a style="color:#b7f1d3" href="story/">Seven-stage story</a> · '
+        '<a style="color:#b7f1d3" href="demo/">Demo videos</a> · '
+        '<a style="color:#b7f1d3" href="board/">Protocol Board</a>. '
+        'Hardware recovery remains NOT_TESTED.</aside>'
+    )
+    (target / "index.html").write_text(homepage.replace(marker, badge + marker, 1))
+
     # Do not package source photos withheld for licensing or consent.
     assert not (target/"assets/photos").exists()
     (target/"robots.txt").write_text("User-agent: *\nAllow: /\n")
@@ -68,7 +186,17 @@ def build(target: Path, source_ref: str):
               "source_ref":source_ref,"evidence_pack_root":json.loads((target/"mvp.json").read_text())["root"],
               "status":"DERIVED_DEPLOYMENT_PACKAGE", "signed":"NOT_SIGNED",
               "files":files,"included_people_photos":False,
-              "reproduces_physical_robot_execution":False}
+              "reproduces_physical_robot_execution":False,
+              "story_projection":{
+                "source_story_sha256":H(committed_story),
+                "published_story_sha256":H(story_out),
+                "derived_from_current_source_data":True,
+                "canonical_source_story_modified":False,
+                "signature":"NOT_SIGNED"
+              },
+              "excluded_pr34_face_photos":True,
+              "submitted_google_slides_link":"NOT_VERIFIED",
+              "submitted_youtube_link":"NOT_VERIFIED"}
     (target/"deployment-manifest.json").write_text(json.dumps(manifest,indent=2,sort_keys=True)+"\n")
     return manifest
 
@@ -80,4 +208,5 @@ def main():
     m=build(args.out,args.ref)
     print(json.dumps({"root":m["evidence_pack_root"],"file_count":len(m["files"]),
                       "manifest_sha256":H(args.out/"deployment-manifest.json"),"staged_to":str(args.out)}))
-if __name__=="__main__":main()
+if __name__ == "__main__":
+    main()
