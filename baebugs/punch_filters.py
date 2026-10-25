@@ -92,7 +92,29 @@ LIBRARY = [
     ("CANVAS-10", "plastic canvas", "bought", "square", {"s": IN / 10 - 0.9}, "10-count, bar ~0.9 mm (nominal)"),
     ("CANVAS-14", "plastic canvas", "bought", "square", {"s": IN / 14 - 0.9}, "14-count, bar ~0.9 mm (nominal)"),
     ("TULLE", "netting", "bought", "hexagon", {"across_flats": 1.2}, "bridal tulle hex ~1.2 mm (nominal)"),
+    # metal: preferred for dead specimens (rigid, thin, cleanable). Standard perforated-sheet and
+    # woven-mesh openings, NOMINAL until measured.
+    ("SS-PERF-1.6", "metal perforated sheet", "metal", "circle", {"d": 1.6}, "stainless perforated 1/16 in round"),
+    ("SS-PERF-2.4", "metal perforated sheet", "metal", "circle", {"d": 2.4}, "stainless perforated 3/32 in round"),
+    ("SS-PERF-3.2", "metal perforated sheet", "metal", "circle", {"d": 3.2}, "stainless perforated 1/8 in round"),
+    ("SS-PERF-4.8", "metal perforated sheet", "metal", "circle", {"d": 4.8}, "stainless perforated 3/16 in round"),
+    ("SS-PERF-6.4", "metal perforated sheet", "metal", "circle", {"d": 6.4}, "stainless perforated 1/4 in round"),
+    ("SS-PERF-9.5", "metal perforated sheet", "metal", "circle", {"d": 9.5}, "stainless perforated 3/8 in round"),
+    ("SS-SLOT-1.6x12.7", "metal slotted sheet", "metal", "slot", {"w": 1.6, "length": 12.7}, "slotted perforated 1/16 x 1/2 in"),
+    ("SS-SLOT-3.2x19", "metal slotted sheet", "metal", "slot", {"w": 3.2, "length": 19.05}, "slotted perforated 1/8 x 3/4 in"),
+    ("SS-SLOT-4.8x19", "metal slotted sheet", "metal", "slot", {"w": 4.8, "length": 19.05}, "slotted perforated 3/16 x 3/4 in"),
+    ("SS-MESH-1.0", "woven wire mesh", "metal", "square", {"s": 1.0}, "woven stainless ~1.0 mm opening"),
+    ("SS-MESH-2.0", "woven wire mesh", "metal", "square", {"s": 2.0}, "woven stainless ~2.0 mm opening"),
 ]
+
+# how each realisation is made; punch dies also cut thin aluminium shim, so punched shapes have a metal route
+MATERIALS = {
+    "punched": ["aluminium shim <= 0.3 mm (punched)", "PET / acetate sheet (punched)"],
+    "bought": ["as sold (nylon / polyester)"],
+    "metal": ["stainless sheet or woven mesh (bought; laser-cut for custom shapes)"],
+    "kit": ["BioKEA kit frame"],
+    "printed": ["Fuse 1+ PA12 (prototype only)"],
+}
 
 
 def hole(entry):
@@ -143,7 +165,7 @@ def plate(entry, size_mm=50.0, border_mm=3.0, web_mm=1.0, grid="hex"):
 def spec(entry, web_mm=1.0, size_mm=50.0, thickness_mm=1.6):
     fid, cat, real, shape, params, note = entry
     m = hole_metrics(hole(entry))
-    s = {"id": fid, "category": cat, "realisation": real, "shape": shape,
+    s = {"id": fid, "category": cat, "realisation": real, "materials": MATERIALS.get(real, []), "shape": shape,
          "params_mm": {k: round(v, 3) for k, v in params.items()}, "note": note, "nominal": True, **m,
          "plate": {"size_mm": size_mm, "thickness_mm": thickness_mm, "web_mm": web_mm}}
     s["fuse_printable"] = m["min_width_mm"] >= FUSE_MIN_HOLE and web_mm >= FUSE_MIN_WEB

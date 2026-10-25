@@ -33,6 +33,20 @@ Built at the Physical AI for Science Hack (Oct 24–25, 2026). The challenge is 
    provenance.jsonl (hash-chained, verifiable per sample)
 ```
 
+## Multi-tier tower, novel filters, robot emulation (new)
+
+**Teammates: start with [`docs/HOWTO.md`](docs/HOWTO.md)** (requirements, install, every lane's commands).
+
+- `tower_twin.py` + `config/tower.yaml`: wooden tower (storage face + filter face with a couple of active tiers
+  over a catch tray). From the first spill photo, it picks which filter trays the Partabot arm mounts, then
+  emulates the arm/rail run and fails closed on reach / order / occupancy / water. Geometry values are
+  `MEASURE` placeholders until the tower is built.
+- `punch_filters.py`: 31 hole types (craft punches, plastic canvas, tulle, **metal perforated / slotted / woven**,
+  metal preferred for dead specimens), nominal sizes, Fuse plate STLs in `print/filters/`.
+- `passage_twin.py`: every toy insect × every hole, over 64 orientations. Slots select by width lying flat;
+  round holes need end-on passage.
+- `notebooks/tower_twin.ipynb` replays the planner and the emulator with swappable `objects.jsonl`.
+
 ## Why each piece
 
 | Piece | What it does | Why it matters for Track A |

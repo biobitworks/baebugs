@@ -20,3 +20,6 @@ slot width lying flat (long bodies lie along the slot), and they are where a wid
 leave-one-plate-out (0.83–0.85 accuracy): hole **shape** carries information.
 `python -m baebugs.punch_filters` / `python -m baebugs.passage_twin` rebuild everything; each hole has a
 spec hash and each (toy, hole) test is a Merkle leaf (`passage_root` in `summary.json`).
+
+## OpenSCAD
+`scad/<filter>.scad` = exact hole outline + centres of each plate; `scad/filter_plate.scad` = hand-editable parametric plate (shape circle/square/hexagon/slot/star, size, slot length, pitch via web, border, thickness, hex stagger). Sizes nominal.
