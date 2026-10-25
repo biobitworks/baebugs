@@ -3443,11 +3443,11 @@ null
 {
 "claim": "OWN",
 "kind": "ledger",
-"leaf": "593268a02c4ab98b6d3dbc371a6a8aeba8494c4494127b1a7a20f74d21784fdd",
+"leaf": "36b8cca10647e131e89f9292577443a7be33f1697d0cf1f4a115a3902041b530",
 "licence": "MIT",
 "module": "custody-ledgers",
 "path": "daisy/impact_mmr.jsonl",
-"sha256": "0f786b0b6ee09b87825a8cc307cf73c960e32b1ca58b4ebc84d0bf715c723835",
+"sha256": "c498e8dbbd77dd3d98f22d70c860be2af9e2f1d9701ce29e22c5a06fd104157b",
 "status": "built"
 },
 {
@@ -3568,6 +3568,16 @@ null
 "module": "daisy-results",
 "path": "daisy/results/DAISY-BB-002a/v2/results.json",
 "sha256": "9ca0af5f4b3dd80a6b994131ad3230dc2895397770ad05491b153b467d04932e",
+"status": "result"
+},
+{
+"claim": "OWN+TERMS",
+"kind": "result",
+"leaf": "c12cd615e1cbcc5dc38b6a11da88a708d12936f6f006616e06f468e5a33bc18c",
+"licence": "MIT + gbif-media, ultralytics terms",
+"module": "daisy-results",
+"path": "daisy/results/DAISY-BB-004/v4/ADDENDUM.md",
+"sha256": "4f1c2f02ffd3981a22bd3b873438ff1cef2c192817be90bdb612826be443e2ad",
 "status": "result"
 },
 {
@@ -10243,8 +10253,8 @@ null
 "verified": true
 },
 "impact_mmr": {
-"n": 104,
-"root": "125c3fc63a3be7728fdde40b8532ee963bd1cc74351deb24058116752a0bef45",
+"n": 105,
+"root": "bbbf8f3daaac1f80cc418c20d1f096307195798f378383ab4807a69fd1dba359",
 "verified": true
 },
 "labbox_mmr": {
@@ -10265,7 +10275,7 @@ null
 "OWN": 34
 },
 "id": "module:custody-ledgers",
-"root": "736f7a711fea32593d675231f2c1da875606c5b5721c91964c798dc49ba320e2",
+"root": "9a344d9cfb392711bf2920e8310092d83d62ac5fdb7b0a4a75cef755fb90fc71",
 "status": {
 "built": 34
 },
@@ -10284,14 +10294,14 @@ null
 "terms": []
 },
 "daisy-results": {
-"atoms": 11,
+"atoms": 12,
 "claims": {
-"OWN+TERMS": 11
+"OWN+TERMS": 12
 },
 "id": "module:daisy-results",
-"root": "b071c5cb0af378403f8126de58fec540ca8b55b9a21dc545dac8def5de3eae57",
+"root": "770c10edefa40477087f4af97f11efc0cb83cd13578dbf389934e02438678210",
 "status": {
-"result": 11
+"result": 12
 },
 "terms": [
 "ext:gbif-media",
@@ -11087,15 +11097,15 @@ null
 ]
 }
 ],
-"root": "c9e603da3b08c2192274454d6dec12187ca6e7b4be365f83eeacb356990f95a0",
+"root": "da9b3edbaa4b484707cca41d562506e5b9a40289830d38c6b627047b046cb855",
 "roots": {
-"aok": "13e1dc567834716f8db98c74e7cf02967cbdbdf0c8890d1a3cf90433b4b73cc4",
+"aok": "5fdac42048f7c833a712aaee8a13580dabb536c39c46884ca82780525119d62e",
 "assets": "2aa571d0973f1995c303b86f4f8f9816f485a73bfd59822593d6caa138f6b72e",
 "assets_mmr": "0db28037a5744bcad439c5869ae5a1b4e849cbb65656c8532b82a70e03174fe4",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
 "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7",
 "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5",
-"impact_mmr": "125c3fc63a3be7728fdde40b8532ee963bd1cc74351deb24058116752a0bef45",
+"impact_mmr": "bbbf8f3daaac1f80cc418c20d1f096307195798f378383ab4807a69fd1dba359",
 "labbox_mmr": "234a9637a12b23e7c4f1b22e4a1f4e0d5734da43f9e12decb034622aa2746ff8",
 "upstream_mmr": "38a4a379f5c6d0d5eb9b742eceb698f8cb4e72309bf1f2095cca9e7d87c85513"
 },
@@ -15305,7 +15315,7 @@ null
 ],
 "totals": {
 "OWN": 765,
-"OWN+TERMS": 47,
+"OWN+TERMS": 48,
 "THIRD": 20
 },
 "type": "baebugs-mvp"

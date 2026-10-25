@@ -1,5 +1,5 @@
 {
- "atoms": 832,
+ "atoms": 833,
  "external": [
   {
    "claim": "THIRD",
@@ -343,8 +343,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos.json",
    "kind": "meta",
    "leaf": "2a3736fab9f2af56068a906ad52cabaacb5779a5dfaaf7606d25184c513317b5",
@@ -357,8 +357,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/biokea_frames_tub.jpg",
    "kind": "meta",
    "leaf": "26f2d5c26c62b2c98ac88280be97206ca60c0a17a36019b4d5c615cba29a1244",
@@ -371,8 +371,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/breadboard_ruler.jpg",
    "kind": "meta",
    "leaf": "9ff0bf3c81630444fe28365049cba76146e8b3d95f919bb80dc5eb52d2e4b5dd",
@@ -385,8 +385,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/formlabs_fuse.jpg",
    "kind": "meta",
    "leaf": "ef1da8893a5caff40d2c757892953f4caad18fa2d1ebdda41daafa155552a9f3",
@@ -399,8 +399,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/greiner_cryos_bag.jpg",
    "kind": "meta",
    "leaf": "f7fb4c3b1ea1576b6d56789e2c29f570420867f9258acc767d0539572e048ffb",
@@ -413,8 +413,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/labware_angle.jpg",
    "kind": "meta",
    "leaf": "fa317eceb02785266ce82b379f8cb117ac503e351d08b223259b5005d0d428a0",
@@ -427,8 +427,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/labware_overview_1.jpg",
    "kind": "meta",
    "leaf": "5f2a6b85be3c12c423b0908949735ac02290c54b2d0788d00af94164ceba820e",
@@ -441,8 +441,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/labware_overview_2.jpg",
    "kind": "meta",
    "leaf": "9eb7403fe80f9d60be9d03f6ead48b76956244431ab45faca63d7ec6220a36ee",
@@ -455,8 +455,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/labware_overview_3.jpg",
    "kind": "meta",
    "leaf": "e9575338dfa17fcd69c59f701e1834347c0694f27a89909f087c78efc5338dfd",
@@ -469,8 +469,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/lift_columns.jpg",
    "kind": "meta",
    "leaf": "e9c68e2b3be21c8e4aabb8123acccb153a0f0d6af42a0fde3d0630845a253e63",
@@ -483,8 +483,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/plate384_ruler.jpg",
    "kind": "meta",
    "leaf": "64d840b6f6bac158751d69854c91a868d712f28f7eba6a7323bb5fbfe782b91f",
@@ -497,8 +497,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/plate384_top.jpg",
    "kind": "meta",
    "leaf": "4fbe4b1b0a79ecb943ff193466064c014aa6a487941f767798fd64b82d7c888d",
@@ -511,8 +511,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/rack_edge_ruler.jpg",
    "kind": "meta",
    "leaf": "661fee1579bde9b3df2fa0f0da9af1c11168ea7a96a74162e9cbc99bac7e3b71",
@@ -525,8 +525,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/racks_closeup_ruler.jpg",
    "kind": "meta",
    "leaf": "d90211b0be1e5efc89fc39d1c8d23695440bd7e619528d3084616b3c7d0eaf23",
@@ -539,8 +539,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/racks_diagonal_ruler.jpg",
    "kind": "meta",
    "leaf": "9000beda13b8c65fda7fc52e620f26335e5e406deddfa7a9857046e64642e1a9",
@@ -553,8 +553,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/tower_arm_side_1.jpg",
    "kind": "meta",
    "leaf": "e3bde517dc6f5d03f85233b9d23bbdee143e30b1bf9a92c9bfa641d41e6de077",
@@ -567,8 +567,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/tower_arm_side_2.jpg",
    "kind": "meta",
    "leaf": "ae2aaf0858be96f74fb7e73e69d3d626531acac9bfd60ca9c77dd11ebff48a92",
@@ -581,8 +581,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/tower_arm_side_3.jpg",
    "kind": "meta",
    "leaf": "1dbb538542c1f60414ec3209514d3a89640c251382433a3278234bf7cb4a02c6",
@@ -595,8 +595,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/tower_top.jpg",
    "kind": "meta",
    "leaf": "e4dbfb5af0767063b19efdb5c9877cfd358e00ad711eb9ec46d0d83e4c637cab",
@@ -609,8 +609,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/xtip4_box.jpg",
    "kind": "meta",
    "leaf": "f29c383dd46a357eb6931b2cc803fa8e90f2294a59267a51e623dc172eb2badb",
@@ -681,8 +681,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:baebugs/assets.py",
    "kind": "code",
    "leaf": "9b0263ee439baff57a4244ece4e86c496e5b87bd75389e5faa9f61b3e365ca1e",
@@ -1319,8 +1319,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 2,
-   "commits": 2,
+   "claude_coauthored_commits": 3,
+   "commits": 3,
    "id": "leaf:baebugs/mvp.py",
    "kind": "code",
    "leaf": "3e404c89b2f2762be4f79a164de0b5ce8882df7c27e227be62687ee72af94063",
@@ -2065,8 +2065,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:daisy/assets_mmr.jsonl",
    "kind": "ledger",
    "leaf": "bb001bd0162a86c30a4bb25287e8c63e95fd9f71cf2eb3872f2b3040cff747c5",
@@ -2163,15 +2163,15 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 14,
-   "commits": 14,
+   "claude_coauthored_commits": 15,
+   "commits": 15,
    "id": "leaf:daisy/impact_mmr.jsonl",
    "kind": "ledger",
-   "leaf": "593268a02c4ab98b6d3dbc371a6a8aeba8494c4494127b1a7a20f74d21784fdd",
+   "leaf": "36b8cca10647e131e89f9292577443a7be33f1697d0cf1f4a115a3902041b530",
    "licence": "MIT",
    "module": "custody-ledgers",
    "path": "daisy/impact_mmr.jsonl",
-   "sha256": "0f786b0b6ee09b87825a8cc307cf73c960e32b1ca58b4ebc84d0bf715c723835",
+   "sha256": "c498e8dbbd77dd3d98f22d70c860be2af9e2f1d9701ce29e22c5a06fd104157b",
    "status": "built",
    "terms": []
   },
@@ -2361,6 +2361,23 @@
    "module": "daisy-results",
    "path": "daisy/results/DAISY-BB-002a/v2/results.json",
    "sha256": "9ca0af5f4b3dd80a6b994131ad3230dc2895397770ad05491b153b467d04932e",
+   "status": "result",
+   "terms": [
+    "ext:gbif-media",
+    "ext:ultralytics"
+   ]
+  },
+  {
+   "claim": "OWN+TERMS",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:daisy/results/DAISY-BB-004/v4/ADDENDUM.md",
+   "kind": "result",
+   "leaf": "c12cd615e1cbcc5dc38b6a11da88a708d12936f6f006616e06f468e5a33bc18c",
+   "licence": "MIT + gbif-media, ultralytics terms",
+   "module": "daisy-results",
+   "path": "daisy/results/DAISY-BB-004/v4/ADDENDUM.md",
+   "sha256": "4f1c2f02ffd3981a22bd3b873438ff1cef2c192817be90bdb612826be443e2ad",
    "status": "result",
    "terms": [
     "ext:gbif-media",
@@ -3618,8 +3635,8 @@
   },
   {
    "claim": "OWN+TERMS",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:kg/assets.json",
    "kind": "data",
    "leaf": "20c6afb8d0ab09ec4ba1c97f27ca46b29a4b79b84529a73085bea83d017ac115",
@@ -11174,8 +11191,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 1,
-   "commits": 1,
+   "claude_coauthored_commits": 2,
+   "commits": 2,
    "id": "leaf:site/mvp/index.html",
    "kind": "page",
    "leaf": "3e8cee479cd08c668ad688252eff8a0ad42b150db54f0e5328a6a3c5de6c8299",
@@ -11244,8 +11261,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:tests/test_assets.py",
    "kind": "test",
    "leaf": "6132d80606c888cd72b4be60688ff71aaf0bbebc8933b2fdea42fac6703dc61b",
@@ -11759,7 +11776,7 @@
     "OWN": 34
    },
    "id": "module:custody-ledgers",
-   "root": "736f7a711fea32593d675231f2c1da875606c5b5721c91964c798dc49ba320e2",
+   "root": "9a344d9cfb392711bf2920e8310092d83d62ac5fdb7b0a4a75cef755fb90fc71",
    "status": {
     "built": 34
    },
@@ -11778,14 +11795,14 @@
    "terms": []
   },
   "daisy-results": {
-   "atoms": 11,
+   "atoms": 12,
    "claims": {
-    "OWN+TERMS": 11
+    "OWN+TERMS": 12
    },
    "id": "module:daisy-results",
-   "root": "b071c5cb0af378403f8126de58fec540ca8b55b9a21dc545dac8def5de3eae57",
+   "root": "770c10edefa40477087f4af97f11efc0cb83cd13578dbf389934e02438678210",
    "status": {
-    "result": 11
+    "result": 12
    },
    "terms": [
     "ext:gbif-media",
@@ -11949,10 +11966,10 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "13e1dc567834716f8db98c74e7cf02967cbdbdf0c8890d1a3cf90433b4b73cc4",
+ "root": "5fdac42048f7c833a712aaee8a13580dabb536c39c46884ca82780525119d62e",
  "totals": {
   "OWN": 765,
-  "OWN+TERMS": 47,
+  "OWN+TERMS": 48,
   "THIRD": 20
  },
  "type": "aok"
