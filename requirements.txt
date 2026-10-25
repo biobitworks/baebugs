@@ -8,6 +8,7 @@ trimesh>=4
 manifold3d
 shapely>=2
 mapbox-earcut
+networkx  # trimesh scene graph (trommel_plate)
 pillow
 # tests / notebooks
 pytest
