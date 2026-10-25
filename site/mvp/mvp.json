@@ -2635,6 +2635,36 @@
 "status": "result"
 },
 {
+"claim": "OWN+TERMS",
+"kind": "result",
+"leaf": "16345238580008e78d29ff4629ff657376e1962f15a48cd312c8253c53652fc6",
+"licence": "MIT + gbif-media, ultralytics terms",
+"module": "daisy-results",
+"path": "daisy/results/DAISY-BB-004/v4/DECISION.md",
+"sha256": "e30513d7a1dd3851ba6c978f50834addcb49ea04d95cd32b3908d6ac8cb13f91",
+"status": "result"
+},
+{
+"claim": "OWN+TERMS",
+"kind": "result",
+"leaf": "458fbfa3d33bd776bb441772e3a5c5398bc46f9e23d95a4558d4f5a0709baa3a",
+"licence": "MIT + gbif-media, ultralytics terms",
+"module": "daisy-results",
+"path": "daisy/results/DAISY-BB-004/v4/events.jsonl",
+"sha256": "d284d47745be6f7cd50609424bfdc0835b3974369f25a5a52ff2b9c6fae4d474",
+"status": "result"
+},
+{
+"claim": "OWN+TERMS",
+"kind": "result",
+"leaf": "af13e04f41ef8dfa4e727641bac1d0fd5fe4e5325714d6412615c7971569e4e5",
+"licence": "MIT + gbif-media, ultralytics terms",
+"module": "daisy-results",
+"path": "daisy/results/DAISY-BB-004/v4/results.json",
+"sha256": "41beb0f25268b186b639e2069177ed9638f85a17442157eaf84202bd7f3019f8",
+"status": "result"
+},
+{
 "claim": "OWN",
 "kind": "ledger",
 "leaf": "5a4c57be617ac54373bd64ad83bfb187ac5f658b66531d18af286587693890bf",
@@ -8773,14 +8803,14 @@
 "terms": []
 },
 "daisy-results": {
-"atoms": 8,
+"atoms": 11,
 "claims": {
-"OWN+TERMS": 8
+"OWN+TERMS": 11
 },
 "id": "module:daisy-results",
-"root": "72b5fef9fe0e5078506220a89e6831cecdd6ba49b6aa5c3a4f03629e54130bd9",
+"root": "b071c5cb0af378403f8126de58fec540ca8b55b9a21dc545dac8def5de3eae57",
 "status": {
-"result": 8
+"result": 11
 },
 "terms": [
 "ext:gbif-media",
@@ -9564,11 +9594,21 @@
 "statuses": [
 "OBSERVED_EXPLORATORY"
 ]
+},
+{
+"custody": "INTACT",
+"leaf": "af13e04f41ef8dfa4e727641bac1d0fd5fe4e5325714d6412615c7971569e4e5",
+"path": "daisy/results/DAISY-BB-004/v4/results.json",
+"protocol": "DAISY-BB-004",
+"runs": 3,
+"statuses": [
+"OBSERVED_EXPLORATORY"
+]
 }
 ],
-"root": "548b4d8fee9f1d1bf98cb03e69ca3d5278f03b1e477a6224c5f1c54fe6a60dc5",
+"root": "12b25637ef155f0b684039c0e18ecb71d9bd100d4f9a172a21fd8c4af8d5d611",
 "roots": {
-"aok": "bb85c6734d9e55524ed7714f1db8385c17ed034807ee75d4a5e958008a63752b",
+"aok": "04ebb172d3b6d8834daee87484021fac8ab03776abae5747d9b93c9caf5cd0cf",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
 "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7",
 "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5",
@@ -13782,7 +13822,7 @@
 ],
 "totals": {
 "OWN": 687,
-"OWN+TERMS": 42,
+"OWN+TERMS": 45,
 "THIRD": 20
 },
 "type": "baebugs-mvp"

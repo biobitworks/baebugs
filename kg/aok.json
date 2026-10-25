@@ -1,5 +1,5 @@
 {
- "atoms": 749,
+ "atoms": 752,
  "external": [
   {
    "claim": "THIRD",
@@ -1433,8 +1433,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 1,
-   "commits": 1,
+   "claude_coauthored_commits": 2,
+   "commits": 2,
    "id": "leaf:baebugs/watch_commit.py",
    "kind": "code",
    "leaf": "8347b16b07c73cd7dbaf5741f348267866aa88ca1bd9a58b6d802ddc79558a4a",
@@ -1995,6 +1995,57 @@
    "module": "daisy-results",
    "path": "daisy/results/DAISY-BB-002a/v2/results.json",
    "sha256": "9ca0af5f4b3dd80a6b994131ad3230dc2895397770ad05491b153b467d04932e",
+   "status": "result",
+   "terms": [
+    "ext:gbif-media",
+    "ext:ultralytics"
+   ]
+  },
+  {
+   "claim": "OWN+TERMS",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:daisy/results/DAISY-BB-004/v4/DECISION.md",
+   "kind": "result",
+   "leaf": "16345238580008e78d29ff4629ff657376e1962f15a48cd312c8253c53652fc6",
+   "licence": "MIT + gbif-media, ultralytics terms",
+   "module": "daisy-results",
+   "path": "daisy/results/DAISY-BB-004/v4/DECISION.md",
+   "sha256": "e30513d7a1dd3851ba6c978f50834addcb49ea04d95cd32b3908d6ac8cb13f91",
+   "status": "result",
+   "terms": [
+    "ext:gbif-media",
+    "ext:ultralytics"
+   ]
+  },
+  {
+   "claim": "OWN+TERMS",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:daisy/results/DAISY-BB-004/v4/events.jsonl",
+   "kind": "result",
+   "leaf": "458fbfa3d33bd776bb441772e3a5c5398bc46f9e23d95a4558d4f5a0709baa3a",
+   "licence": "MIT + gbif-media, ultralytics terms",
+   "module": "daisy-results",
+   "path": "daisy/results/DAISY-BB-004/v4/events.jsonl",
+   "sha256": "d284d47745be6f7cd50609424bfdc0835b3974369f25a5a52ff2b9c6fae4d474",
+   "status": "result",
+   "terms": [
+    "ext:gbif-media",
+    "ext:ultralytics"
+   ]
+  },
+  {
+   "claim": "OWN+TERMS",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:daisy/results/DAISY-BB-004/v4/results.json",
+   "kind": "result",
+   "leaf": "af13e04f41ef8dfa4e727641bac1d0fd5fe4e5325714d6412615c7971569e4e5",
+   "licence": "MIT + gbif-media, ultralytics terms",
+   "module": "daisy-results",
+   "path": "daisy/results/DAISY-BB-004/v4/results.json",
+   "sha256": "41beb0f25268b186b639e2069177ed9638f85a17442157eaf84202bd7f3019f8",
    "status": "result",
    "terms": [
     "ext:gbif-media",
@@ -10603,14 +10654,14 @@
    "terms": []
   },
   "daisy-results": {
-   "atoms": 8,
+   "atoms": 11,
    "claims": {
-    "OWN+TERMS": 8
+    "OWN+TERMS": 11
    },
    "id": "module:daisy-results",
-   "root": "72b5fef9fe0e5078506220a89e6831cecdd6ba49b6aa5c3a4f03629e54130bd9",
+   "root": "b071c5cb0af378403f8126de58fec540ca8b55b9a21dc545dac8def5de3eae57",
    "status": {
-    "result": 8
+    "result": 11
    },
    "terms": [
     "ext:gbif-media",
@@ -10774,10 +10825,10 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "bb85c6734d9e55524ed7714f1db8385c17ed034807ee75d4a5e958008a63752b",
+ "root": "04ebb172d3b6d8834daee87484021fac8ab03776abae5747d9b93c9caf5cd0cf",
  "totals": {
   "OWN": 687,
-  "OWN+TERMS": 42,
+  "OWN+TERMS": 45,
   "THIRD": 20
  },
  "type": "aok"
