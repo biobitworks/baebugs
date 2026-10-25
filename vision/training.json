@@ -1,0 +1,39 @@
+{
+  "_note": "Single-type photos that train pile_types.py. packed = the dish floor is full, so every square on it is that type; otherwise dish_sizer's segmentation splits squares into object and background. Type names are provisional until the team confirms the 9 types. label_threshold: colour difference that counts as object when labelling (low for pale types, high for dark ones so reflections aren't learned).",
+  "photos": [
+    {
+      "type": "dark seed",
+      "file": "samples/webcam_set1_dark_seeds.webp",
+      "packed": false,
+      "label_threshold": 20
+    },
+    {
+      "type": "small yellow grain",
+      "file": "samples/webcam_set1_couscous_packed.webp",
+      "packed": true
+    },
+    {
+      "type": "pasta tube",
+      "file": "samples/webcam_set1_pasta_tubes.webp",
+      "packed": false,
+      "label_threshold": 10
+    },
+    {
+      "type": "white rice",
+      "file": "samples/webcam_set1_white_rice_packed.webp",
+      "packed": true
+    },
+    {
+      "type": "oat grain",
+      "file": "samples/webcam_set1_oat_grains.webp",
+      "packed": false,
+      "label_threshold": 10
+    },
+    {
+      "type": "red seed",
+      "file": "samples/webcam_set1_red_seeds.webp",
+      "packed": false,
+      "label_threshold": 20
+    }
+  ]
+}
