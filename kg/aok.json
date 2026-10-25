@@ -1,5 +1,5 @@
 {
- "atoms": 867,
+ "atoms": 868,
  "external": [
   {
    "claim": "THIRD",
@@ -427,8 +427,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 2,
-   "commits": 2,
+   "claude_coauthored_commits": 3,
+   "commits": 3,
    "id": "leaf:assets/photos.json",
    "kind": "meta",
    "leaf": "3ad0f89c30a6e9452ab9827664432ff818d729930c286538387ba442159354d9",
@@ -595,8 +595,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/pa12_toys_box.jpg",
    "kind": "meta",
    "leaf": "222761c6e69ccf119ca265dbd7b6d75b055132839ec1fc31705fd820e14de0c5",
@@ -609,8 +609,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/photos/pa12_toys_two_on_floor.jpg",
    "kind": "meta",
    "leaf": "8e3704aaad10bfb133687f50f754c3c9d13071d1fba14e3f723343bd906ff81b",
@@ -935,8 +935,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 3,
-   "commits": 3,
+   "claude_coauthored_commits": 4,
+   "commits": 4,
    "id": "leaf:baebugs/assets.py",
    "kind": "code",
    "leaf": "19795c11a063f69a601b3750e8b22ed667145b765605c9f8a9407aaafd9f0825",
@@ -2333,8 +2333,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 3,
-   "commits": 3,
+   "claude_coauthored_commits": 4,
+   "commits": 4,
    "id": "leaf:daisy/assets_mmr.jsonl",
    "kind": "ledger",
    "leaf": "90574de16ebe1b2a769764033cffef473d48f68b1bc8e00d95979a4972466752",
@@ -3120,6 +3120,20 @@
    "module": "docs",
    "path": "docs/RESEARCH_TOOLS.md",
    "sha256": "6e30d63e43cfb52e68afeec52bb5d95e41811b3066c1a81f845550974a413958",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:docs/TRAINING_REVIEW.md",
+   "kind": "doc",
+   "leaf": "d7448b40dde2c579e953a19c58bd124d5c841e6bffb3f4b07aaa808c8a658dc6",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/TRAINING_REVIEW.md",
+   "sha256": "91a0d04e6ee1eb773c7ebf9c8ec1d7c9b1e8497bcd560669c214fd0779b5bf3a",
    "status": "built",
    "terms": []
   },
@@ -3917,8 +3931,8 @@
   },
   {
    "claim": "OWN+TERMS",
-   "claude_coauthored_commits": 3,
-   "commits": 3,
+   "claude_coauthored_commits": 4,
+   "commits": 4,
    "id": "leaf:kg/assets.json",
    "kind": "data",
    "leaf": "df9352e49539a80a1cee247903067b89ed788bb94e2adb02f45f441e129ecb03",
@@ -12300,14 +12314,14 @@
    "terms": []
   },
   "docs": {
-   "atoms": 47,
+   "atoms": 48,
    "claims": {
-    "OWN": 47
+    "OWN": 48
    },
    "id": "module:docs",
-   "root": "97cf54ef220a3d5d1a94f76b0f2844e7b383c88f02d871c5e534211e963bddbb",
+   "root": "8d7f35da1d9d5d4978b87a8af96add374dace14ad5a8ac28c10cf00af2631e05",
    "status": {
-    "built": 47
+    "built": 48
    },
    "terms": []
   },
@@ -12444,9 +12458,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "c117b62b20179d2b7cfa39e0b99b99248d15d2881e122269857895991f7ba0aa",
+ "root": "390a55d7892c72d0e64c009c25ad8780b7579b3d2bda4f5b6bf669524de8d155",
  "totals": {
-  "OWN": 798,
+  "OWN": 799,
   "OWN+TERMS": 49,
   "THIRD": 20
  },
