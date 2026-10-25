@@ -50,7 +50,7 @@ Team demo-day project. See README.md for layout and commands. These notes hold t
 
 ## Vision status
 
-Demo objects (updated 2026-10-24): the flat/curved pale pasta in early photos is **not** part of the sample; only short tube macaroni. Trained types so far (provisional names): dark seed, small yellow grain, pasta tube, white rice, oat grain, red seed, black grain. The original list also had a small grey seed and a tiny black seed, which may be the same "dark seed" class; final list not confirmed yet. The real demo dish will hold several of each, likely piled.
+Demo objects (updated 2026-10-24): the flat/curved pale pasta in early photos is **not** part of the sample; only short tube macaroni. Trained types so far (provisional names): dark seed, small yellow grain, pasta tube, white rice, oat grain, red seed, black grain. The small grey seed and the tiny black seed are **two different types** (confirmed by the user), so the current "dark seed" class mixes them; split it once separate single-type photos arrive, and drop the old dark-seed photos from training if they contain both. Training photos should look like the mix: rice and yellow grain need scattered (not packed) single-type photos. The real demo dish will hold several of each, likely piled.
 
 Dish: 63 mm across; flat floor out to ~24 mm radius, side wall 24–27 mm, rim to ~31.5 mm (consistent across all 3 samples once scale is right).
 
