@@ -1,5 +1,5 @@
 {
- "atoms": 747,
+ "atoms": 749,
  "external": [
   {
    "claim": "THIRD",
@@ -1433,6 +1433,20 @@
   },
   {
    "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:baebugs/watch_commit.py",
+   "kind": "code",
+   "leaf": "aadbb842ae3f813badda275c5ff4d9b7d066e123222fd0fabfaefc9a29cef249",
+   "licence": "MIT",
+   "module": "python-package",
+   "path": "baebugs/watch_commit.py",
+   "sha256": "a4b3064cdc68362d95b4f796d0fc4821111e214bb6eec6958d41f0656537affa",
+   "status": "tested",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
    "claude_coauthored_commits": 1,
    "commits": 1,
    "id": "leaf:baebugs/weights_id.py",
@@ -2675,8 +2689,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:docs/demo/baebugs_mvp_demo.mp4",
    "kind": "doc",
    "leaf": "9a3bffb2b4b482709e6ec3f281f77b32dd871e10db49cafa108492b5207a55db",
@@ -2689,8 +2703,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:docs/demo/record_demo.js",
    "kind": "doc",
    "leaf": "c6c63f8561b85412b7eb7956e4cbb7ed741c01af0c8acd5ed4cd3ffb5f004fe1",
@@ -10531,6 +10545,20 @@
   },
   {
    "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:tests/test_watch_commit.py",
+   "kind": "test",
+   "leaf": "6f159013bc91e11bc7bf9cdc6f76756294408814702749d94604678d89578316",
+   "licence": "MIT",
+   "module": "tests",
+   "path": "tests/test_watch_commit.py",
+   "sha256": "13590db70187a326ae62f9dc30e6b2069efdb6b1c6360e495b642ab5a954709d",
+   "status": "tested",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
    "claude_coauthored_commits": 2,
    "commits": 2,
    "id": "leaf:tests/test_weights_id.py",
@@ -10693,16 +10721,16 @@
    ]
   },
   "python-package": {
-   "atoms": 78,
+   "atoms": 79,
    "claims": {
-    "OWN": 72,
+    "OWN": 73,
     "OWN+TERMS": 6
    },
    "id": "module:python-package",
-   "root": "2505892e0a19eff4fd35a193a80bbf896f1cd4d57b7c52091f11b98311a2e322",
+   "root": "212fe77d1683cba84934b701160ea1e21199ffa2b0d7d847bd5678c496a7c141",
    "status": {
     "built": 53,
-    "tested": 25
+    "tested": 26
    },
    "terms": [
     "ext:ultralytics"
@@ -10721,14 +10749,14 @@
    "terms": []
   },
   "tests": {
-   "atoms": 33,
+   "atoms": 34,
    "claims": {
-    "OWN": 33
+    "OWN": 34
    },
    "id": "module:tests",
-   "root": "e1bcd696a8ee9d092ca8e41d051a2fe932f77e0bb4a1bc29dbe308e33ae9c360",
+   "root": "bf55c473af871f3efe8c8fe5036629e35cdd83e6d403a4c0ec303235452effdc",
    "status": {
-    "tested": 33
+    "tested": 34
    },
    "terms": []
   },
@@ -10746,9 +10774,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "bf5a9998694a3f4ce1e9e38b3bb91c507632a8365ab7b6e297a6690cc672b3cd",
+ "root": "154cf12daf7a8eaf1af067316076cdbf8f724a0e7362db6ddc456b294fcacd71",
  "totals": {
-  "OWN": 685,
+  "OWN": 687,
   "OWN+TERMS": 42,
   "THIRD": 20
  },
