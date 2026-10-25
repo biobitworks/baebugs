@@ -2,7 +2,7 @@
 
 Every file is an *atom* with a claim, a licence in context, a status and a hash (full list for agents: [`kg/aok.json`](../kg/aok.json)). This page is the short version. It records what the licences say; it is not legal advice.
 
-**AoK root:** `aaa18e957a33fde3d355ccc4d92d675267a69526f0c14e0c0637f51d79b01e06` · 1105 atoms · OWN 1033 · OWN+TERMS 52 · THIRD 20
+**AoK root:** `55f75e8cabae2b99d37c23224884cf44a00c1b3d9bcbd080537c8bbdcc468c37` · 1108 atoms · OWN 1036 · OWN+TERMS 52 · THIRD 20
 
 | claim | meaning |
 |---|---|
@@ -18,7 +18,7 @@ Every file is an *atom* with a claim, a licence in context, a status and a hash 
 | daisy-protocols | 17 | OWN 17 | none | `401e52c7913d` |
 | daisy-results | 12 | OWN+TERMS 12 | gbif-media, ultralytics | `770c10edefa4` |
 | dashboards | 16 | OWN 16 | none | `350619827ff6` |
-| docs | 93 | OWN 93 | none | `9c18c244f860` |
+| docs | 96 | OWN 96 | none | `93229d43220b` |
 | kaggle-kernels | 10 | OWN+TERMS 10 | gbif-media, ultralytics | `ff1a3e54c36a` |
 | knowledge-graph | 8 | OWN+TERMS 8 | gbif-media | `992bb16f6ba8` |
 | lab-parts | 172 | OWN 172 | none | `baa2835216a7` |
