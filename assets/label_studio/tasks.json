@@ -1,0 +1,1696 @@
+[
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/tower_arm_side_1.jpg",
+   "photo_id": "tower_arm_side_1",
+   "published_sha256": "82f593b9a577d0340c40bef05d0605099fbccbcd8987b08f8673189d9cb31185",
+   "frame_root": "bac7c1cb9c3618a8dfcb606ab82f131cd910fefdbda02e73b7e42970412988de"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "tower_arm_side_1_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 32.248342374924654,
+       "y": 15.958408679927667,
+       "width": 38.517179023508135,
+       "height": 56.23869801084991,
+       "rectanglelabels": [
+        "rack"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'orange 3D printed shelf rack' conf 0.551"
+       ]
+      }
+     },
+     {
+      "id": "tower_arm_side_1_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 22.001205545509343,
+       "y": 67.35985533453888,
+       "width": 72.33273056057867,
+       "height": 32.59493670886076,
+       "rectanglelabels": [
+        "rack"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'orange 3D printed shelf rack' conf 0.527"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/tower_arm_side_2.jpg",
+   "photo_id": "tower_arm_side_2",
+   "published_sha256": "d3c2844e62da4a7e88583e4d2e7b582fc04bc7d1e12dd235129be5ec94904d47",
+   "frame_root": "8134dfbe9b540995b05b381e21cf4a41a544a215fa869d056995d0edd4263a15"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": []
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/tower_top.jpg",
+   "photo_id": "tower_top",
+   "published_sha256": "7c7566eefeb1388ffa05551b935a62fba6bf179975cb3753f6c787788988162a",
+   "frame_root": "0b8a3e80a8c63a8cd90b2a91eb9f066370a5ec9fcc2b62f711825afadbcc70fe"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "tower_top_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 37.8541289933695,
+       "y": 14.42133815551537,
+       "width": 51.89873417721519,
+       "height": 50.5877034358047,
+       "rectanglelabels": [
+        "rack"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'orange 3D printed shelf rack' conf 0.746"
+       ]
+      }
+     },
+     {
+      "id": "tower_top_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 1.2055455093429777,
+       "y": 37.9746835443038,
+       "width": 31.223628691983123,
+       "height": 25.632911392405063,
+       "rectanglelabels": [
+        "rack"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'orange 3D printed shelf rack' conf 0.282"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/tower_arm_side_3.jpg",
+   "photo_id": "tower_arm_side_3",
+   "published_sha256": "1c44664503c584cc43a303f5b223fc3a3599b6a95c6c7db8d0bb816fce6986e2",
+   "frame_root": "211cbbb345689ed2a21e51a5c8490ea83715edb61b68bda6330b22ee0d085827"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "tower_arm_side_3_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 26.94394213381555,
+       "y": 32.82097649186257,
+       "width": 5.424954792043399,
+       "height": 4.430379746835443,
+       "rectanglelabels": [
+        "container"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'plastic tub' conf 0.371"
+       ]
+      }
+     },
+     {
+      "id": "tower_arm_side_3_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 28.14948764315853,
+       "y": 9.538878842676311,
+       "width": 44.906570223025916,
+       "height": 57.09764918625678,
+       "rectanglelabels": [
+        "rack"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'orange 3D printed shelf rack' conf 0.316"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/breadboard_ruler.jpg",
+   "photo_id": "breadboard_ruler",
+   "published_sha256": "20f18c558202f08627d9f928bafc0e6b065eaef2d1779ee30786dde7602d6ad1",
+   "frame_root": "dde5762a911d16f667e8d4f88376c1a3190f2fafc88737cc07d66e33b3f6e0f1"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "breadboard_ruler_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 79.50572634116938,
+       "y": 68.53526220614829,
+       "width": 20.43399638336347,
+       "height": 31.419529837251357,
+       "rectanglelabels": [
+        "insert"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'hexagonal grid' conf 0.423"
+       ]
+      }
+     },
+     {
+      "id": "breadboard_ruler_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 53.104279686558165,
+       "y": 0.40687160940325495,
+       "width": 29.77697408077155,
+       "height": 99.32188065099457,
+       "rectanglelabels": [
+        "reference"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'steel ruler' conf 0.33"
+       ]
+      }
+     },
+     {
+      "id": "breadboard_ruler_2",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 73.65883062085594,
+       "y": 0.6329113924050633,
+       "width": 26.341169379144063,
+       "height": 67.54068716094032,
+       "rectanglelabels": [
+        "rack"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'orange 3D printed shelf rack' conf 0.268"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/plate384_ruler.jpg",
+   "photo_id": "plate384_ruler",
+   "published_sha256": "91fb1d1173d4251882a9f5f7db24a83d380e6f880766715603158225c1c5bf1d",
+   "frame_root": "f3d32abb8aae36e583b4112db9a1b534823120f172b626b72221ec4dc02abc3b"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "plate384_ruler_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 0.0,
+       "y": 70.1627486437613,
+       "width": 34.719710669077756,
+       "height": 29.8372513562387,
+       "rectanglelabels": [
+        "insert"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'hexagonal grid' conf 0.397"
+       ]
+      }
+     },
+     {
+      "id": "plate384_ruler_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 24.89451476793249,
+       "y": 33.45388788426763,
+       "width": 52.742616033755276,
+       "height": 27.622061482820975,
+       "rectanglelabels": [
+        "insert"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'perforated metal sheet' conf 0.384"
+       ]
+      }
+     },
+     {
+      "id": "plate384_ruler_2",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 38.095238095238095,
+       "y": 0.0,
+       "width": 52.260397830018086,
+       "height": 9.538878842676311,
+       "rectanglelabels": [
+        "container"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'plastic box' conf 0.339"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/plate384_top.jpg",
+   "photo_id": "plate384_top",
+   "published_sha256": "117c725af22a2c05fb895a576b7b59e8d25ff8fbcd2e5c3c7a555a47e3c41555",
+   "frame_root": "50c159e92193dbae109a9dcd35dcb9e3eb10115a2be0e567b0ef2027f2ba85cd"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "plate384_top_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 27.064496684749848,
+       "y": 28.300180831826403,
+       "width": 52.802893309222426,
+       "height": 60.80470162748644,
+       "rectanglelabels": [
+        "insert"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'hexagonal grid' conf 0.469"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/lift_columns.jpg",
+   "photo_id": "lift_columns",
+   "published_sha256": "9501cca4880554de44a6894def68b61e3144215b7cbab771285a0ab306ae54fe",
+   "frame_root": "2010fcd0b0b7c4cdbba10cab4d479a00a385b876af8569c7660227b927968b76"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "lift_columns_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 81.97709463532249,
+       "y": 88.83363471971067,
+       "width": 17.96262808921037,
+       "height": 11.12115732368897,
+       "rectanglelabels": [
+        "container"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'plastic box' conf 0.375"
+       ]
+      }
+     },
+     {
+      "id": "lift_columns_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 37.91440626883665,
+       "y": 80.01808318264014,
+       "width": 17.661241711874624,
+       "height": 17.94755877034358,
+       "rectanglelabels": [
+        "container"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'plastic box' conf 0.363"
+       ]
+      }
+     },
+     {
+      "id": "lift_columns_2",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 56.17842073538276,
+       "y": 88.83363471971067,
+       "width": 24.35201928872815,
+       "height": 11.075949367088608,
+       "rectanglelabels": [
+        "container"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'plastic box' conf 0.33"
+       ]
+      }
+     },
+     {
+      "id": "lift_columns_3",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 0.0,
+       "y": 58.00180831826401,
+       "width": 26.100060277275468,
+       "height": 24.819168173598552,
+       "rectanglelabels": [
+        "container"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'plastic box' conf 0.324"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/formlabs_fuse.jpg",
+   "photo_id": "formlabs_fuse",
+   "published_sha256": "d0cf3972f9bf9c842fe39f8ed2c2b936b86eb8f009a5c0dc29cca3e574357ffd",
+   "frame_root": "019d84163301cd8ce0526354955de5673cf05555dbb5a23b3e320955c45ecf36"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "formlabs_fuse_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 50.753465943339364,
+       "y": 41.952983725135624,
+       "width": 19.770946353224833,
+       "height": 10.985533453887884,
+       "rectanglelabels": [
+        "insert"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'perforated metal sheet' conf 0.307"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/rack_edge_ruler.jpg",
+   "photo_id": "rack_edge_ruler",
+   "published_sha256": "282cc0f2a2c9f23161c26fe44df7a0613739679d959bcc1e89524b6cf47c86fa",
+   "frame_root": "3a8a1db3e6c556c1bae2f33cf2bce30b4fcae656a77711b34ea3b3391a2202d4"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "rack_edge_ruler_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 49.050632911392405,
+       "y": 72.7546714888487,
+       "width": 48.46292947558771,
+       "height": 27.185051235684146,
+       "rectanglelabels": [
+        "insert"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'perforated metal sheet' conf 0.364"
+       ]
+      }
+     },
+     {
+      "id": "rack_edge_ruler_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 57.32368896925859,
+       "y": 0.0,
+       "width": 42.63110307414105,
+       "height": 50.753465943339364,
+       "rectanglelabels": [
+        "rack"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'tube rack' conf 0.282"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/xtip4_box.jpg",
+   "photo_id": "xtip4_box",
+   "published_sha256": "86e990548b4520cf3f0fa94822432808fa56e768b3461773524fb34159e5151e",
+   "frame_root": "98cd9586aa0b53fb8db6442a65f7f58ef6ccd03a26bd2e3381f6ad8c1260ef7b"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "xtip4_box_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 0.0,
+       "y": 0.18083182640144665,
+       "width": 35.2622061482821,
+       "height": 99.21639541892706,
+       "rectanglelabels": [
+        "reference"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'steel ruler' conf 0.811"
+       ]
+      }
+     },
+     {
+      "id": "xtip4_box_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 65.82278481012658,
+       "y": 1.024713682941531,
+       "width": 34.13200723327306,
+       "height": 75.16576250753467,
+       "rectanglelabels": [
+        "container"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'plastic box' conf 0.303"
+       ]
+      }
+     },
+     {
+      "id": "xtip4_box_2",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 0.0,
+       "y": 0.0,
+       "width": 11.39240506329114,
+       "height": 57.32368896925859,
+       "rectanglelabels": [
+        "reference"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'steel ruler' conf 0.279"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/labware_overview_1.jpg",
+   "photo_id": "labware_overview_1",
+   "published_sha256": "22d1861d5faefa12be34b2840ff3c4556ca70d29e2890886d28f9d456a51c2fb",
+   "frame_root": "55aba1a0bd757050ed03fc072b90ac5e8a717895466abad7ca514eea514a3bee"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "labware_overview_1_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 17.90235081374322,
+       "y": 35.2622061482821,
+       "width": 59.61422543701025,
+       "height": 9.041591320072333,
+       "rectanglelabels": [
+        "reference"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'steel ruler' conf 0.577"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_1_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 8.61965039180229,
+       "y": 42.495479204339965,
+       "width": 30.078360458107294,
+       "height": 8.770343580470163,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.404"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_1_2",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 57.92646172393008,
+       "y": 43.942133815551536,
+       "width": 18.565400843881857,
+       "height": 13.155515370705244,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.362"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_1_3",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 19.770946353224833,
+       "y": 18.851717902350813,
+       "width": 12.839059674502712,
+       "height": 13.743218806509946,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.331"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_1_4",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 51.235684147076554,
+       "y": 25.994575045207956,
+       "width": 11.452682338758288,
+       "height": 12.613019891500905,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.315"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_1_5",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 19.228450874020496,
+       "y": 57.32368896925859,
+       "width": 57.20313441832429,
+       "height": 15.370705244122966,
+       "rectanglelabels": [
+        "rack"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'orange 3D printed shelf rack' conf 0.267"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_1_6",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 76.19047619047619,
+       "y": 43.71609403254973,
+       "width": 13.622664255575648,
+       "height": 17.766726943942135,
+       "rectanglelabels": [
+        "rack"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'orange 3D printed shelf rack' conf 0.25"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/labware_angle.jpg",
+   "photo_id": "labware_angle",
+   "published_sha256": "aa4e721ad06be52de4988d04612fb5e35646924c9fae743382a1465c1c1aa40c",
+   "frame_root": "6f3b72c41e54b417a1d42dea9a765f07e9694b13fa743aa458c77bac33cab4b3"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "labware_angle_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 2.7124773960216997,
+       "y": 0.0,
+       "width": 18.806509945750452,
+       "height": 17.179023508137433,
+       "rectanglelabels": [
+        "container"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'plastic box' conf 0.366"
+       ]
+      }
+     },
+     {
+      "id": "labware_angle_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 64.82820976491863,
+       "y": 18.324291742013262,
+       "width": 22.197106690777577,
+       "height": 23.26702833031947,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.304"
+       ]
+      }
+     },
+     {
+      "id": "labware_angle_2",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 39.01446654611212,
+       "y": 43.70102471368294,
+       "width": 27.531645569620252,
+       "height": 41.71187462326703,
+       "rectanglelabels": [
+        "container"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'plastic box' conf 0.273"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/racks_closeup_ruler.jpg",
+   "photo_id": "racks_closeup_ruler",
+   "published_sha256": "d6db1ce5191c037c3e2521b48e33431eaa060963833775c0536c4736a8b7ef3a",
+   "frame_root": "87ddb4ab60be237e44a86cdb72a44739705bc9048e773ba8103d252a119ac51a"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "racks_closeup_ruler_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 2.124773960216998,
+       "y": 32.4291742013261,
+       "width": 97.73960216998192,
+       "height": 22.845087402049426,
+       "rectanglelabels": [
+        "reference"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'steel ruler' conf 0.566"
+       ]
+      }
+     },
+     {
+      "id": "racks_closeup_ruler_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 0.0,
+       "y": 72.21217600964437,
+       "width": 45.388788426763114,
+       "height": 27.727546714888486,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.408"
+       ]
+      }
+     },
+     {
+      "id": "racks_closeup_ruler_2",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 80.37974683544304,
+       "y": 44.48462929475588,
+       "width": 19.620253164556964,
+       "height": 50.21097046413502,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.301"
+       ]
+      }
+     },
+     {
+      "id": "racks_closeup_ruler_3",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 4.113924050632911,
+       "y": 55.81675708257987,
+       "width": 41.32007233273056,
+       "height": 20.61482820976492,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.284"
+       ]
+      }
+     },
+     {
+      "id": "racks_closeup_ruler_4",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 0.045207956600361664,
+       "y": 55.575647980711274,
+       "width": 45.298372513562384,
+       "height": 44.424352019288726,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.259"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/labware_overview_2.jpg",
+   "photo_id": "labware_overview_2",
+   "published_sha256": "bde66bf80a02dd2b4559008545124e9996a49ca48154720a61862c76255590f2",
+   "frame_root": "c88bd133a6a787793c8443a5c6ea31ef4e66dfda8a58d88718ad8f6b157319bb"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "labware_overview_2_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 39.78300180831826,
+       "y": 23.282097649186255,
+       "width": 35.80470162748644,
+       "height": 20.93128390596745,
+       "rectanglelabels": [
+        "fixture"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'metal frame' conf 0.46"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_2_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 22.24231464737794,
+       "y": 64.7377938517179,
+       "width": 36.46775165762507,
+       "height": 20.93128390596745,
+       "rectanglelabels": [
+        "insert"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'hexagonal grid' conf 0.339"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_2_2",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 37.01024713682941,
+       "y": 51.89873417721519,
+       "width": 38.93911995177818,
+       "height": 20.976491862567812,
+       "rectanglelabels": [
+        "fixture"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'metal frame' conf 0.322"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/biokea_frames_tub.jpg",
+   "photo_id": "biokea_frames_tub",
+   "published_sha256": "8355782a460fcf2dcf8334749c3c4edf466efcaeecd8bf6be5e381491b5a4baf",
+   "frame_root": "4c5324776a47391971564e1fee85a337f1c8b306ec69cb610819c1832e122c70"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "biokea_frames_tub_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 59.61422543701025,
+       "y": 23.462929475587703,
+       "width": 29.29475587703436,
+       "height": 11.482820976491862,
+       "rectanglelabels": [
+        "rack"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'orange 3D printed shelf rack' conf 0.545"
+       ]
+      }
+     },
+     {
+      "id": "biokea_frames_tub_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 24.89451476793249,
+       "y": 15.867992766726944,
+       "width": 23.387582881253767,
+       "height": 7.775768535262206,
+       "rectanglelabels": [
+        "reference"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'steel ruler' conf 0.531"
+       ]
+      }
+     },
+     {
+      "id": "biokea_frames_tub_2",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 43.459915611814345,
+       "y": 49.18625678119349,
+       "width": 18.44484629294756,
+       "height": 9.990958408679928,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.458"
+       ]
+      }
+     },
+     {
+      "id": "biokea_frames_tub_3",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 63.29113924050633,
+       "y": 47.513562386980105,
+       "width": 11.754068716094032,
+       "height": 44.34900542495479,
+       "rectanglelabels": [
+        "reference"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'steel ruler' conf 0.426"
+       ]
+      }
+     },
+     {
+      "id": "biokea_frames_tub_4",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 65.34056660638939,
+       "y": 58.31826401446654,
+       "width": 8.800482218203737,
+       "height": 32.91139240506329,
+       "rectanglelabels": [
+        "reference"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'steel ruler' conf 0.418"
+       ]
+      }
+     },
+     {
+      "id": "biokea_frames_tub_5",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 62.74864376130199,
+       "y": 35.35262206148282,
+       "width": 21.760096443640748,
+       "height": 15.415913200723327,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.354"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/racks_diagonal_ruler.jpg",
+   "photo_id": "racks_diagonal_ruler",
+   "published_sha256": "3127b5d1e9772bd951139ef6031d8371cd684f34a83cfe42b3bb6ec567df6b37",
+   "frame_root": "f3731b3583e1b8e6f41f32dac1316591932c09c825783c3790dd5187ae5167d1"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "racks_diagonal_ruler_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 4.430379746835443,
+       "y": 0.3013863773357444,
+       "width": 74.14104882459313,
+       "height": 97.7697408077155,
+       "rectanglelabels": [
+        "reference"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'steel ruler' conf 0.782"
+       ]
+      }
+     },
+     {
+      "id": "racks_diagonal_ruler_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 61.301989150090414,
+       "y": 7.4743821579264615,
+       "width": 35.35262206148282,
+       "height": 52.86317058468957,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.423"
+       ]
+      }
+     },
+     {
+      "id": "racks_diagonal_ruler_2",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 2212,
+      "original_height": 1659,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 23.01084990958409,
+       "y": 0.0,
+       "width": 28.79746835443038,
+       "height": 32.48945147679325,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.305"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/labware_overview_3.jpg",
+   "photo_id": "labware_overview_3",
+   "published_sha256": "b462d854a0259a334f0b834d783752505f7de5491c392cec90ff2e24a7e6024b",
+   "frame_root": "aba4044c5a664a71a259445a57224296f1d13990b67bac78e93ce2db8076603a"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": [
+     {
+      "id": "labware_overview_3_0",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 22.905364677516577,
+       "y": 30.877034358047016,
+       "width": 60.69921639541893,
+       "height": 8.679927667269439,
+       "rectanglelabels": [
+        "reference"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'steel ruler' conf 0.785"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_3_1",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 24.89451476793249,
+       "y": 68.12839059674502,
+       "width": 56.35925256178421,
+       "height": 31.82640144665461,
+       "rectanglelabels": [
+        "container"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'plastic tub' conf 0.717"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_3_2",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 25.376732971669682,
+       "y": 15.280289330922242,
+       "width": 12.176009644364076,
+       "height": 13.291139240506329,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.587"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_3_3",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 62.2664255575648,
+       "y": 39.37613019891501,
+       "width": 17.96262808921037,
+       "height": 12.74864376130199,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.359"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_3_4",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 25.135623869801083,
+       "y": 52.57685352622062,
+       "width": 55.69620253164557,
+       "height": 14.737793851717903,
+       "rectanglelabels": [
+        "rack"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'orange 3D printed shelf rack' conf 0.336"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_3_5",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 54.85232067510549,
+       "y": 20.61482820976492,
+       "width": 12.597950572634117,
+       "height": 12.839059674502712,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.297"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_3_6",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 57.564798071127186,
+       "y": 3.616636528028933,
+       "width": 11.39240506329114,
+       "height": 12.929475587703436,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.287"
+       ]
+      }
+     },
+     {
+      "id": "labware_overview_3_7",
+      "type": "rectanglelabels",
+      "from_name": "label",
+      "to_name": "image",
+      "original_width": 1659,
+      "original_height": 2212,
+      "image_rotation": 0,
+      "value": {
+       "rotation": 0,
+       "x": 40.08438818565401,
+       "y": 24.367088607594937,
+       "width": 14.466546112115733,
+       "height": 6.283905967450271,
+       "rectanglelabels": [
+        "plate"
+       ]
+      },
+      "meta": {
+       "text": [
+        "detector said 'microplate' conf 0.267"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "https://raw.githubusercontent.com/biobitworks/baebugs/main/assets/photos/greiner_cryos_bag.jpg",
+   "photo_id": "greiner_cryos_bag",
+   "published_sha256": "42edba7c1ed8181044941d6247eb2ca181ae2c4e2b4ef341d968b3fdfe8840a6",
+   "frame_root": "9f2843cafa2bd61630e0df559d12a78d5402036595031aabf073292e26756b0c"
+  },
+  "predictions": [
+   {
+    "model_version": "yoloe-11s-seg.pt:8e439445c873",
+    "score": 0.0,
+    "result": []
+   }
+  ]
+ }
+]

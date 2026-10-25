@@ -4,7 +4,7 @@
 "design": 2,
 "not measured": 24,
 "ruler-photo": 2,
-"spec": 3
+"spec": 4
 },
 "items": [
 {
@@ -286,6 +286,30 @@
 "role": "lyse / incubate / liquid handling (flex route)"
 },
 {
+"category": "tip_box",
+"count": 2,
+"dims_mm": [
+127.75,
+85.75,
+99.0
+],
+"dims_source": "spec",
+"id": "opentrons_flex_tiprack_50ul_filter",
+"interfaces": [
+"flex_deck_slot",
+"SBS"
+],
+"leaf": "8c132992d082b372a298272b2ec10b7a932221db8d201ef573b964379d290e0d",
+"maker": "Opentrons",
+"name": "Opentrons Flex 96 Filter Tip Rack 50 uL",
+"notes": null,
+"photos": [
+"assets/photos/lift_columns.jpg"
+],
+"ref": null,
+"role": "tips for the Flex 8-channel"
+},
+{
 "category": "stage",
 "count": 3,
 "dims_mm": null,
@@ -338,7 +362,7 @@ null
 "interfaces": [
 "SBS"
 ],
-"leaf": "6bb2d030af01accc0d23150a6617d562a3504448b97093594083cb1cd5244d5a",
+"leaf": "d0910ade30e4614fe307ddb402b5f8a9c0abcdea2466257f1f729a11d3af1d3a",
 "maker": "PerkinElmer",
 "name": "384-well plate, black",
 "notes": "footprint is the SBS standard; height depends on the exact product",
@@ -614,7 +638,7 @@ null
 "interfaces": [
 "rack_4way"
 ],
-"leaf": "629de60de2dbfed20fd27d814f50c9357cdbcd20249b5fb6fe9348bce89fed00",
+"leaf": "6f82dd8e77fc76720618d21a7f0eb2a6a27f4d5ae0837d96478cb4b70b678068",
 "maker": "VWR",
 "name": "50 mL conical tube, green cap",
 "notes": null,
@@ -673,7 +697,7 @@ null
 }
 ],
 "photos_root": "d0040690084c7bdeb77b8f30005216d47bdfd92f0c56883022a5bb35dc374751",
-"root": "2aa571d0973f1995c303b86f4f8f9816f485a73bfd59822593d6caa138f6b72e"
+"root": "0d86b0ba2afe21d6fa2fed382856976dcb120311e816a817898d09b352a5a715"
 },
 "bugs": [
 {
@@ -2173,6 +2197,26 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
+"leaf": "18a5d65a93c3f1813bd8a2b58259555147128b687e1bc646bdcdcafdb99c41c1",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/label_studio/config.xml",
+"sha256": "37d8d425556d7703b47eb0876b156b1f041288a3f2aa3259c3c5e949d710468f",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "413631623635795e1eaf2a583cdbf741a70aff3e4a27661ff8eb975a5db094e9",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "assets/label_studio/tasks.json",
+"sha256": "ba7fecb74854349bd9dba84e46a76b404402f2947034ca79a13a6f1fea15bbd3",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
 "leaf": "2a3736fab9f2af56068a906ad52cabaacb5779a5dfaaf7606d25184c513317b5",
 "licence": "MIT",
 "module": "repo-meta",
@@ -2413,21 +2457,21 @@ null
 {
 "claim": "OWN+TERMS",
 "kind": "code",
-"leaf": "784b81aa211686ba10138f20ee9e10e0bd2316fc365ac313cd7656b9e5bfde86",
+"leaf": "6d5f3a1934bab3d033ebcc628f3a5e001137b200ffe338cb729cdf10a580922d",
 "licence": "MIT + ultralytics terms",
 "module": "python-package",
 "path": "baebugs/asset_boxes.py",
-"sha256": "42ef15e13918b871067eacb16557b1e5c42b25126f8b233f1cf4588ec756baa2",
+"sha256": "8a347a4ba4b5ce067a04d03499e690e6c1cf5b7a51e111a17b3953ae76cfad8b",
 "status": "built"
 },
 {
 "claim": "OWN",
 "kind": "code",
-"leaf": "9b0263ee439baff57a4244ece4e86c496e5b87bd75389e5faa9f61b3e365ca1e",
+"leaf": "0a10aa918745330ee19feb080fea94e3d55a293f5195403b0212dfcfd82a783b",
 "licence": "MIT",
 "module": "python-package",
 "path": "baebugs/assets.py",
-"sha256": "e836a141960cf45bc8b15147c45b63863c27b76576f32bb003628f87d365dfd7",
+"sha256": "bc4436e273c57e60d78c61ce63a6062fa72d2ea52f2c2ef4288280fb08fe30ac",
 "status": "tested"
 },
 {
@@ -2788,6 +2832,16 @@ null
 "module": "python-package",
 "path": "baebugs/labbox.py",
 "sha256": "b823e7c9350100d2d31f9e37890d3d491053ce975efaa1ed1a5a09041913ec3c",
+"status": "tested"
+},
+{
+"claim": "OWN",
+"kind": "code",
+"leaf": "dad19f6ab4d80e445b4f86b5939cac9f8555a37e493f59b0a3db75fe4a25b0b7",
+"licence": "MIT",
+"module": "python-package",
+"path": "baebugs/label_studio.py",
+"sha256": "e9d68ab019a97b39aa07dc429488ba9ce02422eda3d93ebfd9951156e695cdad",
 "status": "tested"
 },
 {
@@ -3403,11 +3457,11 @@ null
 {
 "claim": "OWN",
 "kind": "ledger",
-"leaf": "bb001bd0162a86c30a4bb25287e8c63e95fd9f71cf2eb3872f2b3040cff747c5",
+"leaf": "87bb1cbffba662c84af875fea596b7732eaf787772d69218d7792e1cef4a2ec3",
 "licence": "MIT",
 "module": "custody-ledgers",
 "path": "daisy/assets_mmr.jsonl",
-"sha256": "fa227cb1e424fbf03b47a9c256f2102565408462fb15e94412ca8161602f1131",
+"sha256": "09a525345f50a361f722f6216e3e1385d8b948327108048915889dd1e01a4ed8",
 "status": "built"
 },
 {
@@ -4483,11 +4537,11 @@ null
 {
 "claim": "OWN+TERMS",
 "kind": "data",
-"leaf": "20c6afb8d0ab09ec4ba1c97f27ca46b29a4b79b84529a73085bea83d017ac115",
+"leaf": "428e3a10f33f3cc6444c9e957da9ca86148add11a002fafe1f224b2e668a0f2b",
 "licence": "MIT + gbif-media terms",
 "module": "knowledge-graph",
 "path": "kg/assets.json",
-"sha256": "4cc42116d77740ac94f868d5ab7d7d22f52138738de2132b549021cfafa7b840",
+"sha256": "b56431010a4efe01a40b16da5df6fdaa69d97302523d7e3a79b00b4031ee7d9a",
 "status": "built"
 },
 {
@@ -10083,6 +10137,16 @@ null
 {
 "claim": "OWN",
 "kind": "test",
+"leaf": "5dc6ac6e6a12a00b9c865cff0d07dc0edf8cf2e97d4fc214515b6a54282eb413",
+"licence": "MIT",
+"module": "tests",
+"path": "tests/test_label_studio.py",
+"sha256": "1faff9bbe4a1f0c32f51de02b342f061119c4023256d5f6503d347a5a7ff8742",
+"status": "tested"
+},
+{
+"claim": "OWN",
+"kind": "test",
 "leaf": "814e214adcf055caaaa47484b7223861afc9c96a234e83f6537d2e4161fbb134",
 "licence": "MIT",
 "module": "tests",
@@ -10268,8 +10332,8 @@ null
 },
 "mmr": {
 "assets_mmr": {
-"n": 1,
-"root": "0db28037a5744bcad439c5869ae5a1b4e849cbb65656c8532b82a70e03174fe4",
+"n": 2,
+"root": "1731ac05e82a7bf99f0125d3815ace7c043366b8e1d72a033a7649be51da5c2e",
 "verified": true
 },
 "hybrids_mmr": {
@@ -10305,7 +10369,7 @@ null
 "OWN": 34
 },
 "id": "module:custody-ledgers",
-"root": "9a344d9cfb392711bf2920e8310092d83d62ac5fdb7b0a4a75cef755fb90fc71",
+"root": "50e514dce783130b5f59cb88246db48f92a04e4421db8e60367723fca2195f1b",
 "status": {
 "built": 34
 },
@@ -10383,7 +10447,7 @@ null
 "OWN+TERMS": 6
 },
 "id": "module:knowledge-graph",
-"root": "0a751734965127a667f9f586b056d22096522f34eaae00f342b7bb02c77597ea",
+"root": "2249e3089709fc1a75e1b55796154a567bfda5c5da60d9a2a36238f14875b210",
 "status": {
 "built": 6
 },
@@ -10442,42 +10506,42 @@ null
 ]
 },
 "python-package": {
-"atoms": 85,
+"atoms": 86,
 "claims": {
-"OWN": 77,
+"OWN": 78,
 "OWN+TERMS": 8
 },
 "id": "module:python-package",
-"root": "a3cfd61e68e51b54078da9af79ba26b02ea138cecba505ba76cf70c47fb92025",
+"root": "62fb1f6fd2f2acc7e0b3195120076c4e37f3888e1074afd487afb77282cb07f3",
 "status": {
 "built": 55,
-"tested": 30
+"tested": 31
 },
 "terms": [
 "ext:ultralytics"
 ]
 },
 "repo-meta": {
-"atoms": 34,
+"atoms": 36,
 "claims": {
-"OWN": 34
+"OWN": 36
 },
 "id": "module:repo-meta",
-"root": "891e3c4fbeaee05e82aad78e0f0183ebce385968a86d63bed970351dc43eba07",
+"root": "70084551a4f2727a9dd31cfbbb060468cbc7010b222dcac55a4c752d6c4c21da",
 "status": {
-"built": 34
+"built": 36
 },
 "terms": []
 },
 "tests": {
-"atoms": 38,
+"atoms": 39,
 "claims": {
-"OWN": 38
+"OWN": 39
 },
 "id": "module:tests",
-"root": "4b827430d954e797605f4f96611e5338c31b0d4c303263aa9e2dbecfff859396",
+"root": "61b5a3ed754f8d13b60704dcf1b3e57f61ab6ce5e8ed73e88b316b598b9d6c49",
 "status": {
-"tested": 38
+"tested": 39
 },
 "terms": []
 },
@@ -11127,11 +11191,11 @@ null
 ]
 }
 ],
-"root": "d42a6157048a028706a501a79249185e19a29ad0fa760808611db12cb91f9be9",
+"root": "8eb76fa1d96b47f97101a14d8ec1124f293648a38deef330b0c1ea41d2f76a6a",
 "roots": {
-"aok": "52d9904a9e58ac652387f740c18183be287825eb8ef5d71ec0d47dfafeb2313b",
-"assets": "2aa571d0973f1995c303b86f4f8f9816f485a73bfd59822593d6caa138f6b72e",
-"assets_mmr": "0db28037a5744bcad439c5869ae5a1b4e849cbb65656c8532b82a70e03174fe4",
+"aok": "a8352ed9306883ef2f0a5a28ce76d88c8a26cd2c6319cca44139a2ab25dcc377",
+"assets": "0d86b0ba2afe21d6fa2fed382856976dcb120311e816a817898d09b352a5a715",
+"assets_mmr": "1731ac05e82a7bf99f0125d3815ace7c043366b8e1d72a033a7649be51da5c2e",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
 "hypergraph": "8cc197054b823ec77d6d536b6c0129a497d725458e07c67b88af099adfb3dcc7",
 "hypergraph_mmr": "c20a893a164051e5ba7c0225bf029b41c0cd748b38fda32975d5638e4920c4e5",
@@ -15344,7 +15408,7 @@ null
 }
 ],
 "totals": {
-"OWN": 767,
+"OWN": 771,
 "OWN+TERMS": 49,
 "THIRD": 20
 },

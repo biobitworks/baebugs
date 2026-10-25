@@ -1,5 +1,5 @@
 {
- "atoms": 836,
+ "atoms": 840,
  "external": [
   {
    "claim": "THIRD",
@@ -343,8 +343,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/README.md",
    "kind": "meta",
    "leaf": "a8c6cb3bc139a077f6898ce4640b2ccb4fed0f1db6615444689ad0981571ed36",
@@ -357,8 +357,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 0,
-   "commits": 0,
+   "claude_coauthored_commits": 1,
+   "commits": 1,
    "id": "leaf:assets/boxes.json",
    "kind": "meta",
    "leaf": "d590aae4911939c19d044eaa40a66cfb27c0222785979fafc625fdf0f578c7e6",
@@ -366,6 +366,34 @@
    "module": "repo-meta",
    "path": "assets/boxes.json",
    "sha256": "e9afc2d1e781c4dabc8c6785acfedcfaa167f74d0fdee017402599a2eda1e83c",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:assets/label_studio/config.xml",
+   "kind": "meta",
+   "leaf": "18a5d65a93c3f1813bd8a2b58259555147128b687e1bc646bdcdcafdb99c41c1",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "assets/label_studio/config.xml",
+   "sha256": "37d8d425556d7703b47eb0876b156b1f041288a3f2aa3259c3c5e949d710468f",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:assets/label_studio/tasks.json",
+   "kind": "meta",
+   "leaf": "413631623635795e1eaf2a583cdbf741a70aff3e4a27661ff8eb975a5db094e9",
+   "licence": "MIT",
+   "module": "repo-meta",
+   "path": "assets/label_studio/tasks.json",
+   "sha256": "ba7fecb74854349bd9dba84e46a76b404402f2947034ca79a13a6f1fea15bbd3",
    "status": "built",
    "terms": []
   },
@@ -713,11 +741,11 @@
    "commits": 1,
    "id": "leaf:baebugs/asset_boxes.py",
    "kind": "code",
-   "leaf": "784b81aa211686ba10138f20ee9e10e0bd2316fc365ac313cd7656b9e5bfde86",
+   "leaf": "6d5f3a1934bab3d033ebcc628f3a5e001137b200ffe338cb729cdf10a580922d",
    "licence": "MIT + ultralytics terms",
    "module": "python-package",
    "path": "baebugs/asset_boxes.py",
-   "sha256": "42ef15e13918b871067eacb16557b1e5c42b25126f8b233f1cf4588ec756baa2",
+   "sha256": "8a347a4ba4b5ce067a04d03499e690e6c1cf5b7a51e111a17b3953ae76cfad8b",
    "status": "built",
    "terms": [
     "ext:ultralytics"
@@ -729,11 +757,11 @@
    "commits": 1,
    "id": "leaf:baebugs/assets.py",
    "kind": "code",
-   "leaf": "9b0263ee439baff57a4244ece4e86c496e5b87bd75389e5faa9f61b3e365ca1e",
+   "leaf": "0a10aa918745330ee19feb080fea94e3d55a293f5195403b0212dfcfd82a783b",
    "licence": "MIT",
    "module": "python-package",
    "path": "baebugs/assets.py",
-   "sha256": "e836a141960cf45bc8b15147c45b63863c27b76576f32bb003628f87d365dfd7",
+   "sha256": "bc4436e273c57e60d78c61ce63a6062fa72d2ea52f2c2ef4288280fb08fe30ac",
    "status": "tested",
    "terms": []
   },
@@ -1242,6 +1270,20 @@
    "module": "python-package",
    "path": "baebugs/labbox.py",
    "sha256": "b823e7c9350100d2d31f9e37890d3d491053ce975efaa1ed1a5a09041913ec3c",
+   "status": "tested",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:baebugs/label_studio.py",
+   "kind": "code",
+   "leaf": "dad19f6ab4d80e445b4f86b5939cac9f8555a37e493f59b0a3db75fe4a25b0b7",
+   "licence": "MIT",
+   "module": "python-package",
+   "path": "baebugs/label_studio.py",
+   "sha256": "e9d68ab019a97b39aa07dc429488ba9ce02422eda3d93ebfd9951156e695cdad",
    "status": "tested",
    "terms": []
   },
@@ -2113,11 +2155,11 @@
    "commits": 1,
    "id": "leaf:daisy/assets_mmr.jsonl",
    "kind": "ledger",
-   "leaf": "bb001bd0162a86c30a4bb25287e8c63e95fd9f71cf2eb3872f2b3040cff747c5",
+   "leaf": "87bb1cbffba662c84af875fea596b7732eaf787772d69218d7792e1cef4a2ec3",
    "licence": "MIT",
    "module": "custody-ledgers",
    "path": "daisy/assets_mmr.jsonl",
-   "sha256": "fa227cb1e424fbf03b47a9c256f2102565408462fb15e94412ca8161602f1131",
+   "sha256": "09a525345f50a361f722f6216e3e1385d8b948327108048915889dd1e01a4ed8",
    "status": "built",
    "terms": []
   },
@@ -3683,11 +3725,11 @@
    "commits": 1,
    "id": "leaf:kg/assets.json",
    "kind": "data",
-   "leaf": "20c6afb8d0ab09ec4ba1c97f27ca46b29a4b79b84529a73085bea83d017ac115",
+   "leaf": "428e3a10f33f3cc6444c9e957da9ca86148add11a002fafe1f224b2e668a0f2b",
    "licence": "MIT + gbif-media terms",
    "module": "knowledge-graph",
    "path": "kg/assets.json",
-   "sha256": "4cc42116d77740ac94f868d5ab7d7d22f52138738de2132b549021cfafa7b840",
+   "sha256": "b56431010a4efe01a40b16da5df6fdaa69d97302523d7e3a79b00b4031ee7d9a",
    "status": "built",
    "terms": [
     "ext:gbif-media"
@@ -11557,6 +11599,20 @@
   },
   {
    "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 0,
+   "id": "leaf:tests/test_label_studio.py",
+   "kind": "test",
+   "leaf": "5dc6ac6e6a12a00b9c865cff0d07dc0edf8cf2e97d4fc214515b6a54282eb413",
+   "licence": "MIT",
+   "module": "tests",
+   "path": "tests/test_label_studio.py",
+   "sha256": "1faff9bbe4a1f0c32f51de02b342f061119c4023256d5f6503d347a5a7ff8742",
+   "status": "tested",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
    "claude_coauthored_commits": 1,
    "commits": 1,
    "id": "leaf:tests/test_ladder.py",
@@ -11820,7 +11876,7 @@
     "OWN": 34
    },
    "id": "module:custody-ledgers",
-   "root": "9a344d9cfb392711bf2920e8310092d83d62ac5fdb7b0a4a75cef755fb90fc71",
+   "root": "50e514dce783130b5f59cb88246db48f92a04e4421db8e60367723fca2195f1b",
    "status": {
     "built": 34
    },
@@ -11898,7 +11954,7 @@
     "OWN+TERMS": 6
    },
    "id": "module:knowledge-graph",
-   "root": "0a751734965127a667f9f586b056d22096522f34eaae00f342b7bb02c77597ea",
+   "root": "2249e3089709fc1a75e1b55796154a567bfda5c5da60d9a2a36238f14875b210",
    "status": {
     "built": 6
    },
@@ -11957,42 +12013,42 @@
    ]
   },
   "python-package": {
-   "atoms": 85,
+   "atoms": 86,
    "claims": {
-    "OWN": 77,
+    "OWN": 78,
     "OWN+TERMS": 8
    },
    "id": "module:python-package",
-   "root": "a3cfd61e68e51b54078da9af79ba26b02ea138cecba505ba76cf70c47fb92025",
+   "root": "62fb1f6fd2f2acc7e0b3195120076c4e37f3888e1074afd487afb77282cb07f3",
    "status": {
     "built": 55,
-    "tested": 30
+    "tested": 31
    },
    "terms": [
     "ext:ultralytics"
    ]
   },
   "repo-meta": {
-   "atoms": 34,
+   "atoms": 36,
    "claims": {
-    "OWN": 34
+    "OWN": 36
    },
    "id": "module:repo-meta",
-   "root": "891e3c4fbeaee05e82aad78e0f0183ebce385968a86d63bed970351dc43eba07",
+   "root": "70084551a4f2727a9dd31cfbbb060468cbc7010b222dcac55a4c752d6c4c21da",
    "status": {
-    "built": 34
+    "built": 36
    },
    "terms": []
   },
   "tests": {
-   "atoms": 38,
+   "atoms": 39,
    "claims": {
-    "OWN": 38
+    "OWN": 39
    },
    "id": "module:tests",
-   "root": "4b827430d954e797605f4f96611e5338c31b0d4c303263aa9e2dbecfff859396",
+   "root": "61b5a3ed754f8d13b60704dcf1b3e57f61ab6ce5e8ed73e88b316b598b9d6c49",
    "status": {
-    "tested": 38
+    "tested": 39
    },
    "terms": []
   },
@@ -12010,9 +12066,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "52d9904a9e58ac652387f740c18183be287825eb8ef5d71ec0d47dfafeb2313b",
+ "root": "a8352ed9306883ef2f0a5a28ce76d88c8a26cd2c6319cca44139a2ab25dcc377",
  "totals": {
-  "OWN": 767,
+  "OWN": 771,
   "OWN+TERMS": 49,
   "THIRD": 20
  },
