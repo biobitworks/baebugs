@@ -66,6 +66,7 @@ def test_curated_source_rights_and_deployment():
         assert "localStorage" in js
         assert "GUIDED_BROWSER_REVIEW_ONLY" in js
         assert "crypto.subtle" in js
+        assert not any("__pycache__" in f or f.endswith(".pyc") for f in m["files"])
         assert "collection:" in js
         assert "My collections" in js
 

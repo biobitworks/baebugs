@@ -4433,6 +4433,16 @@ null
 {
 "claim": "OWN",
 "kind": "doc",
+"leaf": "2797e68bfeadb67e758eb9548d7bb730d4ee5fce66d47e314a18b2e50b3d7812",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/protocols/DEPLOY_READBACK_PREDECESSOR_20261025.json",
+"sha256": "bf09d38cc9f684fff815ac7a2b77f301a207097bfe35377e82fc22dab2bbfa47",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
 "leaf": "f836df18a519c59570a8c72a8c7a14a0a24ec9f76e430c2bf23c331ef61e8cad",
 "licence": "MIT",
 "module": "docs",
@@ -10253,11 +10263,11 @@ null
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "f87def700aed340a93f524c69a8ec94e9742591a3bcd268dd349323197e95347",
+"leaf": "9cb3a3890b573575d76061ec26fcf960300109201e4bb9cde7d633ff1b9f6454",
 "licence": "MIT",
 "module": "mvp-site",
 "path": "site/mvp/build_public_site.py",
-"sha256": "8cda3c17322149eae65fbd50adaaf78fafc5f99e872e7e1f29bfe6d0e8be4612",
+"sha256": "cc25455c07813d6e141595eae515ecae20d57026d536074003352041b740d647",
 "status": "built"
 },
 {
@@ -10633,11 +10643,11 @@ null
 {
 "claim": "OWN",
 "kind": "test",
-"leaf": "9c2a6cd8209c3e52bce54637b0708c60eb67b5d2773b7bb32b251e7533f16bd0",
+"leaf": "a243a9ec00c348def080b5faaedf1e8fed2cd64a463109bc6d55db741555ba17",
 "licence": "MIT",
 "module": "tests",
 "path": "tests/test_protocol_discovery.py",
-"sha256": "812bc24ac901b8bbdd0a564a62c31b324a2dc654439442a0f93297704d4508e2",
+"sha256": "5790e214e0e2287243e5b540d08abedc486d46c89a854da833186b602bf0b70f",
 "status": "tested"
 },
 {
@@ -10831,14 +10841,14 @@ null
 "terms": []
 },
 "docs": {
-"atoms": 53,
+"atoms": 54,
 "claims": {
-"OWN": 53
+"OWN": 54
 },
 "id": "module:docs",
-"root": "6cad1396d8365eba0365a5025b0236e2b0ac8e67ac7a96d0a38ab4bab5f470f1",
+"root": "4303415799f6c22fd2744a70e00866db94f661cc98eedd3acc9975b720eb19f7",
 "status": {
-"built": 53
+"built": 54
 },
 "terms": []
 },
@@ -10889,7 +10899,7 @@ null
 "OWN": 35
 },
 "id": "module:mvp-site",
-"root": "59e133f368c39a2f732727f8bd3c78fa54390649bc58895c13e7bb388374d0fc",
+"root": "de558a213a8940be047c56c9cd35f263f6e89339222daf149219f021a3f1031d",
 "status": {
 "built": 35
 },
@@ -10955,7 +10965,7 @@ null
 "OWN": 41
 },
 "id": "module:tests",
-"root": "2383109e094494ec6e6f0bdeb57350e684274ef69eca1db805533423b732a943",
+"root": "dca1027c43e1a47ca879c02248db550ad766f0c4598214ced978f1aa2073de20",
 "status": {
 "tested": 41
 },
@@ -11737,9 +11747,9 @@ null
 ]
 }
 ],
-"root": "8685bbe7f0fc69335f0d78f741e60ed06b0df22aa6711632b9f12d83f9fce471",
+"root": "acc999c3cdff594064666613392dd00f476393dc8d7faf6252a8aa596e94ed34",
 "roots": {
-"aok": "108185abaca759a7c65e42e501b69364e13703e040904fce8475f3eb9f6a0e1e",
+"aok": "30ab94bc54270a4bb38106f0cfd3a5987cef874d5f3faf0aad6c9b0ef03921a0",
 "assets": "2aa571d0973f1995c303b86f4f8f9816f485a73bfd59822593d6caa138f6b72e",
 "assets_mmr": "0db28037a5744bcad439c5869ae5a1b4e849cbb65656c8532b82a70e03174fe4",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -15954,7 +15964,7 @@ null
 }
 ],
 "totals": {
-"OWN": 814,
+"OWN": 815,
 "OWN+TERMS": 49,
 "THIRD": 20
 },

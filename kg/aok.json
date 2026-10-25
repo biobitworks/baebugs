@@ -1,5 +1,5 @@
 {
- "atoms": 883,
+ "atoms": 884,
  "external": [
   {
    "claim": "THIRD",
@@ -3575,6 +3575,20 @@
    "claim": "OWN",
    "claude_coauthored_commits": 0,
    "commits": 0,
+   "id": "leaf:docs/protocols/DEPLOY_READBACK_PREDECESSOR_20261025.json",
+   "kind": "doc",
+   "leaf": "2797e68bfeadb67e758eb9548d7bb730d4ee5fce66d47e314a18b2e50b3d7812",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/protocols/DEPLOY_READBACK_PREDECESSOR_20261025.json",
+   "sha256": "bf09d38cc9f684fff815ac7a2b77f301a207097bfe35377e82fc22dab2bbfa47",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 1,
    "id": "leaf:docs/protocols/DISCOVERY_MVP_CONTRACT.md",
    "kind": "doc",
    "leaf": "f836df18a519c59570a8c72a8c7a14a0a24ec9f76e430c2bf23c331ef61e8cad",
@@ -3588,7 +3602,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/protocols/NOTEBOOK_PRECURSOR_FAILURE_20261025.json",
    "kind": "doc",
    "leaf": "34d0337595c7b421fb7911bee2abd8ff52d753c417cc56daac927d373ff503a2",
@@ -3602,7 +3616,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/protocols/TEST_RUN_RECEIPT_20261025.json",
    "kind": "doc",
    "leaf": "3eacbc63d7561ff207a3fc1f6c05c14dd4d88f83116926ea06d1a899af2e4dea",
@@ -4224,7 +4238,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:notebooks/protocol_discovery.ipynb",
    "kind": "notebook",
    "leaf": "c4b233cafeb72a3ac0048b7316a870aab90c8f207c70e54c699d816945f37574",
@@ -11334,7 +11348,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:protocols/catalog.json",
    "kind": "meta",
    "leaf": "a87103ea16c5842a079991088b0575f799248cec435909b9014de0e94cc33a99",
@@ -11782,21 +11796,21 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 2,
+   "commits": 3,
    "id": "leaf:site/mvp/build_public_site.py",
    "kind": "page",
-   "leaf": "f87def700aed340a93f524c69a8ec94e9742591a3bcd268dd349323197e95347",
+   "leaf": "9cb3a3890b573575d76061ec26fcf960300109201e4bb9cde7d633ff1b9f6454",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/mvp/build_public_site.py",
-   "sha256": "8cda3c17322149eae65fbd50adaaf78fafc5f99e872e7e1f29bfe6d0e8be4612",
+   "sha256": "cc25455c07813d6e141595eae515ecae20d57026d536074003352041b740d647",
    "status": "built",
    "terms": []
   },
   {
    "claim": "OWN",
    "claude_coauthored_commits": 4,
-   "commits": 6,
+   "commits": 7,
    "id": "leaf:site/mvp/index.html",
    "kind": "page",
    "leaf": "20d322fc4f08eefcce3d4c2ded9ccfbfced833228548136f8f656d451ab84062",
@@ -11810,7 +11824,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:site/protocols/app.js",
    "kind": "page",
    "leaf": "5201e787b26ac693b4c319a2d24e247ca11a8610bb6ddcb9c378f1ff60796ab7",
@@ -11824,7 +11838,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:site/protocols/build_catalog.py",
    "kind": "page",
    "leaf": "2f07a4d726fbacbc1d0d23e56e838f582a0fd69094a23cf83954b425ab12862f",
@@ -11838,7 +11852,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:site/protocols/index.html",
    "kind": "page",
    "leaf": "f0aaf02e6852c87f270b8e5350fe90f581093ede0ad3931d8a29fef7c8b14cc0",
@@ -11852,7 +11866,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:site/protocols/styles.css",
    "kind": "page",
    "leaf": "7c7edab578d73bef686c08082e44ac69e6b72b8395cf72eed486b6ce5530080e",
@@ -12314,14 +12328,14 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:tests/test_protocol_discovery.py",
    "kind": "test",
-   "leaf": "9c2a6cd8209c3e52bce54637b0708c60eb67b5d2773b7bb32b251e7533f16bd0",
+   "leaf": "a243a9ec00c348def080b5faaedf1e8fed2cd64a463109bc6d55db741555ba17",
    "licence": "MIT",
    "module": "tests",
    "path": "tests/test_protocol_discovery.py",
-   "sha256": "812bc24ac901b8bbdd0a564a62c31b324a2dc654439442a0f93297704d4508e2",
+   "sha256": "5790e214e0e2287243e5b540d08abedc486d46c89a854da833186b602bf0b70f",
    "status": "tested",
    "terms": []
   },
@@ -12524,14 +12538,14 @@
    "terms": []
   },
   "docs": {
-   "atoms": 53,
+   "atoms": 54,
    "claims": {
-    "OWN": 53
+    "OWN": 54
    },
    "id": "module:docs",
-   "root": "6cad1396d8365eba0365a5025b0236e2b0ac8e67ac7a96d0a38ab4bab5f470f1",
+   "root": "4303415799f6c22fd2744a70e00866db94f661cc98eedd3acc9975b720eb19f7",
    "status": {
-    "built": 53
+    "built": 54
    },
    "terms": []
   },
@@ -12582,7 +12596,7 @@
     "OWN": 35
    },
    "id": "module:mvp-site",
-   "root": "59e133f368c39a2f732727f8bd3c78fa54390649bc58895c13e7bb388374d0fc",
+   "root": "de558a213a8940be047c56c9cd35f263f6e89339222daf149219f021a3f1031d",
    "status": {
     "built": 35
    },
@@ -12648,7 +12662,7 @@
     "OWN": 41
    },
    "id": "module:tests",
-   "root": "2383109e094494ec6e6f0bdeb57350e684274ef69eca1db805533423b732a943",
+   "root": "dca1027c43e1a47ca879c02248db550ad766f0c4598214ced978f1aa2073de20",
    "status": {
     "tested": 41
    },
@@ -12668,9 +12682,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "108185abaca759a7c65e42e501b69364e13703e040904fce8475f3eb9f6a0e1e",
+ "root": "30ab94bc54270a4bb38106f0cfd3a5987cef874d5f3faf0aad6c9b0ef03921a0",
  "totals": {
-  "OWN": 814,
+  "OWN": 815,
   "OWN+TERMS": 49,
   "THIRD": 20
  },

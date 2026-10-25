@@ -40,7 +40,7 @@ def build(target: Path, source_ref: str):
     for rel in ["site/lab","site/twin","site/protocols"]:
         d=target/Path(rel).name
         if d.exists(): shutil.rmtree(d)
-        shutil.copytree(REPO/rel,d)
+        shutil.copytree(REPO/rel,d,ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
     # Public protocols are source-verified derived projections, not execution proof.
     import sys
     sys.path.insert(0, str(REPO / "site/protocols"))
