@@ -671,6 +671,314 @@
     "thrips": "3/3",
     "wasp": "0/5"
    }
+  },
+  "SS-PERF-1.6": {
+   "shape": "circle",
+   "realisation": "metal",
+   "inscribed_d_mm": 1.6,
+   "max_width_mm": 1.6,
+   "passes_any": 13,
+   "pass_flat": 5,
+   "pass_tumbled": 1,
+   "end_on_only": 7,
+   "retained": 78,
+   "flat_cut_body_width_mm": 1.15,
+   "cut_over_inscribed": 0.72,
+   "pass_rate_by_plan": {
+    "ant": "2/5",
+    "aphid": "3/4",
+    "bee": "1/25",
+    "beetle_dome": "3/10",
+    "beetle_long": "1/6",
+    "bug": "0/5",
+    "cicada": "0/4",
+    "damselfly": "0/3",
+    "fly": "0/10",
+    "moth": "0/7",
+    "strider": "0/4",
+    "thrips": "3/3",
+    "wasp": "0/5"
+   }
+  },
+  "SS-PERF-2.4": {
+   "shape": "circle",
+   "realisation": "metal",
+   "inscribed_d_mm": 2.4,
+   "max_width_mm": 2.4,
+   "passes_any": 20,
+   "pass_flat": 9,
+   "pass_tumbled": 4,
+   "end_on_only": 7,
+   "retained": 71,
+   "flat_cut_body_width_mm": 1.5,
+   "cut_over_inscribed": 0.62,
+   "pass_rate_by_plan": {
+    "ant": "2/5",
+    "aphid": "4/4",
+    "bee": "3/25",
+    "beetle_dome": "5/10",
+    "beetle_long": "1/6",
+    "bug": "0/5",
+    "cicada": "0/4",
+    "damselfly": "0/3",
+    "fly": "1/10",
+    "moth": "1/7",
+    "strider": "0/4",
+    "thrips": "3/3",
+    "wasp": "0/5"
+   }
+  },
+  "SS-PERF-3.2": {
+   "shape": "circle",
+   "realisation": "metal",
+   "inscribed_d_mm": 3.2,
+   "max_width_mm": 3.2,
+   "passes_any": 22,
+   "pass_flat": 15,
+   "pass_tumbled": 2,
+   "end_on_only": 5,
+   "retained": 69,
+   "flat_cut_body_width_mm": 2.26,
+   "cut_over_inscribed": 0.71,
+   "pass_rate_by_plan": {
+    "ant": "2/5",
+    "aphid": "4/4",
+    "bee": "4/25",
+    "beetle_dome": "6/10",
+    "beetle_long": "1/6",
+    "bug": "0/5",
+    "cicada": "0/4",
+    "damselfly": "0/3",
+    "fly": "1/10",
+    "moth": "1/7",
+    "strider": "0/4",
+    "thrips": "3/3",
+    "wasp": "0/5"
+   }
+  },
+  "SS-PERF-4.8": {
+   "shape": "circle",
+   "realisation": "metal",
+   "inscribed_d_mm": 4.8,
+   "max_width_mm": 4.8,
+   "passes_any": 26,
+   "pass_flat": 19,
+   "pass_tumbled": 4,
+   "end_on_only": 3,
+   "retained": 65,
+   "flat_cut_body_width_mm": 2.8,
+   "cut_over_inscribed": 0.58,
+   "pass_rate_by_plan": {
+    "ant": "4/5",
+    "aphid": "4/4",
+    "bee": "4/25",
+    "beetle_dome": "7/10",
+    "beetle_long": "2/6",
+    "bug": "0/5",
+    "cicada": "0/4",
+    "damselfly": "0/3",
+    "fly": "1/10",
+    "moth": "1/7",
+    "strider": "0/4",
+    "thrips": "3/3",
+    "wasp": "0/5"
+   }
+  },
+  "SS-PERF-6.4": {
+   "shape": "circle",
+   "realisation": "metal",
+   "inscribed_d_mm": 6.4,
+   "max_width_mm": 6.4,
+   "passes_any": 40,
+   "pass_flat": 22,
+   "pass_tumbled": 7,
+   "end_on_only": 11,
+   "retained": 51,
+   "flat_cut_body_width_mm": 3.85,
+   "cut_over_inscribed": 0.6,
+   "pass_rate_by_plan": {
+    "ant": "5/5",
+    "aphid": "4/4",
+    "bee": "9/25",
+    "beetle_dome": "7/10",
+    "beetle_long": "3/6",
+    "bug": "1/5",
+    "cicada": "0/4",
+    "damselfly": "3/3",
+    "fly": "2/10",
+    "moth": "1/7",
+    "strider": "0/4",
+    "thrips": "3/3",
+    "wasp": "2/5"
+   }
+  },
+  "SS-PERF-9.5": {
+   "shape": "circle",
+   "realisation": "metal",
+   "inscribed_d_mm": 9.499,
+   "max_width_mm": 9.499,
+   "passes_any": 53,
+   "pass_flat": 35,
+   "pass_tumbled": 11,
+   "end_on_only": 7,
+   "retained": 38,
+   "flat_cut_body_width_mm": 4.72,
+   "cut_over_inscribed": 0.5,
+   "pass_rate_by_plan": {
+    "ant": "5/5",
+    "aphid": "4/4",
+    "bee": "15/25",
+    "beetle_dome": "9/10",
+    "beetle_long": "4/6",
+    "bug": "2/5",
+    "cicada": "0/4",
+    "damselfly": "3/3",
+    "fly": "3/10",
+    "moth": "2/7",
+    "strider": "0/4",
+    "thrips": "3/3",
+    "wasp": "3/5"
+   }
+  },
+  "SS-SLOT-1.6x12.7": {
+   "shape": "slot",
+   "realisation": "metal",
+   "inscribed_d_mm": 1.6,
+   "max_width_mm": 12.7,
+   "passes_any": 19,
+   "pass_flat": 14,
+   "pass_tumbled": 5,
+   "end_on_only": 0,
+   "retained": 72,
+   "flat_cut_body_width_mm": 1.57,
+   "cut_over_inscribed": 0.98,
+   "pass_rate_by_plan": {
+    "ant": "2/5",
+    "aphid": "4/4",
+    "bee": "3/25",
+    "beetle_dome": "5/10",
+    "beetle_long": "1/6",
+    "bug": "0/5",
+    "cicada": "0/4",
+    "damselfly": "0/3",
+    "fly": "0/10",
+    "moth": "1/7",
+    "strider": "0/4",
+    "thrips": "3/3",
+    "wasp": "0/5"
+   }
+  },
+  "SS-SLOT-3.2x19": {
+   "shape": "slot",
+   "realisation": "metal",
+   "inscribed_d_mm": 3.2,
+   "max_width_mm": 19.05,
+   "passes_any": 46,
+   "pass_flat": 22,
+   "pass_tumbled": 20,
+   "end_on_only": 4,
+   "retained": 45,
+   "flat_cut_body_width_mm": 2.8,
+   "cut_over_inscribed": 0.87,
+   "pass_rate_by_plan": {
+    "ant": "5/5",
+    "aphid": "4/4",
+    "bee": "8/25",
+    "beetle_dome": "7/10",
+    "beetle_long": "4/6",
+    "bug": "3/5",
+    "cicada": "0/4",
+    "damselfly": "3/3",
+    "fly": "3/10",
+    "moth": "3/7",
+    "strider": "2/4",
+    "thrips": "3/3",
+    "wasp": "1/5"
+   }
+  },
+  "SS-SLOT-4.8x19": {
+   "shape": "slot",
+   "realisation": "metal",
+   "inscribed_d_mm": 4.8,
+   "max_width_mm": 19.05,
+   "passes_any": 62,
+   "pass_flat": 30,
+   "pass_tumbled": 29,
+   "end_on_only": 3,
+   "retained": 29,
+   "flat_cut_body_width_mm": 3.85,
+   "cut_over_inscribed": 0.8,
+   "pass_rate_by_plan": {
+    "ant": "5/5",
+    "aphid": "4/4",
+    "bee": "13/25",
+    "beetle_dome": "10/10",
+    "beetle_long": "6/6",
+    "bug": "5/5",
+    "cicada": "0/4",
+    "damselfly": "3/3",
+    "fly": "5/10",
+    "moth": "3/7",
+    "strider": "2/4",
+    "thrips": "3/3",
+    "wasp": "3/5"
+   }
+  },
+  "SS-MESH-1.0": {
+   "shape": "square",
+   "realisation": "metal",
+   "inscribed_d_mm": 1.0,
+   "max_width_mm": 1.0,
+   "passes_any": 7,
+   "pass_flat": 0,
+   "pass_tumbled": 2,
+   "end_on_only": 5,
+   "retained": 84,
+   "flat_cut_body_width_mm": null,
+   "cut_over_inscribed": null,
+   "pass_rate_by_plan": {
+    "ant": "1/5",
+    "aphid": "1/4",
+    "bee": "0/25",
+    "beetle_dome": "1/10",
+    "beetle_long": "1/6",
+    "bug": "0/5",
+    "cicada": "0/4",
+    "damselfly": "0/3",
+    "fly": "0/10",
+    "moth": "0/7",
+    "strider": "0/4",
+    "thrips": "3/3",
+    "wasp": "0/5"
+   }
+  },
+  "SS-MESH-2.0": {
+   "shape": "square",
+   "realisation": "metal",
+   "inscribed_d_mm": 2.0,
+   "max_width_mm": 2.0,
+   "passes_any": 19,
+   "pass_flat": 9,
+   "pass_tumbled": 3,
+   "end_on_only": 7,
+   "retained": 72,
+   "flat_cut_body_width_mm": 1.15,
+   "cut_over_inscribed": 0.57,
+   "pass_rate_by_plan": {
+    "ant": "2/5",
+    "aphid": "4/4",
+    "bee": "3/25",
+    "beetle_dome": "5/10",
+    "beetle_long": "1/6",
+    "bug": "0/5",
+    "cicada": "0/4",
+    "damselfly": "0/3",
+    "fly": "0/10",
+    "moth": "1/7",
+    "strider": "0/4",
+    "thrips": "3/3",
+    "wasp": "0/5"
+   }
   }
  },
  "lopo": {
@@ -794,17 +1102,72 @@
     "k": 0.6,
     "accuracy": 0.945,
     "errors": 5
+   },
+   "SS-PERF-1.6": {
+    "k": 0.6,
+    "accuracy": 0.934,
+    "errors": 6
+   },
+   "SS-PERF-2.4": {
+    "k": 0.6,
+    "accuracy": 0.912,
+    "errors": 8
+   },
+   "SS-PERF-3.2": {
+    "k": 0.6,
+    "accuracy": 0.923,
+    "errors": 7
+   },
+   "SS-PERF-4.8": {
+    "k": 0.6,
+    "accuracy": 0.857,
+    "errors": 13
+   },
+   "SS-PERF-6.4": {
+    "k": 0.6,
+    "accuracy": 0.934,
+    "errors": 6
+   },
+   "SS-PERF-9.5": {
+    "k": 0.6,
+    "accuracy": 0.813,
+    "errors": 17
+   },
+   "SS-SLOT-1.6x12.7": {
+    "k": 0.6,
+    "accuracy": 0.868,
+    "errors": 12
+   },
+   "SS-SLOT-3.2x19": {
+    "k": 0.6,
+    "accuracy": 0.725,
+    "errors": 25
+   },
+   "SS-SLOT-4.8x19": {
+    "k": 0.6,
+    "accuracy": 0.725,
+    "errors": 25
+   },
+   "SS-MESH-1.0": {
+    "k": 0.6,
+    "accuracy": 0.923,
+    "errors": 7
+   },
+   "SS-MESH-2.0": {
+    "k": 0.6,
+    "accuracy": 0.901,
+    "errors": 9
    }
   },
-  "overall": 0.892,
+  "overall": 0.883,
   "shape_matters_most": [
    "SLOT-3/16x5/8",
+   "SS-SLOT-3.2x19",
+   "SS-SLOT-4.8x19",
    "SLOT-1/8x1/2",
    "RND-3/8",
-   "RND-1/2",
-   "RND-5/8",
-   "RND-3/16"
+   "SS-PERF-9.5"
   ]
  },
- "passage_root": "f11805b3698313b2d165543c3f4198b2f79759d995a36e9b6202117b6cf09a66"
+ "passage_root": "2831151dd0f602d86aec7e2c0ed2231e7562813fdb0f7b5ad58ea430e06f18aa"
 }
