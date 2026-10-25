@@ -1,0 +1,3513 @@
+{
+ "root": "0b8f707fa706c6196386cb7903c548736769698deaf5333ec410839579d48a6c",
+ "counts": {
+  "amendment": 2,
+  "consensus": 4,
+  "custody": 20,
+  "datasets_root": 1,
+  "evaluation": 52,
+  "execution": 1,
+  "ledger": 9,
+  "recipe": 18,
+  "toy": 91,
+  "truth": 1
+ },
+ "nodes": [
+  "actor:13cfc75acdf4df598387ed41b7f3d3829ea0a8db53c4421bb276e78abd4ea7f1",
+  "actor:14c4952f7a2139727d10cbbaf54a69396c95476807ebddaa69fc2f3bd4dddba1",
+  "actor:1797b1a3d3d97c8eaa7f55a69651d19c73e4850cfa0bef44565216db953388b4",
+  "actor:2f10deda7505cf39d64160073d79f9f9f1755dd4cc363af6488dfa0d8f5aea49",
+  "actor:4a2d934a0f14a9f7a25f37f094c6b58d7986f8e1f230db93dea11a5a2fb6c2c5",
+  "actor:650f2aa20bd27e4f61e3f8cbbbf7bb3fcfc66a6bf4654fc0cc9eca65cbbd681f",
+  "actor:6bc98f404ad4320d2faee7e9b09a9af7b286b2d0cd5f51d8e04a32cefeaf4ae6",
+  "actor:7c50fa16491946a365761a73cfc40cab259d44e65ded50c8701d774147722775",
+  "actor:8fb7ed428a1874a132d32d03ab133f417d740fd9c4667d03f0f8d0860f59343d",
+  "actor:a1bad2caceab6b56cb6d5a0202d450bace7bdc96e27566a5c74f7764f5ada6bc",
+  "actor:be7e1de88e6bda60c992adfdf2e5b377f5a8194324fdda29dc5bd5936e1cc2d7",
+  "actor:cc5ca3c6d09c8e82f9a7777503583460a371d354def1cb108caa367de0cd2eac",
+  "actor:f5f2e160c1fb89288d065e0a170788c0e0721025969550ca8ffc00fbb598c269",
+  "actor:fd41bb36fc80c219968bb951c5d0315f70de61bdd14715a8d5211f29076eae01",
+  "att:0aba6e8fe9100163078695e23eced6059026b886376201fabe8250fdc5c7020c",
+  "att:0c00f733ae4296317fd57a4f8849fed33e3cb672fa33206260e5d96ac92e8d6b",
+  "att:0c4a1ebfe3e3571ecdb669bd4a1944a7af14a1b65540fc78afa608ca2ac6c376",
+  "att:0ce4b782bf537b651b1d041c5bdb9da77a7e6bf9ea2acd4a3a52635a58352a03",
+  "att:126cb5e6f3a3d98d3635ab5837f9a92bc18e591143e4509124a1c23eb48950b5",
+  "att:1393bb6cf66eb31e071d24f445d0f2a2e582c070652a45aa82c8a01504c46f0a",
+  "att:150380deb30533336d5d56a65381eb94fcbcea46d0c30e1ec9af07c05189b516",
+  "att:15dfc79aafd21149b1e069af7d013b62ed0d1e84675e704d87e3c033512a1060",
+  "att:17503828b7999db0c431fb1c46035311168da259d7f37e29a29835d1081effb6",
+  "att:19ac3a655a4881b6da5ae518571493fffedadbe7180d4ccdef992340771a2d55",
+  "att:1baadf22e645217375001e6fa5389826eea86c5edf2031dfdd1078252dfe27cc",
+  "att:1c4bb11801b294e2da2418c882e5de11f240a533a0bb5e1780d844bb38a96bc6",
+  "att:1c5cf44c281ecb177011a6dd1ba5d3e2f1d9fe1ee8dde065a745d842d37f252d",
+  "att:1f54945a5830d8ddc379d144b6c6e64e3d16e69eb2688d7e8c5220aad883fbbc",
+  "att:329acc065efa6789ce9c43a7e73746cdcda6b72b749618e4a368c5590e85d0db",
+  "att:3581dcab26bb6074a0512c179a52593b486094f1786dd5892a5b1eb867f9a49c",
+  "att:381d758a8d7929f4dc66ae6cebe6dade1bdca44b957005e7989e3aa9fadc730e",
+  "att:3b74eaa8bb5aadd81bf8d318addab9ed0a0a8fdd1e65870eeb7bdbb3e55163eb",
+  "att:3d454b72c0fab83e79651d9399e32c3ce381633e3d8a7fa4e7fecf5c5c29aa2a",
+  "att:41b314d3a3cbdb6d628ba000b0ad559b21e3aac70368f1d0dfda781bcb4c15c4",
+  "att:4ace3050960978b87807f81ab93a240f4771dacdc363760cf2e71c718ab57ce5",
+  "att:4cbec86d5585fc5103040a0db0c5368d4be98356cda412121570be00098ada49",
+  "att:58eb8ef34e03b1d3a0485772eef93d8c9a2a6420f03060d8948a1e0485a47173",
+  "att:5a1608f976c7f078254803090762ae9c564ac32429a307d3aa18d715376b0ec0",
+  "att:5ea857030de20afee86fa8f0f0696cf28010af5a8c794fe5ed54fd6dbc549efa",
+  "att:60ead17fb6e41a9ffe78e85f03f9f0127728d8422f50f9c4bdca285961c702ac",
+  "att:73ac53aaf499b27dad528c2fcc59b98d3dabc3ced58330ae85ff3c28fa7d3c65",
+  "att:810abc38fe63bec71b95fb11b3ddc2d4fa2922ca5110a2fa6a265203efd4cc61",
+  "att:82908accebafcede754d86ee273893dbd49d110de5ca3f672a7a5fe1b719a567",
+  "att:8b5e92325bb9648e3549f82553a76386a2f97a0fa5d2633eea4547dbd177ef60",
+  "att:8e57e8dbca3b8770ad943b05a8c8403c7f9c79f5191dbb5d392c88bdbf55fe82",
+  "att:987f3cb1ba98c94232f40022f5cda0a51f5b8969333c4933611735e49cd26d07",
+  "att:9cdb7f6e349a71b31c7685a5e3d84b6a5c73a7227862f5a2b8e8cc9e20f18058",
+  "att:a01de284b51308574d5751701ef09f591075710f9329f1da0bd81a32ff00e897",
+  "att:a50d9b8fb361c905ca8b2c2ca51310390ebb75427b8067ad42aed3d01aeefe44",
+  "att:a67f430a63faa90117e3e8920d858ba5897e2a70371d3cbf893b1cb9078e7a00",
+  "att:a8c3d0dc867fd753d3807d09442f62f1bba6764a9cd4cd1722f24cfe9d0c2331",
+  "att:af0c2001ce1168554714c1a765f53de9255f046bb3ea10dc158ed34a65fc58fe",
+  "att:af38e2eb922d523d0601b3b19b06fa7488c02c23a6fe3088eadf82d65f68e408",
+  "att:b2407324019e9997d7e4ea1180ebcfeb10e0b87bfd70b4e5c0ddadffbda7e790",
+  "att:cd0e388708c882199b1aeb2f025e0efebe9e38b6eac7037bd698641478fb2524",
+  "att:de74873d02e5227db7ec0d97d37911d13957c598fe31f4f4347c6b0c291fa4e3",
+  "att:e3c939cb209256223a78e9d5fa49c476ea93eca4739744436d87a77a230a0eb4",
+  "att:e817fbb66a4c627d441ea00f029a1d36b3470c5ac107cbc8d7b8ef40168691c4",
+  "att:ead8a93fac170be928e62f706395e98b6b547495567a3b0838a9af8c24e3d6e9",
+  "att:ed01dd9d7c4512f5bae74846a3e062afbb89d58fa3ff648ec3b9bf44159fd34f",
+  "att:f195237519f566b5fef8a85b8e736122b6ab30f7e108ce3065e7686ca664dfd1",
+  "att:f2ce412c30eaf8cb36b105744853b34e54f3011c07cb25bc2609d92fe9913a9c",
+  "att:f308bd1921af64a678da05dd56e7082472b7ea294b2e57601437369b6c9eff8a",
+  "att:f5348930ef3a8e92e482e34811aa80a4f15935e5d47679d06d7e58a267ee2296",
+  "att:f84edc49de32d27e88c803818ef168a5c93a95d8e5f6334322b39a6fd21f654d",
+  "att:f94f0541c1eb301fecdd5bd4f6952330ac4b2a059920034a0e9bcc7622418734",
+  "dataset:dataone_cib_public",
+  "dataset:dataone_cib_raw",
+  "dataset:essig",
+  "dataset:gbif_az",
+  "dataset:gbif_ca_2",
+  "dataset:gbif_manifests",
+  "dataset:gbif_nv",
+  "dataset:gbif_or",
+  "dataset:gbif_specimen_images",
+  "dataset:multires_mp_0.3",
+  "dataset:multires_mp_1",
+  "dataset:multires_mp_3",
+  "dataset:pseudo_specimens_r3_real",
+  "dataset:rejected_pseudo_v1",
+  "dataset:synth_1_30_r2",
+  "dataset:synth_1_30_r3_real",
+  "dataset:synth_seg",
+  "dataset:teacher_check",
+  "dataset:teacher_check2",
+  "dataset:toy_renders",
+  "datasets_root:5a0d1661538f2a9c1338a274f90477cade19ed034bb09b607ee08ec82004bd86",
+  "kgroot:ddbf08d2bf382a2dcf6fcb85afa259122e5ab1a20bb90707df68c5d4104371cc",
+  "ledger:daisy_data",
+  "ledger:filters",
+  "ledger:impact_mmr",
+  "ledger:model_compare",
+  "ledger:print_kg",
+  "ledger:print_kg_lomo",
+  "ledger:r2_synth_1_30",
+  "ledger:r3_real",
+  "ledger:r4_multires",
+  "ledgerroot:339b3f41761f3a89bd65046949d5ac2de5d6659c069faf7a366ba120b8572ebd",
+  "ledgerroot:49116cdd8dbd9919087debb8fd9a1d4f88b4030bda1d11dd9fb723ab559a3058",
+  "ledgerroot:4b55ffa2caebce3d593823d34b9850cfb2c411f03e1a204fae28fb96c711c241",
+  "ledgerroot:738c21df8af7515a6d7a461a86a8f7f0f30469f7ff95706742bac1918381308b",
+  "ledgerroot:a0e3cb5ebbfd191d26260485f3f6c0cb7e08e8c1c26b051b4ee4bdbf60e731c7",
+  "ledgerroot:a2a6aa54d7904161e85ca87287bde38d22254e11787727944a3d94f437490336",
+  "ledgerroot:b0ca959fbbd25aa7120aa3cee80ee79e2e4b007544e9b62e2b1fa0ba8a2559cb",
+  "ledgerroot:c760e15761164c809c4507c7332053cc6d630bde281f38b41aa0e2b00a14cb96",
+  "ledgerroot:ec794e03f18e653bab87cf5389384483159169e6243cfdbb2eb51f6b7c205a20",
+  "mmr:07d12d224ca395acc58af670af8905c6958bfceb1cd5e5aa69852960009c3eae",
+  "mmr:0834c17764cc004c777bcb4ef09dccea02f6a037c14f9be6d7a17bb67b2ab792",
+  "mmr:0e4c644d1f88915b07cee9e633e829c13a17fb552f6a3d9de8f08eb1a82a56e2",
+  "mmr:0f4793c4f292de9b946d4165a8ada9e234ab8fb3eff3a274f67c4c7d8d987c02",
+  "mmr:102d3f513610ee878f50f48c707f31407426e68b2d7b8278aa62e307fc0d6d20",
+  "mmr:12823ac4cf40b3bdf61cd9880ae5648ba6e2a57afb026cbe7c99ce903d3f4581",
+  "mmr:128fbb4ffa0ce66ad4e12c3c92d0b45131e5ef657cb4276eff0577436f34fc4f",
+  "mmr:14be2063741b77ad3b42de8ab25a3e22af9593fecf88018532b50f9afe1510a8",
+  "mmr:1765ebaeeab64fd1cd46faf0748a9a1b7120ce7b1dd56aabe33fc72ee9aec8e6",
+  "mmr:192cfd2b5df892d87c30246d4c93a18f6ef40cc72457c71f24416a59f7fc43b1",
+  "mmr:1b7aeba89148999e9005102390f84850cfa8a0a95de4e503a5d34388335de884",
+  "mmr:1c705584f9ecc68eb9728598ac0f7d194818cfba1c21fe29d950f2e2ce9cd802",
+  "mmr:1fa11e904d9115527dade1c60540a9335aaa94450cb2a41381ad8d34fed03076",
+  "mmr:21d09e9db9986be078baf1e2699223f50c88813082ecc3c8cc23a4602b0dd80b",
+  "mmr:29815100f41f1c1fe72e6d1f8222c3143ff0b70c6948420b5becd40edec68c3d",
+  "mmr:2f07328dda77fec31b612032280f582990c0112d22f807299b7245efdd257b71",
+  "mmr:4372d8466c2c7cb507b7d935f62ba7737fa3dd210cdd3d64b1056888d0b9c25d",
+  "mmr:49d475ff748cd2ae6e0e1c07152cd282fc57ece1581404a72bf9ac1f0757e559",
+  "mmr:4c2c93c6b96931e680e7cc9f86d78a7d7f597e552bc91fc1a25b27f4ac911a27",
+  "mmr:56675deef95469079aafe334c1e09798a3d1b822a2c5d89c87803eb01c3e7677",
+  "mmr:582a102fbc3082d854ca39e12d83af6e888706759a62f3dfc66a31f2dea1c631",
+  "mmr:5b96cdc5fdff18c14b465b4d89895166d8c9b2efcd54ac881c8fc5d7acc658d0",
+  "mmr:65f38d135624993352dd5bb9e1896339d4acfd56d00f3a1069f895a392704318",
+  "mmr:70882750f2cdc74b036ea023825ecc7c1da1edbb9007c87fcebb8bf2f66752b5",
+  "mmr:719992e4cc93b8931fef6ec8c5de0ba25f6bb59401ad38bcd3c941464aca86a6",
+  "mmr:75f9fbc9b34f77dd748476225bb8f4059b37058b4ccee4a98ca9ee38eaf8fb78",
+  "mmr:76cbca2240bd488d8fb29db227433c546c2aa7d49dda70367b1c8f1c8b6b396d",
+  "mmr:801f173a6c31faa63c71e461ec7f11ee872a495899f50aa94e99c2b15709bb92",
+  "mmr:8396d267281cc8c095a1554e9f701c2ebb7b8a42b5e7204c7780b75d076137c7",
+  "mmr:871c5b5c941aed64ffd0083db92505372a0a64a94e48297e7148a90e61e921ad",
+  "mmr:90e6bf37ef0ef08a90c07faab80b1bb5349c1f26d781dff9da12a747a59e7a11",
+  "mmr:94480c1cc767787c5ac405d7585382e1bf3f76a8e916f52025a3b9f99eb225ba",
+  "mmr:96908439e886675e559d3e99414e85f4d88b249865c626193e4d7174feb48d6e",
+  "mmr:9ba0c8ec000608572d3231480e0b787ca664e9be970d53c2dc8a7efd33e95529",
+  "mmr:a61c406e2f1c35e9b0d05351fbcee83a20148cd958c2111591bbf3041df78adb",
+  "mmr:a88130163d54bdf85e97197d5054d299718cbaa8a8adba38d9996b5acb651143",
+  "mmr:a8e2b896c8e3c50ad7134e694d6101bb7baafef50ba273f10b5f6f198438245f",
+  "mmr:a9eddf9344083d2d7f8642cba6682386638f6a94d89e2b2d2b3a2e069e20cfbb",
+  "mmr:ace999e5beaf5923612f1a4d139aefe6cc424e7508e47066d9284bcaaa9346af",
+  "mmr:b04e6ab1113054e2ab82d183c486fa5bc408610b74875715d91f3f39bb1b7c48",
+  "mmr:b3dac1ff908a4a0371f82d1026e27a78b3f7307d3970e089d9821a3dc91d5b55",
+  "mmr:b7a0b185b7cb5a2aa305613fd15633c01c9262a15146d1de52d05b90b643d7e2",
+  "mmr:ba48d572ec9e9e93a2d9550eb07464ae74a1d9113625f9324b967bba49d3ede4",
+  "mmr:da140347f36ab2de4d2230f4ada4ce01a67d80dddcffa04396e9729f849c9022",
+  "mmr:dc6ab50edbb812f0432ddfe03f0045a8161c5747ceb803e43df077a4224c6aaf",
+  "mmr:de195d4fba656999911b84cd3f8fec861dd8dac37dad84af729948c81fbb0c52",
+  "mmr:e35d4ce374201d841165d904276d067a01daeff76c6eb4923be51d614df6c490",
+  "mmr:e53a38fd342002dbcd598a2dbac53003b88d2a7851365acbfbe63e0b5c15746f",
+  "mmr:e5e764d8c2c005d127ce2783b7580b0c7aeba0047bd9e1a3e2347db0453b5d7b",
+  "mmr:e62feee3347124df7353207f7b4c216abbf08715a4b4acd36f1284f2d9d692e1",
+  "mmr:ecfb1d5dc4744eca0a816857c0eacfb048ceb08c2423ff7938b38c8716000844",
+  "mmr:efc46daa60d8d9f3e7107ae3f126deb3879cf4345570470439b1e04b3d84d990",
+  "mmr:f151b713eb9f9235e5e29fa0daf208f19cf78ab78d922b2d3b032bf2dc1ccd52",
+  "mmr:f15f5a2645e55c47644df477b9df7927137fa7ac4262dbe856dabe0efebdd973",
+  "mmr:f21aa7b26203ae123423672da677bdd19b07002494a08e39f8574d8cb5dfa2b3",
+  "mmr:f7e50e58f04d80783dd11a40154a13ee99fe254080cc0f27d78e5706d54b4e18",
+  "mmr:f9f3364c1c52c30bd95b2a6f8d19d180dcb0b5c81c269dd54fc4f62826961783",
+  "name:Andrenidae_Andrena_prunorum_novel_20.1mm",
+  "name:Andrenidae_Perdita_sp_novel_3.6mm",
+  "name:Andrenidae_mean+1SD_11.7mm",
+  "name:Andrenidae_mean+2SD_13.6mm",
+  "name:Andrenidae_mean-1SD_7.9mm",
+  "name:Andrenidae_mean-2SD_6.0mm",
+  "name:Andrenidae_mean_9.8mm",
+  "name:Apidae_Bombus_mixtus_novel_28.2mm",
+  "name:Apidae_Xylocopa_tabaniformis_orpifex_novel_29.1mm",
+  "name:Apidae_mean+1SD_17.1mm",
+  "name:Apidae_mean+2SD_20.7mm",
+  "name:Apidae_mean-1SD_9.9mm",
+  "name:Apidae_mean-2SD_6.3mm",
+  "name:Apidae_mean_13.5mm",
+  "name:Bombyliidae_mean+1SD_18.2mm",
+  "name:Bombyliidae_mean+2SD_21.4mm",
+  "name:Bombyliidae_mean-1SD_11.8mm",
+  "name:Bombyliidae_mean-2SD_8.6mm",
+  "name:Bombyliidae_mean_15.0mm",
+  "name:Cicadidae_mean+1SD_28.8mm",
+  "name:Cicadidae_mean-1SD_22.2mm",
+  "name:Cicadidae_mean-2SD_18.9mm",
+  "name:Cicadidae_mean_25.5mm",
+  "name:Coccinellidae_mean+1SD_7.6mm",
+  "name:Coccinellidae_mean+2SD_8.9mm",
+  "name:Coccinellidae_mean-1SD_5.0mm",
+  "name:Coccinellidae_mean-2SD_3.7mm",
+  "name:Coccinellidae_mean_6.3mm",
+  "name:Coenagrionidae_novel_22.9mm",
+  "name:Coenagrionidae_novel_26.4mm",
+  "name:Coenagrionidae_novel_29.9mm",
+  "name:Colletidae_Ptiloglossa_arizonensis_novel_16.2mm",
+  "name:Elachistidae_novel_10.1mm",
+  "name:Elachistidae_novel_6.7mm",
+  "name:Elachistidae_novel_8.4mm",
+  "name:Formicidae_mean+1SD_9.1mm",
+  "name:Formicidae_mean+2SD_11.3mm",
+  "name:Formicidae_mean-1SD_4.7mm",
+  "name:Formicidae_mean-2SD_2.5mm",
+  "name:Formicidae_mean_6.9mm",
+  "name:Gerridae_mean+1SD_26.4mm",
+  "name:Gerridae_mean-1SD_16.2mm",
+  "name:Gerridae_mean-2SD_11.1mm",
+  "name:Gerridae_mean_21.3mm",
+  "name:Halictidae_mean+1SD_13.4mm",
+  "name:Halictidae_mean+2SD_16.9mm",
+  "name:Halictidae_mean-1SD_6.4mm",
+  "name:Halictidae_mean-2SD_2.9mm",
+  "name:Halictidae_mean_9.9mm",
+  "name:Hesperiidae_mean+1SD_28.4mm",
+  "name:Hesperiidae_mean-1SD_20.4mm",
+  "name:Hesperiidae_mean-2SD_16.4mm",
+  "name:Hesperiidae_mean_24.4mm",
+  "name:Largidae_mean+1SD_15.7mm",
+  "name:Largidae_mean+2SD_18.4mm",
+  "name:Largidae_mean-1SD_10.3mm",
+  "name:Largidae_mean-2SD_7.6mm",
+  "name:Largidae_mean_13.0mm",
+  "name:Melittidae_mean+1SD_9.6mm",
+  "name:Melittidae_mean+2SD_11.5mm",
+  "name:Melittidae_mean-1SD_5.8mm",
+  "name:Melittidae_mean-2SD_3.9mm",
+  "name:Melittidae_mean_7.7mm",
+  "name:Meloidae_Epicauta_fortis_novel_2.1mm",
+  "name:Meloidae_mean+1SD_14.0mm",
+  "name:Meloidae_mean+2SD_16.6mm",
+  "name:Meloidae_mean-1SD_8.8mm",
+  "name:Meloidae_mean-2SD_6.2mm",
+  "name:Meloidae_mean_11.4mm",
+  "name:Syrphidae_mean+1SD_13.5mm",
+  "name:Syrphidae_mean+2SD_16.3mm",
+  "name:Syrphidae_mean-1SD_7.9mm",
+  "name:Syrphidae_mean-2SD_5.1mm",
+  "name:Syrphidae_mean_10.7mm",
+  "name:Vespidae_mean+1SD_15.7mm",
+  "name:Vespidae_mean+2SD_18.2mm",
+  "name:Vespidae_mean-1SD_10.7mm",
+  "name:Vespidae_mean-2SD_8.2mm",
+  "name:Vespidae_mean_13.2mm",
+  "name:aphid_like_fill_1.5mm",
+  "name:aphid_like_fill_2.0mm",
+  "name:aphid_like_fill_2.5mm",
+  "name:aphid_like_fill_3.0mm",
+  "name:small_beetle_fill_1.0mm",
+  "name:small_beetle_fill_1.5mm",
+  "name:small_beetle_fill_2.0mm",
+  "name:small_beetle_fill_2.5mm",
+  "name:small_beetle_fill_3.0mm",
+  "name:thrips_like_fill_1.0mm",
+  "name:thrips_like_fill_1.5mm",
+  "name:thrips_like_fill_2.0mm",
+  "protocol:DAISY-BB-001",
+  "protocol:DAISY-BB-001a",
+  "protocol:DAISY-BB-001b",
+  "root:1c85db2be4b8c4a4bb1bc839cdf290e73ff77e1ba11bb768516724669008d099",
+  "root:29d56fff44ce9be3b6ea7a9faec7394cd69d3f0bcbcfc327436b38bbf769f580",
+  "root:3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+  "root:5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+  "root:5ac2e7502057bfbbd44345603a5e525359e8698425e1e143124f58809cd6db5e",
+  "root:5fc4d500bc9230714334d74c44d26be53cd340ef28bdd7e4a651862b995304ec",
+  "root:783dbb2b900000183b05db623e8a72d114f5723f656fa34b5c099221e1214a19",
+  "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+  "root:8479d035cdebbcfaa0e4768d53f64a8f38879c6d78eff5b98b764f5c77a8fc1a",
+  "root:87c3cf5c26fe6098a07093ee5421ca62302958ad035219c3157b289f166907c9",
+  "root:8acf57fbccce49ba60246ea06b0e3dd49cb04267381a4eb435e02af33be99978",
+  "root:9470d0a7190a82c0208d36fe36381d6cde79bca201d9d359feaefc14f188deb3",
+  "root:9630bed9295ce2ade54c9e25bfa8c0d0df6b4b8dfc0f6c8d3a9fd51925187d8f",
+  "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+  "root:aa3cf75a6c128faa389631ecd6238906a2f4c7888e809ca2b3dae785400198d3",
+  "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+  "root:d95986b041b1fde7e1b215fa0b080b2ef9e0c2c5e6659b8514beb93bca37b541",
+  "root:fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+  "root:fdee02b163cb26dfb7ee6eae76dde64360e0068b41e54c4808dae4583fbebc09",
+  "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+  "run:DAISY-BB-001:A_synth",
+  "run:DAISY-BB-001:B_synth_pseudo",
+  "run:DAISY-BB-001:C_all",
+  "run:DAISY-BB-001:LODO_multires",
+  "run:DAISY-BB-001:LODO_pseudo",
+  "run:DAISY-BB-001:LODO_synth",
+  "run:DAISY-BB-001a:A_synth",
+  "run:DAISY-BB-001a:B_synth_pseudo",
+  "run:DAISY-BB-001a:C_all",
+  "run:DAISY-BB-001a:LODO_multires",
+  "run:DAISY-BB-001a:LODO_pseudo",
+  "run:DAISY-BB-001a:LODO_synth",
+  "run:DAISY-BB-001b:A_synth",
+  "run:DAISY-BB-001b:B_synth_pseudo",
+  "run:DAISY-BB-001b:C_all",
+  "run:DAISY-BB-001b:LODO_multires",
+  "run:DAISY-BB-001b:LODO_pseudo",
+  "run:DAISY-BB-001b:LODO_synth",
+  "toy:0528de3783363a35ab8eeba216f826b3761aa5d5aa9bb6371d3dc9c3819d4f39",
+  "toy:126973096ef5c15bdde34d21b9b0eda2d227eeccc88c92bf0be80e719f32ddb2",
+  "toy:18bd7394a07ea9a236cf4c5a35ee5a931411713c842f0618a1ea37feb2766dfe",
+  "toy:1b566048e0df46e20fc1124d1bc396e8df46967eaa119070fe9b3029e9532e23",
+  "toy:1e7bcf171c9cf4086b7b73b041fb77c696b950cea372a9d4ce845c3ba150e2db",
+  "toy:1fc5ab1b00dd4e0c150b8e3f4bd4b300261fba810af0e184ce6c5487990c72ee",
+  "toy:20f36952256a59ee0586b83fc3220ab1538d236651aadf97a1ab602dc9715751",
+  "toy:2194a5a08bb99a3b9d0f55f9f77789d662e762ad8e9dd88efe233197414b7eb8",
+  "toy:222bc04c5f2e9c38a342727cc466148d4494dbcebd282832b1988141ebfa3a3f",
+  "toy:2305e454c93affba7ac61fe8d1887d8208879bcbfe1091dde1342be5f9b1ce17",
+  "toy:24e495175591ef6da2f90c64408fde8885ccf1dce3aa7a6155c7a01edb95e4f4",
+  "toy:268cbf7aa7df30cc5df280772354b78cc69e659df1e04cfce7a5800c6fc6100d",
+  "toy:2b12671711b65d4da974e9f7d0041f5ac9999047a163fa05c2a8093c8ef89164",
+  "toy:2fed20c98b322b097aca53fc2afe5799db9f5638e640d8c5f28def56995c1dc9",
+  "toy:317a03565e8cad08ad4d0d32f9ec7cbe5bc529db362935ebd33d77213e2af8f7",
+  "toy:32a925cc2bb13f81b090ec90d163d96f4c57e49779ea390eb820686e54794f59",
+  "toy:3f458b69f69ca96765cd9f29cafb5ccac0630c91f6d705b445cbe74b516005d5",
+  "toy:40b3325b0d5edaa6e79cb636dad7696a158a411856f38f2d14da25f55ca3e1b0",
+  "toy:454a1f7113253cf359a492f0d3144535b600aeab8c91078eb21517bcf5b9a452",
+  "toy:47ad69544249fcc62ebd9318e2e141f88b68fe3ec1b55b2f86d7d46467926edf",
+  "toy:48ef829a86a6bc48ca6afcadf5cbdff37384c28b3b5b3c3c69c66a6a00af88be",
+  "toy:49f890f5410538bfff9e26fe9947e46077eabd14973c080a725e6e9d42475fe4",
+  "toy:4a2cd7abff7239bd1f5d989dd7b93230d134ee1cc5d2356fc037462f8bf21496",
+  "toy:4de0fdfd725229bce8353d0817ae03972cd7339eda5b77776c3d242abe756c72",
+  "toy:4edbc9adec453e4dfb8e3853e0be4b19917aca3e4b923dc334ed237fe01901e1",
+  "toy:54e99140bc306542dab8507e838df2945d1ff65365e0138f7c3103c5fba3615f",
+  "toy:582b1778fbb725728656b36bfe488b2abfe9081f6a1760bdd567f25295116c64",
+  "toy:5a48587762b63ae9663798cbe2e8592bb1a24981553a77ae345287b0011d830c",
+  "toy:5bdb77bd9e92a426f17898b6f433751338c33bfa9faf4df56bcac88b28c8a95a",
+  "toy:5cd60fdc17f5e95e72513f84d11759e55fc5df7ca02fc1e17301d76e86b31bb7",
+  "toy:66977b118b45ef1815eb6b01ffb805d23ea1d61ae4882c1f0e617a3cd28c48f6",
+  "toy:6a3787658ccb915ca428a8604178bcd03a5063c137ec7b9ee014c885fff79bcd",
+  "toy:6af5172aad72d65db8320a93327ae2d54764eb6f6d9ae6b3fc81411215e3673d",
+  "toy:6fa4f6df073106af7f53e432f5a9262e946f902b5b5b63d7c90340398d2ad805",
+  "toy:6fe382aee32083add6a35c6cd3b0b2e84756fe1117b68bf47d27ae54d332e05f",
+  "toy:6fe6cf1000d22c70265a0281ac125a0191a57347a13b2614104ab4fa6bd52180",
+  "toy:7945c7959bfddd8f5efb0ca26ef150d4805ac5e4783c6fcd4dcceeed43f80bed",
+  "toy:7b923f9260174389ebfb08e8f957b3a96d7647a363553f5b0311ba120416c614",
+  "toy:7d4a1ca9659d8a219ed7092a3f59a84f2147849d5539fbf560a72b317314b837",
+  "toy:7e7659b2d58597be558555de19b7671a31a77569dce334626989bb87756f4b0d",
+  "toy:7e807fb06973d2b1eaf3fb4b9f78a037e1c2df6c6d36a991d8067ff7718eb52e",
+  "toy:8a5b8ba6f751803b7884d39a50901a17685bd6d75cb37ab6226b49b7d075dc7b",
+  "toy:8c32fc8d986066040e070b357a3b580eedf928e293a15b3d22b5778109987cf3",
+  "toy:8d29b8b961c4c9da6d8e4ec4e40c93b85f3c09878e9d05ad77aed3fefe84d655",
+  "toy:903c15f82a26233e21c0df7d848355f490b9d2e4a1ab1d010f9bd2581da78a38",
+  "toy:906fdcf75843acb1796f716f73984dd3295655a06013a064ce3c3168acfcdb53",
+  "toy:91f91d4919f68a5581f30d41eb76ca43275e4f33cf7d807bae9c74c7cf2d1d20",
+  "toy:96c1c5f565b367e5f34e2d9149c9176cff134456666d2ed10ac985aaa94c7330",
+  "toy:970f498e96d3793e8c0f30b92df98e63b0184d7990ff29f6ec144d370930bc69",
+  "toy:9e04bad1e677fd42633f79a8d2b5ecddce140e2d5c5380197269cda83688ebb0",
+  "toy:9e6313a27c47e66347cd910b879ac4a715c4315bc2fbfd4401a02f6fb9efc857",
+  "toy:a154f42c452126fe3302f34d51457e45c51312f34bb5f1536635e559fdad06b4",
+  "toy:a3f83dc624d6a83244f5b1d2ac1705a1256ac2984f1eae8384dc64e46acd4502",
+  "toy:a87e482fe87bfddab3dc02b16b0309840e904c7d0c257dc58246cac595eff87a",
+  "toy:a896db013496392560df62a1055e707b93d2f2fa6a2326e4a67a4003f49f2cbb",
+  "toy:aef16df31c1717c42d46886a7830d047632ce99d479da4092314f62eb9ea9ddc",
+  "toy:b165975a652ec8cf9adb32e8cfb54481b9e309968cb9a1b156ac405ebdb0f969",
+  "toy:b2a6cc21b08b1dceca93cd29a103b1de5be06b7a10357141228ff6a5d27c6e70",
+  "toy:b6012f571a0a68b31fb812e914c56cde16987928f3c7b168ef2e3c6850b0cfa7",
+  "toy:b65db9afd6b84e02fce0d1930275ba208be7c872fe9cb549c485ae8d53134e2e",
+  "toy:b8265df8edb0f2af7d2114e7ed831dd95fd24c4ec1b46a64d0891641bf8ae0d1",
+  "toy:c0893770ac53e07c336e33d212497887106ef8e39bba9d4a12bbc5ace9eaa64a",
+  "toy:c20e483d8db03656eddf94059df519fa1188a558727dcba298ec323b5e2a8ab0",
+  "toy:c65705125a9782c1b713607086dfd65daea33557232dd2abb32b90c93c42fe55",
+  "toy:cbd508ddafb2db96fac1db1ca85982d47d8603b8a7d395a601b7eb6d763aaa04",
+  "toy:ce8e9e9cbbe2ed5d1a8d029cfd50bbea253d83a9e062336bfca244c7a2dda0fc",
+  "toy:cfb1aa5138b16928db44807d06ad3ebc2d66c30b320936f5b040cf249fa51326",
+  "toy:d40ad5b70e9992680fc7974d04eabcbc1a16deedb0610106e367845771a30555",
+  "toy:d6b8e52f450e1593641c79a8ccfd0a8e916bc79fe82a63e567d9313df5eb304e",
+  "toy:d8d869d8ed6b7f3fb84834396415b5fcfc7f0813ee649d0f10ecf84fa0a2aed4",
+  "toy:dae2144caa291a9a300871a754dce9fe8d9da79ca9e212c7deba99245c8867c2",
+  "toy:dc4dcdc4eb7a38dfffa94875aca8cb00e2786dcbfd9868719ee8731bb6c6d4a9",
+  "toy:df03ff60bfab85f49411814fb855278741f160010aafb2fce4536efae5b4e500",
+  "toy:e1aa655d90883b7fff57dd74dab4b4e3a4ea34bffa5db31b47e525cdf3b21fee",
+  "toy:e229cd580163236d83dd52c0358df19c225f5b6f30d82bf69bf842c0bb795a53",
+  "toy:e5505afe56721831fdd4b0148e391991bd938953c0cdd0536dc49f65ed212969",
+  "toy:ea476ca06dde26b8c0fbbf58b4564aba511922e9720ff7f9d2cbd04a86a22619",
+  "toy:ec0a90c167cbf5783c0c40a1381c705868fbed8cfc457efcc72893daddfe67c0",
+  "toy:ec865592f977c0c166d4c90d3717221ee63804c447d4246462f371e91c2b6b53",
+  "toy:ed9bfcff190b088c3e3536d63797ab229b9d07d934bc77eea59d1dc9ba37c356",
+  "toy:ef5b57113939d082c2b25eb54c190b08233b9fc7b6e76da3d5b58e165097758e",
+  "toy:f0caac72042765e71bc8bae5d34eb50cab1622a779b41feea98032737b95d4df",
+  "toy:f144879311a70cf8d88d65926afbaf1d7847a5ad1f86d81a736bf4a12e1b8bf2",
+  "toy:f2d25231ef9cfb50de4290a540126d879604a9f3376c8b1c59757c6b9e7a64d2",
+  "toy:f51a5df79830cf459be427c3679f0bc12250e5c0f68416c9340d5d54c94f2357",
+  "toy:f7627a51d0059d6cb52c83f9def1d367fb3175fdc7b63ea1c14052c30130f703",
+  "toy:f7d7dcee38793f2acab8921ec4e30903d823e0b7efaaddbfcca7c7f157f9c678",
+  "toy:feaff7bd1e4b902ab9a031656bf68639acaea1bfdafd5b9593a09c60f91b0ba4",
+  "toy:feb4c5a7a2af45e35480a4fe421d730facdfcf8018cec83d268b1d0dce2d617c",
+  "toy:ff0295603199078258e8effae0005d907bdd776f2e9a6468118f1ed8116c2bd9",
+  "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+  "values:exact",
+  "values:plan_only",
+  "values:tol_0.5mm",
+  "values:tol_2mm",
+  "values:toy_triage_v1_calibrated",
+  "values:toy_triage_v1_raw",
+  "weights:08e0f1fac0530a153f2f368ec222230d2af6b7569568a4dc8920ee33f1c5087c",
+  "weights:0bb80386171b7dc620e3bcc8bfa1cbd26f726c9901ab61a27f03379698d9fe66",
+  "weights:1e117b3197cad0304f4bd865c7955b4b797c3aef54ebae3fd0abe6c06bd307ab",
+  "weights:24a6a923d17473bb1db379cac67ef17c8eafe3a58b96a3a936b2e7ba14234a9f",
+  "weights:5f0be481cc7a70ab288b01a110ba34b74a126ad375f98156be363de45e28bad7",
+  "weights:7c736744649376a309b32de66e58e1c9d93d3bff5900b5280a542828cd066dfd",
+  "weights:8b8eef4703a11cc9cae3fccbf34ba7474d406ddbc0dcc42c07593f6ac6e7835c",
+  "weights:a85602a942de98dc76c8757b572782b2ae4f0b061e03e4021bc600ee13ffe84b",
+  "weights:ae625eaa7abb64c647e35708e15c6190582bc4e0e4d306f886f36070694bc4f0",
+  "weights:b4f48fdef83f3b0ef4a8b4b8ab21d57164f7c35e6cea8f269d6b1e0ee4ff0f53",
+  "weights:c2c76e03861c46b2650d19eaf395702d5cab650f981dfd6c829e2daa8c9f28aa",
+  "weights:d596c18421827a42af6e4fe0de4fa2d8b6f33f28367ed6e30cf62532b0ddf843",
+  "weights:dee799d4b2ecd3ed2d501c5891eb7498af9fc33e977e83953a251b049a8b2c97",
+  "weights:f4b74563631c80b5abb355dd01a148e5e2ba4024876e6bd798aa4b96a427d9e9"
+ ],
+ "edges": [
+  {
+   "kind": "datasets_root",
+   "nodes": [
+    "dataset:dataone_cib_public",
+    "dataset:dataone_cib_raw",
+    "dataset:essig",
+    "dataset:gbif_az",
+    "dataset:gbif_ca_2",
+    "dataset:gbif_manifests",
+    "dataset:gbif_nv",
+    "dataset:gbif_or",
+    "dataset:gbif_specimen_images",
+    "dataset:multires_mp_0.3",
+    "dataset:multires_mp_1",
+    "dataset:multires_mp_3",
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:rejected_pseudo_v1",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "dataset:teacher_check",
+    "dataset:teacher_check2",
+    "dataset:toy_renders",
+    "datasets_root:5a0d1661538f2a9c1338a274f90477cade19ed034bb09b607ee08ec82004bd86"
+   ],
+   "data": {
+    "members": 20
+   },
+   "hash": "81abcb94b5f0817b9d981aa877340cacaaf4e28f8cc0dc6bca54112771997c78"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:gbif_ca_2",
+    "root:fdee02b163cb26dfb7ee6eae76dde64360e0068b41e54c4808dae4583fbebc09"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 5885
+   },
+   "hash": "1a4f598f158bae8e18be9d2d0c1dc5c518b87d4736f277816205b5e1fdb31a69"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:gbif_az",
+    "root:1c85db2be4b8c4a4bb1bc839cdf290e73ff77e1ba11bb768516724669008d099"
+   ],
+   "data": {
+    "status": "FAILED",
+    "files": 2642
+   },
+   "hash": "99f8431bf102d54ae132117a10c98faf512eb9447670c0d7906520ace6e9e2fd"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:gbif_nv",
+    "root:783dbb2b900000183b05db623e8a72d114f5723f656fa34b5c099221e1214a19"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 1251
+   },
+   "hash": "da4e285b01dd65fc7287c12181f8387c788befc461d62fdb7239becfc4eaeb73"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:gbif_or",
+    "root:8479d035cdebbcfaa0e4768d53f64a8f38879c6d78eff5b98b764f5c77a8fc1a"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 2932
+   },
+   "hash": "cb8a5f133117d004f2f12c1897e9a70ee3c9180f6f19c26bc9099ab04995df55"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:gbif_specimen_images",
+    "root:87c3cf5c26fe6098a07093ee5421ca62302958ad035219c3157b289f166907c9"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 1912
+   },
+   "hash": "06e5f678580e7fcaf1499e5ae7617e8e8caea1d17234fb20ebd8798968643067"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:gbif_az",
+    "dataset:gbif_ca_2",
+    "dataset:gbif_nv",
+    "dataset:gbif_or",
+    "dataset:gbif_specimen_images",
+    "dataset:pseudo_specimens_r3_real",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 5106
+   },
+   "hash": "fab1b4a5b594af764729202db56a86b64bce25d5c84234361b7ecb4175002df7"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:multires_mp_0.3",
+    "dataset:pseudo_specimens_r3_real",
+    "root:3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 5103
+   },
+   "hash": "e9687226004ab719738fb856e64c7e8e801a30521c537e6db5ae75241ace8ca1"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:multires_mp_1",
+    "dataset:pseudo_specimens_r3_real",
+    "root:fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 5103
+   },
+   "hash": "8dda8dce1a8246c3359b8fd37f9e7d3221150a7ef00fdb20dc92c621e462258f"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:multires_mp_3",
+    "dataset:pseudo_specimens_r3_real",
+    "root:5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 5103
+   },
+   "hash": "7dca064ff609572bad51c1a2e07e9c0f877b61bb9bc3010d2839b5e93334fe16"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:synth_1_30_r2",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 1443
+   },
+   "hash": "2fbfa0e56daa547a93296ab403117386460c12f625e36039b3816fb4319fda71"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:synth_1_30_r3_real",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 1443
+   },
+   "hash": "c5569db972f4db2e02336fb733251fbb0d293b847a7481c8363625bfc2c5f1c6"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:synth_seg",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 723
+   },
+   "hash": "a003fcd783ae366ed7b0d96e265dc914eab129179d8db18dfbd708c2d76b121b"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:gbif_az",
+    "dataset:gbif_ca_2",
+    "dataset:gbif_nv",
+    "dataset:gbif_or",
+    "dataset:gbif_specimen_images",
+    "dataset:teacher_check",
+    "root:aa3cf75a6c128faa389631ecd6238906a2f4c7888e809ca2b3dae785400198d3"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 48
+   },
+   "hash": "f790355d2e020692c646ff2c5ffc82f3db5471e0c5f5ca6e9e5a39ef78aadbf8"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:gbif_az",
+    "dataset:gbif_ca_2",
+    "dataset:gbif_nv",
+    "dataset:gbif_or",
+    "dataset:gbif_specimen_images",
+    "dataset:teacher_check2",
+    "root:5fc4d500bc9230714334d74c44d26be53cd340ef28bdd7e4a651862b995304ec"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 36
+   },
+   "hash": "f1049871ae5fc69cda4ccf3877cca46c6a6e43e975472578bdb40d8718a2535a"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:rejected_pseudo_v1",
+    "root:d95986b041b1fde7e1b215fa0b080b2ef9e0c2c5e6659b8514beb93bca37b541"
+   ],
+   "data": {
+    "status": "REJECTED",
+    "files": 2156
+   },
+   "hash": "f8ed0d4687e9217c5ccca74a455c08cffcecbc935486739dd322a05349df8b94"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:dataone_cib_raw",
+    "root:5ac2e7502057bfbbd44345603a5e525359e8698425e1e143124f58809cd6db5e"
+   ],
+   "data": {
+    "status": "QUARANTINED_PII",
+    "files": 2
+   },
+   "hash": "ca19b7ca5e056cc7a9a2b36f52526708dcaf3b957ff36d411965bbcfea0b4ec3"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:essig",
+    "root:9470d0a7190a82c0208d36fe36381d6cde79bca201d9d359feaefc14f188deb3"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 2
+   },
+   "hash": "88742119b24a31cb1b44449fa66097879ce4a8df22a886976792a03350b6b787"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:dataone_cib_public",
+    "root:29d56fff44ce9be3b6ea7a9faec7394cd69d3f0bcbcfc327436b38bbf769f580"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 3
+   },
+   "hash": "0e4818b583af4cbf59982073258e7d70aaad02394dc22f2a1ec1d835ff1bd4b0"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:toy_renders",
+    "root:9630bed9295ce2ade54c9e25bfa8c0d0df6b4b8dfc0f6c8d3a9fd51925187d8f"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 366
+   },
+   "hash": "1cdfb1aedd16da31e2e291fc631bacbfd381e6160694b9e02ffdaa08030402dd"
+  },
+  {
+   "kind": "custody",
+   "nodes": [
+    "dataset:gbif_manifests",
+    "root:8acf57fbccce49ba60246ea06b0e3dd49cb04267381a4eb435e02af33be99978"
+   ],
+   "data": {
+    "status": "VERIFIED",
+    "files": 5
+   },
+   "hash": "244c1dcb23dd19c8f06caa8add940fbdada152fa16324ef1cc48c5c85266b330"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001:A_synth"
+   ],
+   "data": {
+    "settings": {
+     "batch": 16,
+     "epochs": 15,
+     "imgsz": 640,
+     "model": "yolo11n-seg.pt",
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "148d5b196cf368331e10718c16dac2b71de69b502af275399b249567dd769e01"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001:B_synth_pseudo"
+   ],
+   "data": {
+    "settings": {
+     "batch": 16,
+     "epochs": 15,
+     "imgsz": 640,
+     "model": "yolo11n-seg.pt",
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "17086ef55784abd8c3b6c574f3b0939e15d707c3638e6f3727949080156a8f8b"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:multires_mp_0.3",
+    "dataset:multires_mp_1",
+    "dataset:multires_mp_3",
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001",
+    "root:3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+    "root:5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001:C_all"
+   ],
+   "data": {
+    "settings": {
+     "batch": 16,
+     "epochs": 15,
+     "imgsz": 640,
+     "model": "yolo11n-seg.pt",
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "4b9db3bca51fe25c5f6b3981da85441a21b7bfa5d8e4e92b6b1647f9a0e03b9b"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:multires_mp_0.3",
+    "dataset:multires_mp_1",
+    "dataset:multires_mp_3",
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001",
+    "root:3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+    "root:5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001:LODO_synth"
+   ],
+   "data": {
+    "settings": {
+     "batch": 16,
+     "epochs": 15,
+     "imgsz": 640,
+     "model": "yolo11n-seg.pt",
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "d4bc19ae27f7a44657cc7ec3555f9031ecaeeb759ac77f9992a8305c908e8e98"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:multires_mp_0.3",
+    "dataset:multires_mp_1",
+    "dataset:multires_mp_3",
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001",
+    "root:3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+    "root:5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001:LODO_pseudo"
+   ],
+   "data": {
+    "settings": {
+     "batch": 16,
+     "epochs": 15,
+     "imgsz": 640,
+     "model": "yolo11n-seg.pt",
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "b40c7c5d06dab57bd63574edb220c94d5332e7f49dc4e2221f290c3de6294d95"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:multires_mp_0.3",
+    "dataset:multires_mp_1",
+    "dataset:multires_mp_3",
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001",
+    "root:3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+    "root:5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001:LODO_multires"
+   ],
+   "data": {
+    "settings": {
+     "batch": 16,
+     "epochs": 15,
+     "imgsz": 640,
+     "model": "yolo11n-seg.pt",
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "3185be822584f0aae141771a09fbcbbcc280e668dd5b05fbd73ce14fa0b7b2c7"
+  },
+  {
+   "kind": "amendment",
+   "nodes": [
+    "protocol:DAISY-BB-001",
+    "protocol:DAISY-BB-001a"
+   ],
+   "data": {
+    "reason": "DAISY-BB-001 run A_synth on Kaggle Tesla T4 (torch 2.11.0+cu128, ultralytics 8.4.188, AMP on): NaN losses from epoch 1, aborted after 4 NaN epochs. Same data tr"
+   },
+   "hash": "72b8751201b10e1fa3f014d8dfa2677b301040219b1a5a261160763eb72840fa"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001a",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001a:A_synth"
+   ],
+   "data": {
+    "settings": {
+     "amp": false,
+     "batch": 16,
+     "epochs": 15,
+     "imgsz": 640,
+     "model": "yolo11n-seg.pt",
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "1fd3affff32a673517a1d845e8df7a18628f670e2969ec8289fe6da0bbc1be58"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001a",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001a:B_synth_pseudo"
+   ],
+   "data": {
+    "settings": {
+     "amp": false,
+     "batch": 16,
+     "epochs": 15,
+     "imgsz": 640,
+     "model": "yolo11n-seg.pt",
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "d2c3fb748cab3567e6980eb4c479b082a1d6d3946935ef45f948a2e2af9e1199"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:multires_mp_0.3",
+    "dataset:multires_mp_1",
+    "dataset:multires_mp_3",
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001a",
+    "root:3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+    "root:5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001a:C_all"
+   ],
+   "data": {
+    "settings": {
+     "amp": false,
+     "batch": 16,
+     "epochs": 15,
+     "imgsz": 640,
+     "model": "yolo11n-seg.pt",
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "a350607074525b7fa2be531de396e69366f624bf232395a51faaa567ba1e121a"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:multires_mp_0.3",
+    "dataset:multires_mp_1",
+    "dataset:multires_mp_3",
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001a",
+    "root:3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+    "root:5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001a:LODO_synth"
+   ],
+   "data": {
+    "settings": {
+     "amp": false,
+     "batch": 16,
+     "epochs": 15,
+     "imgsz": 640,
+     "model": "yolo11n-seg.pt",
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "c8e18fcec8c735c5f85936cb5bb690d5b04d6d26a3259e3498240149ef7180df"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:multires_mp_0.3",
+    "dataset:multires_mp_1",
+    "dataset:multires_mp_3",
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001a",
+    "root:3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+    "root:5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001a:LODO_pseudo"
+   ],
+   "data": {
+    "settings": {
+     "amp": false,
+     "batch": 16,
+     "epochs": 15,
+     "imgsz": 640,
+     "model": "yolo11n-seg.pt",
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "d4f23973af322eb34df9defad238409b7d6f2d1326bd61663d85526765d06547"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:multires_mp_0.3",
+    "dataset:multires_mp_1",
+    "dataset:multires_mp_3",
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001a",
+    "root:3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+    "root:5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001a:LODO_multires"
+   ],
+   "data": {
+    "settings": {
+     "amp": false,
+     "batch": 16,
+     "epochs": 15,
+     "imgsz": 640,
+     "model": "yolo11n-seg.pt",
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "c57cbd3598728591ea2765d1379aa0d4421dd55d5bf692c26628c1ec8ea2f073"
+  },
+  {
+   "kind": "amendment",
+   "nodes": [
+    "protocol:DAISY-BB-001a",
+    "protocol:DAISY-BB-001b"
+   ],
+   "data": {
+    "reason": "user decision: steps conditional and hashed as evidence, variance accepted"
+   },
+   "hash": "3a03c56b4c54ad21c4a540236c8619a0fc0a59ec21796254f3b637a69b02052c"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001b",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001b:A_synth"
+   ],
+   "data": {
+    "settings": {
+     "batch": 16,
+     "deterministic": false,
+     "epochs": 15,
+     "imgsz": 640,
+     "init_sha256": "55ed65c56c91713d23e8402371c6c49a6fd84f257f7dce452e8d70e41dcbe152",
+     "model": "yolo11n-seg.pt",
+     "pins": {
+      "ultralytics": "8.4.188"
+     },
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "106817ecfcf54ef7baa4e6ec0d2ac231c95e3b4c9bec18a289c6843f1538c6c4"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001b",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001b:B_synth_pseudo"
+   ],
+   "data": {
+    "settings": {
+     "batch": 16,
+     "deterministic": false,
+     "epochs": 15,
+     "imgsz": 640,
+     "init_sha256": "55ed65c56c91713d23e8402371c6c49a6fd84f257f7dce452e8d70e41dcbe152",
+     "model": "yolo11n-seg.pt",
+     "pins": {
+      "ultralytics": "8.4.188"
+     },
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "2464c9247d1c24bb750912cc513117113ec958a82f5504684b734764d7521825"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:multires_mp_0.3",
+    "dataset:multires_mp_1",
+    "dataset:multires_mp_3",
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001b",
+    "root:3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+    "root:5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001b:C_all"
+   ],
+   "data": {
+    "settings": {
+     "batch": 16,
+     "deterministic": false,
+     "epochs": 15,
+     "imgsz": 640,
+     "init_sha256": "55ed65c56c91713d23e8402371c6c49a6fd84f257f7dce452e8d70e41dcbe152",
+     "model": "yolo11n-seg.pt",
+     "pins": {
+      "ultralytics": "8.4.188"
+     },
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "75b3011e7f4af60366da5701e9f083a4714ca32a3392ee8a7f6cef5c3db65fea"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:multires_mp_0.3",
+    "dataset:multires_mp_1",
+    "dataset:multires_mp_3",
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001b",
+    "root:3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+    "root:5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001b:LODO_synth"
+   ],
+   "data": {
+    "settings": {
+     "batch": 16,
+     "deterministic": false,
+     "epochs": 15,
+     "imgsz": 640,
+     "init_sha256": "55ed65c56c91713d23e8402371c6c49a6fd84f257f7dce452e8d70e41dcbe152",
+     "model": "yolo11n-seg.pt",
+     "pins": {
+      "ultralytics": "8.4.188"
+     },
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "a04fde13a3df57b81618d44a52c13a8d7f129e56b55ddedb9bea8f7147b44802"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:multires_mp_0.3",
+    "dataset:multires_mp_1",
+    "dataset:multires_mp_3",
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001b",
+    "root:3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+    "root:5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001b:LODO_pseudo"
+   ],
+   "data": {
+    "settings": {
+     "batch": 16,
+     "deterministic": false,
+     "epochs": 15,
+     "imgsz": 640,
+     "init_sha256": "55ed65c56c91713d23e8402371c6c49a6fd84f257f7dce452e8d70e41dcbe152",
+     "model": "yolo11n-seg.pt",
+     "pins": {
+      "ultralytics": "8.4.188"
+     },
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "ed45f1648348b38f083761c58e5eddfd0589ba8c15b57e840da0feac1b8ef501"
+  },
+  {
+   "kind": "recipe",
+   "nodes": [
+    "dataset:multires_mp_0.3",
+    "dataset:multires_mp_1",
+    "dataset:multires_mp_3",
+    "dataset:pseudo_specimens_r3_real",
+    "dataset:synth_1_30_r2",
+    "dataset:synth_1_30_r3_real",
+    "dataset:synth_seg",
+    "protocol:DAISY-BB-001b",
+    "root:3a6e4252bf7a05d3096632b560919969d5c79a78add7e7ecf3efe844c46a5086",
+    "root:5315e394a516180618884f3f0513bc5f5129584c0068c17285b68fce751cbacb",
+    "root:7962a34d52350dabc33b6ffe816429ac4d69d139a0b445d5dba0ff172c605e3f",
+    "root:a6f8baef46c478cbfdd89b3a5e086eed53b3388bef484b15ff814565599c3676",
+    "root:bd664a429df494323232b73aaa0312d0e4567e2064e457cb29e50236e9c2fd29",
+    "root:fb675accb1407c1486a170456095ea60da27ccf3f56a2f740885903a6cd241b0",
+    "root:fe8cf5e95f3e7dc91ecdeb8b7f69841f8640205b1abff1884add362db2b6af51",
+    "run:DAISY-BB-001b:LODO_multires"
+   ],
+   "data": {
+    "settings": {
+     "batch": 16,
+     "deterministic": false,
+     "epochs": 15,
+     "imgsz": 640,
+     "init_sha256": "55ed65c56c91713d23e8402371c6c49a6fd84f257f7dce452e8d70e41dcbe152",
+     "model": "yolo11n-seg.pt",
+     "pins": {
+      "ultralytics": "8.4.188"
+     },
+     "seed": 2026,
+     "ultralytics": "8.4.188"
+    }
+   },
+   "hash": "ed0cea34f42204471c0856eeec16e04d5a11428334e089c12ffc4cfac16b0145"
+  },
+  {
+   "kind": "truth",
+   "nodes": [
+    "datasets_root:5a0d1661538f2a9c1338a274f90477cade19ed034bb09b607ee08ec82004bd86",
+    "kgroot:ddbf08d2bf382a2dcf6fcb85afa259122e5ab1a20bb90707df68c5d4104371cc",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {},
+   "hash": "93391532d9842af3c9618581a990726fe57f2471c87025a0a577cd01028c6341"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Coccinellidae_mean-2SD_3.7mm",
+    "toy:ed9bfcff190b088c3e3536d63797ab229b9d07d934bc77eea59d1dc9ba37c356",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_dome"
+   },
+   "hash": "f26e3804a9d14d742623027c43e61656c9d504bcd43986483c13ff5589d2bd21"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Coccinellidae_mean-1SD_5.0mm",
+    "toy:f7d7dcee38793f2acab8921ec4e30903d823e0b7efaaddbfcca7c7f157f9c678",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_dome"
+   },
+   "hash": "680a71c930556db11b3ee8184584fb0108a75a2723a68fc29690304d8e680198"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Coccinellidae_mean_6.3mm",
+    "toy:b8265df8edb0f2af7d2114e7ed831dd95fd24c4ec1b46a64d0891641bf8ae0d1",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_dome"
+   },
+   "hash": "6525264e34af6b11fbc772007cc951189d4447319b703642880f86f63a988e11"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Coccinellidae_mean+1SD_7.6mm",
+    "toy:ce8e9e9cbbe2ed5d1a8d029cfd50bbea253d83a9e062336bfca244c7a2dda0fc",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_dome"
+   },
+   "hash": "7ebc7dde125bc95b3167e5e8d97a9d211a34b71d01dc9988dda28bbf24529889"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Coccinellidae_mean+2SD_8.9mm",
+    "toy:f51a5df79830cf459be427c3679f0bc12250e5c0f68416c9340d5d54c94f2357",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_dome"
+   },
+   "hash": "e29811e4bbd304ec29de48fc88460cf8ca1967ee26bb0c2c0c060be2a471574e"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Formicidae_mean-2SD_2.5mm",
+    "toy:5a48587762b63ae9663798cbe2e8592bb1a24981553a77ae345287b0011d830c",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "ant"
+   },
+   "hash": "75f61adcdc80f0bd25392e676102e29040f98d7f3bf1304a4ad3ce97135e025a"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Formicidae_mean-1SD_4.7mm",
+    "toy:e229cd580163236d83dd52c0358df19c225f5b6f30d82bf69bf842c0bb795a53",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "ant"
+   },
+   "hash": "220c03515170515943180bbbcab13e32c66a3552d399ecc56779f9abe6d6c8f1"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Formicidae_mean_6.9mm",
+    "toy:3f458b69f69ca96765cd9f29cafb5ccac0630c91f6d705b445cbe74b516005d5",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "ant"
+   },
+   "hash": "9e5c153764721ffbfc38dd3559f689f49c2b6e0113b31fda923cb794f47793da"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Formicidae_mean+1SD_9.1mm",
+    "toy:a896db013496392560df62a1055e707b93d2f2fa6a2326e4a67a4003f49f2cbb",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "ant"
+   },
+   "hash": "b17f53fee65c168d301f421b24787311e0fc4cca5a5ee6525cc938ab8d937b2c"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Formicidae_mean+2SD_11.3mm",
+    "toy:df03ff60bfab85f49411814fb855278741f160010aafb2fce4536efae5b4e500",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "ant"
+   },
+   "hash": "07aebbd4a0076db03ef4abd9211f4d10da7ae6fdff4e1461fb101cb08875d736"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Melittidae_mean-2SD_3.9mm",
+    "toy:2fed20c98b322b097aca53fc2afe5799db9f5638e640d8c5f28def56995c1dc9",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "030a1a30ecb1aece5c0918b9670d424d532fa7ea6a6dfd02e0d033a43750061b"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Melittidae_mean-1SD_5.8mm",
+    "toy:5cd60fdc17f5e95e72513f84d11759e55fc5df7ca02fc1e17301d76e86b31bb7",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "4f1b2d81421d812a574aa076cf7cb67422be8eef179edffd112c5424c0e752a5"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Melittidae_mean_7.7mm",
+    "toy:903c15f82a26233e21c0df7d848355f490b9d2e4a1ab1d010f9bd2581da78a38",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "6da611a873b66b7dc7a470c6c8cd307ccfd3b1c78b4c199818753f7af9ef2b40"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Melittidae_mean+1SD_9.6mm",
+    "toy:6fe6cf1000d22c70265a0281ac125a0191a57347a13b2614104ab4fa6bd52180",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "4f14660c3555d5b9778a6837e32a3c9e9e9a514c4846418fefc0011960ef508a"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Melittidae_mean+2SD_11.5mm",
+    "toy:6a3787658ccb915ca428a8604178bcd03a5063c137ec7b9ee014c885fff79bcd",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "e75465fcaa654ebbe0b2e2cc627ff3a050a848304f50be9d90f9f10c654b36a3"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Andrenidae_mean-2SD_6.0mm",
+    "toy:96c1c5f565b367e5f34e2d9149c9176cff134456666d2ed10ac985aaa94c7330",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "2f209acb6894a593c67345b6188b7d032a05211dee6a5a9a1d1f996ec5844d46"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Andrenidae_mean-1SD_7.9mm",
+    "toy:24e495175591ef6da2f90c64408fde8885ccf1dce3aa7a6155c7a01edb95e4f4",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "f0d067e033b85aa71365616396947e86985ba54bd17dd54d5a2f77d5f0a52a33"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Andrenidae_mean_9.8mm",
+    "toy:1fc5ab1b00dd4e0c150b8e3f4bd4b300261fba810af0e184ce6c5487990c72ee",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "eabaae54c8df0019a212015fd87b956d03f501c9826417e7971d2597c7bf8122"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Andrenidae_mean+1SD_11.7mm",
+    "toy:c20e483d8db03656eddf94059df519fa1188a558727dcba298ec323b5e2a8ab0",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "d21b81a63f7568c57f0f6e1ee718af527900e6a48c3d72aae7abde76461464ed"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Andrenidae_mean+2SD_13.6mm",
+    "toy:1e7bcf171c9cf4086b7b73b041fb77c696b950cea372a9d4ce845c3ba150e2db",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "448cade5a985ef52d712d2051a7d17f14d9f040e703df63d4ba798be335e5f39"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Halictidae_mean-2SD_2.9mm",
+    "toy:268cbf7aa7df30cc5df280772354b78cc69e659df1e04cfce7a5800c6fc6100d",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "2e567fbf970f9d6d8872b710e59206c35f77752eb1c6de3448fefe75237d24be"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Halictidae_mean-1SD_6.4mm",
+    "toy:aef16df31c1717c42d46886a7830d047632ce99d479da4092314f62eb9ea9ddc",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "8d79412b4b49999a5b46da2257908e170968da6c0ae5adc725877cd69b157f63"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Halictidae_mean_9.9mm",
+    "toy:a3f83dc624d6a83244f5b1d2ac1705a1256ac2984f1eae8384dc64e46acd4502",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "d22497de4208399c4d68f32bec09289d619323c91841b7dab5b5f4fc903db1fd"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Halictidae_mean+1SD_13.4mm",
+    "toy:126973096ef5c15bdde34d21b9b0eda2d227eeccc88c92bf0be80e719f32ddb2",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "d8dd4ba4552ba40dfdf23ff0ff31cf28e4934a1828ee8a53a9c94ec0fd9f0479"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Halictidae_mean+2SD_16.9mm",
+    "toy:feaff7bd1e4b902ab9a031656bf68639acaea1bfdafd5b9593a09c60f91b0ba4",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "7d291b75b74e803ec608e6dc9bf34e1a7f5c51695a5eae6ba7182a95eba24d17"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Syrphidae_mean-2SD_5.1mm",
+    "toy:ea476ca06dde26b8c0fbbf58b4564aba511922e9720ff7f9d2cbd04a86a22619",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "fly"
+   },
+   "hash": "b286cd1aa554794027ce4e54d65b1a9bac8016429cc595ed2ae08b30ac4ecf32"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Syrphidae_mean-1SD_7.9mm",
+    "toy:582b1778fbb725728656b36bfe488b2abfe9081f6a1760bdd567f25295116c64",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "fly"
+   },
+   "hash": "f51090f7ff310511a06d3d7e5dbd425a8135c6bac4c94321741f34807853d81e"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Syrphidae_mean_10.7mm",
+    "toy:2b12671711b65d4da974e9f7d0041f5ac9999047a163fa05c2a8093c8ef89164",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "fly"
+   },
+   "hash": "7aa8a4333c35107e6a3823c7e5a330d4d1feecddf626f542847ae88b09b60c6a"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Syrphidae_mean+1SD_13.5mm",
+    "toy:b65db9afd6b84e02fce0d1930275ba208be7c872fe9cb549c485ae8d53134e2e",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "fly"
+   },
+   "hash": "eb9a915e796a3b5b5df0a56e2dccd858b17008503cdac9790fbf685f3f6dfb97"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Syrphidae_mean+2SD_16.3mm",
+    "toy:7945c7959bfddd8f5efb0ca26ef150d4805ac5e4783c6fcd4dcceeed43f80bed",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "fly"
+   },
+   "hash": "33b9b55db2c8a84da60a5374ce2526210e47a4d7ca3e9dec1aecb634c8e0d860"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Meloidae_mean-2SD_6.2mm",
+    "toy:970f498e96d3793e8c0f30b92df98e63b0184d7990ff29f6ec144d370930bc69",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_long"
+   },
+   "hash": "17cc3c8bb5ee04ce1ac577c0616304ab7a71fce098c8e15c187fa2df4d39e98b"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Meloidae_mean-1SD_8.8mm",
+    "toy:2194a5a08bb99a3b9d0f55f9f77789d662e762ad8e9dd88efe233197414b7eb8",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_long"
+   },
+   "hash": "1c53c491640075622400d4fcc9a21c24c4cabdd4c3fe2b6902944eef2cfbe378"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Meloidae_mean_11.4mm",
+    "toy:8c32fc8d986066040e070b357a3b580eedf928e293a15b3d22b5778109987cf3",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_long"
+   },
+   "hash": "430ed3f4386a08b359b97d20e8ea8dbcb60391792eb12257c8225c7c77c567ae"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Meloidae_mean+1SD_14.0mm",
+    "toy:a87e482fe87bfddab3dc02b16b0309840e904c7d0c257dc58246cac595eff87a",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_long"
+   },
+   "hash": "d62eade284698ddfb1229a4b210877bd6ab9d088429afec82a6f3bfdddb78e68"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Meloidae_mean+2SD_16.6mm",
+    "toy:5bdb77bd9e92a426f17898b6f433751338c33bfa9faf4df56bcac88b28c8a95a",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_long"
+   },
+   "hash": "97a28e74ba33c686703106b36320bead5cf804fa84bfeaa13729a88b6750ca4a"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Largidae_mean-2SD_7.6mm",
+    "toy:4edbc9adec453e4dfb8e3853e0be4b19917aca3e4b923dc334ed237fe01901e1",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bug"
+   },
+   "hash": "ed4073d3dde13f2ebc6764dad6c0d2eb510049f434703b07c0089782ff1365dc"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Largidae_mean-1SD_10.3mm",
+    "toy:66977b118b45ef1815eb6b01ffb805d23ea1d61ae4882c1f0e617a3cd28c48f6",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bug"
+   },
+   "hash": "ed4be456c11c685a1d0f7a54d01cce6cde560014c5592c394a01f1bf823d7336"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Largidae_mean_13.0mm",
+    "toy:e5505afe56721831fdd4b0148e391991bd938953c0cdd0536dc49f65ed212969",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bug"
+   },
+   "hash": "82e9901cf99ed6b74707eaec21aaaf8fecd5df67e069fb8e4045c6e6b399cc96"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Largidae_mean+1SD_15.7mm",
+    "toy:b2a6cc21b08b1dceca93cd29a103b1de5be06b7a10357141228ff6a5d27c6e70",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bug"
+   },
+   "hash": "3b27c93f954321dc43df898bb12af0d24ab10a51a71ce1782f46895df223a678"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Largidae_mean+2SD_18.4mm",
+    "toy:48ef829a86a6bc48ca6afcadf5cbdff37384c28b3b5b3c3c69c66a6a00af88be",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bug"
+   },
+   "hash": "9161cf3d0e8155876e29dd51619d96cb362f21a8df3091d985e485322b6d2017"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Vespidae_mean-2SD_8.2mm",
+    "toy:906fdcf75843acb1796f716f73984dd3295655a06013a064ce3c3168acfcdb53",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "wasp"
+   },
+   "hash": "5b5c08be7d302c7731a58196c42f118a0f9ab85a1c57dd089f5910c285ea6aba"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Vespidae_mean-1SD_10.7mm",
+    "toy:7e807fb06973d2b1eaf3fb4b9f78a037e1c2df6c6d36a991d8067ff7718eb52e",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "wasp"
+   },
+   "hash": "0086c75a0f67f9227d6f8d98e9a01cf01f9aa635e4a6e6dc533869d0e11598c1"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Vespidae_mean_13.2mm",
+    "toy:d6b8e52f450e1593641c79a8ccfd0a8e916bc79fe82a63e567d9313df5eb304e",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "wasp"
+   },
+   "hash": "e7e596be59988531ce01217f371b465f1bfa8f71aa278a6bdbe56ebf9dde47ad"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Vespidae_mean+1SD_15.7mm",
+    "toy:b165975a652ec8cf9adb32e8cfb54481b9e309968cb9a1b156ac405ebdb0f969",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "wasp"
+   },
+   "hash": "e1679c4909f1c64c02bbb927c8cbe0244ecdb757d851e978a5728d57f871b4a2"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Vespidae_mean+2SD_18.2mm",
+    "toy:7d4a1ca9659d8a219ed7092a3f59a84f2147849d5539fbf560a72b317314b837",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "wasp"
+   },
+   "hash": "08aa1616e3ef052c105baa1eb0939fdcc3232359549354b026b40f6f6397f746"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Apidae_mean-2SD_6.3mm",
+    "toy:32a925cc2bb13f81b090ec90d163d96f4c57e49779ea390eb820686e54794f59",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "7b4e0d5177275f147df3561360e962ad0bfd3171d2bd3cdbdb4c1a93a1578e33"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Apidae_mean-1SD_9.9mm",
+    "toy:a3f83dc624d6a83244f5b1d2ac1705a1256ac2984f1eae8384dc64e46acd4502",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "15345e70e95730668890fc008cca27d660196bd13907f5e8591af698ce4336af"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Apidae_mean_13.5mm",
+    "toy:0528de3783363a35ab8eeba216f826b3761aa5d5aa9bb6371d3dc9c3819d4f39",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "8f79e0bee27b0f116a14c79c91fff75e4dd37fa4ef9cabbb6133f623fac063f5"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Apidae_mean+1SD_17.1mm",
+    "toy:2305e454c93affba7ac61fe8d1887d8208879bcbfe1091dde1342be5f9b1ce17",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "da1d0fb0cbecf56b68c530dba6344c883f8d1ba885e19f77dcf1fdac9c9a5dd1"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Apidae_mean+2SD_20.7mm",
+    "toy:c65705125a9782c1b713607086dfd65daea33557232dd2abb32b90c93c42fe55",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "99edb469cc35be47e71e8d95918315e3b02d2f22a74faa50b7cb7b46c3fe8a4c"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Bombyliidae_mean-2SD_8.6mm",
+    "toy:dae2144caa291a9a300871a754dce9fe8d9da79ca9e212c7deba99245c8867c2",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "fly"
+   },
+   "hash": "1052175cfdf63c29293526aad221a63f469188ca83812a137229e39585ec32c5"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Bombyliidae_mean-1SD_11.8mm",
+    "toy:47ad69544249fcc62ebd9318e2e141f88b68fe3ec1b55b2f86d7d46467926edf",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "fly"
+   },
+   "hash": "593a5df5810a031ed20f2c2195ec9eb0895a3d22b5fe97788a8a002becb5dda8"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Bombyliidae_mean_15.0mm",
+    "toy:ef5b57113939d082c2b25eb54c190b08233b9fc7b6e76da3d5b58e165097758e",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "fly"
+   },
+   "hash": "bede4432cbce63bc0ab0042095ebab698823c5d0ba98e6fa87f5c64ea71f582f"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Bombyliidae_mean+1SD_18.2mm",
+    "toy:ec0a90c167cbf5783c0c40a1381c705868fbed8cfc457efcc72893daddfe67c0",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "fly"
+   },
+   "hash": "6dce480fca9ffcb8011bd99457ed5f4617a370052009c1bc7fc9ea925b1e28fa"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Bombyliidae_mean+2SD_21.4mm",
+    "toy:8a5b8ba6f751803b7884d39a50901a17685bd6d75cb37ab6226b49b7d075dc7b",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "fly"
+   },
+   "hash": "539543450b6fa3e7899ab628365360380cace537c37a64b3b2e01aec4fa3cee6"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Gerridae_mean-2SD_11.1mm",
+    "toy:222bc04c5f2e9c38a342727cc466148d4494dbcebd282832b1988141ebfa3a3f",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "strider"
+   },
+   "hash": "0dbf360f32e7bddf0b6a8061901918246bdafcd919f71371e256ed0a9d4f4a93"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Gerridae_mean-1SD_16.2mm",
+    "toy:dc4dcdc4eb7a38dfffa94875aca8cb00e2786dcbfd9868719ee8731bb6c6d4a9",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "strider"
+   },
+   "hash": "2ab977a0f39bf1c2a4392f024f7a3d0854360fede4ea5f3a7c38c70ea837dc5b"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Gerridae_mean_21.3mm",
+    "toy:20f36952256a59ee0586b83fc3220ab1538d236651aadf97a1ab602dc9715751",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "strider"
+   },
+   "hash": "8cfa7a7a7c928839758043dc13d6cd4b827715dff1a430ea8d47d3e36de78861"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Gerridae_mean+1SD_26.4mm",
+    "toy:d40ad5b70e9992680fc7974d04eabcbc1a16deedb0610106e367845771a30555",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "strider"
+   },
+   "hash": "43e3f7aee0b71ebfe3760623ec928730eda8e3f3fb40c4ec72f2054226497fa7"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Hesperiidae_mean-2SD_16.4mm",
+    "toy:4a2cd7abff7239bd1f5d989dd7b93230d134ee1cc5d2356fc037462f8bf21496",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "moth"
+   },
+   "hash": "b514f69c31b337d55b18d895abc9cfd6902cf9187179e8ae434eb7e208e1c951"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Hesperiidae_mean-1SD_20.4mm",
+    "toy:18bd7394a07ea9a236cf4c5a35ee5a931411713c842f0618a1ea37feb2766dfe",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "moth"
+   },
+   "hash": "1b4907b7717888c5742aef837648c7405bb87107a3f54217804b2d253227657e"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Hesperiidae_mean_24.4mm",
+    "toy:ec865592f977c0c166d4c90d3717221ee63804c447d4246462f371e91c2b6b53",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "moth"
+   },
+   "hash": "aa47802f5c22fd5d72604ec661c03df826a970cb20d5eac60be94c3df66983ca"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Hesperiidae_mean+1SD_28.4mm",
+    "toy:40b3325b0d5edaa6e79cb636dad7696a158a411856f38f2d14da25f55ca3e1b0",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "moth"
+   },
+   "hash": "d23c060f770c51fc705546910e3dd328964d37092ae8ed09ac5e12eb1a0adc7c"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Cicadidae_mean-2SD_18.9mm",
+    "toy:454a1f7113253cf359a492f0d3144535b600aeab8c91078eb21517bcf5b9a452",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "cicada"
+   },
+   "hash": "ef8761a0bc40feade60c2cceb8e4aad82ebabbff74c98077871f4a1eb594fb2b"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Cicadidae_mean-1SD_22.2mm",
+    "toy:f2d25231ef9cfb50de4290a540126d879604a9f3376c8b1c59757c6b9e7a64d2",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "cicada"
+   },
+   "hash": "cdd75173e4f6e7b22f907db7d86d8d8d5fd8eaa9fe03a6c0bf6651e08e07eb7d"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Cicadidae_mean_25.5mm",
+    "toy:6af5172aad72d65db8320a93327ae2d54764eb6f6d9ae6b3fc81411215e3673d",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "cicada"
+   },
+   "hash": "f211897693654fec554004dfb02a6e0ff84b08f2f3db9bfbef43c269e83cd8a6"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Cicadidae_mean+1SD_28.8mm",
+    "toy:6fa4f6df073106af7f53e432f5a9262e946f902b5b5b63d7c90340398d2ad805",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "cicada"
+   },
+   "hash": "5e31e5eb4a2a79b631792c3616a293f062671d46fd45ed6b325bcc0c6b8516e3"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Coenagrionidae_novel_22.9mm",
+    "toy:1b566048e0df46e20fc1124d1bc396e8df46967eaa119070fe9b3029e9532e23",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "damselfly"
+   },
+   "hash": "109b497a4bc992d340387631c2ceabed2475e7eca5977674fdb5bfcccf8be00f"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Coenagrionidae_novel_26.4mm",
+    "toy:d8d869d8ed6b7f3fb84834396415b5fcfc7f0813ee649d0f10ecf84fa0a2aed4",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "damselfly"
+   },
+   "hash": "e564e2b101c876736094552c0c0474341820571643737189e207af04025bb92c"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Coenagrionidae_novel_29.9mm",
+    "toy:b6012f571a0a68b31fb812e914c56cde16987928f3c7b168ef2e3c6850b0cfa7",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "damselfly"
+   },
+   "hash": "aa5cd500582725bbd728f4af32bed1ba48e1f7c307c158e171b4b76133a0cee3"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Elachistidae_novel_6.7mm",
+    "toy:8d29b8b961c4c9da6d8e4ec4e40c93b85f3c09878e9d05ad77aed3fefe84d655",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "moth"
+   },
+   "hash": "2cf48333b86057dfb8a1f17e02ea40350b31b18db949c0d60f1a0de0892781e1"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Elachistidae_novel_8.4mm",
+    "toy:f0caac72042765e71bc8bae5d34eb50cab1622a779b41feea98032737b95d4df",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "moth"
+   },
+   "hash": "6abe16e5da73c5d59ead54515d27bb10618cf00327b137f51da7a3904fc0b762"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Elachistidae_novel_10.1mm",
+    "toy:feb4c5a7a2af45e35480a4fe421d730facdfcf8018cec83d268b1d0dce2d617c",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "moth"
+   },
+   "hash": "c22a19a5745b11c5d8214af0c149ca4399dd1c763708b6df4136d00afc3e4cd1"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Apidae_Xylocopa_tabaniformis_orpifex_novel_29.1mm",
+    "toy:f7627a51d0059d6cb52c83f9def1d367fb3175fdc7b63ea1c14052c30130f703",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "f4b23d8efcf924a50de958607cfb4ca2b0d0239cc61072e40cc8eb6c152ddf54"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Apidae_Bombus_mixtus_novel_28.2mm",
+    "toy:a154f42c452126fe3302f34d51457e45c51312f34bb5f1536635e559fdad06b4",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "83e55733026297ffc02c1fbf1650abe2e11d2c135456034f3707c31c8899c5d1"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Andrenidae_Andrena_prunorum_novel_20.1mm",
+    "toy:54e99140bc306542dab8507e838df2945d1ff65365e0138f7c3103c5fba3615f",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "fafe3490da8a172c37fda2201e650413ddd1437f5a03e020c661d41d224dd13f"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Colletidae_Ptiloglossa_arizonensis_novel_16.2mm",
+    "toy:9e04bad1e677fd42633f79a8d2b5ecddce140e2d5c5380197269cda83688ebb0",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "220eb37c5c9c5527b477a1455361781c97c795fe1f3084e52f4f82124e2b6c04"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Meloidae_Epicauta_fortis_novel_2.1mm",
+    "toy:91f91d4919f68a5581f30d41eb76ca43275e4f33cf7d807bae9c74c7cf2d1d20",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_long"
+   },
+   "hash": "eed90c6e9247a8dfd18bf45bc526c132a5c4b34bf15fcff800ebeca9d5ef70b6"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:Andrenidae_Perdita_sp_novel_3.6mm",
+    "toy:317a03565e8cad08ad4d0d32f9ec7cbe5bc529db362935ebd33d77213e2af8f7",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "bee"
+   },
+   "hash": "33ff0a72c6ff96427fe7a40c676ec93fe5b7f2158f47cafb2775057eed0524e4"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:thrips_like_fill_1.0mm",
+    "toy:ff0295603199078258e8effae0005d907bdd776f2e9a6468118f1ed8116c2bd9",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "thrips"
+   },
+   "hash": "0a0ab3d07de023f27cd252ec750a2a33c77cda5e50ff4ced77523934f135e5b2"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:thrips_like_fill_1.5mm",
+    "toy:4de0fdfd725229bce8353d0817ae03972cd7339eda5b77776c3d242abe756c72",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "thrips"
+   },
+   "hash": "1fa66e925d06b1de2e5876378142c91e5dab9b64431030516b0adecfe746fbb4"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:thrips_like_fill_2.0mm",
+    "toy:7b923f9260174389ebfb08e8f957b3a96d7647a363553f5b0311ba120416c614",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "thrips"
+   },
+   "hash": "6ed24cc88667062f11166a79393f940c7e3d3cd37ed6d1e3782441ca4a987a15"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:aphid_like_fill_1.5mm",
+    "toy:cbd508ddafb2db96fac1db1ca85982d47d8603b8a7d395a601b7eb6d763aaa04",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "aphid"
+   },
+   "hash": "cbb424aa0226b1de81c2f41da26310ad36e24a9e81bbd47e98c295efe8a8666d"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:aphid_like_fill_2.0mm",
+    "toy:c0893770ac53e07c336e33d212497887106ef8e39bba9d4a12bbc5ace9eaa64a",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "aphid"
+   },
+   "hash": "cdfc7f97c72f9cbd1c38217510be4c1355fbed05a647df332d49bcbc15c64890"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:aphid_like_fill_2.5mm",
+    "toy:cfb1aa5138b16928db44807d06ad3ebc2d66c30b320936f5b040cf249fa51326",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "aphid"
+   },
+   "hash": "b8cf6c0a7c2deda4ad2f6141a5e04405d205360f8d632f1ced5fde7ab374a137"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:aphid_like_fill_3.0mm",
+    "toy:f144879311a70cf8d88d65926afbaf1d7847a5ad1f86d81a736bf4a12e1b8bf2",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "aphid"
+   },
+   "hash": "edd73c8b0c25d34be490637e48c237003db304b3ea9572437759477ff4c33327"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:small_beetle_fill_1.0mm",
+    "toy:49f890f5410538bfff9e26fe9947e46077eabd14973c080a725e6e9d42475fe4",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_dome"
+   },
+   "hash": "ca4d8d7e23ecd51fed131a5cba4e6159641f96cc7b14c016b4814c9c5c468437"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:small_beetle_fill_1.5mm",
+    "toy:9e6313a27c47e66347cd910b879ac4a715c4315bc2fbfd4401a02f6fb9efc857",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_dome"
+   },
+   "hash": "ddcee43dc052f6a8a30fb8aaafb01ea2a9bd014aa6420ac27f4fb2edc0d7b606"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:small_beetle_fill_2.0mm",
+    "toy:7e7659b2d58597be558555de19b7671a31a77569dce334626989bb87756f4b0d",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_dome"
+   },
+   "hash": "09971ec1c14d906d458269041210cf9a3331132e87ccf3440b3553a7fa62906f"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:small_beetle_fill_2.5mm",
+    "toy:e1aa655d90883b7fff57dd74dab4b4e3a4ea34bffa5db31b47e525cdf3b21fee",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_dome"
+   },
+   "hash": "064a91da97b7879b8c0851db448fdcea68fa4ab69254462e7665c877468c6ff4"
+  },
+  {
+   "kind": "toy",
+   "nodes": [
+    "name:small_beetle_fill_3.0mm",
+    "toy:6fe382aee32083add6a35c6cd3b0b2e84756fe1117b68bf47d27ae54d332e05f",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819"
+   ],
+   "data": {
+    "plan": "beetle_dome"
+   },
+   "hash": "4623d2f7ca736df41bf53c5979f2921e6bd42147b59dbbac949e56449cb1e355"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:2f10deda7505cf39d64160073d79f9f9f1755dd4cc363af6488dfa0d8f5aea49",
+    "att:9cdb7f6e349a71b31c7685a5e3d84b6a5c73a7227862f5a2b8e8cc9e20f18058",
+    "mmr:21d09e9db9986be078baf1e2699223f50c88813082ecc3c8cc23a4602b0dd80b",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:exact",
+    "weights:d596c18421827a42af6e4fe0de4fa2d8b6f33f28367ed6e30cf62532b0ddf843"
+   ],
+   "data": {
+    "actor": "logic-twin",
+    "pass": 86,
+    "n": 91
+   },
+   "hash": "de293dc01ddd55654cb83b7bb955094d6fe75c7b41ec1f12a886efdfe4f1d5ca"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:a1bad2caceab6b56cb6d5a0202d450bace7bdc96e27566a5c74f7764f5ada6bc",
+    "att:3581dcab26bb6074a0512c179a52593b486094f1786dd5892a5b1eb867f9a49c",
+    "mmr:582a102fbc3082d854ca39e12d83af6e888706759a62f3dfc66a31f2dea1c631",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:exact",
+    "weights:dee799d4b2ecd3ed2d501c5891eb7498af9fc33e977e83953a251b049a8b2c97"
+   ],
+   "data": {
+    "actor": "lfm2.5-1.2b-instruct_q4_k_m",
+    "pass": 0,
+    "n": 91
+   },
+   "hash": "b3af962c9f2a6cefd7357b25e8a1ec75c9643202711abf03ae324e34220da403"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:8fb7ed428a1874a132d32d03ab133f417d740fd9c4667d03f0f8d0860f59343d",
+    "att:15dfc79aafd21149b1e069af7d013b62ed0d1e84675e704d87e3c033512a1060",
+    "mmr:70882750f2cdc74b036ea023825ecc7c1da1edbb9007c87fcebb8bf2f66752b5",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:exact",
+    "weights:08e0f1fac0530a153f2f368ec222230d2af6b7569568a4dc8920ee33f1c5087c"
+   ],
+   "data": {
+    "actor": "qwen3_1.7b",
+    "pass": 0,
+    "n": 91
+   },
+   "hash": "76bd4a7f2948fe2b3f54e5023edb0bf00c8f1725516763e0e41e59de215652e5"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:7c50fa16491946a365761a73cfc40cab259d44e65ded50c8701d774147722775",
+    "att:0ce4b782bf537b651b1d041c5bdb9da77a7e6bf9ea2acd4a3a52635a58352a03",
+    "mmr:da140347f36ab2de4d2230f4ada4ce01a67d80dddcffa04396e9729f849c9022",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:exact",
+    "weights:5f0be481cc7a70ab288b01a110ba34b74a126ad375f98156be363de45e28bad7"
+   ],
+   "data": {
+    "actor": "classical@10px/mm",
+    "pass": 17,
+    "n": 91
+   },
+   "hash": "784d53fd1156eae5dd3ac90d64ec071e6fa6cb1dba37850f4c4600fda4bbff3f"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:6bc98f404ad4320d2faee7e9b09a9af7b286b2d0cd5f51d8e04a32cefeaf4ae6",
+    "att:3b74eaa8bb5aadd81bf8d318addab9ed0a0a8fdd1e65870eeb7bdbb3e55163eb",
+    "mmr:b04e6ab1113054e2ab82d183c486fa5bc408610b74875715d91f3f39bb1b7c48",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:exact",
+    "weights:b4f48fdef83f3b0ef4a8b4b8ab21d57164f7c35e6cea8f269d6b1e0ee4ff0f53"
+   ],
+   "data": {
+    "actor": "classical@20px/mm",
+    "pass": 32,
+    "n": 91
+   },
+   "hash": "d3b05093670a9cea43b27f0b8add81964db2546164340c33fd025ef7e0048a47"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:f5f2e160c1fb89288d065e0a170788c0e0721025969550ca8ffc00fbb598c269",
+    "att:f94f0541c1eb301fecdd5bd4f6952330ac4b2a059920034a0e9bcc7622418734",
+    "mmr:96908439e886675e559d3e99414e85f4d88b249865c626193e4d7174feb48d6e",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:exact",
+    "weights:7c736744649376a309b32de66e58e1c9d93d3bff5900b5280a542828cd066dfd"
+   ],
+   "data": {
+    "actor": "classical@5px/mm",
+    "pass": 12,
+    "n": 91
+   },
+   "hash": "26dd79d5c39df15f99f678d0b47ca8eecf22ff1faab959d1583fdd99f99777f1"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:1797b1a3d3d97c8eaa7f55a69651d19c73e4850cfa0bef44565216db953388b4",
+    "att:ead8a93fac170be928e62f706395e98b6b547495567a3b0838a9af8c24e3d6e9",
+    "mmr:14be2063741b77ad3b42de8ab25a3e22af9593fecf88018532b50f9afe1510a8",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:exact",
+    "weights:ae625eaa7abb64c647e35708e15c6190582bc4e0e4d306f886f36070694bc4f0"
+   ],
+   "data": {
+    "actor": "yolo@10px/mm",
+    "pass": 0,
+    "n": 91
+   },
+   "hash": "78333154dcc38a236dffe3b2781c202ffb28fe771b170f8fcaccaa812e9aae45"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:cc5ca3c6d09c8e82f9a7777503583460a371d354def1cb108caa367de0cd2eac",
+    "att:5ea857030de20afee86fa8f0f0696cf28010af5a8c794fe5ed54fd6dbc549efa",
+    "mmr:a88130163d54bdf85e97197d5054d299718cbaa8a8adba38d9996b5acb651143",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:exact",
+    "weights:a85602a942de98dc76c8757b572782b2ae4f0b061e03e4021bc600ee13ffe84b"
+   ],
+   "data": {
+    "actor": "yolo@20px/mm",
+    "pass": 2,
+    "n": 91
+   },
+   "hash": "b3c669f247b9e8e43fab0a7f2e224230368f98cf134e5b7aac669cac7cdd1dc3"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:4a2d934a0f14a9f7a25f37f094c6b58d7986f8e1f230db93dea11a5a2fb6c2c5",
+    "att:ed01dd9d7c4512f5bae74846a3e062afbb89d58fa3ff648ec3b9bf44159fd34f",
+    "mmr:1b7aeba89148999e9005102390f84850cfa8a0a95de4e503a5d34388335de884",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:exact",
+    "weights:0bb80386171b7dc620e3bcc8bfa1cbd26f726c9901ab61a27f03379698d9fe66"
+   ],
+   "data": {
+    "actor": "yolo@5px/mm",
+    "pass": 0,
+    "n": 91
+   },
+   "hash": "a3bf2e58a4f9655aa5356f38e71344283f38b34c4ff2ad86f06d84b9e0c358c4"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:650f2aa20bd27e4f61e3f8cbbbf7bb3fcfc66a6bf4654fc0cc9eca65cbbd681f",
+    "att:41b314d3a3cbdb6d628ba000b0ad559b21e3aac70368f1d0dfda781bcb4c15c4",
+    "mmr:07d12d224ca395acc58af670af8905c6958bfceb1cd5e5aa69852960009c3eae",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:exact",
+    "weights:8b8eef4703a11cc9cae3fccbf34ba7474d406ddbc0dcc42c07593f6ac6e7835c"
+   ],
+   "data": {
+    "actor": "yoloe@10px/mm",
+    "pass": 6,
+    "n": 91
+   },
+   "hash": "a589c25cc30cbd320426ba0944a91d5caedbcad845ca58cf6705233ef9293abb"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:13cfc75acdf4df598387ed41b7f3d3829ea0a8db53c4421bb276e78abd4ea7f1",
+    "att:1c5cf44c281ecb177011a6dd1ba5d3e2f1d9fe1ee8dde065a745d842d37f252d",
+    "mmr:dc6ab50edbb812f0432ddfe03f0045a8161c5747ceb803e43df077a4224c6aaf",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:exact",
+    "weights:c2c76e03861c46b2650d19eaf395702d5cab650f981dfd6c829e2daa8c9f28aa"
+   ],
+   "data": {
+    "actor": "yoloe@20px/mm",
+    "pass": 11,
+    "n": 91
+   },
+   "hash": "135faeba72cde287edbbe6c05f38734d29976d0f02d0e6829c9b57d45c56a60f"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:14c4952f7a2139727d10cbbaf54a69396c95476807ebddaa69fc2f3bd4dddba1",
+    "att:987f3cb1ba98c94232f40022f5cda0a51f5b8969333c4933611735e49cd26d07",
+    "mmr:0e4c644d1f88915b07cee9e633e829c13a17fb552f6a3d9de8f08eb1a82a56e2",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:exact",
+    "weights:24a6a923d17473bb1db379cac67ef17c8eafe3a58b96a3a936b2e7ba14234a9f"
+   ],
+   "data": {
+    "actor": "yoloe@5px/mm",
+    "pass": 0,
+    "n": 91
+   },
+   "hash": "49c7ae6af5bb28dd0a98c978e7070d5a7000f5408e547bdd166343f2ee05f86c"
+  },
+  {
+   "kind": "consensus",
+   "nodes": [
+    "actor:13cfc75acdf4df598387ed41b7f3d3829ea0a8db53c4421bb276e78abd4ea7f1",
+    "actor:14c4952f7a2139727d10cbbaf54a69396c95476807ebddaa69fc2f3bd4dddba1",
+    "actor:1797b1a3d3d97c8eaa7f55a69651d19c73e4850cfa0bef44565216db953388b4",
+    "actor:2f10deda7505cf39d64160073d79f9f9f1755dd4cc363af6488dfa0d8f5aea49",
+    "actor:4a2d934a0f14a9f7a25f37f094c6b58d7986f8e1f230db93dea11a5a2fb6c2c5",
+    "actor:650f2aa20bd27e4f61e3f8cbbbf7bb3fcfc66a6bf4654fc0cc9eca65cbbd681f",
+    "actor:6bc98f404ad4320d2faee7e9b09a9af7b286b2d0cd5f51d8e04a32cefeaf4ae6",
+    "actor:7c50fa16491946a365761a73cfc40cab259d44e65ded50c8701d774147722775",
+    "actor:8fb7ed428a1874a132d32d03ab133f417d740fd9c4667d03f0f8d0860f59343d",
+    "actor:a1bad2caceab6b56cb6d5a0202d450bace7bdc96e27566a5c74f7764f5ada6bc",
+    "actor:cc5ca3c6d09c8e82f9a7777503583460a371d354def1cb108caa367de0cd2eac",
+    "actor:f5f2e160c1fb89288d065e0a170788c0e0721025969550ca8ffc00fbb598c269",
+    "mmr:871c5b5c941aed64ffd0083db92505372a0a64a94e48297e7148a90e61e921ad",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:exact"
+   ],
+   "data": {
+    "status_counts": {
+     "DISPUTED": 86,
+     "FAILED": 5
+    }
+   },
+   "hash": "8b67db0e5cf78e4c657de822d5da621e610227ab80c1ce4c2d8b6352d448a8fe"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:2f10deda7505cf39d64160073d79f9f9f1755dd4cc363af6488dfa0d8f5aea49",
+    "att:de74873d02e5227db7ec0d97d37911d13957c598fe31f4f4347c6b0c291fa4e3",
+    "mmr:1fa11e904d9115527dade1c60540a9335aaa94450cb2a41381ad8d34fed03076",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_0.5mm",
+    "weights:d596c18421827a42af6e4fe0de4fa2d8b6f33f28367ed6e30cf62532b0ddf843"
+   ],
+   "data": {
+    "actor": "logic-twin",
+    "pass": 87,
+    "n": 91
+   },
+   "hash": "abbce5b2062ec34b517717059a1e7ec79f7c463888ca70ee8538a60d98e7b6eb"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:a1bad2caceab6b56cb6d5a0202d450bace7bdc96e27566a5c74f7764f5ada6bc",
+    "att:f2ce412c30eaf8cb36b105744853b34e54f3011c07cb25bc2609d92fe9913a9c",
+    "mmr:12823ac4cf40b3bdf61cd9880ae5648ba6e2a57afb026cbe7c99ce903d3f4581",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_0.5mm",
+    "weights:dee799d4b2ecd3ed2d501c5891eb7498af9fc33e977e83953a251b049a8b2c97"
+   ],
+   "data": {
+    "actor": "lfm2.5-1.2b-instruct_q4_k_m",
+    "pass": 3,
+    "n": 91
+   },
+   "hash": "2af32f8bc49be5d8b74dc5649cf165cefe30dea6fb14c2d0b94d60d7580ed39c"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:8fb7ed428a1874a132d32d03ab133f417d740fd9c4667d03f0f8d0860f59343d",
+    "att:381d758a8d7929f4dc66ae6cebe6dade1bdca44b957005e7989e3aa9fadc730e",
+    "mmr:128fbb4ffa0ce66ad4e12c3c92d0b45131e5ef657cb4276eff0577436f34fc4f",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_0.5mm",
+    "weights:08e0f1fac0530a153f2f368ec222230d2af6b7569568a4dc8920ee33f1c5087c"
+   ],
+   "data": {
+    "actor": "qwen3_1.7b",
+    "pass": 1,
+    "n": 91
+   },
+   "hash": "2c81a18f73861db00191a7f978355fefd09d2d712c07e4a4d1390dea669a9822"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:7c50fa16491946a365761a73cfc40cab259d44e65ded50c8701d774147722775",
+    "att:f195237519f566b5fef8a85b8e736122b6ab30f7e108ce3065e7686ca664dfd1",
+    "mmr:801f173a6c31faa63c71e461ec7f11ee872a495899f50aa94e99c2b15709bb92",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_0.5mm",
+    "weights:5f0be481cc7a70ab288b01a110ba34b74a126ad375f98156be363de45e28bad7"
+   ],
+   "data": {
+    "actor": "classical@10px/mm",
+    "pass": 76,
+    "n": 91
+   },
+   "hash": "3ebd629dc02503f97432b9aa15356d581452242649362eae6467924f8fb1f3a6"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:6bc98f404ad4320d2faee7e9b09a9af7b286b2d0cd5f51d8e04a32cefeaf4ae6",
+    "att:b2407324019e9997d7e4ea1180ebcfeb10e0b87bfd70b4e5c0ddadffbda7e790",
+    "mmr:f9f3364c1c52c30bd95b2a6f8d19d180dcb0b5c81c269dd54fc4f62826961783",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_0.5mm",
+    "weights:b4f48fdef83f3b0ef4a8b4b8ab21d57164f7c35e6cea8f269d6b1e0ee4ff0f53"
+   ],
+   "data": {
+    "actor": "classical@20px/mm",
+    "pass": 79,
+    "n": 91
+   },
+   "hash": "458f908628572a5474575e4dcaa20253beada6043d6d7da55691d0e3f3a76509"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:f5f2e160c1fb89288d065e0a170788c0e0721025969550ca8ffc00fbb598c269",
+    "att:126cb5e6f3a3d98d3635ab5837f9a92bc18e591143e4509124a1c23eb48950b5",
+    "mmr:a9eddf9344083d2d7f8642cba6682386638f6a94d89e2b2d2b3a2e069e20cfbb",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_0.5mm",
+    "weights:7c736744649376a309b32de66e58e1c9d93d3bff5900b5280a542828cd066dfd"
+   ],
+   "data": {
+    "actor": "classical@5px/mm",
+    "pass": 60,
+    "n": 91
+   },
+   "hash": "55d0dd2e9477acc9241e3997ecef33ca2801b172abd1c2d21ea2b846f7d20470"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:1797b1a3d3d97c8eaa7f55a69651d19c73e4850cfa0bef44565216db953388b4",
+    "att:73ac53aaf499b27dad528c2fcc59b98d3dabc3ced58330ae85ff3c28fa7d3c65",
+    "mmr:1765ebaeeab64fd1cd46faf0748a9a1b7120ce7b1dd56aabe33fc72ee9aec8e6",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_0.5mm",
+    "weights:ae625eaa7abb64c647e35708e15c6190582bc4e0e4d306f886f36070694bc4f0"
+   ],
+   "data": {
+    "actor": "yolo@10px/mm",
+    "pass": 2,
+    "n": 91
+   },
+   "hash": "b6aa3b84310746d1fb014e3fc278b97a0d0de1729a8b0d540c26da9256dff7d1"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:cc5ca3c6d09c8e82f9a7777503583460a371d354def1cb108caa367de0cd2eac",
+    "att:a8c3d0dc867fd753d3807d09442f62f1bba6764a9cd4cd1722f24cfe9d0c2331",
+    "mmr:56675deef95469079aafe334c1e09798a3d1b822a2c5d89c87803eb01c3e7677",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_0.5mm",
+    "weights:a85602a942de98dc76c8757b572782b2ae4f0b061e03e4021bc600ee13ffe84b"
+   ],
+   "data": {
+    "actor": "yolo@20px/mm",
+    "pass": 21,
+    "n": 91
+   },
+   "hash": "539ae49c6e371bd84b1b93ff260047cadb79b7eb4b99b68449696df6e23a3e8e"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:4a2d934a0f14a9f7a25f37f094c6b58d7986f8e1f230db93dea11a5a2fb6c2c5",
+    "att:8e57e8dbca3b8770ad943b05a8c8403c7f9c79f5191dbb5d392c88bdbf55fe82",
+    "mmr:102d3f513610ee878f50f48c707f31407426e68b2d7b8278aa62e307fc0d6d20",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_0.5mm",
+    "weights:0bb80386171b7dc620e3bcc8bfa1cbd26f726c9901ab61a27f03379698d9fe66"
+   ],
+   "data": {
+    "actor": "yolo@5px/mm",
+    "pass": 0,
+    "n": 91
+   },
+   "hash": "b5add3b93f0baa9a9e30f794edf672ffca5ba1053818795ebba522691fa4430e"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:650f2aa20bd27e4f61e3f8cbbbf7bb3fcfc66a6bf4654fc0cc9eca65cbbd681f",
+    "att:f84edc49de32d27e88c803818ef168a5c93a95d8e5f6334322b39a6fd21f654d",
+    "mmr:192cfd2b5df892d87c30246d4c93a18f6ef40cc72457c71f24416a59f7fc43b1",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_0.5mm",
+    "weights:8b8eef4703a11cc9cae3fccbf34ba7474d406ddbc0dcc42c07593f6ac6e7835c"
+   ],
+   "data": {
+    "actor": "yoloe@10px/mm",
+    "pass": 21,
+    "n": 91
+   },
+   "hash": "06cfafd4a19025ab75e1f410c90b2b44d4b963bef365d123b368cae10de854df"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:13cfc75acdf4df598387ed41b7f3d3829ea0a8db53c4421bb276e78abd4ea7f1",
+    "att:0c00f733ae4296317fd57a4f8849fed33e3cb672fa33206260e5d96ac92e8d6b",
+    "mmr:f21aa7b26203ae123423672da677bdd19b07002494a08e39f8574d8cb5dfa2b3",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_0.5mm",
+    "weights:c2c76e03861c46b2650d19eaf395702d5cab650f981dfd6c829e2daa8c9f28aa"
+   ],
+   "data": {
+    "actor": "yoloe@20px/mm",
+    "pass": 18,
+    "n": 91
+   },
+   "hash": "67c4a910b43f35f811adec6c40b6464306f63b6ed2359400aed7b37487906374"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:14c4952f7a2139727d10cbbaf54a69396c95476807ebddaa69fc2f3bd4dddba1",
+    "att:150380deb30533336d5d56a65381eb94fcbcea46d0c30e1ec9af07c05189b516",
+    "mmr:a8e2b896c8e3c50ad7134e694d6101bb7baafef50ba273f10b5f6f198438245f",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_0.5mm",
+    "weights:24a6a923d17473bb1db379cac67ef17c8eafe3a58b96a3a936b2e7ba14234a9f"
+   ],
+   "data": {
+    "actor": "yoloe@5px/mm",
+    "pass": 10,
+    "n": 91
+   },
+   "hash": "545189a210f38938727fd02bf859dd5d891420df2ef9a317ef6465e6d58d7a1a"
+  },
+  {
+   "kind": "consensus",
+   "nodes": [
+    "actor:13cfc75acdf4df598387ed41b7f3d3829ea0a8db53c4421bb276e78abd4ea7f1",
+    "actor:14c4952f7a2139727d10cbbaf54a69396c95476807ebddaa69fc2f3bd4dddba1",
+    "actor:1797b1a3d3d97c8eaa7f55a69651d19c73e4850cfa0bef44565216db953388b4",
+    "actor:2f10deda7505cf39d64160073d79f9f9f1755dd4cc363af6488dfa0d8f5aea49",
+    "actor:4a2d934a0f14a9f7a25f37f094c6b58d7986f8e1f230db93dea11a5a2fb6c2c5",
+    "actor:650f2aa20bd27e4f61e3f8cbbbf7bb3fcfc66a6bf4654fc0cc9eca65cbbd681f",
+    "actor:6bc98f404ad4320d2faee7e9b09a9af7b286b2d0cd5f51d8e04a32cefeaf4ae6",
+    "actor:7c50fa16491946a365761a73cfc40cab259d44e65ded50c8701d774147722775",
+    "actor:8fb7ed428a1874a132d32d03ab133f417d740fd9c4667d03f0f8d0860f59343d",
+    "actor:a1bad2caceab6b56cb6d5a0202d450bace7bdc96e27566a5c74f7764f5ada6bc",
+    "actor:cc5ca3c6d09c8e82f9a7777503583460a371d354def1cb108caa367de0cd2eac",
+    "actor:f5f2e160c1fb89288d065e0a170788c0e0721025969550ca8ffc00fbb598c269",
+    "mmr:8396d267281cc8c095a1554e9f701c2ebb7b8a42b5e7204c7780b75d076137c7",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_0.5mm"
+   ],
+   "data": {
+    "status_counts": {
+     "DISPUTED": 72,
+     "FAILED": 4,
+     "SUPPORTED": 15
+    }
+   },
+   "hash": "d9fed5506c97a47388a4405fae89d3a047c7ace230542a80d9f7af718c823ab0"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:2f10deda7505cf39d64160073d79f9f9f1755dd4cc363af6488dfa0d8f5aea49",
+    "att:a50d9b8fb361c905ca8b2c2ca51310390ebb75427b8067ad42aed3d01aeefe44",
+    "mmr:719992e4cc93b8931fef6ec8c5de0ba25f6bb59401ad38bcd3c941464aca86a6",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_2mm",
+    "weights:d596c18421827a42af6e4fe0de4fa2d8b6f33f28367ed6e30cf62532b0ddf843"
+   ],
+   "data": {
+    "actor": "logic-twin",
+    "pass": 87,
+    "n": 91
+   },
+   "hash": "1cd693577720b7dc9ed8388a43df27fdc15f916ac1af8f44d3dde876a1d4b19f"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:a1bad2caceab6b56cb6d5a0202d450bace7bdc96e27566a5c74f7764f5ada6bc",
+    "att:4ace3050960978b87807f81ab93a240f4771dacdc363760cf2e71c718ab57ce5",
+    "mmr:1c705584f9ecc68eb9728598ac0f7d194818cfba1c21fe29d950f2e2ce9cd802",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_2mm",
+    "weights:dee799d4b2ecd3ed2d501c5891eb7498af9fc33e977e83953a251b049a8b2c97"
+   ],
+   "data": {
+    "actor": "lfm2.5-1.2b-instruct_q4_k_m",
+    "pass": 5,
+    "n": 91
+   },
+   "hash": "515b8e402bb3e30d9d85384467eef97e64a2f162414dcc9950065d09a44ea882"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:8fb7ed428a1874a132d32d03ab133f417d740fd9c4667d03f0f8d0860f59343d",
+    "att:1baadf22e645217375001e6fa5389826eea86c5edf2031dfdd1078252dfe27cc",
+    "mmr:e5e764d8c2c005d127ce2783b7580b0c7aeba0047bd9e1a3e2347db0453b5d7b",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_2mm",
+    "weights:08e0f1fac0530a153f2f368ec222230d2af6b7569568a4dc8920ee33f1c5087c"
+   ],
+   "data": {
+    "actor": "qwen3_1.7b",
+    "pass": 3,
+    "n": 91
+   },
+   "hash": "18f4bcca1e46ef218281cfddade82a5fed341ab9178e37d9bcd5a695b28a5553"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:7c50fa16491946a365761a73cfc40cab259d44e65ded50c8701d774147722775",
+    "att:cd0e388708c882199b1aeb2f025e0efebe9e38b6eac7037bd698641478fb2524",
+    "mmr:65f38d135624993352dd5bb9e1896339d4acfd56d00f3a1069f895a392704318",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_2mm",
+    "weights:5f0be481cc7a70ab288b01a110ba34b74a126ad375f98156be363de45e28bad7"
+   ],
+   "data": {
+    "actor": "classical@10px/mm",
+    "pass": 76,
+    "n": 91
+   },
+   "hash": "2b45098f84b374579b9d092388f23ca318aed4ab9eb760c96032ed7dae81c46e"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:6bc98f404ad4320d2faee7e9b09a9af7b286b2d0cd5f51d8e04a32cefeaf4ae6",
+    "att:60ead17fb6e41a9ffe78e85f03f9f0127728d8422f50f9c4bdca285961c702ac",
+    "mmr:75f9fbc9b34f77dd748476225bb8f4059b37058b4ccee4a98ca9ee38eaf8fb78",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_2mm",
+    "weights:b4f48fdef83f3b0ef4a8b4b8ab21d57164f7c35e6cea8f269d6b1e0ee4ff0f53"
+   ],
+   "data": {
+    "actor": "classical@20px/mm",
+    "pass": 79,
+    "n": 91
+   },
+   "hash": "3491d270ca36e319c67be66cd82b8f394499fff154d39f3bd6bd85bd2755c5e4"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:f5f2e160c1fb89288d065e0a170788c0e0721025969550ca8ffc00fbb598c269",
+    "att:0c4a1ebfe3e3571ecdb669bd4a1944a7af14a1b65540fc78afa608ca2ac6c376",
+    "mmr:4372d8466c2c7cb507b7d935f62ba7737fa3dd210cdd3d64b1056888d0b9c25d",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_2mm",
+    "weights:7c736744649376a309b32de66e58e1c9d93d3bff5900b5280a542828cd066dfd"
+   ],
+   "data": {
+    "actor": "classical@5px/mm",
+    "pass": 60,
+    "n": 91
+   },
+   "hash": "6f04dbb2f29543acf3e108e85e966249a925282e8f926a6c73cd22c5355940aa"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:1797b1a3d3d97c8eaa7f55a69651d19c73e4850cfa0bef44565216db953388b4",
+    "att:1c4bb11801b294e2da2418c882e5de11f240a533a0bb5e1780d844bb38a96bc6",
+    "mmr:b3dac1ff908a4a0371f82d1026e27a78b3f7307d3970e089d9821a3dc91d5b55",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_2mm",
+    "weights:ae625eaa7abb64c647e35708e15c6190582bc4e0e4d306f886f36070694bc4f0"
+   ],
+   "data": {
+    "actor": "yolo@10px/mm",
+    "pass": 2,
+    "n": 91
+   },
+   "hash": "43bdbccbee9368fa224c63d009289b6dd1027613fa2bb7ad1461334d79dc1580"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:cc5ca3c6d09c8e82f9a7777503583460a371d354def1cb108caa367de0cd2eac",
+    "att:3d454b72c0fab83e79651d9399e32c3ce381633e3d8a7fa4e7fecf5c5c29aa2a",
+    "mmr:0f4793c4f292de9b946d4165a8ada9e234ab8fb3eff3a274f67c4c7d8d987c02",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_2mm",
+    "weights:a85602a942de98dc76c8757b572782b2ae4f0b061e03e4021bc600ee13ffe84b"
+   ],
+   "data": {
+    "actor": "yolo@20px/mm",
+    "pass": 21,
+    "n": 91
+   },
+   "hash": "3d11a3c7fe1b3f22c3562d8309610ed4cb26e34b3dfde0a2ce0718e6c784abb8"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:4a2d934a0f14a9f7a25f37f094c6b58d7986f8e1f230db93dea11a5a2fb6c2c5",
+    "att:af0c2001ce1168554714c1a765f53de9255f046bb3ea10dc158ed34a65fc58fe",
+    "mmr:29815100f41f1c1fe72e6d1f8222c3143ff0b70c6948420b5becd40edec68c3d",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_2mm",
+    "weights:0bb80386171b7dc620e3bcc8bfa1cbd26f726c9901ab61a27f03379698d9fe66"
+   ],
+   "data": {
+    "actor": "yolo@5px/mm",
+    "pass": 0,
+    "n": 91
+   },
+   "hash": "ec015656f0b14a92ac38ace42bc1f399873b5be05693c5e554459f6da6659ffb"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:650f2aa20bd27e4f61e3f8cbbbf7bb3fcfc66a6bf4654fc0cc9eca65cbbd681f",
+    "att:8b5e92325bb9648e3549f82553a76386a2f97a0fa5d2633eea4547dbd177ef60",
+    "mmr:76cbca2240bd488d8fb29db227433c546c2aa7d49dda70367b1c8f1c8b6b396d",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_2mm",
+    "weights:8b8eef4703a11cc9cae3fccbf34ba7474d406ddbc0dcc42c07593f6ac6e7835c"
+   ],
+   "data": {
+    "actor": "yoloe@10px/mm",
+    "pass": 21,
+    "n": 91
+   },
+   "hash": "060f14bfa479646529e8f307f1d4653b43566f5e0ada14fb4a2bbebe969da202"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:13cfc75acdf4df598387ed41b7f3d3829ea0a8db53c4421bb276e78abd4ea7f1",
+    "att:4cbec86d5585fc5103040a0db0c5368d4be98356cda412121570be00098ada49",
+    "mmr:e62feee3347124df7353207f7b4c216abbf08715a4b4acd36f1284f2d9d692e1",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_2mm",
+    "weights:c2c76e03861c46b2650d19eaf395702d5cab650f981dfd6c829e2daa8c9f28aa"
+   ],
+   "data": {
+    "actor": "yoloe@20px/mm",
+    "pass": 18,
+    "n": 91
+   },
+   "hash": "2c83f687b1e776c35321998427957e9d76d76f5724a54bff1277e4326fb9eddc"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:14c4952f7a2139727d10cbbaf54a69396c95476807ebddaa69fc2f3bd4dddba1",
+    "att:e3c939cb209256223a78e9d5fa49c476ea93eca4739744436d87a77a230a0eb4",
+    "mmr:a61c406e2f1c35e9b0d05351fbcee83a20148cd958c2111591bbf3041df78adb",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_2mm",
+    "weights:24a6a923d17473bb1db379cac67ef17c8eafe3a58b96a3a936b2e7ba14234a9f"
+   ],
+   "data": {
+    "actor": "yoloe@5px/mm",
+    "pass": 10,
+    "n": 91
+   },
+   "hash": "937006d4a1ea6ce43bd39f9ec2598662b1fa44d50d32e4542398c5bb20c11042"
+  },
+  {
+   "kind": "consensus",
+   "nodes": [
+    "actor:13cfc75acdf4df598387ed41b7f3d3829ea0a8db53c4421bb276e78abd4ea7f1",
+    "actor:14c4952f7a2139727d10cbbaf54a69396c95476807ebddaa69fc2f3bd4dddba1",
+    "actor:1797b1a3d3d97c8eaa7f55a69651d19c73e4850cfa0bef44565216db953388b4",
+    "actor:2f10deda7505cf39d64160073d79f9f9f1755dd4cc363af6488dfa0d8f5aea49",
+    "actor:4a2d934a0f14a9f7a25f37f094c6b58d7986f8e1f230db93dea11a5a2fb6c2c5",
+    "actor:650f2aa20bd27e4f61e3f8cbbbf7bb3fcfc66a6bf4654fc0cc9eca65cbbd681f",
+    "actor:6bc98f404ad4320d2faee7e9b09a9af7b286b2d0cd5f51d8e04a32cefeaf4ae6",
+    "actor:7c50fa16491946a365761a73cfc40cab259d44e65ded50c8701d774147722775",
+    "actor:8fb7ed428a1874a132d32d03ab133f417d740fd9c4667d03f0f8d0860f59343d",
+    "actor:a1bad2caceab6b56cb6d5a0202d450bace7bdc96e27566a5c74f7764f5ada6bc",
+    "actor:cc5ca3c6d09c8e82f9a7777503583460a371d354def1cb108caa367de0cd2eac",
+    "actor:f5f2e160c1fb89288d065e0a170788c0e0721025969550ca8ffc00fbb598c269",
+    "mmr:f151b713eb9f9235e5e29fa0daf208f19cf78ab78d922b2d3b032bf2dc1ccd52",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:tol_2mm"
+   ],
+   "data": {
+    "status_counts": {
+     "DISPUTED": 72,
+     "FAILED": 4,
+     "SUPPORTED": 15
+    }
+   },
+   "hash": "5e8f5b017ae1e719fc8ac30ff150e233947ff78e23917c899ff90a2d981a336b"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:2f10deda7505cf39d64160073d79f9f9f1755dd4cc363af6488dfa0d8f5aea49",
+    "att:329acc065efa6789ce9c43a7e73746cdcda6b72b749618e4a368c5590e85d0db",
+    "mmr:de195d4fba656999911b84cd3f8fec861dd8dac37dad84af729948c81fbb0c52",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:plan_only",
+    "weights:d596c18421827a42af6e4fe0de4fa2d8b6f33f28367ed6e30cf62532b0ddf843"
+   ],
+   "data": {
+    "actor": "logic-twin",
+    "pass": 87,
+    "n": 91
+   },
+   "hash": "3b8e4fdaaaec325a5f45d41f1db6aebb7789bf2744824b2dff1bbcdc0243a016"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:a1bad2caceab6b56cb6d5a0202d450bace7bdc96e27566a5c74f7764f5ada6bc",
+    "att:19ac3a655a4881b6da5ae518571493fffedadbe7180d4ccdef992340771a2d55",
+    "mmr:49d475ff748cd2ae6e0e1c07152cd282fc57ece1581404a72bf9ac1f0757e559",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:plan_only",
+    "weights:dee799d4b2ecd3ed2d501c5891eb7498af9fc33e977e83953a251b049a8b2c97"
+   ],
+   "data": {
+    "actor": "lfm2.5-1.2b-instruct_q4_k_m",
+    "pass": 25,
+    "n": 91
+   },
+   "hash": "0d1a59b57d7213ea4cc58e4fba40fb9355032216b8701c6ec923c95b976442d5"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:8fb7ed428a1874a132d32d03ab133f417d740fd9c4667d03f0f8d0860f59343d",
+    "att:82908accebafcede754d86ee273893dbd49d110de5ca3f672a7a5fe1b719a567",
+    "mmr:efc46daa60d8d9f3e7107ae3f126deb3879cf4345570470439b1e04b3d84d990",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:plan_only",
+    "weights:08e0f1fac0530a153f2f368ec222230d2af6b7569568a4dc8920ee33f1c5087c"
+   ],
+   "data": {
+    "actor": "qwen3_1.7b",
+    "pass": 10,
+    "n": 91
+   },
+   "hash": "7ed9a5a35faf7ce3ddfb7c9cf07cf20b2350bdec26584ee0f6b3245002935d46"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:7c50fa16491946a365761a73cfc40cab259d44e65ded50c8701d774147722775",
+    "att:5a1608f976c7f078254803090762ae9c564ac32429a307d3aa18d715376b0ec0",
+    "mmr:ace999e5beaf5923612f1a4d139aefe6cc424e7508e47066d9284bcaaa9346af",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:plan_only",
+    "weights:5f0be481cc7a70ab288b01a110ba34b74a126ad375f98156be363de45e28bad7"
+   ],
+   "data": {
+    "actor": "classical@10px/mm",
+    "pass": 76,
+    "n": 91
+   },
+   "hash": "52d13694e3ad74ccc687f3bd11b0e0bac7dc113d63acfcf36c795daff7dd3e5f"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:6bc98f404ad4320d2faee7e9b09a9af7b286b2d0cd5f51d8e04a32cefeaf4ae6",
+    "att:17503828b7999db0c431fb1c46035311168da259d7f37e29a29835d1081effb6",
+    "mmr:b7a0b185b7cb5a2aa305613fd15633c01c9262a15146d1de52d05b90b643d7e2",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:plan_only",
+    "weights:b4f48fdef83f3b0ef4a8b4b8ab21d57164f7c35e6cea8f269d6b1e0ee4ff0f53"
+   ],
+   "data": {
+    "actor": "classical@20px/mm",
+    "pass": 79,
+    "n": 91
+   },
+   "hash": "3edbdccdd24a4a54a3acd66ec12fe7d30bf9cd0015e05a355e77411948cc497b"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:f5f2e160c1fb89288d065e0a170788c0e0721025969550ca8ffc00fbb598c269",
+    "att:a01de284b51308574d5751701ef09f591075710f9329f1da0bd81a32ff00e897",
+    "mmr:9ba0c8ec000608572d3231480e0b787ca664e9be970d53c2dc8a7efd33e95529",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:plan_only",
+    "weights:7c736744649376a309b32de66e58e1c9d93d3bff5900b5280a542828cd066dfd"
+   ],
+   "data": {
+    "actor": "classical@5px/mm",
+    "pass": 60,
+    "n": 91
+   },
+   "hash": "250fa0df38df6785e179367abfe9d6a25e0effc32162047cc5e25db17f5c6192"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:1797b1a3d3d97c8eaa7f55a69651d19c73e4850cfa0bef44565216db953388b4",
+    "att:a67f430a63faa90117e3e8920d858ba5897e2a70371d3cbf893b1cb9078e7a00",
+    "mmr:0834c17764cc004c777bcb4ef09dccea02f6a037c14f9be6d7a17bb67b2ab792",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:plan_only",
+    "weights:ae625eaa7abb64c647e35708e15c6190582bc4e0e4d306f886f36070694bc4f0"
+   ],
+   "data": {
+    "actor": "yolo@10px/mm",
+    "pass": 4,
+    "n": 91
+   },
+   "hash": "dfc55683829230183398b412b8ee9413840ed6a3c31ef5c2e0ea88237c6545e4"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:cc5ca3c6d09c8e82f9a7777503583460a371d354def1cb108caa367de0cd2eac",
+    "att:f5348930ef3a8e92e482e34811aa80a4f15935e5d47679d06d7e58a267ee2296",
+    "mmr:94480c1cc767787c5ac405d7585382e1bf3f76a8e916f52025a3b9f99eb225ba",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:plan_only",
+    "weights:a85602a942de98dc76c8757b572782b2ae4f0b061e03e4021bc600ee13ffe84b"
+   ],
+   "data": {
+    "actor": "yolo@20px/mm",
+    "pass": 22,
+    "n": 91
+   },
+   "hash": "2f004a0dd6cbe562405a3c96ae27ca8dfa6b4ef4311a50a7e94f12ce10ac1ad6"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:4a2d934a0f14a9f7a25f37f094c6b58d7986f8e1f230db93dea11a5a2fb6c2c5",
+    "att:0aba6e8fe9100163078695e23eced6059026b886376201fabe8250fdc5c7020c",
+    "mmr:2f07328dda77fec31b612032280f582990c0112d22f807299b7245efdd257b71",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:plan_only",
+    "weights:0bb80386171b7dc620e3bcc8bfa1cbd26f726c9901ab61a27f03379698d9fe66"
+   ],
+   "data": {
+    "actor": "yolo@5px/mm",
+    "pass": 5,
+    "n": 91
+   },
+   "hash": "fe90d43e4073fc696a1eb2a0417b9da553279f560cb8ae37640b27e81bbbf3f4"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:650f2aa20bd27e4f61e3f8cbbbf7bb3fcfc66a6bf4654fc0cc9eca65cbbd681f",
+    "att:58eb8ef34e03b1d3a0485772eef93d8c9a2a6420f03060d8948a1e0485a47173",
+    "mmr:5b96cdc5fdff18c14b465b4d89895166d8c9b2efcd54ac881c8fc5d7acc658d0",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:plan_only",
+    "weights:8b8eef4703a11cc9cae3fccbf34ba7474d406ddbc0dcc42c07593f6ac6e7835c"
+   ],
+   "data": {
+    "actor": "yoloe@10px/mm",
+    "pass": 21,
+    "n": 91
+   },
+   "hash": "38b96791175451fe6bbe8cac80e32d5158ff26b2de3c4e58c92867964f9e517a"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:13cfc75acdf4df598387ed41b7f3d3829ea0a8db53c4421bb276e78abd4ea7f1",
+    "att:1393bb6cf66eb31e071d24f445d0f2a2e582c070652a45aa82c8a01504c46f0a",
+    "mmr:f7e50e58f04d80783dd11a40154a13ee99fe254080cc0f27d78e5706d54b4e18",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:plan_only",
+    "weights:c2c76e03861c46b2650d19eaf395702d5cab650f981dfd6c829e2daa8c9f28aa"
+   ],
+   "data": {
+    "actor": "yoloe@20px/mm",
+    "pass": 18,
+    "n": 91
+   },
+   "hash": "8fd11bbfd97a09e737f10abcebc5f4d099c43dd9b8a0d7154237e811540eabf6"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:14c4952f7a2139727d10cbbaf54a69396c95476807ebddaa69fc2f3bd4dddba1",
+    "att:af38e2eb922d523d0601b3b19b06fa7488c02c23a6fe3088eadf82d65f68e408",
+    "mmr:ecfb1d5dc4744eca0a816857c0eacfb048ceb08c2423ff7938b38c8716000844",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:plan_only",
+    "weights:24a6a923d17473bb1db379cac67ef17c8eafe3a58b96a3a936b2e7ba14234a9f"
+   ],
+   "data": {
+    "actor": "yoloe@5px/mm",
+    "pass": 10,
+    "n": 91
+   },
+   "hash": "90ee07fdb0d871a01330d9871423c0767b1052bcfc3ca60f8aae6755f0a86db3"
+  },
+  {
+   "kind": "consensus",
+   "nodes": [
+    "actor:13cfc75acdf4df598387ed41b7f3d3829ea0a8db53c4421bb276e78abd4ea7f1",
+    "actor:14c4952f7a2139727d10cbbaf54a69396c95476807ebddaa69fc2f3bd4dddba1",
+    "actor:1797b1a3d3d97c8eaa7f55a69651d19c73e4850cfa0bef44565216db953388b4",
+    "actor:2f10deda7505cf39d64160073d79f9f9f1755dd4cc363af6488dfa0d8f5aea49",
+    "actor:4a2d934a0f14a9f7a25f37f094c6b58d7986f8e1f230db93dea11a5a2fb6c2c5",
+    "actor:650f2aa20bd27e4f61e3f8cbbbf7bb3fcfc66a6bf4654fc0cc9eca65cbbd681f",
+    "actor:6bc98f404ad4320d2faee7e9b09a9af7b286b2d0cd5f51d8e04a32cefeaf4ae6",
+    "actor:7c50fa16491946a365761a73cfc40cab259d44e65ded50c8701d774147722775",
+    "actor:8fb7ed428a1874a132d32d03ab133f417d740fd9c4667d03f0f8d0860f59343d",
+    "actor:a1bad2caceab6b56cb6d5a0202d450bace7bdc96e27566a5c74f7764f5ada6bc",
+    "actor:cc5ca3c6d09c8e82f9a7777503583460a371d354def1cb108caa367de0cd2eac",
+    "actor:f5f2e160c1fb89288d065e0a170788c0e0721025969550ca8ffc00fbb598c269",
+    "mmr:4c2c93c6b96931e680e7cc9f86d78a7d7f597e552bc91fc1a25b27f4ac911a27",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:plan_only"
+   ],
+   "data": {
+    "status_counts": {
+     "DISPUTED": 69,
+     "FAILED": 4,
+     "SUPPORTED": 18
+    }
+   },
+   "hash": "5fe862d8b4ea48a4cdc8db9f9fc03fe2b4395ee09679c55426e8b0c8da2df3d7"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:fd41bb36fc80c219968bb951c5d0315f70de61bdd14715a8d5211f29076eae01",
+    "att:1f54945a5830d8ddc379d144b6c6e64e3d16e69eb2688d7e8c5220aad883fbbc",
+    "mmr:f15f5a2645e55c47644df477b9df7927137fa7ac4262dbe856dabe0efebdd973",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:toy_triage_v1_raw",
+    "weights:1e117b3197cad0304f4bd865c7955b4b797c3aef54ebae3fd0abe6c06bd307ab"
+   ],
+   "data": {
+    "actor": "toy-triage:classical",
+    "pass": 407,
+    "n": 546
+   },
+   "hash": "a1439ba9b35206a46b1b686535a50916420429cc51a07b986028e81b2dbc3689"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:be7e1de88e6bda60c992adfdf2e5b377f5a8194324fdda29dc5bd5936e1cc2d7",
+    "att:810abc38fe63bec71b95fb11b3ddc2d4fa2922ca5110a2fa6a265203efd4cc61",
+    "mmr:e53a38fd342002dbcd598a2dbac53003b88d2a7851365acbfbe63e0b5c15746f",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:toy_triage_v1_raw",
+    "weights:f4b74563631c80b5abb355dd01a148e5e2ba4024876e6bd798aa4b96a427d9e9"
+   ],
+   "data": {
+    "actor": "toy-triage:consensus",
+    "pass": 407,
+    "n": 546
+   },
+   "hash": "f7acab0a55b1e6e7a1f25a2e6faae859a3b57c70dba79f488b9b209b476b8459"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:fd41bb36fc80c219968bb951c5d0315f70de61bdd14715a8d5211f29076eae01",
+    "att:f308bd1921af64a678da05dd56e7082472b7ea294b2e57601437369b6c9eff8a",
+    "mmr:ba48d572ec9e9e93a2d9550eb07464ae74a1d9113625f9324b967bba49d3ede4",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:toy_triage_v1_calibrated",
+    "weights:1e117b3197cad0304f4bd865c7955b4b797c3aef54ebae3fd0abe6c06bd307ab"
+   ],
+   "data": {
+    "actor": "toy-triage:classical",
+    "pass": 433,
+    "n": 546
+   },
+   "hash": "84d11d1600e0eba5c779cd6f71813c42f48db0840259e6a403eee9cdb1056d00"
+  },
+  {
+   "kind": "evaluation",
+   "nodes": [
+    "actor:be7e1de88e6bda60c992adfdf2e5b377f5a8194324fdda29dc5bd5936e1cc2d7",
+    "att:e817fbb66a4c627d441ea00f029a1d36b3470c5ac107cbc8d7b8ef40168691c4",
+    "mmr:90e6bf37ef0ef08a90c07faab80b1bb5349c1f26d781dff9da12a747a59e7a11",
+    "truth:5d190ae6be4b3b6b4aaa5bf32ce030ad2a09d06ae4589e63e2aeb9bc7f987819",
+    "values:toy_triage_v1_calibrated",
+    "weights:f4b74563631c80b5abb355dd01a148e5e2ba4024876e6bd798aa4b96a427d9e9"
+   ],
+   "data": {
+    "actor": "toy-triage:consensus",
+    "pass": 433,
+    "n": 546
+   },
+   "hash": "468e8a6832c211be3db6470740de9b2d0729e47b4d5205e7f4252a5bd2e424e7"
+  },
+  {
+   "kind": "execution",
+   "nodes": [
+    "mmr:e35d4ce374201d841165d904276d067a01daeff76c6eb4923be51d614df6c490",
+    "protocol:DAISY-BB-001"
+   ],
+   "data": {
+    "status": "FAILED",
+    "reason": "NaN losses from epoch 1 with AMP; aborted after 4 NaN epochs"
+   },
+   "hash": "b18d7c299e2d55d4d84ff6232fea40551ccc890e33b2399f02dfe91a5a593bd4"
+  },
+  {
+   "kind": "ledger",
+   "nodes": [
+    "ledger:daisy_data",
+    "ledgerroot:ec794e03f18e653bab87cf5389384483159169e6243cfdbb2eb51f6b7c205a20"
+   ],
+   "data": {
+    "leaves": 42
+   },
+   "hash": "b51dc63b0e0f276922522509f2c7ec9f8c9773cdc887fab86c6921d6eaa7c38a"
+  },
+  {
+   "kind": "ledger",
+   "nodes": [
+    "ledger:filters",
+    "ledgerroot:c760e15761164c809c4507c7332053cc6d630bde281f38b41aa0e2b00a14cb96"
+   ],
+   "data": {
+    "leaves": 2
+   },
+   "hash": "992051b8308730b76a517db18db609c76ed937a5b63a490d8a8bc621ca2aa2e0"
+  },
+  {
+   "kind": "ledger",
+   "nodes": [
+    "ledger:impact_mmr",
+    "ledgerroot:a0e3cb5ebbfd191d26260485f3f6c0cb7e08e8c1c26b051b4ee4bdbf60e731c7"
+   ],
+   "data": {
+    "leaves": 1
+   },
+   "hash": "dfc5429e21f2b4811f9790993790ced02d337be3cfc72a442a2a9614317f2b2a"
+  },
+  {
+   "kind": "ledger",
+   "nodes": [
+    "ledger:model_compare",
+    "ledgerroot:49116cdd8dbd9919087debb8fd9a1d4f88b4030bda1d11dd9fb723ab559a3058"
+   ],
+   "data": {
+    "leaves": 17
+   },
+   "hash": "3982dbc261e0181177bac21496650a2c96eb4f1fcc4f0bb048513944a0bc2c96"
+  },
+  {
+   "kind": "ledger",
+   "nodes": [
+    "ledger:print_kg",
+    "ledgerroot:4b55ffa2caebce3d593823d34b9850cfb2c411f03e1a204fae28fb96c711c241"
+   ],
+   "data": {
+    "leaves": 15
+   },
+   "hash": "898a04bf53318c66762e64b17c0af91a622bbe42c16c5a70fea4f3791cb5d2c1"
+  },
+  {
+   "kind": "ledger",
+   "nodes": [
+    "ledger:print_kg_lomo",
+    "ledgerroot:339b3f41761f3a89bd65046949d5ac2de5d6659c069faf7a366ba120b8572ebd"
+   ],
+   "data": {
+    "leaves": 6
+   },
+   "hash": "567b5aef6403c9ee293bb5aa6ca57d1b865a4f4661d2b1b910b200e1a0c48fa0"
+  },
+  {
+   "kind": "ledger",
+   "nodes": [
+    "ledger:r2_synth_1_30",
+    "ledgerroot:738c21df8af7515a6d7a461a86a8f7f0f30469f7ff95706742bac1918381308b"
+   ],
+   "data": {
+    "leaves": 36
+   },
+   "hash": "9c8af2f5c3060b6bdcf3d9b9e6ca05e51e2f83f98067e29807f113f3986117dd"
+  },
+  {
+   "kind": "ledger",
+   "nodes": [
+    "ledger:r3_real",
+    "ledgerroot:b0ca959fbbd25aa7120aa3cee80ee79e2e4b007544e9b62e2b1fa0ba8a2559cb"
+   ],
+   "data": {
+    "leaves": 38
+   },
+   "hash": "5273e7418fb22b66e65188071908218307737bf755ee770b3468c7a0645134e4"
+  },
+  {
+   "kind": "ledger",
+   "nodes": [
+    "ledger:r4_multires",
+    "ledgerroot:a2a6aa54d7904161e85ca87287bde38d22254e11787727944a3d94f437490336"
+   ],
+   "data": {
+    "leaves": 4
+   },
+   "hash": "62032ae99b93981e602adf6582585ba304cdfff6c709dd5a4a004185ce82db5d"
+  }
+ ]
+}
