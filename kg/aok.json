@@ -1,5 +1,5 @@
 {
- "atoms": 872,
+ "atoms": 873,
  "external": [
   {
    "claim": "THIRD",
@@ -1378,7 +1378,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 5,
-   "commits": 5,
+   "commits": 6,
    "id": "leaf:baebugs/mvp.py",
    "kind": "code",
    "leaf": "fb249b9d5c753295b11dad6e7fd590407ca825bef956cd331c092b570909eb6a",
@@ -3169,6 +3169,20 @@
    "claim": "OWN",
    "claude_coauthored_commits": 0,
    "commits": 0,
+   "id": "leaf:docs/bench/WORKCELL_DEPLOY_PACKAGING_FAILURE_20261025.json",
+   "kind": "doc",
+   "leaf": "6045cd6b3a552c5df94956b229461f050726c3302ff25686b55d18245943cc29",
+   "licence": "MIT",
+   "module": "docs",
+   "path": "docs/bench/WORKCELL_DEPLOY_PACKAGING_FAILURE_20261025.json",
+   "sha256": "e96c5d4c666e5b23451982b88d1d0a09441a9f3053b230fd22d7c4a381ef936e",
+   "status": "built",
+   "terms": []
+  },
+  {
+   "claim": "OWN",
+   "claude_coauthored_commits": 0,
+   "commits": 1,
    "id": "leaf:docs/bench/WORKCELL_DEPLOY_PREDECESSOR_20261025.json",
    "kind": "doc",
    "leaf": "d0e6fdaaa083d3183e5fa2aab9bdb9d146592d486d3ad8efe5a1d410731204b2",
@@ -11701,18 +11715,18 @@
    "commits": 1,
    "id": "leaf:site/mvp/build_public_site.py",
    "kind": "page",
-   "leaf": "3f65801a08334dc74213499295f4d13364137118dfecbcda09307e6847958567",
+   "leaf": "7fcd7e195f1f4bbd13547ab0f034b290189003dd160570a17d33c80085917d5c",
    "licence": "MIT",
    "module": "mvp-site",
    "path": "site/mvp/build_public_site.py",
-   "sha256": "6b8d444d4d740019dc1ee11b50ad7d72ff3fd1b4697d96d7b546e0e371f1e308",
+   "sha256": "d73b8b7115e89627ebf5dbec6fce92d79ffaaa9eebf4708c89e93f0303eab5af",
    "status": "built",
    "terms": []
   },
   {
    "claim": "OWN",
    "claude_coauthored_commits": 4,
-   "commits": 5,
+   "commits": 6,
    "id": "leaf:site/mvp/index.html",
    "kind": "page",
    "leaf": "2e0a676ff40ae0267e97cc0e2d1d1e1725e77e6becf5ade7f744af27e3392fd1",
@@ -12034,7 +12048,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 3,
-   "commits": 3,
+   "commits": 4,
    "id": "leaf:tests/test_labware_twin.py",
    "kind": "test",
    "leaf": "f4673241a759e7479cb4b12ce056a85a6b7bdb11430865174b1bfa039f1f75f7",
@@ -12300,14 +12314,14 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 1,
+   "commits": 2,
    "id": "leaf:tests/test_workflow_landing.py",
    "kind": "test",
-   "leaf": "68fdec65a9a53e2be6c4a8a61e13d635d343196a8c50d44347d823355e57bdd4",
+   "leaf": "3271033dc965baa68bc32cf37f9f1f4634fe2bb245466dba0f8c2ae170e695cf",
    "licence": "MIT",
    "module": "tests",
    "path": "tests/test_workflow_landing.py",
-   "sha256": "b9643ebde013665daa93c8a2cbf7919b810eb5f4325a45bde4ea1fa85524ecb2",
+   "sha256": "70ecbba20f0ddb1781c43e644fbb6b3d23ceb99aa267e32e1aefeb4c56dbfb07",
    "status": "tested",
    "terms": []
   }
@@ -12370,14 +12384,14 @@
    "terms": []
   },
   "docs": {
-   "atoms": 49,
+   "atoms": 50,
    "claims": {
-    "OWN": 49
+    "OWN": 50
    },
    "id": "module:docs",
-   "root": "648866cd5d7498d3e2c1ceedbbb02d30258589f9e8f44073f6a9a8da644c7c65",
+   "root": "f4091d8260febf0be830af92ba9bb6b6d0e03018ba16fe7a6e21c6d7ab2b1186",
    "status": {
-    "built": 49
+    "built": 50
    },
    "terms": []
   },
@@ -12428,7 +12442,7 @@
     "OWN": 31
    },
    "id": "module:mvp-site",
-   "root": "cad476d85790631cb484516c1a3b9a983b1b411c99d19d62a23718271e1e01c1",
+   "root": "1ac7c76a29b3cd96e0526330673efafcdd89960921d95ae52096c8be06327431",
    "status": {
     "built": 31
    },
@@ -12494,7 +12508,7 @@
     "OWN": 40
    },
    "id": "module:tests",
-   "root": "57ee3903a7b2fefe82fd2e5ab4b391b707aa20b69a397ab268806b566fb660d5",
+   "root": "8d73335a479594e66b22830df1be9e24bd56d90649a23982f3c789a266c97f1f",
    "status": {
     "tested": 40
    },
@@ -12514,9 +12528,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "42791ba908af36254945aa482ecb539400f1cde70717dd220af09b3492136927",
+ "root": "c2456d59c638105e74fe5bc10ea077c4acf0ae5afc9ee569ab6e664708872c02",
  "totals": {
-  "OWN": 803,
+  "OWN": 804,
   "OWN+TERMS": 49,
   "THIRD": 20
  },

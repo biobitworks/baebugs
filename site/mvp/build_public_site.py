@@ -54,7 +54,7 @@ def build(target: Path, source_ref: str):
     (target/"robots.txt").write_text("User-agent: *\nAllow: /\n")
     files={}
     for p in sorted(target.rglob("*")):
-        if p.is_file() and p.name!="deployment-manifest.json":
+        if p.is_file() and p.name!="deployment-manifest.json" and not any(x.startswith(".") for x in p.relative_to(target).parts):
             files[p.relative_to(target).as_posix()]={"sha256":H(p),"bytes":p.stat().st_size}
     manifest={"schema":"baebugs.portal.deployment-manifest.v1",
               "source_ref":source_ref,"evidence_pack_root":json.loads((target/"mvp.json").read_text())["root"],

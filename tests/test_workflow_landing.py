@@ -50,3 +50,13 @@ def test_bench_source_withheld_is_reported_as_custody_gap():
     assert report["custody"]["withheld_bench_sources"]
     assert report["custody"]["withheld_bench_sources"][0]["public_rehash"]=="NOT_AVAILABLE"
     assert report["custody"]["breaks"]==report["custody"]["result_breaks"]+report["custody"]["withheld_photo_breaks"]+len(report["custody"]["withheld_bench_sources"])
+
+def test_public_manifest_excludes_local_vercel_link_metadata():
+    with TemporaryDirectory() as d:
+        root=Path(d)/"site"
+        (root/".vercel").mkdir(parents=True)
+        (root/".vercel/project.json").write_text('{"private":"link metadata"}')
+        (root/".gitignore").write_text(".vercel\n")
+        report=build(root,"0"*40)
+        assert not any(any(part.startswith(".") for part in name.split("/")) for name in report["files"])
+        assert ".vercel/project.json" not in report["files"]
