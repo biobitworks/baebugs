@@ -73,13 +73,25 @@ def pointer(item, index_root, leaves):
             "index_root": index_root, "proof": merkle_proof(leaves, leaves.index(item["sha256"]))}
 
 
-def apply(p, limit=None):
-    """Replace copies by pointers. Re-hashes copy and canonical before each replacement."""
+def apply(p, limit=None, mode="pointer", ledger=None):
+    """Replace copies. Re-hashes copy and canonical before each replacement.
+    mode="pointer": copy -> `<name>.ptr.json` (cold storage; materialize to use).
+    mode="link":    copy -> hardlink to the canonical (tools still read a normal file);
+                    the pointer record goes to a jsonl ledger instead of a sidecar."""
     base, done, skipped = Path(p["base"]), [], []
+    led = Path(ledger or base / "dedupe_pointers.jsonl")
     for it in p["items"][:limit]:
         f, c = base / it["path"], base / it["canonical"]
         if not (f.exists() and c.exists()) or sha(f) != it["sha256"] or sha(c) != it["sha256"]:
             skipped.append(it["path"]); continue
+        if mode == "link":
+            tmp = f.with_name(f.name + ".dedupe_tmp")
+            os.link(c, tmp); os.replace(tmp, f)
+            if f.stat().st_ino != c.stat().st_ino or sha(f) != it["sha256"]:
+                skipped.append(it["path"]); continue
+            with led.open("a") as fh:
+                fh.write(json.dumps({**pointer(it, p["index_root"], p["_leaves"]), "path": it["path"], "mode": "link"}) + "\n")
+            done.append(it["path"]); continue
         ptr = f.with_name(f.name + SUFFIX)
         ptr.write_text(json.dumps(pointer(it, p["index_root"], p["_leaves"]), indent=1))
         if verify(ptr, base)["ok"]:
@@ -114,6 +126,7 @@ def main(argv=None):
     ap.add_argument("base"); ap.add_argument("roots", nargs="+")
     ap.add_argument("--keep", nargs="*", default=[], help="path prefixes preferred as canonical")
     ap.add_argument("--out", required=True); ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--mode", choices=["pointer", "link"], default="pointer")
     ap.add_argument("--only", nargs="*", default=None, help="apply only to copies under these prefixes")
     a = ap.parse_args(argv)
     p = plan(a.roots, a.base, a.keep)
@@ -122,7 +135,7 @@ def main(argv=None):
     rep = {k: v for k, v in p.items() if not k.startswith("_")}
     rep["bytes_saved_selected"] = sum(i["size"] for i in p["items"])
     if a.apply:
-        rep["applied"] = apply(p)
+        rep["applied"] = apply(p, mode=a.mode)
     Path(a.out).write_text(json.dumps(rep, indent=1))
     print(json.dumps({k: v for k, v in rep.items() if k != "items"}, indent=1)[:2000])
 

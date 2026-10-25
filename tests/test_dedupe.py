@@ -16,3 +16,13 @@ def test_pointer_roundtrip(tmp_path):
     assert ptr.exists() and not (tmp_path / "copy/a.jpg").exists() and D.verify(ptr, tmp_path)["ok"]
     out = D.materialize(ptr, tmp_path)
     assert out.read_bytes() == b"A" * 1000 and not ptr.exists()
+
+
+def test_link_mode(tmp_path):
+    (tmp_path / "keep").mkdir(); (tmp_path / "copy").mkdir()
+    (tmp_path / "keep/a.jpg").write_bytes(b"A" * 1000); (tmp_path / "copy/a.jpg").write_bytes(b"A" * 1000)
+    p = D.plan([tmp_path], tmp_path, keep_prefixes=("keep",))
+    assert D.apply(p, mode="link")["replaced"] == 1
+    assert (tmp_path / "copy/a.jpg").stat().st_ino == (tmp_path / "keep/a.jpg").stat().st_ino
+    assert D.plan([tmp_path], tmp_path, ("keep",))["bytes_saved"] == 0          # second pass: nothing left
+    assert (tmp_path / "dedupe_pointers.jsonl").read_text().count("\n") == 1
