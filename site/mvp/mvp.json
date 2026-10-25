@@ -10994,26 +10994,6 @@ null
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "1e5fd8117cd10d819ecaf91c86936840ab28c728d222f5b95787c62d411743e6",
-"licence": "MIT",
-"module": "mvp-site",
-"path": "site/board/index.html",
-"sha256": "62c766bfaac7590bd6834c3cf14679959a783dac8d58aecc5ee491ea5359de00",
-"status": "built"
-},
-{
-"claim": "OWN",
-"kind": "page",
-"leaf": "1e5fd8117cd10d819ecaf91c86936840ab28c728d222f5b95787c62d411743e6",
-"licence": "MIT",
-"module": "mvp-site",
-"path": "site/board/index.html",
-"sha256": "62c766bfaac7590bd6834c3cf14679959a783dac8d58aecc5ee491ea5359de00",
-"status": "built"
-},
-{
-"claim": "OWN",
-"kind": "page",
 "leaf": "9c79730d34794f97915bedea5d5bac03fb7d32d7306bbefebf9a715260dae3a2",
 "licence": "MIT",
 "module": "mvp-site",
@@ -11880,14 +11860,14 @@ null
 "terms": []
 },
 "mvp-site": {
-"atoms": 34,
+"atoms": 32,
 "claims": {
-"OWN": 34
+"OWN": 32
 },
 "id": "module:mvp-site",
-"root": "d4ec594ec598d35f944f53bbef0cd5a92ec334c9ea1b3e51c4ad0ff559874e99",
+"root": "9d211cfe7333f7bb27e4afd4993db29be4a3d61d4ba310609578d20019e67468",
 "status": {
-"built": 34
+"built": 32
 },
 "terms": []
 },
@@ -12733,9 +12713,9 @@ null
 ]
 }
 ],
-"root": "0387b24159ddb6a01109f5795f88403cb79f46f548c7ba26ee1feac8f70c4a5e",
+"root": "c7146bcefeb9af5269f5cde3df814a2847911cabdd29da0561264a1540c7f3fd",
 "roots": {
-"aok": "932db47880e579d7e789803a1cfd9c214d2da3db877d793948774adabaf95a94",
+"aok": "3d4a6e160e7095fd2842be735eb2dc3e6c8673804af9b0e2bf5ce2b036e427ae",
 "assets": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
 "assets_mmr": "97d20c6b90e0385d7cbac87551f93381eba7eeb2e05cecb7ed9f352f349281b2",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -16951,7 +16931,7 @@ null
 }
 ],
 "totals": {
-"OWN": 902,
+"OWN": 900,
 "OWN+TERMS": 52,
 "THIRD": 20
 },

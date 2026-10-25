@@ -1,5 +1,5 @@
 {
- "atoms": 974,
+ "atoms": 972,
  "external": [
   {
    "claim": "THIRD",
@@ -330,7 +330,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 4,
-   "commits": 4,
+   "commits": 5,
    "id": "leaf:README.md",
    "kind": "meta",
    "leaf": "540938b1d1de12a035dbd7aa387e415505a23d44f9c577e14179f47567a2a4dc",
@@ -4570,7 +4570,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/workflow/AI_REVIEW.md",
    "kind": "doc",
    "leaf": "64080caebef093bbaddd9ce70090e4643d0b8a8a68c7f7fc72c0f06c57a2dafd",
@@ -4584,7 +4584,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/workflow/README.md",
    "kind": "doc",
    "leaf": "3ea939ce3516d1e9fb3565ea9f955aa131299bc2111ede6daa0af712dc806984",
@@ -4598,7 +4598,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/workflow/REVIEW_20261025.md",
    "kind": "doc",
    "leaf": "8705616dbfb63ebb52622c1010581d20ecbdbb637a0df3d98a10eb0f50ba79a2",
@@ -4612,7 +4612,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/workflow/reproduce.ipynb",
    "kind": "doc",
    "leaf": "e4e49c1f5f79db1d450a6eacc849e0bc6c09321a6c8139610f9810444ac029f3",
@@ -4626,7 +4626,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/workflow/turn_20261025_01.json",
    "kind": "doc",
    "leaf": "0ce6619f5f36e1eac5ebf56bd42638b0c3c37a99a33a8c9136c554a936722c6d",
@@ -4640,7 +4640,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/workflow/turn_20261025_02.json",
    "kind": "doc",
    "leaf": "8903bf10ff6646d98a53c2104db5c0a13e20abdb151b66d851ca9e77677e54d6",
@@ -4654,7 +4654,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:docs/workflow/turn_20261025_03.json",
    "kind": "doc",
    "leaf": "6066d2d5c28c99e886712b0d2dc151e382ab99bc52c53f7a4b9c0fa8d739d497",
@@ -12697,36 +12697,8 @@
   },
   {
    "claim": "OWN",
-   "claude_coauthored_commits": 2,
-   "commits": 4,
-   "id": "leaf:site/board/index.html",
-   "kind": "page",
-   "leaf": "1e5fd8117cd10d819ecaf91c86936840ab28c728d222f5b95787c62d411743e6",
-   "licence": "MIT",
-   "module": "mvp-site",
-   "path": "site/board/index.html",
-   "sha256": "62c766bfaac7590bd6834c3cf14679959a783dac8d58aecc5ee491ea5359de00",
-   "status": "built",
-   "terms": []
-  },
-  {
-   "claim": "OWN",
-   "claude_coauthored_commits": 2,
-   "commits": 4,
-   "id": "leaf:site/board/index.html",
-   "kind": "page",
-   "leaf": "1e5fd8117cd10d819ecaf91c86936840ab28c728d222f5b95787c62d411743e6",
-   "licence": "MIT",
-   "module": "mvp-site",
-   "path": "site/board/index.html",
-   "sha256": "62c766bfaac7590bd6834c3cf14679959a783dac8d58aecc5ee491ea5359de00",
-   "status": "built",
-   "terms": []
-  },
-  {
-   "claim": "OWN",
-   "claude_coauthored_commits": 2,
-   "commits": 4,
+   "claude_coauthored_commits": 3,
+   "commits": 5,
    "id": "leaf:site/board/index.html",
    "kind": "page",
    "leaf": "1e5fd8117cd10d819ecaf91c86936840ab28c728d222f5b95787c62d411743e6",
@@ -13160,7 +13132,7 @@
   {
    "claim": "OWN",
    "claude_coauthored_commits": 0,
-   "commits": 0,
+   "commits": 1,
    "id": "leaf:site/workflow/index.html",
    "kind": "page",
    "leaf": "cacff90cbb233e6fade42a4858b2c78008c2df7f1401d0897d5ca1d4ee5fa7ae",
@@ -13857,14 +13829,14 @@
    "terms": []
   },
   "mvp-site": {
-   "atoms": 34,
+   "atoms": 32,
    "claims": {
-    "OWN": 34
+    "OWN": 32
    },
    "id": "module:mvp-site",
-   "root": "d4ec594ec598d35f944f53bbef0cd5a92ec334c9ea1b3e51c4ad0ff559874e99",
+   "root": "9d211cfe7333f7bb27e4afd4993db29be4a3d61d4ba310609578d20019e67468",
    "status": {
-    "built": 34
+    "built": 32
    },
    "terms": []
   },
@@ -13948,9 +13920,9 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "932db47880e579d7e789803a1cfd9c214d2da3db877d793948774adabaf95a94",
+ "root": "3d4a6e160e7095fd2842be735eb2dc3e6c8673804af9b0e2bf5ce2b036e427ae",
  "totals": {
-  "OWN": 902,
+  "OWN": 900,
   "OWN+TERMS": 52,
   "THIRD": 20
  },
