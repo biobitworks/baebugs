@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import subprocess
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -99,9 +100,9 @@ def _terms(repo, path, kind):
             src = (repo / path).read_text(errors="ignore")
         except OSError:
             src = ""
-        if "ultralytics" in src:
+        if re.search(r"(from|import)\s+ultralytics", src):
             t.append("ext:ultralytics")
-        if "opentrons" in src and "opentrons" in path:
+        if re.search(r"(from|import)\s+opentrons", src):
             t.append("ext:opentrons")
     if path.startswith(("kaggle/", "daisy/results/")):
         t.append("ext:ultralytics")
