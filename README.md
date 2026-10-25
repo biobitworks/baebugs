@@ -50,7 +50,7 @@ Cameras are picked by name because Windows renumbers them when one is plugged in
 & $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\dish_sizer.py vision\samples\dish_phone_01.webp --px-per-mm 9.12 --out vision\output\annotated.png --json vision\output\objects.json
 ```
 
-Outputs each object's length and width in mm (width decides whether it passes a filter) plus an annotated image. `--px-per-mm` must be measured for each camera setup (it changes whenever the camera height changes). Measure it from a ruler in the photo with a strip across its mm ticks that avoids glare and the dish rim:
+Outputs each object's length and width in mm (width decides whether it passes a filter) plus an annotated image. Without `--px-per-mm`, the scale comes from `vision\calibration.json`, measured for the mounted webcam (13.9 px/mm). The scale changes whenever the camera height or angle changes, so after moving the camera, photograph a mm ruler lying flat **beside** the dish (never under it) and re-measure. Measure it from a ruler in the photo with a strip across its mm ticks that avoids glare and the dish rim:
 
 ```powershell
 & $env:USERPROFILE\lerobot-env\Scripts\python.exe vision\ruler_scale.py vision\samples\dish_phone_02.webp --along vertical --strip 333 348 60 440 --strip 333 348 1040 1330

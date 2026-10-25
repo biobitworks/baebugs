@@ -4,13 +4,17 @@ Finds the dish, separates objects from the background by colour difference,
 and measures each object's length and width (the short side is what decides
 whether it fits through a filter's holes).
 
-Usage: python dish_sizer.py IMAGE --px-per-mm 9.18 [--out annotated.png] [--json objects.json]
+Usage: python dish_sizer.py IMAGE [--px-per-mm 13.9] [--out annotated.png] [--json objects.json]
+  Without --px-per-mm the scale comes from calibration.json (the mounted webcam).
 """
 import argparse
 import json
+from pathlib import Path
 
 import cv2
 import numpy as np
+
+CALIBRATION = Path(__file__).with_name("calibration.json")
 
 
 DISH_RADIUS_MM = (24, 36)  # the 63 mm dish's rings (floor edge to lid rim) all fall in this range
@@ -22,17 +26,25 @@ def find_dish(img, px_per_mm):
     The dish has several concentric rings (rim, wall), so only the centre is reliable.
     The search is limited to dish-sized circles in mm, so it works at any zoom or aspect ratio.
     On a pale background the clear rim has little contrast, so the edge thresholds are relaxed
-    step by step until a circle turns up.
+    step by step until circles turn up. Only circles that fit inside the photo count (straight
+    edges such as a ruler can produce huge circles centred near the border), and the centre is
+    the median of the strongest few, since the dish's rings give slightly different circles.
     """
     gray = cv2.medianBlur(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY), 5)
+    h, w = gray.shape
     lo, hi = (int(r * px_per_mm) for r in DISH_RADIUS_MM)
+    margin = 0.02 * max(h, w)
     for edge, votes in ((100, 40), (60, 30), (40, 25)):
         circles = cv2.HoughCircles(
-            gray, cv2.HOUGH_GRADIENT, dp=1.5, minDist=max(gray.shape),
+            gray, cv2.HOUGH_GRADIENT, dp=1.5, minDist=20,
             param1=edge, param2=votes, minRadius=lo, maxRadius=hi,
         )
-        if circles is not None:
-            cx, cy, r = circles[0][0]
+        if circles is None:
+            continue
+        inside = [(x, y, r) for x, y, r in circles[0]
+                  if x - r > -margin and y - r > -margin and x + r < w + margin and y + r < h + margin][:5]
+        if inside:
+            cx, cy, r = np.median(np.array(inside), axis=0)
             return int(cx), int(cy), int(r)
     return None
 
@@ -124,7 +136,7 @@ def annotate(img, dish, inner_r, results):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("image")
-    ap.add_argument("--px-per-mm", type=float, required=True)
+    ap.add_argument("--px-per-mm", type=float, help="scale of this photo; defaults to calibration.json (the mounted webcam)")
     ap.add_argument("--threshold", type=float, default=20, help="colour difference from background (CIELAB)")
     ap.add_argument("--floor-mm", type=float, default=48, help="diameter of the dish floor to analyse, mm (63 mm dish: wall starts at ~48 mm)")
     ap.add_argument("--shadow-weight", type=float, default=0.5, help="weight of darkening vs colour change (shadows only darken)")
@@ -132,6 +144,11 @@ def main():
     ap.add_argument("--out", default="annotated.png")
     ap.add_argument("--json")
     args = ap.parse_args()
+    if args.px_per_mm is None:
+        if not CALIBRATION.exists():
+            raise SystemExit("no --px-per-mm given and no calibration.json; measure the scale with ruler_scale.py")
+        args.px_per_mm = json.loads(CALIBRATION.read_text())["px_per_mm"]
+        print(f"scale: {args.px_per_mm} px/mm from {CALIBRATION.name}")
 
     img = cv2.imread(args.image)
     if img is None:
