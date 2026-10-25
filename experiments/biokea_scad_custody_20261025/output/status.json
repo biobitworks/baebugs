@@ -2,15 +2,16 @@
   "schema": "biokea.cad.dashboard.v1",
   "status": "VIRTUAL_RENDER",
   "version": 1,
-  "updated_utc": "2026-10-25T07:30:44.027490+00:00",
+  "updated_utc": "2026-10-25T12:08:43.044885+00:00",
   "verification": {
     "PASS": true,
     "algorithm": "HYDRALAMP_MMR_V1",
-    "leaves": 9,
-    "root": "79617d22d852ef2c76fcc99350a88e7f7c9dcb37b34a89a8faaec09a7f16171d",
+    "leaves": 14,
+    "root": "c2292e38a40e789256cc0e14ee0565d032795ae5171fa88bdda6b9a05720c23f",
     "peaks": [
       "a66bd1a42146f8571a9b8c629cd44100ea9c49373e499fb1e23c29d2670688c0",
-      "5cf9ebd366d70b9e3d3048ba41bc98af2e0731035e364292cb0ac93cd1a6218b"
+      "41f9bc61803d674eabfd466235e4fb197ebe740ea673b994973d573c14a04b6f",
+      "e76ad16bc965282abbeff37918b04b7c307451486c33d02dcd29b014beadb5ef"
     ],
     "identity_recomputed": true,
     "prefixes_recomputed": true,
@@ -330,6 +331,184 @@
         "signed": "NOT_SIGNED",
         "state": "OBSERVED",
         "time_utc": "2026-10-25T07:30:44.024900+00:00"
+      }
+    },
+    {
+      "event_hash": "ed6c7b462442667cf2ee365d86cc8b86973463c7b009a027c490b68394709d35",
+      "event_index": 10,
+      "fco_id": "fco:sha256:ed6c7b462442667cf2ee365d86cc8b86973463c7b009a027c490b68394709d35",
+      "record": {
+        "details": {
+          "events": 41,
+          "events_root": "09b78c8ff6abbbb8a81738ac474807603463c54ee1f98f6825bd9edea176d9bc",
+          "member_bytes_directly_rehashed": false,
+          "members_from_manifest_verified": 14,
+          "merged_with_training_mmr": false,
+          "protocol_sha256": "1539b8f8728072e2ffcb911e4997ff6e600c0467a3d3179ce7147e47cd8cbf51",
+          "source_commit": "6332fa7f4139723cd01e18af724b8b2c7c4a8915",
+          "source_relationship": "REFERENCES_IMMUTABLE_DAISY_EXPERIMENT",
+          "sources_sha256": {
+            "decision": "648152ce6c4271c6fa86614be7a0ff5a445cce8685a9cbfde273998e85851b80",
+            "events": "53e9a0214efaea90f03091828d6b38f593980406186bc215d7069181ded091a5",
+            "protocol": "1539b8f8728072e2ffcb911e4997ff6e600c0467a3d3179ce7147e47cd8cbf51",
+            "result": "9ca0af5f4b3dd80a6b994131ad3230dc2895397770ad05491b153b467d04932e"
+          }
+        },
+        "inputs": {
+          "review_snapshot_sha256": "ef428a8ebde64a2d5f89693e3675a2df962bf65351acbe2fc5b47ba95fd8d9b7"
+        },
+        "kind": "DAISY_002A_SOURCE_VERIFICATION",
+        "parent_fco_id": "fco:sha256:ce38279abc7858da21d75f5410fb8dada97cb42ceba018353adacd03d2bc88e7",
+        "physical_hardware_executed": false,
+        "previous_root": "79617d22d852ef2c76fcc99350a88e7f7c9dcb37b34a89a8faaec09a7f16171d",
+        "project": "biobitworks/baebugs",
+        "reference_source": "biobitworks/antigense-cyberhack/src/custody.py",
+        "role": "READ_ONLY_VIRTUAL_CAD",
+        "schema": "biokea.cad.ObservationFCO.v1",
+        "signed": "NOT_SIGNED",
+        "state": "OBSERVED",
+        "time_utc": "2026-10-25T12:07:31.056445+00:00"
+      }
+    },
+    {
+      "event_hash": "617a782154714d6b1690c118d33bc5f89f8abeeb78cbca88fc14fb3c23c26344",
+      "event_index": 11,
+      "fco_id": "fco:sha256:617a782154714d6b1690c118d33bc5f89f8abeeb78cbca88fc14fb3c23c26344",
+      "record": {
+        "details": {
+          "excluded_interpretation": [
+            "NV: n=8"
+          ],
+          "heldout_scores_delta": {
+            "holdout_az": 0.6955,
+            "holdout_nv": 0.4977,
+            "holdout_or": 0.5205
+          },
+          "model_admission": "VALIDATION_CANDIDATE",
+          "n": {
+            "AZ": 72,
+            "NV": 8,
+            "OR": 132
+          },
+          "physical_recovery": "NOT_TESTED",
+          "primary_rule": "amendment 1 absolute delta >0.03",
+          "run_epoch_checks": {
+            "CA_only": 16,
+            "Synth_only": 16
+          },
+          "scope": "agreement with YOLOE pseudo-labels on domain partition holdouts; NOT independent biological truth",
+          "supported_domains": [
+            "AZ",
+            "OR"
+          ],
+          "toy_render_length_error": {
+            "ca": 0.2267,
+            "synth": 0.0941
+          }
+        },
+        "inputs": {},
+        "kind": "DAISY_002A_EXPLORATORY_DECISION",
+        "parent_fco_id": "fco:sha256:ed6c7b462442667cf2ee365d86cc8b86973463c7b009a027c490b68394709d35",
+        "physical_hardware_executed": false,
+        "previous_root": "a5049f3f86fc2218e5a97e086920dc1be2dbea783b8ac0383ba443f3f8b03050",
+        "project": "biobitworks/baebugs",
+        "reference_source": "biobitworks/antigense-cyberhack/src/custody.py",
+        "role": "READ_ONLY_VIRTUAL_CAD",
+        "schema": "biokea.cad.ObservationFCO.v1",
+        "signed": "NOT_SIGNED",
+        "state": "SUPPORTED",
+        "time_utc": "2026-10-25T12:07:31.059415+00:00"
+      }
+    },
+    {
+      "event_hash": "18fed8f8d65d89d2fbc9bfd55a78f7a2fd7967bcb76f26ca8d5fe35a8f19bc5c",
+      "event_index": 12,
+      "fco_id": "fco:sha256:18fed8f8d65d89d2fbc9bfd55a78f7a2fd7967bcb76f26ca8d5fe35a8f19bc5c",
+      "record": {
+        "details": {
+          "already_running_001b_has_fix": false,
+          "can_reconstruct_weights_from_sha256": false,
+          "generator_fix_committed": true,
+          "human_ticket": "https://github.com/biobitworks/baebugs/issues/2",
+          "original_weight_bytes": "NOT_RECOVERED",
+          "source_issue": "status EXECUTED -> OBSERVED_EXPLORATORY after eval; old FINISH skipped export and deleted run dirs",
+          "weight_hashes": {
+            "CA_only": "316ce50545855c4076601d9c0f558f7aee4bb98313c97d9131df893a820a8b0a",
+            "Synth_only": "bd036ec7a5dab7e10fd16eb542f82969c8fc0d154775b6193b133e33da42064c"
+          }
+        },
+        "inputs": {},
+        "kind": "DAISY_002A_WEIGHT_EXPORT",
+        "parent_fco_id": "fco:sha256:617a782154714d6b1690c118d33bc5f89f8abeeb78cbca88fc14fb3c23c26344",
+        "physical_hardware_executed": false,
+        "previous_root": "e753c0a4e90ea833e4004555bde8adf7b927c8c102a466f6a29e8f27e66b98f1",
+        "project": "biobitworks/baebugs",
+        "reference_source": "biobitworks/antigense-cyberhack/src/custody.py",
+        "role": "READ_ONLY_VIRTUAL_CAD",
+        "schema": "biokea.cad.ObservationFCO.v1",
+        "signed": "NOT_SIGNED",
+        "state": "FAILED",
+        "time_utc": "2026-10-25T12:07:31.061973+00:00"
+      }
+    },
+    {
+      "event_hash": "0d25fda43b0a57b2ca906b7997cff7cbb94beb5ca26d4b504b5829c345025c06",
+      "event_index": 13,
+      "fco_id": "fco:sha256:0d25fda43b0a57b2ca906b7997cff7cbb94beb5ca26d4b504b5829c345025c06",
+      "record": {
+        "details": {
+          "acknowledged": "NOT_TESTED",
+          "approved": false,
+          "hardware_movement": "NOT_TESTED",
+          "issue_created": true,
+          "issue_number": 2,
+          "issue_url": "https://github.com/biobitworks/baebugs/issues/2",
+          "notification_delivery": "NOT_TESTED",
+          "owner": "UNASSIGNED",
+          "provider": "GitHub Issues",
+          "role": "HUMAN_REVIEW_REQUEST",
+          "severity": "P1"
+        },
+        "inputs": {},
+        "kind": "VIP_HUMAN_INTERVENTION_002A",
+        "parent_fco_id": "fco:sha256:18fed8f8d65d89d2fbc9bfd55a78f7a2fd7967bcb76f26ca8d5fe35a8f19bc5c",
+        "physical_hardware_executed": false,
+        "previous_root": "8e0678380de87c89eb30f51a42f8927dab38f91a3762493c8f1b7f92e511cc19",
+        "project": "biobitworks/baebugs",
+        "reference_source": "biobitworks/antigense-cyberhack/src/custody.py",
+        "role": "READ_ONLY_VIRTUAL_CAD",
+        "schema": "biokea.cad.ObservationFCO.v1",
+        "signed": "NOT_SIGNED",
+        "state": "OBSERVED",
+        "time_utc": "2026-10-25T12:07:31.064711+00:00"
+      }
+    },
+    {
+      "event_hash": "0e9e5ab7683a1b82de34aec9964c020e0ff4ee89b0b659a63471ab9271e1b575",
+      "event_index": 14,
+      "fco_id": "fco:sha256:0e9e5ab7683a1b82de34aec9964c020e0ff4ee89b0b659a63471ab9271e1b575",
+      "record": {
+        "details": {
+          "dashboard_html_sha256": "10f8346d4d12af52416f541196bcf66c14df150bbf3304bdf07024709b0335bb",
+          "deployment_readback": "NOT_TESTED_AT_APPEND",
+          "display_claim": "REPORTED_SOURCE_BOUND_NOT_LIVE_TELEMETRY",
+          "historical_browser_index_preserved_sha256": "f10ee832886f61a3a94764b9e71ae0b62be2672cac640560b0f4480b1ac8a9c7",
+          "review_projection_sha256": "ef428a8ebde64a2d5f89693e3675a2df962bf65351acbe2fc5b47ba95fd8d9b7",
+          "review_source_events_root": "09b78c8ff6abbbb8a81738ac474807603463c54ee1f98f6825bd9edea176d9bc",
+          "vip_ticket_url": "https://github.com/biobitworks/baebugs/issues/2"
+        },
+        "inputs": {},
+        "kind": "DAISY_002A_DASHBOARD_INTEGRATION",
+        "parent_fco_id": "fco:sha256:0d25fda43b0a57b2ca906b7997cff7cbb94beb5ca26d4b504b5829c345025c06",
+        "physical_hardware_executed": false,
+        "previous_root": "5c038263d4997c1ab825cd88daa4de78a782ec256d4689daf2af35f20171a13d",
+        "project": "biobitworks/baebugs",
+        "reference_source": "biobitworks/antigense-cyberhack/src/custody.py",
+        "role": "READ_ONLY_VIRTUAL_CAD",
+        "schema": "biokea.cad.ObservationFCO.v1",
+        "signed": "NOT_SIGNED",
+        "state": "EXECUTED",
+        "time_utc": "2026-10-25T12:08:43.039305+00:00"
       }
     }
   ],

@@ -39,6 +39,26 @@ footer{color:var(--dim);font-size:12px;margin-top:26px}
 <div class="kv"><div class="key">Physical validation</div><div class="val">NOT_TESTED</div></div>
 <div class="kv"><div class="key">Previous Antigense MMR</div><div class="val">NOT_MODIFIED</div></div>
 <button onclick="refresh()" style="margin-top:16px">Reverify ledger</button><div id="updated" class="meta"></div></section></div>
+<section class="card" style="margin-bottom:16px" id="trainingPanel">
+<h2>DAISY-BB-002a · exploratory training evidence</h2>
+<div class="small">Snapshot from pinned GitHub commit 6332fa7. This is not a live Kaggle connection, an independent biological ground truth, or model deployment.</div>
+<div class="grid" style="margin-top:14px">
+ <div class="spec"><div class="small">Arizona holdout · 72 images</div><b>+0.6955 mask mAP</b><p>California-photo + synthetic training versus synthetic-only; YOLOE teacher labels.</p><span class="state">SUPPORTED · exploratory</span></div>
+ <div class="spec"><div class="small">Oregon holdout · 132 images</div><b>+0.5205 mask mAP</b><p>Same evaluation convention; pseudo-label teacher agreement.</p><span class="state">SUPPORTED · exploratory</span></div>
+ <div class="spec"><div class="small">Nevada holdout · 8 images</div><b>+0.4977 mask mAP</b><p>Small sample; insufficient for the frozen interpretation gate.</p><span class="state warn">NOT_INTERPRETED</span></div>
+</div>
+<div class="grid" style="margin-top:13px">
+ <div class="spec"><b>41/41 event hashes</b><p>Recomputed against the frozen 002a training event Merkle root. Separate from this workcell's Antigense-style MMR.</p><div class="mono" style="color:#b0dbdb">09b78c8ff6abbbb8a81738ac474807603463c54ee1f98f6825bd9edea176d9bc</div></div>
+ <div class="spec"><b>32/32 finite epochs</b><p>Both runs completed. No model promotion without independent labels and artifact readback.</p><span class="state warn">VALIDATION_CANDIDATE</span></div>
+ <div class="spec"><b style="color:var(--red)">P1 · weights unavailable</b><p>The FINISH export lost both best.pt artifacts. Model hashes survive but cannot reconstruct checkpoint weights.</p><span class="state fail">FAILED · human review</span></div>
+</div>
+<div class="kv"><span class="key">Toy renders, 20 px/mm · median relative length error</span><span class="val">Synthetic-only 9.41% · CA-trained 22.67%</span></div>
+<div class="kv"><span class="key">Out-of-distribution teacher_check</span><span class="val" style="color:var(--gold)">0 mAP · QUARANTINE AS ORACLE</span></div>
+<div class="kv"><span class="key">VIP human decision</span><span class="val"><a href="https://github.com/biobitworks/baebugs/issues/2">GitHub issue #2 · OPEN / UNASSIGNED</a></span></div>
+<p class="small">No human approval or notification delivery has been observed. No physical specimen was captured by this virtual CAD demonstrator.</p>
+<a href="training_review_002a.json">Inspect derived source-bound review snapshot</a> ·
+<a href="https://github.com/biobitworks/baebugs/blob/6332fa7f4139723cd01e18af724b8b2c7c4a8915/daisy/results/DAISY-BB-002a/v2/DECISION.md">Frozen decision source</a>
+</section>
 <section class="card" style="margin-bottom:16px"><h2>Three tracked analog objects — schematic, not recovered</h2>
 <div class="grid"><div class="spec"><b>T01 · Rice-like</b><p>Displayed as elongated body. Intended input calibration object. Physical fraction unknown.</p><span class="state warn">RECOVERY NOT_TESTED</span></div>
 <div class="spec"><b>T02 · Chia-like</b><p>Displayed as small dark body. Small-object sensitivity and mesh passage remain untested.</p><span class="state warn">RECOVERY NOT_TESTED</span></div>

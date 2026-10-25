@@ -43,3 +43,15 @@ events; a static Vercel deployment requires a new publish/deploy for updates.
 References:
 https://github.com/biobitworks/baebugs
 https://github.com/biobitworks/antigense-cyberhack
+
+## Successor — DAISY-BB-002a v2 research result
+New events 10–13 bind GitHub source SHA-256s, preregistered exploratory
+decision, historical lost weights (FAILED) and actual GitHub human review
+ticket #2. Event 14 binds the updated local read-only dashboard HTML.
+
+output/training_review_002a.json is a derived source-bound review.
+The separate training experiment has 41 event leaves and its own
+Merkle root (09b78c8...). The CAD MMR is NOT a cryptographic
+extension of that training tree or any Antigense historical MMR.
+The physical workcell and model serving remain NOT_TESTED.
+The HTML is a published snapshot, not a live Kaggle subscription.
