@@ -2252,11 +2252,11 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
-"leaf": "93f8005dcb0eb8a58e619f4edf51c84f51498f82737a9afb4b38a0e797a599de",
+"leaf": "c88f93f153860995591f7da051125fa2ae1f37c809757016dd0bf775b2941aa7",
 "licence": "MIT",
 "module": "repo-meta",
 "path": "NOTICE.md",
-"sha256": "6592feb29dd6c78d9509342e9510a391b7c58116a948e22845b49ad706927544",
+"sha256": "36ad739f708ff7e6bfdc113f650c92bd529ff50e25b9da39d2efe9fdcf7f82bd",
 "status": "built"
 },
 {
@@ -5432,6 +5432,106 @@ null
 {
 "claim": "OWN",
 "kind": "doc",
+"leaf": "f0a0e3d763702429b70cb3d11f84c18f5f56963609665770b588ec2b7d337ae1",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/story/AUDIT.md",
+"sha256": "86762d6530f3d86d0259ac2f20d217400fb857f7e280cf95561fb123ae04dfc2",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "1ea4dcad4d309eb650d1d0a414bac9136c099ccf360adccfa06781407ba27bb6",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/story/phone_step_2.png",
+"sha256": "d00f3343e814d1072d3bf6663681e787d1e7d8bae1983a79eb79ef856750e6c3",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "5939d41b97f3b422ac13108f4ea9797cce3edbc7e1f1ef1d7c3d5375c8036d42",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/story/step_0.png",
+"sha256": "02ccda2f3366eeb995400efb8cda015b0f9ec72653ce254eaa4216ed99439133",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "b985450a59459135a1c42020c572ddbb10fb6592e8c0939d68bee44cbe62abf4",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/story/step_1.png",
+"sha256": "a7301f8fcb593ca17aa5b127a22ab9cf0e5950535a2da147da8dad5362120585",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "181ef5209c3031739c68e92e6a93a6645c55ca730ad22defb7b66fd6ffe1d6b3",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/story/step_2.png",
+"sha256": "6daf3baa4c3ff603b384370e4ab5d621be5621a49798050d6c8f303e864083ee",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "62417a23244a97e4453becb660cc90ee139d11782eb9e22b3c7c404b6c39e669",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/story/step_3.png",
+"sha256": "7df6aa3f934bd156bba57cd9bd671864ab4fad53ab29177ee4b134a2dc8d4cca",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "a4cb1556e4c0ca02823aa1bc7ac5a07edf3a9d16c21c0460f264aa1dd344aefb",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/story/step_4.png",
+"sha256": "94f9d521255a3e76cab6c75d7036165df2dbc8e5e98b3d76dee564c5a718c3ed",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "f140974defaa05de50eb3db27b6d0320b5f570e58bec6781a57bdb345fcb6ae9",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/story/step_5.png",
+"sha256": "5193db6936152173bc3326d634394c0d04a59a551ca5aeeb9f6efcd7aa2cf626",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "bb25fcc6356e083a7a90767a9c4da2f7adad537f17457a4794732b669d66e3dc",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/story/step_6.png",
+"sha256": "b7e5839cd3855ed71d3d0a6cb99c9a4909cff0e7eae9d4a305ebc3b16731cfde",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "fea21dc93cd8f1995db4084128a111b4e7d5ab37692126dbc54ccb7cb1317a13",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/story/step_7.png",
+"sha256": "b47388166b2a1b8d6a75310095fb19cdc28e077b1003817e816d7157e698f4b7",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
 "leaf": "9711101e79d928014a51ff3f29463d78b75a5c10626fb67df052b169b1827f43",
 "licence": "MIT",
 "module": "docs",
@@ -5527,6 +5627,146 @@ null
 "module": "docs",
 "path": "docs/workflow/turn_20261025_03.json",
 "sha256": "d00fbfe2377050ed2c4432a7df732144f2065b8897106d09dee6da9a146f7f43",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "d2a5897ff2716f2678d62da8dc6c63a6c04b98e154d23a2dc4fb7ee529e8aab1",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/workflow_video/.gitignore",
+"sha256": "9a64457e3d7a33fee0b8c78afe75836719f23c7291d67c33d3a507394909e504",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "1f62f0b3187702d8e941b8d63379345348b7f6b27f010ed96e2a832d2a00f8ae",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/workflow_video/README.md",
+"sha256": "a14e364faeb19b52b8bab844f42bf35639f8cb6958bea15bcca70a7d15c25d44",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "d2943a931e1098b9ef7924f3ef176b004b5d3bdb39d399aab358bdec3ea9bfde",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/workflow_video/V2.md",
+"sha256": "f6efae168cdba9ec6f8be0ed6fe44c5ce4b6d0a2ba2ff2e4ea7590a1655c30b6",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "8120fbd194d70fe56a5ff21707c03d15b8164a914073fdb571e1dd6509db6b39",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/workflow_video/biokea_vs_baebugs.mp4",
+"sha256": "fd733a5a904dd0cafe88b4a9a829595cf30690f50a6bd124e3646f234ff7525a",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "3ae10c20cf8e21559383fcdc6bd9588d3b0567d5a86bee1827f62b44c5e5262d",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/workflow_video/biokea_vs_baebugs_v2.mp4",
+"sha256": "d14dd5d6f0585daab3b4915f4bea661c4716ace5026b9ae6baa93d227cee931d",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "db2de5ba43eadb3604724bd83f1dd20babb7d5c1f618e11d38598a3d7b1c827e",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/workflow_video/render.py",
+"sha256": "87d751d06717e6e112e695cd544be92e32c2db91107f9f4132a775e891a3d80b",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "c3a79ea19f4bd5949574155662714b30ebd717d30210a8299d7a5dc2863d61c0",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/workflow_video/render_v2.py",
+"sha256": "580972b34d35bdf100ddb74f811efad184f8205735eb913433bdaaadcb2fd79e",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "54a01b2583ecc5624ab90dd56f2945c70821c77f42a8623dfcc7a3bc023d70e5",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/workflow_video/reproduce.ipynb",
+"sha256": "4af667094c52ccce0a0e56f2b0ede785c075e05e3625699c772d4f1421065355",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "b7640a828afdeb94bacb7a03440dbb6e244d9221fe57406e36f6639ce2fb9139",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/workflow_video/reproduce_v2.ipynb",
+"sha256": "b972f05fdb9f79058d20455a3dc75da610d4a4c5dc467f7d5c57a6c4d32d988d",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "2fffbc88b707bbd9c07a532faaa023d3b67e3d5c7a6df1d718e30b191bd86099",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/workflow_video/stage_1_v2.png",
+"sha256": "8b9d6305ddfa41c9faa751faf34c2cfa3b8257cc62c9e9a5679257c54f471355",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "51d6bc3c84a72efec63e7be9e0cb468238eae29b1d7bceb95cad4d6cd9feb250",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/workflow_video/turn_20261025_04.json",
+"sha256": "caabf88acf89674d9686612c3a958f8237f7d794f22b2238b40eb851f26ecada",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "7cca7e4fda2ecb894fcc8159019e3aac7a41e06e49503dd0290b0bef8b2bb32b",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/workflow_video/turn_20261025_05.json",
+"sha256": "b9c336c55b1c72232aad3c2af59dcde39fcf7eaf96367a8805f60e0eb3224493",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "fff23cbfc8fa046cd6dd5dc526662e868496f47b1e5f97d78b0e779730c0e327",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/workflow_video/workcell.scad",
+"sha256": "520beb824139eefe1d286bc76f59ca3f4e441a47efe23afd73a6d0b090315806",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "b041e4c9ece9744940d84adf2cfcb4679efda3df5f01319d7a1b5f160eb036a3",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/workflow_video/workcell_v2.scad",
+"sha256": "b04f45d6b039e792bdf4d703ccfcad1eff0b9502b807d287797b2226b0b67157",
 "status": "built"
 },
 {
@@ -6342,6 +6582,576 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
+"leaf": "2303a47c42f133c6de6d873b50824a4b015e2c35273cdb61e84f5462437870af",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/.gitignore",
+"sha256": "dd8ea0c940b6e61b8faa9bd1bee5b18da6b0973da9289d18ac82a07399136502",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "3c7b28e9c0a2456128da4ac1b1724370b1a48458b77d3ccc4310d7fc100fa2b5",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/CLAUDE.md",
+"sha256": "33036d51616a5582e0334ce63ada7c590c95192943df5234b0ff122a60a925f8",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "534b86549d7e7fda505858c1de8982780e9ce76b17deda212670555b8592e229",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/README.md",
+"sha256": "06162d918cfd77b138c15c4d67fa868516df228771e640a8dee682d6eaf4736b",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "251cb16c1d9c6293abbf7c76964a99f8676f7597d52ae7da29e966c0838c1241",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/arm/TEACHING.md",
+"sha256": "c787f5678742d8c58a4442ccf7b6d54798d4183dc2f22a6259e78938d88106b4",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "96087bae5a68b1581378981b531f8a69210abb1ad1091f9075ba79fec081a4fd",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/arm/calibration/so_follower/my_follower.json",
+"sha256": "7134fe59c9b5f2453498e0b2310fb1a11e278880b494275f90d8dac6cc34b665",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "de2410f78296cbbf98120a1a4da4031f02933c7c28b0c9e9dec63f21910dab89",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/arm/calibration/so_leader/my_leader.json",
+"sha256": "d36aa18d08d3d598f62459c6922459688b25878e9b0d45cab8cc6ebfc7e7abd7",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "83c7945c8f442c0e36e22a276393df27de36658949c39eac750820917d6f052b",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/arm/layout.json",
+"sha256": "2b8c831ba129e2a692128b9322a72995096b0232809c0898b3c00877505977d2",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "de89d567d062e3c69dd8750307d8f856b141ac5e567079f1447708c7ad9c579b",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/arm/mirror.cmd",
+"sha256": "6bda8139bf869dd5baf9dbeeb85303142b687d7399a08f3b995d4abdbdb8b328",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "3f5d5de2605da4043d81d08aae576c474866fbe9e4f89fc04c0bf4ded038771e",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/arm/motion.py",
+"sha256": "9cf768c126ee9b1b1eb3b26375d92099cc41a56ad099d12f0966feab669e85db",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "4c460876787860b46301c55c2d28ba31e393a6674ff5d2cf5fb08b45d1c301ca",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/arm/probe_arms.py",
+"sha256": "362ac1456fbdfabc2cd0733a29acbeecc5cd45a66e419ec91cf5b6eb4cf21ad8",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "30f04042a9a8443542ef3c6cdd8d1e3d0c9e4d0d0eb550178d9f003bf59ed594",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/arm/teach.py",
+"sha256": "5c74f8f85292790471418d35e2ccab9d0dac2c04a1c03c81ebd346101c848d11",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "5d38910468aa77fc1e2a62e5553e445cbc1b2b969dbd03155b7cbbedbe08a09c",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/arm/test_motion.py",
+"sha256": "7e5360c1b4cf30ec68691b3457b84575cfe4898fd1dbdfa39ab62a4a6a8975af",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "341c2d0f7d8f9852f176cdb4afe9261c0a203e3138de2eff3b1c2f86becfca76",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/arm/watch_arm.py",
+"sha256": "cdaee67491b7e198b5b1ad1e400e77de3b4e5269fc36b1613a3bfc9193e2a41b",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "f90fcd99b6d3b02c04ab4fb6c922761d654f25b5a5624b3d20541368ca50fa22",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/requirements.txt",
+"sha256": "cedf37b7c3ca6b584d0b14b5bd472aa7ce68f2ca375c8a09c958f30ca326d63b",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "8d3d6220241066aa265a445e71afe4bff81e374e915d2978c549b68b359de894",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/calibration.json",
+"sha256": "ede47763b4b04a3e2494dc3f7bc476784df8af42e38ac02d9b8152056ad79552",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "b87122f7b5da196a9ea032b36554daeecb89dd3caf5af9c24c4b7921a2290067",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/cameras.py",
+"sha256": "041f1abfe1e8e9fb61e0d580a4d584ae5add4893cdc8699894fcf9b12666276a",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "39afdff3bb049db69035a9606eb692c847231bc5f7f6dcb5a3a8d3cf9d145137",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/dish_sizer.py",
+"sha256": "365737de433c27b9613d105cfeec7752b39675188dc8cb0ac90ce7493d7dff88",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "235880e4d4092a4d874244ab50585cd6c94030142334f2ea8029992eb2baf3bc",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/filter_markers.pdf",
+"sha256": "6dd2a191fcdfe8b9f96e4de9ab772c26a28caa8c4e25af516c4e14287197d38b",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "98194cf5b203bced91d6a5c7c64cecbadb72fcee83c4315223895f293c532019",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/filter_plan.py",
+"sha256": "0883b61ae3597c5dfd2ebd09da1fe9e41ed37b6559995e04c2dc22544f210c37",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "23e4f209d6254ee3703e2ca2cdea9c35dc2d0ddfba5b9369b58154f148f6380e",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/filters.json",
+"sha256": "bb944e66254c3544a79bc94f817b4d0baeb0599f4620e2200f93725ae111e816",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "c80063733efe794c52c7183ec20658ae9ac1118d8ebf52844c9395c6cde8f91d",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/live_view.py",
+"sha256": "c8b36d2b706c0d1ec653999523de8874f79beb519fb8cedc20b0561d03cf4bc1",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "03361715154d6329de544432d6779a60f343110c856a865f8332a340a80b0d26",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/markers.py",
+"sha256": "7b877f941aff15b30a007171723aa37da06306cee04e3b5cc5dc76bc23d3d129",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "1bcd3c3077fe1a56e592c2411d1140b3257c7325ed06d934bbc5fa8bae2a42fd",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/pile_types.py",
+"sha256": "3235b18e912315008177978cee4caa8f01400fcbd0c4884c65fd3ac3e5ec456b",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "12f9228ca2a8d64420cdb66367e116d423c68dcf2641686dfc61fec85d2be939",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/ruler_scale.py",
+"sha256": "82f4fec93cb7be984b09b4772ee2f82fd0836a78bbc56172c039cd0762a44370",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "b2479bcaff63a55a6cc4266ae7ace864142a0a57bdbe8eb5d3b522aebba40e78",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/dish_phone_01.webp",
+"sha256": "7537c1fe837d7ca39dc306c9ee0516483747321fc637c42c36c8b97ee4941b73",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "ba20f1a922b0a0a4efa5cc0ddef8bfdb548d07474571c6be8d07062c74908185",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/dish_phone_02.webp",
+"sha256": "a4d58654c098e13ec2c5443b88854ebe147863dccef9112e6d3734c1cbd2651e",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "938c9ada77501f49703b9c3482fd9c1ed812c8fdb6f3d5e5d18eb88f6c7c9f96",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/dish_phone_03.webp",
+"sha256": "3369b3ee4c4945f4618ac9dd0e7140519b6b93f6cfce92eba4371fe79a9a508d",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "d2b2d29c938eb7c89be0c7db92bb09778cdae4b2d0f3fcd4642b4513aaaf50d0",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_calibration_ruler.webp",
+"sha256": "86ff4ca87228183deadc97bdb3fbdae13c784e8e0a2ef6cef6a6460429847155",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "977b8b32259e7d13a8585d8e5aa8640d71fba575b323f6b44affd8802fef5fbc",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_empty_dish.webp",
+"sha256": "31d52c09f3bcf334ccf644a33963ed964617205faeb1b469511c096722a3ceaa",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "9abbad9fe051c3e2b73b6976d2d95ec90fd22d8ddaf33987a97a62665fbbde88",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_redlight_01.webp",
+"sha256": "81c3bb261e1c4ae7a35c37dbd07585204bbcbd1f3063a4a345bf3d6d92f8c8f6",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "1a9cfba73d305e9ffd78da633f055fb0b6e167e94e223f3eb3edb51c1182806e",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set1_couscous_packed.webp",
+"sha256": "f6539f895c65d272155690bc4b886a827bd45a2ef8c02a430ba8cff36e4f5e64",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "79832633372b4c7282e50c6209daf186f10453c831320de3948fa4c772204fcb",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set1_dark_seeds.webp",
+"sha256": "cf0010acaded5375b75d8ece5d6a291280167f18f42cc2429d714efe6aa86b84",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "1447344e6c439543c9665c9889d77cd49caeab5eef850a0ae3e6c21af8f3c475",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set1_mixed_crowded.webp",
+"sha256": "06647523be696fbd71c14070159ccbd693da36a0815e9cf08b2563b12559d96c",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "3212ab1fdf53df23c772efb1acc30f5632e33848fccdc791ccd655930ef46394",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set1_oat_grains.webp",
+"sha256": "4950da369d84133c86552b435997a1baceca1180a989c57c4d22707fde39d002",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "a784fe86f9e8ac955e6f95466dc85cdd3dab96dd5734790748bc810e66891edf",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set1_pasta_tubes.webp",
+"sha256": "f7a079403b3cfcc11a7ec759351ad4f1dbe252d375ca50b35482ffb71fedac1c",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "b33b00bdf3e9694b633457502947fdbb05b29839958e008966ecc0a653f292af",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set1_red_seeds.webp",
+"sha256": "5d9bafb9166bf70ccd5decbc9ee07df8f3d5f08c07c8057632d033b3ac894eb3",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "0b2fcc648e62793eb2fe8e175e785f3e3e24e53c37265a0a3034682757dd7091",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set1_white_rice_packed.webp",
+"sha256": "6a160972c391289fdce44dd3d51cfec993a45521eb7a129a5f04c73a50d89946",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "8f5d7f56d351a17b146ae3a2cabd1e81e5d291731c91a57366115e82b022c899",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set2_black_grains.webp",
+"sha256": "7da8ece6c29e6434c44d2148a6b735381b2e8bce4bcc140b62fac1bc9c73bb3f",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "eeb6d6d88486915b330082d335e7b7bbabb8f7a5bb1b8bb1c58910d5ab955bc2",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set2_dark_seeds.webp",
+"sha256": "dc93bc74b26ae8d998cc51d370639769d78b9eaa7b109b1b426ecc916306f5bf",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "613d630675a7d9d8df17456c7c575a94d69058ca306f80bdcdb40bb924b5b251",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set2_mixed.webp",
+"sha256": "fc7984cc9e216d23b095b70630127e78ed8c64d36901a0fba8435cc34b74c4a9",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "7570754f6fcd412dfa2da1af24bf65566cc61faa26f7e17f2e96d355cb665b82",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set2_oat_grains.webp",
+"sha256": "eb0f627c0db6a898fefb1bb397c86aabec496f0bd393bfcba5cba439764dd2d7",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "9e5d47dc86742e2c4f39544362b7bca5dd1b927adfed8e660379d5eaa6e8cb70",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set2_pasta_tubes.webp",
+"sha256": "e8746fd4f51e75e0ae02ec48fedc64bf2a578b8974354daf0b5fe8cd336f3f41",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "e6e3a9aa3ec8e2459dc1059fa3cf7a7875bf63bd32edb7632f504091ff92c2ac",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set2_red_seeds.webp",
+"sha256": "749d64fc00b0328b0aeb206d25812e989a15f460f137be0f1fef43b045795329",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "fe5efcbea0fef8ce892a92def182a5ed6b6d49ddc950a2586496902ec4a5e4ff",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set2_white_rice_packed.webp",
+"sha256": "ab171c85b2e29ecc61e782861edf74b0ada9a24b5c27ae285f9091381c7a81c2",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "040e0fc1a1dc44b84f1f29d005496562be8e0184ccb15e67c5f4b094bc8ad516",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set2_yellow_grain.webp",
+"sha256": "bc43ebc0e3a155f7e79a2a5f9e5419208c3603e0f4e15b3ba61cd589a9d29b2b",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "b0b9e1bc6088a7f4e2f7344f98038cd6320f2c2ec9fa94e4ec9b6ad75b5feec6",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set3_black_grains.webp",
+"sha256": "69013165f09b013ff7b7effc853a1db4d3760f9e65c709029471bb0fe33df222",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "b87b61a59a6150b666fbf813f70f98f1b10171bfe02dbd11988bf37c59d266ae",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set3_mixed.webp",
+"sha256": "a81aaae7a949377d6dbb2f000044b13f3c20e6280f52515f40cea9bdea5aef37",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "de411761c3e099e199270f9dde9fd816b55c9ff9568ce4fd51f9439f368d4c61",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set3_oat_grains.webp",
+"sha256": "75bfd01eb119c7b974d5301d3b76224fe6f02e2fd31dc001a20c873e6b847c76",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "0e5fee524c797fc560b9fc96bde41ffc5b2822434a23671cdf1823b9802f71f7",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set3_red_seeds.webp",
+"sha256": "3a51b89b78997746ae80ba388e4f66e90a52c1533982aea630c0888a9045b57b",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "409764763c01891ce082e5312979e82fad17a1796b16dac78afdecf62d744da5",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set4_white_rice.webp",
+"sha256": "1ad6de2622740a13b23bd1eabbb55ba7f8f1e2fd725e9bb5346d6d86cae05627",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "41465d3e8a2e63ae7de2cc3cc92c454c6c3d059449618d9a1382fde522900fc8",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set4_yellow_rice.webp",
+"sha256": "9ef6bd6f40cc0a4b5b4afc9df84468479f03376d9f48bf4b624a49b5d354ebed",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "eaef050559bba658b8e726293b250aa6d4a782d8598ea0867cc48600c120c648",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set5_white_rice.webp",
+"sha256": "399a0f1d5568f76d1cd623713cb28f98ecf839e24b1342a89a38592022c3c24d",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "72acfa63d40eeef4590e225a9bdeac264d98696e068e5302d4a4e76ad8bde70c",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_set5_yellow_balls.webp",
+"sha256": "a7b8f1fa495dc76d2e5ffd634b6657a0026d9da2ac7e48b3e1ec1567c90dcb09",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "d278dc3afdfa940f0bd70b4a03c1a3e910182eae8d7ef8519cc14ae639d82f29",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/samples/webcam_white_01.webp",
+"sha256": "2512c2b69719854e2d672ba7c489d70a9239503b8044b6107c3c9e0cfd8002ce",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "3e892dd3cff9ba91e87b14cdc821d4e7d35de757c555f9a4058d61b235c1860a",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/test_filter_plan.py",
+"sha256": "419e8857e6a203f92bb1e57f2a99bfcf28af9511017de4e4a66e4154210ea0d4",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "611dd28e94579f6b155bc8c2358d420bd44d29346205ab2acead9379b16115ad",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/training.json",
+"sha256": "5b8e668c2ce11309d59e7d5de51659916bc9787db0d75445811badf332708b65",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "f7e8fe53bff1860996639aaee94e55c5ac9ecf0d662b550c362e9fd3d1d1ca17",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "filtration-robot/vision/types.json",
+"sha256": "5a2d4c7564612354ac271e578532873d5a870ad806023b20f7e90ac49de2c05b",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
 "leaf": "f42c9af3613d7caa02ac0626baeab2f692006ac819c7e055de7b415220040063",
 "licence": "MIT",
 "module": "repo-meta",
@@ -6827,6 +7637,16 @@ null
 "module": "notebooks",
 "path": "notebooks/sorting_hierarchy.ipynb",
 "sha256": "bedcc2159fe37e4aad103343978a059ac4962c6a73f740a00df74732d8079a8d",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "notebook",
+"leaf": "355ad85ec0ac9316eef6355bf0287fd09a567f2a7cca62f3aeb7c953f7642dfa",
+"licence": "MIT",
+"module": "notebooks",
+"path": "notebooks/story.ipynb",
+"sha256": "265207467ec72ec2ab435e2658c13d537264e99e2331c512c24445d9c2d339b3",
 "status": "built"
 },
 {
@@ -12592,6 +13412,36 @@ null
 {
 "claim": "OWN",
 "kind": "page",
+"leaf": "2a19fa4458f8c2c553b018faa7bf68e8245bc9ee7a6db5c1e9654617ef3c1c07",
+"licence": "MIT",
+"module": "mvp-site",
+"path": "site/story/build_story.py",
+"sha256": "b653db8e3a364a41f8d93370f104e7b84d1270868943263ccc1fa11398172a60",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "page",
+"leaf": "f5bec9cdc85d2301b2859e8d2caa6ae6f257e1d527bfc31a4467a06377476649",
+"licence": "MIT",
+"module": "mvp-site",
+"path": "site/story/index.html",
+"sha256": "243c264df7b360ecfaf4916c09afe4501806d12e45954214058b2b2bb583c84b",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "page",
+"leaf": "156e900a7dcc451312a08e90d87e2bce1fdb0a7438c7bcbb94a6056ac085cc98",
+"licence": "MIT",
+"module": "mvp-site",
+"path": "site/story/template.html",
+"sha256": "d4af1bdab01e22aec4b656176c1aab3574a4dced6c12f5ef340f81186bef0d33",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "page",
 "leaf": "845d6255e9eb794535d064d784e52567e128952054f7b0261cb30ab44f014e36",
 "licence": "MIT",
 "module": "mvp-site",
@@ -13195,14 +14045,14 @@ null
 "terms": []
 },
 "docs": {
-"atoms": 96,
+"atoms": 120,
 "claims": {
-"OWN": 96
+"OWN": 120
 },
 "id": "module:docs",
-"root": "93229d43220b5eaba8064d848923197db94df3b38afd1136305e1c4d85d9cdd9",
+"root": "c378c6f444499e55b7088bc616f8363caaa8123b16662f7a1972777e1ca71300",
 "status": {
-"built": 96
+"built": 120
 },
 "terms": []
 },
@@ -13248,26 +14098,26 @@ null
 "terms": []
 },
 "mvp-site": {
-"atoms": 47,
+"atoms": 50,
 "claims": {
-"OWN": 47
+"OWN": 50
 },
 "id": "module:mvp-site",
-"root": "2f01f31501a7070f489f419cc0c0637c7919e1131c269090cf43c6a97d563b56",
+"root": "f9ce0eb94dc1c2f3c4c81e1df28fb389a23c6989fbfcd5afbb960aa17530c351",
 "status": {
-"built": 47
+"built": 50
 },
 "terms": []
 },
 "notebooks": {
-"atoms": 25,
+"atoms": 26,
 "claims": {
-"OWN": 25
+"OWN": 26
 },
 "id": "module:notebooks",
-"root": "05dd464c17cfca79e9204bb0a21d4cb6bb1baa29538fb2712d6328770238dbbe",
+"root": "071827be4113d1f565b81e7d44db9585e54c92c6115882ce350613359553535f",
 "status": {
-"built": 25
+"built": 26
 },
 "terms": []
 },
@@ -13302,14 +14152,14 @@ null
 ]
 },
 "repo-meta": {
-"atoms": 177,
+"atoms": 234,
 "claims": {
-"OWN": 177
+"OWN": 234
 },
 "id": "module:repo-meta",
-"root": "d0118800c03eb5b56f309c4b45195a01d533d7c42ee217a1cd6ec03d3419b875",
+"root": "8058ba9e572a2f1624077bea56ba9371389329f6a979c82082bc4358bd056e55",
 "status": {
-"built": 177
+"built": 234
 },
 "terms": []
 },
@@ -14101,9 +14951,9 @@ null
 ]
 }
 ],
-"root": "d8f7ba64ff020b676163ceb1d13888f8496701628868336c356f87940286d6b9",
+"root": "5016a253b934526ac6183687cef63aafe2ff0f5471e9ee28ccea98b5e1067f4e",
 "roots": {
-"aok": "d3afd93aeb03690762847930178a8d99618a8495efff89f43a3f4e7da23ca7e5",
+"aok": "76a091e983c0446ba834e1428a8decbf0be33b8668f233bf085592bf6dda2720",
 "assets": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
 "assets_mmr": "97d20c6b90e0385d7cbac87551f93381eba7eeb2e05cecb7ed9f352f349281b2",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -18319,7 +19169,7 @@ null
 }
 ],
 "totals": {
-"OWN": 1038,
+"OWN": 1123,
 "OWN+TERMS": 52,
 "THIRD": 20
 },
