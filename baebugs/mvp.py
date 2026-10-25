@@ -92,6 +92,16 @@ def build(repo="."):
     ot = json.loads(Path(repo, "opentrons/parts.json").read_text())
     labware = [{"name": p["part"], "path": "opentrons/" + p["stl"], "leaf": leaf_of.get("opentrons/" + p["stl"]),
                 "bbox_mm": p["bbox_mm"], "sha256": p["sha256"]} for p in ot["parts"]]
+    remixes = []                                                       # labware twin: printable SBS/cryo remixes
+    cat = Path(repo, "print/labware/catalog.json")
+    if cat.exists():
+        c = json.loads(cat.read_text())
+        for x in c["prints"]:
+            m, stl = c["print_meta"].get(x["id"], {}), f"print/labware/stl/{x['id']}.stl"
+            ot = "print/labware/opentrons/baebugs_" + x["id"].removeprefix("print-").replace("-", "_") + ".json"
+            remixes.append({"name": x["name"], "id": x["id"], "material": x.get("material"), "licence": x.get("license"),
+                            "bbox_mm": m.get("bbox"), "grams": m.get("grams"), "usd": m.get("usd"),
+                            "path": stl, "leaf": leaf_of.get(stl), "opentrons": ot if Path(repo, ot).exists() else None})
     breaks = [r["record"] for r in MMRLog(Path(repo, "daisy/impact_mmr.jsonl")).records if r["record"].get("type") == "custody_break"]
     missing = {b.get("missing_sha256") for b in breaks}
     photo_breaks = Path(repo, "print/labware/merkle/breaks.json")      # labware twin: source photos withheld (vendor marks)
@@ -117,7 +127,7 @@ def build(repo="."):
             "legend": A["legend"], "totals": A["totals"], "modules": A["modules"], "external": A["external"],
             "leaves": [{k: x[k] for k in ("path", "module", "kind", "claim", "licence", "status", "sha256", "leaf")}
                        for x in A["leaves"]],
-            "bugs": bugs, "species": _species(repo, leaf_of), "parts": parts, "labware": labware, "results": results,
+            "bugs": bugs, "species": _species(repo, leaf_of), "parts": parts, "labware": labware, "remixes": remixes, "results": results,
             "assets": _assets(repo),
             "repo": "https://github.com/biobitworks/baebugs"}
 

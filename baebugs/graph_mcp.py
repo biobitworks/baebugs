@@ -35,7 +35,10 @@ def claims() -> dict:
 
 
 def serve():
-    from mcp.server.fastmcp import FastMCP
+    try:
+        from mcp.server.fastmcp import FastMCP
+    except ImportError as e:      # missing, or mcp 2.x (FastMCP renamed)
+        raise SystemExit('baebugs.graph_mcp needs mcp 1.x: pip install "mcp>=1.2,<2"') from e
     app = FastMCP("baebugs-graph")
     for f in (root, get, prove, claims):
         app.tool()(f)

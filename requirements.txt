@@ -8,7 +8,10 @@ trimesh>=4
 manifold3d
 shapely>=2
 mapbox-earcut
+networkx  # trimesh scene graph (trommel_plate)
 pillow
+# agents: MCP server (baebugs.graph_mcp); FastMCP was renamed in mcp 2.x
+mcp>=1.2,<2
 # tests / notebooks
 pytest
 nbformat

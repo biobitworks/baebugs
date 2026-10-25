@@ -56,6 +56,9 @@ textarea{width:100%;min-height:140px}
 .mt{margin-top:12px}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .tbl-wrap{overflow-x:auto}
+.tbl td a.mono{overflow-wrap:normal;white-space:nowrap}
+pre.mono{white-space:pre-wrap;overflow-wrap:anywhere;margin:0}
+.preview{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff;margin:4px 0 10px}
 </style>
 </head>
 <body>
@@ -112,6 +115,11 @@ textarea{width:100%;min-height:140px}
     <div class="card"><h2>Opentrons labware</h2><div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col">Labware</th><th scope="col">Size (mm)</th><th scope="col">Leaf</th></tr></thead><tbody id="o-rows"></tbody></table></div>
       <p class="mute">Built for the Opentrons Python API and labware schema (Apache-2.0). Bring your own: swap any part for yours and the graph compares by hash.</p></div>
   </div>
+  <div class="card mt" id="remix-card" hidden><h2>Printable labware remixes</h2>
+    <p class="mute">Remixed from bench labware in the photos onto the SBS footprint (127.76 × 85.48 mm). Dimensions not set by a standard are photo estimates until checked with calipers. Tube racks, not tip racks; not for −80 °C or anything that spins.</p>
+    <img class="preview" src="../../print/labware/previews.png" alt="Renders of the eight printable labware remixes: 96, 24, 15 and 6-position tube racks, a 10 by 10 cryo grid insert, a lipped SBS frame, a screened grid frame and a honeycomb insert" width="1920" height="720" loading="lazy">
+    <div class="count" id="r-count" role="status"></div>
+    <div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col">Remix</th><th scope="col">Size (mm)</th><th scope="col">Material</th><th scope="col">≈ USD</th><th scope="col">Opentrons</th><th scope="col">Leaf</th></tr></thead><tbody id="r-rows"></tbody></table></div></div>
   <h2>3D lab</h2>
   <iframe title="3D BioKEA modular lab" src="../lab/" loading="lazy"></iframe>
 </section>
@@ -170,7 +178,8 @@ textarea{width:100%;min-height:140px}
 baebugs-graph get root
 baebugs-graph get leaf:LICENSE</pre></div>
     <div class="card"><h2>npx (no install)</h2><pre class="mono">npx github:biobitworks/baebugs get root</pre></div>
-    <div class="card"><h2>MCP (Claude and others)</h2><pre class="mono">claude mcp add baebugs-graph -- \
+    <div class="card"><h2>MCP (Claude and others)</h2><pre class="mono">pip install "mcp&gt;=1.2,&lt;2"
+claude mcp add baebugs-graph -- \
   python -m baebugs.graph_mcp</pre></div>
     <div class="card"><h2>Raw JSON</h2><p><a href="mvp.json">mvp.json</a> is the whole graph. Every surface reads the same file, so every surface returns the same root.</p></div>
   </div>
@@ -290,6 +299,13 @@ function renderAssets() {
 
 function renderParts() {
   $('#p-rows').innerHTML = P.parts.map((x) => `<tr><td>${esc(x.name)}</td><td>${esc(x.modules.join(', '))}</td><td>${esc(x.status)}</td><td>${leafLink(x)}</td></tr>`).join('');
+  const R = P.remixes || [];
+  if (R.length) {
+    $('#remix-card').hidden = false;
+    const usd = R.reduce((a, x) => a + (x.usd || 0), 0), g = R.reduce((a, x) => a + (x.grams || 0), 0);
+    $('#r-count').textContent = `${R.length} parts · about ${Math.round(g)} g of filament · ≈ $${usd.toFixed(2)} at 75% fill (2026 retail estimate)`;
+    $('#r-rows').innerHTML = R.map((x) => `<tr><td>${esc(x.name)}</td><td>${x.bbox_mm ? x.bbox_mm.join(' × ') : '—'}</td><td>${esc(x.material)}</td><td>${x.usd != null ? x.usd.toFixed(2) : '—'}</td><td>${x.opentrons ? `<a href="../../${encodeURI(x.opentrons)}">labware JSON</a>` : '—'}</td><td>${leafLink(x)}</td></tr>`).join('');
+  }
   $('#o-rows').innerHTML = P.labware.map((x) => `<tr><td>${esc(x.name)}</td><td>${x.bbox_mm.join(' × ')}</td><td>${leafLink(x)}</td></tr>`).join('');
 }
 
