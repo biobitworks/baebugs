@@ -78,18 +78,24 @@ def track(run):
             f = getattr(tr, k, None)
             if f and os.path.exists(f): rec[f"{k}_sha256"] = sha(f); rec[f"{k}_tensor_sha256"] = tensor_sha(f)
         event("weights_epoch", rec)
+    seen = {}
+    def on_train_epoch(tr):
+        # capture the training loss before validation (ultralytics may reset tloss by on_fit_epoch_end)
+        t = tr.tloss
+        try:
+            seen[int(tr.epoch)] = [float(x) for x in (t.reshape(-1).tolist() if hasattr(t, "reshape") else (t if isinstance(t, (list, tuple)) else [t]))]
+        except Exception:
+            seen[int(tr.epoch)] = []
     def on_epoch(tr):
         vals = {}
         for k, v in (tr.metrics or {}).items():
             try: vals[k] = float(v)
             except Exception: pass
-        loss = tr.tloss.tolist() if hasattr(tr.tloss, "tolist") else tr.tloss
-        try: loss = [float(x) for x in (loss if isinstance(loss, list) else [loss])]
-        except Exception: loss = []
+        loss = seen.get(int(tr.epoch), [])
         fin = bool(loss) and all(math.isfinite(x) for x in loss)
         event("values_epoch", {"run": run, "epoch": int(tr.epoch) + 1, "loss": loss, "metrics": vals, "finite": fin, "pass": fin})
         if not fin: tr.stop = True
-    return on_save, on_epoch
+    return on_save, on_train_epoch, on_epoch
 
 def evaluate(w, split_dir):
     m = YOLO(w); classes = sorted(p.name for p in split_dir.iterdir() if p.is_dir())
@@ -113,8 +119,8 @@ def evaluate(w, split_dir):
 RESULTS = {}
 for run in PROTO["runs"]:
     name = run["name"]; vdir = BASE / "views" / name; t0 = time.time()
-    m = YOLO(S["model"]); on_save, on_epoch = track(name)
-    m.add_callback("on_model_save", on_save); m.add_callback("on_fit_epoch_end", on_epoch)
+    m = YOLO(S["model"]); on_save, on_train_epoch, on_epoch = track(name)
+    m.add_callback("on_model_save", on_save); m.add_callback("on_train_epoch_end", on_train_epoch); m.add_callback("on_fit_epoch_end", on_epoch)
     status, err = "EXECUTED", None
     try:
         m.train(data=str(vdir), epochs=S["epochs"], imgsz=S["imgsz"], batch=S["batch"], seed=S["seed"],
