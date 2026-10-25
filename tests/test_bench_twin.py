@@ -1,5 +1,7 @@
 import copy
-from baebugs import bench_twin as BT, tower_twin as TT
+
+from baebugs import bench_twin as BT
+from baebugs import tower_twin as TT
 from baebugs.sieve import load_yaml
 
 

@@ -1,7 +1,7 @@
 """One call from image -> measurements -> sieve plan -> preflight."""
 from __future__ import annotations
 
-from .measure import classical_measure, consensus, YoloMeasurer
+from .measure import YoloMeasurer, classical_measure, consensus
 from .sieve import plan_stack
 from .twin import LabTwin
 

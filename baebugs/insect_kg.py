@@ -36,7 +36,7 @@ from pathlib import Path
 import numpy as np
 import trimesh
 
-from .printmodels import CA_FAMILIES, NOVEL, PIN, PLATE, PLANS, insect_parts, tray_for
+from .printmodels import CA_FAMILIES, PIN, PLATE, insect_parts, tray_for
 
 TOL = 0.05      # mm, containment / bbox tolerance
 VTOL = 0.02     # relative volume tolerance

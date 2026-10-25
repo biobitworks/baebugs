@@ -70,7 +70,7 @@ _yolo = {}
 
 def measure(method, img, ppm):
     """Largest detection -> {length_mm, width_mm, area_mm2, conf, n_dets} or None."""
-    from .measure import classical_measure, YoloMeasurer
+    from .measure import YoloMeasurer, classical_measure
     if method == "yolo":
         if "yolo" not in _yolo:
             _yolo["yolo"] = YoloMeasurer(STUDENT, conf=0.15)

@@ -18,12 +18,12 @@ and Heater-Shaker latch clearance before running hardware.
 from __future__ import annotations
 
 import json
-import math
 from pathlib import Path
 
 from manifold3d import Manifold
 
-from .print_parts import P as PP, box, cyl, mini_ring, radial_holes, to_trimesh, tube, union
+from .print_parts import P as PP
+from .print_parts import box, cyl, radial_holes, to_trimesh, tube, union
 
 SBS = (127.76, 85.48)
 O = {"skirt_engage": 8.0, "flat_adapter_h": 12.0, "skirt_h": 8.0, "plate_t": 4.0, "drum_od": 36.0, "drum_len": 90.0, "zones": [1.5, 3.0, 5.0], "axle_d": 3.0,

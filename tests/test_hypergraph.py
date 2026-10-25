@@ -1,5 +1,6 @@
 import pytest
-from baebugs.hypergraph import build, walk_to_truth, lomo_actors
+
+from baebugs.hypergraph import build, lomo_actors, walk_to_truth
 
 
 @pytest.mark.xfail(strict=True, reason="KNOWN BREAK: TRUTH-001 pins the datasets root of 2026-10-24; adding the 002 "

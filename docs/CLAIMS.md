@@ -1,0 +1,62 @@
+# What baebugs claims, and under which licence
+
+Every file is an *atom* with a claim, a licence in context, a status and a hash (full list for agents: [`kg/aok.json`](../kg/aok.json)). This page is the short version. It records what the licences say; it is not legal advice.
+
+**AoK root:** `19ccaf4a5d96704713537a2e125d47fe128447ff91e1b0ce722db821ff399c8f` · 739 atoms · OWN 677 · OWN+TERMS 42 · THIRD 20
+
+| claim | meaning |
+|---|---|
+| **OWN** | written here; claimable; MIT |
+| **OWN+TERMS** | written here and claimable; the listed outside terms also apply in this context |
+| **THIRD** | not ours; used under its licence; credited, pinned by hash, never claimed |
+
+## Ours (biobitworks), by module
+
+| module | atoms | claim | outside terms that apply here | module root |
+|---|---|---|---|---|
+| custody-ledgers | 33 | OWN 33 | none | `8f48e4f879b1` |
+| daisy-protocols | 14 | OWN 14 | none | `5930b002f718` |
+| daisy-results | 8 | OWN+TERMS 8 | gbif-media, ultralytics | `72b5fef9fe0e` |
+| dashboards | 16 | OWN 16 | none | `350619827ff6` |
+| docs | 21 | OWN 21 | none | `b36b5f07dd87` |
+| kaggle-kernels | 10 | OWN+TERMS 10 | gbif-media, ultralytics | `139583b71278` |
+| knowledge-graph | 5 | OWN+TERMS 5 | gbif-media | `f76004ad5e8e` |
+| lab-parts | 106 | OWN 106 | none | `a974e369a4d0` |
+| mvp-site | 30 | OWN 30 | none | `e9559d478120` |
+| notebooks | 16 | OWN 16 | none | `a20c483ea79c` |
+| opentrons-modules | 13 | OWN+TERMS 13 | opentrons | `40b680b50dba` |
+| python-package | 77 | OWN 71, OWN+TERMS 6 | ultralytics | `c33e2f1d756f` |
+| repo-meta | 12 | OWN 12 | none | `4581a5c08f5c` |
+| tests | 32 | OWN 32 | none | `4857f338963b` |
+| toy-insects | 326 | OWN 326 | none | `6f32a71b22ca` |
+
+## Not ours (used, credited, never claimed)
+
+| thing | licence | what it means for us |
+|---|---|---|
+| [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) | AGPL-3.0 | models trained or run with it are AGPL-3.0 unless an Ultralytics Enterprise licence is held |
+| [GBIF specimen photos (museum collections)](https://www.gbif.org) | CC0-1.0 / CC-BY-4.0 | CC BY images need the rights holder credited in anything derived (crops, figures); see daisy/licences_gbif.json |
+| [Opentrons Python API + labware schema](https://github.com/Opentrons/opentrons) | Apache-2.0 | our labware and protocols are our own; 'Opentrons' is their trademark, no endorsement implied |
+| [three.js](https://github.com/mrdoob/three.js) | MIT | none beyond keeping its notice |
+| [manifold3d](https://github.com/elalish/manifold) | Apache-2.0 | none on the generated meshes |
+| [trimesh](https://github.com/mikedh/trimesh) | MIT | none on the generated meshes |
+| [Kaggle notebooks (GPU)](https://www.kaggle.com/terms) | Kaggle Terms of Use | private datasets/kernels stay private; outputs are ours |
+| [Claude (Anthropic)](https://www.anthropic.com/legal) | Anthropic Terms (outputs assigned to the user) | biobitworks directed, reviewed and chose the work; copyright in purely AI-generated text is unsettled law, so the claim rests on the human direction and selection |
+| [BioKEA/BugPicker](https://github.com/BioKEA/BugPicker) | GPL-3.0 | pinned by commit + sha256 root only, never copied into baebugs |
+| [BioKEA/BugPicker-arm-demo](https://github.com/BioKEA/BugPicker-arm-demo) | GPL-3.0 | pinned by commit + sha256 root only, never copied into baebugs |
+| [BioKEA/BugSorter](https://github.com/BioKEA/BugSorter) | no licence (all rights reserved) | pinned by commit + sha256 root only, never copied into baebugs; ask the owner before reuse |
+| [BioKEA/PlateReader](https://github.com/BioKEA/PlateReader) | no licence (all rights reserved) | pinned by commit + sha256 root only, never copied into baebugs; ask the owner before reuse |
+| [BioKEA/prompt-to-print](https://github.com/BioKEA/prompt-to-print) | MIT | pinned by commit + sha256 root only, never copied into baebugs |
+| [zlite/B601](https://github.com/zlite/B601) | no licence (all rights reserved) | pinned by commit + sha256 root only, never copied into baebugs; ask the owner before reuse |
+| [zlite/disperser](https://github.com/zlite/disperser) | no licence (all rights reserved) | pinned by commit + sha256 root only, never copied into baebugs; ask the owner before reuse |
+| [zlite/entosieve](https://github.com/zlite/entosieve) | no licence (all rights reserved) | pinned by commit + sha256 root only, never copied into baebugs; ask the owner before reuse |
+| [zlite/liquid-handler](https://github.com/zlite/liquid-handler) | no licence (all rights reserved) | pinned by commit + sha256 root only, never copied into baebugs; ask the owner before reuse |
+| [zlite/liquid-handler-marlin](https://github.com/zlite/liquid-handler-marlin) | no licence (all rights reserved) | pinned by commit + sha256 root only, never copied into baebugs; ask the owner before reuse |
+| [zlite/plate-gripper](https://github.com/zlite/plate-gripper) | no licence (all rights reserved) | pinned by commit + sha256 root only, never copied into baebugs; ask the owner before reuse |
+| [zlite/railprinter](https://github.com/zlite/railprinter) | no licence (all rights reserved) | pinned by commit + sha256 root only, never copied into baebugs; ask the owner before reuse |
+
+## The three things to remember
+
+1. **Code, prints, labware, pages, protocols and ledgers written here are ours (MIT).** That includes the parametric toy insects, the lab parts and the Opentrons labware.
+2. **Trained weights are AGPL-3.0** because they come from Ultralytics YOLO; anything shipped with them must offer its source under AGPL-3.0 (or hold an Ultralytics licence).
+3. **Specimen photos belong to the museums.** CC0 needs nothing; CC BY needs the rights holder credited wherever crops or figures appear. BioKEA and zlite repos are pinned by hash, not copied; the ones with no licence need the owner's permission before any reuse.

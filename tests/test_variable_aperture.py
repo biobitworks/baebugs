@@ -1,4 +1,4 @@
-from baebugs.variable_aperture import SlotPair, run, analog_objects, passes, scad
+from baebugs.variable_aperture import SlotPair, analog_objects, passes, run, scad
 
 
 def test_geometry():

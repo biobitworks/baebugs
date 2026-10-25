@@ -1,4 +1,4 @@
-from baebugs.labbox import build, coverage, route, lomo, add_arm, ARMS, STAGES
+from baebugs.labbox import ARMS, add_arm, build, lomo, route
 
 
 def test_routes_cover_every_stage_and_lomo_finds_single_points_of_failure():

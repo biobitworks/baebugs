@@ -100,6 +100,7 @@ def _nearest(ms, cx, cy, ppm, tol_mm=3.0):
 
 def measure_specimens(pseudo_dir, student_weights, taxa, limit=None, fastsam="FastSAM-s.pt"):
     from ultralytics import FastSAM
+
     from .measure import YoloMeasurer, _from_contour
     pseudo = Path(pseudo_dir)
     student = YoloMeasurer(str(student_weights), conf=0.15)
@@ -125,7 +126,7 @@ def measure_specimens(pseudo_dir, student_weights, taxa, limit=None, fastsam="Fa
             for line in lab.read_text().splitlines():
                 v = line.split()
                 if len(v) > 6:
-                    polys.append((np.array(v[1:], float).reshape(-1, 2) * [w, h]))
+                    polys.append(np.array(v[1:], float).reshape(-1, 2) * [w, h])
         stu = student(img, ppm)
         fs = fsam.predict(img, imgsz=1024, retina_masks=True, conf=0.25, verbose=False)[0]
         fms = [_from_contour(np.asarray(xy, np.float32).reshape(-1, 1, 2), ppm, "fastsam")

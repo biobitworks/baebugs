@@ -39,7 +39,7 @@ def fit(data, model="yolo11n-seg.pt", epochs=40, imgsz=640, batch=16, project=No
     project = project or str(Path(DEFAULT_ROOT) / "runs")
     m = YOLO(model)
     if ledger is not None:
-        from .git_ledger import sha256_file, yolo_epoch_callback
+        from .git_ledger import yolo_epoch_callback
         m.add_callback("on_fit_epoch_end", yolo_epoch_callback(ledger))
         ledger.append("fit_start", {"data": str(data), "model": str(model), "epochs": epochs,
                                     "imgsz": imgsz, "batch": batch, "device": str(device())},
@@ -100,8 +100,10 @@ def pseudo_label(images_dir, weights, out_dir, conf=0.5, val_every=6, max_images
     methods that fail differently must agree before a label is trusted.
     px_per_mm only matters for the agreement tolerance; real scale isn't needed."""
     import shutil
+
     from ultralytics import YOLO
-    from .measure import classical_measure, consensus, _from_contour
+
+    from .measure import _from_contour, classical_measure, consensus
     out = Path(out_dir)
     model = YOLO(str(weights))
     paths = sorted(Path(images_dir).glob("*.jpg"))[:max_images]
@@ -144,6 +146,7 @@ def pseudo_label_specimens(image_dirs, out_dir, min_ruler_conf=0.4, max_objects=
     excluded). Writes YOLO-seg labels AND truth_real.json with sizes in mm
     (teacher-derived 'silver' truth for benchmarking on real photos)."""
     import shutil
+
     from .specimen_photo import preview, ruler_px_per_mm, segment, segment_yoloe
     out = Path(out_dir); out.mkdir(parents=True, exist_ok=True)
     paths = [p for d in image_dirs for p in sorted(Path(d).glob("*.jpg"))][:max_images]

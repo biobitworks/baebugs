@@ -28,7 +28,7 @@ from pathlib import Path
 
 import numpy as np
 from shapely import affinity
-from shapely.geometry import MultiPoint, Point
+from shapely.geometry import MultiPoint
 
 from . import punch_filters as PF
 from .explore import merkle_root
@@ -92,7 +92,6 @@ def fits(P, hole, hm):
 
 def holes():
     """Kit sieves (as their nominal shapes) + punch filters."""
-    import yaml
     from .sieve import load_yaml
     kit = load_yaml("sieves.yaml")
     shape_of = {"perforated_round": "circle", "printed_square": "square", "hex_wire": "hexagon", "woven_screen": "square"}
@@ -113,6 +112,7 @@ def body_mesh(length_mm, plan, mode):
     if mode == "toy_rigid":
         return insect_tree(length_mm, plan)[1]["_mesh"]
     import trimesh
+
     from .printmodels import insect_parts
     prims, _, _ = insect_parts(length_mm, plan)
     return trimesh.util.concatenate([m for p in prims if p["part"].endswith("_body") for m in p["meshes"]])

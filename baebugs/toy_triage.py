@@ -42,6 +42,7 @@ def ref_silhouette(toy, length_mm, plan):
     if toy not in _REF:
         from shapely.geometry import Polygon
         from shapely.ops import unary_union
+
         from .insect_kg import insect_tree
         m = insect_tree(length_mm, plan)[1]["_mesh"]
         tri = m.vertices[m.faces[m.face_normals[:, 2] > 1e-9]][:, :, :2]
@@ -51,8 +52,9 @@ def ref_silhouette(toy, length_mm, plan):
 
 def _canon(poly):
     """Centre on centroid and rotate so the min-area rectangle's long side is along x."""
-    from shapely import affinity
     import math
+
+    from shapely import affinity
     r = poly.minimum_rotated_rectangle
     xs = list(r.exterior.coords)[:4]
     e = max(((xs[i], xs[(i + 1) % 4]) for i in range(2)), key=lambda ab: math.dist(*ab))
@@ -135,7 +137,7 @@ def calibrate(rows_meas, subs_by):
     """Leave-one-out bias per measurer x ppm: median (measured - truth) of the OTHER toys
     (a reference-set calibration, like a ruler). Returns fn(item_name, meas) -> corrected meas."""
     import statistics as st
-    from shapely import affinity
+
     res = {}
     for name, toy, ppm, m in rows_meas:
         if m and toy in subs_by:

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>baebugs MVP graph</title>
+<meta name="description" content="Review the baebugs knowledge graph from root to leaf, see what is claimed under which licence, check any file's hash yourself, and contest it.">
+<style>
+:root{--bg:#f7f7f4;--panel:#fff;--ink:#1d1f1c;--mute:#5b605a;--line:#d9dbd4;--acc:#1f6b4f;--acc-ink:#fff;--warn:#8a5208;--bad:#a12a2a;--ok:#1f6b4f;--chip:#eef0ea;--focus:#1a56b8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141614;--panel:#1c1f1c;--ink:#e8eae4;--mute:#a4aaa1;--line:#343a33;--acc:#5fc79b;--acc-ink:#0d1a14;--warn:#e0a54a;--bad:#ef7d7d;--ok:#5fc79b;--chip:#262b26;--focus:#8ab4ff}}
+:root[data-theme="dark"]{--bg:#141614;--panel:#1c1f1c;--ink:#e8eae4;--mute:#a4aaa1;--line:#343a33;--acc:#5fc79b;--acc-ink:#0d1a14;--warn:#e0a54a;--bad:#ef7d7d;--ok:#5fc79b;--chip:#262b26;--focus:#8ab4ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:16px}
+header h1{font-size:1.35rem;margin:0 0 4px}
+header p{margin:0;color:var(--mute)}
+.roots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.root{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:0;flex:1 1 220px}
+.root b{display:block;font-size:.78rem;color:var(--mute);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.82rem;overflow-wrap:anywhere}
+.banner{border-left:4px solid var(--bad);background:var(--panel);padding:10px 12px;border-radius:6px;margin:8px 0}
+.banner.ok{border-color:var(--ok)}
+nav[role=tablist]{display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-top:12px}
+nav button{background:none;border:0;border-bottom:3px solid transparent;padding:8px 10px;color:var(--mute);font:inherit;cursor:pointer}
+nav button[aria-selected="true"]{color:var(--ink);border-color:var(--acc);font-weight:600}
+section[role=tabpanel]{padding:14px 0}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:end;margin-bottom:10px}
+.filters label{display:flex;flex-direction:column;font-size:.8rem;color:var(--mute);min-width:0}
+input,select,textarea,button.b{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:6px 8px;min-width:0}
+input[type=search]{min-width:min(260px,100%)}
+button.b{cursor:pointer}
+button.b.p{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+.grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:14px}
+@media (max-width:820px){.grid{grid-template-columns:minmax(0,1fr)}}
+.tbl{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.tbl th,.tbl td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-size:.78rem;color:var(--mute);text-transform:uppercase;letter-spacing:.03em}
+.tbl tr[data-k]{cursor:pointer}
+.tbl tr[aria-selected="true"]{background:var(--chip)}
+.scroll{max-height:62vh;overflow:auto;border-radius:8px}
+.chip{display:inline-block;background:var(--chip);border-radius:999px;padding:1px 8px;font-size:.78rem;margin:1px 2px 1px 0}
+.chip.OWN{color:var(--ok)}.chip.THIRD{color:var(--warn)}
+.chip.bad{color:var(--bad)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px;min-width:0}
+.card h2,.card h3{margin:0 0 8px;font-size:1.05rem}
+.kv{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 10px;font-size:.9rem}
+.kv dt{color:var(--mute)}.kv dd{margin:0;min-width:0}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.mute{color:var(--mute)}
+.count{color:var(--mute);font-size:.85rem;margin:4px 0}
+iframe{width:100%;height:72vh;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
+textarea{width:100%;min-height:140px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:12px}
+.mt{margin-top:12px}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tbl-wrap{overflow-x:auto}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header>
+  <h1>baebugs: the whole project as one graph</h1>
+  <p>Every file, bug, part and result has an address from the root down to a leaf. Check any hash yourself, see who can claim what under which licence, and contest anything you think is wrong.</p>
+  <div class="roots" id="roots" aria-live="polite"><div class="root"><b>Loading</b><span class="mono">mvp.json</span></div></div>
+  <div id="custody"></div>
+</header>
+
+<nav role="tablist" aria-label="Views">
+  <button type="button" role="tab" id="t-graph" aria-controls="p-graph" aria-selected="true">Graph</button>
+  <button type="button" role="tab" id="t-bugs" aria-controls="p-bugs" aria-selected="false" tabindex="-1">Bugs</button>
+  <button type="button" role="tab" id="t-parts" aria-controls="p-parts" aria-selected="false" tabindex="-1">Parts &amp; lab</button>
+  <button type="button" role="tab" id="t-twin" aria-controls="p-twin" aria-selected="false" tabindex="-1">Bench twin</button>
+  <button type="button" role="tab" id="t-ca" aria-controls="p-ca" aria-selected="false" tabindex="-1">California search</button>
+  <button type="button" role="tab" id="t-claims" aria-controls="p-claims" aria-selected="false" tabindex="-1">Claims</button>
+  <button type="button" role="tab" id="t-prove" aria-controls="p-prove" aria-selected="false" tabindex="-1">Prove / contest</button>
+  <button type="button" role="tab" id="t-agents" aria-controls="p-agents" aria-selected="false" tabindex="-1">Agents</button>
+</nav>
+
+<section role="tabpanel" id="p-graph" aria-labelledby="t-graph">
+  <div class="filters">
+    <label>Search<input type="search" id="g-q" placeholder="path, hash, family, licence"></label>
+    <label>Module<select id="g-mod"><option value="">all</option></select></label>
+    <label>Claim<select id="g-claim"><option value="">all</option><option>OWN</option><option>OWN+TERMS</option></select></label>
+    <label>Status<select id="g-status"><option value="">all</option></select></label>
+    <label>Kind<select id="g-kind"><option value="">all</option></select></label>
+  </div>
+  <div class="count" id="g-count" role="status"></div>
+  <div class="grid">
+    <section class="scroll tbl-wrap" tabindex="0" aria-label="Leaves table"><table class="tbl" aria-describedby="g-count"><thead><tr><th scope="col">Leaf</th><th scope="col">Module</th><th scope="col">Claim</th><th scope="col">Status</th></tr></thead><tbody id="g-rows"></tbody></table></section>
+    <div class="card" id="detail" aria-live="polite"><h2>Pick a row</h2><p class="mute">The detail shows the leaf's address, its hashes, the licence that applies in this context, and buttons to check the hash yourself or contest it.</p></div>
+  </div>
+</section>
+
+<section role="tabpanel" id="p-bugs" aria-labelledby="t-bugs" hidden>
+  <div class="filters">
+    <label>Search<input type="search" id="b-q" placeholder="family, species, tray"></label>
+    <label>Order<select id="b-order"><option value="">all</option></select></label>
+    <label>Kit tray<select id="b-tray"><option value="">all</option></select></label>
+  </div>
+  <div class="cols">
+    <div class="card"><h2>Toy and printed bugs</h2><p class="mute">Parametric toys sized from museum data, not replicas. Each has an STL leaf.</p><div class="count" id="b-count" role="status"></div><section class="scroll tbl-wrap" tabindex="0" aria-label="Toy bugs table"><table class="tbl"><thead><tr><th scope="col">Family</th><th scope="col">Size</th><th scope="col">Tray</th><th scope="col">STL</th></tr></thead><tbody id="b-rows"></tbody></table></section></div>
+    <div class="card"><h2>Species seen in the training photos</h2><p class="mute">From GBIF museum photos (CC0 / CC BY). Median length from ruler-scaled photos.</p><div class="count" id="s-count" role="status"></div><section class="scroll tbl-wrap" tabindex="0" aria-label="Species table"><table class="tbl"><thead><tr><th scope="col">Species</th><th scope="col">Family</th><th scope="col">n</th><th scope="col">Length</th></tr></thead><tbody id="s-rows"></tbody></table></section></div>
+  </div>
+</section>
+
+<section role="tabpanel" id="p-parts" aria-labelledby="t-parts" hidden>
+  <div class="cols">
+    <div class="card"><h2>Lab parts</h2><section class="scroll tbl-wrap" tabindex="0" aria-label="Lab parts table"><table class="tbl"><thead><tr><th scope="col">Part</th><th scope="col">Module</th><th scope="col">Status</th><th scope="col">Leaf</th></tr></thead><tbody id="p-rows"></tbody></table></section></div>
+    <div class="card"><h2>Opentrons labware</h2><div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col">Labware</th><th scope="col">Size (mm)</th><th scope="col">Leaf</th></tr></thead><tbody id="o-rows"></tbody></table></div>
+      <p class="mute">Built for the Opentrons Python API and labware schema (Apache-2.0). Bring your own: swap any part for yours and the graph compares by hash.</p></div>
+  </div>
+  <h2>3D lab</h2>
+  <iframe title="3D BioKEA modular lab" src="../lab/" loading="lazy"></iframe>
+</section>
+
+<section role="tabpanel" id="p-twin" aria-labelledby="t-twin" hidden>
+  <iframe title="Bench digital twin" src="../twin/" loading="lazy"></iframe>
+</section>
+
+<section role="tabpanel" id="p-ca" aria-labelledby="t-ca" hidden>
+  <form class="filters" id="ca-form">
+    <label>Taxon or name<input type="search" id="ca-q" value="Coccinellidae"></label>
+    <label>With photos<select id="ca-media"><option value="StillImage">yes</option><option value="">any</option></select></label>
+    <button class="b p" type="submit">Search GBIF (California)</button>
+  </form>
+  <div class="count" id="ca-count" role="status"></div>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col">Name</th><th scope="col">Where / when</th><th scope="col">Collection</th><th scope="col">Licence</th></tr></thead><tbody id="ca-rows"></tbody></table></div>
+  <p class="mute">Live from the public GBIF occurrence API (stateProvince = California). Other California sources: <a href="https://essig.berkeley.edu/">Essig Museum</a>, <a href="https://www.calbug.org/">Calbug</a>, <a href="https://www.inaturalist.org/places/california">iNaturalist California</a>.</p>
+</section>
+
+<section role="tabpanel" id="p-claims" aria-labelledby="t-claims" hidden>
+  <div class="cols" id="claims"></div>
+</section>
+
+<section role="tabpanel" id="p-prove" aria-labelledby="t-prove" hidden>
+  <div class="cols">
+    <div class="card"><h2>Check files you have</h2>
+      <p>Pick files from your copy of the repo (or anything you built). Your browser hashes them; nothing is uploaded. Each one is matched to a leaf.</p>
+      <label for="pv-files">Files</label> <input type="file" id="pv-files" multiple>
+      <div class="count" id="pv-count" role="status"></div>
+      <div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col">File</th><th scope="col">Result</th></tr></thead><tbody id="pv-rows"></tbody></table></div>
+    </div>
+    <div class="card"><h2>Check your FCO / FCG</h2>
+      <p>Paste JSON with <code>{"leaves":[{"path":…,"sha256":…}]}</code> (your own run or BYO graph). Each leaf is compared with this graph.</p>
+      <label for="pv-json" class="visually-hidden">FCO JSON</label><textarea id="pv-json" spellcheck="false">{"leaves":[{"path":"LICENSE","sha256":""}]}</textarea>
+      <div class="row"><button class="b p" type="button" id="pv-go">Compare</button><button class="b" type="button" id="pv-attest">Copy attestation</button></div>
+      <div id="pv-out" aria-live="polite"></div>
+    </div>
+  </div>
+  <div class="card mt"><h2>Contest</h2><p>Every detail card has a <b>Contest</b> button. It opens a GitHub issue that carries the address and hash; attach your attestation from above. A contest is answered by recomputing the hashes, never by opinion.</p></div>
+</section>
+
+<section role="tabpanel" id="p-agents" aria-labelledby="t-agents" hidden>
+  <div class="cols">
+    <div class="card"><h2>Python CLI</h2><pre class="mono">pip install git+https://github.com/biobitworks/baebugs
+baebugs-graph get root
+baebugs-graph get leaf:LICENSE</pre></div>
+    <div class="card"><h2>npx (no install)</h2><pre class="mono">npx github:biobitworks/baebugs get root</pre></div>
+    <div class="card"><h2>MCP (Claude and others)</h2><pre class="mono">claude mcp add baebugs-graph -- \
+  python -m baebugs.graph_mcp</pre></div>
+    <div class="card"><h2>Raw JSON</h2><p><a href="mvp.json">mvp.json</a> is the whole graph. Every surface reads the same file, so every surface returns the same root.</p></div>
+  </div>
+</section>
+</main>
+
+<script>
+(() => {
+'use strict';
+const REPO = 'https://github.com/biobitworks/baebugs';
+const BASE = new URL('../../', location.href);
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const short = (h) => h ? h.slice(0, 12) : '—';
+let P = null, leafBy = new Map();
+
+// tabs
+const tabs = [...document.querySelectorAll('[role=tab]')];
+function show(t) {
+  tabs.forEach((b) => { const on = b === t; b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1;
+    document.getElementById(b.getAttribute('aria-controls')).hidden = !on; });
+  try { localStorage.setItem('bb-tab', t.id); } catch (e) {}
+}
+tabs.forEach((b, i) => {
+  b.addEventListener('click', () => show(b));
+  b.addEventListener('keydown', (e) => {
+    const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+    if (d) { const n = tabs[(i + d + tabs.length) % tabs.length]; show(n); n.focus(); }
+  });
+});
+
+async function sha256(buf) {
+  const h = await crypto.subtle.digest('SHA-256', buf);
+  return [...new Uint8Array(h)].map((b) => b.toString(16).padStart(2, '0')).join('');
+}
+function contestUrl(addr, sha) {
+  const body = `Address: \`${addr}\`\nsha256 in graph: \`${sha || ''}\`\nGraph root: \`${P.root}\`\n\nWhat I think is wrong:\n\nMy evidence (attestation JSON from the Prove tab, or my own FCO/FCG):\n`;
+  return `${REPO}/issues/new?labels=contest&title=${encodeURIComponent('Contest ' + addr)}&body=${encodeURIComponent(body)}`;
+}
+
+function opts(sel, vals) { const s = $(sel); [...new Set(vals)].sort().forEach((v) => s.append(new Option(v, v))); }
+
+function renderRoots() {
+  const r = P.roots;
+  $('#roots').innerHTML = [['MVP root', P.root], ['Atoms (AoK)', r.aok], ['Hypergraph', r.hypergraph], ['Impact log (MMR)', r.impact_mmr]]
+    .map(([k, v]) => `<div class="root"><b>${esc(k)}</b><span class="mono">${esc(v)}</span></div>`).join('');
+  const c = P.custody;
+  $('#custody').innerHTML = c.breaks
+    ? `<div class="banner" role="note"><b>Chain of custody: ${c.breaks} break(s) recorded.</b> Weights referenced by hash were never stored for ${esc(c.break_contexts.join(', '))}. Those results stay exploratory; the rule: ${esc(c.rule)}.</div>`
+    : `<div class="banner ok" role="note"><b>Chain of custody intact.</b></div>`;
+}
+
+function leafDetail(x) {
+  const ext = (x.licence.match(/\+ (.*) terms/) || [,''])[1];
+  $('#detail').innerHTML = `<h2 class="mono">leaf:${esc(x.path)}</h2>
+  <dl class="kv"><dt>Claim</dt><dd><span class="chip ${x.claim === 'OWN' ? 'OWN' : ''}">${esc(x.claim)}</span> ${esc(P.legend[x.claim] || '')}</dd>
+  <dt>Licence here</dt><dd>${esc(x.licence)}${ext ? `<br><span class="mute">${esc(ext.split(', ').map((e) => (P.external.find((z) => z.id === 'ext:' + e) || {}).effect).filter(Boolean).join(' · '))}</span>` : ''}</dd>
+  <dt>Status</dt><dd>${esc(x.status)}</dd><dt>Module</dt><dd>module:${esc(x.module)} <span class="mono">${short(P.modules[x.module].root)}</span></dd>
+  <dt>File sha256</dt><dd class="mono">${esc(x.sha256)}</dd><dt>Leaf hash</dt><dd class="mono">${esc(x.leaf)}</dd></dl>
+  <div class="row"><button class="b p" type="button" id="d-verify">Check this hash</button>
+  <a class="b" href="${REPO}/blob/main/${encodeURI(x.path)}">Open on GitHub</a>
+  <a class="b" href="${contestUrl('leaf:' + x.path, x.sha256)}">Contest</a></div><p id="d-out" role="status"></p>`;
+  $('#d-verify').onclick = async () => {
+    const out = $('#d-out'); out.textContent = 'Fetching and hashing…';
+    try { const r = await fetch(new URL(x.path, BASE)); if (!r.ok) throw new Error(r.status);
+      const h = await sha256(await r.arrayBuffer());
+      out.innerHTML = h === x.sha256 ? `<span class="chip">match</span> your browser computed the same sha256.` : `<span class="chip bad">mismatch</span> got <span class="mono">${esc(h)}</span>. Contest it.`;
+    } catch (e) { out.textContent = 'Could not fetch the file here (' + e.message + '). Use the Prove tab with your own copy.'; }
+  };
+}
+
+function renderGraph() {
+  const q = $('#g-q').value.toLowerCase(), m = $('#g-mod').value, c = $('#g-claim').value, s = $('#g-status').value, k = $('#g-kind').value;
+  const rows = P.leaves.filter((x) => (!m || x.module === m) && (!c || x.claim === c) && (!s || x.status === s) && (!k || x.kind === k)
+    && (!q || (x.path + ' ' + x.sha256 + ' ' + x.leaf + ' ' + x.licence).toLowerCase().includes(q)));
+  $('#g-count').textContent = `${rows.length} of ${P.leaves.length} leaves`;
+  $('#g-rows').innerHTML = rows.slice(0, 400).map((x) => `<tr data-k="${esc(x.path)}" tabindex="0" aria-selected="false"><td class="mono">${esc(x.path)}</td><td>${esc(x.module)}</td><td><span class="chip ${x.claim === 'OWN' ? 'OWN' : ''}">${esc(x.claim)}</span></td><td>${esc(x.status)}</td></tr>`).join('')
+    + (rows.length > 400 ? `<tr><td colspan="4" class="mute">Showing 400; narrow the filters.</td></tr>` : '');
+}
+function pick(tr) {
+  document.querySelectorAll('#g-rows tr[aria-selected="true"]').forEach((r) => r.setAttribute('aria-selected', 'false'));
+  tr.setAttribute('aria-selected', 'true'); leafDetail(leafBy.get(tr.dataset.k));
+}
+$('#g-rows').addEventListener('click', (e) => { const tr = e.target.closest('tr[data-k]'); if (tr) pick(tr); });
+$('#g-rows').addEventListener('keydown', (e) => { if ((e.key === 'Enter' || e.key === ' ') && e.target.dataset.k) { e.preventDefault(); pick(e.target); } });
+['#g-q', '#g-mod', '#g-claim', '#g-status', '#g-kind'].forEach((s) => $(s).addEventListener('input', renderGraph));
+
+function gotoLeaf(path) {
+  show($('#t-graph')); $('#g-q').value = path; ['#g-mod', '#g-claim', '#g-status', '#g-kind'].forEach((s) => $(s).value = '');
+  renderGraph(); const tr = document.querySelector(`#g-rows tr[data-k="${CSS.escape(path)}"]`); if (tr) { pick(tr); tr.focus(); }
+}
+document.addEventListener('click', (e) => { const a = e.target.closest('[data-leaf]'); if (a) { e.preventDefault(); gotoLeaf(a.dataset.leaf); } });
+const leafLink = (x) => `<a href="#" data-leaf="${esc(x.path)}" class="mono">${short(x.leaf)}</a>`;
+
+function renderBugs() {
+  const q = $('#b-q').value.toLowerCase(), o = $('#b-order').value, t = $('#b-tray').value;
+  const b = P.bugs.filter((x) => (!o || x.order === o) && (!t || x.kit_tray === t) && (!q || JSON.stringify(x).toLowerCase().includes(q)));
+  $('#b-count').textContent = `${b.length} toys`;
+  $('#b-rows').innerHTML = b.map((x) => `<tr><td>${esc(x.family)}<br><span class="mute">${esc(x.order)} · ${esc(x.level)}</span></td><td>${x.length_mm} mm</td><td>${esc(x.kit_tray)}</td><td>${leafLink(x)}</td></tr>`).join('');
+  const s = P.species.filter((x) => (!o || x.order === o) && (!q || JSON.stringify(x).toLowerCase().includes(q)));
+  $('#s-count').textContent = `${s.length} taxa`;
+  $('#s-rows').innerHTML = s.slice(0, 300).map((x) => `<tr><td><i>${esc(x.species)}</i></td><td>${esc(x.family)}<br><span class="mute">${esc(x.order)}</span></td><td>${x.n}</td><td>${x.length_mm_median ?? '—'} mm</td></tr>`).join('');
+}
+['#b-q', '#b-order', '#b-tray'].forEach((s) => $(s).addEventListener('input', renderBugs));
+
+function renderParts() {
+  $('#p-rows').innerHTML = P.parts.map((x) => `<tr><td>${esc(x.name)}</td><td>${esc(x.modules.join(', '))}</td><td>${esc(x.status)}</td><td>${leafLink(x)}</td></tr>`).join('');
+  $('#o-rows').innerHTML = P.labware.map((x) => `<tr><td>${esc(x.name)}</td><td>${x.bbox_mm.join(' × ')}</td><td>${leafLink(x)}</td></tr>`).join('');
+}
+
+function renderClaims() {
+  const mods = Object.entries(P.modules).map(([m, d]) => `<tr><td><a href="#" data-mod="${esc(m)}">${esc(m)}</a></td><td>${d.atoms}</td><td>${esc(Object.entries(d.claims).map(([k, v]) => k + ' ' + v).join(', '))}</td><td>${esc(d.terms.map((t) => t.split(':')[1]).join(', ') || 'none')}</td></tr>`).join('');
+  $('#claims').innerHTML = `<div class="card"><h2>What is ours</h2><p>Code, prints, labware, pages, protocols and ledgers written here are biobitworks' (MIT). Trained weights are AGPL-3.0 (Ultralytics). Museum photos stay the museums'.</p>
+  <dl class="kv">${Object.entries(P.legend).map(([k, v]) => `<dt><span class="chip ${k === 'OWN' ? 'OWN' : k === 'THIRD' ? 'THIRD' : ''}">${esc(k)}</span></dt><dd>${esc(v)}</dd>`).join('')}</dl>
+  <div class="tbl-wrap"><table class="tbl mt"><thead><tr><th scope="col">Module</th><th scope="col">Atoms</th><th scope="col">Claim</th><th scope="col">Outside terms</th></tr></thead><tbody>${mods}</tbody></table></div></div>
+  <div class="card"><h2>Not ours (credited, never claimed)</h2><div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col">Thing</th><th scope="col">Licence</th><th scope="col">What it means</th></tr></thead><tbody>${P.external.map((e) => `<tr><td><a href="${esc(e.url)}">${esc(e.name)}</a></td><td>${esc(e.licence)}</td><td>${esc(e.effect)}</td></tr>`).join('')}</tbody></table></div>
+  <p class="mute">Records what the licences say; not legal advice.</p></div>`;
+}
+$('#claims').addEventListener('click', (e) => { const a = e.target.closest('[data-mod]'); if (a) { e.preventDefault(); show($('#t-graph')); $('#g-q').value = ''; $('#g-mod').value = a.dataset.mod; renderGraph(); } });
+
+// California search (public GBIF API)
+$('#ca-form').addEventListener('submit', async (e) => {
+  e.preventDefault(); const q = $('#ca-q').value.trim(); if (!q) return;
+  $('#ca-count').textContent = 'Searching GBIF…'; $('#ca-rows').innerHTML = '';
+  const u = new URL('https://api.gbif.org/v1/occurrence/search');
+  u.search = new URLSearchParams({ q, country: 'US', stateProvince: 'California', limit: '25', ...( $('#ca-media').value ? { mediaType: 'StillImage' } : {}) });
+  try { const d = await (await fetch(u)).json();
+    $('#ca-count').textContent = `${d.count.toLocaleString()} California records; showing ${d.results.length}`;
+    $('#ca-rows').innerHTML = d.results.map((r) => `<tr><td><a href="https://www.gbif.org/occurrence/${r.key}"><i>${esc(r.scientificName)}</i></a><br><span class="mute">${esc(r.family || '')}</span></td><td>${esc(r.locality || r.county || '')}<br><span class="mute">${esc((r.eventDate || '').slice(0, 10))}</span></td><td>${esc(r.institutionCode || r.datasetName || '')}</td><td>${esc((r.license || '').replace(/^https?:\/\/creativecommons.org\/(licenses|publicdomain)\//, ''))}</td></tr>`).join('');
+  } catch (err) { $('#ca-count').textContent = 'GBIF could not be reached from here: ' + err.message; }
+});
+
+// Prove
+$('#pv-files').addEventListener('change', async (e) => {
+  const files = [...e.target.files]; const bySha = new Map(P.leaves.map((x) => [x.sha256, x]));
+  const out = [];
+  for (const f of files) { const h = await sha256(await f.arrayBuffer()); const x = bySha.get(h);
+    out.push(`<tr><td>${esc(f.name)}<br><span class="mono">${short(h)}</span></td><td>${x ? `<span class="chip">match</span> ${leafLink(x)} <span class="mono">${esc(x.path)}</span>` : '<span class="chip bad">no leaf has this hash</span>'}</td></tr>`); }
+  $('#pv-rows').innerHTML = out.join(''); $('#pv-count').textContent = `${files.length} file(s) hashed in your browser`;
+});
+let lastAtt = null;
+$('#pv-go').addEventListener('click', () => {
+  let j; try { j = JSON.parse($('#pv-json').value); } catch (e) { $('#pv-out').textContent = 'Not valid JSON: ' + e.message; return; }
+  const ls = j.leaves || []; const rows = ls.map((l) => { const x = leafBy.get(l.path);
+    const v = !x ? 'NOT IN GRAPH' : l.sha256 === x.sha256 ? 'MATCH' : 'DIFFERS'; return { path: l.path, yours: l.sha256, graph: x ? x.sha256 : null, verdict: v }; });
+  lastAtt = { type: 'baebugs-attestation', graph_root: P.root, compared: rows.length, match: rows.filter((r) => r.verdict === 'MATCH').length, rows };
+  $('#pv-out').innerHTML = `<p>${lastAtt.match} of ${rows.length} match.</p><div class="tbl-wrap"><table class="tbl"><tbody>${rows.map((r) => `<tr><td class="mono">${esc(r.path)}</td><td><span class="chip ${r.verdict === 'MATCH' ? '' : 'bad'}">${r.verdict}</span></td></tr>`).join('')}</tbody></table></div>`;
+});
+$('#pv-attest').addEventListener('click', async () => {
+  if (!lastAtt) { $('#pv-out').textContent = 'Run Compare first.'; return; }
+  try { await navigator.clipboard.writeText(JSON.stringify(lastAtt, null, 1)); $('#pv-out').insertAdjacentHTML('beforeend', '<p>Attestation copied.</p>'); }
+  catch (e) { $('#pv-out').insertAdjacentHTML('beforeend', `<pre class="mono">${esc(JSON.stringify(lastAtt, null, 1))}</pre>`); }
+});
+
+fetch('mvp.json').then((r) => r.json()).then((d) => {
+  P = d; leafBy = new Map(P.leaves.map((x) => [x.path, x]));
+  opts('#g-mod', Object.keys(P.modules)); opts('#g-status', P.leaves.map((x) => x.status)); opts('#g-kind', P.leaves.map((x) => x.kind));
+  opts('#b-order', P.bugs.map((x) => x.order).concat(P.species.map((x) => x.order))); opts('#b-tray', P.bugs.map((x) => x.kit_tray));
+  const lic = leafBy.get('LICENSE'); if (lic) $('#pv-json').value = JSON.stringify({ leaves: [{ path: 'LICENSE', sha256: lic.sha256 }, { path: 'README.md', sha256: 'paste-your-hash-here' }] }, null, 1);
+  renderRoots(); renderGraph(); renderBugs(); renderParts(); renderClaims();
+  let t = null; try { t = localStorage.getItem('bb-tab'); } catch (e) {}
+  const want = location.hash.startsWith('#leaf:') ? null : t && document.getElementById(t);
+  if (want) show(want);
+  if (location.hash.startsWith('#leaf:')) gotoLeaf(decodeURIComponent(location.hash.slice(6)));
+}).catch((e) => { $('#roots').innerHTML = `<div class="banner">Could not load mvp.json: ${esc(e.message)}</div>`; });
+})();
+</script>
+</body>
+</html>

@@ -6,7 +6,7 @@ smaller classes we pick the largest inventory aperture that still retains class 
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, field, asdict
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
 import numpy as np

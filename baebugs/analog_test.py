@@ -151,6 +151,7 @@ def fastsam_objects(img, dishes, ppm_at=None, axis="y", ref_ppm=10.0, weights="F
     'food'): every mask whose centre lies inside a dish's inner 88% and whose
     area is object-sized; measured with the local ruler scale."""
     from ultralytics import FastSAM
+
     from .measure import _from_contour
     res = FastSAM(weights).predict(img, imgsz=imgsz, retina_masks=True, conf=0.25, iou=0.7, verbose=False)[0]
     if res.masks is None:
@@ -215,7 +216,7 @@ def tiled(fn, img, tile=640, overlap=0.25):
 
 def run(image_paths, student_weights, ref_truths, out_dir, analog_prompts=("rice grain", "seed", "pasta"),
         insect_prompts=("insect",)):
-    from .measure import YoloMeasurer, consensus, _from_contour
+    from .measure import YoloMeasurer, consensus
     from .specimen_photo import segment_yoloe
     from .triage import reference_from_truth, triage
     out = Path(out_dir); out.mkdir(parents=True, exist_ok=True)

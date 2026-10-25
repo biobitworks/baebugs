@@ -16,6 +16,7 @@ baebugs = "baebugs.cli:main"
 baebugs-train = "baebugs.train:main"
 baebugs-pull = "baebugs.pull_data:main"
 baebugs-pipeline = "baebugs.run_pipeline:main"
+baebugs-graph = "baebugs.mvp:main"
 
 [tool.setuptools.packages.find]
 include = ["baebugs*"]

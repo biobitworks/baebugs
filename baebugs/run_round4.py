@@ -9,7 +9,6 @@ from __future__ import annotations
 
 import argparse
 import json
-from dataclasses import asdict
 from pathlib import Path
 
 import cv2
@@ -87,7 +86,7 @@ def main(argv=None):
     top = [json.loads(l) for l in alerts.read_text().splitlines()] if alerts.exists() else []
     top.sort(key=lambda r: (r["priority"] != "VIP", -r["novelty"], r["conf"]))
     (dash / f"{a.run}_alerts.json").write_text(json.dumps(top[:200], indent=1))
-    led.append("triage", {**summ, "reference_n": int(len(ref_L))}, files={"alerts.jsonl": alerts})
+    led.append("triage", {**summ, "reference_n": len(ref_L)}, files={"alerts.jsonl": alerts})
 
     # 3 multi-resolution data (real photos at 0.3 / 1 / 3 MP + originals + synthetic)
     mr = build_multires(pseudo / "data.yaml", root / "datasets" / f"multires_{a.run}", levels=(0.3, 1.0, 3.0))
