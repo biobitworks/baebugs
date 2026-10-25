@@ -1,5 +1,5 @@
 {
- "atoms": 723,
+ "atoms": 725,
  "external": [
   {
    "claim": "THIRD",
@@ -353,6 +353,22 @@
    "path": "baebugs/analog_test.py",
    "sha256": "2339692f6ee81e2469dc755928d2d76ef26d281ff807af3fd856e76f16876c65",
    "status": "built",
+   "terms": [
+    "ext:ultralytics"
+   ]
+  },
+  {
+   "claim": "OWN+TERMS",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:baebugs/aok.py",
+   "kind": "code",
+   "leaf": "7abdbdd3709490970de3436ff5fc25fa9733217e0a8b42db1c4ea607eca16afb",
+   "licence": "MIT + ultralytics terms",
+   "module": "python-package",
+   "path": "baebugs/aok.py",
+   "sha256": "50fcc476857aab3581b33e759bfae6c7b5e098241fe7cd16c589b01da028b7ba",
+   "status": "tested",
    "terms": [
     "ext:ultralytics"
    ]
@@ -9799,6 +9815,22 @@
    "terms": []
   },
   {
+   "claim": "OWN+TERMS",
+   "claude_coauthored_commits": 1,
+   "commits": 1,
+   "id": "leaf:tests/test_aok.py",
+   "kind": "test",
+   "leaf": "2820d5d184817ae00adf0ad0aaa45785988d9cce30f75a0b8a82d15415b3ced7",
+   "licence": "MIT + ultralytics terms",
+   "module": "tests",
+   "path": "tests/test_aok.py",
+   "sha256": "5277d38663181903e25b5d03e0d01c7c7ec881b9e5c359fd9a122fb9bb93fd79",
+   "status": "tested",
+   "terms": [
+    "ext:ultralytics"
+   ]
+  },
+  {
    "claim": "OWN",
    "claude_coauthored_commits": 1,
    "commits": 1,
@@ -10356,16 +10388,16 @@
    ]
   },
   "python-package": {
-   "atoms": 74,
+   "atoms": 75,
    "claims": {
     "OWN": 65,
-    "OWN+TERMS": 9
+    "OWN+TERMS": 10
    },
    "id": "module:python-package",
-   "root": "af1a123f6804e6cdbab605583cd9bba032bb422a0ccd912b6bae94020ee4ee5c",
+   "root": "c326a08368ba730da2efbd409626e0cc78b7098caf77ab4bf4cb13a473b1b2ef",
    "status": {
     "built": 52,
-    "tested": 22
+    "tested": 23
    },
    "terms": [
     "ext:opentrons",
@@ -10385,18 +10417,19 @@
    "terms": []
   },
   "tests": {
-   "atoms": 30,
+   "atoms": 31,
    "claims": {
     "OWN": 29,
-    "OWN+TERMS": 1
+    "OWN+TERMS": 2
    },
    "id": "module:tests",
-   "root": "052913334b24b253c3b1f48ed17a2d3b5ee3b97274ffe8f9fd163938edc83029",
+   "root": "9b86c6884ca19090a5748d846ef6d9e15d36310b089878c066fa4610e36eb9b7",
    "status": {
-    "tested": 30
+    "tested": 31
    },
    "terms": [
-    "ext:opentrons"
+    "ext:opentrons",
+    "ext:ultralytics"
    ]
   },
   "toy-insects": {
@@ -10413,10 +10446,10 @@
   }
  },
  "note": "Records what the licences say; not legal advice.",
- "root": "fcf9a1e9979195b9f926d259d22bc5f6422c52cb4a8226b5868a2d554c025912",
+ "root": "e8cc45601b3a21ab28d10fd136623e2839040af70876cd779dc19d54e275f98e",
  "totals": {
   "OWN": 660,
-  "OWN+TERMS": 43,
+  "OWN+TERMS": 45,
   "THIRD": 20
  },
  "type": "aok"
