@@ -4653,6 +4653,146 @@ null
 },
 {
 "claim": "OWN",
+"kind": "doc",
+"leaf": "b23ff56f921d54d1e699eab4bc2531e001ad5a4be5e9e6c13e6bdcbe949a051b",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slides/README.md",
+"sha256": "f7f0e46c28daa38ed8c447abeb953d015640fa1001fe97dd4a34664ce7765b6f",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "b877efcacef72ecfbc7d0cdc0e8ea0600808bf9b9ca85d6953ef17069f1a704f",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slides/deck.json",
+"sha256": "952eff5cab62b4e57068b58be1a2b11ed32ee727bb1105a0309afb6c8b810ef0",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "8e1cefb90621287384abc9da5b998aa99f31069703774593d19d3d13e85f2916",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slides/slides/byo.html",
+"sha256": "30c15b9fddcb2dbf4c63615b2299d949ca856033f767e8fc864e364e41a3b0a7",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "7cb53fc91186dedd380dc4a17d1f09c4dec175f2e48db7937678ed232878d2f8",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slides/slides/close.html",
+"sha256": "fbd52e232237f57e835d7ec83582186bb2d1e8ba381ecb3acd92801f4676b1f8",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "a7c00c08ec56d29911194be7db0234eeb446449c91c9832935418dabeaabedf4",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slides/slides/cost.html",
+"sha256": "7f6bf1148a3150823ab8d8f0fa81ef20be700f61eb6b472979c9fc570dc88456",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "5b33622c4a36e4f413fa7a5c4ae20f7a6f8f05c79417ecf75b962329d7214e3a",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slides/slides/cover.html",
+"sha256": "5d008def3dfeeeec77865ed775941743ccb589587e38696d7515e84de2ad80d8",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "427414a35ca6bef09991f34ddeea37ccb84b99904729db8b5fee2b785b3a55b9",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slides/slides/custody.html",
+"sha256": "64e225aa1a9a0e657758e8e0f6157783aaffd1809441c5ebfc36f3ba109d8517",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "87c74d6bb2cca1e8b4e6877b8968f86f189297db1421f3a51aaeb804bd22b212",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slides/slides/demo.html",
+"sha256": "f59f1567ba94c4800302929931a77c10999e7facfe47cafc4f0d4b2b61620d80",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "bd8b4dbbc2167f7375b3c977339cd5e6adc6843ab9dce46822395ab86fc5d318",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slides/slides/graph.html",
+"sha256": "128d603ca4dddb9db6dc0d6b7efc91ac11596a307fef3d357d3821c15e6ed180",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "cc18e3bd2f023c905a4c9fd712001f36494b1fb8b264aa4dd427a2b11dc458e9",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slides/slides/licence.html",
+"sha256": "2631f2d729610ca476d41c9c2644e4e15a73b02e5eba60d5a83bc35546537418",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "0b262ff144b2f4cb44384a50e3e13217ea3e0461db5ef2a8f046db8e06e83202",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slides/slides/pipeline.html",
+"sha256": "b7f57349544b828ba2271c9469710ce7f7f75c53cd7b0e086a5adbf853f7a9d2",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "8d1593caecd53a4e043f4b25b3708aad170c57b1f7d51963a86ae6ee5094b1d6",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slides/slides/r002a.html",
+"sha256": "92b3144fc1bf9f21534905eaf32a2b53952efb1c538f7260428b59fde98fff4f",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "ed818326d583b6ca99872e976b21562ca4bb315476a395743ef2e582fe980245",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slides/slides/r004.html",
+"sha256": "ee9117dd43ba3a351e8b7b73ba73d93592cdd1d59f1b279d083bcb8e16b3ebc6",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "823bfa885ff409a506ef29cb5bfc54856a0f35b23f4621ef1500696d335c5bb5",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slides/slides/slot004.html",
+"sha256": "46dbf5d88e89556c8af3928c1bd480a538b75188a5e5b170733d6687c2da0dc6",
+"status": "built"
+},
+{
+"claim": "OWN",
 "kind": "meta",
 "leaf": "f42c9af3613d7caa02ac0626baeab2f692006ac819c7e055de7b415220040063",
 "licence": "MIT",
@@ -11122,14 +11262,14 @@ null
 "terms": []
 },
 "docs": {
-"atoms": 48,
+"atoms": 62,
 "claims": {
-"OWN": 48
+"OWN": 62
 },
 "id": "module:docs",
-"root": "8d7f35da1d9d5d4978b87a8af96add374dace14ad5a8ac28c10cf00af2631e05",
+"root": "5a83273ed2f417c1464e97f22704f6ed53b8dd17890e6dcecbd70bb88241a54d",
 "status": {
-"built": 48
+"built": 62
 },
 "terms": []
 },
@@ -12028,9 +12168,9 @@ null
 ]
 }
 ],
-"root": "280772572172a9cd2fb9ba1bd82314045998d732c0e9f6192567053dc984fd7d",
+"root": "b1222faa5abcf4c8e74c070f77e2267b6dbe9509ac6b0d7318bf836eb8f085c5",
 "roots": {
-"aok": "395e78e18a06a9465629c301d6de22cda43cdc62e774227b527e67eccf6d28f0",
+"aok": "25aa6c4c551ecf4044bca0c9a056e422b7f041c3f65ae58c218fa7959fbf71ca",
 "assets": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
 "assets_mmr": "97d20c6b90e0385d7cbac87551f93381eba7eeb2e05cecb7ed9f352f349281b2",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -16245,7 +16385,7 @@ null
 }
 ],
 "totals": {
-"OWN": 835,
+"OWN": 849,
 "OWN+TERMS": 49,
 "THIRD": 20
 },
