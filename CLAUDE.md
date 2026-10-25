@@ -10,6 +10,13 @@ Team demo-day project. See README.md for layout and commands. These notes hold t
 2. **Planner:** sizes → which of the 5 filters go into the 3 rig slots (coarse-to-fine order is a rule) → list of moves.
 3. **Arm:** SO-101 follower moves filters between the rig and a side storage shelf.
 
+**Closed loop (user's design, 2026-10-24):** the demo sample will likely be about two layers with pile-up, so per-object measuring of the first photo won't work. Instead:
+- First photo of the pile → rough estimate of which of the 9 types are present and how much (patch classifier on colour/texture, trained from single-type photos, plus a per-type reference size table) → first 3 filters chosen **coarse-first**, targeting the largest common objects.
+- Each time the robot changes a filter it photographs that filter's catch (recommended: a fixed inspection spot under the overhead camera, so the calibration holds) → identify the catch → update the sample estimate → re-plan the next filter change.
+- Every capture is logged (run, step, filter, and the size band it implies: caught by hole h_i, passed h_{i-1}). The filters act as free size labels for training, and the band is a consistency check on the classifier (e.g. "rice" on a 5–8 mm filter is impossible), so retraining on new captures doesn't reinforce its own mistakes.
+- Limits: the camera sees only the top layer, and shaking makes small items sink. Piles need front lighting (colour); a backlight would turn a pile into one shadow.
+- Open questions: what happens to a catch after it's photographed (re-poured? by whom?); what the filter mesh looks like as a photo background.
+
 ## Hardware (laptop: Windows 11, AMD Ryzen AI 9 / Radeon 880M, no NVIDIA GPU)
 
 - SO-101 leader = **COM5** (CH343 serial 5AB0183348), LeRobot id `my_leader`, **5 V supply**. Mixed 7.4 V-class motors; motor 2's max voltage limit is 8.0 V. It was once fed 12 V and all motors flagged over-voltage (status bit 0).
