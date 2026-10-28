@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_versioned_security_headers():
-    c = json.loads((ROOT / "site/mvp/vercel.json").read_text())
+    c = json.loads((ROOT / "vercel.json").read_text())
     headers = {h["key"].lower(): h["value"] for rule in c["headers"] for h in rule["headers"]}
     assert headers["x-content-type-options"] == "nosniff"
     assert headers["x-frame-options"] == "SAMEORIGIN"

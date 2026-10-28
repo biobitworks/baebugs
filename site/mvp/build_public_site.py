@@ -62,7 +62,7 @@ def build(target: Path, source_ref: str):
     sys.path.insert(0, str(REPO / "site/slides"))
     from build_slides import build_slides
     slides_projection = build_slides(REPO, target / "slides", source_ref, target / "mvp.json")
-    config_source = REPO / "site/mvp/vercel.json"
+    config_source = REPO / "vercel.json"
     shutil.copy2(config_source, target / "vercel.json")
     # The 3D labware preview and Opentrons schemas linked by the Parts tab.
     for rel in ["print/labware/previews.png"]:
