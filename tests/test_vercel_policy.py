@@ -14,6 +14,9 @@ def test_versioned_security_headers():
     assert "frame-ancestors 'self'" in headers["content-security-policy"]
     assert "object-src 'none'" in headers["content-security-policy"]
     assert "raw.githubusercontent.com" in headers["content-security-policy"]
+    assert "https://api.gbif.org" in headers["content-security-policy"]
+    assert "frame-src 'self' https://www.youtube-nocookie.com" in headers["content-security-policy"]
+
     assert "youtube-nocookie.com" in headers["content-security-policy"]
     assert "camera=()" in headers["permissions-policy"]
 
