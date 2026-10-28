@@ -24,7 +24,13 @@ def test_all_final_review_routes_source_pinned_and_private_media_excluded():
         manifest=build(site,ref)
         assert manifest["source_ref"]==ref
         assert manifest["evidence_pack_root"]==json.loads((site/"mvp.json").read_text())["root"]
-        assert manifest["excluded_pr34_face_photos"] is True
+        assert manifest["excluded_pr34_face_photos"] is False
+        assert manifest["included_people_photos"] is True
+        assert manifest["photo_publication_approval"] == "USER_ASSERTED_NOT_SIGNED"
+        assert manifest["source_decks_published"] == 2
+        assert "vercel.json" not in manifest["files"]
+        assert (site / "vercel.json").is_file()
+        assert manifest["deployment_config_sha256"] == sha((site / "vercel.json").read_bytes())
         assert manifest["submitted_youtube_link"]=="SOURCE_REPORTED_NOT_INDEPENDENTLY_VERIFIED"
         assert manifest["reported_youtube_url"]=="https://youtu.be/O4Gq-r018cI"
         assert manifest["submitted_google_slides_link"]=="NOT_VERIFIED"
@@ -34,13 +40,18 @@ def test_all_final_review_routes_source_pinned_and_private_media_excluded():
             "demo/mvp_walkthrough_45s.mp4",
             "demo/biokea_vs_baebugs_animation_30s.mp4",
             "demo/robot_animation_63s.mp4",
-            "demo/research_reel_67s.mp4",
+             "demo/research_reel_67s.mp4",
+            "slides/index.html","slides/slides.json","slides/team_workcell_approved.jpg",
+            "slides/baebugs_final_setup_autoplay.ppsx",
+            "slides/baebugs_final_setup_autoplay.pptx",
+            "slides/baebugs_bench_photos_autoplay.ppsx",
+            "slides/baebugs_bench_photos_autoplay.pptx",
         ]:
             assert route in manifest["files"], route
             output=site/route
             assert sha(output.read_bytes())==manifest["files"][route]["sha256"]
-        assert not any("slideshow" in f for f in manifest["files"])
-        assert not any("photos" in f for f in manifest["files"])
+        assert all("secret" not in f.lower() for f in manifest["files"])
+        assert "slides/team_workcell_approved.jpg" in manifest["files"]
         assert 'href="review/"' in (site/"index.html").read_text()
         assert 'href="story/"' in (site/"index.html").read_text()
         assert "/blob/mvp-kg/" not in (site/"board/index.html").read_text()

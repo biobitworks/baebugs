@@ -70,8 +70,12 @@ td.n{font-variant-numeric:tabular-nums;text-align:right;font-family:var(--mono)}
 .delta.up{color:var(--ok)}.delta.down{color:var(--bad)}
 .pill{display:inline-block;font:700 11px var(--display);letter-spacing:.05em;border-radius:99px;padding:2px 8px;color:#fff;background:var(--steel)}
 .pill.bad{background:var(--bad)}.pill.warn{background:var(--warn)}.pill.ok{background:var(--ok)}
+.state.ok,.pill.ok{color:#102c1f}
+.state.warn,.pill.warn{color:#37270b}
+.state.bad,.pill.bad{color:#311615}
 .q{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:8px 0}
 button{font:600 13px var(--display);letter-spacing:.03em;border:1px solid var(--water);background:var(--water);color:#fff;border-radius:5px;padding:6px 12px;cursor:pointer}
+button:not(.ghost){color:#0a2330}
 button.ghost{background:transparent;color:var(--water)}
 button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}
