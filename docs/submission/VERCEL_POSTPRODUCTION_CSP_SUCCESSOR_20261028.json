@@ -1,0 +1,29 @@
+{
+  "config_hash_difference": "OBSERVED; PROVENANCE_UNRESOLVED",
+  "effective_security_headers": {
+    "count": 5,
+    "source_values_match": true
+  },
+  "live_robot": "NOT_TESTED",
+  "mmr_commit": "NOT_COMPUTED",
+  "next_action": "Run functional browser checks including GBIF fetch and embedded iframe, stage then deploy exact successor",
+  "parent_evidence_root": "d1844eb85fbb13025c5bf1532d43277ddef4f1824c664eade08b3b7c9d37f3fe",
+  "parent_main_commit": "08e97a2b2ffe85a530925118833cff61c9f29be1",
+  "parent_prod_deployment": "dpl_6UT4awtZVaxWrwkqjWtGkFiyoJvX",
+  "production_config_hash": "2af9721d1ce10f6432ad76a1fd0f1116f86efd93b85342aac6e3a3fd655e3749",
+  "proposed_corrections": [
+    "Allow same-origin iframe routes for lab and twin",
+    "Allow public GBIF API query via CSP connect-src",
+    "Stop Google Fonts network requests; use local system font stacks",
+    "Publish source-leaf config hash independently from build-time config hash"
+  ],
+  "published_public_files": {
+    "file_drift": 0,
+    "sha256_readback_pass": 67,
+    "total": 67
+  },
+  "schema": "baebugs.VercelCspSuccessorFCO.v1",
+  "scientific_performance": "NOT_TESTED",
+  "signing": "NOT_SIGNED",
+  "source_config_hash": "fb451d52c2f05cd8d6853ec884e7b2eacadb97ffaa41c135312393b09c27c446"
+}

@@ -265,7 +265,18 @@ def build(target: Path, source_ref: str):
               "photo_participant_releases":"NOT_INDEPENDENTLY_VERIFIED",
               "source_decks_published":len(slides_projection["decks"]),
               "source_deck_photo_sha256":slides_projection["team_photo"]["jpeg_sha256"],
+              # Preserve distinct Git-source and Vercel-build-time configuration identities.
+              # Vercel's Git build previously returned a different on-disk
+              # config digest despite effective headers matching the source.
               "deployment_config_sha256":H(config_source),
+              "source_config_atom_sha256":next(
+                  x["sha256"] for x in json.loads((target/"mvp.json").read_text())["leaves"]
+                  if x["path"]=="vercel.json"
+              ),
+              "source_config_build_digest_match":H(config_source)==next(
+                  x["sha256"] for x in json.loads((target/"mvp.json").read_text())["leaves"]
+                  if x["path"]=="vercel.json"
+              ),
               "reproduces_physical_robot_execution":False,
               "story_projection":{
                 "source_story_sha256":H(committed_story),
