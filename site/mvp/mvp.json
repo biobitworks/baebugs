@@ -5732,6 +5732,16 @@ null
 {
 "claim": "OWN",
 "kind": "doc",
+"leaf": "d64127bf906bc1fe4a9df5639bf3ee410559b357fc232cb08edc0f6d00bccadb",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/submission/VERCEL_GIT_BUILD_SUCCESSOR_20261028.json",
+"sha256": "d274038a7541177275a54ca68c6483d666a51ecc06e895fee03808617ff3486f",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
 "leaf": "9711101e79d928014a51ff3f29463d78b75a5c10626fb67df052b169b1827f43",
 "licence": "MIT",
 "module": "docs",
@@ -13152,6 +13162,16 @@ null
 {
 "claim": "OWN",
 "kind": "meta",
+"leaf": "75556b1a80b8a4fded7506345bb3e615d57d5d4012b478807843f3b525297bc4",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "scripts/build_vercel_static.sh",
+"sha256": "c8d4c2ba39dcce45782eac12a3f3edc100e865b7e2e3ba9dfb835bae752cc3d4",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
 "leaf": "315e13b5aa6400407c12067cc94963066f61829242eedbcb93f4dc941a08c02a",
 "licence": "MIT",
 "module": "repo-meta",
@@ -13602,11 +13622,11 @@ null
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "6da86eaada0e2bd4bad1239d870e4ce1bba5a46929ce8d4ad0556d685bfdb1d1",
+"leaf": "ef965555c18199601afb53e603f90da38a97ef9b989a9cf462e3171ec1dd4717",
 "licence": "MIT",
 "module": "mvp-site",
 "path": "site/mvp/build_public_site.py",
-"sha256": "502a118348c654f02a7b8c3ed9098a54c8a90a6e224015935b1baf5c1f3764c9",
+"sha256": "bb8d928aea9deada3b33163d3d727326259fbe82c904d419e6321f0268bb38a7",
 "status": "built"
 },
 {
@@ -13617,16 +13637,6 @@ null
 "module": "mvp-site",
 "path": "site/mvp/index.html",
 "sha256": "2c3417bed8c432d8bc6686527cb45c321416c1f2cf3bdd1990acc53eeb6ef1cb",
-"status": "built"
-},
-{
-"claim": "OWN",
-"kind": "page",
-"leaf": "b0a974856031827d857267044130214d3781e9a13cadc230a5e329b40ffe43f2",
-"licence": "MIT",
-"module": "mvp-site",
-"path": "site/mvp/vercel.json",
-"sha256": "fb451d52c2f05cd8d6853ec884e7b2eacadb97ffaa41c135312393b09c27c446",
 "status": "built"
 },
 {
@@ -14192,11 +14202,11 @@ null
 {
 "claim": "OWN",
 "kind": "test",
-"leaf": "9e4f484a04c2bc88974efe6430336d28f7b6a0f048b950718c8b73a961d10faf",
+"leaf": "b2934bb62e240bc7b01ac7a63bd2bba31e7c1662a717d0dd1c38e0e108c32f4b",
 "licence": "MIT",
 "module": "tests",
 "path": "tests/test_vercel_policy.py",
-"sha256": "287f9448887295be533ac94b95db0a226f44ae90aecff16ca6488911be3022f4",
+"sha256": "f6c408fdbaf4441a851b872bc6ece10841ac1a96c0fe5b68865ada1de3a60634",
 "status": "tested"
 },
 {
@@ -14257,6 +14267,16 @@ null
 "module": "repo-meta",
 "path": "tools/aok_upstream_sources.json",
 "sha256": "90963a56b6a86a746724c49a70365f3592385781b40f88d5c7a147a72439f1d1",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "meta",
+"leaf": "fb6d85c616bd1e5e0384f32017740bc869ec05e3aa9d184d40dcf87e0b48332d",
+"licence": "MIT",
+"module": "repo-meta",
+"path": "vercel.json",
+"sha256": "fb451d52c2f05cd8d6853ec884e7b2eacadb97ffaa41c135312393b09c27c446",
 "status": "built"
 }
 ],
@@ -14355,14 +14375,14 @@ null
 "terms": []
 },
 "docs": {
-"atoms": 140,
+"atoms": 141,
 "claims": {
-"OWN": 140
+"OWN": 141
 },
 "id": "module:docs",
-"root": "5fabe43c9727b0838287ec5b4ca9df8f9dc6348ab56475b742e8d35c5682c817",
+"root": "34e1ccbeb16a800e7a0c393197aac2e86f20a51f239326b7f7f06f1090912240",
 "status": {
-"built": 140
+"built": 141
 },
 "terms": []
 },
@@ -14408,14 +14428,14 @@ null
 "terms": []
 },
 "mvp-site": {
-"atoms": 57,
+"atoms": 56,
 "claims": {
-"OWN": 57
+"OWN": 56
 },
 "id": "module:mvp-site",
-"root": "aefeb8440cd3ed9703deff77601fe173c8c2d54875e3f26db59ef26189c6c92a",
+"root": "c181c7765659aee14675f81d9ec85c9b6d07e7a36c3be664510235f3f6c31415",
 "status": {
-"built": 57
+"built": 56
 },
 "terms": []
 },
@@ -14462,14 +14482,14 @@ null
 ]
 },
 "repo-meta": {
-"atoms": 234,
+"atoms": 236,
 "claims": {
-"OWN": 234
+"OWN": 236
 },
 "id": "module:repo-meta",
-"root": "2daecf95e953c6f5104751d4b054a9eb9cbb978181a56a377b36d93afb16e0eb",
+"root": "3c3360487685ba3ad49bcaafb88fd9d2a3e9dfa815783bf79e547ee81482eb28",
 "status": {
-"built": 234
+"built": 236
 },
 "terms": []
 },
@@ -14479,7 +14499,7 @@ null
 "OWN": 47
 },
 "id": "module:tests",
-"root": "bb1bebc624bc210ae5f55f95ba5ccb140acee0fba25272de3ba7bba959fecb9e",
+"root": "f2e2f1f6ccf45258640fb51caf1c2cf1cec09e392f44200be348599466d5bce8",
 "status": {
 "tested": 47
 },
@@ -15261,9 +15281,9 @@ null
 ]
 }
 ],
-"root": "a62e22838b73c92e08adbb654192991cd2f9d6c261dad738c6f8feb731037f60",
+"root": "d1844eb85fbb13025c5bf1532d43277ddef4f1824c664eade08b3b7c9d37f3fe",
 "roots": {
-"aok": "74067db3b88fd8fd351dc5506e1d32c73770018f2e4252eb83d12f9e274836bb",
+"aok": "a87e4dc6b023e268d6dabc1aa05f24caafc53c56fdf727e7231cd11354124e04",
 "assets": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
 "assets_mmr": "97d20c6b90e0385d7cbac87551f93381eba7eeb2e05cecb7ed9f352f349281b2",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -19479,7 +19499,7 @@ null
 }
 ],
 "totals": {
-"OWN": 1154,
+"OWN": 1156,
 "OWN+TERMS": 52,
 "THIRD": 20
 },

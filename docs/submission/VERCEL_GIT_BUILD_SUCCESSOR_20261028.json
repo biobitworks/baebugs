@@ -1,0 +1,19 @@
+{
+  "schema": "baebugs.VercelBuildRepairFCO.v1",
+  "parent_main_commit": "c2f9fd9da778d239939c8faeef08ad70d1c70332",
+  "failure_pip": "dpl_8PZV1awdhGzGNyMF9xfod7EoBP7r",
+  "failure_source_output": "dpl_2p2PwfEAf9GgiBY4Web6SJLu813Z",
+  "successful_preview": "dpl_GiQf5pVZHFNzHf8onYBDAfaRy6wK",
+  "preview_manifest_sha256": "f0ccf8e8002274b5c035496a8cbf39e3eb74f8968ee961bcd24666fc7156ff7f",
+  "failure_1": "PEP668 prevented global pip installation",
+  "failure_2": "Source compiler correctly prevented output inside the repository",
+  "repair": "Versioned build script uses pinned Pillow via uv run and compiles outside source checkout",
+  "security_policy": "Root vercel.json for Git-source deployment",
+  "photo_approval": "USER_ASSERTED_NOT_SIGNED",
+  "scientific_accuracy": "NOT_ESTABLISHED",
+  "physical_execution": "NOT_TESTED",
+  "new_root": "RECOMPUTE_AFTER_ADMISSION",
+  "signed": "NOT_SIGNED",
+  "mmr_commit": "NOT_COMPUTED",
+  "next_action": "Review, merge, stage, test security headers and promote production"
+}
