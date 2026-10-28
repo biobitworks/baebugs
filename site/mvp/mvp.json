@@ -5522,6 +5522,66 @@ null
 {
 "claim": "OWN",
 "kind": "doc",
+"leaf": "cd1b776b7452ae63a3a1dd6a7c5c8b281ed6ec3492e1e245fe574fddfeb59978",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slideshow/README.md",
+"sha256": "1e6368a727ccff900e07b96503406dbe20747258edba9b31faf3c17e6b463311",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "c884c9dbca57068293b22a6b83386e8bb867020084733343c406e3c301138f12",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slideshow/TEAM_PHOTO_PUBLICATION_APPROVAL_20261028.json",
+"sha256": "df242bbc08e9c2d6079db4b5ee9c3a3145041967764086e281e7f1882256ea3a",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "0fef244d465d977586b6e0f115b4befba32cc057f9841b1fa3660f3ed41572cf",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slideshow/baebugs_bench_photos_autoplay.ppsx",
+"sha256": "4e337f83706a64edc828fe3403ce6c3245a651f55efd3c48b55bb02d14255ffb",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "91a08f882541244e5971b1bf078a82e5ec0cd0702001b822fd490d0f827f2612",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slideshow/baebugs_bench_photos_autoplay.pptx",
+"sha256": "035483479df9ad2d36390986dc3927b3fd2f84fe88380bab3638771841412cc6",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "51bdc6eb3be2b5e76fe9a15866f0e40126a6ff36b05ec1b0bcad0a911141f4c2",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slideshow/baebugs_final_setup_autoplay.ppsx",
+"sha256": "6b7fc180799d7c9d83cd56b4b8e7b83e1c8a1d2182d026ef5ecb19ac7d5a1137",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "868c2287be020ba7e5c11a231009fb5fff82d093e8bd3e19b2414024802e204e",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/slideshow/baebugs_final_setup_autoplay.pptx",
+"sha256": "87ab882512739ab001888aad7987cc50bdd4bff3f9b55c03891fb3b3e2f667bb",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
 "leaf": "f0a0e3d763702429b70cb3d11f84c18f5f56963609665770b588ec2b7d337ae1",
 "licence": "MIT",
 "module": "docs",
@@ -5647,6 +5707,26 @@ null
 "module": "docs",
 "path": "docs/submission/RELEASE_SOURCE_SUCCESSOR_20261025.json",
 "sha256": "1e6da16d939e1094ff80bcd827428b15820eaf2035809d83d1c37f4a85278db2",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "e47d8a9738468befe4355af12dcf83f877767566d8b5952655bef279c3f621a2",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/submission/VERCEL_AUDIT_20261028.md",
+"sha256": "8b3927b62b17d64138a94fdd0f5855080cd61f3a8d11480153145c623f959228",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "doc",
+"leaf": "2aed7b0d792b91ae5cc52daa2423b603d726c6fecdff93f6977a4f8d17348b3d",
+"licence": "MIT",
+"module": "docs",
+"path": "docs/submission/VERCEL_AUDIT_RELEASE_FCO_20261028.json",
+"sha256": "a159773558974cb6ba1f376d4aef39a791cd395a95b14ad989d25131ba0ee578",
 "status": "built"
 },
 {
@@ -13522,21 +13602,31 @@ null
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "e10d99e8520aa7054af528b5f774d9b08456072fac3e15dbaff9b51f192b52e8",
+"leaf": "6da86eaada0e2bd4bad1239d870e4ce1bba5a46929ce8d4ad0556d685bfdb1d1",
 "licence": "MIT",
 "module": "mvp-site",
 "path": "site/mvp/build_public_site.py",
-"sha256": "c9bcea7ac2b56e58e29c2d0731827c39028658b914fb3fe301df3747f38a9df6",
+"sha256": "502a118348c654f02a7b8c3ed9098a54c8a90a6e224015935b1baf5c1f3764c9",
 "status": "built"
 },
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "5e1bcfd6299feb6206ff0726897ab48ca6f8fafb45ba5c80342b0373d47590a0",
+"leaf": "eef5f6c268c4d697a072a6fd0c7f6e220293ade4276f6a86237161f76c33a63a",
 "licence": "MIT",
 "module": "mvp-site",
 "path": "site/mvp/index.html",
-"sha256": "9890bb4490f9a905f30c888ed51d58fe35979a5b2dd23ac1fb9f65baef5b95ff",
+"sha256": "2c3417bed8c432d8bc6686527cb45c321416c1f2cf3bdd1990acc53eeb6ef1cb",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "page",
+"leaf": "b0a974856031827d857267044130214d3781e9a13cadc230a5e329b40ffe43f2",
+"licence": "MIT",
+"module": "mvp-site",
+"path": "site/mvp/vercel.json",
+"sha256": "fb451d52c2f05cd8d6853ec884e7b2eacadb97ffaa41c135312393b09c27c446",
 "status": "built"
 },
 {
@@ -13562,11 +13652,11 @@ null
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "f0aaf02e6852c87f270b8e5350fe90f581093ede0ad3931d8a29fef7c8b14cc0",
+"leaf": "d8be62f610c5cfbc6db1981c48c388052865402e9020ab945e1178d6c2712a97",
 "licence": "MIT",
 "module": "mvp-site",
 "path": "site/protocols/index.html",
-"sha256": "fc23b21ec6527fff6cd1a57e9dd1df32a29f40ac8789377c99de8fd15002b820",
+"sha256": "3fc7c04bcd96b2964f7993759e5eef8a6ccaf95c9e25739ee009586364e5f681",
 "status": "built"
 },
 {
@@ -13577,6 +13667,26 @@ null
 "module": "mvp-site",
 "path": "site/protocols/styles.css",
 "sha256": "faca80c91ee00cd0ba3ce79ab30b8d24910078305769442738b979cce6049399",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "page",
+"leaf": "21b49b49faaaf7162eb75d3136590ca226e1635aa65753ef51d3d63ee9f521b1",
+"licence": "MIT",
+"module": "mvp-site",
+"path": "site/slides/build_slides.py",
+"sha256": "7ab442803d523c8aff7ba556fcfe9b0d4b120bb249a01502ab60ebbe98e3af20",
+"status": "built"
+},
+{
+"claim": "OWN",
+"kind": "page",
+"leaf": "60ce9126432c986f0236addd43685e7a376b89d5152f402252a08d48f84e95f1",
+"licence": "MIT",
+"module": "mvp-site",
+"path": "site/slides/index.html",
+"sha256": "bc966eb77b721745080d1f01c9c3237dba75bf89a8786b22bfbc885cf5e10f4c",
 "status": "built"
 },
 {
@@ -13612,11 +13722,11 @@ null
 {
 "claim": "OWN",
 "kind": "page",
-"leaf": "845d6255e9eb794535d064d784e52567e128952054f7b0261cb30ab44f014e36",
+"leaf": "7543545e398173a5c0687b1a1ec142c37e85a18806795248179c8125a073bb9d",
 "licence": "MIT",
 "module": "mvp-site",
 "path": "site/twin/index.html",
-"sha256": "65eed75c7237dc4febeb09691668bbf819a3b442b679dafb5ad647768a50a71d",
+"sha256": "a64cf10ba4fdcb47d6a059500f554bd7e0bb4b380fc5da967b8094ecf330c345",
 "status": "built"
 },
 {
@@ -13802,11 +13912,11 @@ null
 {
 "claim": "OWN",
 "kind": "test",
-"leaf": "2ab8dbcf6a978357cc46cf20888d0801609854582a277f3893bda22b43a985eb",
+"leaf": "d74677b5fab23359197559977af0b2f9be93c74a58a1a66a44b6a0d04ffdc100",
 "licence": "MIT",
 "module": "tests",
 "path": "tests/test_final_site_publish.py",
-"sha256": "f7901c5db3c004053de24cac12e34a7728984a1e4c738ae82f26e5532ee25a11",
+"sha256": "2b86dc981d983aed02f5beac02f4bdde873132c4693927f0a9b4a4129fd73331",
 "status": "tested"
 },
 {
@@ -14082,6 +14192,16 @@ null
 {
 "claim": "OWN",
 "kind": "test",
+"leaf": "9e4f484a04c2bc88974efe6430336d28f7b6a0f048b950718c8b73a961d10faf",
+"licence": "MIT",
+"module": "tests",
+"path": "tests/test_vercel_policy.py",
+"sha256": "287f9448887295be533ac94b95db0a226f44ae90aecff16ca6488911be3022f4",
+"status": "tested"
+},
+{
+"claim": "OWN",
+"kind": "test",
 "leaf": "6f159013bc91e11bc7bf9cdc6f76756294408814702749d94604678d89578316",
 "licence": "MIT",
 "module": "tests",
@@ -14235,14 +14355,14 @@ null
 "terms": []
 },
 "docs": {
-"atoms": 132,
+"atoms": 140,
 "claims": {
-"OWN": 132
+"OWN": 140
 },
 "id": "module:docs",
-"root": "b86b17481cbbe7c5c4e39cdaa3a5f5f8a3806447d8653418e29a4cd6edd4c670",
+"root": "5fabe43c9727b0838287ec5b4ca9df8f9dc6348ab56475b742e8d35c5682c817",
 "status": {
-"built": 132
+"built": 140
 },
 "terms": []
 },
@@ -14288,14 +14408,14 @@ null
 "terms": []
 },
 "mvp-site": {
-"atoms": 54,
+"atoms": 57,
 "claims": {
-"OWN": 54
+"OWN": 57
 },
 "id": "module:mvp-site",
-"root": "a870177d13847d6c87de86b71aa13a33b91b6fa308ea8c12bb345dcc9c0e377d",
+"root": "aefeb8440cd3ed9703deff77601fe173c8c2d54875e3f26db59ef26189c6c92a",
 "status": {
-"built": 54
+"built": 57
 },
 "terms": []
 },
@@ -14354,14 +14474,14 @@ null
 "terms": []
 },
 "tests": {
-"atoms": 46,
+"atoms": 47,
 "claims": {
-"OWN": 46
+"OWN": 47
 },
 "id": "module:tests",
-"root": "ade543e463263a532ebc4bd31a72d6a54077559c52b52a7862b37373cfc41142",
+"root": "bb1bebc624bc210ae5f55f95ba5ccb140acee0fba25272de3ba7bba959fecb9e",
 "status": {
-"tested": 46
+"tested": 47
 },
 "terms": []
 },
@@ -15141,9 +15261,9 @@ null
 ]
 }
 ],
-"root": "a4b88a9e342642579a0dbf95c1dd104cd74341608525f643f634206c253e9ef9",
+"root": "a62e22838b73c92e08adbb654192991cd2f9d6c261dad738c6f8feb731037f60",
 "roots": {
-"aok": "f0d3cf4cf0968dacaf04f8e7efd05820c3fe5537b984cbdf2c19e794ce673481",
+"aok": "74067db3b88fd8fd351dc5506e1d32c73770018f2e4252eb83d12f9e274836bb",
 "assets": "e573b35c3edc913fed4d3d313f673aca2351282a285672894606519903b02190",
 "assets_mmr": "97d20c6b90e0385d7cbac87551f93381eba7eeb2e05cecb7ed9f352f349281b2",
 "hybrids_mmr": "d7e422523f408c84c478bdb5d4dad978621c58d2c535653817bf535a04bf9ea4",
@@ -19359,7 +19479,7 @@ null
 }
 ],
 "totals": {
-"OWN": 1142,
+"OWN": 1154,
 "OWN+TERMS": 52,
 "THIRD": 20
 },

@@ -1,0 +1,23 @@
+{
+  "schema": "baebugs.PhotoPublicationAuthorizationFCO.v1",
+  "context": "Baebugs BioKEA slideshow publication and Vercel derived website",
+  "source_pr": 34,
+  "source_merge_commit": "96b15c908c6a9ee4687999644ce2362c693e911d",
+  "user_assertion": "The team pic is approved",
+  "user_assertion_date": "2026-10-28",
+  "scope_approved": "Team picture in final-setup slideshow, especially final workbench slide 32",
+  "repo_decks": [
+    "docs/slideshow/baebugs_final_setup_autoplay.pptx",
+    "docs/slideshow/baebugs_bench_photos_autoplay.pptx"
+  ],
+  "photo_rights_context": "USER_ASSERTED_APPROVAL",
+  "independent_release_from_every_person": "NOT_VERIFIED",
+  "commercial_reuse_rights": "UNKNOWN",
+  "photo_event_source_bytes": "EMBEDDED_IN_SOURCE_SLIDESHOW_DECK",
+  "integrity": "RECHECK_EXACT_SOURCE_SHA256_AT_BUILD",
+  "signing": "NOT_SIGNED",
+  "mmr_commit": "NOT_COMPUTED",
+  "decision": "PUBLISH_WITH_USER_ATTESTATION; do not interpret source inclusion as independent participant releases",
+  "predecessor": "docs/slideshow/README.md",
+  "next_action": "Present source-bound team photo with visible attribution/approval context; preserve private source claims separately"
+}

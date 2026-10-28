@@ -37,7 +37,7 @@ def build(target: Path, source_ref: str):
     (target/"index.html").write_text(html)
     shutil.copy2(REPO/"site/mvp/mvp.json",target/"mvp.json")
     shutil.copy2(REPO/"docs/bench/bench_photo_observation_20261025.json",target/"bench_observation.json")
-    for rel in ["site/lab","site/twin","site/protocols","site/detection"]:
+    for rel in ["site/lab","site/twin","site/protocols","site/detection","site/slides"]:
         d=target/Path(rel).name
         if d.exists():
             shutil.rmtree(d)
@@ -58,6 +58,12 @@ def build(target: Path, source_ref: str):
         REPO / "docs/toy_photo_models/pa12_toys_two_on_floor_models.jpg",
         target / "detection" / "preview.jpg"
     )
+    # Source-package photos are classified separately from execution evidence.
+    sys.path.insert(0, str(REPO / "site/slides"))
+    from build_slides import build_slides
+    slides_projection = build_slides(REPO, target / "slides", source_ref, target / "mvp.json")
+    config_source = REPO / "site/mvp/vercel.json"
+    shutil.copy2(config_source, target / "vercel.json")
     # The 3D labware preview and Opentrons schemas linked by the Parts tab.
     for rel in ["print/labware/previews.png"]:
         dest = target / rel
@@ -170,6 +176,7 @@ def build(target: Path, source_ref: str):
         '<li><a href="../board/">Specimen workflow board</a></li>'
         '<li><a href="../lab/">3D printed parts</a></li>'
         '<li><a href="../detection/">Model bounding-box evidence</a></li>'
+        '<li><a href="../slides/">Team photo and source slide decks</a></li>'
         '<li><a href="../">Root-to-leaf evidence graph</a></li>'
         '<li><a href="https://github.com/biobitworks/baebugs/blob/main/docs/SUBMISSION_LINKS.md">'
         'Repository submission index</a></li></ol>'
@@ -180,7 +187,7 @@ def build(target: Path, source_ref: str):
         'satisfy the maximum five-slide requirement.</p>'
         '<p>Physical arm transfer, calibrated purity and specimen recovery: '
         '<strong>NOT_TESTED</strong>. Photo permissions stay source-specific. '
-        'Open PR #34 contains face-bearing imagery and is not included here.</p>'
+        'User-approved team photo included; independent participant releases NOT_VERIFIED.</p>'
         '<p><a href="../deployment-manifest.json">Verify every deployed byte</a></p>'
         '</html>'
     )
@@ -206,6 +213,27 @@ def build(target: Path, source_ref: str):
         ' style="width:100%;height:205px;object-fit:cover;object-position:center 40%;'
         'border:1px solid #54786f;border-radius:9px"></a></section>'
     )
+    photo_promo = (
+        '<section aria-labelledby="team-photo-title" style="display:grid;'
+        'grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));'
+        'gap:18px;padding:17px;margin:18px 0;border:1px solid #678675;'
+        'border-radius:12px;background:#1a3033">'
+        '<a href="slides/" aria-label="Inspect approved team photo and slides">'
+        '<img src="slides/team_workcell_approved.jpg" loading="lazy"'
+        ' width="1219" height="685" alt="Team at BioKEA workcell, blue robot arms'
+        ' and modular sample sorting components"'
+        ' style="display:block;width:100%;height:190px;object-fit:cover;'
+        'border-radius:8px"></a>'
+        '<div><span style="font-size:10px;color:#b9eacb;letter-spacing:.16em">'
+        'TEAM / WORKCELL / SOURCE SLIDES</span>'
+        '<h2 id="team-photo-title" style="margin:9px 0">The assembled BioKEA lab</h2>'
+        '<p style="font-size:12px;color:#c9d7d1">Review the approved team'
+        ' photograph and the original self-playing workcell decks. Publication'
+        ' assertions and source hashes are separately addressable.'
+        ' These pictures do not prove measured specimen recovery.</p>'
+        '<a style="color:#bcebd0" href="slides/">Inspect photos and slides →</a>'
+        '</div></section>'
+    )
     marker = '<section class="protocol-discovery-entry"'
     homepage = (target / "index.html").read_text()
     assert homepage.count(marker) == 1, "Homepage placement drift"
@@ -220,19 +248,24 @@ def build(target: Path, source_ref: str):
         '<a style="color:#b7f1d3" href="board/">Protocol Board</a>. '
         'Hardware recovery remains NOT_TESTED.</aside>'
     )
-    (target / "index.html").write_text(homepage.replace(marker, badge + detector_preview + marker, 1))
+    (target / "index.html").write_text(homepage.replace(marker, badge + photo_promo + detector_preview + marker, 1))
 
     # Do not package source photos withheld for licensing or consent.
     assert not (target/"assets/photos").exists()
     (target/"robots.txt").write_text("User-agent: *\nAllow: /\n")
     files={}
     for p in sorted(target.rglob("*")):
-        if p.is_file() and p.name!="deployment-manifest.json" and not any(x.startswith(".") for x in p.relative_to(target).parts):
+        if p.is_file() and p.name not in ("deployment-manifest.json","vercel.json") and not any(x.startswith(".") for x in p.relative_to(target).parts):
             files[p.relative_to(target).as_posix()]={"sha256":H(p),"bytes":p.stat().st_size}
     manifest={"schema":"baebugs.portal.deployment-manifest.v1",
               "source_ref":source_ref,"evidence_pack_root":json.loads((target/"mvp.json").read_text())["root"],
               "status":"DERIVED_DEPLOYMENT_PACKAGE", "signed":"NOT_SIGNED",
-              "files":files,"included_people_photos":False,
+              "files":files,"included_people_photos":True,
+              "photo_publication_approval":"USER_ASSERTED_NOT_SIGNED",
+              "photo_participant_releases":"NOT_INDEPENDENTLY_VERIFIED",
+              "source_decks_published":len(slides_projection["decks"]),
+              "source_deck_photo_sha256":slides_projection["team_photo"]["jpeg_sha256"],
+              "deployment_config_sha256":H(config_source),
               "reproduces_physical_robot_execution":False,
               "story_projection":{
                 "source_story_sha256":H(committed_story),
@@ -244,7 +277,7 @@ def build(target: Path, source_ref: str):
               "recorded_bounding_box_photo_count":len(detections["images"]),
               "model_inference_on_deployment":"NOT_EXECUTED",
               "detector_ground_truth":"NOT_VERIFIED",
-              "excluded_pr34_face_photos":True,
+              "excluded_pr34_face_photos":False,
               "submitted_google_slides_link":"NOT_VERIFIED",
               "submitted_youtube_link":external_youtube_status,
               "reported_youtube_url":source_youtube_url}
